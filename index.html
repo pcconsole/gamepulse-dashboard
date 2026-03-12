@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC&主机新游情报监测 | Gaming Industry Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+</head>
+<body>
+    <!-- 侧边栏 -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="8" fill="url(#logoGrad)"/>
+                    <path d="M8 16L14 10L20 16L14 22Z" fill="white" opacity="0.9"/>
+                    <path d="M14 16L20 10L26 16L20 22Z" fill="white" opacity="0.6"/>
+                    <defs><linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs>
+                </svg>
+                <span class="logo-text">GamePulse</span>
+            </div>
+            <button class="sidebar-collapse-btn" id="sidebarCollapseBtn" title="折叠侧边栏">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 4L6 9l5 5"/></svg>
+            </button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active" data-tab="strategy">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 17V7l4-4 4 5 6-5v14H3z"/></svg>
+                <span class="nav-label">已上线新游全局概览</span>
+            </a>
+            <a href="#" class="nav-item" data-tab="pipeline">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h12v3H4zM4 9h12v3H4zM4 14h12v3H4z"/></svg>
+                <span class="nav-label">待上线Pipeline</span>
+                <span class="nav-badge" id="badgePipeline"></span>
+            </a>
+            <a href="#" class="nav-item" data-tab="news">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="16" height="14" rx="2"/><path d="M6 7h8M6 10h5M6 13h8"/></svg>
+                <span class="nav-label">行业热点新闻</span>
+                <span class="nav-badge" id="badgeNews"></span>
+            </a>
+            <a href="#" class="nav-item" data-tab="earnings">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 16V6l4-2 4 4 4-3 4 2v9H2z"/><path d="M2 16h16"/><circle cx="6" cy="8" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="14" cy="7" r="1"/></svg>
+                <span class="nav-label">重点公司财报分析</span>
+                <span class="nav-badge" id="badgeEarnings"></span>
+            </a>
+            <a href="#" class="nav-item" data-tab="recent">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="7"/><path d="M10 6v4l3 2"/></svg>
+                <span class="nav-label">近期新游监控</span>
+            </a>
+            <a href="#" class="nav-item" data-tab="validation">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 10l4 4 8-8"/><rect x="2" y="2" width="16" height="16" rx="2"/></svg>
+                <span class="nav-label">底表数据校验</span>
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="data-status">
+                <div class="status-dot pulse"></div>
+                <span>数据已加载 · <span id="gameCount">0</span> 款游戏</span>
+            </div>
+            <div class="sidebar-version">v2.0 Pro · GamePulse</div>
+        </div>
+    </aside>
+
+    <!-- 主内容区域 -->
+    <main class="main-content" id="mainContent">
+        <!-- 顶部导航栏 -->
+        <header class="topbar">
+            <div class="topbar-left">
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+                </button>
+                <button class="sidebar-expand-btn" id="sidebarExpandBtn" title="展开侧边栏" style="display:none;">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 4l5 5-5 5"/><rect x="2" y="2" width="16" height="16" rx="2"/></svg>
+                </button>
+                <div class="topbar-title-group">
+                    <h1 class="page-title">PC&主机新游情报监测</h1>
+                    <span class="page-subtitle">过去13个月已上线新游数据分析</span>
+                </div>
+                <div class="topbar-timestamp" id="topbarTimestamp">
+                    <span class="timestamp-dot"></span>
+                    <span>数据截至：2026-02-28</span>
+                </div>
+            </div>
+            <div class="topbar-right">
+                <button class="topbar-search-btn" id="cmdKBtn" title="全局搜索 (Ctrl+K)">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7" cy="7" r="5"/><path d="M11 11l3.5 3.5"/></svg>
+                    <span>搜索...</span>
+                    <kbd>⌘K</kbd>
+                </button>
+                <div class="topbar-actions">
+                    <button class="icon-btn notification-btn" id="notificationBtn" title="通知">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 18c1.1 0 2-.9 2-2H8c0 1.1.9 2 2 2zM16 13V9c0-3.07-1.63-5.64-4.5-6.32V2c0-.83-.67-1.5-1.5-1.5S8.5 1.17 8.5 2v.68C5.64 3.36 4 5.92 4 9v4l-1 1v1h14v-1l-1-1z"/></svg>
+                        <span class="notification-dot" id="notificationDot"></span>
+                    </button>
+                    <button class="icon-btn" id="presentationBtn" title="演示模式">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="16" height="12" rx="1"/><path d="M10 15v3M6 18h8"/></svg>
+                    </button>
+                    <button class="icon-btn" id="themeToggle" title="切换主题">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="4"/><path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.93 4.93l1.41 1.41M13.66 13.66l1.41 1.41M4.93 15.07l1.41-1.41M13.66 6.34l1.41-1.41"/></svg>
+                    </button>
+                    <button class="icon-btn" id="exportBtn" title="导出报告">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 3v10M6 9l4 4 4-4M3 15v2h14v-2"/></svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Command Palette / 全局搜索弹窗 -->
+        <div class="cmd-palette-overlay" id="cmdPaletteOverlay">
+            <div class="cmd-palette" id="cmdPalette">
+                <div class="cmd-palette-input-wrap">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8.5" cy="8.5" r="6"/><path d="M13 13l4.5 4.5"/></svg>
+                    <input type="text" id="cmdPaletteInput" placeholder="搜索游戏、公司、Tab或功能..." autocomplete="off">
+                    <kbd>ESC</kbd>
+                </div>
+                <div class="cmd-palette-results" id="cmdPaletteResults">
+                    <div class="cmd-section">
+                        <div class="cmd-section-label">快速跳转</div>
+                        <div class="cmd-item" data-action="tab:strategy"><span class="cmd-icon">📊</span>已上线新游全局概览</div>
+                        <div class="cmd-item" data-action="tab:pipeline"><span class="cmd-icon">🎯</span>待上线Pipeline</div>
+                        <div class="cmd-item" data-action="tab:news"><span class="cmd-icon">📰</span>行业热点新闻</div>
+                        <div class="cmd-item" data-action="tab:earnings"><span class="cmd-icon">💰</span>重点公司财报分析</div>
+                        <div class="cmd-item" data-action="tab:recent"><span class="cmd-icon">🕐</span>近期新游监控</div>
+                        <div class="cmd-item" data-action="tab:validation"><span class="cmd-icon">🔍</span>底表数据校验</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 通知面板 -->
+        <div class="notification-panel" id="notificationPanel">
+            <div class="notification-header">
+                <h4>📬 通知中心</h4>
+                <button class="notification-clear" id="notificationClear">全部已读</button>
+            </div>
+            <div class="notification-list" id="notificationList">
+                <!-- JS动态生成 -->
+            </div>
+        </div>
+
+        <!-- 数据声明条 (可折叠) -->
+        <section class="data-banner" id="dataBanner">
+            <div class="data-banner-toggle" id="dataBannerToggle">
+                <div class="data-banner-icon">ℹ️ 数据基座声明</div>
+                <svg class="banner-chevron" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5l4 4 4-4"/></svg>
+            </div>
+            <div class="data-banner-body" id="dataBannerBody">
+                <div class="data-banner-text">
+                    <span>📅 <strong>统计周期：</strong>24年12月 - 26年2月上线的新游MScience收入Top 300</span>
+                    <span>📊 <strong>数据来源：</strong>Databrain及其他公开数据 · CSV动态加载</span>
+                    <span id="dataFileInfo"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 多维全局筛选器 -->
+        <section class="filter-bar" id="filterBar">
+            <div class="filter-label">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h14l-5 6v5l-4 2V9L2 3z"/></svg>
+                <span>多维全局切片</span>
+            </div>
+            <div class="filter-group">
+                <label>厂商属性</label>
+                <select id="filterBigCorp">
+                    <option value="all">不限</option>
+                    <option value="1">头部大厂</option>
+                    <option value="0">中小/独立</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>主机上线</label>
+                <select id="filterConsole">
+                    <option value="all">不限</option>
+                    <option value="Y">已上线主机</option>
+                    <option value="N">未上线主机</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>XGP订阅</label>
+                <select id="filterXGP">
+                    <option value="all">全部策略</option>
+                    <option value="首发入库XGP">首发入库XGP</option>
+                    <option value="后发入库XGP">后发入库XGP</option>
+                    <option value="未加入">未加入订阅</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>游戏品类</label>
+                <select id="filterGenre">
+                    <option value="all">不限品类</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>发行月份</label>
+                <select id="filterMonth">
+                    <option value="all">全部月份</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>日均流水</label>
+                <select id="filterRevTier">
+                    <option value="all">不限流水</option>
+                    <option value="> $250k">> $250k</option>
+                    <option value="$200k - $250k">$200k - $250k</option>
+                    <option value="$150k - $200k">$150k - $200k</option>
+                    <option value="$100k - $150k">$100k - $150k</option>
+                    <option value="$50k - $100k">$50k - $100k</option>
+                    <option value="< $50k">< $50k</option>
+                </select>
+            </div>
+            <div class="filter-match" id="filterMatch">
+                🎯 当前匹配：<strong id="matchCount">0</strong> 款
+            </div>
+            <button class="filter-reset" id="filterReset">✕ 重置</button>
+        </section>
+
+        <!-- ==================== TAB: 已上线新游全局概览 ==================== -->
+        <section class="tab-content active" id="tab-strategy">
+            <!-- Executive Summary 一句话洞察条 -->
+            <div class="exec-summary" id="execSummaryStrategy">
+                <div class="exec-summary-icon">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 1L1 5l8 4 8-4-8-4zM1 13l8 4 8-4M1 9l8 4 8-4"/></svg>
+                </div>
+                <div class="exec-summary-text" id="execSummaryText">正在加载核心洞察...</div>
+            </div>
+
+            <!-- KPI 卡片 -->
+            <div class="kpi-grid kpi-grid-4" id="strategyKPI">
+                <div class="kpi-card">
+                    <div class="kpi-icon" style="background:rgba(99,102,241,0.12);color:#6366f1;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M3 9h18"/></svg>
+                    </div>
+                    <div class="kpi-info">
+                        <span class="kpi-label">分析样本总量</span>
+                        <span class="kpi-value" id="kpiTotal">0</span>
+                        <span class="kpi-change">100%</span>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon" style="background:rgba(139,92,246,0.12);color:#8b5cf6;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="16" height="10" rx="1"/><path d="M6 17h8"/></svg>
+                    </div>
+                    <div class="kpi-info">
+                        <span class="kpi-label">跨平台(登主机)</span>
+                        <span class="kpi-value" id="kpiConsole">0</span>
+                        <span class="kpi-change" id="kpiConsolePct">0%</span>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon" style="background:rgba(34,197,94,0.12);color:#22c55e;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 12h6M12 9v6"/></svg>
+                    </div>
+                    <div class="kpi-info">
+                        <span class="kpi-label">已登陆 Xbox</span>
+                        <span class="kpi-value" id="kpiXbox">0</span>
+                        <span class="kpi-change" id="kpiXboxPct">0%</span>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon" style="background:rgba(14,165,233,0.12);color:#0ea5e9;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    </div>
+                    <div class="kpi-info">
+                        <span class="kpi-label">加入 XGP 总计</span>
+                        <span class="kpi-value" id="kpiXGP">0</span>
+                        <span class="kpi-change" id="kpiXGPPct">0%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 总览 KPI 卡片 -->
+            <div class="kpi-grid kpi-grid-4" id="overviewKPI" style="margin-top:20px;">
+                <div class="kpi-card">
+                    <div class="kpi-icon revenue-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                    </div>
+                    <div class="kpi-info">
+                        <span class="kpi-label">总数字收入 (Mscience)</span>
+                        <span class="kpi-value" id="kpiTotalRevenue">$0</span>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon games-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M3 9h18"/></svg>
+                    </div>
+                    <div class="kpi-info">
+                        <span class="kpi-label">游戏总数</span>
+                        <span class="kpi-value" id="kpiTotalGames">0</span>
+                        <span class="kpi-change" id="kpiGamesChange">款已上线新游</span>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon units-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></svg>
+                    </div>
+                    <div class="kpi-info">
+                        <span class="kpi-label">总数字销量 (Mscience)</span>
+                        <span class="kpi-value" id="kpiTotalUnits">0</span>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon avg-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    </div>
+                    <div class="kpi-info">
+                        <span class="kpi-label">平均收入/款 (Mscience)</span>
+                        <span class="kpi-value" id="kpiAvgRevenue">$0</span>
+                        <span class="kpi-change" id="kpiMedian">中位数参考</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 战略漏斗流程图 -->
+            <div class="chart-card wide">
+                <div class="chart-header">
+                    <h3>🔀 游戏分发状态流向图</h3>
+                </div>
+                <div class="flow-chart-container" id="flowChartContainer">
+                    <div class="flow-insight" id="flowInsight"></div>
+                    <div class="flow-chart" id="flowChart"></div>
+                </div>
+            </div>
+
+            <!-- 月度上线游戏收入趋势 (日均流水) -->
+            <div class="chart-card wide">
+                <div class="chart-header">
+                    <h3>📈 月度上线游戏收入趋势 (日均流水)</h3>
+                    <div class="chart-actions">
+                        <button class="chart-view-btn active" data-view="bar" data-chart="monthlyDaily">柱状</button>
+                        <button class="chart-view-btn" data-view="line" data-chart="monthlyDaily">折线</button>
+                    </div>
+                </div>
+                <div class="chart-body" style="height:360px;"><canvas id="monthlyDailyRevChart"></canvas></div>
+            </div>
+
+            <!-- 主要游戏类型收入分布 + 发行商收入统计 -->
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>🎮 主要游戏类型收入分布 (日均流水)</h3>
+                    </div>
+                    <div class="chart-body" style="height:360px;"><canvas id="genreDailyRevChart"></canvas></div>
+                </div>
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>💰 发行商收入统计 (Mscience 日均流水)</h3>
+                        <span class="section-badge">Top 20</span>
+                    </div>
+                    <div class="chart-body" style="height:360px;"><canvas id="publisherDailyRevChart"></canvas></div>
+                </div>
+            </div>
+
+            <!-- XGP入库特征分析 -->
+            <div class="chart-card wide">
+                <div class="chart-header">
+                    <h3>📊 Xbox 游戏 XGP 入库特征</h3>
+                </div>
+                <div class="xgp-analysis">
+                    <!-- 收入层级交叉分析表 -->
+                    <div class="xgp-table-section">
+                        <div class="section-label">
+                            <span>📋 入库策略分布 (绝对数量)</span>
+                            <span class="section-badge">数据基座：仅统计已登陆 Xbox 的产品</span>
+                        </div>
+                        <div class="table-wrapper">
+                            <table id="xgpCrossTable">
+                                <thead>
+                                    <tr>
+                                        <th class="text-left">流水梯队</th>
+                                        <th class="highlight-col">加入XGP (合计)</th>
+                                        <th>首发入库XGP</th>
+                                        <th>后发入库XGP</th>
+                                        <th>上Xbox未入库</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="xgpCrossBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 双视角堆叠条形图 -->
+                    <div class="xgp-bars-grid">
+                        <div class="xgp-bar-section">
+                            <h4>各流水段的 XGP 策略选择 (横向 100%)</h4>
+                            <div class="xgp-bar-insight" id="tierBarInsight"></div>
+                            <div class="bar-legend" id="barLegend1"></div>
+                            <div id="tierBarsContainer"></div>
+                        </div>
+                        <div class="xgp-bar-section">
+                            <h4>不同 XGP 策略的流水画像 (纵向 100%)</h4>
+                            <div class="xgp-bar-insight" id="stratBarInsight"></div>
+                            <div class="bar-legend" id="barLegend2"></div>
+                            <div id="stratBarsContainer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 发行商背景XGP分析 -->
+            <div class="chart-card wide">
+                <div class="chart-header">
+                    <h3>🏢 开发商与发行商背景 XGP 入库特征</h3>
+                </div>
+                <div class="publisher-analysis">
+                    <div class="publisher-insight" id="publisherInsight"></div>
+                    <div class="publisher-grid">
+                        <div class="publisher-bars" id="publisherBars"></div>
+                        <div class="publisher-table-wrapper">
+                            <div class="section-label">
+                                <span>📋 背景分布明细表</span>
+                                <span class="section-badge">绝对数量 / (内部占比)</span>
+                            </div>
+                            <table id="publisherTable">
+                                <thead>
+                                    <tr>
+                                        <th class="text-left">厂商背景</th>
+                                        <th>后发入库XGP</th>
+                                        <th>首发入库XGP</th>
+                                        <th>未加入</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="publisherTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI 宏观洞察 -->
+            <div class="ai-insight-panel" id="aiInsightPanel">
+                <div class="ai-insight-header">
+                    <div class="ai-badge">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <span>AI 智能洞察</span>
+                    </div>
+                    <button class="ai-refresh-btn" id="aiRefreshBtn">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 7a6 6 0 0111.2-3M13 7a6 6 0 01-11.2 3"/><path d="M1 2v3h3M13 12v-3h-3"/></svg>
+                        刷新分析
+                    </button>
+                </div>
+                <div class="ai-insight-content" id="aiInsightContent">
+                    <div class="typing-indicator">分析中<span class="dots"><span>.</span><span>.</span><span>.</span></span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TAB: 待上线Pipeline ==================== -->
+        <section class="tab-content" id="tab-pipeline">
+            <div class="chart-card wide">
+                <div class="chart-header">
+                    <h3>🎯 2026年待上线端主大作 Pipeline <span class="agent-badge" id="pipelineAgentBadge" title="由 Claw Agent 自动维护">🤖 Agent维护</span></h3>
+                    <div class="pipeline-controls">
+                        <div class="pipeline-refresh-status" id="pipelineRefreshStatus">
+                            <span class="status-dot pulse"></span> 自动扫描中
+                        </div>
+                        <button class="icon-btn" id="pipelineRefreshBtn" title="手动刷新扫描" onclick="triggerPipelineManualRefresh()">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 9a8 8 0 0114.3-5M17 9a8 8 0 01-14.3 5"/><path d="M1 3v4h4M17 15v-4h-4"/></svg>
+                        </button>
+                        <select id="pipelineTimeFilter" class="pipeline-filter">
+                            <option value="all">全部时间</option>
+                            <option value="q1">2026 Q1 (1-3月)</option>
+                            <option value="q2">2026 Q2 (4-6月)</option>
+                            <option value="q3">2026 Q3 (7-9月)</option>
+                            <option value="q4">2026 Q4 (10-12月)</option>
+                            <option value="tbd">待定/2027+</option>
+                        </select>
+                        <select id="pipelineHeatFilter" class="pipeline-filter">
+                            <option value="all">全部关注度</option>
+                            <option value="高">🔥 高关注度</option>
+                            <option value="中高">⚡ 中高关注度</option>
+                            <option value="中">📊 中关注度</option>
+                            <option value="中低">📉 中低关注度</option>
+                            <option value="低">⬜ 低关注度</option>
+                        </select>
+                    </div>
+                </div>
+                <div style="padding:20px;">
+                    <!-- Pipeline KPI 概览 -->
+                    <div class="kpi-grid kpi-grid-4" id="pipelineKPI">
+                        <div class="kpi-card">
+                            <div class="kpi-icon" style="background:rgba(239,68,68,0.12);color:#ef4444;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                            </div>
+                            <div class="kpi-info">
+                                <span class="kpi-label">Pipeline 总数</span>
+                                <span class="kpi-value" id="pipelineTotalCount">0</span>
+                                <span class="kpi-change">款待上线大作</span>
+                            </div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-icon" style="background:rgba(245,158,11,0.12);color:#f59e0b;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v10l4.5 4.5"/><circle cx="12" cy="12" r="10"/></svg>
+                            </div>
+                            <div class="kpi-info">
+                                <span class="kpi-label">近3月即将上线</span>
+                                <span class="kpi-value" id="pipelineUpcomingCount">0</span>
+                                <span class="kpi-change" id="pipelineUpcomingLabel">款</span>
+                            </div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-icon" style="background:rgba(239,68,68,0.12);color:#ef4444;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                            </div>
+                            <div class="kpi-info">
+                                <span class="kpi-label">高/中高关注度</span>
+                                <span class="kpi-value" id="pipelineHighHeatCount">0</span>
+                                <span class="kpi-change">款重点大作</span>
+                            </div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-icon" style="background:rgba(34,197,94,0.12);color:#22c55e;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 12h6M12 9v6"/></svg>
+                            </div>
+                            <div class="kpi-info">
+                                <span class="kpi-label">登录Xbox平台</span>
+                                <span class="kpi-value" id="pipelineXboxCount">0</span>
+                                <span class="kpi-change" id="pipelineXboxPct">0%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pipeline 时间轴视图 -->
+                    <div class="pipeline-timeline" id="pipelineTimeline" style="margin-top:24px;">
+                        <!-- JS动态生成 -->
+                    </div>
+
+                    <!-- Pipeline 详情表格 -->
+                    <div class="table-wrapper" style="margin-top:20px;">
+                        <table id="pipelineTable">
+                            <thead>
+                                <tr>
+                                    <th class="text-left">游戏名称</th>
+                                    <th>厂商/发行商</th>
+                                    <th>工作室</th>
+                                    <th>首发时间</th>
+                                    <th>上线平台</th>
+                                    <th class="text-center">关注度</th>
+                                    <th>玩法简析</th>
+                                    <th>关注度简评</th>
+                                </tr>
+                            </thead>
+                            <tbody id="pipelineTableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TAB: 行业热点新闻 ==================== -->
+        <section class="tab-content" id="tab-news">
+            <div class="chart-card wide">
+                <div class="chart-header">
+                    <h3>📰 PC & Console 行业热点新闻 <span class="agent-badge" id="newsAgentBadge" title="由 Claw Agent 自动维护">🤖 Agent维护</span></h3>
+                    <div class="news-controls">
+                        <select id="newsCategoryFilter" class="pipeline-filter">
+                            <option value="all">全部分类</option>
+                            <option value="platform">🎮 平台动态</option>
+                            <option value="game">🕹️ 重点新品</option>
+                            <option value="hardware">🔧 硬件生态</option>
+                            <option value="policy">📋 政策/战略</option>
+                            <option value="market">📊 市场数据</option>
+                        </select>
+                        <select id="newsSourceFilter" class="pipeline-filter">
+                            <option value="all">全部来源</option>
+                            <option value="official">官方渠道</option>
+                            <option value="media">游戏媒体</option>
+                            <option value="data">数据平台</option>
+                        </select>
+                        <button class="icon-btn" id="newsRefreshBtn" title="刷新新闻">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 9a8 8 0 0114.3-5M17 9a8 8 0 01-14.3 5"/><path d="M1 3v4h4M17 15v-4h-4"/></svg>
+                        </button>
+                    </div>
+                </div>
+                <div style="padding:20px;">
+                    <!-- 新闻 KPI 概览 -->
+                    <div class="kpi-grid kpi-grid-4" id="newsKPI">
+                        <div class="kpi-card">
+                            <div class="kpi-icon" style="background:rgba(59,130,246,0.12);color:#3b82f6;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M8 7h8M8 11h5M8 15h8"/></svg>
+                            </div>
+                            <div class="kpi-info">
+                                <span class="kpi-label">新闻总条数</span>
+                                <span class="kpi-value" id="newsTotalCount">0</span>
+                                <span class="kpi-change" id="newsUpdateTime">最近更新：--</span>
+                            </div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-icon" style="background:rgba(239,68,68,0.12);color:#ef4444;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                            </div>
+                            <div class="kpi-info">
+                                <span class="kpi-label">重要新闻</span>
+                                <span class="kpi-value" id="newsImportantCount">0</span>
+                                <span class="kpi-change">需重点关注</span>
+                            </div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-icon" style="background:rgba(20,184,166,0.12);color:#14b8a6;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                            </div>
+                            <div class="kpi-info">
+                                <span class="kpi-label">覆盖信息源</span>
+                                <span class="kpi-value" id="newsSourceCount">0</span>
+                                <span class="kpi-change">个行业媒体/平台</span>
+                            </div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-icon" style="background:rgba(168,85,247,0.12);color:#a855f7;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            </div>
+                            <div class="kpi-info">
+                                <span class="kpi-label">本周新增</span>
+                                <span class="kpi-value" id="newsWeeklyCount">0</span>
+                                <span class="kpi-change">条行业动态</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 重点关注区 -->
+                    <div class="news-spotlight" id="newsSpotlight" style="margin-top:24px;">
+                        <!-- JS动态生成 -->
+                    </div>
+
+                    <!-- 新闻列表 -->
+                    <div class="news-feed" id="newsFeed" style="margin-top:20px;">
+                        <!-- JS动态生成 -->
+                    </div>
+
+                    <!-- 信息源参考 -->
+                    <div class="news-sources" id="newsSources" style="margin-top:24px;">
+                        <!-- JS动态生成 -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==================== TAB: 重点公司财报分析 ==================== -->
+        <section class="tab-content" id="tab-earnings">
+            <div class="chart-card wide">
+                <div class="chart-header">
+                    <h3>📊 重点端主公司财报分析看板 <span class="agent-badge" id="earningsAgentBadge" title="由 Claw Agent 自动维护">🤖 Agent维护</span></h3>
+                    <div class="earnings-controls">
+                        <div class="earnings-search-wrapper">
+                            <svg class="earnings-search-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7" cy="7" r="5"/><path d="M11 11l3.5 3.5"/></svg>
+                            <input type="text" id="earningsSearchInput" class="earnings-search-input" placeholder="搜索公司名称/代码/产品...">
+                        </div>
+                        <select id="earningsRegionFilter" class="pipeline-filter">
+                            <option value="all">全部地区</option>
+                            <option value="us">🇺🇸 北美</option>
+                            <option value="jp">🇯🇵 日本</option>
+                            <option value="cn">🇨🇳 中国</option>
+                            <option value="eu">🇪🇺 欧洲/韩国</option>
+                        </select>
+                        <select id="earningsSortFilter" class="pipeline-filter">
+                            <option value="margin">按利润率排序</option>
+                            <option value="growth">按营收增速排序</option>
+                            <option value="name">按公司名称排序</option>
+                        </select>
+                    </div>
+                </div>
+                <div style="padding:20px;">
+                    <!-- 财报 KPI 概览 -->
+                    <div class="kpi-grid kpi-grid-4" id="earningsKPI">
+                        <div class="kpi-card">
+                            <div class="kpi-icon" style="background:rgba(99,102,241,0.12);color:#6366f1;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20V8l4-3 4 4 4-3 4 2 4-2v14H2z"/></svg>
+                            </div>
+                            <div class="kpi-info">
+                                <span class="kpi-label">覆盖上市公司</span>
+                                <span class="kpi-value" id="earningsCompanyCount">0</span>
+                                <span class="kpi-change">家游戏业务主体</span>
+                            </div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-icon" style="background:rgba(34,197,94,0.12);color:#22c55e;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                            </div>
+                            <div class="kpi-info">
+                                <span class="kpi-label">最高营业利润率</span>
+                                <span class="kpi-value" id="earningsTopMargin">0%</span>
+                                <span class="kpi-change" id="earningsTopMarginName">--</span>
+                            </div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-icon" style="background:rgba(239,68,68,0.12);color:#ef4444;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                            </div>
+                            <div class="kpi-info">
+                                <span class="kpi-label">最高营收增速</span>
+                                <span class="kpi-value" id="earningsTopGrowth">0%</span>
+                                <span class="kpi-change" id="earningsTopGrowthName">--</span>
+                            </div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-icon" style="background:rgba(168,85,247,0.12);color:#a855f7;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            </div>
+                            <div class="kpi-info">
+                                <span class="kpi-label">最新财报日期</span>
+                                <span class="kpi-value" id="earningsLatestDate">--</span>
+                                <span class="kpi-change" id="earningsLatestCompany">--</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 行业对比图表 - 三图同一水平 -->
+                    <div class="earnings-charts-triple" style="margin-top:24px;">
+                        <div class="chart-card">
+                            <div class="chart-header">
+                                <h3>💰 游戏业务营业利润率对比</h3>
+                            </div>
+                            <div class="earnings-bar-chart" id="earningsMarginChart"></div>
+                        </div>
+                        <div class="chart-card">
+                            <div class="chart-header">
+                                <h3>📈 游戏业务营收同比增速</h3>
+                            </div>
+                            <div class="earnings-bar-chart" id="earningsGrowthChart"></div>
+                        </div>
+                        <div class="chart-card">
+                            <div class="chart-header">
+                                <h3>📊 季度游戏板块收入对比 (USD)</h3>
+                                <span class="section-badge">统一折算美元</span>
+                            </div>
+                            <div class="earnings-bar-chart" id="earningsRevenueCompareChart"></div>
+                        </div>
+                    </div>
+
+                    <!-- 公司详情卡片区 -->
+                    <div class="earnings-companies-section" style="margin-top:24px;">
+                        <div class="earnings-section-header">
+                            <h4>🏢 各公司财报详情</h4>
+                            <span class="earnings-section-hint">点击卡片展开详细分析 · 数据来源：各公司IR页面</span>
+                        </div>
+                        <div class="earnings-company-grid" id="earningsCompanyGrid">
+                            <!-- JS动态生成 -->
+                        </div>
+                    </div>
+
+                    <!-- 非上市公司说明 -->
+                    <div class="earnings-private-section" style="margin-top:24px;">
+                        <div class="earnings-section-header">
+                            <h4>🔒 非上市/已退市公司</h4>
+                            <span class="earnings-section-hint">以下公司无公开财报，但对行业格局有重要影响</span>
+                        </div>
+                        <div class="earnings-private-grid" id="earningsPrivateGrid">
+                            <!-- JS动态生成 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TAB: 近期新游监控 ==================== -->
+        <section class="tab-content" id="tab-recent">
+            <div class="chart-card wide">
+                <div class="chart-header">
+                    <h3>🕐 近期新游监控</h3>
+                    <div class="recent-badge" id="recentBadge">共监控到 <strong id="recentCount">0</strong> 款新作</div>
+                </div>
+                <div style="padding:20px;">
+                    <p class="section-hint">自动截取盘面中最近 2 个月的新游发行动向，洞察最新跨端组合拳。</p>
+                    
+                    <!-- 双饼图 -->
+                    <div class="charts-grid" style="margin-top:16px;">
+                        <div class="chart-card">
+                            <div class="chart-header"><h3>平台跨端发行深度</h3></div>
+                            <div class="chart-body"><canvas id="recentPlatformPie"></canvas></div>
+                        </div>
+                        <div class="chart-card">
+                            <div class="chart-header"><h3>Xbox 阵营订阅制倾向</h3></div>
+                            <div class="chart-body"><canvas id="recentXgpPie"></canvas></div>
+                        </div>
+                    </div>
+                    
+                    <!-- 游戏列表 -->
+                    <div class="table-wrapper" style="margin-top:20px;">
+                        <table id="recentGamesTable">
+                            <thead>
+                                <tr>
+                                    <th class="text-left">游戏名称</th>
+                                    <th>发行公司</th>
+                                    <th>品类</th>
+                                    <th>发行日期</th>
+                                    <th class="text-center">PC</th>
+                                    <th class="text-center">PS</th>
+                                    <th class="text-center">主机</th>
+                                    <th class="text-center">Xbox</th>
+                                    <th>XGP策略</th>
+                                    <th class="num">日均流水($)</th>
+                                </tr>
+                            </thead>
+                            <tbody id="recentGamesBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TAB: 底表数据校验 ==================== -->
+        <section class="tab-content" id="tab-validation">
+            <div class="data-table-section">
+                <div class="table-header">
+                    <h3>🔍 数据探查与清洗校验 <span class="table-count" id="validationCount"></span></h3>
+                    <div class="table-controls">
+                        <input type="text" placeholder="搜索游戏/发行商..." id="validationSearch" class="table-search">
+                    </div>
+                </div>
+                <div class="table-wrapper" style="max-height:700px;overflow-y:auto;">
+                    <table id="validationTable">
+                        <thead>
+                            <tr>
+                                <th class="text-left sortable-th" data-sort-key="name">游戏名称 <span class="sort-icon">⇅</span></th>
+                                <th class="sortable-th" data-sort-key="publisher">发行公司 <span class="sort-icon">⇅</span></th>
+                                <th class="sortable-th" data-sort-key="genre">品类 <span class="sort-icon">⇅</span></th>
+                                <th class="sortable-th" data-sort-key="date">发行日期 <span class="sort-icon">⇅</span></th>
+                                <th class="num sortable-th" data-sort-key="lifetime">Mscience总收入($) <span class="sort-icon">⇅</span></th>
+                                <th class="num sortable-th" data-sort-key="dailyCalc">日均流水(计算值) <span class="sort-icon">⇅</span></th>
+                                <th class="num sortable-th" data-sort-key="dailyOrig">日均流水(原始值) <span class="sort-icon">⇅</span></th>
+                                <th class="num sortable-th" data-sort-key="days">上线天数 <span class="sort-icon">⇅</span></th>
+                                <th class="text-center">PC</th>
+                                <th class="text-center">PS</th>
+                                <th class="text-center">主机</th>
+                                <th class="text-center">Xbox</th>
+                                <th class="text-center">XGP</th>
+                                <th class="text-center sortable-th" data-sort-key="check">校验 <span class="sort-icon">⇅</span></th>
+                            </tr>
+                        </thead>
+                        <tbody id="validationBody"></tbody>
+                    </table>
+                </div>
+                <div class="table-pagination" id="validationPagination">
+                    <button id="validationPrevPage" class="page-btn" disabled>上一页</button>
+                    <span id="validationPageInfo">第 1 页</span>
+                    <button id="validationNextPage" class="page-btn">下一页</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Drill-down 详情面板 -->
+        <div class="drilldown-overlay" id="drilldownOverlay">
+            <div class="drilldown-panel" id="drilldownPanel">
+                <div class="drilldown-header">
+                    <h3 id="drilldownTitle">详情</h3>
+                    <button class="drilldown-close" id="drilldownClose">&times;</button>
+                </div>
+                <div class="drilldown-content" id="drilldownContent"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="csvdata.js"></script>
+    <script src="data.js"></script>
+    <script src="charts.js"></script>
+    <script src="pipeline.js"></script>
+    <script src="news.js"></script>
+    <script src="earnings.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
