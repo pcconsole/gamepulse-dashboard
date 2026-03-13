@@ -56,6 +56,11 @@
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 10l4 4 8-8"/><rect x="2" y="2" width="16" height="16" rx="2"/></svg>
                 <span class="nav-label">底表数据校验</span>
             </a>
+            <a href="#" class="nav-item" data-tab="storewatch">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4h16v12H2z"/><path d="M6 8h3v4H6zM11 6h3v6h-3z"/><circle cx="14" cy="14" r="2"/></svg>
+                <span class="nav-label">PS&Xbox商店监控</span>
+                <span class="nav-badge" id="badgeStorewatch"></span>
+            </a>
         </nav>
         <div class="sidebar-footer">
             <div class="data-status">
@@ -127,6 +132,7 @@
                         <div class="cmd-item" data-action="tab:earnings"><span class="cmd-icon">💰</span>重点公司财报分析</div>
                         <div class="cmd-item" data-action="tab:recent"><span class="cmd-icon">🕐</span>近期新游监控</div>
                         <div class="cmd-item" data-action="tab:validation"><span class="cmd-icon">🔍</span>底表数据校验</div>
+                        <div class="cmd-item" data-action="tab:storewatch"><span class="cmd-icon">🏪</span>PS&Xbox商店监控</div>
                     </div>
                 </div>
             </div>
@@ -843,6 +849,14 @@
             </div>
         </section>
 
+        <!-- StoreWatch Tab -->
+        <section class="tab-content" id="tab-storewatch">
+            <div class="sw-loading">
+                <div class="status-dot pulse"></div>
+                <span>加载 PS & Xbox 商店资源监控数据...</span>
+            </div>
+        </section>
+
         <!-- Drill-down 详情面板 -->
         <div class="drilldown-overlay" id="drilldownOverlay">
             <div class="drilldown-panel" id="drilldownPanel">
@@ -861,6 +875,7 @@
     <script src="pipeline.js"></script>
     <script src="news.js"></script>
     <script src="earnings.js"></script>
+    <script src="storewatch.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

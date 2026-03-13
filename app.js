@@ -85,6 +85,9 @@ function updateAll(games) {
     if (typeof earningsCompanies !== 'undefined' && earningsCompanies.length > 0) {
         setTimeout(() => updateEarningsTab(), 200);
     }
+    if (typeof storewatchData !== 'undefined') {
+        setTimeout(() => updateStorewatchTab(), 250);
+    }
 }
 
 function updateFilterMatch(count) {
@@ -931,6 +934,8 @@ function bindEvents() {
                 setTimeout(() => updateNewsTab(), 50);
             } else if (tab === 'earnings') {
                 setTimeout(() => updateEarningsTab(), 50);
+            } else if (tab === 'storewatch') {
+                setTimeout(() => updateStorewatchTab(), 50);
             }
 
             // 关闭移动端菜单
@@ -2377,6 +2382,18 @@ function updateNavBadges() {
             badgeEarnings.classList.add('visible');
         }
     }
+
+    // StoreWatch角标
+    const badgeStorewatch = document.getElementById('badgeStorewatch');
+    if (badgeStorewatch && typeof storewatchData !== 'undefined') {
+        const ps5Days = (storewatchData.PS5 || []).length;
+        const xboxDays = (storewatchData.Xbox || []).length;
+        const totalDays = Math.max(ps5Days, xboxDays);
+        if (totalDays > 0) {
+            badgeStorewatch.textContent = totalDays + 'd';
+            badgeStorewatch.classList.add('visible');
+        }
+    }
 }
 
 // ============ Agent状态检查 ============
@@ -2390,7 +2407,7 @@ async function checkAgentStatus() {
         const now = new Date();
         const STALE_HOURS = 48; // 超过48小时未更新标记为stale
 
-        ['pipeline', 'news', 'earnings'].forEach(name => {
+        ['pipeline', 'news', 'earnings', 'storewatch'].forEach(name => {
             const badge = document.getElementById(`${name}AgentBadge`);
             if (!badge) return;
 
