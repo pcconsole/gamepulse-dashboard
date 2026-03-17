@@ -819,6 +819,69 @@ function mShowNewsSheet(article) {
 
 // ============ Tab: 财报 ============
 
+// ── 财报数据提取辅助（适配嵌套结构） ──
+function _eVal(obj) {
+    // 从 {value:xxx} 或纯数字中取值
+    if (obj == null) return null;
+    if (typeof obj === 'number') return obj;
+    if (typeof obj === 'object' && 'value' in obj) return obj.value;
+    return null;
+}
+
+function _eMargin(c) {
+    return _eVal(c.financials?.operatingMargin) ?? 0;
+}
+
+function _eGrowth(c) {
+    return _eVal(c.financials?.revenue?.yoy) ?? 0;
+}
+
+function _eRevenueLabel(c) {
+    const f = c.financials;
+    if (!f || !f.revenue) return 'N/A';
+    const val = _eVal(f.revenue);
+    const unit = f.revenue.unit || '';
+    const usdEquiv = f.revenue.usdEquiv || '';
+    if (val == null) return 'N/A';
+    // 格式化：显示本币 + USD 等价
+    let display = '';
+    if (c.currency === 'USD') {
+        display = '$' + (val >= 10000 ? (val / 1000).toFixed(1) + 'B' : (val >= 1000 ? (val / 1000).toFixed(2) + 'B' : val + 'M'));
+    } else if (c.currency === 'JPY') {
+        display = '¥' + (val >= 100000 ? (val / 100000).toFixed(2) + '万亿' : (val / 10000).toFixed(1) + '万亿');
+    } else if (c.currency === 'CNY') {
+        display = '¥' + (val / 100).toFixed(0) + '亿';
+    } else if (c.currency === 'EUR') {
+        display = '€' + val + 'M';
+    } else if (c.currency === 'KRW') {
+        display = '₩' + (val / 10000).toFixed(1) + '万亿';
+    } else {
+        display = val + (unit ? ' ' + unit : '');
+    }
+    if (usdEquiv) display += ` (${usdEquiv})`;
+    return display;
+}
+
+function _eProfitLabel(c) {
+    const f = c.financials;
+    if (!f || !f.operatingProfit) return null;
+    const val = _eVal(f.operatingProfit);
+    const usdEquiv = f.operatingProfit.usdEquiv || '';
+    if (val == null) return null;
+    let display = '';
+    if (c.currency === 'USD') {
+        display = '$' + (Math.abs(val) >= 1000 ? (val / 1000).toFixed(2) + 'B' : val + 'M');
+    } else if (c.currency === 'JPY') {
+        display = '¥' + (val / 10000).toFixed(1) + '万亿';
+    } else if (c.currency === 'CNY') {
+        display = '¥' + (val / 100).toFixed(0) + '亿';
+    } else {
+        display = val + 'M';
+    }
+    if (usdEquiv) display += ` (${usdEquiv})`;
+    return display;
+}
+
 function mUpdateEarningsTab() {
     const companies = typeof earningsCompanies !== 'undefined' ? earningsCompanies : [];
     const searchVal = (document.getElementById('mEarningsSearch')?.value || '').toLowerCase();
@@ -839,29 +902,37 @@ function mUpdateEarningsTab() {
         filtered = filtered.filter(c => c.region === regionFilter);
     }
 
-    // 排序
+    // 排序（使用正确的嵌套字段访问）
     filtered.sort((a, b) => {
-        if (sortFilter === 'margin') return (b.financials?.operatingMargin || 0) - (a.financials?.operatingMargin || 0);
-        if (sortFilter === 'growth') return (b.financials?.revenueGrowthYoY || 0) - (a.financials?.revenueGrowthYoY || 0);
+        if (sortFilter === 'margin') return _eMargin(b) - _eMargin(a);
+        if (sortFilter === 'growth') return _eGrowth(b) - _eGrowth(a);
         return a.name.localeCompare(b.name);
     });
 
-    // KPI
+    // ── KPI ──
     mSetText('mEarningsCompanyCount', companies.length);
 
     if (companies.length > 0) {
-        const marginSorted = [...companies].sort((a, b) => (b.financials?.operatingMargin || 0) - (a.financials?.operatingMargin || 0));
-        const growthSorted = [...companies].sort((a, b) => (b.financials?.revenueGrowthYoY || 0) - (a.financials?.revenueGrowthYoY || 0));
-
+        // 最高利润率
+        const marginSorted = [...companies]
+            .filter(c => _eMargin(c) > 0)
+            .sort((a, b) => _eMargin(b) - _eMargin(a));
         if (marginSorted[0]) {
-            mSetText('mEarningsTopMargin', (marginSorted[0].financials?.operatingMargin || 0).toFixed(1) + '%');
+            mSetText('mEarningsTopMargin', _eMargin(marginSorted[0]).toFixed(1) + '%');
             mSetText('mEarningsTopMarginName', marginSorted[0].name);
         }
+
+        // 最高增速
+        const growthSorted = [...companies]
+            .filter(c => _eGrowth(c) !== 0)
+            .sort((a, b) => _eGrowth(b) - _eGrowth(a));
         if (growthSorted[0]) {
-            mSetText('mEarningsTopGrowth', '+' + (growthSorted[0].financials?.revenueGrowthYoY || 0).toFixed(1) + '%');
+            const g = _eGrowth(growthSorted[0]);
+            mSetText('mEarningsTopGrowth', (g >= 0 ? '+' : '') + g.toFixed(1) + '%');
             mSetText('mEarningsTopGrowthName', growthSorted[0].name);
         }
 
+        // 最新财报日期
         const dateSorted = [...companies].sort((a, b) => new Date(b.filingDate || 0) - new Date(a.filingDate || 0));
         if (dateSorted[0]) {
             mSetText('mEarningsLatestDate', dateSorted[0].filingDate || '--');
@@ -869,24 +940,43 @@ function mUpdateEarningsTab() {
         }
     }
 
-    // 图表
+    // ── 图表 ──
     mRenderEarningsCharts(filtered);
 
-    // 公司卡片
+    // ── 公司卡片 ──
     const grid = document.getElementById('mEarningsCompanyGrid');
     if (!grid) return;
 
     grid.innerHTML = filtered.map(c => {
-        const margin = c.financials?.operatingMargin || 0;
-        const growth = c.financials?.revenueGrowthYoY || 0;
-        const revenue = c.financials?.gamingRevenue || c.financials?.totalRevenue || 0;
+        const margin = _eMargin(c);
+        const growth = _eGrowth(c);
+        const revenueLabel = _eRevenueLabel(c);
+        const profitLabel = _eProfitLabel(c);
+        const segPct = _eVal(c.financials?.segmentRevenuePct);
 
         let marginCls = 'ok';
         if (margin >= 25) marginCls = 'excellent';
         else if (margin >= 15) marginCls = 'good';
+        else if (margin === 0 || margin === null) marginCls = 'na';
         else if (margin < 0) marginCls = 'loss';
 
         const regionFlag = { us: '🇺🇸', jp: '🇯🇵', cn: '🇨🇳', eu: '🇪🇺', kr: '🇰🇷' }[c.region] || '🌐';
+
+        // 重点产品标签
+        const keyProds = (c.keyProducts || []).slice(0, 4);
+
+        // 关键游戏指标
+        let metricsHtml = '';
+        if (c.gameMetrics) {
+            const entries = Object.entries(c.gameMetrics).slice(0, 4);
+            metricsHtml = entries.map(([k, v]) => {
+                const val = typeof v === 'object' ? v.value : v;
+                const label = typeof v === 'object' ? (v.label || k) : k;
+                const unit = typeof v === 'object' ? (v.unit || '') : '';
+                if (val == null || val === '' || val === true || val === false) return '';
+                return `<div class="m-metric-row"><span class="m-metric-label">${label}</span><span class="m-metric-val">${val}${unit && !String(val).includes(unit) ? ' ' + unit : ''}</span></div>`;
+            }).filter(Boolean).join('');
+        }
 
         return `
         <div class="m-company-card" data-company="${encodeURIComponent(c.name)}">
@@ -895,43 +985,59 @@ function mUpdateEarningsTab() {
                     <div class="m-company-logo">${c.logo || '🏢'}</div>
                     <div>
                         <div class="m-company-name">${c.name}</div>
-                        <div class="m-company-ticker">${c.ticker || ''}</div>
+                        <div class="m-company-ticker">${c.ticker || ''} · ${c.segment || ''}</div>
                     </div>
                 </div>
-                <span class="m-company-region">${regionFlag} ${c.fiscalPeriod || ''}</span>
+                <span class="m-company-region">${regionFlag}</span>
             </div>
+            <div class="m-company-period">${c.fiscalPeriod || ''}</div>
             <div class="m-company-financials">
                 <div class="m-fin-row">
-                    <div class="m-fin-label">游戏收入</div>
-                    <div class="m-fin-value">${revenue ? formatRevenue(revenue) : 'N/A'}</div>
+                    <div class="m-fin-label">💰 游戏营收</div>
+                    <div class="m-fin-value">${revenueLabel}</div>
                 </div>
                 <div class="m-fin-row">
-                    <div class="m-fin-label">营业利润率</div>
-                    <div class="m-fin-value"><span class="m-margin-badge m-margin-${marginCls}">${margin.toFixed(1)}%</span></div>
-                </div>
-                <div class="m-fin-row">
-                    <div class="m-fin-label">营收增速</div>
+                    <div class="m-fin-label">📈 营收增速</div>
                     <div class="m-fin-value">
-                        ${growth >= 0 ? '+' : ''}${growth.toFixed(1)}%
-                        <span class="m-fin-yoy ${growth >= 0 ? 'positive' : 'negative'}">${growth >= 0 ? '↑' : '↓'}</span>
+                        <span class="m-fin-yoy ${growth >= 0 ? 'positive' : 'negative'}">${growth >= 0 ? '+' : ''}${growth.toFixed(1)}% ${growth >= 0 ? '↑' : '↓'}</span>
                     </div>
                 </div>
+                ${margin !== 0 ? `<div class="m-fin-row">
+                    <div class="m-fin-label">🎯 营业利润率</div>
+                    <div class="m-fin-value"><span class="m-margin-badge m-margin-${marginCls}">${margin.toFixed(1)}%</span></div>
+                </div>` : ''}
+                ${profitLabel ? `<div class="m-fin-row">
+                    <div class="m-fin-label">💎 营业利润</div>
+                    <div class="m-fin-value">${profitLabel}</div>
+                </div>` : ''}
+                ${segPct ? `<div class="m-fin-row">
+                    <div class="m-fin-label">📊 游戏占比</div>
+                    <div class="m-fin-value">${segPct}%</div>
+                </div>` : ''}
                 <div class="m-fin-row">
-                    <div class="m-fin-label">财报日期</div>
-                    <div class="m-fin-value" style="font-size:0.72rem;">${c.filingDate || '--'}</div>
+                    <div class="m-fin-label">📅 财报日期</div>
+                    <div class="m-fin-value">${c.filingDate || '--'} · ${c.filingType || ''}</div>
                 </div>
             </div>
+            ${keyProds.length ? `<div class="m-company-products">${keyProds.map(p => `<span class="m-product-tag">${p}</span>`).join('')}</div>` : ''}
             <div class="m-company-detail">
-                ${c.analysis ? `<h5>📝 分析摘要</h5><p>${c.analysis.summary || c.analysis.outlook || ''}</p>` : ''}
-                ${c.gameMetrics?.keyTitles ? `<h5>🎮 重点产品</h5><div class="m-company-products">${c.gameMetrics.keyTitles.map(t => `<span class="m-product-tag">${typeof t === 'string' ? t : t.name || t}</span>`).join('')}</div>` : ''}
-                ${c.analysis?.risks ? `<h5>⚠️ 风险</h5><p style="font-size:0.72rem;">${Array.isArray(c.analysis.risks) ? c.analysis.risks.join('；') : c.analysis.risks}</p>` : ''}
+                ${metricsHtml ? `<div class="m-detail-section"><h5>🎮 关键运营指标</h5><div class="m-metrics-grid">${metricsHtml}</div></div>` : ''}
+                ${c.analysis?.performance ? `<div class="m-detail-section"><h5>📝 业绩分析</h5><p>${c.analysis.performance}</p></div>` : ''}
+                ${c.analysis?.strategy ? `<div class="m-detail-section"><h5>🎯 战略方向</h5><p>${c.analysis.strategy}</p></div>` : ''}
+                ${c.analysis?.outlook ? `<div class="m-detail-section"><h5>🔮 前瞻展望</h5><p>${c.analysis.outlook}</p></div>` : ''}
+                ${c.analysis?.newProducts ? `<div class="m-detail-section"><h5>🆕 新品管线</h5><p>${c.analysis.newProducts}</p></div>` : ''}
+                ${c.dataSources?.length ? `<div class="m-detail-section"><h5>📋 数据来源</h5>${c.dataSources.map(s => `<a href="${s.url}" target="_blank" class="m-source-link">${s.name} (${s.date})</a>`).join('')}</div>` : ''}
             </div>
         </div>`;
     }).join('');
 
     // 点击展开
     grid.querySelectorAll('.m-company-card').forEach(card => {
-        card.addEventListener('click', () => card.classList.toggle('expanded'));
+        card.addEventListener('click', (e) => {
+            // 不拦截链接点击
+            if (e.target.tagName === 'A') return;
+            card.classList.toggle('expanded');
+        });
     });
 }
 
@@ -939,11 +1045,13 @@ function mRenderEarningsCharts(companies) {
     // 利润率
     const marginEl = document.getElementById('mEarningsMarginChart');
     if (marginEl) {
-        const sorted = [...companies].sort((a, b) => (b.financials?.operatingMargin || 0) - (a.financials?.operatingMargin || 0));
+        const withMargin = companies.filter(c => _eMargin(c) > 0);
+        const sorted = [...withMargin].sort((a, b) => _eMargin(b) - _eMargin(a));
+        const maxW = sorted.length > 0 ? _eMargin(sorted[0]) : 1;
+
         marginEl.innerHTML = sorted.map(c => {
-            const margin = c.financials?.operatingMargin || 0;
-            const maxW = Math.max(...companies.map(cc => Math.abs(cc.financials?.operatingMargin || 0)));
-            const w = maxW > 0 ? Math.abs(margin) / maxW * 100 : 0;
+            const margin = _eMargin(c);
+            const w = maxW > 0 ? margin / maxW * 100 : 0;
             const color = margin >= 25 ? '#22c55e' : margin >= 15 ? '#3b82f6' : margin >= 0 ? '#f59e0b' : '#ef4444';
             return `<div class="m-earnings-bar-row">
                 <div class="m-earnings-bar-name">${c.name}</div>
@@ -956,10 +1064,12 @@ function mRenderEarningsCharts(companies) {
     // 增速
     const growthEl = document.getElementById('mEarningsGrowthChart');
     if (growthEl) {
-        const sorted = [...companies].sort((a, b) => (b.financials?.revenueGrowthYoY || 0) - (a.financials?.revenueGrowthYoY || 0));
+        const withGrowth = companies.filter(c => _eGrowth(c) !== 0 && _eGrowth(c) !== null);
+        const sorted = [...withGrowth].sort((a, b) => _eGrowth(b) - _eGrowth(a));
+        const maxW = sorted.length > 0 ? Math.max(...sorted.map(c => Math.abs(_eGrowth(c)))) : 1;
+
         growthEl.innerHTML = sorted.map(c => {
-            const growth = c.financials?.revenueGrowthYoY || 0;
-            const maxW = Math.max(...companies.map(cc => Math.abs(cc.financials?.revenueGrowthYoY || 0)));
+            const growth = _eGrowth(c);
             const w = maxW > 0 ? Math.abs(growth) / maxW * 100 : 0;
             const color = growth >= 20 ? '#22c55e' : growth >= 0 ? '#3b82f6' : '#ef4444';
             return `<div class="m-earnings-bar-row">
@@ -979,10 +1089,11 @@ function mRenderEarningsCharts(companies) {
 
         revEl.innerHTML = sorted.map(d => {
             const w = (d.revenue / maxRev * 100).toFixed(1);
+            const revLabel = d.revenue >= 1000 ? '$' + (d.revenue / 1000).toFixed(1) + 'B' : '$' + d.revenue + 'M';
             return `<div class="m-earnings-bar-row">
                 <div class="m-earnings-bar-name">${d.name || d.company}</div>
-                <div class="m-earnings-bar-track"><div class="m-earnings-bar-fill" style="width:${w}%;background:#6366f1;"></div></div>
-                <div class="m-earnings-bar-value" style="color:var(--text-primary);">${formatRevenue(d.revenue)}</div>
+                <div class="m-earnings-bar-track"><div class="m-earnings-bar-fill" style="width:${w}%;background:${d.color || '#6366f1'};"></div></div>
+                <div class="m-earnings-bar-value" style="color:var(--text-primary);">${revLabel}</div>
             </div>`;
         }).join('');
     }

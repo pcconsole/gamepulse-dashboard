@@ -436,24 +436,30 @@ body {
 .m-company-cards { display: flex; flex-direction: column; gap: 8px; }
 .m-company-card {
     background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md);
-    padding: 12px 14px; cursor: pointer;
+    padding: 12px 14px; cursor: pointer; transition: border-color 0.2s;
 }
+.m-company-card:active { border-color: var(--accent-primary); }
 .m-company-card .m-company-header {
     display: flex; align-items: center; justify-content: space-between;
 }
 .m-company-card .m-company-identity { display: flex; align-items: center; gap: 8px; }
 .m-company-card .m-company-logo { font-size: 1.4rem; }
 .m-company-card .m-company-name { font-weight: 700; font-size: 0.88rem; color: var(--text-primary); }
-.m-company-card .m-company-ticker { font-size: 0.68rem; color: var(--text-muted); }
-.m-company-card .m-company-region { font-size: 0.65rem; padding: 1px 6px; border-radius: 4px; background: rgba(99,102,241,0.1); color: var(--text-secondary); }
+.m-company-card .m-company-ticker { font-size: 0.65rem; color: var(--text-muted); line-height: 1.3; }
+.m-company-card .m-company-region { font-size: 0.72rem; }
+.m-company-card .m-company-period {
+    font-size: 0.68rem; color: var(--text-muted); margin-top: 6px;
+    padding: 3px 8px; background: rgba(99,102,241,0.06); border-radius: 4px;
+    display: inline-block;
+}
 .m-company-card .m-company-financials {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 10px;
+    display: flex; flex-direction: column; gap: 6px; margin-top: 10px;
     padding-top: 10px; border-top: 1px solid var(--border-light);
 }
-.m-fin-row { font-size: 0.75rem; }
-.m-fin-label { color: var(--text-muted); font-size: 0.68rem; }
-.m-fin-value { font-weight: 700; color: var(--text-primary); }
-.m-fin-yoy { font-size: 0.65rem; margin-left: 4px; }
+.m-fin-row { display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; }
+.m-fin-label { color: var(--text-muted); font-size: 0.72rem; flex-shrink: 0; }
+.m-fin-value { font-weight: 700; color: var(--text-primary); text-align: right; font-size: 0.76rem; }
+.m-fin-yoy { font-size: 0.72rem; font-weight: 700; }
 .m-fin-yoy.positive { color: var(--success); }
 .m-fin-yoy.negative { color: var(--danger); }
 .m-margin-badge {
@@ -463,16 +469,42 @@ body {
 .m-margin-good { background: rgba(59,130,246,0.15); color: var(--info); }
 .m-margin-ok { background: rgba(245,158,11,0.15); color: var(--warning); }
 .m-margin-loss { background: rgba(239,68,68,0.15); color: var(--danger); }
+.m-margin-na { background: rgba(100,116,139,0.15); color: var(--text-muted); }
+.m-company-products { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border-light); }
+.m-product-tag { padding: 2px 8px; border-radius: 6px; font-size: 0.65rem; background: var(--bg-input); color: var(--text-secondary); }
 
+/* 展开后的详情区域 */
 .m-company-card .m-company-detail {
     display: none; margin-top: 10px; padding-top: 10px;
-    border-top: 1px solid var(--border-light); font-size: 0.78rem; color: var(--text-secondary); line-height: 1.6;
+    border-top: 1px solid var(--border-light); font-size: 0.76rem; color: var(--text-secondary); line-height: 1.65;
 }
 .m-company-card.expanded .m-company-detail { display: block; }
-.m-company-detail h5 { font-size: 0.78rem; color: var(--text-primary); margin-bottom: 4px; margin-top: 8px; }
-.m-company-detail h5:first-child { margin-top: 0; }
-.m-company-products { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
-.m-product-tag { padding: 2px 8px; border-radius: 6px; font-size: 0.65rem; background: var(--bg-input); color: var(--text-secondary); }
+.m-company-card.expanded { border-color: var(--accent-primary); box-shadow: 0 0 0 1px rgba(99,102,241,0.15); }
+.m-detail-section { margin-bottom: 10px; }
+.m-detail-section:last-child { margin-bottom: 0; }
+.m-detail-section h5 { font-size: 0.78rem; color: var(--text-primary); margin: 0 0 6px 0; }
+.m-detail-section p { margin: 0; font-size: 0.74rem; line-height: 1.7; }
+.m-metrics-grid { display: flex; flex-direction: column; gap: 4px; }
+.m-metric-row { display: flex; justify-content: space-between; align-items: center; padding: 3px 0; border-bottom: 1px solid var(--border-light); }
+.m-metric-row:last-child { border-bottom: none; }
+.m-metric-label { font-size: 0.68rem; color: var(--text-muted); max-width: 65%; }
+.m-metric-val { font-size: 0.72rem; font-weight: 700; color: var(--text-primary); font-family: var(--font-mono); }
+.m-source-link {
+    display: block; font-size: 0.68rem; color: var(--accent-primary); text-decoration: none;
+    padding: 3px 0; border-bottom: 1px solid var(--border-light);
+}
+.m-source-link:last-child { border-bottom: none; }
+.m-source-link:active { opacity: 0.7; }
+
+/* 卡片底部展开提示 */
+.m-company-card::after {
+    content: '↓ 点击查看详情';
+    display: block; text-align: center; font-size: 0.62rem; color: var(--text-muted);
+    margin-top: 8px; opacity: 0.6;
+}
+.m-company-card.expanded::after {
+    content: '↑ 收起';
+}
 
 /* ===== StoreWatch ===== */
 .m-storewatch-loading { text-align: center; padding: 40px 20px; color: var(--text-muted); font-size: 0.82rem; }

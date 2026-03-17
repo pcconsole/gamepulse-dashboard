@@ -1,10 +1,10 @@
 // ============================================
 // 重点端主公司财报分析数据模块 V6
-// 覆盖19家上市公司的游戏业务财务与运营数据
+// 覆盖18家上市公司的游戏业务财务与运营数据
 // 数据来源：各公司IR页面/财报/press release + 深度调研
 // 更新日期: 2026-03-16
 // 更新者: Earnings Agent (Claw自动维护)
-// 本次更新: CD Projekt更新至Q3 2025(营收+53%,赛博朋克3500万套); 腾讯补充Q1 2025数据(国内游戏+24%); 全年数据待3月18日发布
+// 本次更新: 腾讯补充Q1 2025数据(国内游戏+24%); 全年数据待3月18日发布; 删除CD Projekt
 // ============================================
 
 // 汇率参考表 (用于USD换算) - 优先使用各公司财报期间汇率
@@ -12,7 +12,6 @@ const earningsExchangeRates = {
     JPY: { rate: 149.5, source: '日本公司FY2025财报期间均值(2025年4月-2026年3月)' },
     CNY: { rate: 7.25, source: '腾讯/网易2024年报期间均值' },
     EUR: { rate: 0.92, source: '育碧FY2025 Q3财报期间均值(1EUR≈1.09USD)' },
-    PLN: { rate: 4.05, source: 'CD Projekt 2024年报期间均值(1USD≈4.05PLN)' },
     KRW: { rate: 1380, source: 'Krafton 2024年报期间均值' },
     SEK: { rate: 10.8, source: 'Embracer Group FY25/26期间均值' },
     USD: { rate: 1, source: '基准货币' }
@@ -647,53 +646,6 @@ const earningsCompanies = [
         filingDate: '2026-03-09',
         filingType: '季度财报(Q3,已发布待确认具体数据)',
         filingUrl: 'https://www.segasammy.co.jp/en/ir/library/presentation/'
-    },
-    {
-        id: 'cdprojekt',
-        name: 'CD Projekt',
-        nameEn: 'CD Projekt',
-        ticker: 'CDR (WSE)',
-        market: '华沙交所',
-        region: 'eu',
-        irUrl: 'https://www.cdprojekt.com/en/investors/result-center/',
-        logo: '🐺',
-        color: '#DC0000',
-        segment: '整体（游戏专用）',
-        fiscalPeriod: '2025年Q3 (2025年7-9月)',
-        currency: 'PLN',
-        financials: {
-            revenue: { value: 349, unit: '百万兹罗提(Q3)', yoy: 53, label: 'Q3净营收(+53%)', source: 'CD Projekt Q3 2025 Result Center (2025/11)', usdEquiv: '≈$86.2M' },
-            operatingProfit: { value: null, unit: '百万兹罗提', yoy: null, label: '营业利润(未单独披露)' },
-            operatingMargin: { value: null, label: '营业利润率' },
-            segmentRevenuePct: { value: 100, label: '游戏占比' },
-            netProfit: { value: 193, unit: '百万兹罗提(Q3)', yoy: 150, label: '净利润(PLN 1.93亿,同比2.5倍)', usdEquiv: '≈$47.7M' },
-            netProfitMargin: { value: 55, unit: '%', label: 'Q3净利率55%' },
-            investmentInFuture: { value: 118, unit: '百万兹罗提(Q3)', label: '对未来发行产品的投资' },
-            fy2024Revenue: { value: 4608, unit: '百万兹罗提(2024全年)', yoy: 270, label: '2024全年营收参考', usdEquiv: '≈$1.14B' },
-        },
-        gameMetrics: {
-            cyberpunkTotalSales: { value: 35, unit: '百万套+', label: '赛博朋克2077总销量(突破3500万)', source: 'CD Projekt Q3 2025 Result Center' },
-            phantomLibertySales: { value: 10, unit: '百万套+', label: '往日之影累计销量(突破1000万)' },
-            witcher3TotalSales: { value: 60, unit: '百万套+', label: '巫师3总销量(超6000万套)' },
-            witcher3Revenue: { value: 2400, unit: '百万兹罗提(累计)', label: '巫师3累计收入(PLN 24亿)' },
-            cashPosition: { value: 1408, unit: '百万兹罗提', label: '现金及等价物(截至2025/09)' },
-            polarisDev: { value: 420, unit: '人', label: '巫师4(Polaris)开发团队规模' },
-            teamSize: { value: 730, unit: '人+', label: '开发团队总规模' },
-        },
-        keyProducts: ['赛博朋克2077', '巫师3', 'GOG平台', '新巫师:Polaris(开发中)', '赛博朋克续作:Orion(前期制作)', '赛博朋克2077终极版(Switch 2)'],
-        analysis: {
-            performance: 'Q3 2025营收PLN 3.49亿(≈$8620万,+53% YoY)，净利润PLN 1.93亿(≈$4770万,同比增长2.5倍)，净利率高达55%。赛博朋克2077总销量突破3500万套(较上季增长500万套)。巫师3累计超6000万套。Q3对未来产品投资PLN 1.18亿，反映Polaris和Orion开发投入加速。',
-            strategy: 'CDPR进入"多项目并行"阶段。新巫师三部曲首作(Polaris)已有420人团队全力开发中。赛博朋克续作(Orion)由波士顿工作室推进前期制作。与Scopely达成IP合作开发手游。赛博朋克2077终极版将于2025年6月5日登陆Switch 2。总团队超730人。',
-            outlook: '2025年数字长尾销售持续强劲(Q3营收+53%表现远超预期)。现金储备充裕(PLN 14亿+)支撑长期多项目开发。Polaris预计2027年后推出。2025全年财报预计2026年3月底发布。Switch 2版本将拓展新用户群。',
-            newProducts: '《赛博朋克2077终极版》Switch 2版(2025/06/05)；《新巫师：Polaris》(2027+)；《赛博朋克续作：Orion》(2028+)；Scopely合作手游(IP待定)。'
-        },
-        dataSources: [
-            { type: '季度财报', name: 'CD Projekt Q3 2025 Financial Results', date: '2025-11-15', url: 'https://www.cdprojekt.com/en/investors/result-center/' },
-            { type: '官方公告', name: 'Scopely IP合作 + Switch 2版本公告', date: '2025-11-15', url: 'https://www.cdprojekt.com/en/investors/result-center/' }
-        ],
-        filingDate: '2025-11-15',
-        filingType: '季度财报(Q3)',
-        filingUrl: 'https://www.cdprojekt.com/en/investors/result-center/'
     },
     {
         id: 'krafton',
