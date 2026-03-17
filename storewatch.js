@@ -519,7 +519,6 @@ const storewatchGameNameMap = {
     '消逝的光芒': 'Dying Light',
     '消逝的光芒：困兽': 'Dying Light: The Beast',
     '星光卡丁车竞赛': 'Starlit Kart Racing',
-    '星球大战：亡命之徒': 'Star Wars Outlaws',
     '幸福工厂': 'Satisfactory',
     '凶乱魔界主义': 'Kyouran Makaism',
     '宣誓': 'Avowed',
@@ -747,7 +746,6 @@ const storewatchGameNameMap = {
     'Soverelgn Syndicate': '主权辛迪加:雾都疑案',
     'Split Fiction': '双影奇境',
     'SpongeBob SquarePants: Titans of the Tide': '海绵宝宝:潮汐巨神',
-    'Star Wars Outlaws': '星球大战：亡命之徒',
     'Starlit Kart Racing': '星光卡丁车竞赛',
     'Strategy games': '策略游戏专题',
     'Street Fighter 6': '街头霸王6',
@@ -835,11 +833,8 @@ const storewatchData = {
         } },
         { date: '2026-03-16', slots: {
             'Must See': { positions: [
-                { rank: 1, us: '美国职业棒球大联盟26（MLB The Show 26）', jp: '人中之龙游戏专题', hk: '生化危机:安魂曲（Resident Evil: Requiem）', jpNonGame: true, vendor: '索尼' },
                 { rank: 1, us: '七大罪:起源（The Seven Deadly Sins:Origin）', jp: '七大罪:起源（The Seven Deadly Sins:Origin）', hk: '七大罪:起源（The Seven Deadly Sins:Origin）', vendor: 'Netmarble' },
-                { rank: 2, us: 'WWE 2K26', jp: '1500日元以下（games under 円1500）', hk: '热门优惠', vendor: 'Take-Two' },
                 { rank: 2, us: 'WWE 2K26', jp: '人中之龙游戏专题', hk: '生化危机:安魂曲（Resident Evil: Requiem）', jpNonGame: true, vendor: 'Take-Two' },
-                { rank: 3, us: '生化危机:安魂曲（Resident Evil: Requiem）', jp: '生化危机:安魂曲（Resident Evil: Requiem）', hk: '侠盗猎车手6（Grand Theft Auto VI）', vendor: 'CAPCOM' },
                 { rank: 3, us: '生化危机:安魂曲（Resident Evil: Requiem）', jp: '1500日元以下（games under 円1500）', hk: '热门优惠', vendor: 'CAPCOM' },
                 { rank: 4, us: 'MEGA MARCH', jp: '美国职业棒球大联盟26（MLB The Show 26）', hk: '战神:斯巴达之子（God of War: Sons of Sparta）', vendor: '索尼' },
                 { rank: 5, us: '红色沙漠（Crimson Desert）', jp: '2026绝佳游戏（2026 GREAT GAMES）', hk: 'ARC Raiders', jpNonGame: true, vendor: 'Pearl Abyss' },
@@ -2188,51 +2183,65 @@ const storewatchData = {
         } },
     ],
     Xbox: [
-        { date: '2026-03-16', slots: {
+        { date: '2026-03-17', slots: {
             'Dash home-banner': { positions: [
-                { rank: 1, us: 'Game Pass 会员优惠', jp: 'Game Pass 会员优惠', hk: '新发行游戏', hkNonGame: true },
                 { rank: 1, us: 'Game Pass 会员优惠', jp: 'Game Pass 会员优惠', hk: 'Game Pass 会员优惠' },
-                { rank: 2, us: 'This Week on Xbox', jp: '棋牌卡牌游戏', hk: '失落星船:马拉松（Marathon）', vendor: '索尼' },
                 { rank: 2, us: 'WWE 2K26', jp: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', hk: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', vendor: 'Take-Two' },
-                { rank: 3, us: '无障碍功能游戏（Accessibility in games）', jp: '零红蝶', hk: '无障碍功能游戏（Accessibility in games）', usNonGame: true, hkNonGame: true, vendor: 'KOEI TECMO' },
                 { rank: 3, us: '平台游戏（Platformer games）', jp: '动视发行商特卖（Activision）', hk: 'WWE 2K26', vendor: 'Take-Two' },
             ] },
             'Dash home-banner2': { positions: [
-                { rank: 1, us: '刺客信条:影（Assassin\'s Creed Shadows）', jp: '生化危机:安魂曲（Resident Evil: Requiem）', hk: 'The Outlast Trials', vendor: '育碧' },
                 { rank: 1, us: '生化危机:安魂曲（Resident Evil: Requiem）', jp: '暗黑破坏神4（Diablo IV）', hk: '极限竞速:地平线5（Forza Horizon 5）', vendor: 'CAPCOM' },
-                { rank: 2, us: '刺客信条:影（Assassin\'s Creed Shadows）', jp: '失落星船:马拉松（Marathon）', hk: 'Maneater Apex', vendor: '育碧' },
-                { rank: 2, us: '死亡岛2（Dead Island 2）', jp: 'Tony Hawk’s™ Pro Skater™', hk: 'EA Sports FC 26', vendor: 'Embracer Group' },
-                { rank: 3, us: '阿凡达:潘多拉边境（Avatar: Frontiers of Pandora）', jp: '生化危机:安魂曲（Resident Evil: Requiem）', hk: 'Descenders', vendor: '育碧' },
+                { rank: 2, us: '死亡岛2（Dead Island 2）', jp: 'Tony Hawk\'s™ Pro Skater™', hk: 'EA Sports FC 26', vendor: 'Embracer Group' },
                 { rank: 3, us: '失落星船:马拉松（Marathon）', jp: '使命召唤:黑色行动7（Call of Duty: Black Ops 7）', hk: '我的世界（Minecraft）', vendor: '索尼' },
-                { rank: 4, us: '星球大战：亡命之徒（Star Wars Outlaws）', jp: 'ARC Raiders', hk: 'High On Life', vendor: 'Nexon' },
                 { rank: 4, us: '生化危机:安魂曲（Resident Evil: Requiem）', jp: '使命召唤:黑色行动2（Call of Duty:Black Ops2）', hk: '使命召唤:黑色行动7（Call of Duty: Black Ops 7）', vendor: 'CAPCOM' },
-                { rank: 5, us: '彩虹六号:围攻X（Tom Clancy\'s Rainbow Six Siege X）', jp: 'NBA 2K26', hk: 'Car Mechanic Simulator 2021', vendor: '育碧' },
                 { rank: 5, us: 'ARC Raiders', jp: '使命召唤:黑色行动3（Call of Duty:Black Ops3）', hk: '赛博朋克2077（Cyberpunk 2077）', vendor: 'Nexon' },
-                { rank: 6, us: '全境封锁（Tom Clancy\'s The Division）', jp: 'EA Sports FC 26', hk: 'ON THE ROAD', vendor: '育碧' },
                 { rank: 6, us: 'NBA 2K26', jp: '只狼:影逝二度（Sekiro:Shadows Die Twice）', hk: '双人成行（It Takes Two）', vendor: 'Take-Two' },
             ] },
             'Store Home-hero banner': { positions: [
-                { rank: 1, us: 'WWE 2K26', jp: '使命召唤:战区（Call of Duty:Warzone）', hk: '使命召唤:战区（Call of Duty:Warzone）', vendor: 'Take-Two' },
                 { rank: 1, us: '失落星船:马拉松（Marathon）', jp: '使命召唤:战区（Call of Duty:Warzone）', hk: '使命召唤:战区（Call of Duty:Warzone）', vendor: '索尼' },
             ] },
             'Store Home-banner': { positions: [
-                { rank: 1, us: '毒液突击队（John Carpenter\'s Toxic Commando）', jp: 'WWE 2K26', hk: 'WWE 2K26', vendor: 'Focus Entertainment' },
                 { rank: 1, us: '堡垒之夜（Fortnite）', jp: 'WWE 2K26', hk: 'WWE 2K26', vendor: 'Epic' },
-                { rank: 2, us: '使命召唤:战区（Call of Duty:Warzone）', jp: '毒液突击队（John Carpenter\'s Toxic Commando）', hk: '毒液突击队（John Carpenter\'s Toxic Commando）', vendor: '微软' },
                 { rank: 2, us: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', jp: '毒液突击队（John Carpenter\'s Toxic Commando）', hk: '毒液突击队（John Carpenter\'s Toxic Commando）', vendor: 'CAPCOM' },
                 { rank: 3, us: '生化危机:安魂曲（Resident Evil: Requiem）', jp: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', hk: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', vendor: 'CAPCOM' },
-                { rank: 3, us: '生化危机:安魂曲（Resident Evil: Requiem）', jp: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', hk: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', vendor: 'CAPCOM' },
-                { rank: 4, us: '趋势游戏（Trending）', jp: '趋势游戏（Trending）', hk: '上古卷轴OL（The Elder Scrolls Online）', usNonGame: true, jpNonGame: true },
                 { rank: 4, us: '趋势游戏（Trending）', jp: '趋势游戏（Trending）', hk: '上古卷轴OL（The Elder Scrolls Online）', usNonGame: true, jpNonGame: true },
             ] },
             'Game Home-hero banner': { positions: [
-                { rank: 1, us: '勇气默示录 FLYING FAIRY（Bravely Default Flying Fairy）', jp: '勇气默示录 FLYING FAIRY（Bravely Default Flying Fairy）', hk: '勇气默示录 FLYING FAIRY（Bravely Default Flying Fairy）' },
                 { rank: 1, us: '使命召唤:战区（Call of Duty:Warzone）', jp: '使命召唤:战区（Call of Duty:Warzone）', hk: '使命召唤:战区（Call of Duty:Warzone）', vendor: '微软' },
             ] },
             'Game Home-banner': { positions: [
-                { rank: 1, us: '极限竞速:地平线6（Forza Horizon 6）', jp: '极限竞速:地平线6（Forza Horizon 6）', hk: '极限竞速:地平线6（Forza Horizon 6）', vendor: '微软' },
                 { rank: 1, us: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', jp: 'WWE 2K26', hk: 'WWE 2K26', vendor: 'CAPCOM' },
-                { rank: 2, us: 'WWE 2K26', jp: 'WWE 2K26', hk: 'WWE 2K26', vendor: 'Take-Two' },
+                { rank: 2, us: '勇气默示录 FLYING FAIRY（Bravely Default Flying Fairy）', jp: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', hk: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', vendor: 'CAPCOM' },
+            ] },
+        } },
+        { date: '2026-03-16', slots: {
+            'Dash home-banner': { positions: [
+                { rank: 1, us: 'Game Pass 会员优惠', jp: 'Game Pass 会员优惠', hk: 'Game Pass 会员优惠' },
+                { rank: 2, us: 'WWE 2K26', jp: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', hk: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', vendor: 'Take-Two' },
+                { rank: 3, us: '平台游戏（Platformer games）', jp: '动视发行商特卖（Activision）', hk: 'WWE 2K26', vendor: 'Take-Two' },
+            ] },
+            'Dash home-banner2': { positions: [
+                { rank: 1, us: '生化危机:安魂曲（Resident Evil: Requiem）', jp: '暗黑破坏神4（Diablo IV）', hk: '极限竞速:地平线5（Forza Horizon 5）', vendor: 'CAPCOM' },
+                { rank: 2, us: '死亡岛2（Dead Island 2）', jp: 'Tony Hawk’s™ Pro Skater™', hk: 'EA Sports FC 26', vendor: 'Embracer Group' },
+                { rank: 3, us: '失落星船:马拉松（Marathon）', jp: '使命召唤:黑色行动7（Call of Duty: Black Ops 7）', hk: '我的世界（Minecraft）', vendor: '索尼' },
+                { rank: 4, us: '生化危机:安魂曲（Resident Evil: Requiem）', jp: '使命召唤:黑色行动2（Call of Duty:Black Ops2）', hk: '使命召唤:黑色行动7（Call of Duty: Black Ops 7）', vendor: 'CAPCOM' },
+                { rank: 5, us: 'ARC Raiders', jp: '使命召唤:黑色行动3（Call of Duty:Black Ops3）', hk: '赛博朋克2077（Cyberpunk 2077）', vendor: 'Nexon' },
+                { rank: 6, us: 'NBA 2K26', jp: '只狼:影逝二度（Sekiro:Shadows Die Twice）', hk: '双人成行（It Takes Two）', vendor: 'Take-Two' },
+            ] },
+            'Store Home-hero banner': { positions: [
+                { rank: 1, us: '失落星船:马拉松（Marathon）', jp: '使命召唤:战区（Call of Duty:Warzone）', hk: '使命召唤:战区（Call of Duty:Warzone）', vendor: '索尼' },
+            ] },
+            'Store Home-banner': { positions: [
+                { rank: 1, us: '堡垒之夜（Fortnite）', jp: 'WWE 2K26', hk: 'WWE 2K26', vendor: 'Epic' },
+                { rank: 2, us: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', jp: '毒液突击队（John Carpenter\'s Toxic Commando）', hk: '毒液突击队（John Carpenter\'s Toxic Commando）', vendor: 'CAPCOM' },
+                { rank: 3, us: '生化危机:安魂曲（Resident Evil: Requiem）', jp: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', hk: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', vendor: 'CAPCOM' },
+                { rank: 4, us: '趋势游戏（Trending）', jp: '趋势游戏（Trending）', hk: '上古卷轴OL（The Elder Scrolls Online）', usNonGame: true, jpNonGame: true },
+            ] },
+            'Game Home-hero banner': { positions: [
+                { rank: 1, us: '使命召唤:战区（Call of Duty:Warzone）', jp: '使命召唤:战区（Call of Duty:Warzone）', hk: '使命召唤:战区（Call of Duty:Warzone）', vendor: '微软' },
+            ] },
+            'Game Home-banner': { positions: [
+                { rank: 1, us: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', jp: 'WWE 2K26', hk: 'WWE 2K26', vendor: 'CAPCOM' },
                 { rank: 2, us: '勇气默示录 FLYING FAIRY（Bravely Default Flying Fairy）', jp: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', hk: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', vendor: 'CAPCOM' },
             ] },
         } },
