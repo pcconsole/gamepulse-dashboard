@@ -1302,36 +1302,121 @@ function renderNewsFeed(allNews) {
     const container = document.getElementById('newsFeed');
     if (!container) return;
 
-    let html = `<div class="news-feed-header">
-        <h4>📋 全部动态</h4>
-        <span class="news-feed-count">${allNews.length} 条</span>
+    // 将新闻分为"近期"（7天内）和"历史"（7天以上）
+    const now = new Date();
+    const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+    const recentNews = allNews.filter(n => new Date(n.date) >= sevenDaysAgo);
+    const historyNews = allNews.filter(n => new Date(n.date) < sevenDaysAgo);
+
+    let html = '';
+
+    // ── 近期新闻区 ──
+    html += `<div class="news-feed-header">
+        <h4>📋 近期动态</h4>
+        <span class="news-feed-count">${recentNews.length} 条（近7天）</span>
     </div>
     <div class="news-list">`;
 
-    allNews.forEach(n => {
-        const impLabel = getImportanceLabel(n.importance);
-        html += `<div class="news-item ${n.importance === 'high' ? 'news-important' : ''}">
-            <div class="news-item-left">
-                <span class="news-item-importance">${impLabel}</span>
-                <span class="news-item-category">${getNewsCategory(n.category)}</span>
-            </div>
-            <div class="news-item-content">
-                <div class="news-item-title">${n.title}</div>
-                <div class="news-item-summary">${n.summary}</div>
-                <div class="news-item-meta">
-                    <span class="news-item-source">${n.source}</span>
-                    <span class="news-item-date">${n.date}</span>
-                    ${n.tags.map(t => `<span class="news-tag-sm">${t}</span>`).join('')}
-                </div>
-            </div>
-            <a href="${n.sourceUrl}" target="_blank" class="news-item-link" title="查看原文">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2h8v8M14 2L6 10"/></svg>
-            </a>
-        </div>`;
+    if (recentNews.length === 0) {
+        html += `<div class="news-empty-hint">暂无近7天的新闻，请查看下方历史新闻归档</div>`;
+    }
+
+    recentNews.forEach(n => {
+        html += renderNewsItemHTML(n);
     });
 
     html += '</div>';
+
+    // ── 历史新闻折叠区 ──
+    if (historyNews.length > 0) {
+        // 按月份分组
+        const monthGroups = {};
+        historyNews.forEach(n => {
+            const monthKey = n.date.substring(0, 7); // YYYY-MM
+            if (!monthGroups[monthKey]) monthGroups[monthKey] = [];
+            monthGroups[monthKey].push(n);
+        });
+        const sortedMonths = Object.keys(monthGroups).sort((a, b) => b.localeCompare(a));
+
+        html += `<div class="news-history-section">
+            <div class="news-history-toggle" id="newsHistoryToggle">
+                <div class="news-history-toggle-left">
+                    <svg class="news-history-chevron" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 7l3 3 3-3"/></svg>
+                    <h4>📁 历史新闻归档</h4>
+                    <span class="news-history-count">${historyNews.length} 条</span>
+                </div>
+                <span class="news-history-hint">点击展开，回顾与串联分析行业动向</span>
+            </div>
+            <div class="news-history-body" id="newsHistoryBody" style="display:none;">`;
+
+        sortedMonths.forEach(month => {
+            const items = monthGroups[month];
+            const [y, m] = month.split('-');
+            const monthLabel = `${y}年${parseInt(m)}月`;
+            html += `<div class="news-month-group">
+                <div class="news-month-header" data-month="${month}">
+                    <svg class="news-month-chevron" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 5.5l2.5 2.5L10 5.5"/></svg>
+                    <span class="news-month-label">${monthLabel}</span>
+                    <span class="news-month-count">${items.length} 条</span>
+                </div>
+                <div class="news-month-body" style="display:none;">
+                    <div class="news-list news-list-history">`;
+
+            items.forEach(n => {
+                html += renderNewsItemHTML(n, true);
+            });
+
+            html += `</div></div></div>`;
+        });
+
+        html += `</div></div>`;
+    }
+
     container.innerHTML = html;
+
+    // 绑定折叠交互
+    const historyToggle = document.getElementById('newsHistoryToggle');
+    const historyBody = document.getElementById('newsHistoryBody');
+    if (historyToggle && historyBody) {
+        historyToggle.addEventListener('click', () => {
+            const isOpen = historyBody.style.display !== 'none';
+            historyBody.style.display = isOpen ? 'none' : 'block';
+            historyToggle.classList.toggle('expanded', !isOpen);
+        });
+    }
+
+    // 月份折叠
+    container.querySelectorAll('.news-month-header').forEach(header => {
+        header.addEventListener('click', () => {
+            const body = header.nextElementSibling;
+            const isOpen = body.style.display !== 'none';
+            body.style.display = isOpen ? 'none' : 'block';
+            header.classList.toggle('expanded', !isOpen);
+        });
+    });
+}
+
+function renderNewsItemHTML(n, isHistory = false) {
+    const impLabel = getImportanceLabel(n.importance);
+    const historyClass = isHistory ? ' news-item-history' : '';
+    return `<div class="news-item ${n.importance === 'high' ? 'news-important' : ''}${historyClass}">
+        <div class="news-item-left">
+            <span class="news-item-importance">${impLabel}</span>
+            <span class="news-item-category">${getNewsCategory(n.category)}</span>
+        </div>
+        <div class="news-item-content">
+            <div class="news-item-title">${n.title}</div>
+            <div class="news-item-summary">${n.summary}</div>
+            <div class="news-item-meta">
+                <span class="news-item-source">${n.source}</span>
+                <span class="news-item-date">${n.date}</span>
+                ${n.tags.map(t => `<span class="news-tag-sm">${t}</span>`).join('')}
+            </div>
+        </div>
+        <a href="${n.sourceUrl}" target="_blank" class="news-item-link" title="查看原文">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2h8v8M14 2L6 10"/></svg>
+        </a>
+    </div>`;
 }
 
 function renderNewsSources() {

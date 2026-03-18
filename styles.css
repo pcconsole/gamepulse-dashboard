@@ -2417,6 +2417,126 @@ tr.row-released td:first-child {
     background: rgba(99,102,241,0.08);
 }
 
+/* News Empty Hint */
+.news-empty-hint {
+    text-align: center;
+    padding: 24px;
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    font-style: italic;
+}
+
+/* ── 历史新闻折叠区 ── */
+.news-history-section {
+    margin-top: 24px;
+    border-top: 2px solid var(--border-light);
+    padding-top: 16px;
+}
+
+.news-history-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+    user-select: none;
+}
+.news-history-toggle:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-color);
+}
+.news-history-toggle-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.news-history-toggle-left h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+.news-history-count {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent-primary);
+    background: rgba(99,102,241,0.1);
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+.news-history-hint {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+.news-history-chevron {
+    transition: transform 0.25s ease;
+}
+.news-history-toggle.expanded .news-history-chevron {
+    transform: rotate(180deg);
+}
+
+.news-history-body {
+    margin-top: 12px;
+}
+
+/* 月份分组 */
+.news-month-group {
+    margin-bottom: 8px;
+}
+.news-month-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    background: rgba(99,102,241,0.04);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    user-select: none;
+}
+.news-month-header:hover {
+    background: rgba(99,102,241,0.08);
+    border-color: var(--border-color);
+}
+.news-month-chevron {
+    transition: transform 0.25s ease;
+    flex-shrink: 0;
+}
+.news-month-header.expanded .news-month-chevron {
+    transform: rotate(180deg);
+}
+.news-month-label {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+.news-month-count {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-left: auto;
+}
+.news-month-body {
+    padding: 4px 0 4px 12px;
+    border-left: 2px solid var(--border-light);
+    margin-left: 8px;
+    margin-top: 4px;
+}
+.news-list-history .news-item {
+    opacity: 0.85;
+}
+.news-list-history .news-item:hover {
+    opacity: 1;
+}
+.news-item-history .news-item-date {
+    font-weight: 600;
+}
+
 /* News Sources */
 .sources-header {
     display: flex;

@@ -755,38 +755,108 @@ function mUpdateNewsTab() {
         });
     }
 
-    // 新闻列表
+    // 新闻列表 — 分为近期 + 历史归档
     const feed = document.getElementById('mNewsFeed');
     if (feed) {
-        const otherNews = filtered.slice(0, 50);
-        feed.innerHTML = otherNews.map(a => {
-            const impCls = a.importance === 'high' ? 'm-imp-high' : (a.importance === 'medium' ? 'm-imp-medium' : 'm-imp-low');
-            const impLabel = a.importance === 'high' ? '重要' : (a.importance === 'medium' ? '关注' : '一般');
+        const now = new Date();
+        const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+        const recentNews = filtered.filter(a => new Date(a.date) >= sevenDaysAgo);
+        const historyNews = filtered.filter(a => new Date(a.date) < sevenDaysAgo);
 
-            return `
-            <div class="m-news-item ${a.importance === 'high' ? 'important' : ''}" data-news-id="${a.id || ''}">
-                <div class="m-news-head">
-                    <span class="m-imp-badge ${impCls}">${impLabel}</span>
-                    <span class="m-news-title">${a.title}</span>
-                </div>
-                <div class="m-news-summary">${a.summary || a.content || ''}</div>
-                <div class="m-news-tags">
-                    ${(a.tags || []).slice(0, 3).map(t => `<span class="m-news-tag-sm">${t}</span>`).join('')}
-                </div>
-                <div class="m-news-meta">
-                    <span class="m-news-category m-news-cat-${a.category || 'market'}">${getCategoryLabel(a.category)}</span>
-                    <span>${a.source || ''}</span>
-                    <span>${a.date || ''}</span>
-                </div>
-            </div>`;
-        }).join('');
+        let feedHTML = '';
 
+        // 近期新闻
+        if (recentNews.length > 0) {
+            feedHTML += `<div class="m-news-section-label">📋 近期动态 <span style="color:var(--text-muted);font-weight:400;">${recentNews.length}条</span></div>`;
+            feedHTML += recentNews.map(a => mRenderNewsItemHTML(a)).join('');
+        } else {
+            feedHTML += `<div class="m-news-empty-hint">暂无近7天新闻，请查看历史归档</div>`;
+        }
+
+        // 历史归档折叠
+        if (historyNews.length > 0) {
+            // 按月分组
+            const monthGroups = {};
+            historyNews.forEach(a => {
+                const mk = a.date.substring(0, 7);
+                if (!monthGroups[mk]) monthGroups[mk] = [];
+                monthGroups[mk].push(a);
+            });
+            const sortedMonths = Object.keys(monthGroups).sort((a, b) => b.localeCompare(a));
+
+            feedHTML += `<div class="m-news-history-toggle" id="mNewsHistoryToggle">
+                <span>📁 历史新闻归档</span>
+                <span class="m-news-history-badge">${historyNews.length}条</span>
+                <svg class="m-news-history-chevron" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 5.5l2.5 2.5L10 5.5"/></svg>
+            </div>
+            <div class="m-news-history-body" id="mNewsHistoryBody" style="display:none;">`;
+
+            sortedMonths.forEach(month => {
+                const items = monthGroups[month];
+                const [y, m] = month.split('-');
+                const label = `${y}年${parseInt(m)}月`;
+                feedHTML += `<div class="m-news-month-header" data-month="${month}">
+                    <svg class="m-news-month-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4.5l2 2 2-2"/></svg>
+                    <span>${label}</span>
+                    <span class="m-news-month-count">${items.length}条</span>
+                </div>
+                <div class="m-news-month-body" style="display:none;">`;
+                feedHTML += items.map(a => mRenderNewsItemHTML(a, true)).join('');
+                feedHTML += `</div>`;
+            });
+
+            feedHTML += `</div>`;
+        }
+
+        feed.innerHTML = feedHTML;
+
+        // 绑定交互
         feed.querySelectorAll('.m-news-item').forEach(item => {
             item.addEventListener('click', () => {
                 item.classList.toggle('expanded');
             });
         });
+
+        const historyToggle = document.getElementById('mNewsHistoryToggle');
+        const historyBody = document.getElementById('mNewsHistoryBody');
+        if (historyToggle && historyBody) {
+            historyToggle.addEventListener('click', () => {
+                const isOpen = historyBody.style.display !== 'none';
+                historyBody.style.display = isOpen ? 'none' : 'block';
+                historyToggle.classList.toggle('expanded', !isOpen);
+            });
+        }
+        feed.querySelectorAll('.m-news-month-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const body = header.nextElementSibling;
+                const isOpen = body.style.display !== 'none';
+                body.style.display = isOpen ? 'none' : 'block';
+                header.classList.toggle('expanded', !isOpen);
+            });
+        });
     }
+}
+
+function mRenderNewsItemHTML(a, isHistory = false) {
+    const impCls = a.importance === 'high' ? 'm-imp-high' : (a.importance === 'medium' ? 'm-imp-medium' : 'm-imp-low');
+    const impLabel = a.importance === 'high' ? '重要' : (a.importance === 'medium' ? '关注' : '一般');
+    const historyCls = isHistory ? ' m-news-item-history' : '';
+    return `
+    <div class="m-news-item ${a.importance === 'high' ? 'important' : ''}${historyCls}" data-news-id="${a.id || ''}">
+        <div class="m-news-head">
+            <span class="m-imp-badge ${impCls}">${impLabel}</span>
+            <span class="m-news-title">${a.title}</span>
+        </div>
+        <div class="m-news-summary">${a.summary || a.content || ''}</div>
+        <div class="m-news-tags">
+            ${(a.tags || []).slice(0, 3).map(t => `<span class="m-news-tag-sm">${t}</span>`).join('')}
+        </div>
+        <div class="m-news-meta">
+            <span class="m-news-category m-news-cat-${a.category || 'market'}">${getCategoryLabel(a.category)}</span>
+            <span>${a.source || ''}</span>
+            <span>${a.date || ''}</span>
+        </div>
+    </div>`;
 }
 
 function getCategoryLabel(cat) {
