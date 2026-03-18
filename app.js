@@ -2471,9 +2471,9 @@ function updateDataFreshness() {
         modules.push({
             name: '新闻',
             icon: '📰',
-            status: daysAgo <= 3 ? 'fresh' : daysAgo <= 7 ? 'warn' : 'stale',
+            status: daysAgo <= 1 ? 'fresh' : daysAgo <= 3 ? 'warn' : 'stale',
             detail: daysAgo === 0 ? '今日更新' : `${daysAgo}天前`,
-            threshold: '3天'
+            threshold: '1天'
         });
     }
 
