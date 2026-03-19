@@ -704,6 +704,7 @@ function mUpdateNewsTab() {
 
     const categoryFilter = document.getElementById('mNewsCategoryFilter')?.value || 'all';
     const sourceFilter = document.getElementById('mNewsSourceFilter')?.value || 'all';
+    const featuredFilter = document.getElementById('mNewsFeaturedFilter')?.value || 'all';
 
     let filtered = [...articles];
     if (categoryFilter !== 'all') {
@@ -712,11 +713,16 @@ function mUpdateNewsTab() {
     if (sourceFilter !== 'all') {
         filtered = filtered.filter(a => a.sourceType === sourceFilter);
     }
+    if (featuredFilter === 'featured') {
+        filtered = filtered.filter(a => a.featured === true);
+    } else if (featuredFilter === 'normal') {
+        filtered = filtered.filter(a => !a.featured);
+    }
 
     // KPI
     mSetText('mNewsTotalCount', articles.length);
-    const importantCount = articles.filter(a => a.importance === 'high').length;
-    mSetText('mNewsImportantCount', importantCount);
+    const featuredCount = articles.filter(a => a.featured === true).length;
+    mSetText('mNewsImportantCount', featuredCount);
 
     const sources = new Set(articles.map(a => a.source).filter(Boolean));
     mSetText('mNewsSourceCount', sources.size);
@@ -730,13 +736,13 @@ function mUpdateNewsTab() {
         mSetText('mNewsUpdateTime', `更新: ${latestDate}`);
     }
 
-    // 重点新闻 (Spotlight)
+    // 重点新闻 (Spotlight) — 使用 featured 字段
     const spotlight = document.getElementById('mNewsSpotlight');
     if (spotlight) {
-        const important = filtered.filter(a => a.importance === 'high').slice(0, 3);
+        const important = filtered.filter(a => a.featured === true).slice(0, 3);
         spotlight.innerHTML = important.map(a => `
             <div class="m-spotlight-card" data-news-id="${a.id || ''}">
-                <div class="m-news-title">${a.title}</div>
+                <div class="m-news-title"><span style="color:#f59e0b;">⭐</span> ${a.title}</div>
                 <div class="m-news-summary">${a.summary || a.content || ''}</div>
                 <div class="m-news-meta">
                     <span class="m-news-category m-news-cat-${a.category || 'market'}">${getCategoryLabel(a.category)}</span>
@@ -838,14 +844,15 @@ function mUpdateNewsTab() {
 }
 
 function mRenderNewsItemHTML(a, isHistory = false) {
-    const impCls = a.importance === 'high' ? 'm-imp-high' : (a.importance === 'medium' ? 'm-imp-medium' : 'm-imp-low');
-    const impLabel = a.importance === 'high' ? '重要' : (a.importance === 'medium' ? '关注' : '一般');
+    const impCls = a.featured ? 'm-imp-featured' : (a.importance === 'high' ? 'm-imp-high' : (a.importance === 'medium' ? 'm-imp-medium' : 'm-imp-low'));
+    const impLabel = a.featured ? '⭐ 重点' : (a.importance === 'high' ? '重要' : (a.importance === 'medium' ? '关注' : '一般'));
     const historyCls = isHistory ? ' m-news-item-history' : '';
+    const featuredCls = a.featured ? ' m-news-featured' : '';
     return `
-    <div class="m-news-item ${a.importance === 'high' ? 'important' : ''}${historyCls}" data-news-id="${a.id || ''}">
+    <div class="m-news-item ${a.featured ? 'important featured' : (a.importance === 'high' ? 'important' : '')}${historyCls}${featuredCls}" data-news-id="${a.id || ''}">
         <div class="m-news-head">
             <span class="m-imp-badge ${impCls}">${impLabel}</span>
-            <span class="m-news-title">${a.title}</span>
+            <span class="m-news-title">${a.featured ? '<span style="color:#f59e0b;">⭐</span> ' : ''}${a.title}</span>
         </div>
         <div class="m-news-summary">${a.summary || a.content || ''}</div>
         <div class="m-news-tags">
@@ -1391,6 +1398,7 @@ function mBindEvents() {
     document.getElementById('mPipelineHeatFilter')?.addEventListener('change', () => mUpdatePipelineTab());
 
     // News 筛选器
+    document.getElementById('mNewsFeaturedFilter')?.addEventListener('change', () => mUpdateNewsTab());
     document.getElementById('mNewsCategoryFilter')?.addEventListener('change', () => mUpdateNewsTab());
     document.getElementById('mNewsSourceFilter')?.addEventListener('change', () => mUpdateNewsTab());
 

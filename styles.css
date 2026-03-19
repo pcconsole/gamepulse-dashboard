@@ -2331,6 +2331,50 @@ tr.row-released td:first-child {
     border-left: 3px solid #ef4444;
 }
 
+/* Featured (重点新闻) 样式 */
+.news-item.news-featured {
+    border-left: 3px solid #f59e0b;
+    background: rgba(245, 158, 11, 0.03);
+}
+.news-item.news-featured:hover {
+    background: rgba(245, 158, 11, 0.06);
+    border-color: #f59e0b;
+}
+.news-item.news-featured .news-item-title {
+    color: var(--text-primary);
+}
+.news-item-featured-badge {
+    color: #f59e0b !important;
+    font-weight: 800 !important;
+}
+.featured-star {
+    font-size: 0.82rem;
+}
+.featured-reason-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: #f59e0b;
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    white-space: nowrap;
+}
+
+/* Spotlight 重点新闻卡片金色主题 */
+.spotlight-card {
+    border-left: 4px solid #f59e0b;
+}
+.spotlight-header h4 {
+    color: #f59e0b;
+}
+.spotlight-count {
+    color: #f59e0b;
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.15);
+}
+
 .news-item-left {
     display: flex;
     flex-direction: column;

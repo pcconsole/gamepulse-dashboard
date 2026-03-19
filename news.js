@@ -1,9 +1,10 @@
 // ============================================
 // 行业热点新闻数据模块
-// [AUTO-GENERATED] 由 News Agent v3.0 自动更新，请勿手动编辑
-// 最后更新: 2026-03-18T14:00:00Z
+// [AUTO-GENERATED] 由 News Agent v4.0 自动更新，请勿手动编辑
+// 最后更新: 2026-03-18T18:00:00Z
 // 更新者: news-agent
 // 数据来源: 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
+// 重要性方案: v4.0 — 统一重点新闻标记（featured），基于腾讯文档863行历史标记学习
 // ============================================
 
 const newsSources = [
@@ -284,6 +285,7 @@ const newsData = [
         ],
         "category": "hardware",
         "importance": "high",
+        "featured": true,
         "date": "2026-03-17",
         "tags": [
             "NVIDIA",
@@ -321,6 +323,7 @@ const newsData = [
         ],
         "category": "game",
         "importance": "high",
+        "featured": true,
         "date": "2026-03-17",
         "tags": [
             "星空",
@@ -352,7 +355,7 @@ const newsData = [
             }
         ],
         "category": "game",
-        "importance": "high",
+        "importance": "medium",
         "date": "2026-03-17",
         "tags": [
             "死亡搁浅2",
@@ -381,6 +384,7 @@ const newsData = [
         ],
         "category": "policy",
         "importance": "high",
+        "featured": true,
         "date": "2026-03-17",
         "tags": [
             "沙特",
@@ -476,8 +480,19 @@ const newsData = [
         "summary": "卡普空宣布《生化危机：安魂曲》全球销量突破600万份，成为系列历史上最快达成这一销量的作品。游戏发售5天内销量达500万份，不到一个月突破600万大关。卡普空计划推出额外游戏内容，并将在系列30周年之际举办多项庆祝活动。",
         "source": "3DM",
         "sourceUrl": "https://www.3dmgame.com/news/202603/3939829.html",
+        "sourceUrls": [
+            {
+                "name": "3DM",
+                "url": "https://www.3dmgame.com/news/202603/3939829.html"
+            },
+            {
+                "name": "Cyberockk",
+                "url": "https://www.cyberockk.com/"
+            }
+        ],
         "category": "game",
         "importance": "high",
+        "featured": true,
         "date": "2026-03-16",
         "tags": [
             "生化危机",
@@ -619,8 +634,19 @@ const newsData = [
         "summary": "索尼PlayStation 6和微软下一代Xbox（代号Project Helix）核心硬件规格对比显示，两者均采用台积电3nm制程工艺和AMD定制芯片。PS6传闻规格：AMD Orion芯片、54个RDNA 5计算单元、30GB GDDR7内存；Helix传闻比XSX多30%计算单元且速度快65%，预计售价$999-$1200。",
         "source": "游戏之家",
         "sourceUrl": "https://www.ithome.com/0/929/007.htm",
+        "sourceUrls": [
+            {
+                "name": "IT之家",
+                "url": "https://www.ithome.com/0/929/007.htm"
+            },
+            {
+                "name": "Gamingbolt",
+                "url": "https://gamingbolt.com/ps6-ps6-handheld-and-project-helix-still-on-track-for-holiday-2027-launch-rumor"
+            }
+        ],
         "category": "hardware",
         "importance": "high",
+        "featured": true,
         "date": "2026-03-14",
         "tags": [
             "PS6",
@@ -790,6 +816,7 @@ const newsData = [
         ],
         "category": "platform",
         "importance": "high",
+        "featured": true,
         "date": "2026-03-13",
         "tags": [
             "Xbox",
@@ -808,6 +835,7 @@ const newsData = [
         "sourceUrl": "https://www.gamesindustry.biz/roblox-and-minecraft-players-are-less-likely-to-play-traditional-aaa-video-games",
         "category": "market",
         "importance": "high",
+        "featured": true,
         "date": "2026-03-13",
         "tags": [
             "Newzoo",
@@ -875,8 +903,19 @@ const newsData = [
         "summary": "据业内知情人士KeplerL2发帖，索尼PS6（含PS6掌机版本）与微软Project Helix目前均未受全球内存短缺影响，仍计划于2027年假日季发售。PS6传闻规格：AMD Orion芯片（280mm²，台积电3nm）、54个RDNA 5计算单元、8核Zen 6c + 2核Zen 6低功耗核心、30GB GDDR7内存。",
         "source": "Gamingbolt",
         "sourceUrl": "https://gamingbolt.com/ps6-ps6-handheld-and-project-helix-still-on-track-for-holiday-2027-launch-rumor",
+        "sourceUrls": [
+            {
+                "name": "Gamingbolt",
+                "url": "https://gamingbolt.com/ps6-ps6-handheld-and-project-helix-still-on-track-for-holiday-2027-launch-rumor"
+            },
+            {
+                "name": "IT之家",
+                "url": "https://www.ithome.com/0/929/007.htm"
+            }
+        ],
         "category": "hardware",
         "importance": "high",
+        "featured": true,
         "date": "2026-03-12",
         "tags": [
             "PS6",
@@ -895,6 +934,7 @@ const newsData = [
         "sourceUrl": "https://www.gamesindustry.biz/pc-will-overtake-console-revenue-by-2028-says-newzoo",
         "category": "market",
         "importance": "high",
+        "featured": true,
         "date": "2026-03-12",
         "tags": [
             "Newzoo",
@@ -923,6 +963,7 @@ const newsData = [
         ],
         "category": "policy",
         "importance": "high",
+        "featured": true,
         "date": "2026-03-12",
         "tags": [
             "PEGI",
@@ -1012,7 +1053,8 @@ const newsData = [
         "source": "IGN",
         "sourceUrl": "https://www.ign.com/articles/1080p-at-30fps-valve-steam-machines-verified-program",
         "category": "platform",
-        "importance": "medium",
+        "importance": "high",
+        "featured": true,
         "date": "2026-03-11",
         "tags": [
             "Valve",
@@ -1062,6 +1104,7 @@ const newsData = [
         ],
         "category": "policy",
         "importance": "high",
+        "featured": true,
         "date": "2026-03-11",
         "tags": [
             "Phil Spencer",
@@ -1079,7 +1122,7 @@ const newsData = [
         "source": "GameDeveloper",
         "sourceUrl": "https://gdconf.com/news/article-tags/gdc",
         "category": "market",
-        "importance": "high",
+        "importance": "medium",
         "date": "2026-03-10",
         "tags": [
             "GDC",
@@ -1129,8 +1172,19 @@ const newsData = [
         "summary": "任天堂隆重庆祝超级马里奥兄弟40周年。MAR10 Day 2026活动公布多项庆祝计划，包括超级马里奥Galaxy电影定档2026年4月1日上映、多款Switch 2新作展示以及系列纪念活动和周边商品。马里奥IP持续展现强大的跨媒体变现能力。",
         "source": "NintendoNews",
         "sourceUrl": "https://mynintendonews.com/",
+        "sourceUrls": [
+            {
+                "name": "NintendoNews",
+                "url": "https://mynintendonews.com/"
+            },
+            {
+                "name": "IGN",
+                "url": "https://www.ign.com/"
+            }
+        ],
         "category": "platform",
         "importance": "high",
+        "featured": true,
         "date": "2026-03-10",
         "tags": [
             "任天堂",
@@ -1155,23 +1209,6 @@ const newsData = [
             "Cygames",
             "Switch 2",
             "ARPG"
-        ],
-        "sentiment": "positive"
-    },
-    {
-        "id": 47,
-        "title": "GDCA 2026提名揭晓：《Clair Obscur: Expedition 33》8项领跑",
-        "summary": "第26届游戏开发者选择奖(GDCA)公布提名名单，《Clair Obscur: Expedition 33》以8项提名领跑，包括年度游戏。独立游戏节(IGF)方面《Baby Steps》以5项提名居首。颁奖典礼在GDC 2026期间于旧金山举行。",
-        "source": "GameDeveloper",
-        "sourceUrl": "https://gdconf.com/news",
-        "category": "market",
-        "importance": "medium",
-        "date": "2026-03-09",
-        "tags": [
-            "GDCA",
-            "游戏奖项",
-            "GDC",
-            "独立游戏"
         ],
         "sentiment": "positive"
     },
@@ -1211,10 +1248,25 @@ const newsData = [
         "id": 50,
         "title": "《GTA6》正式定档2026年5月26日，Rockstar确认延期一年",
         "summary": "Rockstar Games正式宣布《GTA6》将于2026年5月26日发售，较原计划延期约一年。官方表示需要额外时间打磨质量以达到玩家期待的水准。发行商Take-Two Interactive表示全力支持这一决定。",
-        "source": "IGN",
+        "source": "Rockstar Games",
         "sourceUrl": "https://www.rockstargames.com/newswire",
+        "sourceUrls": [
+            {
+                "name": "Rockstar官方",
+                "url": "https://www.rockstargames.com/newswire"
+            },
+            {
+                "name": "新浪财经",
+                "url": "https://finance.sina.com.cn/tech/roll/2025-05-03/doc-inevhatx1078454.shtml"
+            },
+            {
+                "name": "IGN",
+                "url": "https://www.ign.com/"
+            }
+        ],
         "category": "game",
         "importance": "high",
+        "featured": true,
         "date": "2026-03-06",
         "tags": [
             "GTA6",
@@ -1232,6 +1284,7 @@ const newsData = [
         "sourceUrl": "https://www.gamesindustry.biz/",
         "category": "policy",
         "importance": "medium",
+        "featured": true,
         "date": "2026-03-06",
         "tags": [
             "育碧",
@@ -1246,8 +1299,23 @@ const newsData = [
         "summary": "任天堂正式揭晓Switch 2硬件详情：采用更大的8英寸LCD屏幕、NVIDIA T239定制芯片、磁吸式Joy-Con手柄、支持Switch 1游戏向下兼容。预计2025年6月发售，首发阵容包含《马里奥卡丁车世界》。",
         "source": "NintendoNews",
         "sourceUrl": "https://mynintendonews.com/",
+        "sourceUrls": [
+            {
+                "name": "NintendoNews",
+                "url": "https://mynintendonews.com/"
+            },
+            {
+                "name": "IT之家",
+                "url": "https://www.ithome.com/0/818/489.htm"
+            },
+            {
+                "name": "新浪财经",
+                "url": "https://finance.sina.com.cn/tech/digi/2024-11-04/doc-incuwwvv9872209.shtml"
+            }
+        ],
         "category": "platform",
         "importance": "high",
+        "featured": true,
         "date": "2026-03-05",
         "tags": [
             "Nintendo",
@@ -1296,6 +1364,7 @@ const newsData = [
         "sourceUrl": "https://www.gamesindustry.biz/",
         "category": "policy",
         "importance": "high",
+        "featured": true,
         "date": "2026-03-04",
         "tags": [
             "欧盟",
@@ -1312,6 +1381,7 @@ const newsData = [
         "sourceUrl": "https://news.xbox.com/en-us/",
         "category": "platform",
         "importance": "high",
+        "featured": true,
         "date": "2026-03-03",
         "tags": [
             "Xbox",
@@ -1326,8 +1396,19 @@ const newsData = [
         "summary": "游戏科学工作室通过官方社交媒体正式确认《黑神话》系列第二款作品为《黑神话：钟馗》，以中国民间传说\"钟馗捉鬼\"为主题。",
         "source": "机核",
         "sourceUrl": "https://www.gcores.com/news",
+        "sourceUrls": [
+            {
+                "name": "机核",
+                "url": "https://www.gcores.com/news"
+            },
+            {
+                "name": "Total-Gamer",
+                "url": "http://www.total-gamer.com/"
+            }
+        ],
         "category": "game",
         "importance": "high",
+        "featured": true,
         "date": "2026-03-02",
         "tags": [
             "黑神话",
@@ -1360,6 +1441,7 @@ const newsData = [
         "sourceUrl": "https://www.gamesindustry.biz/",
         "category": "platform",
         "importance": "high",
+        "featured": true,
         "date": "2026-02-28",
         "tags": [
             "Epic",
@@ -1390,8 +1472,19 @@ const newsData = [
         "summary": "卡普空在PlayStation State of Play上首次公布《生化危机：安魂曲》，游戏于2026年2月27日在Nintendo Switch 2平台首发。这是生化危机系列的全新作品。",
         "source": "Fami通",
         "sourceUrl": "https://biohaze.com/",
+        "sourceUrls": [
+            {
+                "name": "Biohaze",
+                "url": "https://biohaze.com/"
+            },
+            {
+                "name": "3DM",
+                "url": "https://www.3dmgame.com/news/202603/3939829.html"
+            }
+        ],
         "category": "game",
         "importance": "high",
+        "featured": true,
         "date": "2026-02-27",
         "tags": [
             "生化危机",
@@ -1407,8 +1500,19 @@ const newsData = [
         "summary": "宝可梦公司在Nintendo Direct中展示了《宝可梦：风/浪》的首批概念图和实机片段。本作确定为Switch 2独占首发。",
         "source": "NintendoNews",
         "sourceUrl": "https://mynintendonews.com/",
+        "sourceUrls": [
+            {
+                "name": "NintendoNews",
+                "url": "https://mynintendonews.com/"
+            },
+            {
+                "name": "IGN",
+                "url": "https://www.ign.com/"
+            }
+        ],
         "category": "game",
         "importance": "high",
+        "featured": true,
         "date": "2026-02-25",
         "tags": [
             "宝可梦",
@@ -1423,8 +1527,19 @@ const newsData = [
         "summary": "Bethesda确认《辐射4周年版》《上古卷轴IV：湮没重制版》《夺宝奇兵：大圆环》三款游戏登陆Switch 2。《辐射4》已于2月24日正式发售并支持60fps模式，标志着微软第一方内容加速拥抱任天堂平台。",
         "source": "NintendoNews",
         "sourceUrl": "https://mynintendonews.com/2026/02/24/fallout-4-anniversary-edition-now-available-on-nintendo-switch-2-features-60fps-mode/",
+        "sourceUrls": [
+            {
+                "name": "NintendoNews",
+                "url": "https://mynintendonews.com/2026/02/24/fallout-4-anniversary-edition-now-available-on-nintendo-switch-2-features-60fps-mode/"
+            },
+            {
+                "name": "Xbox Wire",
+                "url": "https://news.xbox.com/"
+            }
+        ],
         "category": "platform",
         "importance": "high",
+        "featured": true,
         "date": "2026-02-24",
         "tags": [
             "Bethesda",
@@ -1460,6 +1575,7 @@ const newsData = [
         "sourceUrl": "https://news.xbox.com/en-us/",
         "category": "policy",
         "importance": "high",
+        "featured": true,
         "date": "2026-02-20",
         "tags": [
             "微软",
@@ -1476,6 +1592,7 @@ const newsData = [
         "sourceUrl": "https://newzoo.com/resources",
         "category": "market",
         "importance": "high",
+        "featured": true,
         "date": "2026-02-15",
         "tags": [
             "Newzoo",

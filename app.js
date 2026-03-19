@@ -951,6 +951,7 @@ function bindEvents() {
     document.getElementById('pipelineHeatFilter')?.addEventListener('change', () => updatePipelineTab());
 
     // News 筛选器
+    document.getElementById('newsFeaturedFilter')?.addEventListener('change', () => updateNewsTab());
     document.getElementById('newsCategoryFilter')?.addEventListener('change', () => updateNewsTab());
     document.getElementById('newsSourceFilter')?.addEventListener('change', () => updateNewsTab());
     document.getElementById('newsRefreshBtn')?.addEventListener('click', () => updateNewsTab());
@@ -1218,6 +1219,7 @@ function renderPipelineTable(games) {
 function updateNewsTab() {
     const catFilter = document.getElementById('newsCategoryFilter')?.value || 'all';
     const srcFilter = document.getElementById('newsSourceFilter')?.value || 'all';
+    const featuredFilter = document.getElementById('newsFeaturedFilter')?.value || 'all';
 
     let filtered = [...newsData];
 
@@ -1232,23 +1234,32 @@ function updateNewsTab() {
         filtered = filtered.filter(n => srcCat.includes(n.source));
     }
 
+    // 重点新闻筛选
+    if (featuredFilter === 'featured') {
+        filtered = filtered.filter(n => n.featured === true);
+    } else if (featuredFilter === 'normal') {
+        filtered = filtered.filter(n => !n.featured);
+    }
+
     // 按日期排序（最新在前）
     filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
 
     // KPI
-    setText('newsTotalCount', filtered.length);
-    const importantCount = filtered.filter(n => n.importance === 'high').length;
-    setText('newsImportantCount', importantCount);
+    setText('newsTotalCount', newsData.length);
+    const featuredCount = newsData.filter(n => n.featured === true).length;
+    setText('newsImportantCount', featuredCount);
+    const featuredPct = newsData.length > 0 ? Math.round(featuredCount / newsData.length * 100) : 0;
+    setText('newsFeaturedRatio', `占比 ${featuredPct}%`);
     setText('newsSourceCount', newsSources.length);
-    const weeklyCount = filtered.filter(n => isThisWeek(n.date)).length;
+    const weeklyCount = newsData.filter(n => isThisWeek(n.date)).length;
     setText('newsWeeklyCount', weeklyCount);
 
-    if (filtered.length > 0) {
-        setText('newsUpdateTime', `最近更新：${filtered[0].date}`);
+    if (newsData.length > 0) {
+        setText('newsUpdateTime', `最近更新：${newsData[0].date}`);
     }
 
-    // 重点关注区
-    renderNewsSpotlight(filtered.filter(n => n.importance === 'high'));
+    // 重点关注区（使用 featured 字段）
+    renderNewsSpotlight(filtered.filter(n => n.featured === true));
 
     // 新闻列表
     renderNewsFeed(filtered);
@@ -1267,18 +1278,22 @@ function renderNewsSpotlight(importantNews) {
     }
 
     let html = `<div class="spotlight-header">
-        <h4>🔴 重点关注</h4>
-        <span class="spotlight-count">${importantNews.length} 条重要新闻</span>
+        <h4>⭐ 重点新闻</h4>
+        <span class="spotlight-count">${importantNews.length} 条重点新闻</span>
     </div>
     <div class="spotlight-grid">`;
 
     importantNews.slice(0, 4).forEach(n => {
+        const featuredReason = getFeaturedReason(n);
         html += `<div class="spotlight-card" style="position:relative;">
             <div class="spotlight-card-header">
                 <span class="spotlight-category">${getNewsCategory(n.category)}</span>
-                <a href="${n.sourceUrl}" target="_blank" class="spotlight-link" title="查看原文">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2h8v8M14 2L6 10"/></svg>
-                </a>
+                <div style="display:flex;align-items:center;gap:6px;">
+                    <span class="featured-reason-tag">${featuredReason}</span>
+                    <a href="${n.sourceUrl}" target="_blank" class="spotlight-link" title="查看原文">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2h8v8M14 2L6 10"/></svg>
+                    </a>
+                </div>
             </div>
             <a href="${n.sourceUrl}" target="_blank" class="spotlight-title-link">
                 <h5 class="spotlight-title">${n.title}</h5>
@@ -1296,6 +1311,25 @@ function renderNewsSpotlight(importantNews) {
 
     html += '</div>';
     container.innerHTML = html;
+}
+
+// 根据新闻内容推断重点新闻归类原因
+function getFeaturedReason(n) {
+    const title = (n.title || '').toLowerCase();
+    const tags = (n.tags || []).join(' ').toLowerCase();
+    const combined = title + ' ' + tags;
+
+    if (combined.match(/并购|收购|投资|股份|持股|pif|egdc|合并|整合/)) return '💰 格局变动';
+    if (combined.match(/退休|辞职|接任|ceo|管理层|人事|重组|裁员/)) return '👤 高管变动';
+    if (combined.match(/销量|突破.*万|里程碑|历史|最快|创纪录|百万/)) return '📊 里程碑';
+    if (combined.match(/ps6|helix|次世代|switch 2|新主机|掌机/)) return '🎮 硬件格局';
+    if (combined.match(/涨价|降价|分成|定价|关税|供应链/)) return '💵 价格冲击';
+    if (combined.match(/gta|发售|定档|首发|上线|确认/)) return '🚀 重要发售';
+    if (combined.match(/欧盟|dma|pegi|评级|监管|法案|诉讼|反垄断/)) return '⚖️ 政策监管';
+    if (combined.match(/newzoo|市场.*超|预测|趋势|报告|$\d+.*亿/)) return '📈 市场洞察';
+    if (combined.match(/steam machine|验证|平台.*战略|开放|第三方/)) return '🌐 平台战略';
+    if (combined.match(/dlss|nvidia|amd|gpu|芯片|显卡/)) return '🔧 技术突破';
+    return '⭐ 重点';
 }
 
 function renderNewsFeed(allNews) {
@@ -1397,15 +1431,17 @@ function renderNewsFeed(allNews) {
 }
 
 function renderNewsItemHTML(n, isHistory = false) {
-    const impLabel = getImportanceLabel(n.importance);
+    const impLabel = n.featured ? '⭐ 重点' : getImportanceLabel(n.importance);
     const historyClass = isHistory ? ' news-item-history' : '';
-    return `<div class="news-item ${n.importance === 'high' ? 'news-important' : ''}${historyClass}">
+    const featuredClass = n.featured ? ' news-featured' : '';
+    const importantClass = n.importance === 'high' ? ' news-important' : '';
+    return `<div class="news-item${importantClass}${featuredClass}${historyClass}">
         <div class="news-item-left">
-            <span class="news-item-importance">${impLabel}</span>
+            <span class="news-item-importance${n.featured ? ' news-item-featured-badge' : ''}">${impLabel}</span>
             <span class="news-item-category">${getNewsCategory(n.category)}</span>
         </div>
         <div class="news-item-content">
-            <div class="news-item-title">${n.title}</div>
+            <div class="news-item-title">${n.featured ? '<span class="featured-star">⭐</span> ' : ''}${n.title}</div>
             <div class="news-item-summary">${n.summary}</div>
             <div class="news-item-meta">
                 <span class="news-item-source">${n.source}</span>

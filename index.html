@@ -603,6 +603,11 @@
                 <div class="chart-header">
                     <h3>📰 PC & Console 行业热点新闻 <span class="agent-badge" id="newsAgentBadge" title="由 Claw Agent 自动维护">🤖 Agent维护</span></h3>
                     <div class="news-controls">
+                        <select id="newsFeaturedFilter" class="pipeline-filter">
+                            <option value="all">全部新闻</option>
+                            <option value="featured">⭐ 仅重点新闻</option>
+                            <option value="normal">📰 仅一般新闻</option>
+                        </select>
                         <select id="newsCategoryFilter" class="pipeline-filter">
                             <option value="all">全部分类</option>
                             <option value="platform">🎮 平台动态</option>
@@ -636,13 +641,13 @@
                             </div>
                         </div>
                         <div class="kpi-card">
-                            <div class="kpi-icon" style="background:rgba(239,68,68,0.12);color:#ef4444;">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                            <div class="kpi-icon" style="background:rgba(245,158,11,0.12);color:#f59e0b;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                             </div>
                             <div class="kpi-info">
-                                <span class="kpi-label">重要新闻</span>
+                                <span class="kpi-label">⭐ 重点新闻</span>
                                 <span class="kpi-value" id="newsImportantCount">0</span>
-                                <span class="kpi-change">需重点关注</span>
+                                <span class="kpi-change" id="newsFeaturedRatio">占比 --</span>
                             </div>
                         </div>
                         <div class="kpi-card">
