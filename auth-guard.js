@@ -85,10 +85,9 @@
       '.denied-hint code{color:#6366f1;background:rgba(99,102,241,0.15);padding:2px 6px;border-radius:4px;font-size:12px;}' +
       '</style></head><body>' +
       '<div class="denied-card">' +
-      '<div class="denied-icon">🔒</div>' +
-      '<div class="denied-title">访问受限</div>' +
-      '<div class="denied-text">GamePulse 看板需要授权 Token 才能访问。<br>请联系管理员获取访问链接。</div>' +
-      '<div class="denied-hint">访问方式：在 URL 后添加 <code>?token=你的令牌</code></div>' +
+      '<div class="denied-icon">⚠️</div>' +
+      '<div class="denied-title">访问异常</div>' +
+      '<div class="denied-text">URL token 错误。</div>' +
       '</div>' +
       '</body></html>'
     );
