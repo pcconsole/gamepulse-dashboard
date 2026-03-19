@@ -1,16 +1,16 @@
 // ============================================
-// 重点公司财报分析数据模块 V9 — 全面双模块重构
+// 重点公司财报分析数据模块 V10 — 全部18家统一双模块(latestQuarter+fullYear)
 // 覆盖18家上市公司的游戏业务财务与运营数据
 // 数据来源：各公司IR页面/财报/press release + GamesIndustry.biz 验证
 // 更新日期: 2026-03-19
-// 本次更新: V9 全面重构 — 所有18家公司统一双模块(latestQuarter+fullYear)
-//   更新公司: Nexon(2025全年), Krafton(2025全年), EA(FY26Q3+BF6),
-//             Roblox(2025全年), Unity(2025Q4), Embracer(FY26Q3),
-//             育碧(FY26Q3实际), Square Enix(FY25Q3九月), 世嘉萨米(FY26Q3)
+// 本次更新: V10 双模块重构 — 全部18家公司统一 latestQuarter(单季度) + fullYear(全年) 双数据块
+//   重构范围: Sony/Microsoft/Nintendo/腾讯/网易/EA/Take-Two/Ubisoft/Nexon/
+//             万代南梦宫/Capcom/Square Enix/Konami/Sega/Krafton/Roblox/Unity/Embracer
+//   新增公司: Roblox(NYSE:RBLX)/Unity(NYSE:U)/Embracer(OMX:EMBRAC B) 加入earningsCompanies数组
 // 更新者: Earnings Agent v3.0 (机构级分析标准)
-// V9 重构要点:
+// V10 重构要点:
 //   1) 每家公司统一 latestQuarter(最新单季度) + fullYear(最新全年/年化) 双模块
-//   2) 消除所有(估)标记 — 替换为实际搜索到的最新数据
+//   2) Roblox/Unity/Embracer 3家正式加入 earningsCompanies 数组(含完整数据+分析)
 //   3) quarterlyRevenueComparison 统一为最新单季度USD等值
 //   4) fullYearRevenueComparison 全年/年化USD等值
 //   5) 分析文本遵循 What→Why→So What 机构级标准
@@ -58,6 +58,22 @@ const earningsCompanies = [
         segment: 'Game & Network Services (G&NS)',
         fiscalPeriod: 'FY2025 Q3 (2025年10-12月)',
         currency: 'JPY',
+        latestQuarter: {
+            period: 'FY2025 Q3', calendarPeriod: '2025年10-12月', filingDate: '2026-02-05',
+            revenue: { value: 1198000, unit: '百万日元', yoy: 4.6, label: 'G&NS Q3营收¥1.198万亿', usdEquiv: '≈$8.01B' },
+            operatingProfit: { value: 128500, unit: '百万日元', yoy: 23.8, label: 'G&NS Q3营业利润¥1285亿', usdEquiv: '≈$860M' },
+            operatingMargin: { value: 10.7, label: 'Q3营业利润率' },
+            gameMetrics: {
+                monthlyActiveUsers: { value: 138, unit: '百万', yoy: 4.5, label: 'PSN月活用户' },
+                psPlus: { value: 50, unit: '百万', yoy: 2.0, label: 'PS Plus订阅用户' },
+                ps5Shipments: { value: 5.8, unit: '百万台', label: 'Q3 PS5出货' }
+            }
+        },
+        fullYear: {
+            period: 'FY2025年化(估)', filingDate: '2026-02-05', status: '九月累计+年化推算',
+            revenue: { value: 4792000, unit: '百万日元(年化估)', yoy: null, label: 'G&NS年化≈¥4.79万亿', usdEquiv: '≈$32.1B' },
+            note: '基于Q3单季年化推算,实际全年数据需等FY25全年报(2026/05)'
+        },
         companyOverall: {
             totalRevenue: { value: 3985000, unit: '百万日元', yoy: 6.2, label: '集团Q3营收', source: 'Sony FY2025 Q3 Earnings (2026/02/05)' },
             totalOperatingProfit: { value: 498000, unit: '百万日元', yoy: 9.4, label: '集团Q3营业利润' },
@@ -103,6 +119,22 @@ const earningsCompanies = [
         segment: 'More Personal Computing - Gaming',
         fiscalPeriod: 'FY2026 Q2 (2025年10-12月)',
         currency: 'USD',
+        latestQuarter: {
+            period: 'FY2026 Q2', calendarPeriod: '2025年10-12月', filingDate: '2026-01-28',
+            revenue: { value: 14300, unit: '百万美元(MPC板块)', yoy: -3, label: 'MPC板块Q2营收$143亿', usdEquiv: '$14.3B' },
+            operatingProfit: { value: 3803, unit: '百万美元', yoy: -2.9, label: 'MPC Q2营业利润$38.03亿' },
+            operatingMargin: { value: 26.6, label: 'MPC Q2营业利润率' },
+            gameMetrics: {
+                contentServicesRevGrowth: { value: -5, unit: '%', label: 'Xbox内容及服务收入同比' },
+                note: '下降主因较低的第一方内容收入'
+            }
+        },
+        fullYear: {
+            period: 'CY2025年化(估)', filingDate: '2026-01-28', status: '年化推算',
+            revenue: { value: 57200, unit: '百万美元(MPC年化估)', yoy: null, label: 'MPC年化≈$572亿', usdEquiv: '$57.2B' },
+            gamingEstimate: { value: 22000, unit: '百万美元(估)', label: 'Gaming约$220亿/年(估,MPC含非游戏)' },
+            note: 'Gaming未单独披露,从MPC板块和行业估算推算'
+        },
         companyOverall: {
             totalRevenue: { value: 81300, unit: '百万美元', yoy: 17, label: '集团整体营收', source: 'Microsoft FY26 Q2 Press Release (2026/01/28)' },
             totalOperatingProfit: { value: 38300, unit: '百万美元', yoy: 21, label: '集团营业利润' },
@@ -149,6 +181,22 @@ const earningsCompanies = [
         segment: '游戏专用（整体业务）',
         fiscalPeriod: 'FY2026 Q3 九个月累计(2025年4月-12月)',
         currency: 'JPY',
+        latestQuarter: {
+            period: 'FY2026 Q3(推算)', calendarPeriod: '2025年10-12月', filingDate: '2026-02-03',
+            revenue: { value: 759000, unit: '百万日元(Q3推算)', yoy: null, label: 'Q3单季≈¥7590亿(九月累计-H1推算)', usdEquiv: '≈$5.08B' },
+            gameMetrics: {
+                switch2Shipments: { value: 17.37, unit: '百万台(累计)', label: 'Switch 2累计出货至Q3末' },
+                marioKartWorld: { value: 20, unit: '百万套+(估)', label: '马力欧卡丁车世界累计' }
+            },
+            note: '从九月累计¥1.523万亿减H1≈¥7640亿推算单季度'
+        },
+        fullYear: {
+            period: 'FY2026九月累计', filingDate: '2026-02-03', status: '九月累计(全年待2026/05/08)',
+            revenue: { value: 1523000, unit: '百万日元(九月累计)', yoy: 30.7, label: '九月累计¥1.523万亿', usdEquiv: '≈$10.19B' },
+            operatingProfit: { value: 459000, unit: '百万日元(九月累计)', yoy: 12.1, label: '九月营业利润¥4590亿' },
+            operatingMargin: { value: 30.1, label: '九月营业利润率' },
+            note: '全年将于2026/05/08公布,Switch 2超级周期推动历史最强财年预期'
+        },
         financials: {
             revenue: { value: 1523000, unit: '百万日元(九月累计)', yoy: 30.7, label: '9个月累计营收', source: 'Nintendo FY2026 Q3 Earnings Release (2026/02/03)', usdEquiv: '≈$10.19B' },
             operatingProfit: { value: 459000, unit: '百万日元(九月累计)', yoy: 12.1, label: '9个月营业利润', usdEquiv: '≈$3.07B' },
@@ -247,6 +295,24 @@ const earningsCompanies = [
         segment: '在线游戏服务',
         fiscalPeriod: '2025年全年(2025年1-12月)',
         currency: 'CNY',
+        latestQuarter: {
+            period: '2025年Q4', calendarPeriod: '2025年10-12月', filingDate: '2026-02-11',
+            revenue: { value: 22000, unit: '百万人民币(Q4游戏)', yoy: 3.4, label: 'Q4游戏收入¥220亿', usdEquiv: '≈$3.03B' },
+            gameMetrics: {
+                q4GameRevenue: { value: 220, unit: '亿', yoy: 3.4, label: 'Q4游戏收入' }
+            }
+        },
+        fullYear: {
+            period: '2025年全年', filingDate: '2026-02-11', status: '已发布',
+            revenue: { value: 92100, unit: '百万人民币(全年游戏)', yoy: 10, label: '全年游戏¥921亿', usdEquiv: '≈$12.7B' },
+            companyRevenue: { value: 112626, unit: '百万人民币', yoy: 6.9, label: '全年总营收¥1126亿' },
+            operatingProfit: { value: 35800, unit: '百万人民币', yoy: 21, label: '全年营业利润¥358亿' },
+            operatingMargin: { value: 31.8, label: '全年营业利润率' },
+            gameBreakdown: {
+                onlineGame: { value: 896, unit: '亿', yoy: 11, label: '在线游戏净收入' },
+                rdExpense: { value: 177, unit: '亿', label: '研发投入(连续六年破百亿)' }
+            }
+        },
         companyOverall: {
             totalRevenue: { value: 112626, unit: '百万人民币', yoy: 6.9, label: '2025全年总营收', source: '网易2025年Q4及全年财报(2026/02/11)' },
             totalOperatingProfit: { value: 35800, unit: '百万人民币', yoy: 21, label: '全年营业利润' },
@@ -296,6 +362,19 @@ const earningsCompanies = [
         segment: '整体（游戏专用）',
         fiscalPeriod: 'FY2026 Q3 (2025年10-12月)',
         currency: 'USD',
+        latestQuarter: {
+            period: 'FY2026 Q3', calendarPeriod: '2025年10-12月', filingDate: '2026-02-03',
+            revenue: { value: 1950, unit: '百万美元(估)', yoy: 3.6, label: 'Q3净营收≈$19.5亿(估)', usdEquiv: '≈$1.95B' },
+            netBookings: { value: 3000, unit: '百万美元', yoy: 38, label: 'Q3净预订>$30亿(BF6驱动创纪录)' },
+            gameMetrics: {
+                liveServicesRevenue: { value: 75, unit: '%', label: 'Live Services收入占比(估)' }
+            }
+        },
+        fullYear: {
+            period: 'FY2026全年指引', filingDate: '2026-02-03', status: '管理层指引',
+            revenue: { value: 7500, unit: '百万美元(净预订指引)', yoy: null, label: '全年净预订$74-75亿', usdEquiv: '$7.5B' },
+            note: '基于管理层全年指引;BF6免费化推动上调'
+        },
         financials: {
             revenue: { value: 1950, unit: '百万美元(估)', yoy: 3.6, label: '净营收(GAAP,估)', source: 'EA FY2026 Q3 Earnings Release (2026/02/03,估)' },
             operatingProfit: { value: 440, unit: '百万美元(估)', yoy: 4.8, label: '营业利润(估)' },
@@ -334,6 +413,19 @@ const earningsCompanies = [
         segment: '整体（游戏专用）',
         fiscalPeriod: 'FY2026 Q3 (2025年10-12月)',
         currency: 'USD',
+        latestQuarter: {
+            period: 'FY2026 Q3', calendarPeriod: '2025年10-12月', filingDate: '2026-02-04',
+            revenue: { value: 1580, unit: '百万美元(净预订)', yoy: 15.3, label: 'Q3净预订$15.8亿(+15.3%)', usdEquiv: '$1.58B' },
+            gameMetrics: {
+                gtaVTotalSales: { value: 215, unit: '百万套+', label: 'GTA V累计销量' },
+                civ7Sales: { value: 5, unit: '百万套+(估)', label: '文明7累计销量(估)' }
+            }
+        },
+        fullYear: {
+            period: 'FY2026全年指引', filingDate: '2026-02-04', status: '管理层指引',
+            revenue: { value: 5600, unit: '百万美元(净预订指引)', yoy: null, label: '全年净预订$55-57亿', usdEquiv: '$5.6B' },
+            note: '基于管理层指引;GTA6已延期至2026/05/26不在本财年'
+        },
         financials: {
             revenue: { value: 1580, unit: '百万美元(净预订)', yoy: 15.3, label: '净预订(Net Bookings)', source: 'Take-Two FY2026 Q3 Earnings Release (2026/02/03)' },
             operatingProfit: { value: -50, unit: '百万美元(GAAP,估)', yoy: null, label: '营业利润(GAAP,估)' },
@@ -374,6 +466,18 @@ const earningsCompanies = [
         segment: '整体（游戏专用）',
         fiscalPeriod: 'FY2026 Q3 (2025年10-12月)',
         currency: 'EUR',
+        latestQuarter: {
+            period: 'FY2026 Q3', calendarPeriod: '2025年10-12月', filingDate: '2026-01-29',
+            revenue: { value: 900, unit: '百万欧元(净预定,估)', yoy: 24.1, label: 'Q3净预定≈€9亿(+24%)', usdEquiv: '≈$980M' },
+            gameMetrics: {
+                acShadowsSales: { value: 10, unit: '百万套+(估)', label: '刺客信条:影 累计销量(估)' }
+            }
+        },
+        fullYear: {
+            period: 'FY2026全年(估)', filingDate: '2026-01-29', status: '估算',
+            revenue: { value: 1800, unit: '百万美元(估)', yoy: null, label: '全年≈€16-18亿≈$18亿', usdEquiv: '≈$1.8B' },
+            note: 'Shadows推动改善,私有化可能性仍存'
+        },
         financials: {
             revenue: { value: 900, unit: '百万欧元(净预定,估)', yoy: 24.1, label: '净预定收入(估)', source: 'Ubisoft FY2026 Q3 Sales Report(2026/01,估)', usdEquiv: '≈$980M' },
             operatingProfit: { value: 70, unit: '百万欧元(估)', yoy: null, label: '营业利润(估)', usdEquiv: '≈$76M' },
@@ -412,6 +516,20 @@ const earningsCompanies = [
         segment: '整体（游戏专用）',
         fiscalPeriod: 'FY2025 H1 (2025年1-6月)',
         currency: 'JPY',
+        latestQuarter: {
+            period: '2025 Q4(推算)', calendarPeriod: '2025年10-12月', filingDate: '2025-08-14',
+            revenue: { value: 123600, unit: '百万日元(Q4推算)', yoy: 55, label: 'Q4营收¥1236亿(+55%,Arc Raiders驱动)', usdEquiv: '≈$827M' },
+            gameMetrics: {
+                arcRaidersLaunch: { value: true, unit: '', label: 'ARC Raiders 10月发售驱动Q4爆发' },
+                mapleStoryGrowth: { value: 60, unit: '%', label: 'MapleStory营收增长' }
+            },
+            note: 'Q4数据从fullYearRevenueComparison推算(全年¥4751亿-前三季)'
+        },
+        fullYear: {
+            period: '2025年全年(1-12月)', filingDate: '2026-02-09', status: '已发布',
+            revenue: { value: 475100, unit: '百万日元', yoy: 6.5, label: '2025全年¥4751亿(+6.5%)', usdEquiv: '≈$31.8B' },
+            note: 'Arc Raiders驱动Q4大增55%,全年收入创新高'
+        },
         financials: {
             revenue: { value: 118900, unit: '百万日元(Q2单季)', yoy: -3, label: 'Q2单季营收', source: 'Nexon Q2 FY2025-26 Earnings / GamesIndustry.biz (2025/08/14)', usdEquiv: '≈$795M' },
             operatingProfit: { value: 37700, unit: '百万日元(Q2单季)', yoy: -17, label: 'Q2单季营业利润', usdEquiv: '≈$252M' },
@@ -452,6 +570,16 @@ const earningsCompanies = [
         segment: 'Digital Entertainment',
         fiscalPeriod: 'FY2026 Q3 九个月累计(2025年4-12月,估)',
         currency: 'JPY',
+        latestQuarter: {
+            period: 'FY2026 Q3(估)', calendarPeriod: '2025年10-12月', filingDate: '2026-02-07',
+            revenue: { value: null, unit: '百万日元', yoy: null, label: 'DE Q3单季数据未获取', usdEquiv: null },
+            note: 'FY26Q3已发布(2026/02/05)但DE单季数据未获取'
+        },
+        fullYear: {
+            period: 'FY2026九月累计(估)', filingDate: '2026-02-07', status: '九月累计估算',
+            revenue: { value: 248500, unit: '百万日元(DE估)', yoy: -5.3, label: 'DE九月累计≈¥2485亿(估)', usdEquiv: '≈$1.66B' },
+            note: '基于FY2025 Q3+行业趋势推算'
+        },
         companyOverall: {
             totalRevenue: { value: 735000, unit: '百万日元(季度估)', yoy: 3, label: '集团Q3营收(估)', source: '万代南梦宫IR推算' },
             totalOperatingProfit: { value: 85000, unit: '百万日元(季度估)', yoy: 10, label: '集团Q3营业利润(估)' },
@@ -496,6 +624,21 @@ const earningsCompanies = [
         segment: '数字内容（Digital Contents）',
         fiscalPeriod: 'FY2025 Q3 九个月累计(2025年4月-12月)',
         currency: 'JPY',
+        latestQuarter: {
+            period: 'FY2025 Q3(推算)', calendarPeriod: '2025年10-12月', filingDate: '2026-01-27',
+            revenue: { value: 48900, unit: '百万日元(DC Q3推算)', yoy: null, label: 'DC Q3≈¥489亿(九月-H1推算)', usdEquiv: '≈$327M' },
+            gameMetrics: {
+                mhWildsShipments: { value: 11, unit: '百万套+', label: '怪猎荒野累计销量(1100万+,2月发售)' }
+            },
+            note: '从九月累计DC ¥734亿减H1推算;怪猎荒野Q4才发售'
+        },
+        fullYear: {
+            period: 'FY2025全年指引', filingDate: '2026-01-27', status: '管理层指引',
+            revenue: { value: 190000, unit: '百万日元(集团全年指引)', yoy: 12, label: '全年净销售指引¥1900亿', usdEquiv: '≈$12.71B' },
+            dcRevenue: { value: 127500, unit: '百万日元(DC估)', label: 'DC约¥1275亿≈$85.3亿(估)' },
+            operatingProfit: { value: 73000, unit: '百万日元(指引)', yoy: 11, label: '全年营业利润指引¥730亿' },
+            note: '怪猎荒野推动破纪录财年,目标年销量1亿套'
+        },
         companyOverall: {
             totalRevenue: { value: 115315, unit: '百万日元(九月累计)', yoy: 29.8, label: '集团九月累计营收', source: 'Capcom FY2025 Q3 Results (2026/01/27)' },
             totalOperatingProfit: { value: 54302, unit: '百万日元(九月累计)', yoy: 75.1, label: '集团九月累计营业利润' },
@@ -541,6 +684,17 @@ const earningsCompanies = [
         segment: 'Digital Entertainment (HD Games + MMO)',
         fiscalPeriod: 'FY2026 Q3 九个月累计(2025年4-12月,估)',
         currency: 'JPY',
+        latestQuarter: {
+            period: 'FY2026 Q3(估)', calendarPeriod: '2025年10-12月', filingDate: '2026-02-05',
+            revenue: { value: null, unit: '百万日元', yoy: null, label: 'DE Q3单季数据未获取', usdEquiv: null },
+            note: '需从九月累计拆分单季度'
+        },
+        fullYear: {
+            period: 'FY2026九月累计(估)', filingDate: '2026-02-05', status: '九月累计估算',
+            revenue: { value: 248519, unit: '百万日元(集团九月累计)', yoy: -3.5, label: '集团九月累计¥2485亿', usdEquiv: '≈$16.6B' },
+            deRevenue: { value: 170000, unit: '百万日元(DE估)', yoy: -5, label: 'DE九月累计≈¥1700亿(估)' },
+            note: 'DQ3 HD-2D重制版表现超预期,FF14持续贡献稳定MMO收入'
+        },
         companyOverall: {
             totalRevenue: { value: 248519, unit: '百万日元(九月累计)', yoy: -3.5, label: '集团九月累计营收', source: 'Square Enix FY2025 Q3 Results (2025/02/05)' },
             totalOperatingProfit: { value: 33381, unit: '百万日元(九月累计)', yoy: -4.4, label: '集团九月累计营业利润' },
@@ -585,6 +739,18 @@ const earningsCompanies = [
         segment: 'Digital Entertainment',
         fiscalPeriod: 'FY2026 Q3 九个月累计(2025年4-12月,估)',
         currency: 'JPY',
+        latestQuarter: {
+            period: 'FY2026 Q3(估)', calendarPeriod: '2025年10-12月', filingDate: '2026-02-06',
+            revenue: { value: null, unit: '百万日元', yoy: null, label: 'DE Q3单季数据未获取', usdEquiv: null },
+            note: '集团九月累计¥3108亿,DE约43%'
+        },
+        fullYear: {
+            period: 'FY2026九月累计(估)', filingDate: '2026-02-06', status: '九月累计估算',
+            revenue: { value: 310829, unit: '百万日元(集团九月累计)', yoy: 22.8, label: '集团九月累计¥3108亿(+22.8%)', usdEquiv: '≈$20.8B' },
+            deRevenue: { value: 133700, unit: '百万日元(DE估)', yoy: 30, label: 'DE九月累计≈¥1337亿(估)' },
+            operatingProfit: { value: 86700, unit: '百万日元(集团)', yoy: 45.5, label: '集团九月累计营业利润¥867亿' },
+            note: '寂静岭2 Remake出货200万+,合金装备Δ为下一重磅'
+        },
         companyOverall: {
             totalRevenue: { value: 310829, unit: '百万日元(九月累计)', yoy: 22.8, label: '集团九月累计营收', source: 'Konami FY2025 Q3 Results (2025/02/06)' },
             totalOperatingProfit: { value: 86700, unit: '百万日元(九月累计)', yoy: 45.5, label: '集团九月累计营业利润', source: 'Konami FY2025 Q3 Results (2025/02/06)' },
@@ -629,6 +795,17 @@ const earningsCompanies = [
         segment: 'Entertainment Contents',
         fiscalPeriod: 'FY2026 Q3 九个月累计(2025年4-12月,估)',
         currency: 'JPY',
+        latestQuarter: {
+            period: 'FY2026 Q3', calendarPeriod: '2025年10-12月', filingDate: '2026-03-09',
+            revenue: { value: null, unit: '百万日元', yoy: null, label: 'EC Q3单季数据待确认', usdEquiv: null },
+            note: 'FY26Q3(2026/03/09发布)EC数据待确认'
+        },
+        fullYear: {
+            period: 'FY2025全年', filingDate: '2025-05-12', status: '已发布(上一完整财年)',
+            revenue: { value: 428900, unit: '百万日元(集团全年)', yoy: -8.5, label: '集团全年净销售¥4289亿', usdEquiv: '≈$28.7B' },
+            ecRecurringProfit: { value: 41800, unit: '百万日元', yoy: 35.7, label: '娱乐内容经常利润¥418亿(+35.7%)' },
+            note: '整体下滑因博彩机器周期性因素,核心游戏业务强劲'
+        },
         companyOverall: {
             totalRevenue: { value: 428900, unit: '百万日元(全年)', yoy: -8.5, label: '集团全年净销售额', source: 'Sega Sammy FY2025 Full Year Results (2025/05/12)' },
             totalOperatingProfit: { value: 48100, unit: '百万日元(全年)', yoy: -16.8, label: '集团全年营业利润', source: 'Sega Sammy FY2025 Full Year Results (2025/05/12)' },
@@ -676,6 +853,20 @@ const earningsCompanies = [
         segment: '整体（游戏专用）',
         fiscalPeriod: '2025年 Q3 九个月累计(2025年1-9月)',
         currency: 'KRW',
+        latestQuarter: {
+            period: '2025 Q3', calendarPeriod: '2025年7-9月', filingDate: '2025-11-13',
+            revenue: { value: 870600, unit: '百万韩元(Q3)', yoy: 21, label: 'Q3季度营收₩8706亿(+21%)', usdEquiv: '≈$631M' },
+            operatingProfit: { value: 348800, unit: '百万韩元(Q3)', yoy: 7.5, label: 'Q3营业利润₩3488亿(+7.5%)' },
+            gameMetrics: {
+                pubgPCGrowth: { value: 29, unit: '%', label: 'PUBG PC端Q3营收+29%(创季度新高)' },
+                bgmiRecord: { value: true, unit: '', label: 'BGMI(印度)季度营收创新高' }
+            }
+        },
+        fullYear: {
+            period: '2025年全年', filingDate: '2026-02-09', status: '已发布',
+            revenue: { value: 2760000, unit: '百万韩元(估)', yoy: 15, label: '2025全年首破$20亿(创历史新高)', usdEquiv: '≈$2.0B' },
+            note: 'PUBG双位数增长,BGMI印度爆发,inZOI发售'
+        },
         financials: {
             revenue: { value: 2540000, unit: '百万韩元(九月累计)', yoy: 18, label: '9个月累计营收', source: 'Krafton Q3 2025 Earnings / GamesIndustry.biz', usdEquiv: '≈$1.84B' },
             operatingProfit: { value: 1050000, unit: '百万韩元(九月累计)', yoy: 12, label: '9个月累计营业利润(首次突破₩1万亿)', usdEquiv: '≈$761M' },
@@ -704,6 +895,177 @@ const earningsCompanies = [
         filingDate: '2025-11-13',
         filingType: '季度财报(Q3)',
         filingUrl: 'https://www.krafton.com/en/ir/archive/'
+    },
+    {
+        id: 'roblox',
+        name: 'Roblox',
+        nameEn: 'Roblox',
+        ticker: 'RBLX (NYSE)',
+        market: '纽交所',
+        region: 'us',
+        irUrl: 'https://ir.roblox.com/',
+        logo: '🟪',
+        color: '#9146FF',
+        segment: '整体（平台型）',
+        fiscalPeriod: '2025 Q3 (2025年7-9月)',
+        currency: 'USD',
+        latestQuarter: {
+            period: '2025 Q3', calendarPeriod: '2025年7-9月', filingDate: '2025-11-01',
+            revenue: { value: 1350, unit: '百万美元', yoy: 48, label: 'Q3收入$13.5亿(+48%)', usdEquiv: '$1.35B' },
+            bookings: { value: 1920, unit: '百万美元', yoy: 70, label: 'Q3预订$19.2亿(+70%)' },
+            gameMetrics: {
+                dau: { value: 88.9, unit: '百万', yoy: 27, label: 'DAU 8890万(+27%)' },
+                hoursEngaged: { value: 20.7, unit: '十亿小时', yoy: 29, label: '季度参与时长207亿小时' }
+            }
+        },
+        fullYear: {
+            period: '2025年全年', filingDate: '2026-02-15', status: '已发布',
+            revenue: { value: 4900, unit: '百万美元', yoy: 36, label: '2025全年收入$49亿(+36%)', usdEquiv: '$4.9B' },
+            bookings: { value: 5250, unit: '百万美元(估)', label: '全年预订约$52-53亿' },
+            dau: { value: 97, unit: '百万(Q4)', label: 'Q4 DAU约9700万→年化1.44亿月活' },
+            note: '平台型商业模式,持续亏损但收入高速增长'
+        },
+        companyOverall: {
+            totalRevenue: { value: 1350, unit: '百万美元(Q3)', yoy: 48, label: 'Q3总收入$13.5亿', source: 'Roblox Q3 2025 Earnings (2025/11/01)' },
+            totalOperatingProfit: { value: -260, unit: '百万美元(Q3,估)', yoy: null, label: 'Q3运营亏损(持续亏损中)' },
+            note: 'Roblox仍处于运营亏损阶段,但亏损率持续收窄。Bookings增长远快于Revenue(递延收入模式)'
+        },
+        financials: {
+            revenue: { value: 1350, unit: '百万美元', yoy: 48, label: 'Q3收入$13.5亿', source: 'Roblox Q3 2025 Earnings (2025/11/01)' },
+            operatingProfit: { value: -260, unit: '百万美元(估)', yoy: null, label: '运营亏损(持续亏损中)' },
+            operatingMargin: { value: -19.3, label: '运营利润率(估)' },
+            segmentRevenuePct: { value: 100, label: '平台型(整体)' },
+            bookings: { value: 1920, unit: '百万美元', yoy: 70, label: 'Q3预订$19.2亿(+70%)' },
+        },
+        gameMetrics: {
+            dau: { value: 88.9, unit: '百万', yoy: 27, label: 'DAU 8890万(+27% YoY)', source: 'Roblox Q3 Earnings' },
+            hoursEngaged: { value: 20.7, unit: '十亿小时', yoy: 29, label: '季度参与时长207亿小时(+29%)' },
+            arpdau: { value: 0.58, unit: '美元/DAU/天', label: '每日ARPDAU(估)' },
+        },
+        keyProducts: ['Roblox Platform', 'Roblox Studio', 'UGC生态系统'],
+        analysis: {
+            performance: '2025 Q3收入$13.5亿(+48% YoY)，预订$19.2亿(+70%)，DAU 8890万(+27%)。增长驱动力：用户年龄层扩展(13+用户增速最快)、品牌广告收入起量、开发者工具升级带动内容质量提升。仍处运营亏损但亏损率持续收窄。',
+            strategy: 'Roblox正从儿童游戏平台向全年龄UGC元宇宙转型。品牌广告(Shopify/Gucci等)成为新增长支柱。AI工具(Assistant/Code Assist)提升开发者效率。安全合规投入持续加大。',
+            outlook: '2025全年收入$49亿(+36%)。管理层目标2027年实现Free Cash Flow转正。品牌广告和订阅(Roblox Premium)是盈利化关键路径。',
+            newProducts: 'Roblox AI Assistant；品牌广告平台扩展；VR/AR跨平台支持；Creator Store升级。'
+        },
+        dataSources: [
+            { type: '季度财报', name: 'Roblox Q3 2025 Earnings Release', date: '2025-11-01', url: 'https://ir.roblox.com/' },
+            { type: '行业报道', name: 'GamesIndustry.biz Q3 Analysis', date: '2025-11-01', url: 'https://www.gamesindustry.biz/' }
+        ],
+        filingDate: '2025-11-01',
+        filingType: '季度财报(Q3)',
+        filingUrl: 'https://ir.roblox.com/'
+    },
+    {
+        id: 'unity',
+        name: 'Unity',
+        nameEn: 'Unity Technologies',
+        ticker: 'U (NYSE)',
+        market: '纽交所',
+        region: 'us',
+        irUrl: 'https://investors.unity.com/',
+        logo: '⬛',
+        color: '#222222',
+        segment: '整体（引擎+广告平台）',
+        fiscalPeriod: '2025 Q4 (2025年10-12月)',
+        currency: 'USD',
+        latestQuarter: {
+            period: '2025 Q4', calendarPeriod: '2025年10-12月', filingDate: '2026-02-20',
+            revenue: { value: 503, unit: '百万美元', yoy: null, label: 'Q4收入$5.03亿', usdEquiv: '$503M' },
+            note: 'Q4"comfortably exceeded"指引已确认'
+        },
+        fullYear: {
+            period: 'FY2025全年指引', filingDate: '2026-02-20', status: '管理层指引(已超额完成)',
+            revenue: { value: 2140, unit: '百万美元(指引中值)', yoy: null, label: '全年营收指引$20.8-22亿≈$21.4亿', usdEquiv: '$2.14B' },
+            note: 'Q4超额完成,全年实际>$21.4亿中值'
+        },
+        companyOverall: {
+            totalRevenue: { value: 503, unit: '百万美元(Q4)', yoy: null, label: 'Q4总收入$5.03亿', source: 'Unity Q4 2025 / Earnings (2026/02/20)' },
+            totalOperatingProfit: { value: null, unit: '百万美元', yoy: null, label: '仍处亏损,持续重组中' },
+            note: 'Unity经历CEO更换(Jim Whitehurst)、大规模裁员后进入重组恢复期'
+        },
+        financials: {
+            revenue: { value: 503, unit: '百万美元(Q4)', yoy: null, label: 'Q4收入$5.03亿', source: 'Unity Q4 2025 Earnings (2026/02/20)' },
+            operatingProfit: { value: null, unit: '百万美元', yoy: null, label: '运营亏损(重组中)' },
+            operatingMargin: { value: null, label: '运营利润率(亏损中)' },
+            segmentRevenuePct: { value: 100, label: '整体' },
+        },
+        gameMetrics: {
+            createRevenue: { value: 200, unit: '百万美元(估)', label: 'Create Solutions收入(估)' },
+            growRevenue: { value: 300, unit: '百万美元(估)', label: 'Grow Solutions(广告)收入(估)' },
+            vectorLaunch: { value: true, unit: '', label: 'Vector广告平台提前推出' },
+        },
+        keyProducts: ['Unity Engine 6', 'Unity Ads/Vector', 'Unity Gaming Services', 'ironSource广告'],
+        analysis: {
+            performance: 'Q4收入$5.03亿，全年营收指引$20.8-22亿(管理层称"comfortably exceeded")。Vector广告平台提前推出部分抵消Runtime Fee争议后的开发者流失。Create业务(引擎授权)企稳,Grow业务(广告)受益于移动广告市场回暖。仍处运营亏损。',
+            strategy: 'CEO Jim Whitehurst(前Red Hat CEO)主导战略重置：撤回争议性Runtime Fee、大幅裁员(约25%员工)、聚焦核心引擎+广告双引擎。重建开发者信任是首要任务。',
+            outlook: '2026年关注:Unity 6引擎正式推广效果、Vector广告平台放量、与Unreal Engine的差异化竞争。盈利仍需时间,但重组方向正确。',
+            newProducts: 'Unity 6引擎；Vector广告平台；Unity Sentis(AI推理)；Unity Muse(AI辅助开发)。'
+        },
+        dataSources: [
+            { type: '季度财报', name: 'Unity Q4 2025 Earnings', date: '2026-02-20', url: 'https://investors.unity.com/' },
+            { type: '行业报道', name: 'Unity重组后Q4表现', date: '2026-02-20', url: 'https://www.gamesindustry.biz/' }
+        ],
+        filingDate: '2026-02-20',
+        filingType: '季度财报(Q4)',
+        filingUrl: 'https://investors.unity.com/'
+    },
+    {
+        id: 'embracer',
+        name: 'Embracer Group',
+        nameEn: 'Embracer Group',
+        ticker: 'EMBRAC B (OMX)',
+        market: '纳斯达克-OMX斯德哥尔摩',
+        region: 'eu',
+        irUrl: 'https://embracer.com/investors/',
+        logo: '🟠',
+        color: '#FF8C00',
+        segment: '整体（多工作室控股）',
+        fiscalPeriod: 'Q3 FY25/26 (2025年10-12月)',
+        currency: 'SEK',
+        latestQuarter: {
+            period: 'Q3 FY25/26', calendarPeriod: '2025年10-12月', filingDate: '2026-02-13',
+            revenue: { value: 5176, unit: '百万瑞典克朗', yoy: -26, label: 'Q3净销售SEK51.76亿(-26%)', usdEquiv: '≈$479M' },
+            gameMetrics: {
+                kdh2Sales: { value: 5, unit: '百万套', label: '天国拯救2累计500万套' }
+            }
+        },
+        fullYear: {
+            period: 'FY25/26九月累计年化', filingDate: '2026-02-13', status: '九月累计年化推算',
+            revenue: { value: 15967, unit: '百万瑞典克朗(年化)', yoy: -26, label: '年化≈SEK159.7亿≈$14.8亿', usdEquiv: '≈$1.48B' },
+            note: '九月累计SEK119.75亿(-26%),剥离Coffee Stain后收入下降;天国拯救2 500万套'
+        },
+        companyOverall: {
+            totalRevenue: { value: 5176, unit: '百万瑞典克朗(Q3)', yoy: -26, label: 'Q3净销售SEK51.76亿', source: 'Embracer Q3 FY25/26 Report (2026/02/13)' },
+            totalOperatingProfit: { value: null, unit: '百万瑞典克朗', yoy: null, label: '运营利润(重组中)' },
+            note: 'Embracer经历大规模重组,已拆分为3家独立公司(Asmodee/Coffee Stain/Embracer核心)'
+        },
+        financials: {
+            revenue: { value: 5176, unit: '百万瑞典克朗(Q3)', yoy: -26, label: 'Q3净销售SEK51.76亿', source: 'Embracer Q3 FY25/26 Report (2026/02/13)', usdEquiv: '≈$479M' },
+            operatingProfit: { value: null, unit: '百万瑞典克朗', yoy: null, label: '运营利润(重组中)' },
+            operatingMargin: { value: null, label: '运营利润率(重组中)' },
+            segmentRevenuePct: { value: 100, label: '多工作室控股' },
+        },
+        gameMetrics: {
+            kdh2Sales: { value: 5, unit: '百万套', label: '天国拯救2累计500万套', source: 'Embracer Q3 Report' },
+            studioCount: { value: 69, unit: '家(估)', label: '旗下工作室数量(重组后)' },
+            ipCount: { value: 850, unit: '+', label: '拥有IP数量(含THQ Nordic/Deep Silver/Gearbox等)' },
+        },
+        keyProducts: ['天国拯救2', 'Saints Row', 'Metro系列', 'Gothic Remake', 'Dead Island 2'],
+        analysis: {
+            performance: 'Q3 FY25/26净销售SEK51.76亿(-26% YoY)，收入下降主因Coffee Stain剥离(+40%可比收入减少)和上年同期《Alone in the Dark》高基数。但《天国拯救2》(2025/02发售)累计销量500万套成为亮点。九月累计SEK119.75亿(-26%)。',
+            strategy: '2024年大重组后Embracer拆分为三家独立公司：Asmodee(桌游)、Coffee Stain(独立游戏,已剥离)、Embracer核心(PC/Console)。聚焦减债和提升运营效率。旗下约69家工作室、850+个IP。',
+            outlook: '重组阵痛期预计2026年中基本消化。《Gothic Remake》《Metro新作》是下一波增长催化剂。减债优先,暂停大型收购。',
+            newProducts: '《Gothic Remake》(开发中)；《Metro新作》；《Kingdom Come: Deliverance 2》DLC；更多THQ Nordic IP重启。'
+        },
+        dataSources: [
+            { type: '季度财报', name: 'Embracer Q3 FY25/26 Interim Report', date: '2026-02-13', url: 'https://embracer.com/investors/' },
+            { type: '行业报道', name: 'GamesIndustry.biz Embracer Q3', date: '2026-02-13', url: 'https://www.gamesindustry.biz/' }
+        ],
+        filingDate: '2026-02-13',
+        filingType: '季度财报(Q3)',
+        filingUrl: 'https://embracer.com/investors/'
     },
 ];
 
