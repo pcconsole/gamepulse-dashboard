@@ -1616,11 +1616,12 @@ function updateEarningsTab() {
         setText('earningsLatestCompany', latestCompany?.name || '--');
     }
 
-    // 图表
-    renderEarningsMarginChart(filtered);
-    renderEarningsGrowthChart(filtered);
+    // 图表（收入图前置，利润率/增速在后）
     renderEarningsRevenueCompareChart();
     renderEarningsFullYearChart();
+    renderEarningsEstimationLegend();
+    renderEarningsMarginChart(filtered);
+    renderEarningsGrowthChart(filtered);
 
     // 公司卡片
     renderEarningsCompanyGrid(filtered);
@@ -1633,27 +1634,59 @@ function renderEarningsMarginChart(companies) {
     const container = document.getElementById('earningsMarginChart');
     if (!container) return;
 
-    const data = companies
-        .filter(c => c.financials.operatingMargin.value !== null)
-        .sort((a, b) => b.financials.operatingMargin.value - a.financials.operatingMargin.value);
+    // V8: 补齐利润率数据 — 官方数据优先，未披露的使用集团利润率或合理估算
+    const data = companies.map(c => {
+        let margin = c.financials.operatingMargin.value;
+        let isEstimated = false;
+        let estimateNote = '';
+        if (margin === null || margin === undefined) {
+            // 尝试从 companyOverall 获取集团利润率
+            if (c.companyOverall?.totalOperatingMargin?.value) {
+                margin = c.companyOverall.totalOperatingMargin.value;
+                isEstimated = true;
+                estimateNote = '使用集团整体利润率(游戏业务利润率未单独披露)';
+            } else if (c.companyOverall?.totalOperatingProfit?.value && c.companyOverall?.totalRevenue?.value) {
+                margin = +(c.companyOverall.totalOperatingProfit.value / c.companyOverall.totalRevenue.value * 100).toFixed(1);
+                isEstimated = true;
+                estimateNote = '基于集团营收和营业利润推算(游戏板块未单独披露)';
+            } else if (c.companyOverall?.nonIfrsOp?.value && c.companyOverall?.totalRevenue?.value) {
+                margin = +(c.companyOverall.nonIfrsOp.value / c.companyOverall.totalRevenue.value * 100).toFixed(1);
+                isEstimated = true;
+                estimateNote = '基于Non-IFRS经营利润/总营收推算(游戏利润未单独披露)';
+            }
+        }
+        return { company: c, margin, isEstimated, estimateNote };
+    }).filter(d => d.margin !== null && d.margin !== undefined)
+      .sort((a, b) => b.margin - a.margin);
 
     let html = '<div class="earnings-bars">';
-    const maxVal = Math.max(...data.map(c => Math.abs(c.financials.operatingMargin.value)), 1);
+    const maxVal = Math.max(...data.map(d => Math.abs(d.margin)), 1);
 
-    data.forEach(c => {
-        const val = c.financials.operatingMargin.value;
+    data.forEach(d => {
+        const val = d.margin;
+        const c = d.company;
         const width = Math.abs(val) / maxVal * 80;
         const isNegative = val < 0;
         const barColor = isNegative ? '#ef4444' : (val >= 30 ? '#22c55e' : val >= 20 ? '#3b82f6' : val >= 10 ? '#f59e0b' : '#64748b');
+        const estTag = d.isEstimated ? `<span style="display:inline-block;font-size:0.58rem;padding:1px 4px;border-radius:3px;background:rgba(245,158,11,0.15);color:#f59e0b;margin-left:4px;font-weight:600;" title="${d.estimateNote}">推算</span>` : '';
 
-        html += `<div class="earnings-bar-row clickable" data-company-id="${c.id}">
-            <div class="earnings-bar-name">${c.logo} ${c.name}</div>
+        html += `<div class="earnings-bar-row clickable" data-company-id="${c.id}" data-estimated="${d.isEstimated}" data-estimate-note="${d.estimateNote}">
+            <div class="earnings-bar-name">${c.logo} ${c.name}${estTag}</div>
             <div class="earnings-bar-track-wrapper">
-                <div class="earnings-bar-fill" style="width:${width}%;background:${barColor};"></div>
+                <div class="earnings-bar-fill" style="width:${width}%;background:${barColor};${d.isEstimated ? 'opacity:0.7;background-image:repeating-linear-gradient(45deg,transparent,transparent 3px,rgba(255,255,255,0.15) 3px,rgba(255,255,255,0.15) 6px);' : ''}"></div>
             </div>
             <div class="earnings-bar-value" style="color:${barColor};">${val.toFixed(1)}%</div>
         </div>`;
     });
+
+    // 估算说明
+    const estimatedCount = data.filter(d => d.isEstimated).length;
+    if (estimatedCount > 0) {
+        html += `<div style="font-size:0.7rem;color:var(--text-muted);padding:8px 0 2px;border-top:1px dashed var(--border-color);margin-top:6px;">
+            <span style="display:inline-block;width:12px;height:8px;background:repeating-linear-gradient(45deg,#f59e0b33,#f59e0b33 3px,transparent 3px,transparent 6px);border-radius:2px;margin-right:4px;vertical-align:middle;"></span>
+            斜线填充 = 推算值 (${estimatedCount}家) · 游戏业务利润率未单独披露，使用集团数据推算
+        </div>`;
+    }
 
     html += '</div>';
     container.innerHTML = html;
@@ -1665,7 +1698,6 @@ function renderEarningsMarginChart(companies) {
         if (!company) return;
 
         row.addEventListener('click', () => {
-            // Scroll to company card and expand it
             scrollToCompanyCard(companyId);
         });
 
@@ -1673,12 +1705,18 @@ function renderEarningsMarginChart(companies) {
             const rev = company.financials.revenue;
             const op = company.financials.operatingProfit;
             const margin = company.financials.operatingMargin;
+            const isEst = row.dataset.estimated === 'true';
+            const estNote = row.dataset.estimateNote || '';
             let tipHtml = `<div class="earnings-tooltip-title">${company.logo} ${company.name} <span class="earnings-region-tag ${company.region}">${getRegionFlag(company.region)}</span></div>`;
             tipHtml += `<div class="earnings-tooltip-row"><span class="earnings-tooltip-label">${rev.label}:</span><span class="earnings-tooltip-value">${rev.value !== null ? rev.value.toLocaleString() + ' ' + rev.unit : 'N/A'}${rev.usdEquiv ? ' ' + formatUSDEquiv(rev.usdEquiv) : ''}</span></div>`;
             if (op.value !== null) {
                 tipHtml += `<div class="earnings-tooltip-row"><span class="earnings-tooltip-label">${op.label}:</span><span class="earnings-tooltip-value">${op.value.toLocaleString()} ${op.unit}${op.usdEquiv ? ' ' + formatUSDEquiv(op.usdEquiv) : ''}</span></div>`;
             }
-            tipHtml += `<div class="earnings-tooltip-row"><span class="earnings-tooltip-label">营业利润率:</span><span class="earnings-tooltip-value" style="color:${margin.value >= 30 ? '#22c55e' : margin.value >= 15 ? '#3b82f6' : '#f59e0b'};">${margin.value !== null ? margin.value.toFixed(1) + '%' : 'N/A'}</span></div>`;
+            const marginVal = margin.value !== null ? margin.value : (isEst ? parseFloat(row.querySelector('.earnings-bar-value').textContent) : null);
+            tipHtml += `<div class="earnings-tooltip-row"><span class="earnings-tooltip-label">营业利润率:</span><span class="earnings-tooltip-value" style="color:${marginVal >= 30 ? '#22c55e' : marginVal >= 15 ? '#3b82f6' : '#f59e0b'};">${marginVal !== null ? marginVal.toFixed(1) + '%' : 'N/A'}${isEst ? ' <span style="color:#f59e0b;font-size:0.72rem;">(推算)</span>' : ''}</span></div>`;
+            if (isEst && estNote) {
+                tipHtml += `<div style="font-size:0.7rem;color:#f59e0b;margin-top:3px;padding:3px 6px;background:rgba(245,158,11,0.08);border-radius:4px;">⚠ ${estNote}</div>`;
+            }
             tipHtml += `<div class="earnings-tooltip-source">📅 ${company.fiscalPeriod} · ${company.filingDate}</div>`;
             showEarningsTooltip(e, tipHtml);
         });
@@ -1886,6 +1924,88 @@ function renderEarningsFullYearChart() {
     });
 }
 
+// V8: 估算/推算方法说明面板 — 显眼标注为什么需要估算、缺什么、怎么算
+function renderEarningsEstimationLegend() {
+    const container = document.getElementById('earningsEstimationLegend');
+    if (!container) return;
+
+    // 收集所有图表中用到的非A级数据
+    const qData = (typeof quarterlyRevenueComparison !== 'undefined') ? quarterlyRevenueComparison : [];
+    const fyData = (typeof fullYearRevenueComparison !== 'undefined') ? fullYearRevenueComparison : [];
+
+    const estimations = [];
+
+    // 单季度图中的推算/估算
+    qData.filter(d => d.dataGrade && d.dataGrade !== 'A' && d.revenue !== null).forEach(d => {
+        estimations.push({
+            company: d.name, grade: d.dataGrade, chart: '单季度',
+            note: d.note || '', caveat: d.caveat || '', period: d.period || ''
+        });
+    });
+    // 全年图中的推算/估算
+    fyData.filter(d => d.dataGrade && d.dataGrade !== 'A' && d.revenue !== null).forEach(d => {
+        estimations.push({
+            company: d.name, grade: d.dataGrade, chart: '全年',
+            note: d.note || '', caveat: d.caveat || '', period: d.period || ''
+        });
+    });
+    // 排除的公司（dataGrade X 或 revenue null）
+    const excluded = qData.filter(d => d.revenue === null || d.dataGrade === 'X');
+
+    if (estimations.length === 0 && excluded.length === 0) { container.innerHTML = ''; return; }
+
+    const gradeColors = { A: '#10b981', B: '#f59e0b', C: '#ef4444', X: '#6b7280' };
+    const gradeLabels = { A: '官方数据', B: '推算(基于官方数据推导)', C: '估算(基于行业共识/指引)', X: '暂无可靠数据' };
+    const gradeExplain = {
+        B: '公司仅发布九月累计或半年报数据，通过 "九月累计 − 上半年" 推算出单季度数据，或基于管理层全年指引',
+        C: '公司未单独披露游戏业务数据，或数据为行业共识估算值，参考多家分析师报告交叉验证',
+        X: '财报数据过时或为幻觉估算，已主动排除等待更新'
+    };
+
+    let html = `<div style="padding:14px 18px;background:var(--bg-secondary);border:1px solid var(--border-color);border-radius:10px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+            <span style="font-size:0.82rem;font-weight:700;color:var(--text-primary);">📋 数据质量标注说明</span>
+            <span style="font-size:0.68rem;padding:2px 6px;border-radius:4px;background:rgba(99,102,241,0.1);color:#6366f1;">为什么有些数据是推算/估算？</span>
+        </div>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:10px;">`;
+
+    ['A', 'B', 'C', 'X'].forEach(g => {
+        html += `<div style="display:flex;align-items:center;gap:5px;">
+            <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${gradeColors[g]};"></span>
+            <span style="font-size:0.72rem;font-weight:600;color:${gradeColors[g]};">${gradeLabels[g]}</span>
+        </div>`;
+    });
+    html += `</div>`;
+
+    // 详细列表
+    if (estimations.length > 0) {
+        html += `<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:8px;">`;
+        estimations.forEach(e => {
+            const gc = gradeColors[e.grade] || '#6b7280';
+            const gl = gradeLabels[e.grade] || e.grade;
+            html += `<div style="padding:8px 10px;background:var(--bg-primary);border-radius:6px;border-left:3px solid ${gc};">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px;">
+                    <span style="font-weight:600;font-size:0.76rem;color:var(--text-primary);">${e.company}</span>
+                    <span style="font-size:0.6rem;padding:1px 4px;border-radius:3px;background:${gc}22;color:${gc};font-weight:600;">${gl}</span>
+                    <span style="font-size:0.62rem;color:var(--text-muted);">${e.chart}图 · ${e.period}</span>
+                </div>
+                <div style="font-size:0.68rem;color:var(--text-secondary);">${e.caveat || e.note}</div>
+            </div>`;
+        });
+        html += `</div>`;
+    }
+
+    // 排除公司
+    if (excluded.length > 0) {
+        html += `<div style="margin-top:8px;font-size:0.7rem;color:var(--text-muted);padding:6px 8px;background:rgba(107,114,128,0.06);border-radius:4px;">
+            ⚠ 已排除(数据不可靠)：${excluded.map(e => `<span style="font-weight:600;">${e.name}</span>`).join('、')} — 等待最新财报数据更新后重新纳入
+        </div>`;
+    }
+
+    html += `</div>`;
+    container.innerHTML = html;
+}
+
 function scrollToCompanyCard(companyId) {
     const card = document.querySelector(`.earnings-company-card[data-company-id="${companyId}"]`);
     if (card) {
@@ -1910,89 +2030,133 @@ function scrollToCompanyCard(companyId) {
     }
 }
 
-// V7: 构建双模块（单季度+全年）HTML块 — 仅当公司有latestQuarter和fullYear时显示
+// V8: 构建双模块（最近单季度 + 最近全年）HTML — 所有公司通用
+// 数据来源优先级：latestQuarter/fullYear > quarterlyRevenueComparison/fullYearRevenueComparison > financials
 function buildDualModuleHtml(c) {
-    if (!c.latestQuarter || !c.fullYear) return '';
-
-    const lq = c.latestQuarter;
-    const fy = c.fullYear;
-    const rate = earningsExchangeRates[c.currency]?.rate || 1;
-
-    // 单季度数据
-    const qRev = lq.revenue?.value;
-    const qRevLabel = lq.revenue?.label || '单季度游戏收入';
-    const qRevYoy = lq.revenue?.yoy;
-    const qRevUsd = lq.revenue?.usdEquiv || '';
-    const qPeriod = lq.period || '';
-    const qCompanyRev = lq.companyRevenue?.value;
-    const qCompanyLabel = lq.companyRevenue?.label || '';
-
-    // 全年数据
-    const fyRev = fy.revenue?.value;
-    const fyRevLabel = fy.revenue?.label || '全年游戏收入';
-    const fyRevYoy = fy.revenue?.yoy;
-    const fyRevUsd = fy.revenue?.usdEquiv || '';
-    const fyPeriod = fy.period || '';
-    const fyCompanyRev = fy.companyRevenue?.value;
-    const fyCompanyLabel = fy.companyRevenue?.label || '';
-
-    // 国内/国际拆分（如果有）
-    let qBreakdown = '';
-    if (lq.gameMetrics?.domesticGames && lq.gameMetrics?.internationalGames) {
-        const dg = lq.gameMetrics.domesticGames;
-        const ig = lq.gameMetrics.internationalGames;
-        qBreakdown = `<div style="font-size:0.72rem;color:var(--text-muted);margin-top:4px;">
-            国内 ¥${dg.value}${dg.unit || '亿'}<span style="color:${(dg.yoy||0)>=0?'#10b981':'#ef4444'};margin-left:3px;">${dg.yoy!==null&&dg.yoy!==undefined?(dg.yoy>=0?'+':'')+dg.yoy+'%':''}</span>
-            &nbsp;|&nbsp; 国际 ¥${ig.value}${ig.unit || '亿'}<span style="color:${(ig.yoy||0)>=0?'#10b981':'#ef4444'};margin-left:3px;">${ig.yoy!==null&&ig.yoy!==undefined?(ig.yoy>=0?'+':'')+ig.yoy+'%':''}</span>
-        </div>`;
-    }
-
-    let fyBreakdown = '';
-    if (fy.gameBreakdown?.domestic && fy.gameBreakdown?.international) {
-        const dg = fy.gameBreakdown.domestic;
-        const ig = fy.gameBreakdown.international;
-        fyBreakdown = `<div style="font-size:0.72rem;color:var(--text-muted);margin-top:4px;">
-            国内 ¥${dg.value}${dg.unit || '亿'}<span style="color:${(dg.yoy||0)>=0?'#10b981':'#ef4444'};margin-left:3px;">${dg.yoy!==null&&dg.yoy!==undefined?(dg.yoy>=0?'+':'')+dg.yoy+'%':''}</span>
-            &nbsp;|&nbsp; 国际 ¥${ig.value}${ig.unit || '亿'}<span style="color:${(ig.yoy||0)>=0?'#10b981':'#ef4444'};margin-left:3px;">${ig.yoy!==null&&ig.yoy!==undefined?(ig.yoy>=0?'+':'')+ig.yoy+'%':''}</span>
-        </div>`;
-    }
-
     const yoyBadge = (yoy) => {
         if (yoy === null || yoy === undefined) return '';
-        return `<span style="display:inline-block;font-size:0.7rem;padding:1px 6px;border-radius:10px;background:${yoy>=0?'rgba(16,185,129,0.12)':'rgba(239,68,68,0.12)'};color:${yoy>=0?'#10b981':'#ef4444'};margin-left:6px;font-weight:600;">${yoy>=0?'+':''}${yoy}%</span>`;
+        return `<span style="display:inline-block;font-size:0.68rem;padding:1px 6px;border-radius:10px;background:${yoy>=0?'rgba(16,185,129,0.12)':'rgba(239,68,68,0.12)'};color:${yoy>=0?'#10b981':'#ef4444'};margin-left:5px;font-weight:600;">${yoy>=0?'+':''}${yoy}%</span>`;
     };
 
-    return `
-            <div class="earnings-dual-module" style="margin:10px 0;padding:10px 14px;background:var(--bg-secondary);border-radius:10px;border:1px solid var(--border-color);">
-                <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;">
-                    <span style="font-size:0.75rem;font-weight:700;color:var(--text-primary);">📊 双模块数据</span>
-                    <span style="font-size:0.62rem;padding:1px 5px;border-radius:3px;background:rgba(99,102,241,0.1);color:#6366f1;">V7</span>
-                </div>
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-                    <!-- 单季度模块 -->
-                    <div style="padding:8px 10px;background:var(--bg-primary);border-radius:8px;border-left:3px solid #10b981;">
-                        <div style="font-size:0.68rem;color:var(--text-muted);margin-bottom:4px;">📅 ${qPeriod} <span style="background:rgba(16,185,129,0.12);color:#10b981;padding:0 4px;border-radius:3px;font-size:0.6rem;font-weight:600;">单季度</span></div>
-                        <div style="font-size:0.82rem;font-weight:700;color:var(--text-primary);">
-                            ${qRev !== null ? (qRev/10000).toFixed(1) + '万' : 'N/A'} ${c.financials.revenue.unit?.split('(')[0] || ''}
-                            ${qRevUsd ? `<span style="color:#10b981;font-size:0.72rem;font-weight:500;">${qRevUsd}</span>` : ''}
-                            ${yoyBadge(qRevYoy)}
-                        </div>
-                        ${qBreakdown}
-                        ${qCompanyRev ? `<div style="font-size:0.68rem;color:var(--text-muted);margin-top:3px;">${qCompanyLabel}</div>` : ''}
-                    </div>
-                    <!-- 全年模块 -->
-                    <div style="padding:8px 10px;background:var(--bg-primary);border-radius:8px;border-left:3px solid #8b5cf6;">
-                        <div style="font-size:0.68rem;color:var(--text-muted);margin-bottom:4px;">📅 ${fyPeriod} <span style="background:rgba(139,92,246,0.12);color:#8b5cf6;padding:0 4px;border-radius:3px;font-size:0.6rem;font-weight:600;">全年</span></div>
-                        <div style="font-size:0.82rem;font-weight:700;color:var(--text-primary);">
-                            ${fyRev !== null ? (fyRev/10000).toFixed(1) + '万' : 'N/A'} ${c.financials.revenue.unit?.split('(')[0] || ''}
-                            ${fyRevUsd ? `<span style="color:#8b5cf6;font-size:0.72rem;font-weight:500;">${fyRevUsd}</span>` : ''}
-                            ${yoyBadge(fyRevYoy)}
-                        </div>
-                        ${fyBreakdown}
-                        ${fyCompanyRev ? `<div style="font-size:0.68rem;color:var(--text-muted);margin-top:3px;">${fyCompanyLabel}</div>` : ''}
-                    </div>
-                </div>
+    // === 提取单季度数据 ===
+    let qPeriod = '', qRevStr = '', qRevYoyBadge = '', qBreakdown = '', qSource = '';
+    if (c.latestQuarter) {
+        const lq = c.latestQuarter;
+        qPeriod = lq.period || '';
+        const qRev = lq.revenue?.value;
+        const qUnit = c.currency === 'CNY' ? '百万¥' : c.currency === 'JPY' ? '百万¥' : c.currency === 'USD' ? '$M' : '';
+        const qUsd = lq.revenue?.usdEquiv || '';
+        qRevStr = qRev !== null && qRev !== undefined
+            ? `<span style="font-weight:700;font-size:0.85rem;">${(qRev/10000 >= 1 ? (qRev/10000).toFixed(1) + '万' : qRev.toLocaleString())} ${c.financials.revenue.unit?.split('(')[0] || ''}</span>
+               ${qUsd ? `<span style="color:#10b981;font-size:0.72rem;margin-left:3px;">${qUsd}</span>` : ''}`
+            : '<span style="color:var(--text-muted);font-size:0.78rem;">未单独披露</span>';
+        qRevYoyBadge = yoyBadge(lq.revenue?.yoy);
+        if (lq.gameMetrics?.domesticGames && lq.gameMetrics?.internationalGames) {
+            const dg = lq.gameMetrics.domesticGames;
+            const ig = lq.gameMetrics.internationalGames;
+            qBreakdown = `<div style="font-size:0.7rem;color:var(--text-muted);margin-top:4px;">
+                国内 ¥${dg.value}${dg.unit||'亿'}${yoyBadge(dg.yoy)} · 国际 ¥${ig.value}${ig.unit||'亿'}${yoyBadge(ig.yoy)}
             </div>`;
+        }
+        qSource = lq.filingDate ? `发布 ${lq.filingDate}` : '';
+    } else {
+        // 从 quarterlyRevenueComparison 获取
+        const qrc = (typeof quarterlyRevenueComparison !== 'undefined') ? quarterlyRevenueComparison : [];
+        const match = qrc.find(d => d.name && (d.name.includes(c.name) || d.name.includes(c.nameEn)));
+        if (match && match.revenue) {
+            qPeriod = match.period || c.fiscalPeriod;
+            const valStr = match.revenue >= 10000 ? '$' + (match.revenue/1000).toFixed(1) + 'B' : '$' + (match.revenue/1000).toFixed(2) + 'B';
+            qRevStr = `<span style="font-weight:700;font-size:0.85rem;">${valStr}</span>`;
+            qRevYoyBadge = yoyBadge(match.yoy);
+            const grade = match.dataGrade || 'A';
+            const gradeColors = { A: '#10b981', B: '#f59e0b', C: '#ef4444' };
+            const gradeLabels = { A: '官方', B: '推算', C: '估算' };
+            if (grade !== 'A') {
+                qRevStr += ` <span style="font-size:0.6rem;padding:1px 4px;border-radius:3px;background:${(gradeColors[grade]||'#6b7280')}22;color:${gradeColors[grade]||'#6b7280'};font-weight:600;">${gradeLabels[grade]||grade}</span>`;
+            }
+            if (match.caveat) qBreakdown = `<div style="font-size:0.66rem;color:var(--text-muted);margin-top:3px;">📝 ${match.caveat}</div>`;
+        } else {
+            // 从 financials 中获取
+            qPeriod = c.fiscalPeriod || '';
+            const rev = c.financials.revenue;
+            if (rev.value !== null) {
+                qRevStr = `<span style="font-weight:700;font-size:0.85rem;">${rev.value.toLocaleString()} ${rev.unit}</span>`;
+                if (rev.usdEquiv) qRevStr += ` <span style="color:#10b981;font-size:0.72rem;">${rev.usdEquiv}</span>`;
+                qRevYoyBadge = yoyBadge(rev.yoy);
+            } else {
+                qRevStr = '<span style="color:var(--text-muted);font-size:0.78rem;">未单独披露</span>';
+            }
+        }
+    }
+
+    // === 提取全年数据 ===
+    let fyPeriod = '', fyRevStr = '', fyRevYoyBadge = '', fyBreakdown = '', fySource = '';
+    if (c.fullYear) {
+        const fy = c.fullYear;
+        fyPeriod = fy.period || '';
+        const fyRev = fy.revenue?.value;
+        const fyUsd = fy.revenue?.usdEquiv || '';
+        fyRevStr = fyRev !== null && fyRev !== undefined
+            ? `<span style="font-weight:700;font-size:0.85rem;">${(fyRev/10000 >= 1 ? (fyRev/10000).toFixed(1) + '万' : fyRev.toLocaleString())} ${c.financials.revenue.unit?.split('(')[0] || ''}</span>
+               ${fyUsd ? `<span style="color:#8b5cf6;font-size:0.72rem;margin-left:3px;">${fyUsd}</span>` : ''}`
+            : '<span style="color:var(--text-muted);font-size:0.78rem;">暂无全年数据</span>';
+        fyRevYoyBadge = yoyBadge(fy.revenue?.yoy);
+        if (fy.gameBreakdown?.domestic && fy.gameBreakdown?.international) {
+            const dg = fy.gameBreakdown.domestic;
+            const ig = fy.gameBreakdown.international;
+            fyBreakdown = `<div style="font-size:0.7rem;color:var(--text-muted);margin-top:4px;">
+                国内 ¥${dg.value}${dg.unit||'亿'}${yoyBadge(dg.yoy)} · 国际 ¥${ig.value}${ig.unit||'亿'}${yoyBadge(ig.yoy)}
+            </div>`;
+        }
+    } else {
+        // 从 fullYearRevenueComparison 获取
+        const fyrc = (typeof fullYearRevenueComparison !== 'undefined') ? fullYearRevenueComparison : [];
+        const matchFy = fyrc.find(d => d.name && (d.name.includes(c.name) || d.name.includes(c.nameEn)));
+        if (matchFy && matchFy.revenue) {
+            fyPeriod = matchFy.period || '';
+            const valStr = matchFy.revenue >= 10000 ? '$' + (matchFy.revenue/1000).toFixed(1) + 'B' : '$' + (matchFy.revenue/1000).toFixed(2) + 'B';
+            fyRevStr = `<span style="font-weight:700;font-size:0.85rem;">${valStr}</span>`;
+            fyRevYoyBadge = yoyBadge(matchFy.yoy);
+            const grade = matchFy.dataGrade || 'A';
+            const gradeColors = { A: '#10b981', B: '#f59e0b', C: '#ef4444' };
+            const gradeLabels = { A: '官方', B: '推算/指引', C: '估算' };
+            if (grade !== 'A') {
+                fyRevStr += ` <span style="font-size:0.6rem;padding:1px 4px;border-radius:3px;background:${(gradeColors[grade]||'#6b7280')}22;color:${gradeColors[grade]||'#6b7280'};font-weight:600;">${gradeLabels[grade]||grade}</span>`;
+            }
+            if (matchFy.breakdown) fyBreakdown = `<div style="font-size:0.66rem;color:var(--text-muted);margin-top:3px;">📊 ${matchFy.breakdown}</div>`;
+            if (matchFy.caveat) fyBreakdown += `<div style="font-size:0.66rem;color:var(--text-muted);margin-top:2px;">📝 ${matchFy.caveat}</div>`;
+        } else {
+            fyPeriod = '';
+            fyRevStr = '<span style="color:var(--text-muted);font-size:0.76rem;">暂无全年数据</span>';
+        }
+    }
+
+    return `
+        <div class="earnings-dual-module" style="margin:8px 12px;padding:12px 14px;background:var(--bg-secondary);border-radius:10px;border:1px solid var(--border-color);">
+            <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;">
+                <span style="font-size:0.75rem;font-weight:700;color:var(--text-primary);">📊 数据双视图</span>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                <!-- 单季度模块 -->
+                <div style="padding:10px 12px;background:var(--bg-primary);border-radius:8px;border-left:3px solid #10b981;">
+                    <div style="font-size:0.68rem;color:var(--text-muted);margin-bottom:5px;">
+                        📅 ${qPeriod || '最新季度'}
+                        <span style="background:rgba(16,185,129,0.12);color:#10b981;padding:1px 5px;border-radius:3px;font-size:0.6rem;font-weight:600;margin-left:3px;">单季度</span>
+                    </div>
+                    <div>${qRevStr}${qRevYoyBadge}</div>
+                    ${qBreakdown}
+                </div>
+                <!-- 全年模块 -->
+                <div style="padding:10px 12px;background:var(--bg-primary);border-radius:8px;border-left:3px solid #8b5cf6;">
+                    <div style="font-size:0.68rem;color:var(--text-muted);margin-bottom:5px;">
+                        📅 ${fyPeriod || '全年/年化'}
+                        <span style="background:rgba(139,92,246,0.12);color:#8b5cf6;padding:1px 5px;border-radius:3px;font-size:0.6rem;font-weight:600;margin-left:3px;">全年</span>
+                    </div>
+                    <div>${fyRevStr}${fyRevYoyBadge}</div>
+                    ${fyBreakdown}
+                </div>
+            </div>
+        </div>`;
 }
 
 function renderEarningsCompanyGrid(companies) {
@@ -2019,27 +2183,14 @@ function renderEarningsCompanyGrid(companies) {
             `<span class="earnings-yoy ${c.financials.revenue.yoy >= 0 ? 'positive' : 'negative'}">${c.financials.revenue.yoy > 0 ? '↑' : '↓'} ${Math.abs(c.financials.revenue.yoy).toFixed(1)}% YoY</span>` :
             '';
 
-        // Revenue USD equiv
         const revUsdHtml = c.financials.revenue.usdEquiv && c.currency !== 'USD'
-            ? formatUSDEquiv(c.financials.revenue.usdEquiv)
-            : '';
-
-        // Operating Profit USD equiv
+            ? formatUSDEquiv(c.financials.revenue.usdEquiv) : '';
         const opUsdHtml = c.financials.operatingProfit.usdEquiv && c.currency !== 'USD'
-            ? formatUSDEquiv(c.financials.operatingProfit.usdEquiv)
-            : '';
-
-        // Currency badge
+            ? formatUSDEquiv(c.financials.operatingProfit.usdEquiv) : '';
         const currencyBadge = c.currency !== 'USD'
-            ? `<span class="currency-badge">${c.currency}</span>`
-            : '';
-
-        // Exchange rate note for non-USD
+            ? `<span class="currency-badge">${c.currency}</span>` : '';
         const exchangeRateNote = c.currency !== 'USD' && earningsExchangeRates[c.currency]
-            ? `<span class="exchange-rate-note">汇率: 1 USD ≈ ${earningsExchangeRates[c.currency].rate} ${c.currency} · ${earningsExchangeRates[c.currency].source}</span>`
-            : '';
-
-        // Region tag
+            ? `<span class="exchange-rate-note">汇率: 1 USD ≈ ${earningsExchangeRates[c.currency].rate} ${c.currency} · ${earningsExchangeRates[c.currency].source}</span>` : '';
         const regionTag = `<span class="earnings-region-tag ${c.region}">${getRegionFlag(c.region)} ${getRegionLabel(c.region)}</span>`;
 
         // 核心运营指标（取前3个）
@@ -2051,12 +2202,12 @@ function renderEarningsCompanyGrid(companies) {
             }
             return `<div class="earnings-metric">
                 <span class="metric-label">${m.label}</span>
-                <span class="metric-value">${m.value}${m.unit ? ' ' + m.unit : ''}</span>
+                <span class="metric-value">${m.value !== null && m.value !== undefined ? m.value : 'N/A'}${m.unit ? ' ' + m.unit : ''}</span>
                 ${yoyStr}
             </div>`;
         }).join('');
 
-        // Data sources section
+        // Data sources
         let sourcesHtml = '';
         if (c.dataSources && c.dataSources.length > 0) {
             sourcesHtml = `<div class="earnings-card-sources">
@@ -2070,6 +2221,45 @@ function renderEarningsCompanyGrid(companies) {
                     <span class="earnings-source-date">${ds.date}</span>
                     <svg class="earnings-source-link-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.5 1.5h6v6M10.5 1.5L4.5 7.5"/></svg>
                 </a>`).join('')}
+            </div>`;
+        }
+
+        // V8: 双模块 — 最近单季度 + 最近全年（所有公司通用，从已有数据中提取）
+        const dualModuleHtml = buildDualModuleHtml(c);
+
+        // 公司整体数据（安全处理 — 防止缺少 totalOperatingProfit 的情况）
+        let companyOverallHtml = '';
+        if (c.companyOverall) {
+            const co = c.companyOverall;
+            let overallRows = '';
+            if (co.totalRevenue) {
+                overallRows += `<div class="earnings-overall-row">
+                    <span class="overall-label">${co.totalRevenue.label}</span>
+                    <span><span class="overall-value">${co.totalRevenue.value ? co.totalRevenue.value.toLocaleString() + ' ' + co.totalRevenue.unit : 'N/A'}</span>${c.currency !== 'USD' && co.totalRevenue.value ? ' ' + formatUSDEquiv(getUSDLabel(co.totalRevenue.value, c.currency, co.totalRevenue.unit)) : ''}${co.totalRevenue.yoy !== null && co.totalRevenue.yoy !== undefined ? `<span class="overall-yoy ${co.totalRevenue.yoy >= 0 ? 'positive' : 'negative'}">${co.totalRevenue.yoy > 0 ? '+' : ''}${co.totalRevenue.yoy}%</span>` : ''}</span>
+                </div>`;
+            }
+            if (co.totalOperatingProfit) {
+                overallRows += `<div class="earnings-overall-row">
+                    <span class="overall-label">${co.totalOperatingProfit.label}</span>
+                    <span><span class="overall-value">${co.totalOperatingProfit.value ? co.totalOperatingProfit.value.toLocaleString() + ' ' + co.totalOperatingProfit.unit : 'N/A'}</span>${c.currency !== 'USD' && co.totalOperatingProfit.value ? ' ' + formatUSDEquiv(getUSDLabel(co.totalOperatingProfit.value, c.currency, co.totalOperatingProfit.unit)) : ''}</span>
+                </div>`;
+            }
+            if (co.nonIfrsOp) {
+                overallRows += `<div class="earnings-overall-row">
+                    <span class="overall-label">${co.nonIfrsOp.label}</span>
+                    <span><span class="overall-value">${co.nonIfrsOp.value ? co.nonIfrsOp.value.toLocaleString() + ' ' + co.nonIfrsOp.unit : 'N/A'}</span>${c.currency !== 'USD' && co.nonIfrsOp.value ? ' ' + formatUSDEquiv(getUSDLabel(co.nonIfrsOp.value, c.currency, co.nonIfrsOp.unit)) : ''}</span>
+                </div>`;
+            }
+            if (co.totalOperatingMargin) {
+                overallRows += `<div class="earnings-overall-row">
+                    <span class="overall-label">${co.totalOperatingMargin.label || '营业利润率'}</span>
+                    <span><span class="overall-value">${co.totalOperatingMargin.value}%</span></span>
+                </div>`;
+            }
+            companyOverallHtml = `<div class="earnings-card-overall">
+                <div class="earnings-overall-header"><span>📋 公司整体数据参考</span></div>
+                <div class="earnings-overall-rows">${overallRows}</div>
+                ${co.note ? `<div class="earnings-overall-note">${co.note}</div>` : ''}
             </div>`;
         }
 
@@ -2091,6 +2281,7 @@ function renderEarningsCompanyGrid(companies) {
                 <div class="earnings-card-segment">${c.segment}</div>
                 <div class="earnings-card-period">${c.fiscalPeriod} · ${c.filingType} ${currencyBadge}</div>
             </div>
+            ${dualModuleHtml}
             <div class="earnings-card-financials">
                 <div class="earnings-financial-row clickable-fin" data-fin-type="revenue" data-company-id="${c.id}">
                     <span class="fin-label">${c.financials.revenue.label}</span>
@@ -2106,21 +2297,8 @@ function renderEarningsCompanyGrid(companies) {
                     <span class="fin-margin ${marginClass}">${marginVal !== null ? marginVal.toFixed(1) + '%' : 'N/A'}</span>
                 </div>
                 ${exchangeRateNote}
-            </div>${buildDualModuleHtml(c)}${c.companyOverall ? `
-            <div class="earnings-card-overall">
-                <div class="earnings-overall-header"><span>📋 公司整体数据参考</span></div>
-                <div class="earnings-overall-rows">
-                    <div class="earnings-overall-row">
-                        <span class="overall-label">${c.companyOverall.totalRevenue.label}</span>
-                        <span><span class="overall-value">${c.companyOverall.totalRevenue.value.toLocaleString()} ${c.companyOverall.totalRevenue.unit}</span>${c.currency !== 'USD' && c.companyOverall.totalRevenue.value ? ' ' + formatUSDEquiv(getUSDLabel(c.companyOverall.totalRevenue.value, c.currency, c.companyOverall.totalRevenue.unit)) : ''}${c.companyOverall.totalRevenue.yoy !== null ? `<span class="overall-yoy ${c.companyOverall.totalRevenue.yoy >= 0 ? 'positive' : 'negative'}">${c.companyOverall.totalRevenue.yoy > 0 ? '+' : ''}${c.companyOverall.totalRevenue.yoy}%</span>` : ''}</span>
-                    </div>
-                    <div class="earnings-overall-row">
-                        <span class="overall-label">${c.companyOverall.totalOperatingProfit.label}</span>
-                        <span><span class="overall-value">${c.companyOverall.totalOperatingProfit.value.toLocaleString()} ${c.companyOverall.totalOperatingProfit.unit}</span>${c.currency !== 'USD' && c.companyOverall.totalOperatingProfit.value ? ' ' + formatUSDEquiv(getUSDLabel(c.companyOverall.totalOperatingProfit.value, c.currency, c.companyOverall.totalOperatingProfit.unit)) : ''}</span>
-                    </div>
-                </div>
-                <div class="earnings-overall-note">${c.companyOverall.note}</div>
-            </div>` : ''}
+            </div>
+            ${companyOverallHtml}
             <div class="earnings-card-metrics">
                 ${metricsHtml}
             </div>
