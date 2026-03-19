@@ -1208,48 +1208,89 @@ function mRenderStorewatchPlatform(platform) {
 }
 
 function mRenderStorewatchSummary(container) {
-    let html = '<div style="padding:4px 0;font-size:0.78rem;color:var(--text-muted);margin-bottom:8px;">📊 各平台最近推荐位曝光汇总</div>';
+    // 使用 PC 版同源函数计算统计数据
+    const weeklyStats = getCombinedWeeklyStats(7);
+    const ps5Days = (storewatchData.PS5 || []).length;
+    const xboxDays = (storewatchData.Xbox || []).length;
+    const dr = weeklyStats.dateRange;
+    const fmtShort = (d) => d ? `${parseInt(d.slice(5,7))}/${parseInt(d.slice(8,10))}` : '-';
+    const dateRangeLabel = `${fmtShort(dr.actualFrom)}~${fmtShort(dr.actualTo)}`;
 
-    ['PS5', 'Xbox'].forEach(platform => {
-        const data = storewatchData[platform] || [];
-        if (data.length === 0) return;
+    let html = '';
 
-        const latest = data[0];
-        const platformLabel = platform === 'PS5' ? '🎮 PlayStation' : '🎮 Xbox';
+    // ===== KPI 卡片 =====
+    html += `<div class="m-sw-kpi-strip">
+        <div class="m-sw-kpi-item m-sw-kpi-ps">
+            <div class="m-sw-kpi-num">${ps5Days}</div>
+            <div class="m-sw-kpi-label">PS 天数</div>
+        </div>
+        <div class="m-sw-kpi-item m-sw-kpi-xbox">
+            <div class="m-sw-kpi-num">${xboxDays}</div>
+            <div class="m-sw-kpi-label">Xbox 天数</div>
+        </div>
+        <div class="m-sw-kpi-item">
+            <div class="m-sw-kpi-num">${weeklyStats.totalPositions}</div>
+            <div class="m-sw-kpi-label">近7天资源位</div>
+        </div>
+        <div class="m-sw-kpi-item m-sw-kpi-accent">
+            <div class="m-sw-kpi-num">${dateRangeLabel}</div>
+            <div class="m-sw-kpi-label">${dr.actualDayCount}天数据</div>
+        </div>
+    </div>`;
 
-        html += `<div class="m-card" style="margin-bottom:8px;">
-            <div class="m-card-header"><span>${platformLabel}</span><span style="font-size:0.68rem;color:var(--text-muted);">${latest.date || ''}</span></div>
-            <div style="padding:10px 12px;">`;
+    // ===== 数据来源说明 =====
+    html += `<div class="m-sw-source-bar">ℹ️ 数据来源：人工监控美国🇺🇸、日本🇯🇵、香港🇭🇰三区域商店推荐位</div>`;
 
-        if (latest.slots) {
-            const slotNames = Object.keys(latest.slots).slice(0, 3);
-            slotNames.forEach(slotName => {
-                const slot = latest.slots[slotName];
-                html += `<div class="m-sw-slot"><div class="m-sw-slot-name">${slotName}</div>`;
-                const positions = slot.positions || slot;
-                if (Array.isArray(positions)) {
-                    positions.slice(0, 5).forEach((pos, i) => {
-                        const rankCls = i < 3 ? 'top' : '';
-                        html += `<div class="m-sw-game">
-                            <div class="m-sw-rank ${rankCls}">${pos.rank || i + 1}</div>
-                            <div>
-                                <div class="m-sw-name">${pos.us || pos.name || '-'}</div>
-                                ${pos.vendor ? `<div class="m-sw-vendor">${pos.vendor}</div>` : ''}
-                            </div>
-                            <div class="m-sw-regions">
-                                ${pos.us ? '<span class="m-sw-region">🇺🇸</span>' : ''}
-                                ${pos.jp ? '<span class="m-sw-region">🇯🇵</span>' : ''}
-                                ${pos.hk ? '<span class="m-sw-region">🇭🇰</span>' : ''}
-                            </div>
-                        </div>`;
-                    });
-                }
-                html += `</div>`;
-            });
-        }
+    // ===== Top 10 曝光游戏 =====
+    if (weeklyStats.topGames && weeklyStats.topGames.length > 0) {
+        html += `<div class="m-sw-panel">
+            <div class="m-sw-panel-header">🔥 近7天 Top 10 曝光游戏</div>
+            <div class="m-sw-panel-sub">${dr.actualFrom} ~ ${dr.actualTo}（${dr.actualDayCount}天） · 双平台合计</div>`;
 
-        html += `</div></div>`;
-    });
+        weeklyStats.topGames.forEach((g, i) => {
+            const pct = Math.min((g.count / weeklyStats.topGames[0].count * 100), 100).toFixed(0);
+            const rankCls = i < 3 ? 'm-sw-rank-gold' : '';
+            const display = (typeof getGameDisplayName === 'function') ? getGameDisplayName(g.name, false) : { primary: g.name, secondary: '' };
+            html += `<div class="m-sw-top-game">
+                <div class="m-sw-top-rank ${rankCls}">${g.rank}</div>
+                <div class="m-sw-top-info">
+                    <div class="m-sw-top-name">${display.primary}</div>
+                    ${display.secondary ? `<div class="m-sw-top-name-sub">${display.secondary}</div>` : ''}
+                    <div class="m-sw-top-vendor">${g.vendor}</div>
+                </div>
+                <div class="m-sw-top-bar-wrap">
+                    <div class="m-sw-top-bar" style="width:${pct}%"></div>
+                    <span class="m-sw-top-count">${g.count}</span>
+                </div>
+            </div>`;
+        });
+
+        html += `</div>`;
+    }
+
+    // ===== 发行商资源位覆盖 =====
+    if (weeklyStats.vendorCoverage && weeklyStats.vendorCoverage.length > 0) {
+        html += `<div class="m-sw-panel">
+            <div class="m-sw-panel-header">🏢 发行商资源位覆盖</div>
+            <div class="m-sw-panel-sub">跨平台统计 · Top ${Math.min(weeklyStats.vendorCoverage.length, 8)}</div>`;
+
+        weeklyStats.vendorCoverage.slice(0, 8).forEach(v => {
+            const platforms = v.platforms.split(' / ').map(p =>
+                `<span class="m-sw-platform-pill ${p === 'PS5' ? 'm-sw-pill-ps' : 'm-sw-pill-xbox'}">${p}</span>`
+            ).join('');
+            const slots = v.slots.map(s => `<span class="m-sw-slot-chip">${s}</span>`).join('');
+            html += `<div class="m-sw-vendor-row">
+                <div class="m-sw-vendor-left">
+                    <div class="m-sw-vendor-name">${v.name}</div>
+                    <div class="m-sw-vendor-meta">${platforms} · ${v.slotCount}个资源位</div>
+                </div>
+                <div class="m-sw-vendor-count">${v.total}次</div>
+            </div>
+            <div class="m-sw-slot-chips">${slots}</div>`;
+        });
+
+        html += `</div>`;
+    }
 
     container.innerHTML = html;
 }
@@ -1260,41 +1301,130 @@ function mRenderStorewatchDays(container, data, platform) {
         return;
     }
 
+    const platformKey = platform === 'ps5' ? 'PS5' : 'Xbox';
+    const cls = platform === 'ps5' ? 'ps' : 'xbox';
+    const stats = getStorewatchStats(platformKey);
+    const slotPriority = storewatchSlotPriority[platformKey] || [];
+
     let html = '';
+
+    // ===== 平台 KPI =====
+    html += `<div class="m-sw-kpi-strip m-sw-kpi-strip-${cls}">
+        <div class="m-sw-kpi-item">
+            <div class="m-sw-kpi-num">${stats.totalDays}</div>
+            <div class="m-sw-kpi-label">监控天数</div>
+        </div>
+        <div class="m-sw-kpi-item">
+            <div class="m-sw-kpi-num" style="font-size:0.72rem;">${stats.topVendors[0]?.name || '-'}</div>
+            <div class="m-sw-kpi-label">占位最多</div>
+        </div>
+        <div class="m-sw-kpi-item">
+            <div class="m-sw-kpi-num">${stats.topVendors[0]?.pct || 0}%</div>
+            <div class="m-sw-kpi-label">头部占比</div>
+        </div>
+        <div class="m-sw-kpi-item">
+            <div class="m-sw-kpi-num" style="font-size:0.68rem;">${stats.latestDate}</div>
+            <div class="m-sw-kpi-label">最新数据</div>
+        </div>
+    </div>`;
+
+    // ===== 资源位价值排序说明 =====
+    if (slotPriority.length > 0) {
+        html += `<div class="m-sw-tier-legend m-sw-legend-${cls}">
+            <div class="m-sw-legend-title">📌 资源位价值排序</div>
+            ${slotPriority.map((s, i) => `
+                <div class="m-sw-legend-item">
+                    <span class="m-sw-legend-rank m-sw-tier-${s.tier}-${cls}">#${i + 1}</span>
+                    <span class="m-sw-legend-label">${s.label}</span>
+                    <span class="m-sw-legend-name">${s.name}</span>
+                    ${s.subSlots ? `<div class="m-sw-legend-sub">${s.subSlots.join(' + ')}</div>` : ''}
+                </div>
+            `).join('')}
+        </div>`;
+    }
+
+    // ===== 厂商占位柱状图（Top 8） =====
+    if (stats.topVendors && stats.topVendors.length > 0) {
+        const maxCount = stats.topVendors[0].count || 1;
+        html += `<div class="m-sw-panel">
+            <div class="m-sw-panel-header">📊 厂商商店资源占位</div>
+            <div class="m-sw-panel-sub">全部 ${stats.totalDays} 天数据统计</div>`;
+
+        stats.topVendors.slice(0, 8).forEach((v, i) => {
+            const pct = (v.count / maxCount * 100).toFixed(1);
+            html += `<div class="m-sw-bar-row">
+                <div class="m-sw-bar-label">${v.name}</div>
+                <div class="m-sw-bar-track">
+                    <div class="m-sw-bar-fill m-sw-fill-${cls}" style="width:${pct}%;animation-delay:${i * 50}ms"></div>
+                </div>
+                <div class="m-sw-bar-val">${v.count}次 (${v.pct}%)</div>
+            </div>`;
+        });
+
+        html += `</div>`;
+    }
+
+    // ===== 近7天资源位详情（按 Tier 优先级 + 三区域并列） =====
+    html += `<div class="m-sw-panel">
+        <div class="m-sw-panel-header">📋 近7天资源位详情</div>`;
+
     data.slice(0, 7).forEach((day, dayIdx) => {
+        const processedSlots = platformKey === 'Xbox' ? mergeXboxSlots(day.slots) : day.slots;
+        const weekday = (typeof getWeekday === 'function') ? getWeekday(day.date) : '';
+
         html += `<div class="m-sw-day ${dayIdx === 0 ? 'expanded' : ''}">
-            <div class="m-sw-day-header">
-                📅 ${day.date || `Day ${dayIdx + 1}`}
-                <span style="font-size:0.68rem;color:var(--text-muted);margin-left:auto;">${dayIdx === 0 ? '最新' : ''}</span>
+            <div class="m-sw-day-header m-sw-day-${cls}">
+                📅 ${day.date || `Day ${dayIdx + 1}`} ${weekday}
+                <span style="font-size:0.65rem;color:var(--text-muted);margin-left:auto;">${dayIdx === 0 ? '🟢 最新' : ''}</span>
             </div>
             <div class="m-sw-day-body" style="${dayIdx === 0 ? 'display:block;' : ''}">`;
 
-        if (day.slots) {
-            Object.entries(day.slots).forEach(([slotName, slot]) => {
-                html += `<div class="m-sw-slot"><div class="m-sw-slot-name">${slotName}</div>`;
-                const positions = slot.positions || slot;
-                if (Array.isArray(positions)) {
-                    positions.forEach((pos, i) => {
-                        const rankCls = i < 3 ? 'top' : '';
-                        html += `<div class="m-sw-game">
-                            <div class="m-sw-rank ${rankCls}">${pos.rank || i + 1}</div>
-                            <div>
-                                <div class="m-sw-name">${pos.us || pos.name || '-'}</div>
-                                ${pos.vendor ? `<div class="m-sw-vendor">${pos.vendor}</div>` : ''}
-                            </div>
-                            <div class="m-sw-regions">
-                                ${pos.jp ? `<span class="m-sw-region" title="日本: ${pos.jp}">🇯🇵</span>` : ''}
-                                ${pos.hk ? `<span class="m-sw-region" title="香港: ${pos.hk}">🇭🇰</span>` : ''}
-                            </div>
-                        </div>`;
-                    });
-                }
-                html += `</div>`;
+        // 按 Tier 优先级排序
+        slotPriority.forEach(slotDef => {
+            const slotData = processedSlots[slotDef.name];
+            if (!slotData || !slotData.positions || slotData.positions.length === 0) return;
+
+            html += `<div class="m-sw-slot-section m-sw-tier-${slotDef.tier}-${cls}">
+                <div class="m-sw-slot-title">
+                    <span class="m-sw-tier-dot m-sw-dot-${cls}-${slotDef.tier}"></span>
+                    <span class="m-sw-slot-tier-label">${slotDef.label}</span>
+                    <span class="m-sw-slot-tier-name">${slotDef.name}</span>
+                </div>`;
+
+            // 三区域并列表格
+            html += `<div class="m-sw-region-table-wrap">
+                <table class="m-sw-region-table">
+                    <thead>
+                        <tr>
+                            <th style="width:28px">#</th>
+                            <th>🇺🇸 美国</th>
+                            <th>🇯🇵 日本</th>
+                            <th>🇭🇰 香港</th>
+                        </tr>
+                    </thead>
+                    <tbody>`;
+
+            slotData.positions.forEach(pos => {
+                const isNg = pos.isNonGame;
+                const rowCls = isNg ? 'm-sw-non-game' : '';
+                const srcTag = pos.sourceSlot && pos.sourceSlot !== slotDef.name
+                    ? `<span class="m-sw-src-tag">${pos.sourceSlot.replace(/\s*banner\d?$/i,'').trim()}</span>` : '';
+
+                html += `<tr class="${rowCls}">
+                    <td class="m-sw-rank-cell">${pos.rank}${srcTag}</td>
+                    <td>${mRenderGameCell(pos.us, isNg || pos.usNonGame, pos)}</td>
+                    <td>${mRenderGameCell(pos.jp, isNg || pos.jpNonGame, pos)}</td>
+                    <td>${mRenderGameCell(pos.hk, isNg || pos.hkNonGame, pos)}</td>
+                </tr>`;
             });
-        }
+
+            html += `</tbody></table></div></div>`;
+        });
 
         html += `</div></div>`;
     });
+
+    html += `</div>`;
 
     container.innerHTML = html;
 
@@ -1306,6 +1436,22 @@ function mRenderStorewatchDays(container, data, platform) {
             if (body) body.style.display = header.parentElement.classList.contains('expanded') ? 'block' : 'none';
         });
     });
+}
+
+// 移动版游戏单元格渲染（复用 PC 版 getGameDisplayName + vendorMap）
+function mRenderGameCell(gameName, isNonGame, posData) {
+    if (!gameName) return '<span class="m-sw-cell-empty">—</span>';
+    if (isNonGame) return `<span class="m-sw-promo">${gameName}</span>`;
+
+    const display = (typeof getGameDisplayName === 'function') ? getGameDisplayName(gameName, false) : { primary: gameName, secondary: '' };
+    const vendor = (posData && posData.vendor) || (typeof storewatchVendorMap !== 'undefined' ? storewatchVendorMap[gameName] : null);
+    const vendorHtml = vendor ? `<span class="m-sw-micro-vendor">${vendor}</span>` : '';
+
+    return `<div class="m-sw-game-cell">
+        <div class="m-sw-cell-primary">${display.primary}</div>
+        ${display.secondary ? `<div class="m-sw-cell-secondary">${display.secondary}</div>` : ''}
+        ${vendorHtml}
+    </div>`;
 }
 
 // ============ Bottom Sheet ============

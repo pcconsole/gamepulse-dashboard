@@ -569,6 +569,125 @@ body {
 }
 .m-platform-tab.active { background: var(--accent-primary); color: white; }
 .m-storewatch-body { }
+
+/* KPI 卡片 */
+.m-sw-kpi-strip {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-bottom: 10px;
+}
+.m-sw-kpi-item {
+    background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md);
+    padding: 8px 4px; text-align: center;
+}
+.m-sw-kpi-num { font-size: 0.88rem; font-weight: 800; color: var(--text-primary); line-height: 1.2; }
+.m-sw-kpi-label { font-size: 0.6rem; color: var(--text-muted); margin-top: 2px; }
+.m-sw-kpi-ps { border-top: 2px solid #003087; }
+.m-sw-kpi-xbox { border-top: 2px solid #107c10; }
+.m-sw-kpi-accent { border-top: 2px solid var(--accent-primary); }
+.m-sw-kpi-strip-ps .m-sw-kpi-item { border-top: 2px solid #003087; }
+.m-sw-kpi-strip-xbox .m-sw-kpi-item { border-top: 2px solid #107c10; }
+
+/* 数据来源说明 */
+.m-sw-source-bar {
+    font-size: 0.62rem; color: var(--text-muted); padding: 6px 8px; margin-bottom: 10px;
+    background: rgba(99,102,241,0.03); border-radius: var(--radius-sm); line-height: 1.4;
+}
+
+/* 面板通用 */
+.m-sw-panel {
+    background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md);
+    padding: 12px; margin-bottom: 10px;
+}
+.m-sw-panel-header {
+    font-size: 0.82rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;
+}
+.m-sw-panel-sub {
+    font-size: 0.62rem; color: var(--text-muted); margin-bottom: 10px;
+}
+
+/* Top 10 曝光游戏 */
+.m-sw-top-game {
+    display: flex; align-items: center; gap: 8px; padding: 6px 0;
+    border-bottom: 1px solid var(--border-light);
+}
+.m-sw-top-game:last-child { border-bottom: none; }
+.m-sw-top-rank {
+    width: 22px; height: 22px; border-radius: 6px; display: flex; align-items: center; justify-content: center;
+    font-size: 0.65rem; font-weight: 800; background: var(--bg-input); color: var(--text-secondary); flex-shrink: 0;
+}
+.m-sw-rank-gold { background: linear-gradient(135deg, #f59e0b, #d97706); color: white; }
+.m-sw-top-info { flex: 1; min-width: 0; }
+.m-sw-top-name { font-size: 0.72rem; font-weight: 600; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.m-sw-top-name-sub { font-size: 0.58rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.m-sw-top-vendor { font-size: 0.58rem; color: var(--text-muted); }
+.m-sw-top-bar-wrap {
+    width: 80px; flex-shrink: 0; display: flex; align-items: center; gap: 4px;
+}
+.m-sw-top-bar {
+    height: 6px; border-radius: 3px; background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    transition: width 0.4s ease;
+}
+.m-sw-top-count { font-size: 0.62rem; font-weight: 700; color: var(--text-primary); flex-shrink: 0; }
+
+/* 发行商覆盖 */
+.m-sw-vendor-row {
+    display: flex; align-items: center; justify-content: space-between; padding: 5px 0;
+    border-bottom: 1px solid var(--border-light);
+}
+.m-sw-vendor-row:last-of-type { border-bottom: none; }
+.m-sw-vendor-left { flex: 1; min-width: 0; }
+.m-sw-vendor-name { font-size: 0.72rem; font-weight: 600; color: var(--text-primary); }
+.m-sw-vendor-meta { font-size: 0.58rem; color: var(--text-muted); display: flex; align-items: center; gap: 4px; flex-wrap: wrap; margin-top: 2px; }
+.m-sw-vendor-count { font-size: 0.72rem; font-weight: 700; color: var(--accent-primary); flex-shrink: 0; margin-left: 8px; }
+.m-sw-platform-pill {
+    display: inline-block; padding: 1px 5px; border-radius: 3px; font-size: 0.55rem; font-weight: 600; color: white;
+}
+.m-sw-pill-ps { background: #003087; }
+.m-sw-pill-xbox { background: #107c10; }
+.m-sw-slot-chips { display: flex; gap: 3px; flex-wrap: wrap; padding: 2px 0 6px; }
+.m-sw-slot-chip {
+    display: inline-block; padding: 1px 5px; border-radius: 3px; font-size: 0.55rem;
+    background: rgba(99,102,241,0.1); color: var(--accent-primary); border: 1px solid rgba(99,102,241,0.2);
+}
+
+/* Tier 资源位分层说明 */
+.m-sw-tier-legend {
+    background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md);
+    padding: 10px 12px; margin-bottom: 10px;
+}
+.m-sw-legend-title { font-size: 0.72rem; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; }
+.m-sw-legend-item {
+    display: flex; align-items: center; gap: 6px; padding: 3px 0; flex-wrap: wrap;
+}
+.m-sw-legend-rank {
+    width: 22px; height: 22px; border-radius: 4px; display: flex; align-items: center; justify-content: center;
+    font-size: 0.6rem; font-weight: 800; color: white; flex-shrink: 0;
+}
+.m-sw-tier-1-ps { background: #003087; }
+.m-sw-tier-2-ps { background: #0070d1; }
+.m-sw-tier-3-ps { background: #00bfff; }
+.m-sw-tier-1-xbox { background: #107c10; }
+.m-sw-tier-2-xbox { background: #0e7a0d; }
+.m-sw-tier-3-xbox { background: #2d7d2d; }
+.m-sw-legend-label { font-size: 0.68rem; font-weight: 600; color: var(--text-primary); }
+.m-sw-legend-name { font-size: 0.62rem; color: var(--text-muted); }
+.m-sw-legend-sub { font-size: 0.55rem; color: var(--text-muted); width: 100%; padding-left: 28px; }
+
+/* 厂商柱状图 */
+.m-sw-bar-row {
+    display: flex; align-items: center; gap: 4px; padding: 3px 0;
+}
+.m-sw-bar-label { font-size: 0.62rem; font-weight: 600; color: var(--text-primary); width: 70px; flex-shrink: 0; text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.m-sw-bar-track { flex: 1; height: 14px; background: var(--bg-input); border-radius: 7px; overflow: hidden; }
+.m-sw-bar-fill {
+    height: 100%; border-radius: 7px; transition: width 0.5s ease;
+    animation: m-sw-bar-grow 0.5s ease forwards;
+}
+.m-sw-fill-ps { background: linear-gradient(90deg, #003087, #0070d1); }
+.m-sw-fill-xbox { background: linear-gradient(90deg, #107c10, #2d7d2d); }
+.m-sw-bar-val { font-size: 0.55rem; color: var(--text-muted); width: 60px; flex-shrink: 0; white-space: nowrap; }
+@keyframes m-sw-bar-grow { from { width: 0; } }
+
+/* 天数详情（折叠卡片） */
 .m-sw-day {
     background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md);
     margin-bottom: 8px; overflow: hidden;
@@ -578,8 +697,69 @@ body {
     background: rgba(99,102,241,0.05); border-bottom: 1px solid var(--border-light);
     display: flex; align-items: center; gap: 6px; cursor: pointer;
 }
-.m-sw-day-body { padding: 8px 12px; display: none; }
+.m-sw-day-ps { background: rgba(0,48,135,0.06); }
+.m-sw-day-xbox { background: rgba(16,124,16,0.06); }
+.m-sw-day-body { padding: 6px 0; display: none; }
 .m-sw-day.expanded .m-sw-day-body { display: block; }
+
+/* Tier 资源位区块 */
+.m-sw-slot-section {
+    margin: 0 8px 8px; padding: 8px; border-radius: var(--radius-sm); background: rgba(0,0,0,0.1);
+    border-left: 3px solid var(--border-color);
+}
+.m-sw-tier-1-ps { border-left-color: #003087; }
+.m-sw-tier-2-ps { border-left-color: #0070d1; }
+.m-sw-tier-3-ps { border-left-color: #00bfff; }
+.m-sw-tier-1-xbox { border-left-color: #107c10; }
+.m-sw-tier-2-xbox { border-left-color: #0e7a0d; }
+.m-sw-tier-3-xbox { border-left-color: #2d7d2d; }
+
+.m-sw-slot-title {
+    display: flex; align-items: center; gap: 4px; margin-bottom: 6px; flex-wrap: wrap;
+}
+.m-sw-tier-dot {
+    width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+}
+.m-sw-dot-ps-1 { background: #003087; }
+.m-sw-dot-ps-2 { background: #0070d1; }
+.m-sw-dot-ps-3 { background: #00bfff; }
+.m-sw-dot-xbox-1 { background: #107c10; }
+.m-sw-dot-xbox-2 { background: #0e7a0d; }
+.m-sw-dot-xbox-3 { background: #2d7d2d; }
+.m-sw-slot-tier-label { font-size: 0.65rem; font-weight: 700; color: var(--text-primary); }
+.m-sw-slot-tier-name { font-size: 0.58rem; color: var(--text-muted); }
+
+/* 三区域表格 */
+.m-sw-region-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.m-sw-region-table {
+    width: 100%; border-collapse: collapse; font-size: 0.62rem; min-width: 320px;
+}
+.m-sw-region-table th {
+    padding: 4px 3px; text-align: left; font-weight: 600; color: var(--text-muted);
+    border-bottom: 1px solid var(--border-color); font-size: 0.58rem; white-space: nowrap;
+}
+.m-sw-region-table td {
+    padding: 4px 3px; vertical-align: top; border-bottom: 1px solid var(--border-light);
+}
+.m-sw-region-table tr:last-child td { border-bottom: none; }
+.m-sw-rank-cell { font-weight: 700; color: var(--text-muted); white-space: nowrap; font-size: 0.6rem; }
+
+/* 游戏单元格 */
+.m-sw-game-cell { }
+.m-sw-cell-primary { font-size: 0.62rem; font-weight: 500; color: var(--text-primary); line-height: 1.3; }
+.m-sw-cell-secondary { font-size: 0.52rem; color: var(--text-muted); }
+.m-sw-micro-vendor { font-size: 0.5rem; color: var(--text-muted); opacity: 0.7; }
+.m-sw-cell-empty { color: var(--text-muted); font-size: 0.58rem; }
+
+/* 非游戏标记 */
+.m-sw-non-game td { opacity: 0.5; }
+.m-sw-promo { font-size: 0.6rem; color: var(--text-muted); font-style: italic; }
+.m-sw-src-tag {
+    display: inline-block; font-size: 0.45rem; padding: 0 3px; border-radius: 2px;
+    background: rgba(99,102,241,0.1); color: var(--accent-primary); margin-left: 2px; vertical-align: middle;
+}
+
+/* 旧样式保留兼容 */
 .m-sw-slot { margin-bottom: 8px; }
 .m-sw-slot-name { font-size: 0.72rem; font-weight: 600; color: var(--text-muted); margin-bottom: 4px; }
 .m-sw-game {
