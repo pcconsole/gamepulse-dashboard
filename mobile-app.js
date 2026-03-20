@@ -646,11 +646,11 @@ function mUpdatePipelineTab() {
     if (!container) return;
 
     const grouped = {};
-    const qOrder = ['q1', 'q2', 'q3', 'q4', '2026year', '2027', 'tbd'];
+    const qOrder = ['q1', 'q2', 'q3', 'q4', '2026year', 'y2027', 'tbd'];
     const qLabelMap = {
         'q1': '2026 Q1 (1-3月)', 'q2': '2026 Q2 (4-6月)',
         'q3': '2026 Q3 (7-9月)', 'q4': '2026 Q4 (10-12月)',
-        '2026year': '2026年（时间待定）', '2027': '2027年',
+        '2026year': '2026年（时间待定）', 'y2027': '2027年',
         'tbd': '待定/未知'
     };
     // 先按已上线/未上线分组

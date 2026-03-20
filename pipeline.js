@@ -172,7 +172,7 @@ const pipelineData = [
 function getPipelineQuarter(dateStr) {
     if (!dateStr) return 'tbd';
     if (dateStr.includes('待定') || dateStr.includes('待')) return 'tbd';
-    if (dateStr.includes('2027')) return '2027';
+    if (dateStr.includes('2027')) return 'y2027';
     
     const match = dateStr.match(/(\d{4})\/(\d{1,2})/);
     if (match) {
@@ -310,7 +310,7 @@ function renderPipelineTimeline(games) {
         'q3': { label: '2026 Q3 (7-9月)', icon: '🍂', games: [] },
         'q4': { label: '2026 Q4 (10-12月)', icon: '❄️', games: [] },
         '2026year': { label: '2026年（具体时间待定）', icon: '📆', games: [] },
-        '2027': { label: '2027年', icon: '🔮', games: [] },
+        'y2027': { label: '2027年', icon: '🔮', games: [] },
         'tbd': { label: '待定/未知', icon: '❓', games: [] }
     };
 
