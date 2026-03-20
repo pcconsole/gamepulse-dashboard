@@ -128,7 +128,7 @@ const pipelineUnreleased = [
     { region: "海外", name: "碧蓝幻想Relink：无尽黄昏", publisher: "Cygames", studio: "Cygames", releaseDate: "2026/7/9", platforms: "PC+Switch2+PS5", heat: "中", heatNote: "前作全球300万+", gameplay: "多人联机ARPG", licenseStatus: "", licenseNote: "", source: "网络搜索" },
     { region: "海外", name: "最终幻想7 重生 Xbox/Switch版", publisher: "史克威尔艾尼克斯", studio: "/", releaseDate: "2026/6/3", platforms: "Xbox+Switch", heat: "中高", heatNote: "FF7重制三部曲第二作移植版", gameplay: "ARPG", licenseStatus: "", licenseNote: "", source: "网络搜索" },
     { region: "海外", name: "刺客信条4：黑旗 重制版", publisher: "育碧", studio: "/", releaseDate: "2026年", platforms: "待定", heat: "中", heatNote: "刺客信条经典之作", gameplay: "潜行刺杀+海战", licenseStatus: "", licenseNote: "", source: "网络搜索" },
-    { region: "国内", name: "燕云十六声", publisher: "Everstone/网易", studio: "/", releaseDate: "2026年(持续更新)", platforms: "PC+PS5+Xbox", heat: "中高", heatNote: "已开启EA，持续更新", gameplay: "开放世界武侠RPG", licenseStatus: "已获版号", licenseNote: "PC版已公测", source: "网络搜索" },
+
     { region: "国内", name: "刺客信条：影（国行版）", publisher: "育碧/腾讯", studio: "/", releaseDate: "2026年", platforms: "PC+PS5+Xbox", heat: "中", heatNote: "国行版审核中", gameplay: "潜行动作冒险", licenseStatus: "审核中", licenseNote: "腾讯代理国行版", source: "网络搜索" },
 ];
 
