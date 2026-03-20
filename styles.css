@@ -2033,9 +2033,13 @@ tbody td.num { font-variant-numeric: tabular-nums; }
     display: inline-block;
     padding: 2px 8px;
     border-radius: 4px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    background: rgba(99,102,241,0.1);
+    color: var(--accent-primary);
+}
 
 /* === 已发售标记 === */
-}
 .released-badge {
     display: inline-block;
     padding: 1px 6px;
@@ -2067,11 +2071,6 @@ tr.row-released {
 }
 tr.row-released td:first-child {
     border-left: 3px solid #22c55e;
-}
-    font-size: 0.72rem;
-    font-weight: 600;
-    background: rgba(99,102,241,0.1);
-    color: var(--accent-primary);
 }
 
 .platform-tag-sm {
@@ -2114,7 +2113,269 @@ tr.row-released td:first-child {
     background: var(--bg-card-hover);
 }
 
-/* ============ NEWS TAB ============ */
+/* ============ PIPELINE V2 新增样式 ============ */
+
+/* 6列 KPI 网格 */
+.kpi-grid-6 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+}
+
+@media (max-width: 1200px) {
+    .kpi-grid-6 { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+    .kpi-grid-6 { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* 数据来源声明 */
+.pipeline-source-banner {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    font-size: 0.78rem;
+}
+
+.source-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+.source-badge.mcp {
+    background: rgba(99,102,241,0.12);
+    color: #6366f1;
+    border: 1px solid rgba(99,102,241,0.25);
+}
+
+.source-badge.web {
+    background: rgba(14,165,233,0.12);
+    color: #0ea5e9;
+    border: 1px solid rgba(14,165,233,0.25);
+}
+
+.source-note {
+    color: var(--text-muted);
+    margin-left: auto;
+}
+
+/* Pipeline 搜索框 */
+.pipeline-search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.pipeline-search-icon {
+    position: absolute;
+    left: 10px;
+    color: var(--text-muted);
+    pointer-events: none;
+}
+
+.pipeline-search-input {
+    background: var(--bg-input);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 6px 12px 6px 30px;
+    border-radius: var(--radius-sm);
+    font-size: 0.82rem;
+    outline: none;
+    width: 180px;
+    transition: var(--transition);
+}
+
+.pipeline-search-input:focus {
+    border-color: var(--accent-primary);
+    width: 220px;
+}
+
+/* Pipeline Section Title */
+.pipeline-section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.pipeline-section-title h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.section-hint {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* 卡片展开功能 */
+.timeline-game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.card-expand-icon {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: var(--transition);
+    flex-shrink: 0;
+    padding: 2px;
+}
+
+.card-expand-icon.expanded {
+    color: var(--accent-primary);
+}
+
+.card-detail-panel {
+    margin-top: 10px;
+}
+
+.detail-divider {
+    height: 1px;
+    background: var(--border-light);
+    margin: 8px 0 10px;
+}
+
+.detail-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 6px;
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
+
+.detail-label {
+    color: var(--text-muted);
+    font-weight: 600;
+    min-width: 90px;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.detail-value {
+    color: var(--text-secondary);
+    word-break: break-all;
+}
+
+/* 版号标签 */
+.license-tag {
+    display: inline-block;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.68rem;
+    font-weight: 600;
+    vertical-align: middle;
+    margin-left: 4px;
+}
+
+.license-tag.license-approved {
+    background: rgba(34,197,94,0.15);
+    color: #22c55e;
+}
+
+.license-tag.license-pending {
+    background: rgba(245,158,11,0.15);
+    color: #f59e0b;
+}
+
+.license-tag.license-none {
+    background: rgba(239,68,68,0.12);
+    color: #ef4444;
+}
+
+/* 已上线折叠区 */
+.released-section-wrapper {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.released-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-light);
+    cursor: pointer;
+    transition: var(--transition);
+    user-select: none;
+}
+
+.released-section-header:hover {
+    background: var(--bg-card-hover);
+}
+
+.released-section-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 0.92rem;
+}
+
+.released-icon {
+    font-size: 1.1rem;
+}
+
+.released-count {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: var(--bg-input);
+    padding: 2px 10px;
+    border-radius: 100px;
+    border: 1px solid var(--border-color);
+}
+
+.released-chevron {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.released-section-body {
+    padding: 16px;
+}
+
+.released-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+}
+
+/* 卡片可点击效果 */
+.timeline-game-card {
+    cursor: pointer;
+}
+
+/* 卡片展开动画 */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        max-height: 500px;
+        transform: translateY(0);
+    }
+}
+
+/* ============ /PIPELINE V2 ============ */
 .news-controls {
     display: flex;
     gap: 8px;

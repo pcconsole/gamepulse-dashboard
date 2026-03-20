@@ -946,7 +946,8 @@ function bindEvents() {
     // 堆叠条形图色块点击
     bindStackedBarClicks();
 
-    // Pipeline 筛选器
+    // Pipeline 筛选器（V2 - 已在 pipeline.js 中自行绑定）
+    // 保留兼容性调用
     document.getElementById('pipelineTimeFilter')?.addEventListener('change', () => updatePipelineTab());
     document.getElementById('pipelineHeatFilter')?.addEventListener('change', () => updatePipelineTab());
 
@@ -1065,153 +1066,13 @@ function bindStackedBarClicks() {
     });
 }
 
-// ============ Tab: 待上线 Pipeline ============
+// ============ Tab: 待上线 Pipeline V2 ============
 
 function updatePipelineTab() {
-    const timeFilter = document.getElementById('pipelineTimeFilter')?.value || 'all';
-    const heatFilter = document.getElementById('pipelineHeatFilter')?.value || 'all';
-
-    let filtered = [...pipelineData];
-
-    // 时间筛选
-    if (timeFilter !== 'all') {
-        filtered = filtered.filter(g => getPipelineQuarter(g.releaseDate) === timeFilter);
+    // 调用 pipeline.js 中的 V2 渲染函数
+    if (typeof renderPipelineV2 === 'function') {
+        renderPipelineV2();
     }
-
-    // 关注度筛选
-    if (heatFilter !== 'all') {
-        filtered = filtered.filter(g => g.heat === heatFilter);
-    }
-
-    // 排序：按发售日期
-    filtered.sort((a, b) => getPipelineSortDate(a.releaseDate) - getPipelineSortDate(b.releaseDate));
-
-    // KPI
-    setText('pipelineTotalCount', filtered.length);
-
-    // 近3月即将上线
-    const now = new Date();
-    const threeMonthsLater = new Date(now.getTime() + 90 * 24 * 60 * 60 * 1000);
-    const upcoming = filtered.filter(g => {
-        const match = g.releaseDate.match(/(\d{4})\/(\d{1,2})\/(\d{1,2})/);
-        if (match) {
-            const d = new Date(parseInt(match[1]), parseInt(match[2]) - 1, parseInt(match[3]));
-            return d >= now && d <= threeMonthsLater;
-        }
-        return false;
-    });
-    setText('pipelineUpcomingCount', upcoming.length);
-
-    // 高/中高关注度
-    const highHeat = filtered.filter(g => g.heat === '高' || g.heat === '中高');
-    setText('pipelineHighHeatCount', highHeat.length);
-
-    // Xbox平台
-    const xboxCount = filtered.filter(g => hasPlatform(g.platforms, 'xbox')).length;
-    setText('pipelineXboxCount', xboxCount);
-    setText('pipelineXboxPct', filtered.length > 0 ? Math.round(xboxCount / filtered.length * 100) + '%' : '0%');
-
-    // 渲染时间轴
-    renderPipelineTimeline(filtered);
-
-    // 渲染表格
-    renderPipelineTable(filtered);
-}
-
-function renderPipelineTimeline(games) {
-    const container = document.getElementById('pipelineTimeline');
-    if (!container) return;
-
-    // 按季度分组
-    const quarters = {
-        'q1': { label: '2026 Q1 (1-3月)', games: [], color: '#6366f1' },
-        'q2': { label: '2026 Q2 (4-6月)', games: [], color: '#3b82f6' },
-        'q3': { label: '2026 Q3 (7-9月)', games: [], color: '#0ea5e9' },
-        'q4': { label: '2026 Q4 (10-12月)', games: [], color: '#14b8a6' },
-        'tbd': { label: '待定/2027+', games: [], color: '#64748b' }
-    };
-
-    games.forEach(g => {
-        const q = getPipelineQuarter(g.releaseDate);
-        if (quarters[q]) quarters[q].games.push(g);
-    });
-
-    let html = '<div class="pipeline-timeline-grid">';
-
-    Object.entries(quarters).forEach(([key, q]) => {
-        if (q.games.length === 0) return;
-
-        html += `<div class="timeline-quarter">
-            <div class="timeline-quarter-header" style="border-left:4px solid ${q.color};">
-                <span class="timeline-quarter-label">${q.label}</span>
-                <span class="timeline-quarter-count">${q.games.length} 款</span>
-            </div>
-            <div class="timeline-quarter-games">`;
-
-        q.games.forEach(g => {
-            const heatClass = getHeatClass(g.heat);
-            html += `<div class="timeline-game-card ${heatClass}">
-                <div class="timeline-game-name">${g.name}</div>
-                <div class="timeline-game-meta">
-                    <span class="timeline-game-publisher">${g.publisher}</span>
-                    <span class="timeline-game-date">${g.releaseDate}</span>
-                </div>
-                <div class="timeline-game-tags">
-                    <span class="heat-tag ${heatClass}">${getHeatIcon(g.heat)} ${g.heat}</span>
-                    ${g.platforms ? `<span class="platform-tag">${g.platforms}</span>` : ''}
-                </div>
-            </div>`;
-        });
-
-        html += '</div></div>';
-    });
-
-    html += '</div>';
-    container.innerHTML = html;
-}
-
-function getHeatClass(heat) {
-    switch(heat) {
-        case '高': return 'heat-high';
-        case '中高': return 'heat-mid-high';
-        case '中': return 'heat-mid';
-        case '中低': return 'heat-mid-low';
-        default: return 'heat-low';
-    }
-}
-
-function getHeatIcon(heat) {
-    switch(heat) {
-        case '高': return '🔥';
-        case '中高': return '⚡';
-        case '中': return '📊';
-        case '中低': return '📉';
-        default: return '⬜';
-    }
-}
-
-function renderPipelineTable(games) {
-    const tbody = document.getElementById('pipelineTableBody');
-    if (!tbody) return;
-
-    let html = '';
-    games.forEach(g => {
-        const heatClass = getHeatClass(g.heat);
-        const releasedTag = g.released ? ' <span class="released-badge-sm">✅已发售</span>' : '';
-        const rowClass = g.released ? ' class="row-released"' : '';
-        html += `<tr${rowClass}>
-            <td class="game-name text-left">${g.name}${releasedTag}</td>
-            <td>${g.publisher}</td>
-            <td>${g.studio}</td>
-            <td>${g.releaseDate}</td>
-            <td><span class="platform-tag-sm">${g.platforms}</span></td>
-            <td class="text-center"><span class="heat-tag ${heatClass}">${getHeatIcon(g.heat)} ${g.heat}</span></td>
-            <td style="max-width:200px;white-space:normal;font-size:0.78rem;color:var(--text-secondary);">${g.gameplay || '-'}</td>
-            <td style="max-width:180px;white-space:normal;font-size:0.78rem;color:var(--text-muted);">${g.heatNote || '-'}</td>
-        </tr>`;
-    });
-
-    tbody.innerHTML = html;
 }
 
 // ============ Tab: 行业热点新闻 ============
@@ -2836,8 +2697,8 @@ function initPresentationMode() {
 function updateNavBadges() {
     // Pipeline角标
     const badgePipeline = document.getElementById('badgePipeline');
-    if (badgePipeline && typeof pipelineGames !== 'undefined') {
-        const count = pipelineGames.length || 0;
+    if (badgePipeline && typeof pipelineUnreleased !== 'undefined') {
+        const count = pipelineUnreleased.length || 0;
         if (count > 0) {
             badgePipeline.textContent = count > 99 ? '99+' : count;
             badgePipeline.classList.add('visible');
