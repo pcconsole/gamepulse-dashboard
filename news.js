@@ -1,7 +1,7 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v4.0 自动更新，请勿手动编辑
-// 最后更新: 2026-03-19T18:30:00Z
+// 最后更新: 2026-03-20T08:00:00Z
 // 更新者: news-agent
 // 数据来源: 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v4.0 — 统一重点新闻标记（featured），基于腾讯文档863行历史标记学习
@@ -173,6 +173,107 @@ const newsSources = [
 
 const newsData = [
     {
+        "id": 81,
+        "title": "Capcom宣布新Spotlight展示会：将公布《生化危机：安魂曲》《Pragmata》《怪物猎人荒野》新内容",
+        "summary": "Capcom正式宣布将举办新一期Capcom Spotlight展示会，预计持续约40分钟，将带来《生化危机：安魂曲》开发团队访谈、科幻新作《Pragmata》最新进展、《怪物猎人：荒野》更新计划以及《街头霸王6》Year 3赛季内容。这是Capcom继《生化危机：安魂曲》全球销量突破600万后的首场大型展示活动。",
+        "source": "VGC",
+        "sourceUrl": "https://www.videogameschronicle.com/news/resident-evil-requiem-pragmata-and-more-to-appear-in-capcom-showcase-next-week/",
+        "sourceUrls": [
+            {"name": "VGC", "url": "https://www.videogameschronicle.com/news/resident-evil-requiem-pragmata-and-more-to-appear-in-capcom-showcase-next-week/"},
+            {"name": "CapcomAsia微博", "url": "https://weibo.com/capcomasia"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "date": "2026-03-20",
+        "tags": ["Capcom", "Pragmata", "生化危机", "怪物猎人", "展示会"],
+        "sentiment": "positive",
+        "tdocMarking": "none"
+    },
+    {
+        "id": 82,
+        "title": "SEGA计划2027年3月前发布4款\"主力IP\"新游，意欲重回3A主流",
+        "summary": "SEGA透露计划在2027年3月底前（FY2026内）发布4款来自旗下\"主力IP\"的大型新游。结合SEGA现有IP矩阵，候选作品可能包括《如龙》《索尼克》《女神异闻录》《全面战争》等系列的全新作品。此举表明SEGA正在积极扩大其PC/Console游戏产品线，加速从传统街机/手游公司向3A多平台发行商转型。",
+        "source": "VGC",
+        "sourceUrl": "https://www.psu.com/tag/ps5/",
+        "sourceUrls": [
+            {"name": "PlayStation Universe", "url": "https://www.psu.com/tag/ps5/"},
+            {"name": "VGC", "url": "https://www.videogameschronicle.com/"}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-03-20",
+        "tags": ["SEGA", "主力IP", "战略", "3A"],
+        "sentiment": "positive",
+        "tdocMarking": "none"
+    },
+    {
+        "id": 83,
+        "title": "GamesIndustry.biz发起\"AI周\"专题：深度剖析AI对游戏行业的商业冲击",
+        "summary": "全球最大游戏行业媒体GamesIndustry.biz本周推出\"AI Week\"专题，以一系列深度报道、访谈和分析文章全面探讨AI技术对游戏产业的商业影响。专题涵盖AI在开发流程中的实际应用案例、对就业市场的冲击、版权与法律争议，以及开发者对AI工具的态度调查。这是GDC 2026\"AI热\"之后行业首次系统性的商业视角分析。",
+        "source": "GamesIndustry",
+        "sourceUrl": "https://investmentsummit.gamesindustry.biz/",
+        "category": "market",
+        "importance": "medium",
+        "date": "2026-03-20",
+        "tags": ["AI", "游戏行业", "GamesIndustry", "专题报道"],
+        "sentiment": "neutral",
+        "tdocMarking": "none"
+    },
+    {
+        "id": 84,
+        "title": "Newzoo深度报告：腾讯网易米哈游库洛登顶全球PC游戏时长Top20",
+        "summary": "据Newzoo发布的《2026 PC与主机游戏市场报告》详细数据，中国游戏公司在全球PC平台表现突出：腾讯旗下拳头游戏的《英雄联盟》《无畏契约》、网易《漫威争锋》、库洛《鸣潮》、米哈游《原神》成功跻身全球用户时长Top 20 PC游戏。其中网易《漫威争锋》表现尤为亮眼，同时入选PS平台和Xbox平台时长Top 20主机游戏。报告指出PC游戏市场结构性增长仍有支撑，稳定的玩家扩张推动收入增长。",
+        "source": "Newzoo",
+        "sourceUrl": "https://news.qq.com/rain/a/20260318A0004N00",
+        "sourceUrls": [
+            {"name": "腾讯新闻/GameLook", "url": "https://news.qq.com/rain/a/20260318A0004N00"},
+            {"name": "GameLook", "url": "http://gamelook.com.cn/"}
+        ],
+        "category": "market",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-03-18",
+        "tags": ["Newzoo", "腾讯", "网易", "米哈游", "市场数据", "PC游戏"],
+        "sentiment": "positive",
+        "tdocMarking": "none"
+    },
+    {
+        "id": 85,
+        "title": "《巫师4》披露大量开发情报：战斗更流畅、引入前沿技术",
+        "summary": "CD Projekt RED在官方播客\"AnsweRED\"中罕见披露《巫师4》（The Witcher IV）大量开发信息。团队透露战斗系统将比前作更加流畅丝滑，并引入多项前沿技术。此外CDPR确认《赛博朋克2077》不再开发新DLC，Switch 2版《赛博朋克2077》移植已进行\"远超7周\"的开发。《巫师4》预计将成为CDPR继《赛博朋克2077》之后最重要的项目。",
+        "source": "VGC",
+        "sourceUrl": "https://gamingbolt.com/the-witcher-3-wild-hunt",
+        "sourceUrls": [
+            {"name": "Gamingbolt", "url": "https://gamingbolt.com/the-witcher-3-wild-hunt"},
+            {"name": "快科技", "url": "https://news.mydrivers.com/zhujiyouxi.html"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "date": "2026-03-17",
+        "tags": ["巫师4", "CDPR", "赛博朋克2077", "Switch 2"],
+        "sentiment": "positive",
+        "tdocMarking": "none"
+    },
+    {
+        "id": 86,
+        "title": "索尼PS6或因AI芯片短缺推迟至2028-2029年，\"25年行业最严重供需失衡\"",
+        "summary": "GamesIndustry.biz报道，业内人士警告AI驱动的芯片需求激增正导致消费电子行业严重的内存芯片短缺。知情人士称索尼可能因此将PS6发布时间从原计划的2027年推迟至2028甚至2029年。报道援引行业专家称'这是我25年从业经历中最严重的供需失衡'。此消息与此前PS6按计划2027年假日季发售的传闻形成冲突，需持续关注后续官方确认。",
+        "source": "GamesIndustry",
+        "sourceUrl": "https://www.gamesindustry.biz/resources/directory/company/sony",
+        "sourceUrls": [
+            {"name": "GamesIndustry(Vikki Blake)", "url": "https://www.gamesindustry.biz/resources/directory/company/sony"},
+            {"name": "新浪财经", "url": "https://finance.sina.com.cn/tech/roll/2025-05-11/doc-ineweiwc2494692.shtml"}
+        ],
+        "category": "hardware",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-03-16",
+        "tags": ["PS6", "索尼", "芯片短缺", "AI", "内存"],
+        "sentiment": "negative",
+        "tdocMarking": "none"
+    },
+    {
         "id": 67,
         "title": "《死亡搁浅2：冥滩之上》PC版3月19日正式发售，首日Steam在线火爆",
         "summary": "小岛秀夫新作《死亡搁浅2：冥滩之上》PC版于2026年3月19日全球解锁，由Nixxes Software负责移植。PC版新增\"走向荒野\"难度、真人过场动画、Boss战重复游玩功能，支持超宽屏和DualSense。发售前113GB未加密文件遭BT泄露，但未影响首日销售热度。PS5版同步推送免费内容更新。",
@@ -192,20 +293,21 @@ const newsData = [
     },
     {
         "id": 68,
-        "title": "《红色沙漠》3月20日全球发售在即，Steam愿望单突破300万",
-        "summary": "Pearl Abyss开放世界动作冒险游戏《红色沙漠》确认3月20日全球发售，登陆PC和PS5平台。Steam愿望单已突破300万，玩家期待度持续攀升。游戏主打雇佣兵团冒险叙事与深度动作战斗，被视为2026年Q1最重要的新IP之一。豪华版和典藏版同步发售。",
+        "title": "《红色沙漠》3月20日全球正式发售，早期评测口碑两极分化",
+        "summary": "Pearl Abyss开放世界动作冒险游戏《红色沙漠》于2026年3月20日全球正式发售，登陆PC和PS5平台。Steam愿望单此前已突破300万。Rock Paper Shotgun早期评测指出游戏存在bug，开放世界指引不足，但猫和世界设计获赞；评语称'并非开放世界的革命性作品'。游戏主打雇佣兵团冒险叙事与深度动作战斗，被视为2026年Q1最重要新IP之一。首日Steam在线数据和更多媒体评分正在发布中。",
         "source": "EuroGamer",
         "sourceUrl": "https://www.eurogamer.net/crimson-desert-passes-3-million-wishlists-as-excitement-around-the-single-player-rpg-builds",
         "sourceUrls": [
             {"name": "EuroGamer", "url": "https://www.eurogamer.net/crimson-desert-passes-3-million-wishlists-as-excitement-around-the-single-player-rpg-builds"},
+            {"name": "Rock Paper Shotgun", "url": "https://www.rockpapershotgun.com/"},
             {"name": "红色沙漠官网", "url": "https://crimsondesert.pearlabyss.com/"}
         ],
         "category": "game",
         "importance": "high",
         "featured": true,
-        "date": "2026-03-19",
-        "tags": ["红色沙漠", "Pearl Abyss", "开放世界", "新IP"],
-        "sentiment": "positive",
+        "date": "2026-03-20",
+        "tags": ["红色沙漠", "Pearl Abyss", "开放世界", "新IP", "发售"],
+        "sentiment": "neutral",
         "tdocMarking": "none"
     },
     {
@@ -571,38 +673,6 @@ const newsData = [
         "tdocMarking": "none"
     },
     {
-        "id": 6,
-        "title": "《死亡搁浅2》PC版3月19日发售，小岛秀夫亲自详解PC与PS5新功能",
-        "summary": "小岛秀夫在PlayStation Blog详细介绍PC版新内容：新增\"走向荒野\"难度、真人过场动画、Boss战可重复游玩，解锁帧率、支持超宽屏及DualSense手柄；PS5版同步免费更新。此外PC版发售前已遭BT泄露（113GB未加密文件）。",
-        "source": "PlayStation Blog",
-        "sourceUrl": "https://blog.playstation.com/2026/03/17/death-stranding-2-new-pc-ps5-features-detailed-live-march-19/",
-        "sourceUrls": [
-            {
-                "name": "PlayStation Blog",
-                "url": "https://blog.playstation.com/2026/03/17/death-stranding-2-new-pc-ps5-features-detailed-live-march-19/"
-            },
-            {
-                "name": "VGC",
-                "url": "https://www.videogameschronicle.com/"
-            },
-            {
-                "name": "IT之家",
-                "url": "https://www.ithome.com/"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "date": "2026-03-17",
-        "tags": [
-            "死亡搁浅2",
-            "小岛秀夫",
-            "PC",
-            "PlayStation"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "none"
-    },
-    {
         "id": 7,
         "title": "沙特主权基金再购5% Capcom股份，合计持股超10%",
         "summary": "沙特阿拉伯主权财富基金（PIF）旗下EGDC投资机构再度收购约5% Capcom股份，结合2022年PIF已持有的5%，沙特在Capcom的合计持股已超过10%。沙特资本近年持续在全球游戏行业大规模布局，此次进一步强化对《生化危机》《街头霸王》等IP母公司的影响力。",
@@ -910,23 +980,6 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none"
-    },
-    {
-        "id": 21,
-        "title": "《红色沙漠》Steam愿望单突破300万，3月20日发售在即",
-        "summary": "Pearl Abyss开放世界动作冒险游戏《红色沙漠》Steam愿望单数量突破300万，玩家期待度持续攀升。游戏确认3月20日全球发售，登陆PC和PS5/Mac平台，主打雇佣兵团冒险叙事与深度动作战斗系统。",
-        "source": "EuroGamer",
-        "sourceUrl": "https://www.eurogamer.net/crimson-desert-passes-3-million-wishlists-as-excitement-around-the-single-player-rpg-builds",
-        "category": "game",
-        "importance": "medium",
-        "date": "2026-03-14",
-        "tags": [
-            "红色沙漠",
-            "Pearl Abyss",
-            "Steam",
-            "开放世界"
-        ],
-        "sentiment": "positive"
     },
     {
         "id": 22,

@@ -1,7 +1,7 @@
 // ============================================
 // 待上线 Pipeline 数据模块
 // 2026年端主大作信息汇总
-// 补充完整玩法简析 + 新增更多产品 + 定期刷新 | 最后更新: 2026-03-16
+// 补充完整玩法简析 + 新增更多产品 + 定期刷新 | 最后更新: 2026-03-20
 // ============================================
 
 const pipelineData = [
@@ -12,9 +12,12 @@ const pipelineData = [
     { name: "死亡搁浅2：冥滩之上", publisher: "小岛工作室", studio: "/", releaseDate: "2026/3/19", platforms: "PC", heat: "中低", heatNote: "PS端首周销量140万", gameplay: "开放世界动作冒险，核心为「连接」主题的送货与探索，融合潜行与战斗" },
     { name: "真·三国无双2 with 猛将传 Remastered", publisher: "光荣特库摩", studio: "/", releaseDate: "2026/3/19", platforms: "PC+Switch+PS5", heat: "低", heatNote: "IP重制版，垂类头部", gameplay: "割草游戏，腾讯代理手游《真三国无双 霸》" },
     { name: "贪婪之秋2：垂死世界", publisher: "Spiders", studio: "/", releaseDate: "2026/3/19", platforms: "PC+PS5+Xbox", heat: "低", heatNote: "前作销量200万", gameplay: "沉浸叙事型RPG，大航海殖民背景，外交/战斗/潜行多路线选择" },
-    { name: "红色沙漠", publisher: "Pearl Abyss", studio: "/", releaseDate: "2026/3/20", platforms: "PC+PS+Mac", heat: "中低", heatNote: "2026年即将登陆PS5的精彩游戏", gameplay: "开放世界动作冒险" },
+    { name: "红色沙漠", publisher: "Pearl Abyss", studio: "/", releaseDate: "2026/3/20", platforms: "PC+Xbox+PS5", heat: "中", heatNote: "3/19首发PC/Xbox，据GamesRadar确认多平台发售，开放世界大作", gameplay: "开放世界动作冒险，中世纪背景，流畅的近战与骑马战斗系统", released: true },
     { name: "索尼克赛车：交叉世界", publisher: "世嘉", studio: "Sonic Team", releaseDate: "2026/3/26", platforms: "Switch2", heat: "低", heatNote: "直接对标马里奥赛车", gameplay: "卡通风卡丁车竞速，多人联机赛车对战" },
     { name: "Screamer", publisher: "Milestone S.r.l.", studio: "/", releaseDate: "2026/3/26", platforms: "PC+PS5+Xbox", heat: "低", heatNote: "赛车垂类头部公司", gameplay: "二次元赛车" },
+    { name: "奇异人生：重逢（Life is Strange: Reunion）", publisher: "SE/Deck Nine", studio: "Deck Nine Games", releaseDate: "2026/3/26", platforms: "PC+PS5+Xbox", heat: "中", heatNote: "据GamesRadar 3/26发售，《奇异人生》系列新作，IP全球销量2000万+", gameplay: "剧情驱动冒险游戏，蝴蝶效应式选择分支叙事" },
+    { name: "Marathon", publisher: "索尼/Bungie", studio: "Bungie", releaseDate: "2026/3/5", platforms: "PC+PS5+Xbox", heat: "中高", heatNote: "Bungie被索尼收购后首款新作，《命运》系列开发商，据163确认9/24改为3/5首发", gameplay: "团队撤离射击PvPvE，赛博雇佣兵设定，高风险搜刮玩法", released: true },
+    { name: "杀手蛇（Slay the Spire 2）", publisher: "Mega Crit Games", studio: "Mega Crit", releaseDate: "2026/3/5", platforms: "PC", heat: "中", heatNote: "前作Steam特别好评，Roguelike卡牌鼻祖级续作，3/5抢先体验", gameplay: "Roguelike卡牌构筑，策略战斗+随机地牢探索", released: true },
     { name: "刺客信条4：黑旗 重制版", publisher: "育碧", studio: "/", releaseDate: "2026年Q1(预计推迟)", platforms: "待定", heat: "中", heatNote: "刺客信条史上最经典游戏之一", gameplay: "潜行刺杀+海战+岛屿探索" },
 
     // ===== 2026 Q2 (4-6月) =====
@@ -25,8 +28,17 @@ const pipelineData = [
     { name: "SAROS", publisher: "索尼", studio: "Housemarque", releaseDate: "2026/4/30", platforms: "PS5", heat: "中低", heatNote: "索尼一方游戏", gameplay: "第三人称科幻射击游戏，\"永久成长\"死亡机制" },
     { name: "极限竞速：地平线6", publisher: "微软", studio: "Playground Games", releaseDate: "2026/5/19", platforms: "PC+Xbox", heat: "中低", heatNote: "IP续作，垂类头部", gameplay: "赛车竞速游戏头部游戏" },
     { name: "007：锋芒初露", publisher: "世嘉", studio: "IO Interactive", releaseDate: "2026/5/27", platforms: "PC+PS5+Xbox", heat: "中", heatNote: "开发成本达1.8亿美元", gameplay: "特工题材ACG，通过潜行及多武器枪战刺杀等玩法通关游戏" },
-    { name: "乐高蝙蝠侠：黑暗骑士的遗产", publisher: "华纳兄弟", studio: "/", releaseDate: "2026/5/29", platforms: "PC+Switch2+PS5+Xbox", heat: "中低", heatNote: "乐高IP，蝙蝠侠IP", gameplay: "潜行跑酷+开放世界探索" },
+    { name: "乐高蝙蝠侠：黑暗骑士的遗产", publisher: "华纳兄弟", studio: "/", releaseDate: "2026/5/22", platforms: "PC+Switch2+PS5+Xbox", heat: "中低", heatNote: "乐高IP，蝙蝠侠IP，据GamesRadar日期调整至5/22", gameplay: "潜行跑酷+开放世界探索" },
     { name: "Control Resonant", publisher: "Remedy", studio: "Remedy Entertainment", releaseDate: "2026年Q2", platforms: "PC+Switch+PS5+Xbox", heat: "中低", heatNote: "前作销量500万", gameplay: "超自然第三人称动作冒险，以迪伦·法登为主角对抗异常实体" },
+    { name: "朋友聚会：生活梦想（Tomodachi Life）", publisher: "任天堂", studio: "/", releaseDate: "2026/4/16", platforms: "Switch+Switch2", heat: "中", heatNote: "据GamesRadar 4/16发售，任天堂社交模拟系列回归", gameplay: "生活模拟社交游戏，Mii角色互动、搞笑日常" },
+    { name: "Masters of Albion", publisher: "Rebellion", studio: "Rebellion", releaseDate: "2026/4/22", platforms: "PC", heat: "中低", heatNote: "据GamesRadar 4/22发售，中世纪城市建造管理", gameplay: "城市建造管理策略游戏，中世纪英国背景" },
+    { name: "夺宝奇兵：古老之圈（Switch2版）", publisher: "微软", studio: "MachineGames", releaseDate: "2026/5/12", platforms: "Switch2", heat: "中", heatNote: "据GamesRadar确认Switch2移植版5/12发售，原版PC/Xbox/PS5已上线", gameplay: "第一人称动作冒险，印第安纳·琼斯IP" },
+    { name: "Directive 8020", publisher: "索尼", studio: "Naughty Dog", releaseDate: "2026/5/12", platforms: "PC+PS5+Xbox", heat: "中高", heatNote: "据GamesRadar 5/12发售，顽皮狗（《最后生还者》开发商）全新科幻IP", gameplay: "第三人称科幻动作冒险" },
+    { name: "Doom: The Dark Ages", publisher: "微软", studio: "id Software", releaseDate: "2026/5/15", platforms: "PC+PS5+Xbox", heat: "中高", heatNote: "Doom系列新作，前传时间线，据GamesRadar日期确认", gameplay: "第一人称射击，中世纪奇幻设定+超高速战斗节奏" },
+    { name: "耀西与神秘之书（Yoshi and the Mysterious Book）", publisher: "任天堂", studio: "/", releaseDate: "2026/5/21", platforms: "Switch2", heat: "中", heatNote: "据GamesRadar 5/21发售，任天堂Switch2平台独占耀西新作", gameplay: "平台跳跃冒险，耀西系列经典2.5D横版探索" },
+    { name: "Paralives", publisher: "Paralives Studio", studio: "/", releaseDate: "2026/5/25", platforms: "PC", heat: "中", heatNote: "据GamesRadar 5/25 Early Access，社区期待的《模拟人生》竞品", gameplay: "生活模拟经营游戏，房屋建造+角色养成+社区互动" },
+    { name: "最终幻想7 重生（FF7 Rebirth）Xbox/Switch版", publisher: "史克威尔艾尼克斯", studio: "/", releaseDate: "2026/6/3", platforms: "Xbox+Switch", heat: "中高", heatNote: "据GamesRadar 6/3发售Xbox/Switch移植版，FF7重制三部曲第二作", gameplay: "ARPG，开放世界探索+ATB战斗系统" },
+    { name: "哥特王朝1 重制版（Gothic 1 Remake）", publisher: "THQ Nordic", studio: "Alkimia Interactive", releaseDate: "2026/6/5", platforms: "PC+PS5+Xbox", heat: "中", heatNote: "据GamesRadar 6/5发售，经典欧美RPG重制，原作1.5亿+下载", gameplay: "开放世界动作RPG，阵营选择+非线性剧情+技能树培养" },
 
     // ===== 2026 Q3 (7-9月) =====
     { name: "碧蓝幻想Relink：无尽黄昏", publisher: "Cygames", studio: "Cygames", releaseDate: "2026/7/9", platforms: "PC+Switch2+PS5", heat: "中", heatNote: "前作全球销量300万+，Steam特别好评", gameplay: "多人联机ARPG，新增召唤系统与单人极沌空处模式" },
@@ -81,7 +93,9 @@ const pipelineData = [
     { name: "CALX", publisher: "Dear Villagers", studio: "True Colors", releaseDate: "2026/6/4", platforms: "PC", heat: "低", heatNote: "Future Games Show春季展公布，氛围感3D动作冒险", gameplay: "3D动作冒险，氛围感探索与战斗" },
     { name: "生化危机9：安魂曲", publisher: "卡普空", studio: "/", releaseDate: "2026/6/13", platforms: "PC+PS5+Xbox", heat: "中高", heatNote: "生化危机系列最新作", gameplay: "恐怖生存动作冒险，第三人称视角" },
     { name: "勇者斗恶龙7 Reimagined", publisher: "史克威尔艾尼克斯", studio: "/", releaseDate: "2026/3/13", platforms: "PC+Switch2+PS5+Xbox", heat: "中", heatNote: "DQ系列经典重制", gameplay: "JRPG，回合制战斗+职业转换系统", released: true },
-    { name: "Doom: The Dark Ages", publisher: "微软", studio: "id Software", releaseDate: "2026/5/15", platforms: "PC+PS5+Xbox", heat: "中高", heatNote: "Doom系列新作，前传时间线", gameplay: "第一人称射击，中世纪奇幻设定+超高速战斗节奏" },
+    { name: "丰收之月：大地回声（Harvest Moon: Echoes of Teradea）", publisher: "Natsume", studio: "/", releaseDate: "2026年", platforms: "PC+PS5+Xbox+Switch2", heat: "低", heatNote: "据Cinelinx 3/17公布，经典农场模拟IP新作", gameplay: "农场模拟经营，种植+畜牧+社交+探索" },
+    { name: "宝可梦冠军（Pokemon Champions）", publisher: "任天堂", studio: "宝可梦公司", releaseDate: "2026年Q2", platforms: "Switch+Switch2", heat: "中高", heatNote: "据GamesRadar 4月待定发售，宝可梦IP竞技格斗新作", gameplay: "宝可梦IP动作竞技游戏" },
+    { name: "Mixtape", publisher: "Annapurna Interactive", studio: "Beethoven & Dinosaur", releaseDate: "2026/5/7", platforms: "PC+PS5+Xbox+Switch2", heat: "中低", heatNote: "据GamesRadar 5/7发售，Annapurna发行，独立游戏精品", gameplay: "叙事驱动音乐冒险，90年代青少年公路旅行背景" },
 ];
 
 // Pipeline 数据处理函数
