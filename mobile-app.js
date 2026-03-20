@@ -1768,7 +1768,7 @@ function mSwitchTab(tab) {
 
     // 更新标题
     const titles = {
-        strategy: '已上线新游全局概览',
+        strategy: '已上线新游数据表现',
         pipeline: '待上线 Pipeline',
         news: '行业热点新闻',
         earnings: '重点公司财报分析',
