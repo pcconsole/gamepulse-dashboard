@@ -6,8 +6,8 @@
 
 // ============ 元数据 ============
 const storewatchMeta = {
-    lastUpdated: '2026-03-23',
-    dataRange: '2025-12-19 ~ 2026-03-23',
+    lastUpdated: '2026-03-24',
+    dataRange: '2025-12-19 ~ 2026-03-24',
     sheetId: 'LXXdrpHEWcSr',
     mainSheet: 'BB08J2',
     vendorSheet: 'xsejuk',
@@ -448,6 +448,7 @@ const storewatchGameNameMap = {
     '潜龙谍影3:食蛇者': 'Metal Gear Solid 3:Snake Eater',
     '潜水员戴夫': 'Dave the Diver',
     '潜行者2:切尔诺贝利之心': 'S.T.A.L.K.E.R. 2: Heart of Chornobyl',
+    '趋势游戏': 'Trending',
     '全境封锁': 'Tom Clancy\'s The Division',
     '热门免费游戏': 'Top free games',
     '人间地狱': 'Hell Let Loose',
@@ -497,6 +498,7 @@ const storewatchGameNameMap = {
     '四海兄弟:故乡': ' Mafia: The Old Country',
     '随动回旋镖': 'Boomerang Fu',
     '索尼克赛车:交叉世界': 'Sonic Racing: CrossWorlds‌',
+    '索尼一方工作室游戏推荐': 'Discover Playstation Studios',
     '贪婪大地': 'Greedland',
     '贪婪之秋2:垂死世界': 'GreedFall: The Dying World',
     '坦克世界:现代装甲': 'World of Tanks Modern Armor',
@@ -623,6 +625,7 @@ const storewatchGameNameMap = {
     'Destiny 2': '命运2',
     'Diablo IV': '暗黑破坏神4',
     'Digimon Story: Time Stranger': '数码宝贝物语:时空异客',
+    'Discover Playstation Studios': '索尼一方工作室游戏推荐',
     'Divinity: Original Sin 2': '神界:原罪2',
     'DOOM: The Dark Ages': '毁灭战士:黑暗时代',
     'DRAGON BALL Z: KAKAROT': '龙珠Z:卡卡洛特',
@@ -797,6 +800,7 @@ const storewatchGameNameMap = {
     'Tomb Raider: Legacy of Atlantis': '古墓丽影:��特兰蒂斯遗迹',
     'Top free games': '热门免费游戏',
     'Train Sim World® 6': '模拟火车世界6',
+    'Trending': '趋势游戏',
     'Tropico 6': '海岛大亨6',
     'Ubisoft': '育碧发行商特卖',
     'Unrailed!': '一起开火车！',
@@ -831,10 +835,35 @@ const storewatchNonGameTags = [
 
 // ============ 商店监控数据 ============
 // 数据来源：腾讯文档 LXXdrpHEWcSr (sheet BB08J2)
-// 最后更新：2026-03-23
-// 数据范围：2025-12-19 ~ 2026-03-23
+// 最后更新：2026-03-24
+// 数据范围：2025-12-19 ~ 2026-03-24
 const storewatchData = {
     PS5: [
+        { date: '2026-03-24', slots: {
+            'Must See': { positions: [
+                { rank: 1, us: 'NBA 2K26', jp: '绝区零（Zenless Zone Zero）', hk: '生化危机:安魂曲（Resident Evil: Requiem）', vendor: 'Take-Two' },
+                { rank: 2, us: '侠盗猎车手6（Grand Theft Auto VI）', jp: 'MEGA MARCH', hk: '热门优惠', jpNonGame: true, hkNonGame: true, vendor: 'Take-Two' },
+                { rank: 3, us: '绝区零（Zenless Zone Zero）', jp: '1500日元以下（games under 円1500）', hk: '绝区零（Zenless Zone Zero）', jpNonGame: true, vendor: '米哈游' },
+                { rank: 4, us: 'MEGA MARCH', jp: '人中之龙游戏专题', hk: '侠盗猎车手6（Grand Theft Auto VI）', usNonGame: true, jpNonGame: true, vendor: 'Take-Two' },
+                { rank: 5, us: '15美元以下（games under $15）', jp: '羊蹄山之魂（Ghost of Yōtei）', hk: 'PS5必玩游戏', usNonGame: true, vendor: '索尼' },
+                { rank: 6, us: '烹饪游戏专题（COOKING GAMES）', jp: '生化危机:安魂曲（Resident Evil: Requiem）', hk: 'ARC Raiders', usNonGame: true, vendor: 'CAPCOM' },
+            ] },
+            'Top games in your country': { positions: [
+                { rank: 1, us: '堡垒之夜（Fortnite）', jp: '七大罪:起源（The Seven Deadly Sins:Origin）', hk: '羊蹄山之魂（Ghost of Yōtei）', vendor: 'Epic' },
+                { rank: 2, us: '红色沙漠（Crimson Desert）', jp: '堡垒之夜（Fortnite）', hk: '机动战士高达 激战任务2（MOBILE SUIT GUNDAMBATTLE OPERATION 2）', vendor: 'Pearl Abyss' },
+                { rank: 3, us: '罗布乐思（Roblox）', jp: '红色沙漠（Crimson Desert）', hk: '无法成眠的伊达键 - From AI:梦境档案（No Sleep For Kaname Date – From AI: The Somnium Files‌）', vendor: 'Roblox' },
+                { rank: 4, us: '麦登橄榄球26（MaddenNFL26）', jp: '崩坏:星穹铁道（Honkai: Star Rail）', hk: '破碎怪谈:恶意取关（BrokenLore UNFOLLOW）', vendor: 'EA' },
+                { rank: 5, us: '漫威争锋（Marvel Rivals）', jp: '鸣潮（Wuthering Waves）', hk: '第一后裔（THE FIRST DESCENDANT）', vendor: '网易' },
+            ] },
+            "What's hot": { positions: [
+                { rank: 1, us: '动漫改编游戏专题', jp: '侠盗猎车手5（Grand Theft Auto V）', hk: '侠盗猎车手5（Grand Theft Auto V）', usNonGame: true, vendor: 'Take-Two' },
+                { rank: 2, us: '索尼一方工作室游戏推荐（Discover Playstation Studios）', jp: '宇宙机器人（Astro Bot）', hk: '寂静岭2（Silent Hill 2）', vendor: '索尼' },
+                { rank: 3, us: '奇异人生:重聚（Life is Strange: Reunion）', jp: '羊蹄山之魂（Ghost of Yōtei）', hk: '索尼一方工作室游戏推荐（Discover Playstation Studios）', vendor: 'Square Enix' },
+                { rank: 4, us: '烹饪游戏专题（COOKING GAMES）', jp: '赛马大亨10（Winning Post 10 2026）', hk: 'PS5必玩游戏', usNonGame: true, vendor: 'KOEI TECMO' },
+                { rank: 5, us: '罗布乐思（Roblox）', jp: '首都高赛车（Shutokou Battle）', hk: '罗布乐思（Roblox）', vendor: 'Roblox' },
+                { rank: 6, us: '故事驱动游戏专题（STORY-DRIVEN）', jp: '崩坏:星穹铁道（Honkai: Star Rail）', hk: '贪婪之秋2:垂死世界（GreedFall: The Dying World）', usNonGame: true, vendor: '米哈游' },
+            ] },
+        } },
         { date: '2026-03-23', slots: {
             'Must See': { positions: [
                 { rank: 1, us: 'NBA 2K26', jp: 'MEGA MARCH', hk: '热门优惠', jpNonGame: true, hkNonGame: true, vendor: 'Take-Two' },
@@ -2312,6 +2341,37 @@ const storewatchData = {
         } },
     ],
     Xbox: [
+        { date: '2026-03-24', slots: {
+            'Dash home-banner': { positions: [
+                { rank: 1, us: 'Women\'s History Month', jp: 'Xbox Partner Preview', hk: 'Xbox Partner Preview', isNonGame: true },
+                { rank: 2, us: '最佳评选游戏特卖（Best rated sale）', jp: 'Game Pass 会员优惠', hk: '红色沙漠（Crimson Desert）', usNonGame: true, jpNonGame: true, vendor: 'Pearl Abyss' },
+                { rank: 3, us: '发行商精品聚焦系列（Publisher Spotlight Series）', jp: '堡垒之夜（Fortnite）', hk: '无障碍功能游戏（Accessibility in games）', usNonGame: true, hkNonGame: true, vendor: 'Epic' },
+            ] },
+            'Dash home-banner2': { positions: [
+                { rank: 1, us: '生化危机:安魂曲（Resident Evil: Requiem）', jp: '生化危机:安魂曲（Resident Evil: Requiem）', hk: '使命召唤:黑色行动7（Call of Duty: Black Ops 7）', vendor: 'CAPCOM' },
+                { rank: 2, us: 'Need for Speed™ Heat', jp: 'Need for Speed™ Heat', hk: '狂野飙车9:竞速传奇（Asphalt Legends）', vendor: 'Gameloft' },
+                { rank: 3, us: 'ARC Raiders', jp: 'ARC Raiders', hk: '彩虹六号:围攻X（Tom Clancy\'s Rainbow Six Siege X）', vendor: 'Nexon' },
+                { rank: 4, us: 'The Outlast Trials', jp: 'The Outlast Trials', hk: '实况足球（eFootball）', vendor: 'KONAMI' },
+                { rank: 5, us: 'WWE 2K26', jp: 'WWE 2K26', hk: '罗布乐思（Roblox）', vendor: 'Take-Two' },
+                { rank: 6, us: '我的世界（Minecraft）', jp: '我的世界（Minecraft）', hk: 'EA Sports FC 26', vendor: '微软' },
+            ] },
+            'Store Home-hero banner': { positions: [
+                { rank: 1, us: '堡垒之夜（Fortnite）', jp: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', hk: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', vendor: 'Epic' },
+            ] },
+            'Store Home-banner': { positions: [
+                { rank: 1, us: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', jp: '发行商精品聚焦系列（Publisher Spotlight Series）', hk: '发行商精品聚焦系列（Publisher Spotlight Series）', jpNonGame: true, hkNonGame: true, vendor: 'CAPCOM' },
+                { rank: 2, us: '红色沙漠（Crimson Desert）', jp: '红色沙漠（Crimson Desert）', hk: '美国职业棒球大联盟26（MLB The Show 26）', vendor: 'Pearl Abyss' },
+                { rank: 3, us: '战地风云6（Battlefield 6）', jp: '战地风云6（Battlefield 6）', hk: '红色沙漠（Crimson Desert）', vendor: 'EA' },
+                { rank: 4, us: '趋势游戏（Trending）', jp: '趋势游戏（Trending）', hk: '战地风云6（Battlefield 6）', vendor: 'EA' },
+            ] },
+            'Game Home-hero banner': { positions: [
+                { rank: 1, us: '美国职业棒球大联盟26（MLB The Show 26）', jp: '战地风云6（Battlefield 6）', hk: '美国职业棒球大联盟26（MLB The Show 26）', vendor: '索尼' },
+            ] },
+            'Game Home-banner': { positions: [
+                { rank: 1, us: '战地风云6（Battlefield 6）', jp: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', hk: '战地风云6（Battlefield 6）', vendor: 'EA' },
+                { rank: 2, us: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', jp: '生化危机:安魂曲（Resident Evil: Requiem）', hk: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', vendor: 'CAPCOM' },
+            ] },
+        } },
         { date: '2026-03-23', slots: {
             'Dash home-banner': { positions: [
                 { rank: 1, us: 'Xbox Play Anywhere', jp: 'Game Pass 会员优惠', hk: '红色沙漠（Crimson Desert）', vendor: 'Pearl Abyss' },
