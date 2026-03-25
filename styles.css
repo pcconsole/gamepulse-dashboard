@@ -935,8 +935,8 @@ body {
 }
 
 .flow-svg-wrapper {
-    min-width: 1060px;
-    height: 720px;
+    min-width: 1080px;
+    height: 800px;
     position: relative;
 }
 
@@ -994,6 +994,8 @@ body {
 .flow-node.sky .node-value { color: var(--sky); }
 .flow-node.muted { border-color: var(--border-color); background: rgba(90, 94, 115, 0.06); }
 .flow-node.muted .node-value { color: var(--text-secondary); }
+.flow-node.amber { border-color: #f59e0b; background: rgba(245, 158, 11, 0.06); }
+.flow-node.amber .node-value { color: #f59e0b; }
 
 .flow-svg {
     position: absolute;

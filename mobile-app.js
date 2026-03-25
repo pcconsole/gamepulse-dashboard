@@ -167,7 +167,7 @@ function mUpdateExecSummary(games, flow) {
 
     const totalRevenue = games.reduce((s, g) => s + g.lifetimeRevenue, 0);
 
-    el.innerHTML = `端主新游 Top <strong>${flow.total}</strong> 中，<strong>${consolePct}%</strong> 上线主机；PS <strong>${flow.psY}</strong> 款(${psPct}%)，Xbox <strong>${flow.xboxY}</strong> 款(${xboxPct}%)；XGP <strong>${xgpPct}%</strong>（首发${flow.sim}+后发${flow.aft}）。收入 <strong>${formatRevenue(totalRevenue)}</strong>。`;
+    el.innerHTML = `端主新游 Top <strong>${flow.total}</strong> 中，<strong>${consolePct}%</strong> 上线主机；PS <strong>${flow.psY}</strong> 款(${psPct}%)，Xbox <strong>${flow.xboxY}</strong> 款(${xboxPct}%)，双平台 <strong>${flow.bothPlatform}</strong> 款；XGP <strong>${xgpPct}%</strong>（首发${flow.sim}+后发${flow.aft}）。收入 <strong>${formatRevenue(totalRevenue)}</strong>。`;
 }
 
 function mRenderFlowSummary(flow, games) {
@@ -176,9 +176,10 @@ function mRenderFlowSummary(flow, games) {
 
     const consolePct = pct(flow.consoleY, flow.total);
     const xboxPct = pct(flow.xboxY, flow.consoleY);
+    const bothPct = pct(flow.bothPlatform, flow.consoleY);
     const xgpPct = pct(flow.sim + flow.aft, flow.xboxY);
     el.innerHTML = `
-        <strong>${flow.total}</strong> 款端主新游 → <strong>${flow.consoleY}</strong> 上线主机 (${consolePct}%) → PS <strong>${flow.psY}</strong> · Xbox <strong>${flow.xboxY}</strong> (${xboxPct}%)
+        <strong>${flow.total}</strong> 款端主新游 → <strong>${flow.consoleY}</strong> 上线主机 (${consolePct}%) → PS <strong>${flow.psY}</strong> · Xbox <strong>${flow.xboxY}</strong> (${xboxPct}%) · 双平台 <strong>${flow.bothPlatform}</strong> (${bothPct}%)
         <br>Xbox中: 首发XGP <strong>${flow.sim}</strong> + 后发XGP <strong>${flow.aft}</strong> | 未加入 <strong>${flow.noXgp}</strong>
     `;
 
@@ -192,6 +193,7 @@ function mRenderFlowSummary(flow, games) {
         { label: '已上线主机', value: flow.consoleY, color: '#a855f7' },
         { label: '未上线主机', value: flow.consoleN, color: '#64748b' },
         { label: '已登录PlayStation', value: flow.psY, color: '#0ea5e9' },
+        { label: '登录Xbox、PlayStation', value: flow.bothPlatform, color: '#f59e0b' },
         { label: '已登录Xbox', value: flow.xboxY, color: '#22c55e' },
         { label: '首发入库XGP', value: flow.sim, color: '#14b8a6' },
         { label: '后发入库XGP', value: flow.aft, color: '#0ea5e9' },

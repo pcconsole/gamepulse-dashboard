@@ -149,39 +149,42 @@ function renderFlowChart(flow, games) {
         const consolePct = pct(flow.consoleY, flow.total);
         const psPct = pct(flow.psY, flow.consoleY);
         const xboxPct = pct(flow.xboxY, flow.consoleY);
+        const bothPct = pct(flow.bothPlatform, flow.consoleY);
         const xgpPct = pct(flow.sim + flow.aft, flow.xboxY);
         const noXgpPct = pct(flow.noXgp, flow.xboxY);
-        insightEl.innerHTML = `<b>流向洞察：</b>端主新游Top ${flow.total} 中约 ${consolePct}% 上线主机平台；主机游戏中 ${psPct}% 登录PlayStation，${xboxPct}% 登录Xbox（${flow.xboxY} 款）；Xbox游戏中 ${xgpPct}% 加入XGP（首发 ${flow.sim} + 后发 ${flow.aft}），${noXgpPct}% 未加入订阅。`;
+        insightEl.innerHTML = `<b>流向洞察：</b>端主新游Top ${flow.total} 中约 ${consolePct}% 上线主机平台；主机游戏中 ${psPct}% 登录PlayStation，${xboxPct}% 登录Xbox（${flow.xboxY} 款），${bothPct}% 同时登录双平台（${flow.bothPlatform} 款）；Xbox游戏中 ${xgpPct}% 加入XGP（首发 ${flow.sim} + 后发 ${flow.aft}），${noXgpPct}% 未加入订阅。`;
     }
 
     // 流程图节点定义（5列布局）
     // 第1列: 全部端主游戏
     // 第2列: 未上线主机 / 已上线主机
-    // 第3列: 已登录PlayStation / 已登录Xbox
+    // 第3列: 已登录PlayStation / 登录Xbox、PlayStation(交集) / 已登录Xbox
     // 第4列: 首发入库XGP / 后发入库XGP / 未加入订阅（均属于已登录Xbox的子集）
     const nodes = [
-        { id: 'total', label: '全部端主游戏', value: flow.total, x: 20, y: 280, w: 190, h: 86, cls: 'blue', desc: '总计基数', filter: () => games },
+        { id: 'total', label: '全部端主游戏', value: flow.total, x: 20, y: 330, w: 190, h: 86, cls: 'blue', desc: '总计基数', filter: () => games },
         { id: 'no-console', label: '未上线主机', value: flow.consoleN, x: 280, y: 100, w: 190, h: 86, cls: 'muted', desc: `占总数 ${pct(flow.consoleN, flow.total)}%`, filter: () => games.filter(g => g.isConsole === 'N') },
         { id: 'console', label: '已上线主机', value: flow.consoleY, x: 280, y: 460, w: 190, h: 86, cls: 'purple', desc: `占总数 ${pct(flow.consoleY, flow.total)}%`, filter: () => games.filter(g => g.isConsole === 'Y') },
-        { id: 'ps', label: '已登录PlayStation', value: flow.psY, x: 555, y: 300, w: 200, h: 86, cls: 'sky', desc: `占主机 ${pct(flow.psY, flow.consoleY)}%`, filter: () => games.filter(g => g.isConsole === 'Y' && g.isPS === 'Y') },
-        { id: 'xbox', label: '已登录Xbox', value: flow.xboxY, x: 555, y: 460, w: 200, h: 100, cls: 'green', desc: `占主机 ${pct(flow.xboxY, flow.consoleY)}%`, filter: () => games.filter(g => g.isConsole === 'Y' && g.isXbox === 'Y') },
-        { id: 'xgp-sim', label: '首发入库XGP', value: flow.sim, x: 845, y: 280, w: 190, h: 86, cls: 'teal', desc: `占Xbox ${pct(flow.sim, flow.xboxY)}%`, filter: () => games.filter(g => g.isXbox === 'Y' && g.xgpType === '首发入库XGP') },
-        { id: 'xgp-after', label: '后发入库XGP', value: flow.aft, x: 845, y: 460, w: 190, h: 86, cls: 'sky', desc: `占Xbox ${pct(flow.aft, flow.xboxY)}%`, filter: () => games.filter(g => g.isXbox === 'Y' && g.xgpType === '后发入库XGP') },
-        { id: 'xgp-no', label: '未加入订阅', value: flow.noXgp, x: 845, y: 630, w: 190, h: 86, cls: 'muted', desc: `占Xbox ${pct(flow.noXgp, flow.xboxY)}%`, filter: () => games.filter(g => g.isXbox === 'Y' && g.xgpType === '未加入') },
+        { id: 'ps', label: '已登录PlayStation', value: flow.psY, x: 555, y: 200, w: 210, h: 86, cls: 'sky', desc: `占主机 ${pct(flow.psY, flow.consoleY)}%`, filter: () => games.filter(g => g.isConsole === 'Y' && g.isPS === 'Y') },
+        { id: 'both', label: '登录Xbox、PlayStation', value: flow.bothPlatform, x: 555, y: 380, w: 210, h: 86, cls: 'amber', desc: `占主机 ${pct(flow.bothPlatform, flow.consoleY)}% · PS∩Xbox交集`, filter: () => games.filter(g => g.isConsole === 'Y' && g.isXbox === 'Y' && g.isPS === 'Y') },
+        { id: 'xbox', label: '已登录Xbox', value: flow.xboxY, x: 555, y: 560, w: 210, h: 86, cls: 'green', desc: `占主机 ${pct(flow.xboxY, flow.consoleY)}%`, filter: () => games.filter(g => g.isConsole === 'Y' && g.isXbox === 'Y') },
+        { id: 'xgp-sim', label: '首发入库XGP', value: flow.sim, x: 855, y: 330, w: 190, h: 86, cls: 'teal', desc: `占Xbox ${pct(flow.sim, flow.xboxY)}%`, filter: () => games.filter(g => g.isXbox === 'Y' && g.xgpType === '首发入库XGP') },
+        { id: 'xgp-after', label: '后发入库XGP', value: flow.aft, x: 855, y: 510, w: 190, h: 86, cls: 'sky', desc: `占Xbox ${pct(flow.aft, flow.xboxY)}%`, filter: () => games.filter(g => g.isXbox === 'Y' && g.xgpType === '后发入库XGP') },
+        { id: 'xgp-no', label: '未加入订阅', value: flow.noXgp, x: 855, y: 690, w: 190, h: 86, cls: 'muted', desc: `占Xbox ${pct(flow.noXgp, flow.xboxY)}%`, filter: () => games.filter(g => g.isXbox === 'Y' && g.xgpType === '未加入') },
     ];
 
     // SVG连接线
     // Col1→Col2: total→no-console, total→console
-    // Col2→Col3: console→ps, console→xbox
+    // Col2→Col3: console→ps, console→both, console→xbox
     // Col3→Col4: xbox→xgp-sim, xbox→xgp-after, xbox→xgp-no
     const svgPaths = `
-        <path d="M 210 323 C 245 323, 245 143, 280 143" fill="none" stroke="#64748b" stroke-width="3" opacity="0.4"/>
-        <path d="M 210 323 C 245 323, 245 503, 280 503" fill="none" stroke="#a855f7" stroke-width="8" opacity="0.6"/>
-        <path d="M 470 503 C 512 503, 512 343, 555 343" fill="none" stroke="#0ea5e9" stroke-width="4" opacity="0.5"/>
-        <path d="M 470 503 C 512 503, 512 510, 555 510" fill="none" stroke="#22c55e" stroke-width="8" opacity="0.6"/>
-        <path d="M 755 510 C 800 510, 800 323, 845 323" fill="none" stroke="#14b8a6" stroke-width="5" opacity="0.5"/>
-        <path d="M 755 510 C 800 510, 800 503, 845 503" fill="none" stroke="#0ea5e9" stroke-width="5" opacity="0.5"/>
-        <path d="M 755 510 C 800 510, 800 673, 845 673" fill="none" stroke="#64748b" stroke-width="4" opacity="0.4"/>
+        <path d="M 210 373 C 245 373, 245 143, 280 143" fill="none" stroke="#64748b" stroke-width="3" opacity="0.4"/>
+        <path d="M 210 373 C 245 373, 245 503, 280 503" fill="none" stroke="#a855f7" stroke-width="8" opacity="0.6"/>
+        <path d="M 470 503 C 512 503, 512 243, 555 243" fill="none" stroke="#0ea5e9" stroke-width="4" opacity="0.5"/>
+        <path d="M 470 503 C 512 503, 512 423, 555 423" fill="none" stroke="#f59e0b" stroke-width="5" opacity="0.5"/>
+        <path d="M 470 503 C 512 503, 512 603, 555 603" fill="none" stroke="#22c55e" stroke-width="7" opacity="0.6"/>
+        <path d="M 765 603 C 810 603, 810 373, 855 373" fill="none" stroke="#14b8a6" stroke-width="5" opacity="0.5"/>
+        <path d="M 765 603 C 810 603, 810 553, 855 553" fill="none" stroke="#0ea5e9" stroke-width="5" opacity="0.5"/>
+        <path d="M 765 603 C 810 603, 810 733, 855 733" fill="none" stroke="#64748b" stroke-width="4" opacity="0.4"/>
     `;
 
     let html = `<div class="flow-svg-wrapper">`;
@@ -2479,7 +2482,7 @@ function updateExecSummary(games, flow) {
     games.forEach(g => { if (g.mainGenre) genreCount[g.mainGenre] = (genreCount[g.mainGenre] || 0) + 1; });
     const topGenre = Object.entries(genreCount).sort((a, b) => b[1] - a[1])[0];
 
-    el.innerHTML = `共监测 <strong class="highlight">${flow.total}</strong> 款新游，其中 <strong>${consolePct}%</strong> 登陆主机平台，Xbox转化率 <strong>${xboxPct}%</strong>，XGP入库率 <strong>${xgpPct}%</strong>。平均日均流水 <strong>$${avgRev.toLocaleString()}</strong>${topGenre ? `，最热品类为 <strong class="highlight">${topGenre[0]}</strong>（${topGenre[1]}款）` : ''}。`;
+    el.innerHTML = `共监测 <strong class="highlight">${flow.total}</strong> 款新游，其中 <strong>${consolePct}%</strong> 登陆主机平台，Xbox <strong>${flow.xboxY}</strong> 款(${xboxPct}%)，双平台 <strong>${flow.bothPlatform}</strong> 款，XGP入库率 <strong>${xgpPct}%</strong>。平均日均流水 <strong>$${avgRev.toLocaleString()}</strong>${topGenre ? `，最热品类为 <strong class="highlight">${topGenre[0]}</strong>（${topGenre[1]}款）` : ''}。`;
 }
 
 // ============ Command Palette (Cmd+K / Ctrl+K) ============
