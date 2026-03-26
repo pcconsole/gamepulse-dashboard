@@ -514,48 +514,61 @@ const earningsCompanies = [
         logo: '🎲',
         color: '#0066B3',
         segment: '整体（游戏专用）',
-        fiscalPeriod: 'FY2025 H1 (2025年1-6月)',
+        fiscalPeriod: '2025年Q4 + 全年 (2025年1-12月)',
         currency: 'JPY',
         latestQuarter: {
-            period: '2025 Q4(推算)', calendarPeriod: '2025年10-12月', filingDate: '2025-08-14',
-            revenue: { value: 123600, unit: '百万日元(Q4推算)', yoy: 55, label: 'Q4营收¥1236亿(+55%,Arc Raiders驱动)', usdEquiv: '≈$827M' },
+            period: '2025 Q4', calendarPeriod: '2025年10-12月', filingDate: '2026-02-12',
+            revenue: { value: 123600, unit: '百万日元', yoy: 55, label: 'Q4营收¥1236亿(+55%,ARC Raiders驱动创纪录)', usdEquiv: '≈$827M' },
+            operatingProfit: { value: 7200, unit: '百万日元', yoy: null, label: 'Q4营业利润¥72亿(递延ARC Raiders收入¥277亿影响)' },
+            netIncome: { value: 10900, unit: '百万日元', label: 'Q4净利润¥109亿' },
             gameMetrics: {
-                arcRaidersLaunch: { value: true, unit: '', label: 'ARC Raiders 10月发售驱动Q4爆发' },
-                mapleStoryGrowth: { value: 60, unit: '%', label: 'MapleStory营收增长' }
-            },
-            note: 'Q4数据从fullYearRevenueComparison推算(全年¥4751亿-前三季)'
+                arcRaidersSales: { value: 14, unit: '百万套', label: 'ARC Raiders累计销量1400万套' },
+                arcRaidersDeferred: { value: 27700, unit: '百万日元', label: 'Q4递延ARC Raiders收入¥277亿' },
+                mapleStoryGrowth: { value: 54, unit: '%', label: 'MapleStory系列Q4营收+54%' }
+            }
         },
         fullYear: {
-            period: '2025年全年(1-12月)', filingDate: '2026-02-09', status: '已发布',
-            revenue: { value: 475100, unit: '百万日元', yoy: 6.5, label: '2025全年¥4751亿(+6.5%)', usdEquiv: '≈$31.8B' },
-            note: 'Arc Raiders驱动Q4大增55%,全年收入创新高'
+            period: '2025年全年(1-12月)', filingDate: '2026-02-12', status: '已发布',
+            revenue: { value: 475500, unit: '百万日元', yoy: 6, label: '2025全年¥4755亿(+6%,创历史新高)', usdEquiv: '≈$31.8B' },
+            operatingProfit: { value: 124000, unit: '百万日元', yoy: 0, label: '全年营业利润¥1240亿(持平)' },
+            netIncome: { value: 92100, unit: '百万日元', yoy: -32, label: '全年净利润¥921亿(-32%)' },
+            note: 'ARC Raiders 1400万套驱动Q4大增55%,MapleStory创22年历史最高全年营收'
+        },
+        companyOverall: {
+            totalRevenue: { value: 123600, unit: '百万日元(Q4)', yoy: 55, label: 'Q4总营收¥1236亿', source: 'Nexon Q4 2025 Earnings Release (2026/02/12)' },
+            totalOperatingProfit: { value: 7200, unit: '百万日元(Q4)', yoy: null, label: 'Q4营业利润¥72亿' },
+            note: '全年营收¥4755亿(+6%)创新高,Q4递延ARC Raiders收入¥277亿(约一半将在2026Q1确认)'
         },
         financials: {
-            revenue: { value: 118900, unit: '百万日元(Q2单季)', yoy: -3, label: 'Q2单季营收', source: 'Nexon Q2 FY2025-26 Earnings / GamesIndustry.biz (2025/08/14)', usdEquiv: '≈$795M' },
-            operatingProfit: { value: 37700, unit: '百万日元(Q2单季)', yoy: -17, label: 'Q2单季营业利润', usdEquiv: '≈$252M' },
-            operatingMargin: { value: 31.7, label: 'Q2营业利润率' },
+            revenue: { value: 123600, unit: '百万日元(Q4)', yoy: 55, label: 'Q4营收(ARC Raiders+MapleStory双驱动)', source: 'Nexon Q4 2025 Earnings Release (2026/02/12)', usdEquiv: '≈$827M' },
+            operatingProfit: { value: 7200, unit: '百万日元(Q4)', yoy: null, label: 'Q4营业利润(递延¥277亿ARC Raiders收入)' },
+            operatingMargin: { value: 5.8, label: 'Q4营业利润率(递延收入影响)' },
             segmentRevenuePct: { value: 100, label: '游戏占比' },
+            fullYearRevenue: { value: 475500, unit: '百万日元', yoy: 6, label: '全年营收¥4755亿(+6%创新高)' },
+            fullYearOperatingProfit: { value: 124000, unit: '百万日元', yoy: 0, label: '全年营业利润¥1240亿(持平)' },
         },
         gameMetrics: {
-            mapleStoryGrowth: { value: 60, unit: '%', label: 'MapleStory Q2营收增长', source: 'Nexon Q2 Earnings / GamesIndustry.biz' },
-            dnfPCGrowth: { value: 67, unit: '%', label: 'DNF PC端Q2营收增长' },
-            dnfFranchiseDecline: { value: -40, unit: '%', label: 'DNF系列整体Q2同比(DNF Mobile高基数效应)' },
-            arcRaidersWishlist: { value: 3, unit: '全球第3', label: 'ARC Raiders Steam愿望单排名' },
+            arcRaidersSales: { value: 14, unit: '百万套', label: 'ARC Raiders累计销量1400万套', source: 'Nexon Q4 2025 Earnings' },
+            arcRaidersCCU: { value: 960000, unit: '峰值同时在线', label: 'ARC Raiders峰值CCU 96万' },
+            arcRaidersWeeklyActive: { value: 6, unit: '百万', label: 'ARC Raiders周活跃用户600万' },
+            mapleStoryQ4Growth: { value: 54, unit: '%', label: 'MapleStory系列Q4营收+54%(22年历史新高)' },
+            mapleStoryGlobalGrowth: { value: 24, unit: '%', label: 'MapleStory全球版年营收+24%' },
+            dnfNote: { value: null, unit: '', label: 'DNF系列移动端承压,PC端保持增长' },
         },
-        keyProducts: ['MapleStory', '地下城与勇士(DNF)', 'FC Online', 'The Finals', 'ARC Raiders', '蔚蓝档案'],
+        keyProducts: ['ARC Raiders', 'MapleStory', '地下城与勇士(DNF)', 'FC Online', 'The Finals', '蔚蓝档案', 'MABINOGI MOBILE'],
         analysis: {
-            performance: 'Q2 FY2025-26营收¥1189亿(-3% YoY)，营业利润¥377亿(-17%)。下滑主因2024Q2 DNF手游上线的超高基数。但MapleStory大增60%表现卓越，DNF PC端增长67%实现稳固复苏。The Finals和蔚蓝档案持续贡献。',
-            strategy: 'MapleStory World区域扩张推动系列重焕增长。DNF PC端复兴成效显著。ARC Raiders(Steam愿望单全球第3)是最重要PC/主机新IP。',
-            outlook: 'Q3预计DNF系列继续承压(-45%)但PC增长可对冲。MapleStory预计Q3增长70%。ARC Raiders 10月发售是2025年最大看点。',
-            newProducts: 'ARC Raiders(2025/10)；MapleStory World扩张；The First Descendant赛季更新；DNF PC新内容。'
+            performance: '2025Q4营收¥1236亿(+55% YoY)，全年¥4755亿(+6%)均创历史新高。Q4爆发式增长核心驱动力为ARC Raiders(10月发售,累计1400万套,峰值CCU 96万,周活600万),但递延收入¥277亿压低了Q4确认营业利润至¥72亿。MapleStory系列Q4收入+54%达22年历史最高,全球版+24%。全年营业利润¥1240亿(持平),净利润¥921亿(-32%,受ARC Raiders递延+DNF移动端影响)。',
+            strategy: 'Nexon"IP Growth Initiative"战略取得突破——ARC Raiders验证了其在西方PC/主机3A市场的竞争力。MapleStory通过Idle RPG品类拓展和World区域扩张实现franchise重生。管道储备Project DX Durango(MMORPG)、Vindictus Defying Fate、Nakwon等多款多人游戏推进中。',
+            outlook: '2026Q1指引营收¥1505-1640亿(+32~44% YoY),营业利润¥512-611亿(+23~47%),主因ARC Raiders递延收入确认+MapleStory持续增长+DNF PC端复苏。韩国及世界其他地区预计增长,中国区因DNF移动端承压。',
+            newProducts: 'ARC Raiders持续更新(大型内容赛季)；Project DX Durango(MMORPG)；Vindictus Defying Fate；Nakwon: Last Paradise(撤离生存)；MABINOGI MOBILE全球扩张。'
         },
         dataSources: [
-            { type: '季度财报', name: 'Nexon Q2 FY2025-26 Earnings', date: '2025-08-14', url: 'https://ir.nexon.co.jp/en/library/result.html' },
-            { type: '行业报道', name: 'GamesIndustry.biz Q2 Analysis', date: '2025-08-14', url: 'https://www.gamesindustry.biz/nexon-posts-better-than-expected-q2-2025-26-results' }
+            { type: 'Q4+年度财报', name: 'Nexon Q4 & Full Year 2025 Earnings Release', date: '2026-02-12', url: 'https://www.nexon.co.jp/en/ir/quarterly-disclosure/' },
+            { type: '行业报道', name: 'MassivelyOP: ARC Raiders drives record annual revenue', date: '2026-02-12', url: 'https://massivelyop.com/2026/02/12/nexon-q4-2025-blockbuster-arc-raiders-drives-record-annual-revenue-and-global-ambition/' }
         ],
-        filingDate: '2025-08-14',
-        filingType: '季度财报(Q2)',
-        filingUrl: 'https://ir.nexon.co.jp/en/library/result.html'
+        filingDate: '2026-02-12',
+        filingType: '季度+年度财报(Q4+全年)',
+        filingUrl: 'https://www.nexon.co.jp/en/ir/quarterly-disclosure/'
     },
     {
         id: 'bandai-namco',
@@ -851,49 +864,63 @@ const earningsCompanies = [
         logo: '🎯',
         color: '#1B1B1B',
         segment: '整体（游戏专用）',
-        fiscalPeriod: '2025年 Q3 九个月累计(2025年1-9月)',
+        fiscalPeriod: '2025年Q4 + 全年 (2025年1-12月)',
         currency: 'KRW',
         latestQuarter: {
-            period: '2025 Q3', calendarPeriod: '2025年7-9月', filingDate: '2025-11-13',
-            revenue: { value: 870600, unit: '百万韩元(Q3)', yoy: 21, label: 'Q3季度营收₩8706亿(+21%)', usdEquiv: '≈$631M' },
-            operatingProfit: { value: 348800, unit: '百万韩元(Q3)', yoy: 7.5, label: 'Q3营业利润₩3488亿(+7.5%)' },
+            period: '2025 Q4', calendarPeriod: '2025年10-12月', filingDate: '2026-02-09',
+            revenue: { value: 919700, unit: '百万韩元', yoy: 48.9, label: 'Q4营收₩9197亿(+48.9%)', usdEquiv: '≈$666M' },
+            operatingProfit: { value: 2400, unit: '百万韩元', yoy: null, label: 'Q4营业利润₩24亿(含一次性员工福利支出₩816亿)' },
             gameMetrics: {
-                pubgPCGrowth: { value: 29, unit: '%', label: 'PUBG PC端Q3营收+29%(创季度新高)' },
-                bgmiRecord: { value: true, unit: '', label: 'BGMI(印度)季度营收创新高' }
+                inZOISales: { value: 1, unit: '百万套+', label: 'inZOI累计销量超100万套(3月发售)' },
+                pubgIPRecord: { value: true, unit: '', label: 'PUBG IP年度最高营收纪录(+16%)' }
             }
         },
         fullYear: {
-            period: '2025年全年', filingDate: '2026-02-09', status: '已发布',
-            revenue: { value: 2760000, unit: '百万韩元(估)', yoy: 15, label: '2025全年首破$20亿(创历史新高)', usdEquiv: '≈$2.0B' },
-            note: 'PUBG双位数增长,BGMI印度爆发,inZOI发售'
+            period: '2025年全年(1-12月)', filingDate: '2026-02-09', status: '已发布',
+            revenue: { value: 3326600, unit: '百万韩元', yoy: 22.8, label: '2025全年₩3.3266万亿(+22.8%,创历史新高)', usdEquiv: '≈$2.41B' },
+            operatingProfit: { value: 1054400, unit: '百万韩元', label: '全年营业利润₩1.0544万亿' },
+            breakdown: {
+                pc: { value: 1184600, unit: '百万韩元', label: 'PC平台₩1.1846万亿' },
+                mobile: { value: 1740700, unit: '百万韩元', label: '移动端₩1.7407万亿' },
+                console: { value: 42800, unit: '百万韩元', label: '主机₩428亿' },
+                other: { value: 358500, unit: '百万韩元', label: '其他₩3585亿' }
+            },
+            note: '首次突破₩3万亿大关,PUBG IP年度最高+inZOI百万销量'
+        },
+        companyOverall: {
+            totalRevenue: { value: 3326600, unit: '百万韩元(全年)', yoy: 22.8, label: '2025全年营收₩3.3266万亿(+22.8%)', source: 'Krafton FY2025 Earnings Release (2026/02/09)' },
+            totalOperatingProfit: { value: 1054400, unit: '百万韩元(全年)', label: '全年营业利润₩1.0544万亿' },
+            note: 'Q4营业利润₩24亿偏低,主因一次性员工福利基金支出₩816亿(未来四年)'
         },
         financials: {
-            revenue: { value: 2540000, unit: '百万韩元(九月累计)', yoy: 18, label: '9个月累计营收', source: 'Krafton Q3 2025 Earnings / GamesIndustry.biz', usdEquiv: '≈$1.84B' },
-            operatingProfit: { value: 1050000, unit: '百万韩元(九月累计)', yoy: 12, label: '9个月累计营业利润(首次突破₩1万亿)', usdEquiv: '≈$761M' },
-            operatingMargin: { value: 41.3, label: '9个月营业利润率' },
+            revenue: { value: 919700, unit: '百万韩元(Q4)', yoy: 48.9, label: 'Q4营收(inZOI+PUBG双驱动)', source: 'Krafton FY2025 Q4 Earnings Release (2026/02/09)', usdEquiv: '≈$666M' },
+            operatingProfit: { value: 2400, unit: '百万韩元(Q4)', yoy: null, label: 'Q4营业利润(一次性支出₩816亿)' },
+            operatingMargin: { value: 0.3, label: 'Q4营业利润率(一次性支出影响)' },
             segmentRevenuePct: { value: 100, label: '游戏占比' },
-            q3Revenue: { value: 870600, unit: '百万韩元(Q3)', yoy: 21, label: 'Q3季度营收' },
-            q3OperatingProfit: { value: 348800, unit: '百万韩元(Q3)', yoy: 7.5, label: 'Q3季度营业利润' },
+            fullYearRevenue: { value: 3326600, unit: '百万韩元', yoy: 22.8, label: '全年营收₩3.3266万亿(+22.8%创新高)' },
+            fullYearOperatingProfit: { value: 1054400, unit: '百万韩元', label: '全年营业利润₩1.0544万亿' },
+            fullYearOperatingMargin: { value: 31.7, label: '全年营业利润率' },
         },
         gameMetrics: {
-            pubgPCGrowth: { value: 29, unit: '%', label: 'PUBG PC端Q3营收同比+29%(创季度新高)', source: 'Krafton Q3 Earnings' },
-            pubgMobileGrowth: { value: 15, unit: '%(估)', label: 'PUBG Mobile增长(估)' },
-            globalRevenuePct: { value: 85, unit: '%', label: '海外收入占比(估)' },
-            bgmiRecord: { value: true, unit: '', label: 'BGMI(印度)季度营收创新高' },
+            pubgIPRecord: { value: true, unit: '', label: 'PUBG IP年度最高营收(+16% YoY)', source: 'Krafton FY2025 Earnings' },
+            pubgMobilePaying: { value: 5, unit: '% YoY', label: 'PUBG Mobile付费用户增长+5%' },
+            bgmiPayingGrowth: { value: 27, unit: '% YoY', label: 'BGMI付费用户增长+27%' },
+            inZOISales: { value: 1, unit: '百万套+', label: 'inZOI累计销量超100万套(3月发售)' },
+            porscheCollab: { value: true, unit: '', label: '11月保时捷联名为PUBG历史最强超跑合作' },
         },
-        keyProducts: ['PUBG: Battlegrounds', 'PUBG Mobile', 'BGMI(印度)', 'inZOI', 'ARC Raiders'],
+        keyProducts: ['PUBG: Battlegrounds', 'PUBG Mobile', 'BGMI(印度)', 'inZOI', 'ARC Raiders(Nexon发行)'],
         analysis: {
-            performance: 'Q3 2025营收₩8706亿(+21% YoY)，营业利润₩3488亿(+7.5%)。九个月累计OP首次突破₩1万亿创历史新高。PUBG PC端季度营收创纪录(+29%)，受益于与aespa/G-DRAGON/布加迪高调联名。BGMI(印度)季度营收亦创新高。',
-            strategy: 'PUBG 2.0计划：扩展游戏模式+UGC+UE5升级。IP联名(K-pop/奢侈品牌)驱动用户互动。AI优先战略定位。直接发行Real Cricket 24拓展印度市场。',
-            outlook: 'inZOI正式版发售是最大看点。ARC Raiders 10月发售。2025全年营业利润预计创历史新高。目标2027年前拥有3个百万DAU级产品。',
-            newProducts: 'inZOI正式版；ARC Raiders(2025/10)；PUBG 2.0(UE5)；Real Cricket 24。'
+            performance: '2025全年营收₩3.3266万亿(+22.8%,≈$24.1亿)首破₩3万亿创历史新高,营业利润₩1.0544万亿。Q4营收₩9197亿(+48.9%)表现强劲,但营业利润仅₩24亿,主因一次性计提未来四年员工福利基金₩816亿(剔除后Q4 OP约₩840亿)。PUBG IP实现年度最高营收(+16%),11月保时捷联名为历史最强超跑合作。BGMI(印度)付费用户+27%巩固国民游戏地位。inZOI(3月发售)累计销量破百万。',
+            strategy: 'PUBG 2.0计划持续推进(UGC+UE5升级)。IP联名策略(K-pop/保时捷等奢侈品牌)驱动用户互动和ARPU提升。inZOI验证了生活模拟品类拓展。直接发行Real Cricket拓展印度市场。移动端(₩1.74万亿)仍为最大收入来源,PC端(₩1.18万亿)增速更快。',
+            outlook: '2026年PUBG持续进化+inZOI后续更新+ARC Raiders(Nexon发行)三引擎驱动。管理层目标2027年前拥有3个百万DAU级产品。需关注一次性支出后常态化利润率回归。',
+            newProducts: 'inZOI持续更新(大型DLC)；PUBG 2.0(UE5)；新IP开发中；Real Cricket拓展印度。'
         },
         dataSources: [
-            { type: '季度财报', name: 'Krafton Q3 2025 Earnings', date: '2025-11-13', url: 'https://www.krafton.com/en/ir/archive/' },
-            { type: '行业报道', name: 'GamesIndustry.biz Q3 Analysis', date: '2025-11-13', url: 'https://www.gamesindustry.biz/krafton-posts-record-high-cumulative-performance-in-q3-2025' }
+            { type: 'Q4+年度财报', name: 'Krafton FY2025 & Q4 Earnings Release', date: '2026-02-09', url: 'https://www.krafton.com/en/news/press/krafton-records-annual-revenue-of-krw-3-3266-trillion-in-2025/' },
+            { type: '行业报道', name: 'Outlook Respawn: Krafton Revenue Surpasses $2 Billion', date: '2026-02-10', url: 'https://respawn.outlookindia.com/gaming/gaming-news/krafton-records-revenue-above-2-billion-in-2025' }
         ],
-        filingDate: '2025-11-13',
-        filingType: '季度财报(Q3)',
+        filingDate: '2026-02-09',
+        filingType: '季度+年度财报(Q4+全年)',
         filingUrl: 'https://www.krafton.com/en/ir/archive/'
     },
     {
@@ -907,54 +934,63 @@ const earningsCompanies = [
         logo: '🟪',
         color: '#9146FF',
         segment: '整体（平台型）',
-        fiscalPeriod: '2025 Q3 (2025年7-9月)',
+        fiscalPeriod: '2025 Q4 + 全年 (2025年1-12月)',
         currency: 'USD',
         latestQuarter: {
-            period: '2025 Q3', calendarPeriod: '2025年7-9月', filingDate: '2025-11-01',
-            revenue: { value: 1350, unit: '百万美元', yoy: 48, label: 'Q3收入$13.5亿(+48%)', usdEquiv: '$1.35B' },
-            bookings: { value: 1920, unit: '百万美元', yoy: 70, label: 'Q3预订$19.2亿(+70%)' },
+            period: '2025 Q4', calendarPeriod: '2025年10-12月', filingDate: '2026-02-05',
+            revenue: { value: 1400, unit: '百万美元', yoy: 43, label: 'Q4收入$14亿(+43%)', usdEquiv: '$1.4B' },
+            bookings: { value: 2220, unit: '百万美元', yoy: 63, label: 'Q4预订$22.2亿(+63%,超预期$20.5亿)' },
+            netLoss: { value: -318, unit: '百万美元', label: 'Q4净亏损$3.18亿(去年$2.21亿)' },
             gameMetrics: {
-                dau: { value: 88.9, unit: '百万', yoy: 27, label: 'DAU 8890万(+27%)' },
-                hoursEngaged: { value: 20.7, unit: '十亿小时', yoy: 29, label: '季度参与时长207亿小时' }
+                dau: { value: 144, unit: '百万', yoy: 69, label: 'Q4 DAU 1.44亿(+69%,超预期1.38亿)' },
+                hoursEngaged: { value: 35, unit: '十亿小时', yoy: 88, label: 'Q4参与时长350亿小时(+88%)' },
+                monthlyPayers: { value: 36.7, unit: '百万', yoy: 94, label: '月均付费用户3670万(+94%)' },
+                avgSpend: { value: 20.18, unit: '美元/月', label: '用户平均月支出$20.18' }
             }
         },
         fullYear: {
-            period: '2025年全年', filingDate: '2026-02-15', status: '已发布',
+            period: '2025年全年(1-12月)', filingDate: '2026-02-05', status: '已发布',
             revenue: { value: 4900, unit: '百万美元', yoy: 36, label: '2025全年收入$49亿(+36%)', usdEquiv: '$4.9B' },
-            bookings: { value: 5250, unit: '百万美元(估)', label: '全年预订约$52-53亿' },
-            dau: { value: 97, unit: '百万(Q4)', label: 'Q4 DAU约9700万→年化1.44亿月活' },
-            note: '平台型商业模式,持续亏损但收入高速增长'
+            bookings: { value: 6800, unit: '百万美元', yoy: 55, label: '全年预订$68亿(+55%)' },
+            netLoss: { value: -1070, unit: '百万美元', label: '全年净亏损$10.7亿(去年$9.4亿)' },
+            robuxGrowth: { value: 53, unit: '%', label: 'Robux消费同比+53%' },
+            marketShare: { value: 3.4, unit: '%', label: '占全球游戏内容市场3.4%' },
+            note: '标志性一年,各项核心指标创新高,显著超出年度指引和长期目标'
         },
         companyOverall: {
-            totalRevenue: { value: 1350, unit: '百万美元(Q3)', yoy: 48, label: 'Q3总收入$13.5亿', source: 'Roblox Q3 2025 Earnings (2025/11/01)' },
-            totalOperatingProfit: { value: -260, unit: '百万美元(Q3,估)', yoy: null, label: 'Q3运营亏损(持续亏损中)' },
-            note: 'Roblox仍处于运营亏损阶段,但亏损率持续收窄。Bookings增长远快于Revenue(递延收入模式)'
+            totalRevenue: { value: 1400, unit: '百万美元(Q4)', yoy: 43, label: 'Q4总收入$14亿', source: 'Roblox Q4 2025 Earnings (2026/02/05)' },
+            totalOperatingProfit: { value: null, unit: '百万美元', yoy: null, label: '运营亏损(持续亏损中,亏损率收窄)' },
+            note: '全年收入$49亿(+36%),预订$68亿(+55%)。EPS亏损45美分,优于预期48美分。Q4 DAU 1.44亿超预期1.38亿。'
         },
         financials: {
-            revenue: { value: 1350, unit: '百万美元', yoy: 48, label: 'Q3收入$13.5亿', source: 'Roblox Q3 2025 Earnings (2025/11/01)' },
-            operatingProfit: { value: -260, unit: '百万美元(估)', yoy: null, label: '运营亏损(持续亏损中)' },
-            operatingMargin: { value: -19.3, label: '运营利润率(估)' },
+            revenue: { value: 1400, unit: '百万美元(Q4)', yoy: 43, label: 'Q4收入$14亿(+43%)', source: 'Roblox Q4 2025 Shareholder Letter (2026/02/05)' },
+            operatingProfit: { value: null, unit: '百万美元', yoy: null, label: '运营亏损(持续亏损中)' },
+            operatingMargin: { value: null, label: '运营利润率(亏损中)' },
             segmentRevenuePct: { value: 100, label: '平台型(整体)' },
-            bookings: { value: 1920, unit: '百万美元', yoy: 70, label: 'Q3预订$19.2亿(+70%)' },
+            bookings: { value: 2220, unit: '百万美元(Q4)', yoy: 63, label: 'Q4预订$22.2亿(+63%,超预期$20.5亿)' },
+            fullYearRevenue: { value: 4900, unit: '百万美元', yoy: 36, label: '全年收入$49亿(+36%)' },
+            fullYearBookings: { value: 6800, unit: '百万美元', yoy: 55, label: '全年预订$68亿(+55%)' },
         },
         gameMetrics: {
-            dau: { value: 88.9, unit: '百万', yoy: 27, label: 'DAU 8890万(+27% YoY)', source: 'Roblox Q3 Earnings' },
-            hoursEngaged: { value: 20.7, unit: '十亿小时', yoy: 29, label: '季度参与时长207亿小时(+29%)' },
-            arpdau: { value: 0.58, unit: '美元/DAU/天', label: '每日ARPDAU(估)' },
+            dau: { value: 144, unit: '百万(Q4)', yoy: 69, label: 'Q4 DAU 1.44亿(+69%,超预期)', source: 'Roblox Q4 2025 Shareholder Letter' },
+            hoursEngaged: { value: 35, unit: '十亿小时(Q4)', yoy: 88, label: 'Q4参与时长350亿小时(+88%)' },
+            peakConcurrent: { value: 45, unit: '百万', label: '峰值同时在线4500万' },
+            monthlyPayers: { value: 36.7, unit: '百万(Q4)', yoy: 94, label: '月均付费用户3670万(+94%)' },
+            ageVerified: { value: 45, unit: '%', label: '45%DAU已完成年龄验证(截至2026/01)' },
         },
-        keyProducts: ['Roblox Platform', 'Roblox Studio', 'UGC生态系统'],
+        keyProducts: ['Roblox Platform', 'Roblox Studio', 'UGC生态系统', '品牌广告平台'],
         analysis: {
-            performance: '2025 Q3收入$13.5亿(+48% YoY)，预订$19.2亿(+70%)，DAU 8890万(+27%)。增长驱动力：用户年龄层扩展(13+用户增速最快)、品牌广告收入起量、开发者工具升级带动内容质量提升。仍处运营亏损但亏损率持续收窄。',
-            strategy: 'Roblox正从儿童游戏平台向全年龄UGC元宇宙转型。品牌广告(Shopify/Gucci等)成为新增长支柱。AI工具(Assistant/Code Assist)提升开发者效率。安全合规投入持续加大。',
-            outlook: '2025全年收入$49亿(+36%)。管理层目标2027年实现Free Cash Flow转正。品牌广告和订阅(Roblox Premium)是盈利化关键路径。',
-            newProducts: 'Roblox AI Assistant；品牌广告平台扩展；VR/AR跨平台支持；Creator Store升级。'
+            performance: '✅ Beat: 2025Q4收入$14亿(+43%),预订$22.2亿(+63%,超华尔街预期$20.5亿约8.3%)。DAU 1.44亿(+69%,超预期1.38亿约4.3%)。EPS亏损45美分优于预期48美分。全年收入$49亿(+36%),预订$68亿(+55%),均显著超出年度指引。增长核心驱动：13+用户增速最快(扩龄策略成效显著),品牌广告起量(Shopify/Gucci等),开发者工具升级提升内容质量。月均付费用户3670万(+94%)是变现加速的关键信号。净亏损$10.7亿仍在扩大,但亏损率边际收窄。',
+            strategy: 'Roblox加速从儿童游戏平台向全年龄UGC元宇宙转型。品牌广告成为新增长支柱。强制年龄验证(Q4末开始,1月全球完成)短期带来"中个位数"参与度逆风,但长期有利于安全合规和个性化推荐。前1000名创作者平均赚取$130万,创作者经济持续壮大。2027年起将取消年度指引改为季度指引。',
+            outlook: '2026全年指引：收入$60-62亿,预订$82-85亿(均大幅增长)。Q1 2026预订指引$16.9-17.4亿(超预期$16.8亿)。公司愿景：连接10亿用户,占全球游戏市场10%。自由现金流正转是中期里程碑。',
+            newProducts: 'Roblox AI Assistant；品牌广告平台扩展；VR/AR跨平台支持；Creator Store升级；安全合规工具加强。'
         },
         dataSources: [
-            { type: '季度财报', name: 'Roblox Q3 2025 Earnings Release', date: '2025-11-01', url: 'https://ir.roblox.com/' },
-            { type: '行业报道', name: 'GamesIndustry.biz Q3 Analysis', date: '2025-11-01', url: 'https://www.gamesindustry.biz/' }
+            { type: 'Q4+年度财报', name: 'Roblox Q4 & Full Year 2025 Shareholder Letter', date: '2026-02-05', url: 'https://ir.roblox.com/news/news-details/2026/Roblox-Reports-Fourth-Quarter-and-Full-Year-2025-Financial-Results/default.aspx' },
+            { type: '行业报道', name: 'GamesIndustry.biz: Roblox hits $4.9bn in revenue', date: '2026-02-06', url: 'https://www.gamesindustry.biz/roblox-reports-significant-growth-for-2025-hitting-49bn-in-revenue' }
         ],
-        filingDate: '2025-11-01',
-        filingType: '季度财报(Q3)',
+        filingDate: '2026-02-05',
+        filingType: '季度+年度财报(Q4+全年)',
         filingUrl: 'https://ir.roblox.com/'
     },
     {

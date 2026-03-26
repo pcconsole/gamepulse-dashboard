@@ -1,7 +1,7 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v4.0 自动更新，请勿手动编辑
-// 最后更新: 2026-03-25T18:00:00Z
+// 最后更新: 2026-03-26T18:00:00Z
 // 更新者: news-agent (MCP 腾讯文档 + web_search 四大维度 + 多源整合)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v4.0 — 统一重点新闻标记（featured），基于腾讯文档863行历史标记学习
@@ -172,6 +172,83 @@ const newsSources = [
 ];
 
 const newsData = [
+    {
+        "id": 109,
+        "title": "微软Xbox Gaming Copilot AI助手将于2026年登陆Xbox Series X|S主机",
+        "summary": "微软在GDC 2026 Festival of Gaming活动上确认，Xbox Gaming Copilot AI助手将于2026年晚些时候正式登陆Xbox Series X|S主机。该AI助手此前已在PC、移动端及ROG Xbox Ally上进行了Beta测试，支持语音激活，可实时为玩家提供游戏内帮助、策略建议和操作指引。Xbox产品经理表示，Gaming Copilot的目标是让游戏更加便捷和包容，帮助新手玩家更快上手、让资深玩家发现隐藏内容。此举标志着微软将AI深度整合到主机游戏体验中的战略方向。",
+        "source": "GamesIndustry",
+        "sourceUrl": "https://www.gamesindustry.biz/gaming-copilot-coming-to-current-gen-xbox-consoles-in-2026",
+        "sourceUrls": [
+            {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/gaming-copilot-coming-to-current-gen-xbox-consoles-in-2026"},
+            {"name": "GameSpot", "url": "https://www.gamespot.com/articles/gaming-copilot-ai-assistant-is-coming-to-current-gen-xbox-consoles-this-year/1100-6538770/"},
+            {"name": "Windows Central", "url": "https://www.windowscentral.com/gaming/xbox/microsofts-xbox-ai-assistant-gaming-copilot-is-coming-to-consoles-this-year-and-not-stopping-there"},
+            {"name": "GamesRadar", "url": "https://www.gamesradar.com/games/xbox-just-revealed-gaming-copilot-is-coming-to-current-generation-consoles-later-this-year/"}
+        ],
+        "category": "platform",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-03-19",
+        "tags": ["Xbox", "微软", "Gaming Copilot", "AI", "GDC", "主机"],
+        "sentiment": "positive",
+        "tdocMarking": "none"
+    },
+    {
+        "id": 108,
+        "title": "Circana数据：PS5连续第二个月在美国销量超越Switch 2，《生化危机：安魂曲》登顶软件榜",
+        "summary": "据Circana（原NPD Group）发布的2026年2月美国游戏市场数据，PlayStation 5在单位销量和销售额两个维度均超过Nintendo Switch 2，这是PS5连续第二个月力压任天堂新主机。《生化危机：安魂曲》（Resident Evil Requiem）作为当月新发售游戏登顶软件销售榜首。值得注意的是Switch 2的发售初期动量依然强劲——累计至2025年12月底已售出1737万台。但PS5凭借成熟的游戏库和持续降价策略，在美国市场展现出五年老机型对新主机的竞争韧性。不过3月数据显示Switch 2已反超PS5重夺美国销量冠军。",
+        "source": "VGChartz",
+        "sourceUrl": "https://www.vgchartz.com/article/467329/ps5-outsells-switch-2-in-the-us-in-february-2026-resident-evil-requiem-debuts-in-1st/",
+        "sourceUrls": [
+            {"name": "VGChartz", "url": "https://www.vgchartz.com/article/467329/ps5-outsells-switch-2-in-the-us-in-february-2026-resident-evil-requiem-debuts-in-1st/"},
+            {"name": "Push Square", "url": "https://www.pushsquare.com/news/2026/03/feb-2026-usa-sales-ps5-outsells-nintendos-new-switch-2-for-a-second-consecutive-month"},
+            {"name": "Metro", "url": "https://metro.co.uk/2026/03/20/ps5-outsells-switch-2-second-month-resident-evil-requiem-tops-charts-27559086/"}
+        ],
+        "category": "market",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-03-20",
+        "tags": ["PS5", "Switch 2", "Circana", "美国销量", "生化危机安魂曲", "主机销量"],
+        "sentiment": "neutral",
+        "tdocMarking": "none"
+    },
+    {
+        "id": 107,
+        "title": "任天堂削减Switch 2本季度产量33%：从600万台降至400万台，因美国假期销量未达预期",
+        "summary": "据GodisaGeek等多家媒体报道，任天堂计划将2026年第一季度Switch 2产量从原定600万台削减至400万台，降幅达33%，较低产出水平预计持续至4月。主要原因是美国等多个地区假期销售未达预期——Switch 2在美国首个假期季度售出约230万台，较初代Switch同期的282万台下降约18%。日本则是唯一出现严重缺货的市场（售出243万台 vs 初代177万台）。任天堂内部正讨论6月份大量铺货的策略是否"透支了后期需求"。尽管如此，Switch 2截至2025年12月底已累计售出1737万台，远超初代同期，仍保持财年1900万台预期目标。任天堂社长表示目前没有因全球内存危机涨价的计划。",
+        "source": "GodisaGeek",
+        "sourceUrl": "https://godisageek.com/2026/03/nintendo-cuts-switch-2-production-holiday-sales/",
+        "sourceUrls": [
+            {"name": "GodisaGeek", "url": "https://godisageek.com/2026/03/nintendo-cuts-switch-2-production-holiday-sales/"},
+            {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/archive/2026/03"}
+        ],
+        "category": "hardware",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-03-25",
+        "tags": ["Switch 2", "任天堂", "产量削减", "假期销量", "美国市场"],
+        "sentiment": "negative",
+        "tdocMarking": "none"
+    },
+    {
+        "id": 106,
+        "title": "《杀戮尖塔2》销量飙至460万份+$9200万收入，Steam同时在线峰值57.4万创品类纪录",
+        "summary": "据Alinea Analytics估算，Mega Crit开发的《杀戮尖塔2》（Slay the Spire 2）截至3月19日累计销量已达到460万份，总收入约9200万美元。游戏于3月5日以Early Access形式登陆Steam，上线后Steam同时在线峰值达到574,638人，是前作峰值的10倍以上，创下卡牌Roguelike品类历史最高纪录。游戏连续两周蝉联Steam全球周销量榜冠军（第11-12周），直至3月17-24日被新发售的《红色沙漠》超越降至第二。好评率维持在95%以上。该作已成为2026年迄今Steam最大的发售事件之一。",
+        "source": "VGChartz",
+        "sourceUrl": "https://www.vgchartz.com/article/467253/slay-the-spire-2-beats-marathon-on-the-steam-charts/",
+        "sourceUrls": [
+            {"name": "Wccftech", "url": "https://wccftech.com/slay-the-spire-2-estimated-4-6-million-copies-sold-92-million-revenue-generated/"},
+            {"name": "AllKeyShop", "url": "https://www.allkeyshop.com/blog/slay-the-spire-2-sales-records-news-d/"},
+            {"name": "VGChartz", "url": "https://www.vgchartz.com/article/467253/slay-the-spire-2-beats-marathon-on-the-steam-charts/"},
+            {"name": "VGTimes", "url": "https://vgtimes.com/gaming-news/151203-bigger-than-silksong-slay-the-spire-2-sales-figures-revealed.html"}
+        ],
+        "category": "game",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-03-25",
+        "tags": ["杀戮尖塔2", "460万销量", "Steam", "独立游戏", "Roguelike", "里程碑"],
+        "sentiment": "positive",
+        "tdocMarking": "none"
+    },
     {
         "id": 105,
         "title": "Steam春季特卖2026正式开启：3月19-26日全品类打折，年度首场大促",
@@ -644,22 +721,23 @@ const newsData = [
     },
     {
         "id": 68,
-        "title": "《红色沙漠》多重危机：AI美术争议引发退款潮，累计销量仍破200万，Pearl Abyss股价暴跌30%",
-        "summary": "Pearl Abyss开放世界动作冒险游戏《红色沙漠》于2026年3月20日全球正式发售后遭遇多重危机。发售后被玩家社区发现游戏中大量使用AI生成美术素材，引发强烈反弹和大规模退款潮。Metacritic综合评分78分，Steam好评率约61%（褒贬不一）。尽管争议不断，游戏累计销量仍突破200万份。Pearl Abyss股价从₩65,600暴跌近30%至约₩46,000，市值蒸发超万亿韩元。该作是2026年Q1最受关注的新IP之一，AI美术争议成为行业标志性事件，引发开发者和玩家对AI在游戏制作中使用边界的广泛讨论。",
-        "source": "Metacritic",
-        "sourceUrl": "https://www.metacritic.com/game/crimson-desert/",
+        "title": "《红色沙漠》5天销量破300万登顶Steam周榜，Pearl Abyss股价反弹23%",
+        "summary": "Pearl Abyss开放世界动作RPG《红色沙漠》于2026年3月19日全球正式发售，首日即突破200万份，5天后累计销量突破300万份。游戏首周末Steam同时在线峰值超24.8万人，并在3月17-24日Steam全球销量周榜（含免费游戏）中登顶第一，力压《杀戮尖塔2》和《死亡搁浅2》。此前因AI美术争议（部分2D道具资产以AI生成）、发售初期66%好评率（韩国区仅33%）等问题，Pearl Abyss股价一度暴跌29%至₩46,000。但随着300万销量里程碑确认，股价大幅反弹23.34%至₩30,830亿韩元市值。Pearl Abyss已就AI美术问题公开致歉并承诺替换。该作研发投入估计约1.335亿美元，是韩国首款首日破200万的买断制游戏。",
+        "source": "IGN",
+        "sourceUrl": "https://www.ign.com/articles/crimson-desert-sells-3-million-in-just-5-days",
         "sourceUrls": [
-            {"name": "Metacritic", "url": "https://www.metacritic.com/game/crimson-desert/"},
-            {"name": "EuroGamer", "url": "https://www.eurogamer.net/crimson-desert-passes-3-million-wishlists-as-excitement-around-the-single-player-rpg-builds"},
-            {"name": "SteamDB", "url": "https://steamdb.info/app/2020070/charts/"},
-            {"name": "腾讯文档MCP", "url": "https://docs.qq.com/sheet/LMLdoimBsILX"}
+            {"name": "IGN", "url": "https://www.ign.com/articles/crimson-desert-sells-3-million-in-just-5-days"},
+            {"name": "VGChartz", "url": "https://www.vgchartz.com/article/467374/crimson-desert-debuts-in-1st-on-the-steam-charts/"},
+            {"name": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260326A0003P00"},
+            {"name": "Korea JoongAng Daily", "url": "https://koreajoongangdaily.joins.com/news/2026-03-22/business/industry/Pearl-Abysss-Crimson-Desert-sells-2-million-copies-on-day-of-release/2550732"},
+            {"name": "SteamDB", "url": "https://steamdb.info/app/2020070/charts/"}
         ],
         "category": "game",
         "importance": "high",
         "featured": true,
-        "date": "2026-03-27",
-        "tags": ["红色沙漠", "Pearl Abyss", "AI美术争议", "退款", "股价暴跌", "200万销量"],
-        "sentiment": "negative",
+        "date": "2026-03-26",
+        "tags": ["红色沙漠", "Pearl Abyss", "300万销量", "Steam周榜登顶", "AI美术争议", "股价反弹"],
+        "sentiment": "positive",
         "tdocMarking": "none"
     },
     {
