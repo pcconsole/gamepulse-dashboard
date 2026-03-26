@@ -1,8 +1,8 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v4.0 自动更新，请勿手动编辑
-// 最后更新: 2026-03-26T18:00:00Z
-// 更新者: news-agent (MCP 腾讯文档 + web_search 四大维度 + 多源整合)
+// 最后更新: 2026-03-26T22:00:00Z
+// 更新者: news-agent (幻觉清理 + 日期修正 + 多源交叉验证)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v4.0 — 统一重点新闻标记（featured），基于腾讯文档863行历史标记学习
 // ============================================
@@ -308,75 +308,38 @@ const newsData = [
     },
     {
         "id": 102,
-        "title": "字节跳动超60亿美元出售沐瞳科技，创中国游戏行业最大剥离交易",
-        "summary": "据钛媒体、DoNews、投资界等多家媒体报道，字节跳动正以超过60亿美元的价格出售旗下游戏工作室沐瞳科技（Moonton Technology）。沐瞳科技是《无尽对决》（Mobile Legends: Bang Bang）的开发商，该游戏在东南亚市场拥有巨大用户基础。此次出售标志着字节跳动进一步收缩游戏业务版图，继2023年朝夕光年大裁员后再度释放退出游戏赛道的强烈信号。交易金额创下中国游戏公司剥离交易历史之最。",
+        "title": "字节跳动出售沐瞳科技予沙特Savvy Games Group，交易金额或超60亿美元",
+        "summary": "据TechNode、Engadget、CNTechPost等多家媒体报道，字节跳动正与沙特阿拉伯Savvy Games Group就出售旗下游戏工作室沐瞳科技（Moonton Technology）进行深入谈判，交易金额预计超过60亿美元。沐瞳科技是《无尽对决》（Mobile Legends: Bang Bang）的开发商，该游戏在东南亚市场拥有巨大用户基础。此次出售标志着字节跳动进一步收缩游戏业务版图，继2023年朝夕光年大裁员后再度释放退出游戏赛道的强烈信号。买方Savvy Games Group是沙特公共投资基金（PIF）旗下的游戏投资平台。",
         "source": "GamesIndustry",
         "sourceUrl": "https://www.gamesindustry.biz/",
         "sourceUrls": [
-            {"name": "钛媒体", "url": "https://www.tmtpost.com/"},
-            {"name": "DoNews", "url": "https://www.donews.com/"},
-            {"name": "投资界", "url": "https://www.pedaily.cn/"}
+            {"name": "TechNode", "url": "https://technode.com/"},
+            {"name": "Engadget", "url": "https://www.engadget.com/"},
+            {"name": "CNTechPost", "url": "https://cntechpost.com/"}
         ],
         "category": "policy",
         "importance": "high",
         "featured": true,
-        "date": "2026-03-28",
-        "tags": ["字节跳动", "沐瞳科技", "Moonton", "出售", "并购", "60亿美元"],
-        "sentiment": "neutral",
-        "tdocMarking": "none"
-    },
-    {
-        "id": 101,
-        "title": "Fortnite正式回归Google Play商店，Epic与谷歌达成新协议",
-        "summary": "据9to5Google确认，Epic Games旗下《Fortnite》已正式回归Google Play商店。此前Epic因不满Google Play 30%的抽成政策，于2020年将Fortnite从Play Store下架。经过多年法律博弈和反垄断诉讼，双方最终达成新的分发协议。Fortnite回归Google Play意味着Android用户不再需要通过Epic官方网站侧载安装，预计将显著提升移动端新增用户获取效率。此举也被视为Epic反垄断战略取得阶段性成果。",
-        "source": "EuroGamer",
-        "sourceUrl": "https://www.eurogamer.net/",
-        "sourceUrls": [
-            {"name": "9to5Google", "url": "https://9to5google.com/"},
-            {"name": "EuroGamer", "url": "https://www.eurogamer.net/"}
-        ],
-        "category": "platform",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-03-28",
-        "tags": ["Fortnite", "Epic", "Google Play", "反垄断", "移动端"],
-        "sentiment": "positive",
-        "tdocMarking": "none"
-    },
-    {
-        "id": 100,
-        "title": "索尼持续清理PS Store低质量AI生成游戏，强化平台内容质量管控",
-        "summary": "据IT之家、游民星空、搜狐等多家媒体报道，索尼互动娱乐正在持续清理PlayStation Store上的低质量AI生成游戏。此次清理行动涉及大量使用AI工具批量生产的简陋游戏，这些游戏通常缺乏原创性和基本品质标准。索尼此举表明平台方正加强对AI生成内容的审核力度，防止PS Store沦为低质量AI内容的倾销场。这与Steam近期对AI生成游戏的监管趋严形成呼应，反映出主流游戏平台对AI内容质量底线的共识正在形成。",
-        "source": "游戏之家",
-        "sourceUrl": "https://www.ithome.com/",
-        "sourceUrls": [
-            {"name": "IT之家", "url": "https://www.ithome.com/"},
-            {"name": "游民星空", "url": "https://www.gamersky.com/"},
-            {"name": "腾讯文档MCP", "url": "https://docs.qq.com/sheet/LMLdoimBsILX"}
-        ],
-        "category": "platform",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-03-27",
-        "tags": ["索尼", "PS Store", "AI游戏", "内容审核", "质量管控"],
+        "date": "2026-03-23",
+        "tags": ["字节跳动", "沐瞳科技", "Moonton", "Savvy Games Group", "沙特", "并购", "60亿美元"],
         "sentiment": "neutral",
         "tdocMarking": "none"
     },
     {
         "id": 99,
         "title": "索尼战略深化：放弃PC端启动器计划，全力回归主机优先战略",
-        "summary": "据游民星空、中华网等媒体报道，索尼互动娱乐已正式放弃此前传闻中的PC端独立启动器开发计划，决定全力回归主机优先战略。这一决定与此前彭博社曝出的\"PS5单机大作不再移植PC\"路线形成战略闭环——索尼不仅不打算把独占大作搬上PC，连PC端的平台基础设施投资也一并撤回。分析认为此举将进一步强化PS5/PS6的平台黏性，但也可能引发PC玩家社区的不满。",
+        "summary": "据Bloomberg Jason Schreier、PushSquare、NotebookCheck等媒体报道，索尼互动娱乐已正式放弃此前传闻中的PC端独立启动器开发计划，决定全力回归主机优先战略。这一决定与此前彭博社曝出的'PS5单机大作不再移植PC'路线形成战略闭环——索尼不仅不打算把独占大作搬上PC，连PC端的平台基础设施投资也一并撤回。分析认为此举将进一步强化PS5/PS6的平台黏性，但也可能引发PC玩家社区的不满。",
         "source": "GamesIndustry",
         "sourceUrl": "https://www.gamesindustry.biz/",
         "sourceUrls": [
-            {"name": "游民星空", "url": "https://www.gamersky.com/"},
-            {"name": "中华网", "url": "https://www.china.com/"},
-            {"name": "腾讯文档MCP", "url": "https://docs.qq.com/sheet/LMLdoimBsILX"}
+            {"name": "IT之家", "url": "https://www.ithome.com/"},
+            {"name": "PushSquare", "url": "https://www.pushsquare.com/"},
+            {"name": "NotebookCheck", "url": "https://www.notebookcheck.net/"}
         ],
         "category": "platform",
         "importance": "high",
         "featured": true,
-        "date": "2026-03-27",
+        "date": "2026-03-21",
         "tags": ["索尼", "PC启动器", "主机优先", "战略转向", "PlayStation"],
         "sentiment": "neutral",
         "tdocMarking": "none"
@@ -384,18 +347,18 @@ const newsData = [
     {
         "id": 98,
         "title": "CDPR披露全新IP\"Hadar\"项目进展，巫师4开发团队规模达499人",
-        "summary": "据游民星空报道，CD Projekt RED在最新投资者更新中披露了多项重要开发进展。其一，全新原创科幻IP项目\"Hadar\"（代号）正在积极推进中，这是CDPR继巫师和赛博朋克之后的第三大IP。其二，《巫师4》（The Witcher IV）开发团队已扩充至499人，较2024年团队403人增长24%，显示项目已进入全面生产阶段。CDPR目前在华沙和波兹南两大工作室同步推进多个项目，显示出强劲的多IP并行研发能力。",
+        "summary": "据游民星空、Insider Gaming、Rock Paper Shotgun等媒体报道，CD Projekt RED在最新投资者更新中披露了多项重要开发进展。其一，全新原创科幻IP项目\"Hadar\"（代号）正在积极推进中，这是CDPR继巫师和赛博朋克之后的第三大IP。其二，《巫师4》（The Witcher IV）开发团队已扩充至499人，较2024年团队403人增长24%，显示项目已进入全面生产阶段。CDPR目前在华沙和波兹南两大工作室同步推进多个项目，显示出强劲的多IP并行研发能力。",
         "source": "VGC",
         "sourceUrl": "https://www.videogameschronicle.com/",
         "sourceUrls": [
             {"name": "游民星空", "url": "https://www.gamersky.com/"},
-            {"name": "VGC", "url": "https://www.videogameschronicle.com/"},
-            {"name": "腾讯文档MCP", "url": "https://docs.qq.com/sheet/LMLdoimBsILX"}
+            {"name": "Insider Gaming", "url": "https://insider-gaming.com/"},
+            {"name": "Rock Paper Shotgun", "url": "https://www.rockpapershotgun.com/"}
         ],
         "category": "policy",
         "importance": "high",
         "featured": true,
-        "date": "2026-03-27",
+        "date": "2026-03-20",
         "tags": ["CDPR", "Hadar", "巫师4", "新IP", "团队规模"],
         "sentiment": "positive",
         "tdocMarking": "none"
@@ -403,17 +366,18 @@ const newsData = [
     {
         "id": 97,
         "title": "Switch 2欧盟版本将因新法规要求支持用户自行更换电池",
-        "summary": "据MCP腾讯文档Tier 0数据，Nintendo Switch 2的欧盟销售版本将因欧盟新修订的《电池与废电池法规》（EU 2023/1542）要求，必须支持用户自行更换电池。该法规要求从2027年起所有便携式消费电子产品需设计为用户可更换电池。任天堂选择提前在Switch 2中遵循这一规定，欧盟版Switch 2将配备可拆卸电池仓设计。这一法规合规要求可能影响Switch 2的工业设计、防水性和生产成本，同时也为第三方配件市场带来新机会。",
+        "summary": "据TechSpot、PC Gamer、Hypebeast等多家媒体报道，Nintendo Switch 2的欧盟销售版本将因欧盟新修订的《电池与废电池法规》（EU 2023/1542）要求，必须支持用户自行更换电池。该法规要求从2027年起所有便携式消费电子产品需设计为用户可更换电池。任天堂选择提前在Switch 2中遵循这一规定，欧盟版Switch 2将配备可拆卸电池仓设计。这一法规合规要求可能影响Switch 2的工业设计、防水性和生产成本，同时也为第三方配件市场带来新机会。",
         "source": "NintendoNews",
         "sourceUrl": "https://mynintendonews.com/",
         "sourceUrls": [
-            {"name": "腾讯文档MCP", "url": "https://docs.qq.com/sheet/LMLdoimBsILX"},
-            {"name": "NintendoNews", "url": "https://mynintendonews.com/"}
+            {"name": "TechSpot", "url": "https://www.techspot.com/"},
+            {"name": "PC Gamer", "url": "https://www.pcgamer.com/"},
+            {"name": "Hypebeast", "url": "https://hypebeast.com/"}
         ],
         "category": "policy",
         "importance": "medium",
         "featured": false,
-        "date": "2026-03-27",
+        "date": "2026-03-22",
         "tags": ["Switch 2", "欧盟", "电池法规", "任天堂", "监管合规"],
         "sentiment": "neutral",
         "tdocMarking": "none"
