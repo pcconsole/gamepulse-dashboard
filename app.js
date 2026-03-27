@@ -1140,20 +1140,100 @@ function updateNewsTab() {
     renderNewsSources();
 }
 
+// ═══════════════ 主题聚类引擎 v6.0 ═══════════════
+// 将新闻按平台/主题自动归组，相关新闻聚合在一起展示
+// 核心新闻标准：平台&硬件动态、顶级头部产品表现、顶级新品&发布会、全球行业重点报告
+
+const NEWS_TOPIC_CLUSTERS = [
+    { id: 'sony-ps', label: '🎮 索尼 PlayStation', icon: '🔵',
+      match: n => { const c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
+          return c.match(/索尼|sony|playstation|ps5|ps6|psn|ps plus|pssr|push\s?square|ps\s?pro|dualsense|ps\s?portal|ps\s?stars/); }},
+    { id: 'xbox-ms', label: '🟢 微软 Xbox', icon: '🟢',
+      match: n => { const c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
+          return c.match(/xbox|微软.*游戏|game\s?pass|phil\s?spencer|asha\s?sharma|helix|xbox\s?wire|bethesda.*xbox|动视暴雪|activision|copilot.*xbox|xbox.*copilot/); }},
+    { id: 'steam-valve', label: '🔷 Steam & Valve', icon: '🔷',
+      match: n => { const c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
+          return c.match(/steam|valve|steam\s?machine|steam\s?deck|steam\s?frame|steamos|steam.*特卖|steam.*spring|cs2/); }},
+    { id: 'epic', label: '🟣 Epic Games', icon: '🟣',
+      match: n => { const c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
+          return c.match(/epic\s?games|fortnite|堡垒之夜|epic.*store|egs|虚幻引擎|unreal/); }},
+    { id: 'nintendo', label: '🔴 任天堂 Switch', icon: '🔴',
+      match: n => { const c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
+          return c.match(/任天堂|nintendo|switch\s?2|switch2|宝可梦|pokemon|马里奥|mario|zelda|塞尔达|indie\s?world/); }},
+    { id: 'top-games', label: '🏆 顶级产品表现', icon: '🏆',
+      match: n => { const c = ((n.title||'')+' '+(n.tags||[]).join(' ')).toLowerCase();
+          return c.match(/gta\s?6|红色沙漠|crimson\s?desert|杀戮尖塔|slay.*spire|生化危机|resident\s?evil|怪物猎人|monster\s?hunter|巫师4|witcher|黑神话|星空|starfield|死亡搁浅|death\s?strand|艾尔登法环|elden\s?ring/) && n.importance === 'high'; }},
+    { id: 'hw-tech', label: '🔧 硬件 & 技术', icon: '🔧',
+      match: n => { const c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
+          return c.match(/nvidia|dlss|gpu|显卡|amd.*游戏|内存.*涨|dram|ddr5|芯片.*短缺|裸眼3d|rtx\s?50/); }},
+    { id: 'industry-report', label: '📊 行业报告 & 市场', icon: '📊',
+      match: n => { const c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
+          return c.match(/newzoo|circana|npd|市场.*报告|市场.*预测|行业.*报告|bafta|gdca|gdc.*报告|pegi|欧盟.*法|dma|监管/); }},
+    { id: 'ma-strategy', label: '💰 并购 & 战略', icon: '💰',
+      match: n => { const c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
+          return c.match(/并购|收购|投资|沙特|savvy|重组|裁员|layoff|退休|辞职|ceo.*新|新.*ceo|pif/); }}
+];
+
+// 判断新闻是否属于"核心新闻"四大类别
+function isCoreSpotlightNews(n) {
+    const c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
+    // 类别1: 平台&硬件（索尼PlayStation/微软Xbox/Steam&Valve/Epic/任天堂的平台级动态）
+    const isPlatformHW = c.match(/索尼.*战略|sony.*strategy|ps6|ps5.*pro|psn.*宕机|playstation.*转向|playstation.*独占/) ||
+        c.match(/xbox.*helix|xbox.*ceo|xbox.*copilot|xbox.*高管|game\s?pass.*\d+/) ||
+        c.match(/steam\s?machine|steam\s?frame|steamos|valve.*硬件|valve.*认证/) ||
+        c.match(/epic.*store.*支付|epic.*分成/) ||
+        c.match(/switch\s?2.*产量|switch\s?2.*正式|switch\s?2.*涨价|switch\s?2.*系统/) ||
+        c.match(/ps5.*销量.*超|switch.*销量.*超/) ||
+        c.match(/nvidia.*dlss|gpu.*100万|芯片.*短缺|内存.*涨|dram/);
+    // 类别2: 顶级头部产品的里程碑数据
+    const isTopProduct = (c.match(/gta\s?6|红色沙漠|杀戮尖塔|生化危机.*安魂|黑神话/) && c.match(/销量|突破|里程碑|登顶|定档/));
+    // 类别3: 重大发布会/展示会
+    const isMajorEvent = c.match(/gdc\s?2026|state\s?of\s?play|xbox\s?showcase|nintendo\s?direct|capcom\s?spotlight|partner\s?preview/) && n.importance === 'high';
+    // 类别4: 全球行业重点报告
+    const isIndustryReport = c.match(/newzoo.*报告|newzoo.*预测|circana.*数据|日本.*市场.*暴涨|pc.*超越.*主机|pegi.*评级|欧盟.*dma|欧盟.*法案|诉讼.*赌博/);
+    // 类别5: 重大并购/高管变动
+    const isMajorMA = c.match(/phil\s?spencer.*退休|asha\s?sharma.*接任|字节.*沐瞳|60亿|沙特.*capcom|动视暴雪.*整合/);
+
+    return !!(isPlatformHW || isTopProduct || isMajorEvent || isIndustryReport || isMajorMA);
+}
+
+// 将新闻列表归入主题聚类
+function clusterNewsByTopic(newsList) {
+    const clusters = {};
+    const assigned = new Set();
+
+    NEWS_TOPIC_CLUSTERS.forEach(cluster => {
+        const matched = newsList.filter(n => !assigned.has(n.id) && cluster.match(n));
+        if (matched.length > 0) {
+            clusters[cluster.id] = { ...cluster, news: matched };
+            matched.forEach(n => assigned.add(n.id));
+        }
+    });
+
+    // 未归类的新闻
+    const unclustered = newsList.filter(n => !assigned.has(n.id));
+    if (unclustered.length > 0) {
+        clusters['other'] = { id: 'other', label: '📌 其他动态', icon: '📌', news: unclustered };
+    }
+
+    return clusters;
+}
+
 function renderNewsSpotlight(importantNews) {
     const container = document.getElementById('newsSpotlight');
     if (!container) return;
 
-    // 近14天核心新闻：只展示近14天内的 featured 新闻
     const now = new Date();
     const fourteenDaysAgo = new Date(now.getTime() - 14 * 24 * 60 * 60 * 1000);
-    const coreNews = importantNews.filter(n => new Date(n.date) >= fourteenDaysAgo);
-
-    // 计算日期范围标注
-    const dateStart = new Date(fourteenDaysAgo);
-    const dateEnd = new Date(now);
     const fmtDate = d => `${d.getMonth()+1}/${d.getDate()}`;
-    const dateRangeLabel = `${fmtDate(dateStart)}~${fmtDate(dateEnd)}`;
+    const dateRangeLabel = `${fmtDate(fourteenDaysAgo)}~${fmtDate(now)}`;
+
+    // 近14天 featured 新闻中，进一步筛选"核心新闻"
+    const recentFeatured = importantNews.filter(n => new Date(n.date) >= fourteenDaysAgo);
+    const coreNews = recentFeatured.filter(n => isCoreSpotlightNews(n));
+
+    // 将核心新闻ID集合暴露给 renderNewsFeed 使用，避免重复
+    window._coreSpotlightIds = new Set(coreNews.map(n => n.id));
 
     if (coreNews.length === 0) {
         container.innerHTML = `<div class="spotlight-header">
@@ -1164,73 +1244,91 @@ function renderNewsSpotlight(importantNews) {
         return;
     }
 
+    // 对核心新闻进行主题聚类
+    const clusters = clusterNewsByTopic(coreNews);
+    const clusterOrder = ['sony-ps','xbox-ms','steam-valve','epic','nintendo','top-games','hw-tech','industry-report','ma-strategy','other'];
+    const sortedClusterKeys = clusterOrder.filter(k => clusters[k]);
+
     let html = `<div class="spotlight-header">
         <h4>🔥 近2周核心新闻</h4>
-        <span class="spotlight-count">${coreNews.length} 条核心新闻（${dateRangeLabel}）</span>
-    </div>
-    <div class="spotlight-grid spotlight-grid-dynamic">`;
+        <span class="spotlight-count">${coreNews.length} 条 · ${sortedClusterKeys.length} 个主题（${dateRangeLabel}）</span>
+    </div>`;
 
-    coreNews.forEach(n => {
-        const featuredReason = getFeaturedReason(n);
-        // 洞察分析：优先使用 analysis 字段，否则根据标签和摘要自动生成
-        const insightText = n.analysis || generateAutoInsight(n);
-        // 关联新闻
-        const relatedItems = (n.relatedNewsIds || []).map(rid => newsData.find(x => x.id === rid)).filter(Boolean);
+    // 按主题聚类展示
+    sortedClusterKeys.forEach(key => {
+        const cluster = clusters[key];
+        const clusterNews = cluster.news.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-        html += `<div class="spotlight-card spotlight-card-enhanced" style="position:relative;">
-            <div class="spotlight-card-header">
-                <span class="spotlight-category">${getNewsCategory(n.category)}</span>
-                <div style="display:flex;align-items:center;gap:6px;">
-                    <span class="featured-reason-tag">${featuredReason}</span>
-                    <a href="${n.sourceUrl}" target="_blank" class="spotlight-link" title="查看原文">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2h8v8M14 2L6 10"/></svg>
-                    </a>
-                </div>
+        html += `<div class="spotlight-cluster">
+            <div class="spotlight-cluster-header">
+                <span class="spotlight-cluster-icon">${cluster.icon}</span>
+                <span class="spotlight-cluster-label">${cluster.label}</span>
+                <span class="spotlight-cluster-count">${clusterNews.length} 条</span>
             </div>
-            <a href="${n.sourceUrl}" target="_blank" class="spotlight-title-link">
-                <h5 class="spotlight-title">${n.title}</h5>
-            </a>
-            <p class="spotlight-summary">${n.summary}</p>`;
+            <div class="spotlight-grid spotlight-grid-dynamic">`;
 
-        // 洞察分析区块
-        if (insightText) {
-            html += `<div class="spotlight-insight">
-                <div class="spotlight-insight-header">
-                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="7"/><path d="M8 5v3M8 10.5v.5"/></svg>
-                    <span>洞察分析</span>
+        clusterNews.forEach(n => {
+            const featuredReason = getFeaturedReason(n);
+            const insightText = n.analysis || generateAutoInsight(n);
+            // 同主题聚类内的关联：除了显式 relatedNewsIds，还找同聚类的其他新闻
+            const explicitRelated = (n.relatedNewsIds || []).map(rid => newsData.find(x => x.id === rid)).filter(Boolean);
+            const clusterRelated = clusterNews.filter(x => x.id !== n.id && !explicitRelated.find(r => r.id === x.id)).slice(0, 2);
+            const allRelated = [...explicitRelated, ...clusterRelated].slice(0, 4);
+
+            html += `<div class="spotlight-card spotlight-card-enhanced" style="position:relative;">
+                <div class="spotlight-card-header">
+                    <span class="spotlight-category">${getNewsCategory(n.category)}</span>
+                    <div style="display:flex;align-items:center;gap:6px;">
+                        <span class="featured-reason-tag">${featuredReason}</span>
+                        <a href="${n.sourceUrl}" target="_blank" class="spotlight-link" title="查看原文">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2h8v8M14 2L6 10"/></svg>
+                        </a>
+                    </div>
                 </div>
-                <p class="spotlight-insight-text">${insightText}</p>
+                <a href="${n.sourceUrl}" target="_blank" class="spotlight-title-link">
+                    <h5 class="spotlight-title">${n.title}</h5>
+                </a>
+                <p class="spotlight-summary">${n.summary}</p>`;
+
+            if (insightText) {
+                html += `<div class="spotlight-insight">
+                    <div class="spotlight-insight-header">
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="7"/><path d="M8 5v3M8 10.5v.5"/></svg>
+                        <span>洞察分析</span>
+                    </div>
+                    <p class="spotlight-insight-text">${insightText}</p>
+                </div>`;
+            }
+
+            if (allRelated.length > 0) {
+                html += `<div class="spotlight-related">
+                    <div class="spotlight-related-header">
+                        <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 1v14M1 8h14"/></svg>
+                        <span>关联事件（${allRelated.length}）</span>
+                    </div>
+                    <div class="spotlight-related-list">`;
+                allRelated.slice(0, 3).forEach(r => {
+                    html += `<a href="${r.sourceUrl}" target="_blank" class="spotlight-related-item" title="${r.title}">
+                        <span class="spotlight-related-date">${r.date.substring(5)}</span>
+                        <span class="spotlight-related-title">${r.title.length > 40 ? r.title.substring(0,40)+'...' : r.title}</span>
+                    </a>`;
+                });
+                html += `</div></div>`;
+            }
+
+            html += `<div class="spotlight-footer">
+                    <span class="spotlight-source">${n.source}</span>
+                    <span class="spotlight-date">${n.date}</span>
+                </div>
+                <div class="spotlight-tags">
+                    ${(n.tags||[]).map(t => `<span class="news-tag">${t}</span>`).join('')}
+                </div>
             </div>`;
-        }
+        });
 
-        // 历史关联新闻
-        if (relatedItems.length > 0) {
-            html += `<div class="spotlight-related">
-                <div class="spotlight-related-header">
-                    <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 1v14M1 8h14"/></svg>
-                    <span>关联事件（${relatedItems.length}）</span>
-                </div>
-                <div class="spotlight-related-list">`;
-            relatedItems.slice(0, 3).forEach(r => {
-                html += `<a href="${r.sourceUrl}" target="_blank" class="spotlight-related-item" title="${r.title}">
-                    <span class="spotlight-related-date">${r.date.substring(5)}</span>
-                    <span class="spotlight-related-title">${r.title.length > 30 ? r.title.substring(0,30)+'...' : r.title}</span>
-                </a>`;
-            });
-            html += `</div></div>`;
-        }
-
-        html += `<div class="spotlight-footer">
-                <span class="spotlight-source">${n.source}</span>
-                <span class="spotlight-date">${n.date}</span>
-            </div>
-            <div class="spotlight-tags">
-                ${(n.tags||[]).map(t => `<span class="news-tag">${t}</span>`).join('')}
-            </div>
-        </div>`;
+        html += '</div></div>';
     });
 
-    html += '</div>';
     container.innerHTML = html;
 }
 
@@ -1293,12 +1391,15 @@ function renderNewsFeed(allNews) {
     const fmtDate = d => `${d.getMonth()+1}/${d.getDate()}`;
     const dateRangeLabel = `${fmtDate(fourteenDaysAgo)}~${fmtDate(now)}`;
 
+    // 核心新闻ID集合（由 renderNewsSpotlight 设置），去重用
+    const coreIds = window._coreSpotlightIds || new Set();
+
     // 近14天内的新闻
     const recentAll = allNews.filter(n => new Date(n.date) >= fourteenDaysAgo);
-    // 近14天的重点新闻（featured 但不在核心 spotlight 中显示的，即所有 featured）
-    const recentFeatured = recentAll.filter(n => n.featured === true);
-    // 近14天的非重点新闻
-    const recentNonFeatured = recentAll.filter(n => !n.featured);
+    // 近14天的重点新闻（featured，且排除核心区已展示的）
+    const recentFeatured = recentAll.filter(n => n.featured === true && !coreIds.has(n.id));
+    // 近14天的非重点新闻（同样排除核心区已展示的）
+    const recentNonFeatured = recentAll.filter(n => !n.featured && !coreIds.has(n.id));
     // 更早的历史新闻（14天以外）
     const historyNews = allNews.filter(n => new Date(n.date) < fourteenDaysAgo);
 
@@ -1307,12 +1408,12 @@ function renderNewsFeed(allNews) {
     // ── 近2周其他重点新闻 ──
     html += `<div class="news-feed-header">
         <h4>📋 近2周其他重点新闻</h4>
-        <span class="news-feed-count">${recentFeatured.length} 条重点新闻（${dateRangeLabel}）</span>
+        <span class="news-feed-count">${recentFeatured.length} 条（${dateRangeLabel}，核心区外）</span>
     </div>
     <div class="news-list">`;
 
     if (recentFeatured.length === 0) {
-        html += `<div class="news-empty-hint">近14天内暂无其他重点新闻</div>`;
+        html += `<div class="news-empty-hint">近14天内核心区外暂无其他重点新闻</div>`;
     }
 
     recentFeatured.forEach(n => {

@@ -755,33 +755,49 @@ function mUpdateNewsTab() {
         mSetText('mNewsUpdateTime', `更新: ${latestDate}`);
     }
 
-    // 重点新闻 (Spotlight) — 近2周核心新闻（v5.0 升级）
+    // 重点新闻 (Spotlight) — 近2周核心新闻（v6.0 主题聚类升级）
     const spotlight = document.getElementById('mNewsSpotlight');
     if (spotlight) {
         const now2 = new Date();
         const fourteenDaysAgo2 = new Date(now2.getTime() - 14 * 24 * 60 * 60 * 1000);
         const fmtD = d => `${d.getMonth()+1}/${d.getDate()}`;
         const dateRange2 = `${fmtD(fourteenDaysAgo2)}~${fmtD(now2)}`;
-        const coreNews = filtered.filter(a => a.featured === true && new Date(a.date) >= fourteenDaysAgo2);
+
+        // v6.0: 核心条件筛选（平台硬件/顶级产品/新品发布/行业报告）
+        const recentFeatured = filtered.filter(a => a.featured === true && new Date(a.date) >= fourteenDaysAgo2);
+        const coreNews = recentFeatured.filter(a => typeof isCoreSpotlightNews === 'function' ? isCoreSpotlightNews(a) : true);
+
+        // 暴露核心ID集合供去重
+        window._mCoreSpotlightIds = new Set(coreNews.map(a => a.id));
 
         if (coreNews.length === 0) {
             spotlight.innerHTML = `<div class="m-news-section-label">🔥 近2周核心新闻 <span style="color:var(--text-muted);font-weight:400;">(${dateRange2})</span></div>
                 <div class="m-news-empty-hint">暂无核心新闻</div>`;
         } else {
-            let spotlightHTML = `<div class="m-news-section-label">🔥 近2周核心新闻 <span style="color:var(--text-muted);font-weight:400;">${coreNews.length}条 (${dateRange2})</span></div>`;
-            spotlightHTML += coreNews.map(a => {
-                const insightText = a.analysis || '';
-                return `<div class="m-spotlight-card" data-news-id="${a.id || ''}">
-                    <div class="m-news-title"><span style="color:#f97316;">🔥</span> ${a.title}</div>
-                    <div class="m-news-summary">${a.summary || a.content || ''}</div>
-                    ${insightText ? `<div class="m-spotlight-insight"><span style="color:var(--accent-primary);font-weight:700;font-size:0.7rem;">💡 洞察</span> <span style="font-size:0.72rem;color:var(--text-secondary);">${insightText.length > 80 ? insightText.substring(0,80)+'...' : insightText}</span></div>` : ''}
-                    <div class="m-news-meta">
-                        <span class="m-news-category m-news-cat-${a.category || 'market'}">${getCategoryLabel(a.category)}</span>
-                        <span>${a.source || ''}</span>
-                        <span>${a.date || ''}</span>
-                    </div>
-                </div>`;
-            }).join('');
+            // 主题聚类
+            const mClusters = typeof clusterNewsByTopic === 'function' ? clusterNewsByTopic(coreNews) : { all: { label: '核心新闻', icon: '🔥', news: coreNews }};
+            const mClusterOrder = ['sony-ps','xbox-ms','steam-valve','epic','nintendo','top-games','hw-tech','industry-report','ma-strategy','other','all'];
+            const mSortedKeys = mClusterOrder.filter(k => mClusters[k]);
+
+            let spotlightHTML = `<div class="m-news-section-label">🔥 近2周核心新闻 <span style="color:var(--text-muted);font-weight:400;">${coreNews.length}条 · ${mSortedKeys.length}主题 (${dateRange2})</span></div>`;
+
+            mSortedKeys.forEach(key => {
+                const cluster = mClusters[key];
+                spotlightHTML += `<div class="m-cluster-header">${cluster.icon || '📌'} ${cluster.label} <span style="color:var(--text-muted);font-size:0.7rem;">${cluster.news.length}条</span></div>`;
+                spotlightHTML += cluster.news.sort((a, b) => new Date(b.date) - new Date(a.date)).map(a => {
+                    const insightText = a.analysis || '';
+                    return `<div class="m-spotlight-card" data-news-id="${a.id || ''}">
+                        <div class="m-news-title"><span style="color:#f97316;">🔥</span> ${a.title}</div>
+                        <div class="m-news-summary">${a.summary || a.content || ''}</div>
+                        ${insightText ? `<div class="m-spotlight-insight"><span style="color:var(--accent-primary);font-weight:700;font-size:0.7rem;">💡 洞察</span> <span style="font-size:0.72rem;color:var(--text-secondary);">${insightText.length > 80 ? insightText.substring(0,80)+'...' : insightText}</span></div>` : ''}
+                        <div class="m-news-meta">
+                            <span class="m-news-category m-news-cat-${a.category || 'market'}">${getCategoryLabel(a.category)}</span>
+                            <span>${a.source || ''}</span>
+                            <span>${a.date || ''}</span>
+                        </div>
+                    </div>`;
+                }).join('');
+            });
             spotlight.innerHTML = spotlightHTML;
         }
 
@@ -794,7 +810,7 @@ function mUpdateNewsTab() {
         });
     }
 
-    // 新闻列表 — 近2周其他重点新闻 + 一般动态折叠 + 历史归档（v5.0 升级）
+    // 新闻列表 — 近2周其他重点新闻 + 一般动态折叠 + 历史归档（v6.0 去重升级）
     const feed = document.getElementById('mNewsFeed');
     if (feed) {
         const now = new Date();
@@ -802,19 +818,22 @@ function mUpdateNewsTab() {
         const fmtDate = d => `${d.getMonth()+1}/${d.getDate()}`;
         const dateRangeLabel = `${fmtDate(fourteenDaysAgo)}~${fmtDate(now)}`;
 
+        // v6.0: 排除核心区已展示的新闻
+        const coreIds = window._mCoreSpotlightIds || new Set();
+
         const recentAll = filtered.filter(a => new Date(a.date) >= fourteenDaysAgo);
-        const recentFeatured = recentAll.filter(a => a.featured === true);
-        const recentNonFeatured = recentAll.filter(a => !a.featured);
+        const recentFeatured = recentAll.filter(a => a.featured === true && !coreIds.has(a.id));
+        const recentNonFeatured = recentAll.filter(a => !a.featured && !coreIds.has(a.id));
         const historyNews = filtered.filter(a => new Date(a.date) < fourteenDaysAgo);
 
         let feedHTML = '';
 
-        // 近2周其他重点新闻
+        // 近2周其他重点新闻（核心区外）
         if (recentFeatured.length > 0) {
             feedHTML += `<div class="m-news-section-label">📋 近2周其他重点新闻 <span style="color:var(--text-muted);font-weight:400;">${recentFeatured.length}条 (${dateRangeLabel})</span></div>`;
             feedHTML += recentFeatured.map(a => mRenderNewsItemHTML(a)).join('');
         } else {
-            feedHTML += `<div class="m-news-empty-hint">近14天内暂无其他重点新闻</div>`;
+            feedHTML += `<div class="m-news-empty-hint">核心区外暂无其他重点新闻</div>`;
         }
 
         // 近2周一般动态（折叠）

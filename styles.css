@@ -2684,6 +2684,53 @@ tr.row-released td:first-child {
     grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
 }
 
+/* ═══ 主题聚类样式 v6.0 ═══ */
+.spotlight-cluster {
+    margin-bottom: 20px;
+    border-left: 3px solid rgba(255, 255, 255, 0.08);
+    padding-left: 0;
+}
+
+.spotlight-cluster-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 4px;
+}
+
+.spotlight-cluster-icon {
+    font-size: 1.1rem;
+}
+
+.spotlight-cluster-label {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 0.3px;
+}
+
+.spotlight-cluster-count {
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.06);
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+/* 聚类主题色 */
+.spotlight-cluster[data-cluster="sony-ps"] { border-left-color: #2563eb; }
+.spotlight-cluster[data-cluster="xbox-ms"] { border-left-color: #16a34a; }
+.spotlight-cluster[data-cluster="steam-valve"] { border-left-color: #1d4ed8; }
+.spotlight-cluster[data-cluster="epic"] { border-left-color: #7c3aed; }
+.spotlight-cluster[data-cluster="nintendo"] { border-left-color: #dc2626; }
+.spotlight-cluster[data-cluster="top-games"] { border-left-color: #eab308; }
+.spotlight-cluster[data-cluster="hw-tech"] { border-left-color: #06b6d4; }
+.spotlight-cluster[data-cluster="industry-report"] { border-left-color: #8b5cf6; }
+.spotlight-cluster[data-cluster="ma-strategy"] { border-left-color: #f97316; }
+
 /* 增强版核心新闻卡片 */
 .spotlight-card-enhanced {
     border-left: 4px solid #f97316;

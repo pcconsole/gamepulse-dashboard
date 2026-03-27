@@ -407,6 +407,18 @@ body {
     background: linear-gradient(90deg, #f97316, #f59e0b); border-radius: 2px 2px 0 0;
 }
 
+/* 移动端主题聚类头部 v6.0 */
+.m-cluster-header {
+    padding: 8px 14px;
+    margin: 10px 0 4px 0;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 3px solid rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+}
+
 .m-news-feed { margin-top: 8px; }
 .m-news-item {
     padding: 10px 14px; background: var(--bg-card); border: 1px solid var(--border-color);
