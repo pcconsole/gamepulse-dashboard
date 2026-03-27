@@ -755,21 +755,35 @@ function mUpdateNewsTab() {
         mSetText('mNewsUpdateTime', `更新: ${latestDate}`);
     }
 
-    // 重点新闻 (Spotlight) — 使用 featured 字段
+    // 重点新闻 (Spotlight) — 近2周核心新闻（v5.0 升级）
     const spotlight = document.getElementById('mNewsSpotlight');
     if (spotlight) {
-        const important = filtered.filter(a => a.featured === true).slice(0, 3);
-        spotlight.innerHTML = important.map(a => `
-            <div class="m-spotlight-card" data-news-id="${a.id || ''}">
-                <div class="m-news-title"><span style="color:#f59e0b;">⭐</span> ${a.title}</div>
-                <div class="m-news-summary">${a.summary || a.content || ''}</div>
-                <div class="m-news-meta">
-                    <span class="m-news-category m-news-cat-${a.category || 'market'}">${getCategoryLabel(a.category)}</span>
-                    <span>${a.source || ''}</span>
-                    <span>${a.date || ''}</span>
-                </div>
-            </div>
-        `).join('');
+        const now2 = new Date();
+        const fourteenDaysAgo2 = new Date(now2.getTime() - 14 * 24 * 60 * 60 * 1000);
+        const fmtD = d => `${d.getMonth()+1}/${d.getDate()}`;
+        const dateRange2 = `${fmtD(fourteenDaysAgo2)}~${fmtD(now2)}`;
+        const coreNews = filtered.filter(a => a.featured === true && new Date(a.date) >= fourteenDaysAgo2);
+
+        if (coreNews.length === 0) {
+            spotlight.innerHTML = `<div class="m-news-section-label">🔥 近2周核心新闻 <span style="color:var(--text-muted);font-weight:400;">(${dateRange2})</span></div>
+                <div class="m-news-empty-hint">暂无核心新闻</div>`;
+        } else {
+            let spotlightHTML = `<div class="m-news-section-label">🔥 近2周核心新闻 <span style="color:var(--text-muted);font-weight:400;">${coreNews.length}条 (${dateRange2})</span></div>`;
+            spotlightHTML += coreNews.map(a => {
+                const insightText = a.analysis || '';
+                return `<div class="m-spotlight-card" data-news-id="${a.id || ''}">
+                    <div class="m-news-title"><span style="color:#f97316;">🔥</span> ${a.title}</div>
+                    <div class="m-news-summary">${a.summary || a.content || ''}</div>
+                    ${insightText ? `<div class="m-spotlight-insight"><span style="color:var(--accent-primary);font-weight:700;font-size:0.7rem;">💡 洞察</span> <span style="font-size:0.72rem;color:var(--text-secondary);">${insightText.length > 80 ? insightText.substring(0,80)+'...' : insightText}</span></div>` : ''}
+                    <div class="m-news-meta">
+                        <span class="m-news-category m-news-cat-${a.category || 'market'}">${getCategoryLabel(a.category)}</span>
+                        <span>${a.source || ''}</span>
+                        <span>${a.date || ''}</span>
+                    </div>
+                </div>`;
+            }).join('');
+            spotlight.innerHTML = spotlightHTML;
+        }
 
         spotlight.querySelectorAll('.m-spotlight-card').forEach(card => {
             card.addEventListener('click', () => {
@@ -780,22 +794,39 @@ function mUpdateNewsTab() {
         });
     }
 
-    // 新闻列表 — 分为近期 + 历史归档
+    // 新闻列表 — 近2周其他重点新闻 + 一般动态折叠 + 历史归档（v5.0 升级）
     const feed = document.getElementById('mNewsFeed');
     if (feed) {
         const now = new Date();
-        const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
-        const recentNews = filtered.filter(a => new Date(a.date) >= sevenDaysAgo);
-        const historyNews = filtered.filter(a => new Date(a.date) < sevenDaysAgo);
+        const fourteenDaysAgo = new Date(now.getTime() - 14 * 24 * 60 * 60 * 1000);
+        const fmtDate = d => `${d.getMonth()+1}/${d.getDate()}`;
+        const dateRangeLabel = `${fmtDate(fourteenDaysAgo)}~${fmtDate(now)}`;
+
+        const recentAll = filtered.filter(a => new Date(a.date) >= fourteenDaysAgo);
+        const recentFeatured = recentAll.filter(a => a.featured === true);
+        const recentNonFeatured = recentAll.filter(a => !a.featured);
+        const historyNews = filtered.filter(a => new Date(a.date) < fourteenDaysAgo);
 
         let feedHTML = '';
 
-        // 近期新闻
-        if (recentNews.length > 0) {
-            feedHTML += `<div class="m-news-section-label">📋 近期动态 <span style="color:var(--text-muted);font-weight:400;">${recentNews.length}条</span></div>`;
-            feedHTML += recentNews.map(a => mRenderNewsItemHTML(a)).join('');
+        // 近2周其他重点新闻
+        if (recentFeatured.length > 0) {
+            feedHTML += `<div class="m-news-section-label">📋 近2周其他重点新闻 <span style="color:var(--text-muted);font-weight:400;">${recentFeatured.length}条 (${dateRangeLabel})</span></div>`;
+            feedHTML += recentFeatured.map(a => mRenderNewsItemHTML(a)).join('');
         } else {
-            feedHTML += `<div class="m-news-empty-hint">暂无近7天新闻，请查看历史归档</div>`;
+            feedHTML += `<div class="m-news-empty-hint">近14天内暂无其他重点新闻</div>`;
+        }
+
+        // 近2周一般动态（折叠）
+        if (recentNonFeatured.length > 0) {
+            feedHTML += `<div class="m-news-history-toggle" id="mNewsNonFeaturedToggle">
+                <span>📑 近2周一般动态</span>
+                <span class="m-news-history-badge">${recentNonFeatured.length}条</span>
+                <svg class="m-news-history-chevron" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 5.5l2.5 2.5L10 5.5"/></svg>
+            </div>
+            <div class="m-news-nonfeatured-body" id="mNewsNonFeaturedBody" style="display:none;">`;
+            feedHTML += recentNonFeatured.map(a => mRenderNewsItemHTML(a, false)).join('');
+            feedHTML += `</div>`;
         }
 
         // 历史归档折叠
@@ -841,6 +872,17 @@ function mUpdateNewsTab() {
                 item.classList.toggle('expanded');
             });
         });
+
+        // 非重点新闻折叠
+        const nfToggle = document.getElementById('mNewsNonFeaturedToggle');
+        const nfBody = document.getElementById('mNewsNonFeaturedBody');
+        if (nfToggle && nfBody) {
+            nfToggle.addEventListener('click', () => {
+                const isOpen = nfBody.style.display !== 'none';
+                nfBody.style.display = isOpen ? 'none' : 'block';
+                nfToggle.classList.toggle('expanded', !isOpen);
+            });
+        }
 
         const historyToggle = document.getElementById('mNewsHistoryToggle');
         const historyBody = document.getElementById('mNewsHistoryBody');

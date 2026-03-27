@@ -1144,20 +1144,40 @@ function renderNewsSpotlight(importantNews) {
     const container = document.getElementById('newsSpotlight');
     if (!container) return;
 
-    if (importantNews.length === 0) {
-        container.innerHTML = '';
+    // 近14天核心新闻：只展示近14天内的 featured 新闻
+    const now = new Date();
+    const fourteenDaysAgo = new Date(now.getTime() - 14 * 24 * 60 * 60 * 1000);
+    const coreNews = importantNews.filter(n => new Date(n.date) >= fourteenDaysAgo);
+
+    // 计算日期范围标注
+    const dateStart = new Date(fourteenDaysAgo);
+    const dateEnd = new Date(now);
+    const fmtDate = d => `${d.getMonth()+1}/${d.getDate()}`;
+    const dateRangeLabel = `${fmtDate(dateStart)}~${fmtDate(dateEnd)}`;
+
+    if (coreNews.length === 0) {
+        container.innerHTML = `<div class="spotlight-header">
+            <h4>🔥 近2周核心新闻</h4>
+            <span class="spotlight-count">暂无（${dateRangeLabel}）</span>
+        </div>
+        <div class="spotlight-empty">近14天内暂无核心重点新闻，请查看下方其他重点新闻</div>`;
         return;
     }
 
     let html = `<div class="spotlight-header">
-        <h4>⭐ 重点新闻</h4>
-        <span class="spotlight-count">${importantNews.length} 条重点新闻</span>
+        <h4>🔥 近2周核心新闻</h4>
+        <span class="spotlight-count">${coreNews.length} 条核心新闻（${dateRangeLabel}）</span>
     </div>
-    <div class="spotlight-grid">`;
+    <div class="spotlight-grid spotlight-grid-dynamic">`;
 
-    importantNews.slice(0, 4).forEach(n => {
+    coreNews.forEach(n => {
         const featuredReason = getFeaturedReason(n);
-        html += `<div class="spotlight-card" style="position:relative;">
+        // 洞察分析：优先使用 analysis 字段，否则根据标签和摘要自动生成
+        const insightText = n.analysis || generateAutoInsight(n);
+        // 关联新闻
+        const relatedItems = (n.relatedNewsIds || []).map(rid => newsData.find(x => x.id === rid)).filter(Boolean);
+
+        html += `<div class="spotlight-card spotlight-card-enhanced" style="position:relative;">
             <div class="spotlight-card-header">
                 <span class="spotlight-category">${getNewsCategory(n.category)}</span>
                 <div style="display:flex;align-items:center;gap:6px;">
@@ -1170,19 +1190,79 @@ function renderNewsSpotlight(importantNews) {
             <a href="${n.sourceUrl}" target="_blank" class="spotlight-title-link">
                 <h5 class="spotlight-title">${n.title}</h5>
             </a>
-            <p class="spotlight-summary">${n.summary}</p>
-            <div class="spotlight-footer">
+            <p class="spotlight-summary">${n.summary}</p>`;
+
+        // 洞察分析区块
+        if (insightText) {
+            html += `<div class="spotlight-insight">
+                <div class="spotlight-insight-header">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="7"/><path d="M8 5v3M8 10.5v.5"/></svg>
+                    <span>洞察分析</span>
+                </div>
+                <p class="spotlight-insight-text">${insightText}</p>
+            </div>`;
+        }
+
+        // 历史关联新闻
+        if (relatedItems.length > 0) {
+            html += `<div class="spotlight-related">
+                <div class="spotlight-related-header">
+                    <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 1v14M1 8h14"/></svg>
+                    <span>关联事件（${relatedItems.length}）</span>
+                </div>
+                <div class="spotlight-related-list">`;
+            relatedItems.slice(0, 3).forEach(r => {
+                html += `<a href="${r.sourceUrl}" target="_blank" class="spotlight-related-item" title="${r.title}">
+                    <span class="spotlight-related-date">${r.date.substring(5)}</span>
+                    <span class="spotlight-related-title">${r.title.length > 30 ? r.title.substring(0,30)+'...' : r.title}</span>
+                </a>`;
+            });
+            html += `</div></div>`;
+        }
+
+        html += `<div class="spotlight-footer">
                 <span class="spotlight-source">${n.source}</span>
                 <span class="spotlight-date">${n.date}</span>
             </div>
             <div class="spotlight-tags">
-                ${n.tags.map(t => `<span class="news-tag">${t}</span>`).join('')}
+                ${(n.tags||[]).map(t => `<span class="news-tag">${t}</span>`).join('')}
             </div>
         </div>`;
     });
 
     html += '</div>';
     container.innerHTML = html;
+}
+
+// 自动生成洞察分析（当 analysis 字段不存在时的降级方案）
+function generateAutoInsight(n) {
+    const title = (n.title || '').toLowerCase();
+    const tags = (n.tags || []).join(' ').toLowerCase();
+    const combined = title + ' ' + tags + ' ' + (n.summary || '').toLowerCase();
+
+    // 根据新闻特征生成简要分析
+    if (combined.match(/并购|收购|投资|merger|acquisition/)) {
+        return '此并购/投资动态可能重塑相关细分市场的竞争格局，需关注后续整合进展和对竞品的连锁反应。';
+    }
+    if (combined.match(/销量.*突破|里程碑|创纪录|百万|record/)) {
+        return '里程碑数据表明该产品/平台的市场动能强劲，可作为品类趋势和用户偏好的重要参考指标。';
+    }
+    if (combined.match(/涨价|降价|关税|供应链|内存|tariff/)) {
+        return '价格/成本变动将沿产业链传导，需关注对终端定价策略和消费者购买决策的影响。';
+    }
+    if (combined.match(/switch 2|ps6|新主机|次世代|helix/)) {
+        return '硬件换代节点是行业格局变动的关键窗口，将影响开发商资源分配和平台竞争力排序。';
+    }
+    if (combined.match(/裁员|重组|restructur|layoff/)) {
+        return '组织重组反映企业战略调整方向，需关注对在研项目和行业人才流动的影响。';
+    }
+    if (combined.match(/gta|荒野大镖客|red dead|rockstar/)) {
+        return 'Rockstar旗舰IP的任何动向都是行业风向标，对平台方独占策略和竞品档期规划有直接影响。';
+    }
+    if (combined.match(/steam|valve|epic|平台.*策略|game pass|订阅/)) {
+        return '平台策略调整直接影响开发者收益模型和玩家消费习惯，是行业生态演化的关键驱动因素。';
+    }
+    return '';
 }
 
 // 根据新闻内容推断重点新闻归类原因
@@ -1208,30 +1288,57 @@ function renderNewsFeed(allNews) {
     const container = document.getElementById('newsFeed');
     if (!container) return;
 
-    // 将新闻分为"近期"（7天内）和"历史"（7天以上）
     const now = new Date();
-    const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
-    const recentNews = allNews.filter(n => new Date(n.date) >= sevenDaysAgo);
-    const historyNews = allNews.filter(n => new Date(n.date) < sevenDaysAgo);
+    const fourteenDaysAgo = new Date(now.getTime() - 14 * 24 * 60 * 60 * 1000);
+    const fmtDate = d => `${d.getMonth()+1}/${d.getDate()}`;
+    const dateRangeLabel = `${fmtDate(fourteenDaysAgo)}~${fmtDate(now)}`;
+
+    // 近14天内的新闻
+    const recentAll = allNews.filter(n => new Date(n.date) >= fourteenDaysAgo);
+    // 近14天的重点新闻（featured 但不在核心 spotlight 中显示的，即所有 featured）
+    const recentFeatured = recentAll.filter(n => n.featured === true);
+    // 近14天的非重点新闻
+    const recentNonFeatured = recentAll.filter(n => !n.featured);
+    // 更早的历史新闻（14天以外）
+    const historyNews = allNews.filter(n => new Date(n.date) < fourteenDaysAgo);
 
     let html = '';
 
-    // ── 近期新闻区 ──
+    // ── 近2周其他重点新闻 ──
     html += `<div class="news-feed-header">
-        <h4>📋 近期动态</h4>
-        <span class="news-feed-count">${recentNews.length} 条（近7天）</span>
+        <h4>📋 近2周其他重点新闻</h4>
+        <span class="news-feed-count">${recentFeatured.length} 条重点新闻（${dateRangeLabel}）</span>
     </div>
     <div class="news-list">`;
 
-    if (recentNews.length === 0) {
-        html += `<div class="news-empty-hint">暂无近7天的新闻，请查看下方历史新闻归档</div>`;
+    if (recentFeatured.length === 0) {
+        html += `<div class="news-empty-hint">近14天内暂无其他重点新闻</div>`;
     }
 
-    recentNews.forEach(n => {
+    recentFeatured.forEach(n => {
         html += renderNewsItemHTML(n);
     });
 
     html += '</div>';
+
+    // ── 近2周一般动态（折叠） ──
+    if (recentNonFeatured.length > 0) {
+        html += `<div class="news-nonfeatured-section">
+            <div class="news-nonfeatured-toggle" id="newsNonFeaturedToggle">
+                <div class="news-history-toggle-left">
+                    <svg class="news-history-chevron" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 7l3 3 3-3"/></svg>
+                    <h4>📑 近2周一般动态</h4>
+                    <span class="news-history-count">${recentNonFeatured.length} 条</span>
+                </div>
+                <span class="news-history-hint">非重点新闻，点击展开查看</span>
+            </div>
+            <div class="news-nonfeatured-body" id="newsNonFeaturedBody" style="display:none;">
+                <div class="news-list news-list-muted">`;
+        recentNonFeatured.forEach(n => {
+            html += renderNewsItemHTML(n, false, true);
+        });
+        html += `</div></div></div>`;
+    }
 
     // ── 历史新闻折叠区 ──
     if (historyNews.length > 0) {
@@ -1280,7 +1387,18 @@ function renderNewsFeed(allNews) {
 
     container.innerHTML = html;
 
-    // 绑定折叠交互
+    // 绑定非重点新闻折叠交互
+    const nfToggle = document.getElementById('newsNonFeaturedToggle');
+    const nfBody = document.getElementById('newsNonFeaturedBody');
+    if (nfToggle && nfBody) {
+        nfToggle.addEventListener('click', () => {
+            const isOpen = nfBody.style.display !== 'none';
+            nfBody.style.display = isOpen ? 'none' : 'block';
+            nfToggle.classList.toggle('expanded', !isOpen);
+        });
+    }
+
+    // 绑定历史折叠交互
     const historyToggle = document.getElementById('newsHistoryToggle');
     const historyBody = document.getElementById('newsHistoryBody');
     if (historyToggle && historyBody) {
@@ -1302,12 +1420,13 @@ function renderNewsFeed(allNews) {
     });
 }
 
-function renderNewsItemHTML(n, isHistory = false) {
+function renderNewsItemHTML(n, isHistory = false, isMuted = false) {
     const impLabel = n.featured ? '⭐ 重点' : getImportanceLabel(n.importance);
     const historyClass = isHistory ? ' news-item-history' : '';
     const featuredClass = n.featured ? ' news-featured' : '';
     const importantClass = n.importance === 'high' ? ' news-important' : '';
-    return `<div class="news-item${importantClass}${featuredClass}${historyClass}">
+    const mutedClass = isMuted ? ' news-item-muted' : '';
+    return `<div class="news-item${importantClass}${featuredClass}${historyClass}${mutedClass}">
         <div class="news-item-left">
             <span class="news-item-importance${n.featured ? ' news-item-featured-badge' : ''}">${impLabel}</span>
             <span class="news-item-category">${getNewsCategory(n.category)}</span>
@@ -1318,7 +1437,7 @@ function renderNewsItemHTML(n, isHistory = false) {
             <div class="news-item-meta">
                 <span class="news-item-source">${n.source}</span>
                 <span class="news-item-date">${n.date}</span>
-                ${n.tags.map(t => `<span class="news-tag-sm">${t}</span>`).join('')}
+                ${(n.tags||[]).map(t => `<span class="news-tag-sm">${t}</span>`).join('')}
             </div>
         </div>
         <a href="${n.sourceUrl}" target="_blank" class="news-item-link" title="查看原文">

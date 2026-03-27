@@ -1,10 +1,11 @@
 // ============================================
 // 行业热点新闻数据模块
-// [AUTO-GENERATED] 由 News Agent v4.0 自动更新，请勿手动编辑
-// 最后更新: 2026-03-26T22:00:00Z
-// 更新者: news-agent (幻觉清理 + 日期修正 + 多源交叉验证)
+// [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
+// 最后更新: 2026-03-27T14:00:00Z
+// 更新者: news-agent (v5.0 行业研究专家升级：洞察分析+历史关联系统)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
-// 重要性方案: v4.0 — 统一重点新闻标记（featured），基于腾讯文档863行历史标记学习
+// 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
+// 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
 // ============================================
 
 const newsSources = [
@@ -190,7 +191,9 @@ const newsData = [
         "date": "2026-03-19",
         "tags": ["Xbox", "微软", "Gaming Copilot", "AI", "GDC", "主机"],
         "sentiment": "positive",
-        "tdocMarking": "none"
+        "tdocMarking": "none",
+        "analysis": "微软将Gaming Copilot从PC/移动端扩展到主机，标志着AI助手正式进入客厅游戏场景。结合微软在Azure AI和Copilot生态的持续投入，这一举措可能引发索尼和任天堂的跟进响应。对开发者而言，AI辅助功能可能成为下一代主机的标配竞争维度。",
+        "relatedNewsIds": []
     },
     {
         "id": 108,
@@ -209,7 +212,9 @@ const newsData = [
         "date": "2026-03-20",
         "tags": ["PS5", "Switch 2", "Circana", "美国销量", "生化危机安魂曲", "主机销量"],
         "sentiment": "neutral",
-        "tdocMarking": "none"
+        "tdocMarking": "none",
+        "analysis": "PS5连续两个月力压Switch 2是一个关键信号：五年老机型凭借成熟游戏库和降价策略仍具竞争韧性。但Switch 2在日本市场供不应求的表现说明任天堂的核心受众忠诚度依然极高。这种'老机型 vs 新主机'的格局竞争将在2026年上半年持续，3月Switch 2已反超说明初期波动属于正常周期。生化危机安魂曲登顶软件榜进一步验证了3A恐怖IP的跨平台号召力。",
+        "relatedNewsIds": [107, 87]
     },
     {
         "id": 107,
@@ -227,7 +232,9 @@ const newsData = [
         "date": "2026-03-25",
         "tags": ["Switch 2", "任天堂", "产量削减", "假期销量", "美国市场"],
         "sentiment": "negative",
-        "tdocMarking": "none"
+        "tdocMarking": "none",
+        "analysis": "产量削减33%是一个值得警惕的信号，说明Switch 2在美国市场的首个假期表现不及预期。与初代Switch同期相比下降18%，可能反映出：1)定价策略偏高（美区$449.99 vs 初代$299.99）；2)首发阵容吸引力不足；3)内存涨价导致的供应链压力。但任天堂讨论'6月铺货透支后期需求'的说法暗示这可能是主动库存管理而非需求崩塌。累计1737万台的成绩仍远超初代同期，财年目标仍在轨道上。",
+        "relatedNewsIds": [108, 87, 85]
     },
     {
         "id": 106,
@@ -247,7 +254,8 @@ const newsData = [
         "date": "2026-03-25",
         "tags": ["杀戮尖塔2", "460万销量", "Steam", "独立游戏", "Roguelike", "里程碑"],
         "sentiment": "positive",
-        "tdocMarking": "none"
+        "tdocMarking": "none",
+        "analysis": "杀戮尖塔2以Early Access形式两周售出460万份，创下品类纪录，标志着Roguelike品类从小众走向主流的里程碑。57.4万同时在线峰值是前作的10倍以上，说明Steam平台的长尾效应和社区口碑对续作的放大效应极为显著。$9200万收入验证了'小团队+优质IP续作'的商业模式可复制性，对独立开发者生态是极大鼓舞。被红色沙漠超越降至第二说明3A新IP同样具有强大首周爆发力。"
     },
     {
         "id": 105,
