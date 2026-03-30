@@ -1,7 +1,7 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-03-27T14:00:00Z
+// 最后更新: 2026-03-30T18:00:00Z
 // 更新者: news-agent (v5.0 行业研究专家升级：洞察分析+历史关联系统)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
@@ -173,6 +173,49 @@ const newsSources = [
 ];
 
 const newsData = [
+    {
+        "id": 111,
+        "title": "中国3月版号发放：130款国产+3款进口游戏获批，腾讯《粒粒的小人国》在列",
+        "summary": "3月25日，国家新闻出版署正式发布2026年3月网络游戏审批信息，共133款游戏过审：130款国产网络游戏获得版号，3款进口网络游戏获批，另有4款游戏完成审批信息变更。本次获批的重点产品包括腾讯的《粒粒的小人国》（动森类游戏）等。版号发放保持常态化节奏，月均130款左右的审批数量延续了2025年下半年以来的稳定态势。进口游戏获批数量依然较少（仅3款），反映出监管部门对海外游戏引进仍持审慎态度。版号发放常态化为国内游戏厂商的产品上线和商业化提供了可预期的政策环境。",
+        "source": "3DM",
+        "sourceUrl": "https://news.qq.com/rain/a/20260325A06PCW00",
+        "sourceUrls": [
+            {"name": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260325A06PCW00"},
+            {"name": "国家新闻出版署", "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/"},
+            {"name": "17173", "url": "https://news.17173.com/content/03252026/200237227.shtml"},
+            {"name": "TapTap", "url": "https://www.taptap.cn/hashtag/2026%E5%B9%B43%E6%9C%88%E7%89%88%E5%8F%B7%E5%8F%91%E6%94%BE"}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-03-25",
+        "tags": ["版号", "国家新闻出版署", "腾讯", "审批", "监管"],
+        "sentiment": "positive",
+        "tdocMarking": "none"
+    },
+    {
+        "id": 110,
+        "title": "Epic Games裁员超1000人削减5亿美元成本：Fortnite参与度2025年起持续下滑",
+        "summary": "Epic Games CEO Tim Sweeney于2026年3月24日在公司官方博客发布备忘录，宣布裁员超过1000名员工，并计划通过缩减合同工、营销支出和冻结招聘等措施实现超5亿美元成本削减。Sweeney指出裁员的核心原因是Fortnite用户参与度自2025年起持续下滑，导致公司"支出显著高于收入"。此前Epic刚于上周宣布提高V-Bucks虚拟货币价格以应对运营成本上升。被裁员工将获得4个月遣散费（工龄长者更多），美国员工还将获得6个月医疗保健续保。Sweeney强调此次裁员并非因AI取代了开发人员，而是收入端的结构性下滑。这是Epic继2023年裁员830人后的第二次大规模裁员，也是2026年游戏行业迄今最大规模的单次裁员事件。",
+        "source": "GamesIndustry",
+        "sourceUrl": "https://techcrunch.com/2026/03/24/epic-games-cuts-1000-jobs-says-fortnite-engagement-is-down/",
+        "sourceUrls": [
+            {"name": "Epic Games官方", "url": "https://www.epicgames.com/site/en-US/news/todays-layoffs"},
+            {"name": "TechCrunch", "url": "https://techcrunch.com/2026/03/24/epic-games-cuts-1000-jobs-says-fortnite-engagement-is-down/"},
+            {"name": "AP News", "url": "https://apnews.com/article/epic-games-layoffs-fortnite-video-games-6a15e7c3f7916ecba10150a767295549"},
+            {"name": "Variety", "url": "https://variety.com/2026/gaming/news/epic-games-layoff-1000-fortnite-downturn-500-million-1236697837/"},
+            {"name": "Fox Business", "url": "https://www.foxbusiness.com/economy/epic-games-cuts-1000-jobs-fortnite-magic-fades-extreme-market-conditions"}
+        ],
+        "category": "policy",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-03-24",
+        "tags": ["Epic Games", "裁员", "Fortnite", "V-Bucks", "Tim Sweeney", "成本削减"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "Epic此次裁员1000人+削减5亿美元成本是2026年游戏行业最大的单次裁员事件，核心原因是Fortnite收入端的结构性下滑而非AI替代。这揭示了一个深层问题：Live Service游戏（直播服务类）的生命周期风险——即使是Fortnite这样的现象级产品也无法永远维持巅峰参与度。对比2023年裁员830人，两年内累计裁员近2000人说明问题是结构性的而非周期性的。V-Bucks涨价+裁员的组合可能加速玩家流失形成恶性循环。行业启示：过度依赖单一Live Service产品的商业模式存在巨大的脆弱性。",
+        "relatedNewsIds": [75, 37]
+    },
     {
         "id": 109,
         "title": "微软Xbox Gaming Copilot AI助手将于2026年登陆Xbox Series X|S主机",
@@ -428,21 +471,25 @@ const newsData = [
     },
     {
         "id": 94,
-        "title": "Xbox Partner Preview春季展示会公布多款第三方新作",
-        "summary": "据MCP腾讯文档Tier 0数据，微软举办了Xbox Partner Preview春季展示会，集中公布了多款第三方合作伙伴新作和更新内容。展示会涵盖了来自不同开发商的游戏预告、实机演示和发售日期确认。Xbox Partner Preview是微软定期举办的第三方游戏展示活动，与Xbox Showcase（第一方游戏）形成互补，共同构建Xbox平台的内容生态。",
+        "title": "Xbox Partner Preview春季展示会：19款新作公布，Hades 2正式登陆Xbox/Game Pass",
+        "summary": "微软于3月26日举办Xbox Partner Preview春季展示会，30分钟内集中公布了19款第三方合作伙伴新作和更新，其中14款确认加入Game Pass。重磅亮点包括：Supergiant Games《Hades 2》正式宣布登陆Xbox和Game Pass并公布发售日期；GSC Game World《S.T.A.L.K.E.R. 2》首个大型DLC；SEGA多款Xbox Play Anywhere新作；Team Meat《Super Meat Boy 3D》；以及世嘉旗下多款作品加入Game Pass等。展示会还首次公布了全新IP《Stranger Than Heaven》《Hunter: The Reckoning》等。这是2026年微软第二次Partner Preview活动，展现了Xbox平台在吸引第三方开发者方面的持续投入和Game Pass内容生态的加速扩张。",
         "source": "Xbox Wire",
-        "sourceUrl": "https://news.xbox.com/en-us/",
+        "sourceUrl": "https://news.xbox.com/en-us/2026/03/26/xbox-partner-preview-march-2026-recap/",
         "sourceUrls": [
-            {"name": "腾讯文档MCP", "url": "https://docs.qq.com/sheet/LMLdoimBsILX"},
-            {"name": "Xbox Wire", "url": "https://news.xbox.com/en-us/"}
+            {"name": "Xbox Wire", "url": "https://news.xbox.com/en-us/2026/03/26/xbox-partner-preview-march-2026-recap/"},
+            {"name": "IGN", "url": "https://www.ign.com/articles/xbox-partner-preview-march-2026-everything-announced-updating-live"},
+            {"name": "Windows Central", "url": "https://www.windowscentral.com/gaming/xbox/everything-announced-at-the-xbox-partner-preview-march-2026-sega-xbox-game-pass-xbox-play-anywhere-and-more"},
+            {"name": "EuroGamer", "url": "https://www.eurogamer.net/xbox-partner-preview-showcase-march-2026-heres-everything-announced"}
         ],
         "category": "platform",
-        "importance": "medium",
-        "featured": false,
+        "importance": "high",
+        "featured": true,
         "date": "2026-03-26",
-        "tags": ["Xbox", "Partner Preview", "第三方", "展示会", "微软"],
+        "tags": ["Xbox", "Partner Preview", "Hades 2", "Game Pass", "SEGA", "STALKER 2", "微软"],
         "sentiment": "positive",
-        "tdocMarking": "none"
+        "tdocMarking": "none",
+        "analysis": "Xbox Partner Preview的核心看点是Hades 2加入Game Pass生态——这是继《无主之地4》《巫师3》之后又一款顶级独立游戏选择Day One入库Game Pass，验证了微软Game Pass对第三方开发者的吸引力在不断增强。19款新作中14款入库的高比例说明Game Pass已成为Xbox平台策略的绝对核心。SEGA深度合作Xbox Play Anywhere则进一步印证了微软跨平台战略的推进速度。",
+        "relatedNewsIds": [1, 56]
     },
     {
         "id": 93,
