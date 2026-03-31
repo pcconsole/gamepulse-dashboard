@@ -1,7 +1,7 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-03-30T18:00:00Z
+// 最后更新: 2026-03-31T18:00:00Z
 // 更新者: news-agent (v5.0 行业研究专家升级：洞察分析+历史关联系统)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
@@ -173,6 +173,201 @@ const newsSources = [
 ];
 
 const newsData = [
+    {
+        "id": 121,
+        "title": "索尼宣布PS5全系全球涨价：4月2日起生效，美区标准版涨$100至$649.99",
+        "summary": "索尼互动娱乐于3月27日正式宣布，从2026年4月2日起对PS5全系产品实施全球涨价。美区：PS5标准版从$549.99涨至$649.99（+$100），数字版从$499.99涨至$599.99（+$100），PS5 Pro从$749.99涨至$899.99（+$150），PS Portal从$199.99涨至$249.99（+$50）；英区：标准版涨至£569.99（+£90），Pro涨至£789.99（+£90）；欧区：标准版涨至€649.99（+€100），Pro涨至€899.99（+€100）；日区：标准版涨至¥97,980（+¥18,000），Pro涨至¥137,980（+¥18,000）。SIE副总裁Isabelle Tomatis将涨价归因于'全球经济环境的持续压力'，行业分析指向AI数据中心建设热潮引发的RAM芯片短缺推高了硬件成本。这是PS5生命周期内第三次涨价。",
+        "source": "GamesIndustry",
+        "sourceUrl": "https://www.gamesindustry.biz/sony-announces-global-price-rises-for-ps5-consoles-from-april-2-2026",
+        "sourceUrls": [
+            {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/sony-announces-global-price-rises-for-ps5-consoles-from-april-2-2026"},
+            {"name": "SyncToBest", "url": "https://synctobest.com/ps5-price-hike-2026-memory-chip-ai-demand-ps6-delay-2028-2029/"},
+            {"name": "GamesRadar", "url": "https://www.gamesradar.com/hardware/ps5-will-hopefully-avoid-a-price-hike-this-year-as-sony-cfo-says-we-intend-to-minimize-the-impact-of-ongoing-ram-shortage-company-positioned-to-secure-memory-through-2026/"}
+        ],
+        "category": "hardware",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-03-27",
+        "tags": ["PS5", "索尼", "涨价", "RAM短缺", "AI", "硬件成本", "PS5 Pro"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "PS5生命周期内第三次涨价是史无前例的，直接原因是AI数据中心对HBM/DDR5内存的疯狂需求推高了DRAM价格。PS5 Pro美区售价逼近$900意味着主机正在失去相对PC的价格优势——$900已可以组装一台不错的游戏PC。索尼CFO此前暗示'至少到2026年底内存供应有保障'，但最终仍涨价，说明成本压力已超出预期。任天堂Switch 2若跟进涨价将重塑整个主机市场定价格局。这可能加速玩家向PC和云游戏迁移的长期趋势。",
+        "relatedNewsIds": [108, 99, 104]
+    },
+    {
+        "id": 120,
+        "title": "Xbox Partner Preview 3月26日发布会：近20款游戏公布，Hades 2/鸣潮登陆Xbox",
+        "summary": "微软于3月26日举办了30分钟的Xbox Partner Preview发布会，公布了近20款第三方游戏消息。重点公布包括：①Hades 2将于4月14日登陆Xbox/Game Pass；②如龙工作室Ryu Ga Gotoku的全新IP《Stranger Than Heaven》横跨五个时代和城市，5月6日有专场展示；③STALKER 2首个DLC'Cost of Hope'夏季推出；④鸣潮（Wuthering Waves）7月登陆Xbox/Game Pass；⑤Super Meat Boy 3D于3月31日发售；⑥The Expanse: Osiris Reborn（Owlcat）4月22日开启公测；⑦全新IP Artificial Detective（机器侦探）2027年发售。发布会还公布了Grave Seasons、Alien Deathstorm、Hunter: The Reckoning等多款新作。",
+        "source": "EuroGamer",
+        "sourceUrl": "https://www.eurogamer.net/xbox-partner-preview-showcase-march-2026-heres-everything-announced",
+        "sourceUrls": [
+            {"name": "IGN", "url": "https://www.ign.com/articles/xbox-partner-preview-march-2026-everything-announced-updating-live"},
+            {"name": "EuroGamer", "url": "https://www.eurogamer.net/xbox-partner-preview-showcase-march-2026-heres-everything-announced"},
+            {"name": "GameInformer", "url": "https://www.gameinformer.com/xbox-partner-preview/2026/03/26/everything-announced-at-the-march-2026-xbox-partner-preview"},
+            {"name": "Windows Central", "url": "https://www.windowscentral.com/gaming/xbox/everything-announced-at-the-xbox-partner-preview-march-2026-sega-xbox-game-pass-xbox-play-anywhere-and-more"}
+        ],
+        "category": "platform",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-03-26",
+        "tags": ["Xbox", "微软", "Hades 2", "鸣潮", "Stranger Than Heaven", "Game Pass", "如龙工作室"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Xbox Partner Preview展示了微软'平台即服务'战略的持续深化：Hades 2和鸣潮首日进Game Pass进一步强化了订阅服务的吸引力。如龙工作室全新IP Stranger Than Heaven横跨五个时代的设计野心值得关注，这是RGG在如龙系列外的首次独立尝试。鸣潮7月登陆Xbox说明中国F2P动作RPG正加速进入主机生态。",
+        "relatedNewsIds": [109]
+    },
+    {
+        "id": 119,
+        "title": "Newzoo报告：PC游戏收入将在2028年超越主机，全球PC+主机市场规模达$1037亿",
+        "summary": "Newzoo于3月12日发布的《2026年PC与主机游戏报告》揭示多项关键趋势：①全球PC和主机游戏市场预计到2028年达到1037亿美元，标志着后疫情平台期正式结束；②2025年PC+主机combined收入883亿美元（同比+7%），2026年预计达943亿美元；③PC市场2025-2028年CAGR为6.6%，主机为4.4%，PC将在2028年超越主机收入；④$30-$50定价区间成为增长最快的溢价细分市场；⑤PC平台低于$30的游戏更受欢迎，2025年有26款此价位游戏收入超$500万（2024年仅17款）；⑥预计到2028年PC+主机玩家总数将超过10亿，东亚地区（中日韩）驱动区域扩张；⑦买断制游戏占PC总收入29%，AAA/AA/独立游戏收入增长11.8%。",
+        "source": "GamesIndustry",
+        "sourceUrl": "https://www.gamesindustry.biz/pc-will-overtake-console-revenue-by-2028-says-newzoo",
+        "sourceUrls": [
+            {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/pc-will-overtake-console-revenue-by-2028-says-newzoo"},
+            {"name": "Newzoo官方", "url": "https://newzoo.com/resources/trend-reports/the-pc-console-gaming-report-2026"},
+            {"name": "GameLook", "url": "http://www.gamelook.com.cn/2026/03/589635/"},
+            {"name": "AWN China", "url": "https://awnchina.cn/newzoo-2026%e5%b9%b4pc%e5%8f%8a%e4%b8%bb%e6%9c%ba%e6%b8%b8%e6%88%8f%e6%8a%a5%e5%91%8a%e6%ad%a3%e5%bc%8f%e5%8f%91%e5%b8%83-%e5%b8%82%e5%9c%ba%e9%87%8d%e5%9b%9e%e5%a2%9e%e9%95%bf/"}
+        ],
+        "category": "market",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-03-28",
+        "tags": ["Newzoo", "市场数据", "PC vs 主机", "1037亿美元", "行业报告", "F2P", "买断制"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Newzoo这份报告的核心结论'PC将在2028年超越主机收入'是一个历史性拐点信号。PC增长CAGR 6.6% vs 主机4.4%的差距将随时间加速扩大。驱动因素包括：1)独立游戏爆款频出（杀戮尖塔2等）抬高了$30以下区间贡献；2)Game Pass等订阅服务蚕食主机买断收入；3)东亚市场（中日韩）天然倾向PC。$30-$50成为甜蜜点意味着AA级产品的商业空间正在扩大，这对中等规模开发商是重大利好。",
+        "relatedNewsIds": [66, 108]
+    },
+    {
+        "id": 118,
+        "title": "《红色沙漠》AI生成素材争议：Pearl Abyss道歉并启动全面资产审计",
+        "summary": "Pearl Abyss开发的高期待开放世界动作游戏《红色沙漠》（Crimson Desert）发售后被玩家发现游戏中包含AI生成的2D视觉素材，引发广泛争议。3月22日Pearl Abyss在X平台发布声明承认使用了'实验性AI生成技术'创建部分2D视觉道具，原本计划在最终版本中替换但未执行。开发商表示'我们应该明确披露我们对AI的使用'，并宣布启动对所有游戏内资产的'全面审计'，承诺移除所有AI生成的占位内容。值得注意的是，Pearl Abyss发售时未在Steam商店页面使用Valve的生成式AI披露标签。此事件再次引发游戏行业关于AI辅助开发透明度的讨论。",
+        "source": "GameDeveloper",
+        "sourceUrl": "http://www.gamedeveloper.com/production/whoops-pearl-abyss-forgot-to-mention-it-used-generative-ai-to-create-crimson-desert",
+        "sourceUrls": [
+            {"name": "GameDeveloper", "url": "http://www.gamedeveloper.com/production/whoops-pearl-abyss-forgot-to-mention-it-used-generative-ai-to-create-crimson-desert"},
+            {"name": "Yahoo Tech", "url": "https://tech.yahoo.com/gaming/articles/pearl-abyss-apologizes-unintentional-ai-161916137.html"},
+            {"name": "Shacknews", "url": "https://www.shacknews.com/article/148425/crimson-desert-generative-ai-content"},
+            {"name": "GamerBolt", "url": "https://www.gamerbolt.com/this-week-in-gaming-news-march-23rd-march-29th-2026/"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-03-23",
+        "tags": ["红色沙漠", "Crimson Desert", "Pearl Abyss", "AI", "争议", "资产审计"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "红色沙漠的AI素材争议是继育碧《纪元117》和COD BO7之后，又一款3A大作因AI生成内容引发信任危机的案例。关键问题不在于是否使用AI，而在于缺乏透明披露——未使用Steam的AI披露标签直接违反了行业正在形成的规范共识。Pearl Abyss启动'全面资产审计'的代价远高于事先披露，这为所有开发商敲响警钟：AI辅助开发的透明度将成为未来玩家信任的关键维度。"
+    },
+    {
+        "id": 117,
+        "title": "分析师估算Bungie《Marathon》销量约120万份，以索尼第一方大作标准看表现不及预期",
+        "summary": "据Alinea Analytics估算数据，Bungie开发的提取射击游戏《Marathon》自3月初发售以来累计销量约120万份，其中约70%（约84万份）来自Steam平台，PS5和Xbox占比相对较低。以索尼第一方大作的投入标准来看，这一表现可能未达预期——业内估算索尼和Bungie在该项目上的累计投入约2亿美元。Bungie随后回应外界关于项目前景的质疑，声明'我们做好了长期运营的准备'，暗示不会轻易放弃该项目。Marathon是Bungie在索尼收购后首个从零开始的全新项目，其表现将直接影响外界对索尼750亿美元Bungie收购案ROI的评估。",
+        "source": "GamesIndustry",
+        "sourceUrl": "https://thisweekinvideogames.com/news/marathon-has-sold-1-2-million-copies-per-alinea-estimates/",
+        "sourceUrls": [
+            {"name": "ThisWeekInVideoGames", "url": "https://thisweekinvideogames.com/news/marathon-has-sold-1-2-million-copies-per-alinea-estimates/"},
+            {"name": "Push Square", "url": "https://www.pushsquare.com/news/2026/03/were-in-it-for-the-long-haul-bungie-rejects-rumours-it-could-move-on-from-marathon-after-unremarkable-ps5-sales"},
+            {"name": "GamerBolt", "url": "https://www.gamerbolt.com/this-week-in-gaming-news-march-23rd-march-29th-2026/"}
+        ],
+        "category": "game",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-03-25",
+        "tags": ["Marathon", "Bungie", "索尼", "销量", "提取射击", "第一方"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "Marathon的120万份销量对比索尼+Bungie约2亿美元的投入来看ROI堪忧。70%销量来自Steam而非PS5更值得关注——作为索尼第一方大作，主平台占比不到30%说明PS5独占引流效果有限。对比同类型《Arc Raiders》（400万+）和《The Finals》（数百万DAU），Marathon的市场表现确实处于下风。Bungie声称'长期运营'但参与度持续下滑的趋势需要重大内容更新来扭转。这对索尼750亿美元Bungie收购案的叙事构成压力。",
+        "relatedNewsIds": [99, 106]
+    },
+    {
+        "id": 116,
+        "title": "德国游戏市场2025年增长4%至94亿欧元：Switch 2推动硬件销售增长26%，软件销售下滑",
+        "summary": "据德国游戏产业协会Game发布的年度报告（基于YouGov和Sensor Tower数据），2025年德国游戏市场总收入增长4%至94亿欧元。硬件是增长主引擎：硬件总收入增长12%至34亿欧元，其中游戏主机收入增长26%至10亿欧元（主要受Switch 2发售推动），游戏PC销售增长7%至6.51亿欧元（ROG Xbox Ally推动），PC配件增长13%至14亿欧元。但软件端呈下滑趋势：整体游戏销售微跌1%至50亿欧元，电脑和视频游戏子市场跌幅显著达13%至8.07亿欧元。在线游戏服务收入增长7%首次突破10亿欧元（较2019年翻倍），反映玩家消费习惯从'购买新游戏'向'服务型消费'转变。",
+        "source": "GamesIndustry",
+        "sourceUrl": "https://www.gamesindustry.biz/german-games-market-rose-4-in-2025-to-94bn-driven-by-hardware-sales",
+        "sourceUrls": [
+            {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/german-games-market-rose-4-in-2025-to-94bn-driven-by-hardware-sales"},
+            {"name": "Game协会官方", "url": "https://www.game.de/en/german-games-market-grows-by-4-per-cent-in-2025/"},
+            {"name": "DigiTrendz", "url": "https://digitrendz.blog/newswire/technology/155637/german-gaming-market-hits-e9-4bn-in-2025-fueled-by-hardware/"}
+        ],
+        "category": "market",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-03-27",
+        "tags": ["德国", "游戏市场", "94亿欧元", "Switch 2", "硬件增长", "软件下滑"],
+        "sentiment": "neutral",
+        "tdocMarking": "none"
+    },
+    {
+        "id": 115,
+        "title": "Behaviour Interactive收购《七日杀》开发商The Fun Pimps，游戏累计销量超2000万份",
+        "summary": "《黎明杀机》（Dead by Daylight）开发发行商Behaviour Interactive本周宣布收购僵尸生存游戏《七日杀》（7 Days to Die）的开发商The Fun Pimps。The Fun Pimps将作为独立工作室在Behaviour旗下运营，游戏开发方向不会改变，但团队将扩大以交付更多内容。《七日杀》自2013年Early Access上线以来累计销量已突破2000万份，是Steam平台长青生存游戏的代表作之一。此次收购标志着Behaviour在生存恐怖品类的布局从自研扩展至并购，进一步巩固其在该赛道的市场地位。",
+        "source": "GamesIndustry",
+        "sourceUrl": "https://thisweekinvideogames.com/news/7-days-to-die-developer-acquired-by-behaviour-interactive/",
+        "sourceUrls": [
+            {"name": "ThisWeekInVideoGames", "url": "https://thisweekinvideogames.com/news/7-days-to-die-developer-acquired-by-behaviour-interactive/"},
+            {"name": "GamerBolt", "url": "https://www.gamerbolt.com/this-week-in-gaming-news-march-23rd-march-29th-2026/"}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-03-25",
+        "tags": ["Behaviour Interactive", "The Fun Pimps", "七日杀", "收购", "生存游戏"],
+        "sentiment": "neutral",
+        "tdocMarking": "none"
+    },
+    {
+        "id": 114,
+        "title": "索尼关闭Dark Outlaw Games工作室：COD系列前制作人Jason Blundell的团队未发布作品即解散",
+        "summary": "索尼互动娱乐本周确认关闭了Jason Blundell领导的Dark Outlaw Games工作室。Blundell曾是《使命召唤》系列僵尸模式的核心制作人和导演，于索尼收购后负责组建新工作室。该工作室在关闭前未发布或正式公布任何游戏项目。此次关闭是索尼近期工作室调整的一部分，此前已传出索尼重新评估第一方工作室投资回报的消息。考虑到索尼刚宣布PS5全球涨价和Marathon销量不及预期，关闭未产出工作室可能是更广泛成本控制策略的信号。",
+        "source": "GamesIndustry",
+        "sourceUrl": "https://www.gamerbolt.com/this-week-in-gaming-news-march-23rd-march-29th-2026/",
+        "sourceUrls": [
+            {"name": "GamerBolt", "url": "https://www.gamerbolt.com/this-week-in-gaming-news-march-23rd-march-29th-2026/"}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-03-26",
+        "tags": ["索尼", "Dark Outlaw Games", "Jason Blundell", "工作室关闭", "COD"],
+        "sentiment": "negative",
+        "tdocMarking": "none"
+    },
+    {
+        "id": 113,
+        "title": "GameStop公布FY2025 Q4及全年财报：收入持续下滑，继续押注比特币和数字资产战略",
+        "summary": "GameStop于3月24日发布截至2026年1月31日的2025财年第四季度及全年财务业绩。虽然具体数字因SEC页面限制未获完整抓取，但综合多方报道，GameStop线下零售业务收入继续同比下滑，实体游戏销售持续萎缩。公司继续执行CEO Ryan Cohen主导的'比特币储备'战略，将部分公司现金投入加密货币资产。这一非传统策略在华尔街引发分歧，看多者认为是对冲法币贬值的远见之举，看空者质疑一家游戏零售商大举投资比特币的合理性。GameStop的转型方向从'电商化游戏零售'转向'数字资产+收藏品平台'。",
+        "source": "GameStop IR",
+        "sourceUrl": "https://investor.gamestop.com/news-releases/news-details/2026/GameStop-Reports-Fourth-Quarter-and-Fiscal-Year-2025-Results/default.aspx",
+        "sourceUrls": [
+            {"name": "GameStop IR", "url": "https://investor.gamestop.com/news-releases/news-details/2026/GameStop-Reports-Fourth-Quarter-and-Fiscal-Year-2025-Results/default.aspx"}
+        ],
+        "category": "market",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-03-24",
+        "tags": ["GameStop", "财报", "比特币", "零售", "Ryan Cohen"],
+        "sentiment": "negative",
+        "tdocMarking": "none"
+    },
+    {
+        "id": 112,
+        "title": "《宝可梦冠军》（Pokemon Champions）宣布4月8日登陆Switch/Switch 2，免费对战竞技场新作",
+        "summary": "宝可梦公司本周宣布全新免费对战竞技场游戏《宝可梦冠军》（Pokemon Champions）将于4月8日登陆Nintendo Switch和Switch 2平台。游戏类似《宝可梦竞技场》系列，支持跨Switch和Switch 2平台对战，移动版将在稍后推出。作为免费游玩（F2P）模式，该作将通过战斗通行证和装饰性微交易实现商业化。这是宝可梦IP在Switch 2平台的又一款重要作品，继《宝可梦：风/浪》之后进一步丰富了任天堂新主机的宝可梦内容生态。",
+        "source": "GamerBolt",
+        "sourceUrl": "https://www.gamerbolt.com/this-week-in-gaming-news-march-23rd-march-29th-2026/",
+        "sourceUrls": [
+            {"name": "GamerBolt", "url": "https://www.gamerbolt.com/this-week-in-gaming-news-march-23rd-march-29th-2026/"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-03-27",
+        "tags": ["宝可梦冠军", "Pokemon Champions", "Switch 2", "F2P", "任天堂"],
+        "sentiment": "positive",
+        "tdocMarking": "none"
+    },
     {
         "id": 111,
         "title": "中国3月版号发放：130款国产+3款进口游戏获批，腾讯《粒粒的小人国》在列",
