@@ -2721,13 +2721,13 @@ tr.row-released td:first-child {
 }
 
 /* 聚类主题色 */
+.spotlight-cluster[data-cluster="upstream-hw"] { border-left-color: #06b6d4; }
 .spotlight-cluster[data-cluster="hot-product"] { border-left-color: #ef4444; }
 .spotlight-cluster[data-cluster="sony-ps"] { border-left-color: #2563eb; }
 .spotlight-cluster[data-cluster="xbox-ms"] { border-left-color: #16a34a; }
 .spotlight-cluster[data-cluster="steam-valve"] { border-left-color: #1d4ed8; }
 .spotlight-cluster[data-cluster="epic"] { border-left-color: #7c3aed; }
 .spotlight-cluster[data-cluster="nintendo"] { border-left-color: #dc2626; }
-.spotlight-cluster[data-cluster="upstream-hw"] { border-left-color: #06b6d4; }
 .spotlight-cluster[data-cluster="market-info"] { border-left-color: #8b5cf6; }
 
 /* 增强版核心新闻卡片 */

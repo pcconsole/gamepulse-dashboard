@@ -1145,12 +1145,17 @@ function updateNewsTab() {
 // 核心新闻标准：平台&硬件动态、顶级头部产品表现、顶级新品&发布会、全球行业重点报告
 
 const NEWS_TOPIC_CLUSTERS = [
-    { id: 'hot-product', label: '🔥 热门产品', icon: '🔥',
+    { id: 'upstream-hw', label: '🔧 上游硬件 & 供应链', icon: '🔧',
       match: n => { const c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
-          return c.match(/红色沙漠|crimson\s?desert|杀戮尖塔|slay.*spire|生化危机.*安魂|resident\s?evil.*requiem|marathon|gta\s?6|怪物猎人.*荒野|monster\s?hunter.*wilds|死亡搁浅|death\s?strand|仁王3|nioh\s?3|黑神话|wukong|艾尔登法环|elden\s?ring|宝可梦.*冠军|pokemon\s?champion|七日杀|7\s?days|arc\s?raiders|鸭科夫|hades\s?2|鸣潮|wuthering/) && (c.match(/销量|突破|万份|百万|million|首周|发售|争议|ai.*素材|道歉/) || n.importance === 'high'); }},
+          return c.match(/内存.*涨|内存.*降|内存.*短缺|dram|ddr5|hbm|ram.*短缺|ram.*shortage|芯片.*短缺|液冷|asetek/) ||
+                 (c.match(/涨价|price.*hike|price.*increase/) && c.match(/硬件|成本|ram|内存|芯片|组件|component/)) ||
+                 (n.category === 'hardware' && c.match(/nvidia|dlss|gpu|显卡|amd|rtx\s?50|裸眼3d/)); }},
+    { id: 'hot-product', label: '🔥 热门产品', icon: '🔥',
+      match: n => { const c = ((n.title||'')+' '+(n.tags||[]).join(' ')).toLowerCase();
+          return c.match(/红色沙漠|crimson\s?desert|杀戮尖塔|slay.*spire|生化危机.*安魂|resident\s?evil.*requiem|marathon|gta\s?6/) && c.match(/销量|突破|万份|百万|million|争议|ai.*素材|道歉|定档|延期/); }},
     { id: 'sony-ps', label: '🎮 索尼 PlayStation', icon: '🔵',
       match: n => { const c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
-          return c.match(/索尼|sony|playstation|ps5|ps6|psn|ps plus|pssr|push\s?square|ps\s?pro|dualsense|ps\s?portal|ps\s?stars|dark\s?outlaw/); }},
+          return c.match(/索尼|sony|playstation|ps5|ps6|psn|ps plus|pssr|push\s?square|ps\s?pro|dualsense|ps\s?portal|ps\s?stars|dark\s?outlaw|bungie/); }},
     { id: 'xbox-ms', label: '🟢 微软 Xbox', icon: '🟢',
       match: n => { const c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
           return c.match(/xbox|微软.*游戏|game\s?pass|phil\s?spencer|asha\s?sharma|helix|xbox\s?wire|bethesda.*xbox|动视暴雪|activision|copilot.*xbox|xbox.*copilot|partner\s?preview/); }},
@@ -1163,12 +1168,9 @@ const NEWS_TOPIC_CLUSTERS = [
     { id: 'nintendo', label: '🔴 任天堂 Switch', icon: '🔴',
       match: n => { const c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
           return c.match(/任天堂|nintendo|switch\s?2|switch2|宝可梦|pokemon|马里奥|mario|zelda|塞尔达|indie\s?world/); }},
-    { id: 'upstream-hw', label: '🔧 上游硬件 & 供应链', icon: '🔧',
-      match: n => { const c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
-          return c.match(/nvidia|dlss|gpu|显卡|amd.*游戏|内存.*涨|内存.*降|dram|ddr5|芯片.*短缺|裸眼3d|rtx\s?50|ram.*短缺|ram.*shortage|hbm|液冷|asetek|涨价.*硬件|硬件.*成本/); }},
     { id: 'market-info', label: '📊 市场信息', icon: '📊',
       match: n => { const c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
-          return c.match(/newzoo|circana|npd|市场.*报告|市场.*预测|行业.*报告|bafta|gdca|gdc.*报告|pegi|欧盟.*法|dma|监管|并购|收购|投资|沙特|savvy|重组|裁员|layoff|退休|辞职|ceo.*新|新.*ceo|pif|gamestop.*财报|ea.*财报|财报|版号|整合/); }}
+          return c.match(/newzoo|circana|npd|市场.*报告|市场.*预测|行业.*报告|bafta|gdca|gdc.*报告|pegi|欧盟.*法|dma|监管|并购|收购|投资|沙特|savvy|重组|裁员|layoff|退休|辞职|ceo.*新|新.*ceo|pif|gamestop.*财报|ea.*财报|财报|版号|整合|德国.*市场|market.*grew/); }}
 ];
 
 // 判断新闻是否属于"核心新闻"四大类别
@@ -1190,10 +1192,12 @@ function isCoreSpotlightNews(n) {
     const isIndustryReport = c.match(/newzoo.*报告|newzoo.*预测|circana.*数据|日本.*市场.*暴涨|pc.*超越.*主机|pegi.*评级|欧盟.*dma|欧盟.*法案|诉讼.*赌博/);
     // 类别5: 重大并购/高管变动
     const isMajorMA = c.match(/phil\s?spencer.*退休|asha\s?sharma.*接任|字节.*沐瞳|60亿|沙特.*capcom|动视暴雪.*整合/);
-    // 类别6: 热门产品数据（销量/争议/里程碑）
+    // 类别6: 热门产品数据（仅顶级产品+里程碑/争议数据）
     const isHotProduct = c.match(/红色沙漠|crimson\s?desert|杀戮尖塔|slay.*spire|marathon|生化危机.*安魂/) && c.match(/销量|突破|万份|百万|争议|ai.*素材/);
-    // 类别7: 上游硬件/供应链
-    const isUpstreamHW = c.match(/内存.*涨|ram.*短缺|dram.*价|芯片.*短缺|涨价.*硬件|ps5.*涨价|液冷|asetek/);
+    // 类别7: 上游硬件/供应链（内存涨价、芯片短缺、硬件成本压力）
+    const isUpstreamHW = c.match(/内存.*涨|内存.*降|内存.*短缺|ram.*短缺|dram|hbm|芯片.*短缺|液冷|asetek/) ||
+        (c.match(/涨价|price.*hike/) && c.match(/硬件|ram|内存|芯片|成本/)) ||
+        c.match(/nvidia.*dlss|rtx\s?50|gpu.*短缺/);
 
     return !!(isPlatformHW || isTopProduct || isMajorEvent || isIndustryReport || isMajorMA || isHotProduct || isUpstreamHW);
 }
@@ -1247,7 +1251,7 @@ function renderNewsSpotlight(importantNews) {
 
     // 对核心新闻进行主题聚类
     const clusters = clusterNewsByTopic(coreNews);
-    const clusterOrder = ['hot-product','sony-ps','xbox-ms','steam-valve','epic','nintendo','upstream-hw','market-info','other'];
+    const clusterOrder = ['upstream-hw','hot-product','sony-ps','xbox-ms','steam-valve','epic','nintendo','market-info','other'];
     const sortedClusterKeys = clusterOrder.filter(k => clusters[k]);
 
     let html = `<div class="spotlight-header">

@@ -776,7 +776,7 @@ function mUpdateNewsTab() {
         } else {
             // 主题聚类
             const mClusters = typeof clusterNewsByTopic === 'function' ? clusterNewsByTopic(coreNews) : { all: { label: '核心新闻', icon: '🔥', news: coreNews }};
-            const mClusterOrder = ['hot-product','sony-ps','xbox-ms','steam-valve','epic','nintendo','upstream-hw','market-info','other','all'];
+            const mClusterOrder = ['upstream-hw','hot-product','sony-ps','xbox-ms','steam-valve','epic','nintendo','market-info','other','all'];
             const mSortedKeys = mClusterOrder.filter(k => mClusters[k]);
 
             let spotlightHTML = `<div class="m-news-section-label">🔥 近2周核心新闻 <span style="color:var(--text-muted);font-weight:400;">${coreNews.length}条 · ${mSortedKeys.length}主题 (${dateRange2})</span></div>`;
