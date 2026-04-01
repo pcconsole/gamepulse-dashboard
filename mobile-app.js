@@ -776,7 +776,7 @@ function mUpdateNewsTab() {
         } else {
             // 主题聚类
             const mClusters = typeof clusterNewsByTopic === 'function' ? clusterNewsByTopic(coreNews) : { all: { label: '核心新闻', icon: '🔥', news: coreNews }};
-            const mClusterOrder = ['sony-ps','xbox-ms','steam-valve','epic','nintendo','top-games','hw-tech','industry-report','ma-strategy','other','all'];
+            const mClusterOrder = ['hot-product','sony-ps','xbox-ms','steam-valve','epic','nintendo','upstream-hw','market-info','other','all'];
             const mSortedKeys = mClusterOrder.filter(k => mClusters[k]);
 
             let spotlightHTML = `<div class="m-news-section-label">🔥 近2周核心新闻 <span style="color:var(--text-muted);font-weight:400;">${coreNews.length}条 · ${mSortedKeys.length}主题 (${dateRange2})</span></div>`;
@@ -804,8 +804,12 @@ function mUpdateNewsTab() {
         spotlight.querySelectorAll('.m-spotlight-card').forEach(card => {
             card.addEventListener('click', () => {
                 const id = card.dataset.newsId;
-                const article = articles.find(a => String(a.id) === id);
-                if (article) mShowNewsSheet(article);
+                if (typeof openNewsDetail === 'function') {
+                    openNewsDetail(parseInt(id));
+                } else {
+                    const article = articles.find(a => String(a.id) === id);
+                    if (article) mShowNewsSheet(article);
+                }
             });
         });
     }
@@ -888,7 +892,12 @@ function mUpdateNewsTab() {
         // 绑定交互
         feed.querySelectorAll('.m-news-item').forEach(item => {
             item.addEventListener('click', () => {
-                item.classList.toggle('expanded');
+                const id = item.dataset.newsId;
+                if (typeof openNewsDetail === 'function' && id) {
+                    openNewsDetail(parseInt(id));
+                } else {
+                    item.classList.toggle('expanded');
+                }
             });
         });
 
@@ -952,26 +961,101 @@ function getCategoryLabel(cat) {
 }
 
 function mShowNewsSheet(article) {
-    const overlay = document.getElementById('mSheetOverlay');
-    const title = document.getElementById('mSheetTitle');
-    const content = document.getElementById('mSheetContent');
+    openNewsDetail(article.id);
+}
 
-    title.textContent = article.title;
-    content.innerHTML = `
-        <div style="margin-bottom:12px;">
-            <span class="m-news-category m-news-cat-${article.category || 'market'}" style="font-size:0.72rem;">${getCategoryLabel(article.category)}</span>
-            <span style="color:var(--text-muted);font-size:0.72rem;margin-left:8px;">${article.date || ''} · ${article.source || ''}</span>
+// 移动端新闻详情弹窗（与PC端openNewsDetail对齐）
+function openNewsDetail(newsId) {
+    const articles = typeof newsData !== 'undefined' ? newsData : (typeof newsArticles !== 'undefined' ? newsArticles : []);
+    const n = articles.find(x => x.id === newsId);
+    if (!n) return;
+
+    const insightText = n.analysis || '';
+    const sentimentMap = { positive: '利好', negative: '利空', neutral: '中性' };
+    const sentimentColorMap = { positive: '#22c55e', negative: '#ef4444', neutral: '#f59e0b' };
+    const sentimentLabel = sentimentMap[n.sentiment] || '中性';
+    const sentimentColor = sentimentColorMap[n.sentiment] || '#f59e0b';
+
+    // 全量关联事件
+    const explicitRelated = (n.relatedNewsIds || []).map(rid => articles.find(x => x.id === rid)).filter(Boolean);
+    const tagSet = new Set((n.tags || []).map(t => t.toLowerCase()));
+    const autoRelated = articles.filter(x => {
+        if (x.id === n.id) return false;
+        if (explicitRelated.find(r => r.id === x.id)) return false;
+        const xTags = (x.tags || []).map(t => t.toLowerCase());
+        const overlap = xTags.filter(t => tagSet.has(t)).length;
+        return overlap >= 2 || (overlap >= 1 && x.category === n.category);
+    }).sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 8);
+    const allRelated = [...explicitRelated, ...autoRelated].slice(0, 10);
+
+    const sourceLinks = n.sourceUrls || [{ name: n.source, url: n.sourceUrl }];
+
+    let overlay = document.getElementById('newsDetailOverlay');
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.id = 'newsDetailOverlay';
+        overlay.className = 'news-detail-overlay';
+        document.body.appendChild(overlay);
+    }
+
+    overlay.innerHTML = `
+    <div class="news-detail-modal" style="max-width:95vw;padding:20px;margin-top:10px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+            <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
+                <span style="font-size:0.72rem;font-weight:700;padding:3px 8px;border-radius:4px;background:rgba(99,102,241,0.12);color:#6366f1;">${getCategoryLabel(n.category)}</span>
+                ${n.featured ? '<span style="font-size:0.72rem;font-weight:700;padding:3px 8px;border-radius:4px;background:rgba(245,158,11,0.15);color:#f59e0b;">⭐ 重点</span>' : ''}
+                <span style="font-size:0.72rem;color:${sentimentColor};font-weight:700;">${sentimentLabel}</span>
+            </div>
+            <button onclick="closeNewsDetail()" style="background:none;border:1px solid var(--border-color,#333);color:var(--text-secondary,#999);font-size:1.3rem;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;">&times;</button>
         </div>
-        <div style="line-height:1.7;color:var(--text-secondary);">
-            ${article.content || article.summary || '暂无详细内容'}
+        <h3 style="font-size:1.05rem;font-weight:800;line-height:1.4;margin:0 0 8px 0;color:var(--text-primary,#fff);">${n.title}</h3>
+        <div style="font-size:0.75rem;color:var(--text-secondary,#888);margin-bottom:8px;">
+            <span style="font-weight:700;color:#6366f1;">${n.source}</span> · ${n.date} · <span style="font-family:monospace;">#${n.id}</span>
         </div>
-        ${article.tags && article.tags.length ? `<div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:4px;">
-            ${article.tags.map(t => `<span class="m-news-tag-sm">${t}</span>`).join('')}
+        ${(n.tags||[]).length ? `<div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:14px;">${(n.tags||[]).map(t => `<span class="m-news-tag-sm">${t}</span>`).join('')}</div>` : ''}
+        <div style="background:var(--bg-secondary,#1a1a2e);border:1px solid var(--border-color,#333);border-radius:10px;padding:14px;margin-bottom:10px;">
+            <div style="font-size:0.82rem;font-weight:700;margin-bottom:6px;">📄 新闻摘要</div>
+            <p style="font-size:0.82rem;line-height:1.7;color:var(--text-secondary,#aaa);margin:0;">${n.summary}</p>
+        </div>
+        ${insightText ? `<div style="background:rgba(99,102,241,0.06);border:1px solid rgba(99,102,241,0.15);border-radius:10px;padding:14px;margin-bottom:10px;">
+            <div style="font-size:0.82rem;font-weight:700;margin-bottom:6px;">💡 洞察分析</div>
+            <p style="font-size:0.8rem;line-height:1.65;color:var(--text-secondary,#aaa);margin:0;">${insightText}</p>
         </div>` : ''}
-        ${article.url ? `<a href="${article.url}" target="_blank" style="display:inline-block;margin-top:12px;color:var(--accent-primary);font-size:0.78rem;">🔗 查看原文</a>` : ''}
-    `;
+        <div style="background:var(--bg-secondary,#1a1a2e);border:1px solid var(--border-color,#333);border-radius:10px;padding:14px;margin-bottom:10px;">
+            <div style="font-size:0.82rem;font-weight:700;margin-bottom:8px;">🔗 信息来源（${sourceLinks.length}）</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;">
+                ${sourceLinks.map(s => `<a href="${s.url}" target="_blank" style="display:flex;align-items:center;gap:3px;padding:4px 10px;border-radius:6px;background:rgba(59,130,246,0.08);color:#3b82f6;font-size:0.75rem;font-weight:600;text-decoration:none;border:1px solid rgba(59,130,246,0.15);">${s.name} ↗</a>`).join('')}
+            </div>
+        </div>
+        ${allRelated.length > 0 ? `<div style="background:rgba(20,184,166,0.04);border:1px solid rgba(20,184,166,0.15);border-radius:10px;padding:14px;">
+            <div style="font-size:0.82rem;font-weight:700;margin-bottom:8px;">🔗 关联事件（${allRelated.length}）</div>
+            ${allRelated.map(r => `<div onclick="openNewsDetail(${r.id})" style="display:flex;align-items:flex-start;gap:8px;padding:7px 8px;border-radius:6px;cursor:pointer;transition:background 0.15s;" onmouseover="this.style.background='rgba(20,184,166,0.08)'" onmouseout="this.style.background='transparent'">
+                <span style="font-size:0.7rem;font-weight:700;color:#14b8a6;min-width:60px;white-space:nowrap;">${r.date}</span>
+                <div style="min-width:0;"><div style="font-size:0.78rem;font-weight:600;color:var(--text-primary,#fff);line-height:1.3;">${r.title}</div>
+                <div style="font-size:0.68rem;color:var(--text-muted,#666);line-height:1.3;margin-top:2px;">${(r.summary||'').substring(0,60)}${(r.summary||'').length>60?'...':''}</div></div>
+            </div>`).join('')}
+        </div>` : ''}
+    </div>`;
 
+    overlay.style.display = 'flex';
     overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    overlay.addEventListener('click', function handler(e) {
+        if (e.target === overlay) {
+            closeNewsDetail();
+            overlay.removeEventListener('click', handler);
+        }
+    });
+}
+
+function closeNewsDetail() {
+    const overlay = document.getElementById('newsDetailOverlay');
+    if (overlay) {
+        overlay.classList.remove('active');
+        overlay.style.display = 'none';
+        document.body.style.overflow = '';
+    }
 }
 
 // ============ Tab: 财报 ============
