@@ -6,8 +6,8 @@
 
 // ============ 元数据 ============
 const storewatchMeta = {
-    lastUpdated: '2026-03-30',
-    dataRange: '2025-12-19 ~ 2026-03-30',
+    lastUpdated: '2026-04-01',
+    dataRange: '2025-12-19 ~ 2026-03-31',
     sheetId: 'LXXdrpHEWcSr',
     mainSheet: 'BB08J2',
     vendorSheet: 'xsejuk',
@@ -864,10 +864,35 @@ const storewatchNonGameTags = [
 
 // ============ 商店监控数据 ============
 // 数据来源：腾讯文档 LXXdrpHEWcSr (sheet BB08J2)
-// 最后更新：2026-03-30
-// 数据范围：2025-12-19 ~ 2026-03-30
+// 最后更新：2026-04-01
+// 数据范围：2025-12-19 ~ 2026-03-31
 const storewatchData = {
     PS5: [
+        { date: '2026-03-31', slots: {
+            'Must See': { positions: [
+                { rank: 1, us: '侠盗猎车手6（Grand Theft Auto VI）', jp: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', hk: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', vendor: 'Take-Two' },
+                { rank: 2, us: 'MARVEL Tōkon: Fighting Souls', jp: '人中之龙:极3（Yakuza 3 Remastere）', hk: '长篇传奇杰作游戏专题', vendor: '索尼' },
+                { rank: 3, us: '春季特卖（SPRING SALE）', jp: '绝区零（Zenless Zone Zero）', hk: '仁王3（NIOH 3）', vendor: '米哈游' },
+                { rank: 4, us: '全龄向游戏专题（FOR ALL AGES）', jp: '动漫改编游戏专题', hk: 'PS5必玩游戏', isNonGame: true },
+                { rank: 5, us: '脑力解谜游戏专题（BRAIN TEASERS）', jp: '烹饪游戏专题（COOKING GAMES）', hk: '合家欢游戏专题', isNonGame: true },
+                { rank: 6, us: '动漫改编游戏专题', jp: '七大罪:起源（The Seven Deadly Sins:Origin）', hk: '跑车浪漫旅7（Gran Turismo 7）', vendor: 'Netmarble' },
+            ] },
+            'Top games in your country': { positions: [
+                { rank: 1, us: '堡垒之夜（Fortnite）', jp: '七大罪:起源（The Seven Deadly Sins:Origin）', hk: '红色沙漠（Crimson Desert）', vendor: 'Epic' },
+                { rank: 2, us: '罗布乐思（Roblox）', jp: '赛马大亨10（Winning Post 10 2026）', hk: '实况足球（eFootball）', vendor: 'Roblox' },
+                { rank: 3, us: '红色沙漠（Crimson Desert）', jp: '红色沙漠（Crimson Desert）', hk: 'EA Sports FC 26', vendor: 'Pearl Abyss' },
+                { rank: 4, us: '使命召唤:黑色行动7（Call of Duty: Black Ops 7）', jp: '明日方舟:终末地（Arknights: Endfield）', hk: 'NBA 2K26', vendor: '微软' },
+                { rank: 5, us: 'Apex英雄（Apex Legends）', jp: '原神（Genshin impact）', hk: '跑车浪漫旅7（Gran Turismo 7）', vendor: 'EA' },
+            ] },
+            "What's hot": { positions: [
+                { rank: 1, us: '烹饪游戏专题（COOKING GAMES）', jp: '我的世界（Minecraft）', hk: '崩坏:星穹铁道（Honkai: Star Rail）', vendor: '微软' },
+                { rank: 2, us: '日式角色扮演游戏专题（JAPANESE RPG）', jp: 'PS5必玩游戏', hk: '逸剑风云决（Wandering Sword）', vendor: '侠萌游戏' },
+                { rank: 3, us: '最佳伙伴游戏专题（BEST COMPANIONS）', jp: '流星洛克人:完美专题（Mega Man Star Force: Legacy Collection）', hk: '怪物猎人:荒野（Monster Hunter Wilds）', vendor: 'CAPCOM' },
+                { rank: 4, us: '人中之龙游戏专题', jp: '奇异人生:重聚（Life is Strange: Reunion）', hk: 'PS5必玩游戏', vendor: 'Square Enix' },
+                { rank: 5, us: '动漫改编游戏专题', jp: '零红蝶', hk: '跑车浪漫旅7（Gran Turismo 7）', vendor: 'KOEI TECMO' },
+                { rank: 6, us: '故事驱动游戏专题（STORY-DRIVEN）', jp: 'PlayStation5 5周年 特集', hk: '守望先锋（OVERWATCH）', vendor: '暴雪' },
+            ] },
+        } },
         { date: '2026-03-30', slots: {
             'Must See': { positions: [
                 { rank: 1, us: '侠盗猎车手6（Grand Theft Auto VI）', jp: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', hk: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', vendor: 'Take-Two' },
@@ -880,7 +905,7 @@ const storewatchData = {
             'Top games in your country': { positions: [
                 { rank: 1, us: '堡垒之夜（Fortnite）', jp: '七大罪:起源（The Seven Deadly Sins:Origin）', hk: '红色沙漠（Crimson Desert）', vendor: 'Epic' },
                 { rank: 2, us: '红色沙漠（Crimson Desert）', jp: '赛马大亨10（Winning Post 10 2026）', hk: '实况足球（eFootball）', vendor: 'Pearl Abyss' },
-                { rank: 3, us: '罗布乐思（Roblox）', jp: '红色沙漠（Crimson Desert）', hk: '绝区零（Zenless Zone Zero）', vendor: 'Roblox' },
+                { rank: 3, us: '罗布乐思（Roblox）', jp: '红色沙漠（Crimson Desert）', hk: 'EA Sports FC 26', vendor: 'Roblox' },
                 { rank: 4, us: '使命召唤:黑色行动7（Call of Duty: Black Ops 7）', jp: '明日方舟:终末地（Arknights: Endfield）', hk: 'NBA 2K26', vendor: '微软' },
                 { rank: 5, us: 'Apex英雄（Apex Legends）', jp: '原神（Genshin impact）', hk: '绝区零（Zenless Zone Zero）', vendor: 'EA' },
             ] },
@@ -2470,6 +2495,37 @@ const storewatchData = {
         } },
     ],
     Xbox: [
+        { date: '2026-03-31', slots: {
+            'Dash home-banner': { positions: [
+                { rank: 1, us: 'Xbox Partner Preview', jp: 'Xbox Partner Preview', hk: 'Xbox Partner Preview', isNonGame: true },
+                { rank: 2, us: 'Game Pass 会员优惠', jp: 'Game Pass 会员优惠', hk: '最佳评选游戏特卖（Best rated sale）', isNonGame: true },
+                { rank: 3, us: '奇异人生:重聚（Life is Strange: Reunion）', jp: '无障碍功能游戏（Accessibility in games）', hk: 'Alien Deathstorm', vendor: 'Square Enix' },
+            ] },
+            'Dash home-banner2': { positions: [
+                { rank: 1, us: '崩解（Unravel）', jp: '最终幻想16（Final Fantasy XVI）', hk: '美国职业棒球大联盟26（MLB The Show 26）', vendor: 'EA' },
+                { rank: 2, us: '极限竞速:地平线5（Forza Horizon 5）', jp: '最终幻想8：重制版（Final Fantasy VII Remake）', hk: '红色沙漠（Crimson Desert）', vendor: '微软' },
+                { rank: 3, us: '双影奇境（Split Fiction）', jp: '最终幻想战略版：狮子战争（Final Fantasy Tactics）', hk: '红色沙漠（Crimson Desert）', vendor: 'EA' },
+                { rank: 4, us: 'NBA 2K26', jp: '尼尔：自动人形（NieR:Automata）', hk: '我的世界（Minecraft）', vendor: 'Take-Two' },
+                { rank: 5, us: '光与影:33号远征队（Clair Obscur:Expedition 33）', jp: '歧路旅人0（Octopath Traveler 0）', hk: 'ARC Raiders', vendor: 'Kepler' },
+                { rank: 6, us: '杀手:暗杀世界（HITMAN World of Assassination）', jp: '勇者斗恶龙Ⅰ&Ⅱ:HD-2D重制版（DRAGON QUEST I & IIHD-2D Remake）', hk: '极限竞速:地平线5（Forza Horizon 5）', vendor: '微软' },
+            ] },
+            'Game Home-banner': { positions: [
+                { rank: 1, us: 'Stranger Than Heaven', jp: 'Stranger Than Heaven', hk: 'Stranger Than Heaven' },
+                { rank: 2, us: '奇异人生:重聚（Life is Strange: Reunion）', jp: '奇异人生:重聚（Life is Strange: Reunion）', hk: '奇异人生:重聚（Life is Strange: Reunion）', vendor: 'Square Enix' },
+            ] },
+            'Game Home-hero banner': { positions: [
+                { rank: 1, us: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', jp: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', hk: '怪物猎人物语3:命运双龙（Monster Hunter Stories 3: TWISTED REFLECTION）', vendor: 'CAPCOM' },
+            ] },
+            'Store Home-banner': { positions: [
+                { rank: 1, us: '战争游戏发行商特卖（Wargaming Publisher Sale）', jp: 'Xbox Partner Preview', hk: 'Xbox Partner Preview', isNonGame: true },
+                { rank: 2, us: '动作冒险游戏促销活动（Action Adventure sale）', jp: '动作冒险游戏促销活动（Action Adventure sale）', hk: '动作冒险游戏促销活动（Action Adventure sale）', isNonGame: true },
+                { rank: 3, us: 'Xbox Partner Preview', jp: '罗布乐思（Roblox）', hk: '罗布乐思（Roblox）', vendor: 'Roblox' },
+                { rank: 4, us: '趋势游戏（Trending）', jp: '趋势游戏（Trending）', hk: '无主之地4（Borderlands 4）', vendor: 'Take-Two' },
+            ] },
+            'Store Home-hero banner': { positions: [
+                { rank: 1, us: '奇异人生:重聚（Life is Strange: Reunion）', jp: '奇异人生:重聚（Life is Strange: Reunion）', hk: '奇异人生:重聚（Life is Strange: Reunion）', vendor: 'Square Enix' },
+            ] },
+        } },
         { date: '2026-03-30', slots: {
             'Dash home-banner': { positions: [
                 { rank: 1, us: 'Xbox Partner Preview', jp: 'Xbox Partner Preview', hk: 'Xbox Partner Preview', isNonGame: true },
@@ -2485,7 +2541,7 @@ const storewatchData = {
                 { rank: 6, us: '彩虹六号:围攻X（Tom Clancy\'s Rainbow Six Siege X）', jp: '1971 Project Helios', hk: '勇者斗恶龙Ⅰ&Ⅱ:HD-2D重制版（DRAGON QUEST I & IIHD-2D Remake）', vendor: '育碧' },
             ] },
             'Game Home-banner': { positions: [
-                { rank: 1, us: '奇异人生:重聚（Life is Strange: Reunion）', jp: '盗贼之海（Sea of Thieves）', hk: '盗贼之海（Sea of Thieves）', vendor: 'Square Enix' },
+                { rank: 1, us: '盗贼之海（Sea of Thieves）', jp: '盗贼之海（Sea of Thieves）', hk: '盗贼之海（Sea of Thieves）', vendor: '微软' },
                 { rank: 2, us: '动作冒险游戏促销活动', jp: '动作冒险游戏促销活动', hk: '动作冒险游戏促销活动', isNonGame: true },
             ] },
             'Game Home-hero banner': { positions: [
