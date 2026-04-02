@@ -1303,6 +1303,8 @@ function mergeClusterNews(clusterNews, clusterId) {
 
     return merged.sort((a, b) => new Date(b.date) - new Date(a.date));
 }
+
+function renderNewsSpotlight(importantNews) {
     const container = document.getElementById('newsSpotlight');
     if (!container) return;
 
