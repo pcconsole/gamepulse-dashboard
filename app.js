@@ -1224,7 +1224,85 @@ function clusterNewsByTopic(newsList) {
     return clusters;
 }
 
-function renderNewsSpotlight(importantNews) {
+// ═══════════════ 聚类内新闻合并引擎 v7.0 ═══════════════
+// 对"热门产品"和"上游硬件"等信息密集聚类进行智能合并
+// 同一话题的多条新闻合并为一条主新闻 + 关联子新闻列表
+
+function mergeClusterNews(clusterNews, clusterId) {
+    // 仅对特定聚类启用合并（信息密度高的分类）
+    const MERGE_CLUSTERS = ['hot-product', 'upstream-hw', 'market-info'];
+    if (!MERGE_CLUSTERS.includes(clusterId) || clusterNews.length <= 3) return clusterNews;
+
+    // 定义合并关键词组 — 同组内的新闻可合并
+    const MERGE_GROUPS = {
+        'hot-product': [
+            { key: 'crimson-desert', match: /红色沙漠|crimson\s?desert/i, label: '红色沙漠' },
+            { key: 'slay-spire', match: /杀戮尖塔|slay.*spire/i, label: '杀戮尖塔2' },
+            { key: 're-requiem', match: /生化危机.*安魂|resident\s?evil.*requiem/i, label: '生化危机9' },
+            { key: 'marathon', match: /marathon/i, label: 'Marathon' },
+            { key: 'gta6', match: /gta\s?6|gta\s?vi/i, label: 'GTA6' },
+        ],
+        'upstream-hw': [
+            { key: 'memory-price', match: /内存.*涨|内存.*降|dram|ddr5|hbm|ram.*价/i, label: '内存价格' },
+            { key: 'chip-shortage', match: /芯片.*短缺|chip.*shortage|gpu.*短缺/i, label: '芯片供应' },
+            { key: 'nvidia-gpu', match: /nvidia|dlss|rtx\s?50|gpu|显卡/i, label: 'GPU/显卡' },
+            { key: 'hw-cost', match: /涨价.*硬件|硬件.*成本|主机.*涨价|液冷|asetek/i, label: '硬件成本' },
+        ],
+        'market-info': [
+            { key: 'ma', match: /并购|收购|投资|整合|沙特|pif/i, label: '投资并购' },
+            { key: 'personnel', match: /退休|辞职|接任|ceo|裁员|重组|layoff/i, label: '人事变动' },
+            { key: 'report', match: /newzoo|circana|市场.*报告|行业.*报告|市场.*预测/i, label: '市场报告' },
+            { key: 'regulation', match: /pegi|欧盟|dma|监管|法案|诉讼|版号/i, label: '政策监管' },
+        ]
+    };
+
+    const groups = MERGE_GROUPS[clusterId];
+    if (!groups) return clusterNews;
+
+    const merged = [];
+    const used = new Set();
+
+    groups.forEach(group => {
+        const matching = clusterNews.filter(n => {
+            if (used.has(n.id)) return false;
+            const text = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
+            return group.match.test(text);
+        });
+
+        if (matching.length === 0) return;
+
+        if (matching.length === 1) {
+            merged.push(matching[0]);
+            used.add(matching[0].id);
+        } else {
+            // 多条合并：取最新的作为主新闻，其余作为子新闻
+            const sorted = [...matching].sort((a, b) => new Date(b.date) - new Date(a.date));
+            const primary = sorted[0];
+            const subordinates = sorted.slice(1);
+
+            // 将子新闻ID合并到主新闻的 relatedNewsIds 中
+            const existingRelated = primary.relatedNewsIds || [];
+            const mergedRelatedIds = [...new Set([...existingRelated, ...subordinates.map(s => s.id)])];
+
+            // 创建合并后的虚拟新闻对象（不修改原数据）
+            merged.push({
+                ...primary,
+                _mergedCount: matching.length,
+                _mergedLabel: group.label,
+                _mergedSubNews: subordinates,
+                relatedNewsIds: mergedRelatedIds
+            });
+            matching.forEach(n => used.add(n.id));
+        }
+    });
+
+    // 未命中任何合并组的新闻保留原样
+    clusterNews.forEach(n => {
+        if (!used.has(n.id)) merged.push(n);
+    });
+
+    return merged.sort((a, b) => new Date(b.date) - new Date(a.date));
+}
     const container = document.getElementById('newsSpotlight');
     if (!container) return;
 
@@ -1251,7 +1329,7 @@ function renderNewsSpotlight(importantNews) {
 
     // 对核心新闻进行主题聚类
     const clusters = clusterNewsByTopic(coreNews);
-    const clusterOrder = ['upstream-hw','hot-product','sony-ps','xbox-ms','steam-valve','epic','nintendo','market-info','other'];
+    const clusterOrder = ['sony-ps','xbox-ms','hot-product','upstream-hw','steam-valve','epic','market-info','nintendo','other'];
     const sortedClusterKeys = clusterOrder.filter(k => clusters[k]);
 
     let html = `<div class="spotlight-header">
@@ -1262,28 +1340,31 @@ function renderNewsSpotlight(importantNews) {
     // 按主题聚类展示
     sortedClusterKeys.forEach(key => {
         const cluster = clusters[key];
-        const clusterNews = cluster.news.sort((a, b) => new Date(b.date) - new Date(a.date));
+        // v7.0: 对信息密集聚类进行智能合并
+        const clusterNews = mergeClusterNews(cluster.news.sort((a, b) => new Date(b.date) - new Date(a.date)), key);
 
         html += `<div class="spotlight-cluster" data-cluster="${key}">
             <div class="spotlight-cluster-header">
                 <span class="spotlight-cluster-icon">${cluster.icon}</span>
                 <span class="spotlight-cluster-label">${cluster.label}</span>
-                <span class="spotlight-cluster-count">${clusterNews.length} 条</span>
+                <span class="spotlight-cluster-count">${cluster.news.length} 条${clusterNews.length < cluster.news.length ? `（精炼为 ${clusterNews.length} 组）` : ''}</span>
             </div>
             <div class="spotlight-grid spotlight-grid-dynamic">`;
 
         clusterNews.forEach(n => {
             const featuredReason = getFeaturedReason(n);
             const insightText = n.analysis || generateAutoInsight(n);
-            // 同主题聚类内的关联：除了显式 relatedNewsIds，还找同聚类的其他新闻
+            // 合并后的子新闻 + 显式关联 + 同聚类关联
+            const mergedSubs = n._mergedSubNews || [];
             const explicitRelated = (n.relatedNewsIds || []).map(rid => newsData.find(x => x.id === rid)).filter(Boolean);
-            const clusterRelated = clusterNews.filter(x => x.id !== n.id && !explicitRelated.find(r => r.id === x.id)).slice(0, 2);
-            const allRelated = [...explicitRelated, ...clusterRelated].slice(0, 4);
+            const clusterRelated = clusterNews.filter(x => x.id !== n.id && !explicitRelated.find(r => r.id === x.id) && !mergedSubs.find(s => s.id === x.id)).slice(0, 2);
+            const allRelated = [...mergedSubs, ...explicitRelated, ...clusterRelated].slice(0, 5);
 
             html += `<div class="spotlight-card spotlight-card-enhanced" style="position:relative;cursor:pointer;" onclick="openNewsDetail(${n.id})">
                 <div class="spotlight-card-header">
                     <span class="spotlight-category">${getNewsCategory(n.category)}</span>
                     <div style="display:flex;align-items:center;gap:6px;">
+                        ${n._mergedCount ? `<span style="font-size:0.65rem;font-weight:700;padding:2px 6px;border-radius:4px;background:rgba(20,184,166,0.12);color:#14b8a6;">${n._mergedLabel} · ${n._mergedCount}条合并</span>` : ''}
                         <span class="featured-reason-tag">${featuredReason}</span>
                         <a href="${n.sourceUrl}" target="_blank" class="spotlight-link" title="查看原文" onclick="event.stopPropagation()">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2h8v8M14 2L6 10"/></svg>
@@ -1304,13 +1385,14 @@ function renderNewsSpotlight(importantNews) {
             }
 
             if (allRelated.length > 0) {
+                const relatedLabel = mergedSubs.length > 0 ? '同话题动态' : '关联事件';
                 html += `<div class="spotlight-related">
                     <div class="spotlight-related-header">
                         <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 1v14M1 8h14"/></svg>
-                        <span>关联事件（${allRelated.length}）</span>
+                        <span>${relatedLabel}（${allRelated.length}）</span>
                     </div>
                     <div class="spotlight-related-list">`;
-                allRelated.slice(0, 3).forEach(r => {
+                allRelated.slice(0, 4).forEach(r => {
                     html += `<div class="spotlight-related-item" onclick="event.stopPropagation();openNewsDetail(${r.id})" title="${r.title}" style="cursor:pointer;">
                         <span class="spotlight-related-date">${r.date.substring(5)}</span>
                         <span class="spotlight-related-title">${r.title.length > 40 ? r.title.substring(0,40)+'...' : r.title}</span>

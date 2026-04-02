@@ -779,27 +779,33 @@ function mUpdateNewsTab() {
         } else {
             // 主题聚类
             const mClusters = typeof clusterNewsByTopic === 'function' ? clusterNewsByTopic(coreNews) : { all: { label: '核心新闻', icon: '🔥', news: coreNews }};
-            const mClusterOrder = ['upstream-hw','hot-product','sony-ps','xbox-ms','steam-valve','epic','nintendo','market-info','other','all'];
+            const mClusterOrder = ['sony-ps','xbox-ms','hot-product','upstream-hw','steam-valve','epic','market-info','nintendo','other','all'];
             const mSortedKeys = mClusterOrder.filter(k => mClusters[k]);
 
             let spotlightHTML = `<div class="m-news-section-label">🔥 近2周核心新闻 <span style="color:var(--text-muted);font-weight:400;">${coreNews.length}条 · ${mSortedKeys.length}主题 (${dateRange2})</span></div>`;
 
             mSortedKeys.forEach(key => {
                 const cluster = mClusters[key];
-                const clusterNews = cluster.news.sort((a, b) => new Date(b.date) - new Date(a.date));
-                spotlightHTML += `<div class="m-cluster-header">${cluster.icon || '📌'} ${cluster.label} <span style="color:var(--text-muted);font-size:0.7rem;">${clusterNews.length}条</span></div>`;
+                // v7.0: 对信息密集聚类进行智能合并
+                const clusterNews = typeof mergeClusterNews === 'function'
+                    ? mergeClusterNews(cluster.news.sort((a, b) => new Date(b.date) - new Date(a.date)), key)
+                    : cluster.news.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+                spotlightHTML += `<div class="m-cluster-header">${cluster.icon || '📌'} ${cluster.label} <span style="color:var(--text-muted);font-size:0.7rem;">${cluster.news.length}条${clusterNews.length < cluster.news.length ? `（精炼${clusterNews.length}组）` : ''}</span></div>`;
                 spotlightHTML += clusterNews.map(a => {
                     const featuredReason = typeof getFeaturedReason === 'function' ? getFeaturedReason(a) : '⭐ 重点';
                     const insightText = a.analysis || (typeof generateAutoInsight === 'function' ? generateAutoInsight(a) : '');
-                    // 聚类内关联事件（与PC端一致）
+                    // 合并后的子新闻 + 聚类内关联事件
+                    const mergedSubs = a._mergedSubNews || [];
                     const explicitRelated = (a.relatedNewsIds || []).map(rid => articles.find(x => x.id === rid)).filter(Boolean);
-                    const clusterRelated = clusterNews.filter(x => x.id !== a.id && !explicitRelated.find(r => r.id === x.id)).slice(0, 2);
-                    const allRelated = [...explicitRelated, ...clusterRelated].slice(0, 4);
+                    const clusterRelated = clusterNews.filter(x => x.id !== a.id && !explicitRelated.find(r => r.id === x.id) && !mergedSubs.find(s => s.id === x.id)).slice(0, 2);
+                    const allRelated = [...mergedSubs, ...explicitRelated, ...clusterRelated].slice(0, 5);
 
                     let cardHTML = `<div class="m-spotlight-card" data-news-id="${a.id || ''}">
                         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
                             <div style="display:flex;gap:4px;align-items:center;flex-wrap:wrap;">
                                 <span class="m-news-category m-news-cat-${a.category || 'market'}">${getCategoryLabel(a.category)}</span>
+                                ${a._mergedCount ? `<span style="font-size:0.58rem;font-weight:700;padding:2px 5px;border-radius:4px;background:rgba(20,184,166,0.12);color:#14b8a6;">${a._mergedLabel} · ${a._mergedCount}条</span>` : ''}
                                 <span style="font-size:0.62rem;font-weight:700;padding:2px 6px;border-radius:4px;background:rgba(245,158,11,0.12);color:#f59e0b;">${featuredReason}</span>
                             </div>
                             ${a.sourceUrl ? `<a href="${a.sourceUrl}" target="_blank" class="m-spotlight-link" title="查看原文" onclick="event.stopPropagation()" style="color:var(--text-muted);flex-shrink:0;padding:2px;">
@@ -815,8 +821,8 @@ function mUpdateNewsTab() {
 
                     if (allRelated.length > 0) {
                         cardHTML += `<div class="m-spotlight-related" style="margin-top:6px;padding:6px 8px;background:rgba(20,184,166,0.04);border:1px solid rgba(20,184,166,0.12);border-radius:6px;">
-                            <div style="font-size:0.65rem;font-weight:700;color:#14b8a6;margin-bottom:4px;">🔗 关联事件（${allRelated.length}）</div>`;
-                        allRelated.slice(0, 3).forEach(r => {
+                            <div style="font-size:0.65rem;font-weight:700;color:#14b8a6;margin-bottom:4px;">🔗 ${mergedSubs.length > 0 ? '同话题动态' : '关联事件'}（${allRelated.length}）</div>`;
+                        allRelated.slice(0, 4).forEach(r => {
                             cardHTML += `<div class="m-spotlight-related-item" onclick="event.stopPropagation();openNewsDetail(${r.id})" style="display:flex;gap:6px;padding:3px 0;cursor:pointer;font-size:0.68rem;">
                                 <span style="color:#14b8a6;font-weight:600;white-space:nowrap;">${(r.date||'').substring(5)}</span>
                                 <span style="color:var(--text-secondary);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${r.title.length > 35 ? r.title.substring(0,35)+'...' : r.title}</span>
@@ -828,7 +834,7 @@ function mUpdateNewsTab() {
                     cardHTML += `<div class="m-news-meta" style="margin-top:6px;">
                             <span>${a.source || ''}</span>
                             <span>${a.date || ''}</span>
-                            ${(a.tags||[]).map(t => `<span class="m-news-tag-sm">${t}</span>`).join('')}
+                            ${(a.tags||[]).slice(0,5).map(t => `<span class="m-news-tag-sm">${t}</span>`).join('')}
                         </div>
                     </div>`;
                     return cardHTML;
