@@ -1145,32 +1145,38 @@ function updateNewsTab() {
 // 核心新闻标准：平台&硬件动态、顶级头部产品表现、顶级新品&发布会、全球行业重点报告
 
 const NEWS_TOPIC_CLUSTERS = [
-    { id: 'upstream-hw', label: '🔧 上游硬件 & 供应链', icon: '🔧',
-      match: n => { const c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
-          return c.match(/内存.*涨|内存.*降|内存.*短缺|dram|ddr5|hbm|ram.*短缺|ram.*shortage|芯片.*短缺|液冷|asetek/) ||
-                 (c.match(/涨价|price.*hike|price.*increase/) && c.match(/硬件|成本|ram|内存|芯片|组件|component/)) ||
-                 (n.category === 'hardware' && c.match(/nvidia|dlss|gpu|显卡|amd|rtx\s?50|裸眼3d/)); }},
-    { id: 'hot-product', label: '🔥 热门产品', icon: '🔥',
-      match: n => { const c = ((n.title||'')+' '+(n.tags||[]).join(' ')).toLowerCase();
-          return c.match(/红色沙漠|crimson\s?desert|杀戮尖塔|slay.*spire|生化危机.*安魂|resident\s?evil.*requiem|marathon|gta\s?6/) && c.match(/销量|突破|万份|百万|million|争议|ai.*素材|道歉|定档|延期/); }},
     { id: 'sony-ps', label: '🎮 索尼 PlayStation', icon: '🔵',
       match: n => { const c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
           return c.match(/索尼|sony|playstation|ps5|ps6|psn|ps plus|pssr|push\s?square|ps\s?pro|dualsense|ps\s?portal|ps\s?stars|dark\s?outlaw|bungie/); }},
     { id: 'xbox-ms', label: '🟢 微软 Xbox', icon: '🟢',
       match: n => { const c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
-          return c.match(/xbox|微软.*游戏|game\s?pass|phil\s?spencer|asha\s?sharma|helix|xbox\s?wire|bethesda.*xbox|动视暴雪|activision|copilot.*xbox|xbox.*copilot|partner\s?preview/); }},
+          return c.match(/xbox|微软.*游戏|game\s?pass|xgp|phil\s?spencer|asha\s?sharma|helix|xbox\s?wire|bethesda.*xbox|动视暴雪|activision|copilot.*xbox|xbox.*copilot|partner\s?preview|微软.*订阅/); }},
+    { id: 'hot-product', label: '🔥 热门产品', icon: '🔥',
+      match: n => { const c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
+          return c.match(/红色沙漠|crimson\s?desert|杀戮尖塔|slay.*spire|生化危机.*安魂|resident\s?evil.*requiem|marathon|gta\s?6|gta\s?vi/) ||
+                 (c.match(/销量.*突破|万份|百万|million|创纪录|里程碑|登顶/) && c.match(/游戏|game/)); }},
+    { id: 'upstream-hw', label: '🔧 上游硬件 & 供应链', icon: '🔧',
+      match: n => { const c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
+          return c.match(/内存.*涨|内存.*降|内存.*短缺|dram|ddr5|hbm|ram.*短缺|ram.*shortage|芯片.*短缺|液冷|asetek/) ||
+                 (c.match(/涨价|price.*hike|price.*increase/) && c.match(/硬件|成本|ram|内存|芯片|组件|component/)) ||
+                 c.match(/nvidia|dlss|gpu|显卡|amd|rtx\s?50|裸眼3d|geforce|cuda/) ||
+                 (n.category === 'hardware'); }},
     { id: 'steam-valve', label: '🔷 Steam & Valve', icon: '🔷',
       match: n => { const c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
           return c.match(/steam|valve|steam\s?machine|steam\s?deck|steam\s?frame|steamos|steam.*特卖|steam.*spring|cs2/); }},
     { id: 'epic', label: '🟣 Epic Games', icon: '🟣',
       match: n => { const c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
           return c.match(/epic\s?games|fortnite|堡垒之夜|epic.*store|egs|虚幻引擎|unreal/); }},
-    { id: 'nintendo', label: '🔴 任天堂 Switch', icon: '🔴',
-      match: n => { const c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
-          return c.match(/任天堂|nintendo|switch\s?2|switch2|宝可梦|pokemon|马里奥|mario|zelda|塞尔达|indie\s?world/); }},
     { id: 'market-info', label: '📊 市场信息', icon: '📊',
       match: n => { const c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
-          return c.match(/newzoo|circana|npd|市场.*报告|市场.*预测|行业.*报告|bafta|gdca|gdc.*报告|pegi|欧盟.*法|dma|监管|并购|收购|投资|沙特|savvy|重组|裁员|layoff|退休|辞职|ceo.*新|新.*ceo|pif|gamestop.*财报|ea.*财报|财报|版号|整合|德国.*市场|market.*grew/); }}
+          return c.match(/newzoo|circana|npd|市场.*报告|市场.*预测|行业.*报告|bafta|gdca|gdc.*报告/) ||
+                 c.match(/pegi|欧盟.*法|dma|监管|并购|收购|投资|沙特|savvy|重组|裁员|layoff/) ||
+                 c.match(/退休|辞职|ceo.*新|新.*ceo|pif|gamestop.*财报|ea.*财报|财报|版号|整合/) ||
+                 c.match(/德国.*市场|market.*grew|迪士尼|disney|ea.*裁|育碧|ubisoft.*裁/) ||
+                 c.match(/诉讼|反垄断|关税|tariff/); }},
+    { id: 'nintendo', label: '🔴 任天堂 Switch', icon: '🔴',
+      match: n => { const c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
+          return c.match(/任天堂|nintendo|switch\s?2|switch2|宝可梦|pokemon|马里奥|mario|zelda|塞尔达|indie\s?world/); }}
 ];
 
 // 判断新闻是否属于"核心新闻"四大类别
@@ -1313,9 +1319,8 @@ function renderNewsSpotlight(importantNews) {
     const fmtDate = d => `${d.getMonth()+1}/${d.getDate()}`;
     const dateRangeLabel = `${fmtDate(fourteenDaysAgo)}~${fmtDate(now)}`;
 
-    // 近14天 featured 新闻中，进一步筛选"核心新闻"
-    const recentFeatured = importantNews.filter(n => new Date(n.date) >= fourteenDaysAgo);
-    const coreNews = recentFeatured.filter(n => isCoreSpotlightNews(n));
+    // 近14天 featured 新闻全部纳入核心区（v7.0: 取消 isCoreSpotlightNews 二次过滤）
+    const coreNews = importantNews.filter(n => new Date(n.date) >= fourteenDaysAgo);
 
     // 将核心新闻ID集合暴露给 renderNewsFeed 使用，避免重复
     window._coreSpotlightIds = new Set(coreNews.map(n => n.id));
@@ -1483,31 +1488,12 @@ function renderNewsFeed(allNews) {
 
     // 近14天内的新闻
     const recentAll = allNews.filter(n => new Date(n.date) >= fourteenDaysAgo);
-    // 近14天的重点新闻（featured，且排除核心区已展示的）
-    const recentFeatured = recentAll.filter(n => n.featured === true && !coreIds.has(n.id));
-    // 近14天的非重点新闻（同样排除核心区已展示的）
+    // 近14天的非重点新闻（排除核心区已展示的 featured）
     const recentNonFeatured = recentAll.filter(n => !n.featured && !coreIds.has(n.id));
     // 更早的历史新闻（14天以外）
     const historyNews = allNews.filter(n => new Date(n.date) < fourteenDaysAgo);
 
     let html = '';
-
-    // ── 近2周其他重点新闻 ──
-    html += `<div class="news-feed-header">
-        <h4>📋 近2周其他重点新闻</h4>
-        <span class="news-feed-count">${recentFeatured.length} 条（${dateRangeLabel}，核心区外）</span>
-    </div>
-    <div class="news-list">`;
-
-    if (recentFeatured.length === 0) {
-        html += `<div class="news-empty-hint">近14天内核心区外暂无其他重点新闻</div>`;
-    }
-
-    recentFeatured.forEach(n => {
-        html += renderNewsItemHTML(n);
-    });
-
-    html += '</div>';
 
     // ── 近2周一般动态（折叠） ──
     if (recentNonFeatured.length > 0) {

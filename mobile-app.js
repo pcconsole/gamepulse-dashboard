@@ -766,9 +766,8 @@ function mUpdateNewsTab() {
         const fmtD = d => `${d.getMonth()+1}/${d.getDate()}`;
         const dateRange2 = `${fmtD(fourteenDaysAgo2)}~${fmtD(now2)}`;
 
-        // v6.0: 核心条件筛选（平台硬件/顶级产品/新品发布/行业报告）
-        const recentFeatured = filtered.filter(a => a.featured === true && new Date(a.date) >= fourteenDaysAgo2);
-        const coreNews = recentFeatured.filter(a => typeof isCoreSpotlightNews === 'function' ? isCoreSpotlightNews(a) : true);
+        // v7.0: 所有近2周 featured 新闻全部纳入核心区（取消二次过滤）
+        const coreNews = filtered.filter(a => a.featured === true && new Date(a.date) >= fourteenDaysAgo2);
 
         // 暴露核心ID集合供去重
         window._mCoreSpotlightIds = new Set(coreNews.map(a => a.id));
@@ -856,7 +855,7 @@ function mUpdateNewsTab() {
         });
     }
 
-    // 新闻列表 — 近2周其他重点新闻 + 一般动态折叠 + 历史归档（v6.0 去重升级）
+    // 新闻列表 — 一般动态折叠 + 历史归档（v7.0: featured 全部已入核心区）
     const feed = document.getElementById('mNewsFeed');
     if (feed) {
         const now = new Date();
@@ -864,23 +863,14 @@ function mUpdateNewsTab() {
         const fmtDate = d => `${d.getMonth()+1}/${d.getDate()}`;
         const dateRangeLabel = `${fmtDate(fourteenDaysAgo)}~${fmtDate(now)}`;
 
-        // v6.0: 排除核心区已展示的新闻
+        // 排除核心区已展示的新闻
         const coreIds = window._mCoreSpotlightIds || new Set();
 
         const recentAll = filtered.filter(a => new Date(a.date) >= fourteenDaysAgo);
-        const recentFeatured = recentAll.filter(a => a.featured === true && !coreIds.has(a.id));
         const recentNonFeatured = recentAll.filter(a => !a.featured && !coreIds.has(a.id));
         const historyNews = filtered.filter(a => new Date(a.date) < fourteenDaysAgo);
 
         let feedHTML = '';
-
-        // 近2周其他重点新闻（核心区外）
-        if (recentFeatured.length > 0) {
-            feedHTML += `<div class="m-news-section-label">📋 近2周其他重点新闻 <span style="color:var(--text-muted);font-weight:400;">${recentFeatured.length}条 (${dateRangeLabel})</span></div>`;
-            feedHTML += recentFeatured.map(a => mRenderNewsItemHTML(a)).join('');
-        } else {
-            feedHTML += `<div class="m-news-empty-hint">核心区外暂无其他重点新闻</div>`;
-        }
 
         // 近2周一般动态（折叠）
         if (recentNonFeatured.length > 0) {
