@@ -251,8 +251,8 @@
             <!-- News KPI -->
             <div class="m-kpi-scroll" id="mNewsKPI">
                 <div class="m-kpi-card blue"><div class="m-kpi-label">新闻总数</div><div class="m-kpi-value" id="mNewsTotalCount">0</div><div class="m-kpi-sub" id="mNewsUpdateTime">--</div></div>
-                <div class="m-kpi-card red"><div class="m-kpi-label">重要新闻</div><div class="m-kpi-value" id="mNewsImportantCount">0</div><div class="m-kpi-sub">需重点关注</div></div>
-                <div class="m-kpi-card teal"><div class="m-kpi-label">覆盖信息源</div><div class="m-kpi-value" id="mNewsSourceCount">0</div><div class="m-kpi-sub">个</div></div>
+                <div class="m-kpi-card red"><div class="m-kpi-label">⭐ 重点新闻</div><div class="m-kpi-value" id="mNewsImportantCount">0</div><div class="m-kpi-sub" id="mNewsFeaturedRatio">占比 --</div></div>
+                <div class="m-kpi-card teal"><div class="m-kpi-label">覆盖信息源</div><div class="m-kpi-value" id="mNewsSourceCount">0</div><div class="m-kpi-sub">个行业媒体/平台</div></div>
                 <div class="m-kpi-card purple"><div class="m-kpi-label">本周新增</div><div class="m-kpi-value" id="mNewsWeeklyCount">0</div><div class="m-kpi-sub">条</div></div>
             </div>
 
@@ -277,6 +277,9 @@
                     <option value="media">媒体</option>
                     <option value="data">数据</option>
                 </select>
+                <button class="m-icon-btn" id="mNewsRefreshBtn" title="刷新新闻" style="padding:4px 6px;">
+                    <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 9a8 8 0 0114.3-5M17 9a8 8 0 01-14.3 5"/><path d="M1 3v4h4M17 15v-4h-4"/></svg>
+                </button>
             </div>
 
             <!-- 重点新闻 -->
@@ -284,6 +287,9 @@
 
             <!-- 新闻 Feed -->
             <div class="m-news-feed" id="mNewsFeed"></div>
+
+            <!-- 信息源参考 -->
+            <div class="m-news-sources" id="mNewsSources" style="margin-top:16px;"></div>
         </section>
 
         <!-- ==================== TAB: 重点公司财报分析 ==================== -->

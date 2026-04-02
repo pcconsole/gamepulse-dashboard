@@ -738,13 +738,16 @@ function mUpdateNewsTab() {
         filtered = filtered.filter(a => !a.featured);
     }
 
-    // KPI
+    // KPI — 与PC端同步
     mSetText('mNewsTotalCount', articles.length);
     const featuredCount = articles.filter(a => a.featured === true).length;
     mSetText('mNewsImportantCount', featuredCount);
+    const featuredPct = articles.length > 0 ? Math.round(featuredCount / articles.length * 100) : 0;
+    mSetText('mNewsFeaturedRatio', `占比 ${featuredPct}%`);
 
-    const sources = new Set(articles.map(a => a.source).filter(Boolean));
-    mSetText('mNewsSourceCount', sources.size);
+    // 信息源数量：使用 newsSources 预定义列表（与PC端一致）
+    const sourceCount = (typeof newsSources !== 'undefined' && newsSources.length) ? newsSources.length : new Set(articles.map(a => a.source).filter(Boolean)).size;
+    mSetText('mNewsSourceCount', sourceCount);
 
     const oneWeekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
     const weeklyCount = articles.filter(a => new Date(a.date) >= oneWeekAgo).length;
@@ -752,7 +755,7 @@ function mUpdateNewsTab() {
 
     if (articles.length > 0) {
         const latestDate = articles[0]?.date || '--';
-        mSetText('mNewsUpdateTime', `更新: ${latestDate}`);
+        mSetText('mNewsUpdateTime', `最近更新：${latestDate}`);
     }
 
     // 重点新闻 (Spotlight) — 近2周核心新闻（v6.0 主题聚类升级）
@@ -783,19 +786,52 @@ function mUpdateNewsTab() {
 
             mSortedKeys.forEach(key => {
                 const cluster = mClusters[key];
-                spotlightHTML += `<div class="m-cluster-header">${cluster.icon || '📌'} ${cluster.label} <span style="color:var(--text-muted);font-size:0.7rem;">${cluster.news.length}条</span></div>`;
-                spotlightHTML += cluster.news.sort((a, b) => new Date(b.date) - new Date(a.date)).map(a => {
-                    const insightText = a.analysis || '';
-                    return `<div class="m-spotlight-card" data-news-id="${a.id || ''}">
+                const clusterNews = cluster.news.sort((a, b) => new Date(b.date) - new Date(a.date));
+                spotlightHTML += `<div class="m-cluster-header">${cluster.icon || '📌'} ${cluster.label} <span style="color:var(--text-muted);font-size:0.7rem;">${clusterNews.length}条</span></div>`;
+                spotlightHTML += clusterNews.map(a => {
+                    const featuredReason = typeof getFeaturedReason === 'function' ? getFeaturedReason(a) : '⭐ 重点';
+                    const insightText = a.analysis || (typeof generateAutoInsight === 'function' ? generateAutoInsight(a) : '');
+                    // 聚类内关联事件（与PC端一致）
+                    const explicitRelated = (a.relatedNewsIds || []).map(rid => articles.find(x => x.id === rid)).filter(Boolean);
+                    const clusterRelated = clusterNews.filter(x => x.id !== a.id && !explicitRelated.find(r => r.id === x.id)).slice(0, 2);
+                    const allRelated = [...explicitRelated, ...clusterRelated].slice(0, 4);
+
+                    let cardHTML = `<div class="m-spotlight-card" data-news-id="${a.id || ''}">
+                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                            <div style="display:flex;gap:4px;align-items:center;flex-wrap:wrap;">
+                                <span class="m-news-category m-news-cat-${a.category || 'market'}">${getCategoryLabel(a.category)}</span>
+                                <span style="font-size:0.62rem;font-weight:700;padding:2px 6px;border-radius:4px;background:rgba(245,158,11,0.12);color:#f59e0b;">${featuredReason}</span>
+                            </div>
+                            ${a.sourceUrl ? `<a href="${a.sourceUrl}" target="_blank" class="m-spotlight-link" title="查看原文" onclick="event.stopPropagation()" style="color:var(--text-muted);flex-shrink:0;padding:2px;">
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2h8v8M14 2L6 10"/></svg>
+                            </a>` : ''}
+                        </div>
                         <div class="m-news-title"><span style="color:#f97316;">🔥</span> ${a.title}</div>
-                        <div class="m-news-summary">${a.summary || a.content || ''}</div>
-                        ${insightText ? `<div class="m-spotlight-insight"><span style="color:var(--accent-primary);font-weight:700;font-size:0.7rem;">💡 洞察</span> <span style="font-size:0.72rem;color:var(--text-secondary);">${insightText.length > 80 ? insightText.substring(0,80)+'...' : insightText}</span></div>` : ''}
-                        <div class="m-news-meta">
-                            <span class="m-news-category m-news-cat-${a.category || 'market'}">${getCategoryLabel(a.category)}</span>
+                        <div class="m-news-summary">${a.summary || a.content || ''}</div>`;
+
+                    if (insightText) {
+                        cardHTML += `<div class="m-spotlight-insight"><span style="color:var(--accent-primary);font-weight:700;font-size:0.7rem;">💡 洞察分析</span> <span style="font-size:0.72rem;color:var(--text-secondary);">${insightText}</span></div>`;
+                    }
+
+                    if (allRelated.length > 0) {
+                        cardHTML += `<div class="m-spotlight-related" style="margin-top:6px;padding:6px 8px;background:rgba(20,184,166,0.04);border:1px solid rgba(20,184,166,0.12);border-radius:6px;">
+                            <div style="font-size:0.65rem;font-weight:700;color:#14b8a6;margin-bottom:4px;">🔗 关联事件（${allRelated.length}）</div>`;
+                        allRelated.slice(0, 3).forEach(r => {
+                            cardHTML += `<div class="m-spotlight-related-item" onclick="event.stopPropagation();openNewsDetail(${r.id})" style="display:flex;gap:6px;padding:3px 0;cursor:pointer;font-size:0.68rem;">
+                                <span style="color:#14b8a6;font-weight:600;white-space:nowrap;">${(r.date||'').substring(5)}</span>
+                                <span style="color:var(--text-secondary);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${r.title.length > 35 ? r.title.substring(0,35)+'...' : r.title}</span>
+                            </div>`;
+                        });
+                        cardHTML += `</div>`;
+                    }
+
+                    cardHTML += `<div class="m-news-meta" style="margin-top:6px;">
                             <span>${a.source || ''}</span>
                             <span>${a.date || ''}</span>
+                            ${(a.tags||[]).map(t => `<span class="m-news-tag-sm">${t}</span>`).join('')}
                         </div>
                     </div>`;
+                    return cardHTML;
                 }).join('');
             });
             spotlight.innerHTML = spotlightHTML;
@@ -930,25 +966,32 @@ function mUpdateNewsTab() {
             });
         });
     }
+
+    // 信息源参考（与PC端同步）
+    mRenderNewsSources();
 }
 
 function mRenderNewsItemHTML(a, isHistory = false) {
-    const impCls = a.featured ? 'm-imp-featured' : (a.importance === 'high' ? 'm-imp-high' : (a.importance === 'medium' ? 'm-imp-medium' : 'm-imp-low'));
-    const impLabel = a.featured ? '⭐ 重点' : (a.importance === 'high' ? '重要' : (a.importance === 'medium' ? '关注' : '一般'));
+    const impLabel = a.featured ? '⭐ 重点' : (typeof getImportanceLabel === 'function' ? getImportanceLabel(a.importance) : (a.importance === 'high' ? '🔴 重要' : (a.importance === 'medium' ? '🟡 关注' : '⚪ 一般')));
     const historyCls = isHistory ? ' m-news-item-history' : '';
     const featuredCls = a.featured ? ' m-news-featured' : '';
+    const importantCls = a.importance === 'high' ? ' important' : '';
+    const impBadgeCls = a.featured ? 'm-imp-featured' : (a.importance === 'high' ? 'm-imp-high' : (a.importance === 'medium' ? 'm-imp-medium' : 'm-imp-low'));
     return `
-    <div class="m-news-item ${a.featured ? 'important featured' : (a.importance === 'high' ? 'important' : '')}${historyCls}${featuredCls}" data-news-id="${a.id || ''}">
+    <div class="m-news-item${importantCls}${a.featured ? ' featured' : ''}${historyCls}${featuredCls}" data-news-id="${a.id || ''}">
         <div class="m-news-head">
-            <span class="m-imp-badge ${impCls}">${impLabel}</span>
-            <span class="m-news-title">${a.featured ? '<span style="color:#f59e0b;">⭐</span> ' : ''}${a.title}</span>
+            <span class="m-imp-badge ${impBadgeCls}">${impLabel}</span>
+            <span class="m-news-category m-news-cat-${a.category || 'market'}" style="flex-shrink:0;">${getCategoryLabel(a.category)}</span>
+            <span class="m-news-title" style="flex:1;">${a.featured ? '<span style="color:#f59e0b;">⭐</span> ' : ''}${a.title}</span>
+            ${a.sourceUrl ? `<a href="${a.sourceUrl}" target="_blank" class="m-news-item-link" title="查看原文" onclick="event.stopPropagation()" style="color:var(--text-muted);flex-shrink:0;padding:2px;">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2h8v8M14 2L6 10"/></svg>
+            </a>` : ''}
         </div>
         <div class="m-news-summary">${a.summary || a.content || ''}</div>
         <div class="m-news-tags">
-            ${(a.tags || []).slice(0, 3).map(t => `<span class="m-news-tag-sm">${t}</span>`).join('')}
+            ${(a.tags || []).map(t => `<span class="m-news-tag-sm">${t}</span>`).join('')}
         </div>
         <div class="m-news-meta">
-            <span class="m-news-category m-news-cat-${a.category || 'market'}">${getCategoryLabel(a.category)}</span>
             <span>${a.source || ''}</span>
             <span>${a.date || ''}</span>
         </div>
@@ -960,21 +1003,68 @@ function getCategoryLabel(cat) {
     return map[cat] || cat || '其他';
 }
 
+// 信息源参考渲染（与PC端 renderNewsSources 同步）
+function mRenderNewsSources() {
+    const container = document.getElementById('mNewsSources');
+    if (!container) return;
+    if (typeof newsSources === 'undefined' || !newsSources.length) {
+        container.innerHTML = '';
+        return;
+    }
+
+    const categories = {
+        'official': { label: '🏛️ 官方渠道', sources: [] },
+        'media': { label: '📰 游戏媒体', sources: [] },
+        'data': { label: '📊 数据平台', sources: [] }
+    };
+
+    newsSources.forEach(s => {
+        if (categories[s.category]) {
+            categories[s.category].sources.push(s);
+        }
+    });
+
+    let html = `<div style="padding:12px 14px;background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md);">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+            <div style="font-size:0.82rem;font-weight:700;color:var(--text-primary);">🔗 信息源参考</div>
+            <span style="font-size:0.65rem;color:var(--text-muted);">以下媒体/平台为主要监测对象</span>
+        </div>`;
+
+    Object.values(categories).forEach(cat => {
+        if (cat.sources.length === 0) return;
+        html += `<div style="margin-bottom:10px;">
+            <div style="font-size:0.7rem;font-weight:700;color:var(--text-secondary);margin-bottom:6px;">${cat.label}</div>
+            <div style="display:flex;flex-wrap:wrap;gap:4px;">`;
+        cat.sources.forEach(s => {
+            html += `<a href="${s.url}" target="_blank" style="display:inline-flex;align-items:center;gap:3px;padding:3px 8px;border-radius:6px;background:rgba(99,102,241,0.06);border:1px solid rgba(99,102,241,0.1);color:var(--accent-primary);font-size:0.65rem;font-weight:600;text-decoration:none;">
+                ${s.name}
+                <span style="font-size:0.55rem;color:var(--text-muted);">${s.platform}</span>
+            </a>`;
+        });
+        html += `</div></div>`;
+    });
+
+    html += `</div>`;
+    container.innerHTML = html;
+}
+
 function mShowNewsSheet(article) {
     openNewsDetail(article.id);
 }
 
-// 移动端新闻详情弹窗（与PC端openNewsDetail对齐）
+// 移动端新闻详情弹窗（与PC端openNewsDetail完全对齐）
 function openNewsDetail(newsId) {
     const articles = typeof newsData !== 'undefined' ? newsData : (typeof newsArticles !== 'undefined' ? newsArticles : []);
     const n = articles.find(x => x.id === newsId);
     if (!n) return;
 
-    const insightText = n.analysis || '';
+    const insightText = n.analysis || (typeof generateAutoInsight === 'function' ? generateAutoInsight(n) : '');
+    const featuredReason = n.featured ? (typeof getFeaturedReason === 'function' ? getFeaturedReason(n) : '⭐ 重点') : '';
     const sentimentMap = { positive: '利好', negative: '利空', neutral: '中性' };
     const sentimentColorMap = { positive: '#22c55e', negative: '#ef4444', neutral: '#f59e0b' };
     const sentimentLabel = sentimentMap[n.sentiment] || '中性';
     const sentimentColor = sentimentColorMap[n.sentiment] || '#f59e0b';
+    const impLabel = typeof getImportanceLabel === 'function' ? getImportanceLabel(n.importance) : (n.importance === 'high' ? '🔴 重要' : (n.importance === 'medium' ? '🟡 关注' : '⚪ 一般'));
 
     // 全量关联事件
     const explicitRelated = (n.relatedNewsIds || []).map(rid => articles.find(x => x.id === rid)).filter(Boolean);
@@ -1003,7 +1093,8 @@ function openNewsDetail(newsId) {
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
             <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
                 <span style="font-size:0.72rem;font-weight:700;padding:3px 8px;border-radius:4px;background:rgba(99,102,241,0.12);color:#6366f1;">${getCategoryLabel(n.category)}</span>
-                ${n.featured ? '<span style="font-size:0.72rem;font-weight:700;padding:3px 8px;border-radius:4px;background:rgba(245,158,11,0.15);color:#f59e0b;">⭐ 重点</span>' : ''}
+                ${n.featured ? `<span style="font-size:0.72rem;font-weight:700;padding:3px 8px;border-radius:4px;background:rgba(245,158,11,0.15);color:#f59e0b;">${featuredReason || '⭐ 重点'}</span>` : ''}
+                <span style="font-size:0.72rem;font-weight:600;padding:3px 8px;border-radius:4px;background:rgba(100,116,139,0.1);color:var(--text-secondary);">${impLabel}</span>
                 <span style="font-size:0.72rem;color:${sentimentColor};font-weight:700;">${sentimentLabel}</span>
             </div>
             <button onclick="closeNewsDetail()" style="background:none;border:1px solid var(--border-color,#333);color:var(--text-secondary,#999);font-size:1.3rem;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;">&times;</button>
@@ -1877,6 +1968,7 @@ function mBindEvents() {
     document.getElementById('mNewsFeaturedFilter')?.addEventListener('change', () => mUpdateNewsTab());
     document.getElementById('mNewsCategoryFilter')?.addEventListener('change', () => mUpdateNewsTab());
     document.getElementById('mNewsSourceFilter')?.addEventListener('change', () => mUpdateNewsTab());
+    document.getElementById('mNewsRefreshBtn')?.addEventListener('click', () => mUpdateNewsTab());
 
     // Earnings 筛选器
     document.getElementById('mEarningsSearch')?.addEventListener('input', () => mUpdateEarningsTab());
