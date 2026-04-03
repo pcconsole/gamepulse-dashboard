@@ -163,7 +163,7 @@ async function loadCSVData() {
                 game.isGenreInferred = true;
             }
 
-            // 计算基于Mscience的日均流水（基于数据截止日期2026-02-28）
+            // 计算基于Mscience的日均流水（基于数据截止日期2026-04-02）
             if (game.releaseDateObj && game.lifetimeRevenue > 0) {
                 const diffMs = DATA_CUTOFF_DATE - game.releaseDateObj;
                 game.daysOnline = Math.max(Math.ceil(diffMs / (1000 * 60 * 60 * 24)), 1);
@@ -443,7 +443,7 @@ function getMedian(arr) {
 function pct(val, total) { return total ? Math.round((val / total) * 100) : 0; }
 
 // ============ 数据截止日期常量 ============
-const DATA_CUTOFF_DATE = new Date('2026-02-28');
+const DATA_CUTOFF_DATE = new Date('2026-04-02');
 
 /** 计算基于Mscience的日均流水 (Mscience Lifetime Digital Revenue / 上线天数) */
 function calcMscienceDailyRevenue(game) {

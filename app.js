@@ -533,7 +533,7 @@ function showGameDetail(game) {
                     <div><strong>日均流水(Msc):</strong> <span style="color:var(--accent-primary);font-weight:700;">${formatRevenue(game.mscienceDailyRev || 0)}</span></div>
                     <div><strong>日均流水(原始):</strong> ${formatRevenue(game.dailyRevenue)}</div>
                     <div><strong>总数字收入:</strong> ${formatRevenue(game.lifetimeRevenue)}</div>
-                    <div><strong>上线天数:</strong> ${game.daysOnline || '-'} 天 (截止2026-02-28)</div>
+                    <div><strong>上线天数:</strong> ${game.daysOnline || '-'} 天 (截止2026-04-02)</div>
                     <div><strong>总数字销量:</strong> ${formatNumber(game.lifetimeUnits)}</div>
                     <div><strong>Steam 价格:</strong> $${(game.steamPrice || 0).toFixed(2)}</div>
                     <div><strong>Steam 收入:</strong> ${formatRevenue(game.steamRevenue)}</div>
