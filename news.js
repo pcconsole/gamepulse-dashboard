@@ -1,8 +1,8 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-04-01T17:20:00Z
-// 更新者: news-agent (v5.0 行业研究专家升级：洞察分析+历史关联系统)
+// 最后更新: 2026-04-03T18:00:00Z
+// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功+web_search 12轮)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
@@ -173,6 +173,134 @@ const newsSources = [
 ];
 
 const newsData = [
+    {
+        "id": 139,
+        "title": "Krafton关闭免费PUBG衍生作Blindspot：仅运营2个月，验证'快速试错'策略",
+        "summary": "Krafton宣布关闭仅运营两个月的免费PC游戏《PUBG Blindspot》。尽管PUBG系列为公司带来创纪录营收，但该衍生作初期玩家峰值仅3251人，近期降至几百人。Krafton表示此决定符合其通过抢先体验'快速验证游戏潜力'的策略，团队认为无法持续提供预期体验。公司将继续开发其他项目并扩展PUBG IP生态。",
+        "source": "GamesIndustry",
+        "sourceUrl": "https://www.gamesindustry.biz/krafton-shutters-free-to-play-pubg-spin-off-after-two-months",
+        "sourceUrls": [
+            {"name": "腾讯文档", "url": "https://docs.qq.com/sheet/LMLdoimBsILX"},
+            {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/krafton-shutters-free-to-play-pubg-spin-off-after-two-months"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-03-30",
+        "tags": ["Krafton", "PUBG", "Blindspot", "F2P", "关闭", "快速试错"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 138,
+        "title": "Saros(Returnal精神续作)完成压盘：Housemarque新作4月30日PS5独占发售",
+        "summary": "Housemarque开发的《Saros》宣布已完成开发压盘(Gone Gold)，将于4月30日独占PS5发售，此前曾经历短暂延期。PlayStation Blog同期发布上手试玩预览给予高度评价。作为Returnal团队的新作，Saros被视为2026年PS5平台最重要的独占作品之一。",
+        "source": "腾讯文档",
+        "sourceUrl": "https://docs.qq.com/sheet/LMLdoimBsILX",
+        "sourceUrls": [
+            {"name": "腾讯文档", "url": "https://docs.qq.com/sheet/LMLdoimBsILX"},
+            {"name": "PlayStation Blog", "url": "https://blog.playstation.com"},
+            {"name": "GamingBolt", "url": "https://gamingbolt.com"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-01",
+        "tags": ["Saros", "Housemarque", "PS5", "独占", "Returnal", "索尼第一方"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "relatedNewsIds": [121]
+    },
+    {
+        "id": 137,
+        "title": "Xbox品牌重塑：新CEO叫停争议'This is an Xbox'广告，透露下一代主机Project Helix",
+        "summary": "微软确认新任Xbox游戏业务负责人Asha Sharma主导了一次品牌'重塑'(reset)——叫停此前因淡化Xbox硬件引发争议的'This is an Xbox'广告宣传活动。Sharma表示该广告'感觉不像Xbox'，承诺回归游戏主机传统。同时微软透露了下一代Xbox主机'Project Helix'的初步信息，定位为高性能、以玩家为先的PC+主机融合体验。",
+        "source": "EuroGamer",
+        "sourceUrl": "https://www.eurogamer.net/microsoft-confirms-new-xbox-boss-scrapped-controversial-ad-campaign",
+        "sourceUrls": [
+            {"name": "腾讯文档", "url": "https://docs.qq.com/sheet/LMLdoimBsILX"},
+            {"name": "EuroGamer", "url": "https://www.eurogamer.net/microsoft-confirms-new-xbox-boss-scrapped-controversial-ad-campaign"},
+            {"name": "IGN", "url": "https://www.ign.com/articles/this-is-an-xbox-announcement-looks-to-have-been-pulled-offline-after-new-gaming-boss-asha-sharma-takes-charge"},
+            {"name": "Pure Xbox", "url": "https://www.purexbox.com/news/2026/03/it-was-asha-sharmas-direction-to-scrub-this-is-an-xbox-marketing-suggests-report"}
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-03-30",
+        "tags": ["Xbox", "微软", "Asha Sharma", "品牌重塑", "Project Helix", "下一代主机"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Xbox品牌重塑是Asha Sharma上任后最明确的战略信号——从'万物皆Xbox'回归硬件主机传统。叫停争议广告说明微软内部已认识到过度多平台策略伤害了Xbox品牌认知。Project Helix定位PC+主机融合，暗示下一代Xbox可能模糊主机与PC的边界。对比索尼PS6走高成本路线，微软可能以差异化定位抢占中端市场。",
+        "relatedNewsIds": [109, 99, 120]
+    },
+    {
+        "id": 136,
+        "title": "Switch 2助推第三方游戏销量增长76%：年度收入达$23亿，Warner Bros.领跑",
+        "summary": "Ampere Analysis最新报告显示，Nintendo Switch与Switch 2平台第三方游戏2025年销量同比增长76%，年度收入达$23亿。Switch 2发售后第三方软件销售增长$10亿（Q2-Q4 2025），推动发行商大幅加码Switch生态支持。Warner Bros.成为最大第三方发行商，Bandai Namco和EA收入均超$1亿。尽管单位销量下降2.5%，平均售价提升81%推动了收入增长。",
+        "source": "Ampere Analysis",
+        "sourceUrl": "https://cdn.www.ampereanalysis.com/media/press_releases/2026/03/31/Ampere_Analysis_Nintendo_Switch_2_Third_Party.pdf",
+        "sourceUrls": [
+            {"name": "腾讯文档", "url": "https://docs.qq.com/sheet/LMLdoimBsILX"},
+            {"name": "Ampere Analysis", "url": "https://cdn.www.ampereanalysis.com/media/press_releases/2026/03/31/Ampere_Analysis_Nintendo_Switch_2_Third_Party.pdf"},
+            {"name": "My Nintendo News", "url": "https://mynintendonews.com/2026/04/01/analytics-firm-says-nintendo-switch-and-nintendo-switch-2-third-party-ecosystem-sales-up-76-in-2025/"},
+            {"name": "TweakTown", "url": "https://www.tweaktown.com/news/110810/switch-2-boosts-third-party-sales-by-dollars1-billion-analyst-firm-estimates-wb-games-bandai-and-ea-earned-dollars100-million-plus/index.html"}
+        ],
+        "category": "market",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-01",
+        "tags": ["Switch 2", "任天堂", "第三方", "销量增长", "76%", "Ampere Analysis", "Warner Bros"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Switch 2第三方销量+76%是任天堂生态史上最强的第三方拉动信号。$23亿年收入中增量$10亿直接来自Switch 2发售效应，证明Switch 2成功打破了'任天堂平台第三方卖不动'的历史魔咒。单位销量降2.5%但ASP涨81%，说明Switch 2玩家愿意为高定价3A付费。Warner Bros.领跑暗示霍格沃茨遗产等IP在Switch 2上的表现远超预期。",
+        "relatedNewsIds": [107, 108, 123]
+    },
+    {
+        "id": 135,
+        "title": "Starfield 4月7日正式登陆PS5：Bethesda最大规模免费更新'Free Lanes'同步上线",
+        "summary": "Bethesda确认《星空》(Starfield)将于4月7日登陆PlayStation 5，结束Xbox/PC独占2年半。PS5版将同步上线'Free Lanes'大更新——号称发售以来最大规模的免费内容更新，全面革新太空旅行系统。此举标志着微软首方大作多平台战略的进一步推进，也意味着Bethesda最具争议的独占期正式结束。",
+        "source": "PlayStation Blog",
+        "sourceUrl": "https://blog.playstation.com/2026/03/17/starfield-is-coming-to-playstation-5-on-april-7/",
+        "sourceUrls": [
+            {"name": "PlayStation Blog", "url": "https://blog.playstation.com/2026/03/17/starfield-is-coming-to-playstation-5-on-april-7/"},
+            {"name": "Bethesda", "url": "https://bethesda.net/en/game/starfield/article/5EB9OYuO9DdP4lna0jkyMz/starfield-launches-on-playstation-5-on-april-7"},
+            {"name": "GameSpot", "url": "https://www.gamespot.com/articles/starfield-hits-ps5-on-april-7-extensive-new-dlc-coming-to-all-platforms/1100-6538823/"},
+            {"name": "Push Square", "url": "https://www.pushsquare.com/news/2026/03/starfield-finally-lands-on-ps5-in-april-with-new-dlc-and-huge-updates"}
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-03",
+        "tags": ["Starfield", "PS5", "Bethesda", "微软", "多平台", "Free Lanes", "独占结束"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Starfield登陆PS5是微软多平台战略的标志性事件——曾经被视为Xbox最大独占的Bethesda RPG终于全平台化。Free Lanes大更新随PS5版同步发布是聪明的策略，让PS5玩家获得'最佳版本'体验。结合Xbox品牌重塑和Project Helix，微软正在从'独占内容'转向'最佳体验平台'的竞争策略。对索尼来说，获得Starfield也证明了PS5庞大装机量的谈判筹码。",
+        "relatedNewsIds": [137, 109, 99]
+    },
+    {
+        "id": 134,
+        "title": "Shift Up收购生化危机之父三上真司新工作室UNBOUND：强化全球PC/Console布局",
+        "summary": "韩国开发商Shift Up（《星刃Stellar Blade》开发商）宣布全资收购日本工作室UNBOUND，该工作室由《生化危机》系列缔造者三上真司于2022年创立。Shift Up将负责发行UNBOUND所有未来游戏。三上真司表示'从未遇到过在创作方向上如此高度契合的合作方'。收购旨在强化Shift Up的全球PC和Console游戏开发与发行能力。",
+        "source": "GamesIndustry",
+        "sourceUrl": "https://www.gamesindustry.biz/stellar-blade-developer-shift-up-acquires-shinji-mikamis-new-studio",
+        "sourceUrls": [
+            {"name": "腾讯文档", "url": "https://docs.qq.com/sheet/LMLdoimBsILX"},
+            {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/stellar-blade-developer-shift-up-acquires-shinji-mikamis-new-studio"},
+            {"name": "VGC", "url": "https://www.videogameschronicle.com"},
+            {"name": "Push Square", "url": "https://www.pushsquare.com/news/2026/04/stellar-blade-dev-acquires-shinji-mikamis-new-studio-will-publish-its-games"},
+            {"name": "Gematsu", "url": "https://www.gematsu.com/2026/03/shift-up-acquires-shinji-mikami-led-studio-unbound"}
+        ],
+        "category": "policy",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-01",
+        "tags": ["Shift Up", "UNBOUND", "三上真司", "收购", "星刃", "生化危机", "韩国"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Shift Up收购UNBOUND是韩国游戏公司向全球3A市场进军的又一里程碑。Shift Up凭借《星刃》证明了3A动作游戏开发能力，获得三上真司加盟等于获得了日本顶级游戏设计血脉。这笔交易的战略含义：①韩国→日本的逆向人才收购趋势 ②Shift Up从开发商向发行商转型 ③与Pearl Abyss(红色沙漠)形成韩国3A双雄格局。",
+        "relatedNewsIds": [124]
+    },
     {
         "id": 133,
         "title": "DDR5内存价格数月来首次下降：谷歌压缩算法发布缓解供需压力",
