@@ -809,6 +809,7 @@ function mUpdateNewsTab() {
                     ? mergeClusterNews(cluster.news.sort((a, b) => new Date(b.date) - new Date(a.date)), key)
                     : cluster.news.sort((a, b) => new Date(b.date) - new Date(a.date));
 
+                spotlightHTML += `<div class="m-spotlight-cluster" data-cluster="${key}">`;
                 spotlightHTML += `<div class="m-cluster-header">${cluster.icon || '📌'} ${cluster.label} <span style="color:var(--text-muted);font-size:0.7rem;">${cluster.news.length}条${clusterNews.length < cluster.news.length ? `（精炼${clusterNews.length}组）` : ''}</span></div>`;
                 spotlightHTML += clusterNews.map(a => {
                     const featuredReason = typeof getFeaturedReason === 'function' ? getFeaturedReason(a) : '⭐ 重点';
@@ -857,6 +858,7 @@ function mUpdateNewsTab() {
                     </div>`;
                     return cardHTML;
                 }).join('');
+                spotlightHTML += `</div>`; // close m-spotlight-cluster
             });
             spotlight.innerHTML = spotlightHTML;
         }
