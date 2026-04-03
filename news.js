@@ -2725,3 +2725,148 @@ function isThisWeek(dateStr) {
     const weekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
     return d >= weekAgo;
 }
+
+// ═══════════════ 主题聚类引擎 v6.0（共享：PC端+移动端） ═══════════════
+// 将新闻按平台/主题自动归组，相关新闻聚合在一起展示
+
+const NEWS_TOPIC_CLUSTERS = [
+    { id: 'sony-ps', label: '🎮 索尼 PlayStation', icon: '🔵',
+      match: function(n) { var c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
+          return c.match(/索尼|sony|playstation|ps5|ps6|psn|ps plus|pssr|push\s?square|ps\s?pro|dualsense|ps\s?portal|ps\s?stars|dark\s?outlaw|bungie/); }},
+    { id: 'xbox-ms', label: '🟢 微软 Xbox', icon: '🟢',
+      match: function(n) { var c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
+          return c.match(/xbox|微软.*游戏|game\s?pass|xgp|phil\s?spencer|asha\s?sharma|helix|xbox\s?wire|bethesda.*xbox|动视暴雪|activision|copilot.*xbox|xbox.*copilot|partner\s?preview|微软.*订阅/); }},
+    { id: 'hot-product', label: '🔥 热门产品', icon: '🔥',
+      match: function(n) { var c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
+          return c.match(/红色沙漠|crimson\s?desert|杀戮尖塔|slay.*spire|生化危机.*安魂|resident\s?evil.*requiem|marathon|gta\s?6|gta\s?vi/) ||
+                 (c.match(/销量.*突破|万份|百万|million|创纪录|里程碑|登顶/) && c.match(/游戏|game/)); }},
+    { id: 'upstream-hw', label: '🔧 上游硬件 & 供应链', icon: '🔧',
+      match: function(n) { var c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
+          return c.match(/内存.*涨|内存.*降|内存.*短缺|dram|ddr5|hbm|ram.*短缺|ram.*shortage|芯片.*短缺|液冷|asetek/) ||
+                 (c.match(/涨价|price.*hike|price.*increase/) && c.match(/硬件|成本|ram|内存|芯片|组件|component/)) ||
+                 c.match(/nvidia|dlss|gpu|显卡|amd|rtx\s?50|裸眼3d|geforce|cuda/) ||
+                 (n.category === 'hardware'); }},
+    { id: 'steam-valve', label: '🔷 Steam & Valve', icon: '🔷',
+      match: function(n) { var c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
+          return c.match(/steam|valve|steam\s?machine|steam\s?deck|steam\s?frame|steamos|steam.*特卖|steam.*spring|cs2/); }},
+    { id: 'epic', label: '🟣 Epic Games', icon: '🟣',
+      match: function(n) { var c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
+          return c.match(/epic\s?games|fortnite|堡垒之夜|epic.*store|egs|虚幻引擎|unreal/); }},
+    { id: 'market-info', label: '📊 市场信息', icon: '📊',
+      match: function(n) { var c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
+          return c.match(/newzoo|circana|npd|市场.*报告|市场.*预测|行业.*报告|bafta|gdca|gdc.*报告/) ||
+                 c.match(/pegi|欧盟.*法|dma|监管|并购|收购|投资|沙特|savvy|重组|裁员|layoff/) ||
+                 c.match(/退休|辞职|ceo.*新|新.*ceo|pif|gamestop.*财报|ea.*财报|财报|版号|整合/) ||
+                 c.match(/德国.*市场|market.*grew|迪士尼|disney|ea.*裁|育碧|ubisoft.*裁/) ||
+                 c.match(/诉讼|反垄断|关税|tariff/); }},
+    { id: 'nintendo', label: '🔴 任天堂 Switch', icon: '🔴',
+      match: function(n) { var c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
+          return c.match(/任天堂|nintendo|switch\s?2|switch2|宝可梦|pokemon|马里奥|mario|zelda|塞尔达|indie\s?world/); }}
+];
+
+function clusterNewsByTopic(newsList) {
+    var clusters = {};
+    var assigned = new Set();
+    NEWS_TOPIC_CLUSTERS.forEach(function(cluster) {
+        var matched = newsList.filter(function(n) { return !assigned.has(n.id) && cluster.match(n); });
+        if (matched.length > 0) {
+            clusters[cluster.id] = { id: cluster.id, label: cluster.label, icon: cluster.icon, match: cluster.match, news: matched };
+            matched.forEach(function(n) { assigned.add(n.id); });
+        }
+    });
+    var unclustered = newsList.filter(function(n) { return !assigned.has(n.id); });
+    if (unclustered.length > 0) {
+        clusters['other'] = { id: 'other', label: '📌 其他动态', icon: '📌', news: unclustered };
+    }
+    return clusters;
+}
+
+function mergeClusterNews(clusterNews, clusterId) {
+    var MERGE_CLUSTERS = ['hot-product', 'upstream-hw', 'market-info'];
+    if (MERGE_CLUSTERS.indexOf(clusterId) === -1 || clusterNews.length <= 3) return clusterNews;
+    var MERGE_GROUPS = {
+        'hot-product': [
+            { key: 'crimson-desert', match: /红色沙漠|crimson\s?desert/i, label: '红色沙漠' },
+            { key: 'slay-spire', match: /杀戮尖塔|slay.*spire/i, label: '杀戮尖塔2' },
+            { key: 're-requiem', match: /生化危机.*安魂|resident\s?evil.*requiem/i, label: '生化危机9' },
+            { key: 'marathon', match: /marathon/i, label: 'Marathon' },
+            { key: 'gta6', match: /gta\s?6|gta\s?vi/i, label: 'GTA6' }
+        ],
+        'upstream-hw': [
+            { key: 'memory-price', match: /内存.*涨|内存.*降|dram|ddr5|hbm|ram.*价/i, label: '内存价格' },
+            { key: 'chip-shortage', match: /芯片.*短缺|chip.*shortage|gpu.*短缺/i, label: '芯片供应' },
+            { key: 'nvidia-gpu', match: /nvidia|dlss|rtx\s?50|gpu|显卡/i, label: 'GPU/显卡' },
+            { key: 'hw-cost', match: /涨价.*硬件|硬件.*成本|主机.*涨价|液冷|asetek/i, label: '硬件成本' }
+        ],
+        'market-info': [
+            { key: 'ma', match: /并购|收购|投资|整合|沙特|pif/i, label: '投资并购' },
+            { key: 'personnel', match: /退休|辞职|接任|ceo|裁员|重组|layoff/i, label: '人事变动' },
+            { key: 'report', match: /newzoo|circana|市场.*报告|行业.*报告|市场.*预测/i, label: '市场报告' },
+            { key: 'regulation', match: /pegi|欧盟|dma|监管|法案|诉讼|版号/i, label: '政策监管' }
+        ]
+    };
+    var groups = MERGE_GROUPS[clusterId];
+    if (!groups) return clusterNews;
+    var merged = [];
+    var used = new Set();
+    groups.forEach(function(group) {
+        var matching = clusterNews.filter(function(n) {
+            if (used.has(n.id)) return false;
+            var text = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
+            return group.match.test(text);
+        });
+        if (matching.length === 0) return;
+        if (matching.length === 1) {
+            merged.push(matching[0]);
+            used.add(matching[0].id);
+        } else {
+            var sorted = matching.slice().sort(function(a, b) { return new Date(b.date) - new Date(a.date); });
+            var primary = sorted[0];
+            var subordinates = sorted.slice(1);
+            var existingRelated = primary.relatedNewsIds || [];
+            var mergedRelatedIds = Array.from(new Set(existingRelated.concat(subordinates.map(function(s) { return s.id; }))));
+            merged.push(Object.assign({}, primary, {
+                _mergedCount: matching.length,
+                _mergedLabel: group.label,
+                _mergedSubNews: subordinates,
+                relatedNewsIds: mergedRelatedIds
+            }));
+            matching.forEach(function(n) { used.add(n.id); });
+        }
+    });
+    clusterNews.forEach(function(n) {
+        if (!used.has(n.id)) merged.push(n);
+    });
+    return merged.sort(function(a, b) { return new Date(b.date) - new Date(a.date); });
+}
+
+function getFeaturedReason(n) {
+    var title = (n.title || '').toLowerCase();
+    var tags = (n.tags || []).join(' ').toLowerCase();
+    var combined = title + ' ' + tags;
+    if (combined.match(/并购|收购|投资|股份|持股|pif|egdc|合并|整合/)) return '💰 格局变动';
+    if (combined.match(/退休|辞职|接任|ceo|管理层|人事|重组|裁员/)) return '👤 高管变动';
+    if (combined.match(/销量|突破.*万|里程碑|历史|最快|创纪录|百万/)) return '📊 里程碑';
+    if (combined.match(/ps6|helix|次世代|switch 2|新主机|掌机/)) return '🎮 硬件格局';
+    if (combined.match(/涨价|降价|分成|定价|关税|供应链/)) return '💵 价格冲击';
+    if (combined.match(/gta|发售|定档|首发|上线|确认/)) return '🚀 重要发售';
+    if (combined.match(/欧盟|dma|pegi|评级|监管|法案|诉讼|反垄断/)) return '⚖️ 政策监管';
+    if (combined.match(/newzoo|市场.*超|预测|趋势|报告|\$\d+.*亿/)) return '📈 市场洞察';
+    if (combined.match(/steam machine|验证|平台.*战略|开放|第三方/)) return '🌐 平台战略';
+    if (combined.match(/dlss|nvidia|amd|gpu|芯片|显卡/)) return '🔧 技术突破';
+    return '⭐ 重点';
+}
+
+function generateAutoInsight(n) {
+    var title = (n.title || '').toLowerCase();
+    var tags = (n.tags || []).join(' ').toLowerCase();
+    var combined = title + ' ' + tags + ' ' + (n.summary || '').toLowerCase();
+    if (combined.match(/并购|收购|投资|merger|acquisition/)) return '此并购/投资动态可能重塑相关细分市场的竞争格局，需关注后续整合进展和对竞品的连锁反应。';
+    if (combined.match(/销量.*突破|里程碑|创纪录|百万|record/)) return '里程碑数据表明该产品/平台的市场动能强劲，可作为品类趋势和用户偏好的重要参考指标。';
+    if (combined.match(/涨价|降价|关税|供应链|内存|tariff/)) return '价格/成本变动将沿产业链传导，需关注对终端定价策略和消费者购买决策的影响。';
+    if (combined.match(/switch 2|ps6|新主机|次世代|helix/)) return '硬件换代节点是行业格局变动的关键窗口，将影响开发商资源分配和平台竞争力排序。';
+    if (combined.match(/裁员|重组|restructur|layoff/)) return '组织重组反映企业战略调整方向，需关注对在研项目和行业人才流动的影响。';
+    if (combined.match(/gta|荒野大镖客|red dead|rockstar/)) return 'Rockstar旗舰IP的任何动向都是行业风向标，对平台方独占策略和竞品档期规划有直接影响。';
+    if (combined.match(/steam|valve|epic|平台.*策略|game pass|订阅/)) return '平台策略调整直接影响开发者收益模型和玩家消费习惯，是行业生态演化的关键驱动因素。';
+    return '';
+}
