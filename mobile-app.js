@@ -745,7 +745,8 @@ function mUpdateNewsTab() {
         filtered = filtered.filter(a => a.category === categoryFilter);
     }
     if (sourceFilter !== 'all') {
-        filtered = filtered.filter(a => a.sourceType === sourceFilter);
+        const srcNames = (typeof newsSources !== 'undefined' ? newsSources : []).filter(s => s.category === sourceFilter).map(s => s.name);
+        filtered = filtered.filter(a => srcNames.includes(a.source));
     }
     if (featuredFilter === 'featured') {
         filtered = filtered.filter(a => a.featured === true);
