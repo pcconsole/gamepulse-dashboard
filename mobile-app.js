@@ -678,7 +678,18 @@ function mUpdatePipelineTab() {
     renderOrder.forEach(quarter => {
         const games = grouped[quarter];
         if (!games || games.length === 0) return;
-        html += `<div class="m-quarter-header">${quarter} <span class="m-quarter-count">${games.length}款</span></div>`;
+        
+        const isReleasedSection = quarter === '✅ 2026年已上线';
+        if (isReleasedSection) {
+            // 已上线区域：默认折叠
+            html += `<div class="m-quarter-header m-released-header" onclick="this.classList.toggle('expanded');var body=this.nextElementSibling;body.style.display=body.style.display==='none'?'block':'none';this.querySelector('.m-chevron').textContent=body.style.display==='none'?'▶':'▼'">
+                ${quarter} <span class="m-quarter-count">${games.length}款</span> <span class="m-chevron">▶</span>
+            </div>`;
+            html += `<div class="m-released-body" style="display:none;">`;
+        } else {
+            html += `<div class="m-quarter-header">${quarter} <span class="m-quarter-count">${games.length}款</span></div>`;
+        }
+        
         games.forEach(g => {
             const heatMap = { '高': 'heat-high', '中高': 'heat-mid-high', '中': 'heat-mid', '中低': 'heat-mid-low', '低': 'heat-low' };
             const heatEmoji = { '高': '🔥', '中高': '⚡', '中': '📊', '中低': '📉', '低': '⬜' };
@@ -705,6 +716,10 @@ function mUpdatePipelineTab() {
                 </div>
             </div>`;
         });
+        
+        if (isReleasedSection) {
+            html += `</div>`; // close m-released-body
+        }
     });
 
     container.innerHTML = html;

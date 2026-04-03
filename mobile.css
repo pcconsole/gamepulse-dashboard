@@ -378,6 +378,9 @@ body {
     border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
 }
 .m-quarter-header .m-quarter-count { font-size: 0.7rem; color: var(--text-muted); font-weight: 400; }
+.m-released-header { cursor: pointer; background: rgba(34,197,94,0.08); border: 1px solid rgba(34,197,94,0.2); border-radius: var(--radius-sm); }
+.m-released-header:active { background: rgba(34,197,94,0.15); }
+.m-released-header .m-chevron { margin-left: auto; font-size: 0.7rem; color: var(--text-muted); transition: transform 0.2s; }
 
 /* ===== News Feed ===== */
 .m-spotlight { margin-top: 4px; }
