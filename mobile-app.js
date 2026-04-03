@@ -754,6 +754,9 @@ function mUpdateNewsTab() {
         filtered = filtered.filter(a => !a.featured);
     }
 
+    // 按日期排序（最新在前）— 与PC端对齐
+    filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
+
     // KPI — 与PC端同步
     mSetText('mNewsTotalCount', articles.length);
     const featuredCount = articles.filter(a => a.featured === true).length;

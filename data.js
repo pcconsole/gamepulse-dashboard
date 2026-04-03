@@ -122,9 +122,9 @@ async function loadCSVData() {
 
             // XGP 策略类型
             const xgpTag = String(game.xgpDateTag).trim();
-            if (xgpTag === '首发入库' || xgpTag === 'SimShip' || xgpTag === '1') {
+            if (xgpTag === '首发入库XGP' || xgpTag === '首发入库' || xgpTag === 'SimShip' || xgpTag === 'simship' || xgpTag === '1') {
                 game.xgpType = '首发入库XGP';
-            } else if (xgpTag && xgpTag !== '未上线' && xgpTag !== '0' && xgpTag !== '') {
+            } else if (xgpTag === '后发入库XGP' || xgpTag === '后发入库' || xgpTag === 'AfterShip' || xgpTag === 'aftership' || (xgpTag && xgpTag !== '未上线' && xgpTag !== '0' && xgpTag !== '')) {
                 game.xgpType = '后发入库XGP';
             } else {
                 game.xgpType = '未加入';
