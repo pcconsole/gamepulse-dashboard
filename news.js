@@ -1,8 +1,8 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-04-03T18:00:00Z
-// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功+web_search 12轮)
+// 最后更新: 2026-04-06T18:00:00Z
+// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1103无增量)+web_search 12轮)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
@@ -173,6 +173,72 @@ const newsSources = [
 ];
 
 const newsData = [
+    {
+        "id": 142,
+        "title": "索尼互娱收购英国AI公司Cinemersive Labs：强化PlayStation视觉计算与3D技术布局",
+        "summary": "索尼互动娱乐(SIE)于4月2日正式宣布收购英国机器学习和计算机视觉公司Cinemersive Labs。该公司专注于将2D照片和视频转换为3D立体图像的技术。收购完成后，Cinemersive团队将加入索尼视觉计算集团(Visual Computing Group, VCG)，该部门专注于图形技术和AI在游戏中的应用。此次收购是索尼在关闭多家内部工作室(如Dark Outlaw Games)后持续加码AI技术投资的最新信号。",
+        "source": "SIE Official",
+        "sourceUrl": "https://sonyinteractive.com/en/news/blog/sony-interactive-entertainment-acquires-cinemersive-labs/",
+        "sourceUrls": [
+            {"name": "SIE Official", "url": "https://sonyinteractive.com/en/news/blog/sony-interactive-entertainment-acquires-cinemersive-labs/"},
+            {"name": "IT之家", "url": "https://www.ithome.com/0/935/737.htm"},
+            {"name": "Engadget", "url": "https://www.engadget.com/gaming/playstation/sonys-gaming-division-just-bought-an-ai-startup-that-turns-photos-into-3d-volumes-220648699.html"},
+            {"name": "This Week In Video Games", "url": "https://thisweekinvideogames.com/news/sony-acquires-ai-computer-vision-company-cinemersive-labs/"}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-02",
+        "tags": ["索尼", "SIE", "收购", "AI", "Cinemersive Labs", "视觉计算", "机器学习", "3D技术"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "索尼在关闭部分工作室的同时持续收购AI技术公司，说明PlayStation战略正从'内容创作型工作室'向'技术平台化'转型。Cinemersive的2D转3D技术可能应用于PS VR2内容生产或下一代PS6的渲染管线。结合此前确认的AI帧生成技术(Project Amethyst)，索尼正在构建完整的AI视觉技术栈，为PS6时代的差异化体验做技术储备。",
+        "relatedNewsIds": [114, 87, 128]
+    },
+    {
+        "id": 141,
+        "title": "Xbox Game Pass 4月阵容公布：Hades 2、Replaced首日入库，Starfield同步上线",
+        "summary": "微软公布Xbox Game Pass 2026年4月完整阵容，共8款以上新作加入。亮点包括：4月2日Barbie Horse Trails，4月7日Final Fantasy IV+Starfield(含Free Lanes更新和Terran Armada DLC)，4月14日Hades 2正式版和Replaced同时首日入库Game Pass，后续还有更多作品陆续加入。Hades 2是Supergiant Games备受期待的正式版(此前PC EA一年多)首次登陆主机，Replaced则是历经多年开发的像素风赛博朋克动作游戏。",
+        "source": "Game Rant",
+        "sourceUrl": "https://gamerant.com/xbox-game-pass-new-games-coming-soon-list-april-2026/",
+        "sourceUrls": [
+            {"name": "Game Rant", "url": "https://gamerant.com/xbox-game-pass-new-games-coming-soon-list-april-2026/"},
+            {"name": "VICE", "url": "https://www.vice.com/en/article/every-game-coming-to-xbox-game-pass-in-april/"},
+            {"name": "Pure Xbox", "url": "https://www.purexbox.com/features/all-new-games-coming-to-xbox-in-april-2026"},
+            {"name": "Eurogamer", "url": "https://www.eurogamer.net/xbox-game-pass-games-list-this-month-price-6400"}
+        ],
+        "category": "platform",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-01",
+        "tags": ["Xbox", "Game Pass", "Hades 2", "Replaced", "Starfield", "首日入库", "4月阵容"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "relatedNewsIds": [135, 120, 137, 416]
+    },
+    {
+        "id": 140,
+        "title": "Ubisoft停止Red Storm Entertainment游戏开发并裁员105人：Tom Clancy系列摇篮工作室转型技术支援",
+        "summary": "Ubisoft宣布旗下传奇工作室Red Storm Entertainment将停止游戏开发业务，105名员工被裁。Red Storm由Tom Clancy于1990年代联合创立，是《彩虹六号》和《幽灵行动》系列的诞生地。此次重组后工作室将转型为全球IT和Snowdrop引擎技术支援角色。此举是Ubisoft持续成本削减计划的一部分，反映了公司在多年销售不佳后正从内容创作向技术基础设施收缩的战略调整。",
+        "source": "GamesIndustry",
+        "sourceUrl": "https://www.gamesindustry.biz/ubisoft-announces-layoffs-and-the-cease-of-game-development-at-red-storm-entertainment",
+        "sourceUrls": [
+            {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/ubisoft-announces-layoffs-and-the-cease-of-game-development-at-red-storm-entertainment"},
+            {"name": "IGN", "url": "https://www.ign.com/articles/ubisoft-laying-off-100-staff-and-ending-game-development-at-ghost-recon-studio-red-storm-entertainment"},
+            {"name": "PC Gamer", "url": "https://www.pcgamer.com/gaming-industry/ubisoft-lays-off-105-people-at-red-storm-the-studio-founded-30-years-ago-by-tom-clancy-converts-it-to-a-support-role/"},
+            {"name": "Kotaku", "url": "https://kotaku.com/tom-clancy-studio-no-longer-making-games-as-it-lays-off-105-developers-2000680319"},
+            {"name": "VGC", "url": "https://www.videogameschronicle.com/news/ubisoft-ends-game-development-at-tom-clancy-studio-red-storm-resulting-in-105-job-losses/"}
+        ],
+        "category": "policy",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-03-19",
+        "tags": ["Ubisoft", "Red Storm", "裁员", "Tom Clancy", "彩虹六号", "幽灵行动", "工作室关闭", "成本削减"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "Red Storm停止游戏开发是Ubisoft战略收缩的标志性事件——这家创造了《彩虹六号》和《幽灵行动》两大军事射击IP的工作室，在近30年后沦为技术支援角色。结合Ubisoft此前的Prince of Persia团队缩编和XDefiant关闭，公司正在系统性地退出非核心项目以削减超€2亿年度成本。行业层面，这延续了2024-2026年持续的裁员潮(Epic 1000人、索尼Dark Outlaw等)。",
+        "relatedNewsIds": [110, 114]
+    },
     {
         "id": 139,
         "title": "Krafton关闭免费PUBG衍生作Blindspot：仅运营2个月，验证'快速试错'策略",
