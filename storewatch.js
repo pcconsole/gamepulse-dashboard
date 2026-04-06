@@ -6,7 +6,7 @@
 
 // ============ 元数据 ============
 const storewatchMeta = {
-    lastUpdated: '2026-04-03',
+    lastUpdated: '2026-04-06',
     dataRange: '2025-12-19 ~ 2026-04-03',
     sheetId: 'LXXdrpHEWcSr',
     mainSheet: 'BB08J2',
@@ -898,7 +898,7 @@ const storewatchNonGameTags = [
 
 // ============ 商店监控数据 ============
 // 数据来源：腾讯文档 LXXdrpHEWcSr (sheet BB08J2)
-// 最后更新：2026-04-03
+// 最后更新：2026-04-06
 // 数据范围：2025-12-19 ~ 2026-04-03
 const storewatchData = {
     PS5: [
@@ -917,7 +917,6 @@ const storewatchData = {
                 { rank: 3, us: '美国职业棒球大联盟26（MLB The Show 26）', jp: '红色沙漠（Crimson Desert）', hk: '实况足球（eFootball）', vendor: '索尼' },
                 { rank: 4, us: '使命召唤:黑色行动7（Call of Duty: Black Ops 7）', jp: '明日方舟:终末地（Arknights: Endfield）', hk: 'EA Sports FC 26', vendor: '微软' },
                 { rank: 5, us: '红色沙漠（Crimson Desert）', jp: 'Apex英雄（Apex Legends）', hk: 'NBA 2K26', vendor: 'Pearl Abyss' },
-                { rank: 6, us: '罗布乐思（Roblox）', jp: '堡垒之夜（Fortnite）', hk: '使命召唤:黑色行动7（Call of Duty: Black Ops 7）', vendor: 'Roblox' },
             ] },
             "What's hot": { positions: [
                 { rank: 1, us: '华丽动作游戏专题（STYLISH ACTION）', jp: '侠盗猎车手5（Grand Theft Auto V）', hk: '贪婪之秋2:垂死世界（GreedFall: The Dying World）', vendor: 'Take-Two' },
@@ -943,7 +942,6 @@ const storewatchData = {
                 { rank: 3, us: '美国职业棒球大联盟26（MLB The Show 26）', jp: '红色沙漠（Crimson Desert）', hk: '实况足球（eFootball）', vendor: '索尼' },
                 { rank: 4, us: '使命召唤:黑色行动7（Call of Duty: Black Ops 7）', jp: '明日方舟:终末地（Arknights: Endfield）', hk: 'EA Sports FC 26', vendor: '微软' },
                 { rank: 5, us: '红色沙漠（Crimson Desert）', jp: 'Apex英雄（Apex Legends）', hk: 'NBA 2K26', vendor: 'Pearl Abyss' },
-                { rank: 6, us: '罗布乐思（Roblox）', jp: '堡垒之夜（Fortnite）', hk: '使命召唤:黑色行动7（Call of Duty: Black Ops 7）', vendor: 'Roblox' },
             ] },
             "What's hot": { positions: [
                 { rank: 1, us: '华丽动作游戏专题（STYLISH ACTION）', jp: '侠盗猎车手5（Grand Theft Auto V）', hk: '贪婪之秋2:垂死世界（GreedFall: The Dying World）', vendor: 'Take-Two' },
@@ -969,7 +967,6 @@ const storewatchData = {
                 { rank: 3, us: '红色沙漠（Crimson Desert）', jp: '红色沙漠（Crimson Desert）', hk: '实况足球（eFootball）', vendor: 'Pearl Abyss' },
                 { rank: 4, us: '使命召唤:黑色行动7（Call of Duty: Black Ops 7）', jp: '明日方舟:终末地（Arknights: Endfield）', hk: '堡垒之夜（Fortnite）', vendor: '微软' },
                 { rank: 5, us: '美国职业棒球大联盟26（MLB The Show 26）', jp: 'Apex英雄（Apex Legends）', hk: 'NBA 2K26', vendor: '索尼' },
-                { rank: 6, us: '罗布乐思（Roblox）', jp: '堡垒之夜（Fortnite）', hk: '使命召唤:黑色行动7（Call of Duty: Black Ops 7）', vendor: 'Roblox' },
             ] },
             "What's hot": { positions: [
                 { rank: 1, us: '侠盗猎车手5（Grand Theft Auto V）', jp: '侠盗猎车手6（Grand Theft Auto VI）', hk: '贪婪之秋2:垂死世界（GreedFall: The Dying World）', vendor: 'Take-Two' },
@@ -1020,7 +1017,6 @@ const storewatchData = {
                 { rank: 3, us: '红色沙漠（Crimson Desert）', jp: '红色沙漠（Crimson Desert）', hk: '实况足球（eFootball）', vendor: 'Pearl Abyss' },
                 { rank: 4, us: '使命召唤:黑色行动7（Call of Duty: Black Ops 7）', jp: '明日方舟:终末地（Arknights: Endfield）', hk: '堡垒之夜（Fortnite）', vendor: '微软' },
                 { rank: 5, us: '美国职业棒球大联盟26（MLB The Show 26）', jp: 'Apex英雄（Apex Legends）', hk: 'NBA 2K26', vendor: '索尼' },
-                { rank: 6, us: '罗布乐思（Roblox）', jp: '堡垒之夜（Fortnite）', hk: '使命召唤:黑色行动7（Call of Duty: Black Ops 7）', vendor: 'Roblox' },
             ] },
             "What's hot": { positions: [
                 { rank: 1, us: '堡垒之夜（Fortnite）', jp: '侠盗猎车手6（Grand Theft Auto VI）', hk: '贪婪之秋2:垂死世界（GreedFall: The Dying World）', vendor: 'Epic' },
@@ -1046,7 +1042,6 @@ const storewatchData = {
                 { rank: 3, us: '罗布乐思（Roblox）', jp: '红色沙漠（Crimson Desert）', hk: '实况足球（eFootball）', vendor: 'Roblox' },
                 { rank: 4, us: '使命召唤:黑色行动7（Call of Duty: Black Ops 7）', jp: '明日方舟:终末地（Arknights: Endfield）', hk: 'EA Sports FC 26', vendor: '微软' },
                 { rank: 5, us: '美国职业棒球大联盟26（MLB The Show 26）', jp: 'Apex英雄（Apex Legends）', hk: '堡垒之夜（Fortnite）', vendor: '索尼' },
-                { rank: 6, us: 'NBA 2K26', jp: '堡垒之夜（Fortnite）', hk: 'NBA 2K26', vendor: 'Take-Two' },
             ] },
             "What's hot": { positions: [
                 { rank: 1, us: '堡垒之夜（Fortnite）', jp: '侠盗猎车手6（Grand Theft Auto VI）', hk: '贪婪之秋2:垂死世界（GreedFall: The Dying World）', vendor: 'Epic' },
@@ -2765,11 +2760,6 @@ const storewatchData = {
             ] },
         } },
         { date: '2026-03-27', slots: {
-            'Dash home-banner': { positions: [
-                { rank: 1, us: '春季特卖（SPRING SALE）', jp: 'Game Pass 会员优惠', hk: 'Stranger Than Heaven' },
-                { rank: 2, us: '使命召唤:黑色行动7（Call of Duty: Black Ops 7）', jp: '堡垒之夜（Fortnite）', hk: 'Game Pass 会员优惠', vendor: '微软' },
-                { rank: 3, us: 'Game Pass 会员优惠', jp: '无障碍功能游戏（Accessibility in games）', hk: 'Alien Deathstorm' },
-            ] },
             'Dash home-banner2': { positions: [
                 { rank: 1, us: '美国职业棒球大联盟26（MLB The Show 26）', jp: '星光卡丁车竞赛（Starlit Kart Racing）', hk: '最终幻想16（Final Fantasy XVI）', vendor: '索尼' },
                 { rank: 2, us: '红色沙漠（Crimson Desert）', jp: '我的世界（Minecraft）', hk: '最终幻想8：重制版（Final Fantasy VII Remake）', vendor: 'Pearl Abyss' },
