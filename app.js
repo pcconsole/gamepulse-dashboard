@@ -773,7 +773,7 @@ function bindKPIClicks() {
             () => filteredGames.filter(g => g.isXbox === 'Y'), // Xbox
             () => filteredGames.filter(g => g.isXbox === 'Y' && g.xgpType !== '未加入'), // XGP
         ];
-        const labels = ['全部端主游戏', '已上线主机的游戏', '已登陆Xbox的游戏', '加入XGP的游戏'];
+        const labels = ['全部端主游戏', '已上线双主机(PS/Xbox)的游戏', '已登陆Xbox的游戏', '加入XGP的游戏'];
         cards.forEach((card, i) => {
             card.style.cursor = 'pointer';
             card.addEventListener('click', () => {
