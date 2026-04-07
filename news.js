@@ -1,8 +1,8 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-04-06T18:00:00Z
-// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1103无增量)+web_search 12轮)
+// 最后更新: 2026-04-07T18:00:00Z
+// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1126新增23行批次4/6-4/12)+web_search 12轮)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
@@ -174,7 +174,115 @@ const newsSources = [
 
 const newsData = [
     {
-        "id": 142,
+        "id": 147,
+        "title": "Switch 2涨价'不可避免'：前任天堂销售主管称关税+RAM+成本三重压力下硬件提价只是时间问题",
+        "summary": "前任天堂美国销售主管在接受GamesRadar采访时表示，Switch 2涨价'不可避免'(inevitable)。他指出，面对美国关税政策、全球RAM价格上涨和通胀等多重外部压力，任天堂可能暂时维持发售价，但中长期提价几乎确定。此前索尼已宣布PS5全球涨价$50-$150，微软也暗示Xbox硬件价格调整，任天堂是最后一个尚未调价的主机厂商。分析师认为涨价幅度可能在$20-$50之间。",
+        "source": "GamesRadar",
+        "sourceUrl": "https://www.gamesradar.com/platforms/nintendo-switch-2/switch-2-prices-will-go-up-says-ex-nintendo-sales-lead-its-inevitable/",
+        "sourceUrls": [
+            {"name": "GamesRadar", "url": "https://www.gamesradar.com/platforms/nintendo-switch-2/switch-2-prices-will-go-up-says-ex-nintendo-sales-lead-its-inevitable/"},
+            {"name": "Nintendo Life", "url": "https://www.nintendolife.com/news/2026/04/former-nintendo-sales-lead-thinks-switch-2-price-increase-is-inevitable"},
+            {"name": "TamilTech", "url": "https://tamiltech.in/article/nintendo-switch-2-price-hike-inevitable-tariffs-ram-oil-helium-india-2026"}
+        ],
+        "category": "hardware",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-03",
+        "tags": ["Nintendo", "Switch 2", "涨价", "关税", "RAM", "硬件成本", "PS5涨价"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "继索尼PS5全球涨价后，前任天堂销售主管直言Switch 2涨价'不可避免'，标志着游戏硬件全面进入涨价周期。三大主机厂商(索尼已涨/微软暗示/任天堂'不可避免')均面临关税+RAM+通胀三重成本压力。这将压缩2026-2027年硬件装机量预期，间接影响软件销售基数。对开发者而言，用户获取成本上升可能加速'精品化+订阅制'转型。",
+        "relatedNewsIds": [121, 132, 130]
+    },
+    {
+        "id": 146,
+        "title": "沙特EGDC增持卡普空至6.04%：$6.7亿成第四大股东，中东资本加速布局日本游戏巨头",
+        "summary": "沙特阿拉伯电子游戏开发公司(EGDC，隶属沙特王储穆罕默德·本·萨勒曼旗下MiSK基金)将其在卡普空的持股从5.03%增至6.04%，成为卡普空第四大股东，投资价值约6.7亿美元。EGDC于2026年3月首次持有卡普空5.03%股份，此次增持是其短短一个月内的第二次加仓。这是沙特中东资本多方位布局全球游戏产业的最新动作——此前沙特公共投资基金(PIF)子公司Savvy Games已投资任天堂(8.6%)和Nexon等多家游戏公司。",
+        "source": "TweakTown",
+        "sourceUrl": "https://www.tweaktown.com/news/110893/saudi-arabia-ups-stake-in-capcom-now-owns-dollars670-million-worth-of-stock-or-6-percent-of-shares/index.html",
+        "sourceUrls": [
+            {"name": "腾讯文档", "url": "https://docs.qq.com/sheet/LMLdoimBsILX"},
+            {"name": "TweakTown", "url": "https://www.tweaktown.com/news/110893/saudi-arabia-ups-stake-in-capcom-now-owns-dollars670-million-worth-of-stock-or-6-percent-of-shares/index.html"},
+            {"name": "Insider Gaming", "url": "https://insider-gaming.com/saudi-investment-firm-stake-in-capcom/"},
+            {"name": "Variety", "url": "https://variety.com/2026/gaming/asia/saudi-arabia-electronic-gaming-developemnt-stake-capcom-1236691117/"},
+            {"name": "Game Rant", "url": "https://gamerant.com/capcom-saudi-arabia-investment-stake-purchase/"}
+        ],
+        "category": "policy",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-07",
+        "tags": ["沙特", "EGDC", "卡普空", "投资", "持股", "MiSK", "中东资本", "日本游戏"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "沙特EGDC一个月内两次加仓卡普空(5%→6%)，投资达$6.7亿，是中东主权资本系统性布局全球游戏资产的又一标志性动作。结合PIF子公司Savvy Games持有任天堂8.6%和Nexon股份，沙特已成为日本游戏产业最大的外部战略投资者之一。这对卡普空短期股价构成利好，但也引发行业对'主权资本是否影响内容自主权'的讨论。卡普空凭借《生化危机安魂曲》和《怪物猎人荒野》强劲表现，已成为日本游戏最优质资产标的。",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 145,
+        "title": "PlayStation Studios PC发行三年收入$3亿：前员工披露数据引发'PC战略是否成功'争论",
+        "summary": "据索尼前PC规划与洞察经理Jerry Liu在LinkedIn个人资料中披露，PlayStation Studios PC部门在2021-2023年三年间累计创造约3亿美元净收入(从$0起步)。该数据被多家媒体引用后引发行业争论：支持者认为$3亿纯增量收入验证了'主机先发→PC跟进'双平台战略的商业价值；批评者则指出，三年$3亿相对于PS4/PS5每年$150亿+的软件收入占比极低(约0.7%)，质疑PC移植的投入产出比。结合近期索尼放弃独立PC启动器、Marathon销量不及预期等信号，PC战略走向引发关注。",
+        "source": "GamesRadar",
+        "sourceUrl": "https://www.gamesradar.com/platforms/playstation/it-took-3-years-for-playstation-to-earn-usd300-million-in-pc-sales-according-to-former-manager-which-makes-the-platform-less-than-half-as-lucrative-as-the-ps4-and-ps5/",
+        "sourceUrls": [
+            {"name": "腾讯文档", "url": "https://docs.qq.com/sheet/LMLdoimBsILX"},
+            {"name": "GamesRadar", "url": "https://www.gamesradar.com/platforms/playstation/it-took-3-years-for-playstation-to-earn-usd300-million-in-pc-sales-according-to-former-manager-which-makes-the-platform-less-than-half-as-lucrative-as-the-ps4-and-ps5/"},
+            {"name": "GamingBolt", "url": "https://gamingbolt.com/playstation-studios-made-300-million-over-3-years-from-pc-releases-rumor"},
+            {"name": "Insider Gaming", "url": "https://insider-gaming.com/playstation-games-on-pc-took-3-years-to-earn-300m/"},
+            {"name": "The Nerd Stash", "url": "https://thenerdstash.com/playstation-studios-drops-pc-mentions-amid-low-sales-300m-in-3-years/"}
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-04",
+        "tags": ["PlayStation", "索尼", "PC", "收入", "跨平台", "战略", "Marathon"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "PS Studios PC三年$3亿收入数据的曝光成为行业风向标：一方面证明'独占→PC移植'模式确实能创造增量营收(从零到3亿)；另一方面相对PS生态年收入$150亿+的占比仅0.7%，加上Marathon销量不及预期和索尼放弃PC启动器等信号，暗示索尼可能在重新评估PC投入力度。这对Steam平台生态和PC用户期望管理都有深远影响——如果索尼收缩PC战略，Steam上的3A主机移植供给可能减少。",
+        "relatedNewsIds": [117, 97, 87]
+    },
+    {
+        "id": 144,
+        "title": "暴雪正在开发未公开3A开放世界射击游戏：首次改用虚幻引擎，疑似星际争霸IP重启",
+        "summary": "据暴雪娱乐最新招聘信息，公司正在开发一款未公开的AAA级开放世界射击游戏，并打破其30年来依赖自研引擎(如StarCraft引擎、魔兽引擎)的传统，改用Epic的虚幻引擎5。招聘职位要求15年以上行业经验，涵盖开放世界设计、射击玩法和UE5技术栈。外界普遍猜测该项目与星际争霸IP重启有关，可能在BlizzCon 2026正式公布。该项目由前Far Cry创意总监Dan Hay领衔，标志着暴雪在微软收购后向新品类扩张的战略转型。",
+        "source": "Windows Central",
+        "sourceUrl": "https://www.windowscentral.com/gaming/blizzard/xbox-and-blizzard-are-hiring-for-an-upcoming-aaa-open-world-shooter-is-this-the-new-starcraft-fps-weve-been-waiting-for",
+        "sourceUrls": [
+            {"name": "腾讯文档", "url": "https://docs.qq.com/sheet/LMLdoimBsILX"},
+            {"name": "Windows Central", "url": "https://www.windowscentral.com/gaming/blizzard/xbox-and-blizzard-are-hiring-for-an-upcoming-aaa-open-world-shooter-is-this-the-new-starcraft-fps-weve-been-waiting-for"},
+            {"name": "TweakTown", "url": "https://www.tweaktown.com/news/110830/blizzard-is-hiring-for-a-aaa-open-world-shooter-that-could-be-set-in-the-starcraft-universe/index.html"},
+            {"name": "VICE", "url": "https://www.vice.com/en/article/blizzard-is-developing-a-new-open-world-shooter-fans-think-its-starcraft/"},
+            {"name": "IT之家", "url": "https://cn.technave.com/2026/04/04/"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-04",
+        "tags": ["暴雪", "微软", "开放世界", "射击游戏", "虚幻引擎", "星际争霸", "Dan Hay", "BlizzCon"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "relatedNewsIds": [135]
+    },
+    {
+        "id": 143,
+        "title": "VR社交平台Rec Room宣布6月关停：曾估值$35亿、1.5亿用户，终因'未找到可持续盈利模式'",
+        "summary": "VR社交游戏平台Rec Room开发商于3月31日宣布，平台将于2026年6月1日正式关停。Rec Room运营十年间曾达到1.5亿注册用户，2021年获得1亿美元融资估值高达35亿美元。关停声明中直言'始终未能找到可持续盈利的商业模式'，运营成本持续超过营收。此前公司在2026年初已进行大规模裁员。这是VR独立平台在商业化方面持续遭遇困境的最新案例，反映出VR社交赛道面临的根本性商业模式挑战。",
+        "source": "GamesIndustry",
+        "sourceUrl": "https://www.gamesindustry.biz/vr-platform-rec-room-to-shut-down-in-june-2026",
+        "sourceUrls": [
+            {"name": "腾讯文档", "url": "https://docs.qq.com/sheet/LMLdoimBsILX"},
+            {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/vr-platform-rec-room-to-shut-down-in-june-2026"},
+            {"name": "IGN", "url": "https://www.ign.com/articles/vr-social-game-rec-room-is-shutting-down-on-its-10th-anniversary-our-costs-always-ended-up-overwhelming-the-revenue-we-brought-in"},
+            {"name": "TechCrunch", "url": "https://techcrunch.com/2026/03/31/social-gaming-platform-rec-room-once-valued-at-3-5b-is-shutting-down/"}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-03-31",
+        "tags": ["Rec Room", "VR", "关停", "社交平台", "商业模式", "估值", "裁员"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "relatedNewsIds": []
+    },
         "title": "索尼互娱收购英国AI公司Cinemersive Labs：强化PlayStation视觉计算与3D技术布局",
         "summary": "索尼互动娱乐(SIE)于4月2日正式宣布收购英国机器学习和计算机视觉公司Cinemersive Labs。该公司专注于将2D照片和视频转换为3D立体图像的技术。收购完成后，Cinemersive团队将加入索尼视觉计算集团(Visual Computing Group, VCG)，该部门专注于图形技术和AI在游戏中的应用。此次收购是索尼在关闭多家内部工作室(如Dark Outlaw Games)后持续加码AI技术投资的最新信号。",
         "source": "SIE Official",
@@ -856,24 +964,25 @@ const newsData = [
     },
     {
         "id": 106,
-        "title": "《杀戮尖塔2》销量飙至460万份+$9200万收入，Steam同时在线峰值57.4万创品类纪录",
-        "summary": "据Alinea Analytics估算，Mega Crit开发的《杀戮尖塔2》（Slay the Spire 2）截至3月19日累计销量已达到460万份，总收入约9200万美元。游戏于3月5日以Early Access形式登陆Steam，上线后Steam同时在线峰值达到574,638人，是前作峰值的10倍以上，创下卡牌Roguelike品类历史最高纪录。游戏连续两周蝉联Steam全球周销量榜冠军（第11-12周），直至3月17-24日被新发售的《红色沙漠》超越降至第二。好评率维持在95%以上。该作已成为2026年迄今Steam最大的发售事件之一。",
-        "source": "VGChartz",
-        "sourceUrl": "https://www.vgchartz.com/article/467253/slay-the-spire-2-beats-marathon-on-the-steam-charts/",
+        "title": "《杀戮尖塔2》3月销量530万份+$1.08亿收入，Steam同时在线峰值57.4万创品类纪录",
+        "summary": "据Alinea Analytics最新估算，Mega Crit开发的《杀戮尖塔2》（Slay the Spire 2）仅2026年3月单月销量达530万份，创造约1.08亿美元收入，成为Steam 3月最畅销游戏，超越《红色沙漠》和《生化危机安魂曲》。游戏于3月5日以Early Access形式登陆Steam，上线后Steam同时在线峰值达574,638人，是前作峰值10倍以上，创下卡牌Roguelike品类历史最高纪录。好评率维持在95%以上。该作已成为2026年迄今Steam最大的独立游戏发售事件。",
+        "source": "GamingBolt",
+        "sourceUrl": "https://gamingbolt.com/slay-the-spire-2-reportedly-sold-5-3-million-copies-in-march-netting-108-million-in-revenue",
         "sourceUrls": [
-            {"name": "Wccftech", "url": "https://wccftech.com/slay-the-spire-2-estimated-4-6-million-copies-sold-92-million-revenue-generated/"},
-            {"name": "AllKeyShop", "url": "https://www.allkeyshop.com/blog/slay-the-spire-2-sales-records-news-d/"},
-            {"name": "VGChartz", "url": "https://www.vgchartz.com/article/467253/slay-the-spire-2-beats-marathon-on-the-steam-charts/"},
-            {"name": "VGTimes", "url": "https://vgtimes.com/gaming-news/151203-bigger-than-silksong-slay-the-spire-2-sales-figures-revealed.html"}
+            {"name": "腾讯文档", "url": "https://docs.qq.com/sheet/LMLdoimBsILX"},
+            {"name": "GamingBolt", "url": "https://gamingbolt.com/slay-the-spire-2-reportedly-sold-5-3-million-copies-in-march-netting-108-million-in-revenue"},
+            {"name": "Wccftech", "url": "https://wccftech.com/slay-the-spire-2-reportedly-best-selling-game-on-steam-march-2026-beat-crimson-desert/"},
+            {"name": "Fextralife", "url": "https://fextralife.com/slay-the-spire-2-steam-sales-march-record-data/"},
+            {"name": "Games.gg", "url": "https://games.gg/news/slay-the-spire-2-beats-crimson-desert-to-top-steam-march-sales/"}
         ],
         "category": "game",
         "importance": "high",
         "featured": true,
-        "date": "2026-03-25",
-        "tags": ["杀戮尖塔2", "460万销量", "Steam", "独立游戏", "Roguelike", "里程碑"],
+        "date": "2026-04-06",
+        "tags": ["杀戮尖塔2", "530万销量", "Steam", "独立游戏", "Roguelike", "里程碑", "Alinea Analytics"],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "杀戮尖塔2以Early Access形式两周售出460万份，创下品类纪录，标志着Roguelike品类从小众走向主流的里程碑。57.4万同时在线峰值是前作的10倍以上，说明Steam平台的长尾效应和社区口碑对续作的放大效应极为显著。$9200万收入验证了'小团队+优质IP续作'的商业模式可复制性，对独立开发者生态是极大鼓舞。被红色沙漠超越降至第二说明3A新IP同样具有强大首周爆发力。"
+        "analysis": "杀戮尖塔2单月530万份+$1.08亿收入超越红色沙漠登顶Steam 3月榜首，创下品类纪录。这标志着Roguelike品类从小众走向主流的里程碑——57.4万同时在线峰值是前作的10倍以上，说明Steam平台的长尾效应和社区口碑对续作的放大效应极为显著。$1.08亿单月收入验证了'小团队+优质IP续作'的商业模式可复制性，对独立开发者生态是极大鼓舞。"
     },
     {
         "id": 105,
