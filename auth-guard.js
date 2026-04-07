@@ -8,8 +8,8 @@
  *   4. PC/Mobile 切换时自动携带 token 参数
  *
  * 使用方式：
- *   正确访问：https://michaelhao1998.github.io/gamepulse-dashboard/?token=gp2026
- *   移动版：  https://michaelhao1998.github.io/gamepulse-dashboard/mobile.html?token=gp2026
+ *   正确访问：https://pcconsole.github.io/gamepulse-dashboard/?token=gp2026
+ *   移动版：  https://pcconsole.github.io/gamepulse-dashboard/mobile.html?token=gp2026
  *   首次带 token 访问后，同一会话（标签页未关闭）内无需重复带 token
  */
 (function () {
