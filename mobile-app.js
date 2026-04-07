@@ -172,45 +172,110 @@ function mUpdateExecSummary(games, flow) {
 
 function mRenderFlowSummary(flow, games) {
     const el = document.getElementById('mFlowSummary');
-    if (!el) return;
+    if (el) {
+        const consolePct = pct(flow.consoleY, flow.total);
+        const xboxPct = pct(flow.xboxY, flow.consoleY);
+        const bothPct = pct(flow.bothPlatform, flow.consoleY);
+        const xgpPct = pct(flow.sim + flow.aft, flow.xboxY);
+        el.innerHTML = `<strong>${flow.total}</strong> 款 → <strong>${flow.consoleY}</strong> 上双主机 (${consolePct}%) → PS <strong>${flow.psY}</strong> · Xbox <strong>${flow.xboxY}</strong> (${xboxPct}%) · 双平台 <strong>${flow.bothPlatform}</strong> (${bothPct}%) · XGP <strong>${flow.sim + flow.aft}</strong> (${xgpPct}%)`;
+    }
 
-    const consolePct = pct(flow.consoleY, flow.total);
-    const xboxPct = pct(flow.xboxY, flow.consoleY);
-    const bothPct = pct(flow.bothPlatform, flow.consoleY);
-    const xgpPct = pct(flow.sim + flow.aft, flow.xboxY);
-    el.innerHTML = `
-        <strong>${flow.total}</strong> 款端主新游 → <strong>${flow.consoleY}</strong> 上线主机 (${consolePct}%) → PS <strong>${flow.psY}</strong> · Xbox <strong>${flow.xboxY}</strong> (${xboxPct}%) · 双平台 <strong>${flow.bothPlatform}</strong> (${bothPct}%)
-        <br>Xbox中: 首发XGP <strong>${flow.sim}</strong> + 后发XGP <strong>${flow.aft}</strong> | 未加入 <strong>${flow.noXgp}</strong>
-    `;
+    // 计算后发XGP平均延迟
+    const afterXgpGames = games.filter(g => g.isXbox === 'Y' && g.xgpType === '后发入库XGP');
+    let avgXgpDelay = 0, validDelayCount = 0;
+    afterXgpGames.forEach(g => {
+        if (g.xboxDate && g.xpgDate && g.xboxDate !== '未上线' && g.xpgDate !== '未上线') {
+            const xboxD = new Date(g.xboxDate), xgpD = new Date(g.xpgDate);
+            if (!isNaN(xboxD) && !isNaN(xgpD)) {
+                const diff = Math.round((xgpD - xboxD) / 86400000);
+                if (diff >= 0) { avgXgpDelay += diff; validDelayCount++; }
+            }
+        }
+    });
+    const avgDelayStr = validDelayCount > 0 ? Math.round(avgXgpDelay / validDelayCount) : 0;
 
-    // 展开详情 bars
-    const barsEl = document.getElementById('mFlowBars');
-    if (!barsEl) return;
+    // 纵向流程图（4行布局）
+    const chartEl = document.getElementById('mFlowChart');
+    if (!chartEl) return;
 
-    const maxVal = flow.total;
-    const items = [
-        { label: '全部端主游戏', value: flow.total, color: '#6366f1' },
-        { label: '已上线双主机', value: flow.consoleY, color: '#a855f7' },
-        { label: '未上线双主机', value: flow.consoleN, color: '#64748b' },
-        { label: '已登录PlayStation', value: flow.psY, color: '#0ea5e9' },
-        { label: '登录Xbox、PlayStation', value: flow.bothPlatform, color: '#f59e0b' },
-        { label: '已登录Xbox', value: flow.xboxY, color: '#22c55e' },
-        { label: '首发入库XGP', value: flow.sim, color: '#14b8a6' },
-        { label: '后发入库XGP', value: flow.aft, color: '#0ea5e9' },
-        { label: '未加入订阅', value: flow.noXgp, color: '#64748b' },
+    const nodes = [
+        { id: 'total', label: '全部端主游戏', value: flow.total, cls: 'accent', desc: '总计基数', row: 0, filter: () => games },
+        { id: 'no-console', label: '未上线双主机', value: flow.consoleN, cls: 'muted', desc: `${pct(flow.consoleN, flow.total)}%`, row: 1, filter: () => games.filter(g => g.isConsole === 'N') },
+        { id: 'console', label: '已上线双主机', value: flow.consoleY, cls: 'purple', desc: `${pct(flow.consoleY, flow.total)}%`, row: 1, filter: () => games.filter(g => g.isConsole === 'Y') },
+        { id: 'ps', label: '已登录PS', value: flow.psY, cls: 'sky', desc: `${pct(flow.psY, flow.consoleY)}%`, row: 2, filter: () => games.filter(g => g.isConsole === 'Y' && g.isPS === 'Y') },
+        { id: 'both', label: 'PS∩Xbox', value: flow.bothPlatform, cls: 'amber', desc: `${pct(flow.bothPlatform, flow.consoleY)}%`, row: 2, filter: () => games.filter(g => g.isConsole === 'Y' && g.isXbox === 'Y' && g.isPS === 'Y') },
+        { id: 'xbox', label: '已登录Xbox', value: flow.xboxY, cls: 'green', desc: `${pct(flow.xboxY, flow.consoleY)}%`, row: 2, filter: () => games.filter(g => g.isConsole === 'Y' && g.isXbox === 'Y') },
+        { id: 'xgp-sim', label: '首发XGP', value: flow.sim, cls: 'teal', desc: `${pct(flow.sim, flow.xboxY)}%`, row: 3, filter: () => games.filter(g => g.isXbox === 'Y' && g.xgpType === '首发入库XGP') },
+        { id: 'xgp-after', label: '后发XGP', value: flow.aft, cls: 'sky', desc: `${pct(flow.aft, flow.xboxY)}%` + (validDelayCount > 0 ? ` · 延迟${avgDelayStr}天` : ''), row: 3, filter: () => games.filter(g => g.isXbox === 'Y' && g.xgpType === '后发入库XGP') },
+        { id: 'xgp-no', label: '未加入订阅', value: flow.noXgp, cls: 'muted', desc: `${pct(flow.noXgp, flow.xboxY)}%`, row: 3, filter: () => games.filter(g => g.isXbox === 'Y' && g.xgpType === '未加入') },
     ];
 
-    barsEl.innerHTML = items.map(item => `
-        <div class="m-flow-bar-item">
-            <div class="m-flow-bar-label">${item.label}</div>
-            <div class="m-flow-bar-track">
-                <div class="m-flow-bar-fill" style="width:${(item.value / maxVal * 100).toFixed(1)}%;background:${item.color};">
-                    ${item.value > 0 ? item.value : ''}
-                </div>
-            </div>
-            <div class="m-flow-bar-count">${item.value}</div>
-        </div>
-    `).join('');
+    const colorMap = { accent: '#6366f1', muted: '#64748b', purple: '#a855f7', sky: '#0ea5e9', amber: '#f59e0b', green: '#22c55e', teal: '#14b8a6' };
+    const rowY = [15, 95, 195, 305];
+    const rowConfigs = [
+        [{ idx: 0, x: 90 }],
+        [{ idx: 1, x: 30 }, { idx: 2, x: 190 }],
+        [{ idx: 3, x: 5 }, { idx: 4, x: 120 }, { idx: 5, x: 235 }],
+        [{ idx: 6, x: 5 }, { idx: 7, x: 120 }, { idx: 8, x: 235 }],
+    ];
+
+    const nw = 110, nh = 58;
+    const svgH = 390;
+    const getCenter = (x) => x + nw / 2;
+
+    // SVG 连接线
+    let paths = '';
+    const line = (x1, y1, x2, y2, color, w) => {
+        const my = (y1 + y2) / 2;
+        paths += `<path d="M${x1},${y1} C${x1},${my} ${x2},${my} ${x2},${y2}" fill="none" stroke="${color}" stroke-width="${w}" opacity="0.5"/>`;
+    };
+    // total → no-console, console
+    line(getCenter(90), rowY[0]+nh, getCenter(30), rowY[1], '#64748b', 2);
+    line(getCenter(90), rowY[0]+nh, getCenter(190), rowY[1], '#a855f7', 4);
+    // console → ps, both, xbox
+    line(getCenter(190), rowY[1]+nh, getCenter(5), rowY[2], '#0ea5e9', 2);
+    line(getCenter(190), rowY[1]+nh, getCenter(120), rowY[2], '#f59e0b', 3);
+    line(getCenter(190), rowY[1]+nh, getCenter(235), rowY[2], '#22c55e', 3);
+    // xbox → xgp-sim, xgp-after, xgp-no
+    line(getCenter(235), rowY[2]+nh, getCenter(5), rowY[3], '#14b8a6', 2);
+    line(getCenter(235), rowY[2]+nh, getCenter(120), rowY[3], '#0ea5e9', 2);
+    line(getCenter(235), rowY[2]+nh, getCenter(235), rowY[3], '#64748b', 2);
+
+    let html = `<div class="m-flow-svg-wrapper" style="position:relative;width:100%;height:${svgH}px;overflow-x:auto;">`;
+    html += `<svg style="position:absolute;top:0;left:0;width:350px;height:${svgH}px;">${paths}</svg>`;
+
+    rowConfigs.forEach((row, ri) => {
+        row.forEach(cfg => {
+            const n = nodes[cfg.idx];
+            const color = colorMap[n.cls] || '#6366f1';
+            html += `<div class="m-flow-node" data-node-id="${n.id}" style="position:absolute;left:${cfg.x}px;top:${rowY[ri]}px;width:${nw}px;height:${nh}px;background:rgba(${hexToRgb(color)},0.1);border:1.5px solid rgba(${hexToRgb(color)},0.4);border-radius:8px;text-align:center;cursor:pointer;display:flex;flex-direction:column;justify-content:center;padding:2px 4px;">
+                <div style="font-size:0.65rem;color:${color};font-weight:600;">${n.label}</div>
+                <div style="font-size:1rem;font-weight:800;color:var(--text-primary);">${n.value}</div>
+                <div style="font-size:0.6rem;color:var(--text-muted);">${n.desc}</div>
+            </div>`;
+        });
+    });
+    html += '</div>';
+    chartEl.innerHTML = html;
+
+    // 绑定节点点击
+    nodes.forEach(n => {
+        const nodeEl = chartEl.querySelector(`[data-node-id="${n.id}"]`);
+        if (nodeEl && n.filter) {
+            nodeEl.addEventListener('click', () => {
+                const list = n.filter();
+                if (list.length > 0) mShowDrilldown(`${n.label} (${n.value} 款)`, list);
+            });
+        }
+    });
+}
+
+// hex color to rgb string helper
+function hexToRgb(hex) {
+    const r = parseInt(hex.slice(1,3), 16);
+    const g = parseInt(hex.slice(3,5), 16);
+    const b = parseInt(hex.slice(5,7), 16);
+    return `${r},${g},${b}`;
 }
 
 // ============ 移动端 Chart.js 图表 ============
@@ -1905,6 +1970,77 @@ function mCloseSheet() {
     document.getElementById('mSheetOverlay')?.classList.remove('active');
 }
 
+// ============ 移动端 Drilldown（Bottom Sheet 游戏列表） ============
+
+function mShowDrilldown(title, games) {
+    const sorted = [...games].sort((a, b) => (b.mscienceDailyRev || b.dailyRevenue) - (a.mscienceDailyRev || a.dailyRevenue));
+    const totalRev = games.reduce((s, g) => s + g.lifetimeRevenue, 0);
+
+    let html = `<div style="margin-bottom:10px;font-size:0.75rem;color:var(--text-muted);">共 ${games.length} 款 · Mscience总收入 ${formatRevenue(totalRev)}</div>`;
+    sorted.forEach((g, i) => {
+        let xgpCls = 'none';
+        if (g.xgpType === '首发入库XGP') xgpCls = 'sim';
+        else if (g.xgpType === '后发入库XGP') xgpCls = 'aft';
+        const platforms = g.platforms ? g.platforms.join('/') : '-';
+        html += `<div style="padding:10px 0;border-bottom:1px solid var(--border-light);">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+                <div style="font-weight:700;font-size:0.82rem;color:var(--text-primary);flex:1;">${i+1}. ${g.name}</div>
+                <div style="font-size:0.75rem;font-weight:700;color:var(--accent-primary);">${formatRevenue(g.mscienceDailyRev || g.dailyRevenue)}/日</div>
+            </div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:4px;font-size:0.7rem;color:var(--text-muted);">
+                <span>${g.publisher}</span>
+                <span>·</span>
+                <span>${g.releaseDate || '-'}</span>
+                <span>·</span>
+                <span>${platforms}</span>
+                <span>·</span>
+                <span class="m-xgp-tag ${xgpCls}" style="font-size:0.65rem;">${g.xgpType}</span>
+            </div>
+            <div style="display:flex;gap:10px;margin-top:4px;font-size:0.68rem;color:var(--text-muted);">
+                <span>总收入: ${formatRevenue(g.lifetimeRevenue)}</span>
+                <span>上线${g.daysOnline || '-'}天</span>
+                ${g.psDate && g.psDate !== '未上线' ? `<span>PS: ${g.psDate}</span>` : ''}
+                ${g.xboxDate && g.xboxDate !== '未上线' ? `<span>Xbox: ${g.xboxDate}</span>` : ''}
+                ${g.xpgDate && g.xpgDate !== '未上线' ? `<span>XGP: ${g.xpgDate}</span>` : ''}
+            </div>
+        </div>`;
+    });
+    mShowSheet(title, html);
+}
+
+// ============ 移动端 KPI 点击绑定 ============
+
+function mBindKPIClicks() {
+    const stratKPI = document.getElementById('mStrategyKPI');
+    if (stratKPI) {
+        const cards = stratKPI.querySelectorAll('.m-kpi-card');
+        const filters_fn = [
+            () => filteredGames,
+            () => filteredGames.filter(g => g.isConsole === 'Y'),
+            () => filteredGames.filter(g => g.isXbox === 'Y'),
+            () => filteredGames.filter(g => g.isXbox === 'Y' && g.xgpType !== '未加入'),
+        ];
+        const labels = ['全部端主游戏', '已上线双主机(PS/Xbox)', '已登陆Xbox', '加入XGP'];
+        cards.forEach((card, i) => {
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', () => {
+                const list = filters_fn[i]();
+                if (list.length > 0) mShowDrilldown(`${labels[i]} (${list.length} 款)`, list);
+            });
+        });
+    }
+    const overviewKPI = document.getElementById('mOverviewKPI');
+    if (overviewKPI) {
+        const cards = overviewKPI.querySelectorAll('.m-kpi-card');
+        cards.forEach(card => {
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', () => {
+                if (filteredGames.length > 0) mShowDrilldown(`全部游戏 (${filteredGames.length} 款)`, filteredGames);
+            });
+        });
+    }
+}
+
 // ============ 事件绑定 ============
 
 function mBindEvents() {
@@ -1976,6 +2112,11 @@ function mBindEvents() {
     document.getElementById('mSheetOverlay')?.addEventListener('click', (e) => {
         if (e.target === e.currentTarget) mCloseSheet();
     });
+    // ESC 关闭 bottom sheet
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') mCloseSheet(); });
+
+    // KPI 卡片点击 drilldown
+    mBindKPIClicks();
 
     // Pipeline 筛选器
     document.getElementById('mPipelineTimeFilter')?.addEventListener('change', () => mUpdatePipelineTab());
