@@ -190,8 +190,8 @@ function mRenderFlowSummary(flow, games) {
     const maxVal = flow.total;
     const items = [
         { label: '全部端主游戏', value: flow.total, color: '#6366f1' },
-        { label: '已上线主机', value: flow.consoleY, color: '#a855f7' },
-        { label: '未上线主机', value: flow.consoleN, color: '#64748b' },
+        { label: '已上线双主机', value: flow.consoleY, color: '#a855f7' },
+        { label: '未上线双主机', value: flow.consoleN, color: '#64748b' },
         { label: '已登录PlayStation', value: flow.psY, color: '#0ea5e9' },
         { label: '登录Xbox、PlayStation', value: flow.bothPlatform, color: '#f59e0b' },
         { label: '已登录Xbox', value: flow.xboxY, color: '#22c55e' },
