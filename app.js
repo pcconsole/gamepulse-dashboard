@@ -160,16 +160,32 @@ function renderFlowChart(flow, games) {
     // 第2列: 未上线主机 / 已上线主机
     // 第3列: 已登录PlayStation / 登录Xbox、PlayStation(交集) / 已登录Xbox
     // 第4列: 首发入库XGP / 后发入库XGP / 未加入订阅（均属于已登录Xbox的子集）
+    // 计算后发入库XGP的平均延迟天数
+    const afterXgpGames = games.filter(g => g.isXbox === 'Y' && g.xgpType === '后发入库XGP');
+    let avgXgpDelay = 0;
+    let validDelayCount = 0;
+    afterXgpGames.forEach(g => {
+        if (g.xboxDate && g.xpgDate && g.xboxDate !== '未上线' && g.xpgDate !== '未上线') {
+            const xboxD = new Date(g.xboxDate);
+            const xgpD = new Date(g.xpgDate);
+            if (!isNaN(xboxD) && !isNaN(xgpD)) {
+                const diffDays = Math.round((xgpD - xboxD) / (1000 * 60 * 60 * 24));
+                if (diffDays >= 0) { avgXgpDelay += diffDays; validDelayCount++; }
+            }
+        }
+    });
+    const avgDelayStr = validDelayCount > 0 ? Math.round(avgXgpDelay / validDelayCount) : 0;
+
     const nodes = [
-        { id: 'total', label: '全部端主游戏', value: flow.total, x: 20, y: 330, w: 190, h: 86, cls: 'blue', desc: '总计基数', filter: () => games },
-        { id: 'no-console', label: '未上线主机', value: flow.consoleN, x: 280, y: 100, w: 190, h: 86, cls: 'muted', desc: `占总数 ${pct(flow.consoleN, flow.total)}%`, filter: () => games.filter(g => g.isConsole === 'N') },
-        { id: 'console', label: '已上线主机', value: flow.consoleY, x: 280, y: 460, w: 190, h: 86, cls: 'purple', desc: `占总数 ${pct(flow.consoleY, flow.total)}%`, filter: () => games.filter(g => g.isConsole === 'Y') },
-        { id: 'ps', label: '已登录PlayStation', value: flow.psY, x: 555, y: 200, w: 210, h: 86, cls: 'sky', desc: `占主机 ${pct(flow.psY, flow.consoleY)}%`, filter: () => games.filter(g => g.isConsole === 'Y' && g.isPS === 'Y') },
-        { id: 'both', label: '登录Xbox、PlayStation', value: flow.bothPlatform, x: 555, y: 380, w: 210, h: 86, cls: 'amber', desc: `占主机 ${pct(flow.bothPlatform, flow.consoleY)}% · PS∩Xbox交集`, filter: () => games.filter(g => g.isConsole === 'Y' && g.isXbox === 'Y' && g.isPS === 'Y') },
-        { id: 'xbox', label: '已登录Xbox', value: flow.xboxY, x: 555, y: 560, w: 210, h: 86, cls: 'green', desc: `占主机 ${pct(flow.xboxY, flow.consoleY)}%`, filter: () => games.filter(g => g.isConsole === 'Y' && g.isXbox === 'Y') },
-        { id: 'xgp-sim', label: '首发入库XGP', value: flow.sim, x: 855, y: 330, w: 190, h: 86, cls: 'teal', desc: `占Xbox ${pct(flow.sim, flow.xboxY)}%`, filter: () => games.filter(g => g.isXbox === 'Y' && g.xgpType === '首发入库XGP') },
-        { id: 'xgp-after', label: '后发入库XGP', value: flow.aft, x: 855, y: 510, w: 190, h: 86, cls: 'sky', desc: `占Xbox ${pct(flow.aft, flow.xboxY)}%`, filter: () => games.filter(g => g.isXbox === 'Y' && g.xgpType === '后发入库XGP') },
-        { id: 'xgp-no', label: '未加入订阅', value: flow.noXgp, x: 855, y: 690, w: 190, h: 86, cls: 'muted', desc: `占Xbox ${pct(flow.noXgp, flow.xboxY)}%`, filter: () => games.filter(g => g.isXbox === 'Y' && g.xgpType === '未加入') },
+        { id: 'total', label: '全部端主游戏', value: flow.total, x: 20, y: 330, w: 190, h: 86, cls: 'blue', desc: '总计基数', filter: () => games, ctx: {} },
+        { id: 'no-console', label: '未上线主机', value: flow.consoleN, x: 280, y: 100, w: 190, h: 86, cls: 'muted', desc: `占总数 ${pct(flow.consoleN, flow.total)}%`, filter: () => games.filter(g => g.isConsole === 'N'), ctx: {} },
+        { id: 'console', label: '已上线主机', value: flow.consoleY, x: 280, y: 460, w: 190, h: 86, cls: 'purple', desc: `占总数 ${pct(flow.consoleY, flow.total)}%`, filter: () => games.filter(g => g.isConsole === 'Y'), ctx: { showPsDate: true, showXboxDate: true } },
+        { id: 'ps', label: '已登录PlayStation', value: flow.psY, x: 555, y: 200, w: 210, h: 86, cls: 'sky', desc: `占主机 ${pct(flow.psY, flow.consoleY)}%`, filter: () => games.filter(g => g.isConsole === 'Y' && g.isPS === 'Y'), ctx: { showPsDate: true } },
+        { id: 'both', label: '登录Xbox、PlayStation', value: flow.bothPlatform, x: 555, y: 380, w: 210, h: 86, cls: 'amber', desc: `占主机 ${pct(flow.bothPlatform, flow.consoleY)}% · PS∩Xbox交集`, filter: () => games.filter(g => g.isConsole === 'Y' && g.isXbox === 'Y' && g.isPS === 'Y'), ctx: { showPsDate: true, showXboxDate: true } },
+        { id: 'xbox', label: '已登录Xbox', value: flow.xboxY, x: 555, y: 560, w: 210, h: 86, cls: 'green', desc: `占主机 ${pct(flow.xboxY, flow.consoleY)}%`, filter: () => games.filter(g => g.isConsole === 'Y' && g.isXbox === 'Y'), ctx: { showXboxDate: true } },
+        { id: 'xgp-sim', label: '首发入库XGP', value: flow.sim, x: 855, y: 330, w: 190, h: 86, cls: 'teal', desc: `占Xbox ${pct(flow.sim, flow.xboxY)}%`, filter: () => games.filter(g => g.isXbox === 'Y' && g.xgpType === '首发入库XGP'), ctx: { showXboxDate: true, showXgpDate: true } },
+        { id: 'xgp-after', label: '后发入库XGP', value: flow.aft, x: 855, y: 510, w: 190, h: 86, cls: 'sky', desc: `占Xbox ${pct(flow.aft, flow.xboxY)}%`, filter: () => games.filter(g => g.isXbox === 'Y' && g.xgpType === '后发入库XGP'), ctx: { showXboxDate: true, showXgpDate: true } },
+        { id: 'xgp-no', label: '未加入订阅', value: flow.noXgp, x: 855, y: 690, w: 190, h: 86, cls: 'muted', desc: `占Xbox ${pct(flow.noXgp, flow.xboxY)}%`, filter: () => games.filter(g => g.isXbox === 'Y' && g.xgpType === '未加入'), ctx: { showXboxDate: true } },
     ];
 
     // SVG连接线
@@ -191,11 +207,14 @@ function renderFlowChart(flow, games) {
     html += `<svg class="flow-svg">${svgPaths}</svg>`;
 
     nodes.forEach(n => {
+        const extraDesc = (n.id === 'xgp-after' && validDelayCount > 0)
+            ? `<span class="node-extra" style="font-size:0.65rem;color:#f59e0b;margin-top:2px;display:block;">平均入库延迟 ${avgDelayStr} 天（${validDelayCount}款有效）</span>`
+            : '';
         html += `
             <div class="flow-node ${n.cls} clickable" style="left:${n.x}px;top:${n.y}px;width:${n.w}px;height:${n.h}px;" data-node-id="${n.id}">
                 <span class="node-label">${n.label}</span>
                 <span class="node-value">${n.value}</span>
-                <span class="node-desc">${n.desc}</span>
+                <span class="node-desc">${n.desc}</span>${extraDesc}
             </div>`;
     });
 
@@ -209,7 +228,9 @@ function renderFlowChart(flow, games) {
             nodeEl.addEventListener('click', () => {
                 const filteredList = n.filter();
                 if (filteredList.length > 0) {
+                    window._drilldownContext = n.ctx || {};
                     showDrilldown(`${n.label} (${n.value} 款)`, filteredList);
+                    window._drilldownContext = {};
                 }
             });
         }
@@ -464,26 +485,42 @@ function showDrilldown(title, games) {
     const totalRev = games.reduce((s, g) => s + g.lifetimeRevenue, 0);
     const totalDailyRev = games.reduce((s, g) => s + (g.mscienceDailyRev || 0), 0);
 
+    // 检查当前 drilldown 的上下文，决定是否显示额外日期列
+    const _drilldownCtx = window._drilldownContext || {};
+    const _showPsDate = _drilldownCtx.showPsDate || false;
+    const _showXboxDate = _drilldownCtx.showXboxDate || false;
+    const _showXgpDate = _drilldownCtx.showXgpDate || false;
+
     let html = `<p style="color:var(--text-muted);margin-bottom:16px;font-size:0.85rem;">共 ${games.length} 款游戏，Mscience总收入 ${formatRevenue(totalRev)}，合计日均流水 ${formatRevenue(totalDailyRev)}</p>`;
     html += `<table><thead><tr>
-        <th>#</th><th class="text-left">游戏名称</th><th>发行商</th><th>类型</th><th>XGP策略</th><th class="num">日均流水(Msc)</th><th class="num">Mscience总收入</th><th class="num">上线天数</th>
-    </tr></thead><tbody>`;
+        <th>#</th><th class="text-left">游戏名称</th><th>发行商</th><th>发行日期</th><th>首发平台</th><th>类型</th><th>XGP策略</th><th class="num">日均流水(Msc)</th><th class="num">Mscience总收入</th><th class="num">上线天数</th>`;
+    if (_showPsDate) html += `<th>PS上线日期</th>`;
+    if (_showXboxDate) html += `<th>Xbox上线日期</th>`;
+    if (_showXgpDate) html += `<th>XGP入库日期</th>`;
+    html += `</tr></thead><tbody>`;
 
     sorted.forEach((g, i) => {
         let xgpCls = 'none';
         if (g.xgpType === '首发入库XGP') xgpCls = 'sim';
         else if (g.xgpType === '后发入库XGP') xgpCls = 'aft';
 
+        const platformSummary = g.platforms ? g.platforms.join(' / ') : '-';
+
         html += `<tr class="drilldown-game-row" style="cursor:pointer;">
             <td>${i + 1}</td>
             <td class="game-name text-left">${g.name}</td>
             <td>${g.publisher}</td>
+            <td style="white-space:nowrap;">${g.releaseDate || '-'}</td>
+            <td style="font-size:0.8rem;">${platformSummary}</td>
             <td>${g.mainGenre || '-'}</td>
             <td><span class="xgp-tag ${xgpCls}">${g.xgpType}</span></td>
             <td class="num" style="color:var(--accent-primary);font-weight:700;">${formatRevenue(g.mscienceDailyRev || g.dailyRevenue)}</td>
             <td class="num">${formatRevenue(g.lifetimeRevenue)}</td>
-            <td class="num">${g.daysOnline || '-'}</td>
-        </tr>`;
+            <td class="num">${g.daysOnline || '-'}</td>`;
+        if (_showPsDate) html += `<td style="white-space:nowrap;">${g.psDate || '-'}</td>`;
+        if (_showXboxDate) html += `<td style="white-space:nowrap;">${g.xboxDate || '-'}</td>`;
+        if (_showXgpDate) html += `<td style="white-space:nowrap;">${g.xpgDate || '-'}</td>`;
+        html += `</tr>`;
     });
 
     html += '</tbody></table>';
