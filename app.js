@@ -157,7 +157,7 @@ function renderFlowChart(flow, games) {
 
     // 流程图节点定义（5列布局）
     // 第1列: 全部端主游戏
-    // 第2列: 未上线主机 / 已上线主机
+    // 第2列: 未上线双主机 / 已上线双主机
     // 第3列: 已登录PlayStation / 登录Xbox、PlayStation(交集) / 已登录Xbox
     // 第4列: 首发入库XGP / 后发入库XGP / 未加入订阅（均属于已登录Xbox的子集）
     // 计算后发入库XGP的平均延迟天数
@@ -178,8 +178,8 @@ function renderFlowChart(flow, games) {
 
     const nodes = [
         { id: 'total', label: '全部端主游戏', value: flow.total, x: 20, y: 330, w: 190, h: 86, cls: 'blue', desc: '总计基数', filter: () => games, ctx: {} },
-        { id: 'no-console', label: '未上线主机', value: flow.consoleN, x: 280, y: 100, w: 190, h: 86, cls: 'muted', desc: `占总数 ${pct(flow.consoleN, flow.total)}%`, filter: () => games.filter(g => g.isConsole === 'N'), ctx: {} },
-        { id: 'console', label: '已上线主机', value: flow.consoleY, x: 280, y: 460, w: 190, h: 86, cls: 'purple', desc: `占总数 ${pct(flow.consoleY, flow.total)}%`, filter: () => games.filter(g => g.isConsole === 'Y'), ctx: { showPsDate: true, showXboxDate: true } },
+        { id: 'no-console', label: '未上线双主机', value: flow.consoleN, x: 280, y: 100, w: 190, h: 86, cls: 'muted', desc: `占总数 ${pct(flow.consoleN, flow.total)}%`, filter: () => games.filter(g => g.isConsole === 'N'), ctx: {} },
+        { id: 'console', label: '已上线双主机', value: flow.consoleY, x: 280, y: 460, w: 190, h: 86, cls: 'purple', desc: `占总数 ${pct(flow.consoleY, flow.total)}%`, filter: () => games.filter(g => g.isConsole === 'Y'), ctx: { showPsDate: true, showXboxDate: true } },
         { id: 'ps', label: '已登录PlayStation', value: flow.psY, x: 555, y: 200, w: 210, h: 86, cls: 'sky', desc: `占主机 ${pct(flow.psY, flow.consoleY)}%`, filter: () => games.filter(g => g.isConsole === 'Y' && g.isPS === 'Y'), ctx: { showPsDate: true } },
         { id: 'both', label: '登录Xbox、PlayStation', value: flow.bothPlatform, x: 555, y: 380, w: 210, h: 86, cls: 'amber', desc: `占主机 ${pct(flow.bothPlatform, flow.consoleY)}% · PS∩Xbox交集`, filter: () => games.filter(g => g.isConsole === 'Y' && g.isXbox === 'Y' && g.isPS === 'Y'), ctx: { showPsDate: true, showXboxDate: true } },
         { id: 'xbox', label: '已登录Xbox', value: flow.xboxY, x: 555, y: 560, w: 210, h: 86, cls: 'green', desc: `占主机 ${pct(flow.xboxY, flow.consoleY)}%`, filter: () => games.filter(g => g.isConsole === 'Y' && g.isXbox === 'Y'), ctx: { showXboxDate: true } },
