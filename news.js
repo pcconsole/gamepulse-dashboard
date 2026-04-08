@@ -1,8 +1,8 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-04-07T18:00:00Z
-// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1126新增23行批次4/6-4/12)+web_search 12轮)
+// 最后更新: 2026-04-08T18:00:00Z
+// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1126无新增)+web_search 12轮)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
@@ -173,6 +173,74 @@ const newsSources = [
 ];
 
 const newsData = [
+    {
+        "id": 150,
+        "title": "Eidos-Montreal裁员124人+总监离职：Embracer旗下《杀出重围》工作室19年老将David Anfossi出走",
+        "summary": "Embracer集团旗下蒙特利尔工作室Eidos-Montreal宣布裁员124人，同时在工作室工作近19年的总负责人David Anfossi也正式离职。Eidos-Montreal以《杀出重围》系列和《漫威银河护卫队》闻名。官方表示裁员是'项目需求变化和跨制作/支持团队影响'的结果。这是Embracer自2023年Saudi Savvy Games投资失败以来持续重组的最新动作，也是2026年游戏行业裁员潮的又一例证。",
+        "source": "GamesIndustry",
+        "sourceUrl": "https://www.gamesindustry.biz/eidos-montreal-announces-124-job-cuts-studio-head-david-anfossi-departs-after-19-years-at-developer",
+        "sourceUrls": [
+            {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/eidos-montreal-announces-124-job-cuts-studio-head-david-anfossi-departs-after-19-years-at-developer"},
+            {"name": "Wccftech", "url": "https://wccftech.com/eidos-montreal-loses-124-developers-mass-layoff-head-of-studio-leaves/"},
+            {"name": "Game Developer", "url": "https://www.gamedeveloper.com/business/embracer-has-laid-off-124-employees-at-eidos-montreal"},
+            {"name": "Gematsu", "url": "https://www.gematsu.com/2026/03/eidos-montreal-lays-off-124-staff-head-of-studio-david-anfossi-departs"},
+            {"name": "CTV News", "url": "https://www.ctvnews.ca/montreal/article/montreal-videogame-developer-eidos-lays-off-124-employees-head-of-studio/"}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-03-31",
+        "tags": ["Eidos-Montreal", "Embracer", "裁员", "David Anfossi", "杀出重围", "蒙特利尔"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "Eidos-Montreal裁员是Embracer集团持续瘦身重组的延续。自2023年Saudi Savvy Games投资失败后，Embracer已在全球裁撤数千人。David Anfossi作为工作室19年老将的离开，意味着Eidos可能面临创意方向的根本性转变。对行业而言，蒙特利尔游戏生态系统正遭受密集冲击(此前Ubisoft Red Storm也在同城裁员)，加拿大游戏人才市场可能出现供给过剩。",
+        "relatedNewsIds": [140, 110]
+    },
+    {
+        "id": 149,
+        "title": "美国专利局驳回任天堂'召唤角色战斗'专利：Palworld法律争端迎来重大转折",
+        "summary": "美国专利商标局(USPTO)在非终局裁定中驳回了任天堂2023年申请、2025年获批的'在游戏中召唤副角色令其参与战斗'专利的全部26项权利要求，理由为'过于显而易见'(obvious)。该专利是任天堂起诉Pocketpair《幻兽帕鲁》(Palworld)侵权的核心依据之一。USPTO局长于2025年11月主动要求重新审查。这一裁定虽非终局（任天堂可上诉），但显著削弱了任天堂在Palworld案中的法律立场，且可能对整个游戏行业的玩法机制专利维权产生深远影响。",
+        "source": "GamesIndustry",
+        "sourceUrl": "https://www.gamesindustry.biz/us-patent-office-rejects-nintendos-summon-subcharacter-and-let-it-fight-patent",
+        "sourceUrls": [
+            {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/us-patent-office-rejects-nintendos-summon-subcharacter-and-let-it-fight-patent"},
+            {"name": "IGN", "url": "https://www.ign.com/articles/uspto-rejects-nintendos-controversial-summon-character-and-let-it-fight-pokemon-patent-in-non-final-ruling-as-palworld-legal-battle-rumbles-on"},
+            {"name": "PC Gamer", "url": "https://www.pcgamer.com/gaming-industry/us-patent-office-revokes-nintendos-controversial-pokemon-battling-patent-in-nonfinal-decision/"},
+            {"name": "Nintendo Life", "url": "https://www.nintendolife.com/news/2026/04/nintendos-summon-character-to-fight-patent-rejected-by-us-patent-office"},
+            {"name": "TechSpot", "url": "https://www.techspot.com/news/111927-uspto-rejects-nintendo-summon-character-fight-pokmon-patent.html"}
+        ],
+        "category": "policy",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-02",
+        "tags": ["任天堂", "Palworld", "专利", "USPTO", "Pocketpair", "宝可梦", "法律"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "USPTO驳回'召唤角色战斗'专利的全部26项权利要求，是游戏行业知识产权保护领域的里程碑事件。核心争议在于：游戏玩法机制能否被专利保护？如果'召唤角色战斗'被认定为'显而易见'，那么类似的核心玩法循环（如卡牌召唤、伙伴系统）专利都可能面临同样挑战。虽然这是非终局裁定（任天堂可修改权利要求后重新申请），但已向行业发出信号：宽泛的玩法机制专利越来越难获得美国法律保护。",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 148,
+        "title": "Lenovo Legion Go 2涨价近50%：RAM短缺'RAMageddon'冲击波蔓延至掌机硬件市场",
+        "summary": "Lenovo在未发布官方声明的情况下悄然大幅上调掌上游戏PC Legion Go 2的美国零售价：基础款(AMD Ryzen Z2/16GB)从$1,099涨至$1,499(涨幅约36%)，顶配款从$1,349涨至$1,999(涨幅约48%)。The Verge将此称为'RAMageddon'(RAM末日)——全球DRAM/DDR5内存短缺和价格飙升正在冲击整个游戏硬件产业链。这是继PS5全球涨价$50-$150、Switch 2面临涨价压力后，又一款主流游戏硬件产品大幅提价，印证了行业级硬件成本危机正在从主机蔓延至掌机和PC领域。",
+        "source": "The Verge",
+        "sourceUrl": "https://www.theverge.com/games/906752/lenovo-legion-go-2-suddenly-costs-650-more-as-ramageddon-lays-waste-to-gaming-hardware",
+        "sourceUrls": [
+            {"name": "The Verge", "url": "https://www.theverge.com/games/906752/lenovo-legion-go-2-suddenly-costs-650-more-as-ramageddon-lays-waste-to-gaming-hardware"},
+            {"name": "PCMag", "url": "https://www.pcmag.com/news/lenovos-legion-go-2-is-the-latest-console-to-raise-prices"},
+            {"name": "Insider Gaming", "url": "https://insider-gaming.com/lenovo-legion-go-2-prices-increase-nearly-50/"},
+            {"name": "Android Headlines", "url": "https://www.androidheadlines.com/2026/04/the-lenovo-legion-go-2-price-skyrockets-to-2000.html"}
+        ],
+        "category": "hardware",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-04",
+        "tags": ["Lenovo", "Legion Go 2", "涨价", "RAM", "DDR5", "掌机", "硬件", "RAMageddon"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "Legion Go 2涨价近50%是'RAMageddon'(RAM末日)对游戏硬件市场的最直接冲击。全球DDR5/DRAM短缺导致内存价格飙升，已从上游芯片层面传导至终端消费产品。结合PS5涨价$50-$150、Switch 2面临涨价压力、Xbox也暗示调价，整个游戏硬件产业正进入成本上升周期。对消费者的直接影响：2026年购买任何游戏硬件都将比2025年更贵，可能抑制换代需求。对厂商而言，涨价与销量的博弈将成为本年度最大挑战。",
+        "relatedNewsIds": [147, 121, 130, 122]
+    },
     {
         "id": 147,
         "title": "Switch 2涨价'不可避免'：前任天堂销售主管称关税+RAM+成本三重压力下硬件提价只是时间问题",
