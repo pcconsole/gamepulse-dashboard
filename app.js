@@ -1213,7 +1213,7 @@ function renderNewsSpotlight(importantNews) {
 
     // 对核心新闻进行主题聚类
     const clusters = clusterNewsByTopic(coreNews);
-    const clusterOrder = ['upstream-hw','hot-product','sony-ps','xbox-ms','steam-valve','nintendo','market-info','other'];
+    const clusterOrder = ['sony-ps','xbox-ms','hot-product','upstream-hw','steam-valve','nintendo','market-info','other'];
     const sortedClusterKeys = clusterOrder.filter(k => clusters[k]);
 
     let html = `<div class="spotlight-header">
