@@ -256,7 +256,7 @@ const newsData = [
         "importance": "high",
         "featured": true,
         "date": "2026-04-03",
-        "tags": ["Nintendo", "Switch 2", "涨价", "关税", "RAM", "硬件成本", "PS5涨价"],
+        "tags": ["Nintendo", "Switch 2", "涨价", "关税", "RAM", "硬件成本"],
         "sentiment": "negative",
         "tdocMarking": "none",
         "analysis": "继索尼PS5全球涨价后，前任天堂销售主管直言Switch 2涨价'不可避免'，标志着游戏硬件全面进入涨价周期。三大主机厂商(索尼已涨/微软暗示/任天堂'不可避免')均面临关税+RAM+通胀三重成本压力。这将压缩2026-2027年硬件装机量预期，间接影响软件销售基数。对开发者而言，用户获取成本上升可能加速'精品化+订阅制'转型。",
@@ -3102,38 +3102,47 @@ function isThisWeek(dateStr) {
 // 将新闻按平台/主题自动归组，相关新闻聚合在一起展示
 
 const NEWS_TOPIC_CLUSTERS = [
-    { id: 'sony-ps', label: '🎮 索尼 PlayStation', icon: '🔵',
-      match: function(n) { var c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
-          return c.match(/索尼|sony|playstation|ps5|ps6|psn|ps plus|pssr|push\s?square|ps\s?pro|dualsense|ps\s?portal|ps\s?stars|dark\s?outlaw|bungie/); }},
-    { id: 'xbox-ms', label: '🟢 微软 Xbox', icon: '🟢',
-      match: function(n) { var c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
-          return c.match(/xbox|微软.*游戏|game\s?pass|xgp|phil\s?spencer|asha\s?sharma|helix|xbox\s?wire|bethesda.*xbox|动视暴雪|activision|copilot.*xbox|xbox.*copilot|partner\s?preview|微软.*订阅/); }},
-    { id: 'hot-product', label: '🔥 热门产品', icon: '🔥',
-      match: function(n) { var c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
-          return c.match(/红色沙漠|crimson\s?desert|杀戮尖塔|slay.*spire|生化危机.*安魂|resident\s?evil.*requiem|marathon|gta\s?6|gta\s?vi/) ||
-                 (c.match(/销量.*突破|万份|百万|million|创纪录|里程碑|登顶/) && c.match(/游戏|game/)); }},
+    // v8.0 聚类逻辑重构（2026-04-09）：
+    // 1) match 只匹配 title+tags（新闻主体标识），不匹配 summary（避免关联提及误分类）
+    //    例：Lenovo涨价新闻summary提到PS5→不应被分入索尼板块
+    // 2) 删除 epic 独立聚类，Epic相关新闻归入 market-info
+    // 3) upstream-hw 优先级最高（涨价/硬件类新闻优先归入硬件板块，不被平台吸走）
+    // 4) 平台聚类（sony/xbox/nintendo）只匹配以该平台为主体的新闻
     { id: 'upstream-hw', label: '🔧 上游硬件 & 供应链', icon: '🔧',
-      match: function(n) { var c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
-          return c.match(/内存.*涨|内存.*降|内存.*短缺|dram|ddr5|hbm|ram.*短缺|ram.*shortage|芯片.*短缺|液冷|asetek/) ||
-                 (c.match(/涨价|price.*hike|price.*increase/) && c.match(/硬件|成本|ram|内存|芯片|组件|component/)) ||
-                 c.match(/nvidia|dlss|gpu|显卡|amd|rtx\s?50|裸眼3d|geforce|cuda/) ||
-                 (n.category === 'hardware'); }},
+      match: function(n) { var t = ((n.title||'')+' '+(n.tags||[]).join(' ')).toLowerCase();
+          var title = (n.title||'').toLowerCase();
+          // 如果标题明确是某平台的官方涨价公告（主语是平台方），不归入此聚类
+          var isPlatformOfficialAction = title.match(/^(索尼|sony|任天堂|nintendo|微软|microsoft|xbox).{0,5}(宣布|announces?|公布|confirms?)/);
+          if (isPlatformOfficialAction) return false;
+          return t.match(/内存|dram|ddr5|hbm|ram(?!.*arcade)|芯片.*短缺|液冷|asetek|ramageddon/) ||
+                 t.match(/涨价.*硬件|涨价.*成本|硬件.*涨价|硬件.*成本|成本.*涨|bom|物料/) ||
+                 (t.match(/涨价|price.*hike|price.*increase|降价/) && t.match(/ram|内存|芯片|组件|component|掌机|legion|硬件市场|主机定价|内存成本/)) ||
+                 t.match(/nvidia|dlss|gpu|显卡|amd|rtx\s?50|裸眼3d|geforce|cuda/) ||
+                 (n.category === 'hardware' && t.match(/涨价|降价|成本|内存|ram|芯片|供应|shortage|bom/)); }},
+    { id: 'hot-product', label: '🔥 热门产品', icon: '🔥',
+      match: function(n) { var t = ((n.title||'')+' '+(n.tags||[]).join(' ')).toLowerCase();
+          return t.match(/红色沙漠|crimson\s?desert|杀戮尖塔|slay.*spire|生化危机.*安魂|resident\s?evil.*requiem|marathon|gta\s?6|gta\s?vi/) ||
+                 (t.match(/销量.*突破|万份|百万|million|创纪录|里程碑|登顶/) && t.match(/游戏|game/)); }},
+    { id: 'sony-ps', label: '🎮 索尼 PlayStation', icon: '🔵',
+      match: function(n) { var t = ((n.title||'')+' '+(n.tags||[]).join(' ')).toLowerCase();
+          return t.match(/索尼|sony|playstation|ps5|ps6|psn|ps plus|pssr|push\s?square|ps\s?pro|dualsense|ps\s?portal|ps\s?stars|dark\s?outlaw|bungie|saros/); }},
+    { id: 'xbox-ms', label: '🟢 微软 Xbox', icon: '🟢',
+      match: function(n) { var t = ((n.title||'')+' '+(n.tags||[]).join(' ')).toLowerCase();
+          return t.match(/xbox|微软.*游戏|game\s?pass|xgp|phil\s?spencer|asha\s?sharma|helix|xbox\s?wire|bethesda.*xbox|动视暴雪|activision|copilot.*xbox|xbox.*copilot|partner\s?preview|微软.*订阅|starfield/); }},
     { id: 'steam-valve', label: '🔷 Steam & Valve', icon: '🔷',
-      match: function(n) { var c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
-          return c.match(/steam|valve|steam\s?machine|steam\s?deck|steam\s?frame|steamos|steam.*特卖|steam.*spring|cs2/); }},
-    { id: 'epic', label: '🟣 Epic Games', icon: '🟣',
-      match: function(n) { var c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
-          return c.match(/epic\s?games|fortnite|堡垒之夜|epic.*store|egs|虚幻引擎|unreal/); }},
-    { id: 'market-info', label: '📊 市场信息', icon: '📊',
-      match: function(n) { var c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
-          return c.match(/newzoo|circana|npd|市场.*报告|市场.*预测|行业.*报告|bafta|gdca|gdc.*报告/) ||
-                 c.match(/pegi|欧盟.*法|dma|监管|并购|收购|投资|沙特|savvy|重组|裁员|layoff/) ||
-                 c.match(/退休|辞职|ceo.*新|新.*ceo|pif|gamestop.*财报|ea.*财报|财报|版号|整合/) ||
-                 c.match(/德国.*市场|market.*grew|迪士尼|disney|ea.*裁|育碧|ubisoft.*裁/) ||
-                 c.match(/诉讼|反垄断|关税|tariff/); }},
+      match: function(n) { var t = ((n.title||'')+' '+(n.tags||[]).join(' ')).toLowerCase();
+          return t.match(/steam|valve|steam\s?machine|steam\s?deck|steam\s?frame|steamos|steam.*特卖|steam.*spring|cs2/); }},
     { id: 'nintendo', label: '🔴 任天堂 Switch', icon: '🔴',
-      match: function(n) { var c = ((n.title||'')+' '+(n.tags||[]).join(' ')+' '+(n.summary||'')).toLowerCase();
-          return c.match(/任天堂|nintendo|switch\s?2|switch2|宝可梦|pokemon|马里奥|mario|zelda|塞尔达|indie\s?world/); }}
+      match: function(n) { var t = ((n.title||'')+' '+(n.tags||[]).join(' ')).toLowerCase();
+          return t.match(/任天堂|nintendo|switch\s?2|switch2|宝可梦|pokemon|马里奥|mario|zelda|塞尔达|indie\s?world/); }},
+    { id: 'market-info', label: '📊 市场信息', icon: '📊',
+      match: function(n) { var t = ((n.title||'')+' '+(n.tags||[]).join(' ')).toLowerCase();
+          return t.match(/newzoo|circana|npd|市场.*报告|市场.*预测|行业.*报告|bafta|gdca|gdc.*报告/) ||
+                 t.match(/pegi|欧盟.*法|dma|监管|并购|收购|投资|沙特|savvy|重组|裁员|layoff/) ||
+                 t.match(/退休|辞职|ceo.*新|新.*ceo|pif|gamestop.*财报|ea.*财报|财报|版号|整合/) ||
+                 t.match(/德国.*市场|market.*grew|迪士尼|disney|epic.*裁|育碧|ubisoft.*裁/) ||
+                 t.match(/诉讼|反垄断|关税|tariff/) ||
+                 t.match(/epic\s?games|fortnite|堡垒之夜|rec\s?room|关停/); }}
 ];
 
 function clusterNewsByTopic(newsList) {
