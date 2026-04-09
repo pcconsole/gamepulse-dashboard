@@ -1,7 +1,7 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-04-08T18:00:00Z
+// 最后更新: 2026-04-09T18:00:00Z
 // 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1126无新增)+web_search 12轮)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
@@ -173,6 +173,52 @@ const newsSources = [
 ];
 
 const newsData = [
+    {
+        "id": 152,
+        "title": "宝可梦冠军4/8发售首日遭玩家批评：性能问题+图鉴删减+缺失功能引发'Beta测试'质疑",
+        "summary": "任天堂免费对战竞技新作《宝可梦冠军》(Pokemon Champions)于4月8日正式登陆Switch/Switch 2，但发售首日即遭到玩家广泛批评。主要问题包括：Switch原版帧率不稳定和画面模糊、宝可梦图鉴大幅删减(仅收录部分宝可梦)、VGC官方竞技赛制的多项功能缺失(如队伍租借、观战模式)、以及多处Bug。IGN报道玩家称其'像Beta测试'，Eurogamer指出'性能限制和游戏设计选择让粉丝失望'。作为宝可梦IP的官方竞技对战新作，混合口碑可能影响其作为VGC官方游戏的定位和Switch 2平台的初期表现。",
+        "source": "IGN",
+        "sourceUrl": "https://www.ign.com/articles/this-really-feels-like-a-beta-test-fans-criticize-free-to-play-pokmon-champions-with-complaints-over-missing-features-switch-2-performance-issues-and-its-limited-roster",
+        "sourceUrls": [
+            {"name": "IGN", "url": "https://www.ign.com/articles/this-really-feels-like-a-beta-test-fans-criticize-free-to-play-pokmon-champions-with-complaints-over-missing-features-switch-2-performance-issues-and-its-limited-roster"},
+            {"name": "Eurogamer", "url": "https://www.eurogamer.net/pokemon-champions-reception-performance-woes-competitive-changes"},
+            {"name": "Game Rant", "url": "https://gamerant.com/pokemon-champions-pokedex-size-fps/"},
+            {"name": "GosuGamers", "url": "https://www.gosugamers.net/entertainment/news/78246-pokemon-champions-launches-to-mixed-reception-amid-complaints-over-poor-performance-and-bugs"},
+            {"name": "CGMagazine", "url": "https://www.cgmagonline.com/news/pokemon-champions-rough-launch/"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-08",
+        "tags": ["宝可梦冠军", "Pokemon Champions", "Switch 2", "任天堂", "F2P", "性能问题", "口碑"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "宝可梦冠军的混合口碑暴露了两个问题：一是Switch原版硬件性能瓶颈导致F2P竞技体验不佳，Switch 2补丁的表现将是关键；二是宝可梦公司对竞技对战品类的产品力把控仍有提升空间。作为VGC官方指定游戏，如果后续补丁不能快速修复性能和功能缺失，可能倒逼竞技社区延续使用旧作。对任天堂Switch 2生态而言，第三方和自家F2P的品质水准需要更高标准。",
+        "relatedNewsIds": [112]
+    },
+    {
+        "id": 151,
+        "title": "Starfield PS5正式发售+Free Lanes大更新+Terran Armada DLC上线：VICE评'Bethesda近年最佳RPG'",
+        "summary": "4月7日，Bethesda《星空》(Starfield)正式登陆PlayStation 5，结束2年半Xbox/PC独占期，同步上线号称'发售以来最大规模'的免费更新'Free Lanes'和全新付费故事DLC'Terran Armada'。Free Lanes更新全面革新太空旅行系统、增加新任务链和生活质量改进，Terran Armada则引入全新机器人军团派系和新剧情。PS5版支持DualSense触觉反馈和自适应扳机。VICE在评测中称其为'Bethesda近年最佳RPG'，认为Free Lanes更新解决了原版核心痛点。首日PS5表现超出预期，标志着微软多平台战略的重要里程碑。",
+        "source": "Bethesda",
+        "sourceUrl": "https://bethesda.net/en/game/starfield/article/7IxZSKYwYm1oDr57rXDx4C/starfield-free-lanes-terran-armada",
+        "sourceUrls": [
+            {"name": "Bethesda Official", "url": "https://bethesda.net/en/game/starfield/article/7IxZSKYwYm1oDr57rXDx4C/starfield-free-lanes-terran-armada"},
+            {"name": "PlayStation Blog", "url": "https://blog.playstation.com/2026/03/17/starfield-is-coming-to-playstation-5-on-april-7/"},
+            {"name": "VICE", "url": "https://www.vice.com/en/article/starfield-ps5-review-free-lanes-update-makes-it-bethesdas-best-rpg-in-years/"},
+            {"name": "Wccftech", "url": "https://wccftech.com/starfield-freelanes-terran-armada-ps5-april-7-everything-new/"},
+            {"name": "GameSpot", "url": "https://www.gamespot.com/articles/starfield-free-lanes-and-terran-armada-global-launch-times-confirmed/1100-6539229/"}
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-07",
+        "tags": ["Starfield", "PS5", "Bethesda", "微软", "Free Lanes", "Terran Armada", "DLC", "多平台"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Starfield PS5发售+Free Lanes大更新标志着微软多平台战略从'宣布'进入'兑现'阶段。VICE给出高度评价证明Free Lanes确实解决了原版太空旅行割裂的核心痛点。对微软而言，首方大作全平台化能否转化为Game Pass订阅增长是关键指标。对索尼而言，获得完整版Starfield(含DualSense支持)验证了PS5庞大装机量的谈判优势。Terran Armada DLC的付费表现将测试Starfield在PS5用户中的商业潜力。",
+        "relatedNewsIds": [135, 137, 109]
+    },
     {
         "id": 150,
         "title": "Eidos-Montreal裁员124人+总监离职：Embracer旗下《杀出重围》工作室19年老将David Anfossi出走",
