@@ -1,8 +1,8 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-04-09T18:00:00Z
-// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1126无新增)+web_search 12轮)
+// 最后更新: 2026-04-10T18:00:00Z
+// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1136新增10行)+web_search 12轮)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
@@ -173,6 +173,113 @@ const newsSources = [
 ];
 
 const newsData = [
+    {
+        "id": 157,
+        "title": "Switch 2日本累计突破500万台，宝可梦Pokopia连续五周蝉联Famitsu销量冠军",
+        "summary": "Famitsu最新周榜(3/30-4/5)显示，Switch 2在日本累计销量突破500万台(本周售出59,543台)，创下任天堂主机日本市场最快500万台纪录。《宝可梦Pokopia》以45,484份蝉联实体软件销量五连冠，累计867,171份。《马里奥赛车世界》以26,174份维持第二。Switch 2生态在日本市场表现极为强劲，500万台里程碑较Switch同期显著提速。",
+        "source": "Famitsu",
+        "sourceUrl": "https://www.nintendolife.com/news/2026/04/japanese-charts-switch-2-hits-another-milestone-as-pokemon-pokopias-reign-continues",
+        "sourceUrls": [
+            {"name": "Nintendo Life", "url": "https://www.nintendolife.com/news/2026/04/japanese-charts-switch-2-hits-another-milestone-as-pokemon-pokopias-reign-continues"},
+            {"name": "VGChartz", "url": "https://www.vgchartz.com/article/467500/pokemon-pokopia-once-again-tops-the-japanese-charts-switch-2-sells-60k/"},
+            {"name": "Gematsu", "url": "https://www.gematsu.com/2026/04/famitsu-sales-3-30-26-4-5-26"},
+            {"name": "My Nintendo News", "url": "https://mynintendonews.com/2026/04/09/japan-nintendo-switch-2-has-surpassed-5-million-units-sold/"},
+            {"name": "腾讯文档", "url": "https://www.3dmgame.com/news/202604/3941738.html"}
+        ],
+        "category": "hardware",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-10",
+        "tags": ["Switch 2", "任天堂", "宝可梦Pokopia", "日本销量", "Famitsu", "500万台", "里程碑"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Switch 2日本500万台里程碑意义重大：一是验证了任天堂在日本市场的绝对统治力(PS5同期约300万台)；二是Pokopia五连冠证明宝可梦IP在新平台上的拉动力依然强劲。500万台意味着日本市场硬件渗透期基本完成首波，后续第三方支持将加速涌入。对索尼而言，PS5在日本的存在感持续被压缩，'日本=任天堂'的格局短期难以撼动。",
+        "relatedNewsIds": [152, 112, 108, 102]
+    },
+    {
+        "id": 156,
+        "title": "索尼4月16日举办State of Play发布会，聚焦第三方内容+刺客信条黑旗重制版",
+        "summary": "知名爆料人Nate the Hate透露，索尼将于4月16日举行2026年第二场State of Play线上发布会。据多家媒体(GameSpot/NotebookCheck/GAMES.GG)确认，本次发布会将重点展示第三方游戏，包括育碧《刺客信条4：黑旗》重制版和索尼自研新IP《Saros》等。值得注意的是，《漫威金刚狼》等PS5第一方独占大作预计不会出现在本次发布会，需等到夏季才有新消息。索尼当前策略明显倾向与第三方深度合作。",
+        "source": "GameSpot",
+        "sourceUrl": "https://www.gamespot.com/articles/next-sony-state-of-play-coming-april-16-report/1100-6539288/",
+        "sourceUrls": [
+            {"name": "GameSpot", "url": "https://www.gamespot.com/articles/next-sony-state-of-play-coming-april-16-report/1100-6539288/"},
+            {"name": "NotebookCheck", "url": "https://www.notebookcheck.net/Sony-PlayStation-State-of-Play-rumored-on-April-16-but-may-not-show-PS5-exclusives.1269328.0.html"},
+            {"name": "GAMES.GG", "url": "https://games.gg/news/sony-state-of-play-april-16-2026/"},
+            {"name": "腾讯文档", "url": "https://docs.qq.com/"}
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-09",
+        "tags": ["索尼", "State of Play", "PlayStation", "刺客信条", "Saros", "发布会"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "索尼4月State of Play聚焦第三方而非第一方独占，反映当前PS5产品策略的转变：在《漫威金刚狼》等大作尚未就绪的空窗期，通过第三方合作(育碧黑旗重制、Saros等)维持平台热度。这与Xbox的Game Pass首日入库策略形成差异化竞争——索尼更注重'优质独占/限时独占'的内容价值。对开发者而言，在索尼State of Play获得展示位相当于获得数千万级曝光，第三方合作窗口价值提升。",
+        "relatedNewsIds": [151, 121, 135]
+    },
+    {
+        "id": 155,
+        "title": "Xbox成就系统迎来多年来最大升级：视觉改造+100%完成度高亮+隐藏游戏等新功能",
+        "summary": "微软4月8日通过Xbox Wire官方宣布，Xbox成就系统将进行自诞生以来最大规模的改版升级，已面向Xbox Insiders开放测试。主要新功能包括：全新视觉效果和动画设计、支持高亮展示100%完成度游戏(特殊边框)、允许隐藏不想展示的游戏记录、以及个性化成就展示面板。GameSpot/Windows Central/TrueAchievements等多家媒体确认这是'粉丝多年来最期待的更新'。PS5玩家社区同时掀起呼吁索尼改进奖杯系统的热潮。",
+        "source": "Xbox Wire",
+        "sourceUrl": "https://news.xbox.com/en-us/2026/04/08/xbox-insiders-may-2026-console-features/",
+        "sourceUrls": [
+            {"name": "Xbox Wire", "url": "https://news.xbox.com/en-us/2026/04/08/xbox-insiders-may-2026-console-features/"},
+            {"name": "GameSpot", "url": "https://www.gamespot.com/articles/xbox-achievements-are-getting-a-visual-overhaul-and-other-welcome-changes/1100-6539283/"},
+            {"name": "Windows Central", "url": "https://www.windowscentral.com/gaming/xbox/xbox-is-finally-giving-achievements-a-huge-update-with-several-new-features-2026-april"},
+            {"name": "TrueAchievements", "url": "https://www.trueachievements.com/news/xbox-achievement-overhaul-april-2026"},
+            {"name": "腾讯文档", "url": "https://docs.qq.com/"}
+        ],
+        "category": "platform",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-08",
+        "tags": ["Xbox", "微软", "成就系统", "Achievement", "平台更新", "玩家社区"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "relatedNewsIds": [120, 109]
+    },
+    {
+        "id": 154,
+        "title": "Intel发布TSNC神经纹理压缩技术：显存占用降低最高18倍，8GB显卡迎来转机",
+        "summary": "Intel在最新视频中详细展示Texture Set Neural Compression(TSNC)技术，通过神经网络压缩游戏纹理数据，实现最高18倍显存占用降低。TSNC分为A/B两种变体：A变体实现9倍压缩且画质损失极小，B变体达到18倍压缩。该技术与NVIDIA的NTC(Neural Texture Compression)方案类似但实现路径不同。VideoCardz/TechPowerUp/3DM等多家媒体报道认为，该技术若能广泛应用，将显著缓解8GB显存显卡在运行现代大型游戏时的瓶颈问题。",
+        "source": "VideoCardz",
+        "sourceUrl": "https://videocardz.com/newz/intel-shows-texture-set-neural-compression-claims-up-to-18x-smaller-texture-sets",
+        "sourceUrls": [
+            {"name": "VideoCardz", "url": "https://videocardz.com/newz/intel-shows-texture-set-neural-compression-claims-up-to-18x-smaller-texture-sets"},
+            {"name": "TechPowerUp", "url": "https://www.techpowerup.com/348013/intel-texture-set-neural-compression-shrinks-textures-by-up-to-18x-with-minimal-quality-loss"},
+            {"name": "3DM", "url": "https://www.3dmgame.com/news/202604/3941722.html"},
+            {"name": "腾讯文档", "url": "https://docs.qq.com/"}
+        ],
+        "category": "hardware",
+        "importance": "medium",
+        "date": "2026-04-10",
+        "tags": ["Intel", "TSNC", "显存", "纹理压缩", "GPU", "8GB", "技术创新"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "relatedNewsIds": [4]
+    },
+    {
+        "id": 153,
+        "title": "Konami《eFootball》全平台累计下载突破10亿次，限时复刻PES大师联赛",
+        "summary": "Konami宣布旗下免费足球游戏《eFootball》(前《实况足球》)全平台累计下载量突破10亿次里程碑。为庆祝这一成就，游戏推出限时'大师联赛Sprint'活动，加入PES经典球员，致敬系列历史。10亿次下载使《eFootball》成为有史以来下载量最高的足球游戏之一，反映F2P模式在体育品类中的巨大用户获取能力，也印证了Konami从买断制向F2P转型的商业策略成效。",
+        "source": "VGC",
+        "sourceUrl": "https://www.videogameschronicle.com/news/efootball-celebrates-1-billion-downloads/",
+        "sourceUrls": [
+            {"name": "IT之家", "url": "https://www.ithome.com/0/efootball-1-billion/"},
+            {"name": "VGC", "url": "https://www.videogameschronicle.com/news/efootball-celebrates-1-billion-downloads/"},
+            {"name": "腾讯文档", "url": "https://docs.qq.com/"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-10",
+        "tags": ["Konami", "eFootball", "PES", "10亿下载", "F2P", "足球", "里程碑"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "relatedNewsIds": []
+    },
     {
         "id": 152,
         "title": "宝可梦冠军4/8发售首日遭玩家批评：性能问题+图鉴删减+缺失功能引发'Beta测试'质疑",
