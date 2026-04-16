@@ -1,8 +1,8 @@
 // ============================================
-// 待上线 Pipeline 数据模块 V3.4
+// 待上线 Pipeline 数据模块 V3.5
 // 数据源：腾讯文档 MCP（唯一基准，文档ID: LRcKfOTzgHrV）
 //         + 网络搜索验证补充（标注来源，不覆盖MCP数据）
-// 最后更新: 2026-04-09 (V3.4 MCP全量刷新+3款已发售移至released+宝可梦冠军4/9发售+哀鸿4/4+Starfield PS5 4/7)
+// 最后更新: 2026-04-16 (V3.5 MCP全量刷新+2款已发售移至released: Replaced 4/14 + PRAGMATA 4/17)
 // ============================================
 
 // ====== 未上线产品数据（全部展示）======
@@ -12,8 +12,6 @@ const pipelineUnreleased = [
     // =============================================
 
     // --- MCP 海外产品（有具体日期）---
-    { region: "海外", name: "Replaced", publisher: "Thunderful Publishing", studio: "/", releaseDate: "2026/4/14", platforms: "PC+Xbox", heat: "低", heatNote: "原定3/12发售后延期至4/14", gameplay: "80年代复古未来，AI附身人体，自由流动战斗", licenseStatus: "", licenseNote: "", source: "MCP" },
-    { region: "海外", name: "识质存在/PRAGMATA", publisher: "卡普空", studio: "/", releaseDate: "2026/4/17", platforms: "PC+Switch2+PS5+Xbox", heat: "中", heatNote: "Fami通最受期待榜第一", gameplay: "第三人称射击+黑客解谜", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "明日潮汐", publisher: "Digixart", studio: "/", releaseDate: "2026/4/22", platforms: "PC+PS5+Xbox", heat: "低", heatNote: "《96号公路》团队新作", gameplay: "类《无人深空》异步联机探索生存", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "暗黑破坏神4：憎恨之王", publisher: "暴雪", studio: "/", releaseDate: "2026/4/28", platforms: "PC+PS5+Xbox", heat: "低", heatNote: "暗黑4大型资料片", gameplay: "ARPG刷装备", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "SAROS", publisher: "索尼", studio: "Housemarque", releaseDate: "2026/4/30", platforms: "PS5", heat: "中低", heatNote: "索尼一方游戏", gameplay: "第三人称科幻射击，'永久成长'死亡机制", licenseStatus: "", licenseNote: "", source: "MCP" },
@@ -127,6 +125,9 @@ const pipelineUnreleased = [
 
 // ====== 已上线产品数据（仅展示2026年上线的）======
 const pipelineReleased = [
+    // ===== 2026-04-16 更新: 新增已发售 =====
+    { region: "海外", name: "Replaced", publisher: "Thunderful Publishing", studio: "Sad Cat Studios", releaseDate: "2026/4/14", platforms: "PC+Xbox", heat: "低", heatNote: "80年代复古未来科幻平台动作，Metacritic多源评测确认发售", gameplay: "2.5D赛博朋克动作平台+自由流动战斗", source: "MCP" },
+    { region: "海外", name: "识质存在（PRAGMATA）", publisher: "卡普空", studio: "/", releaseDate: "2026/4/17", platforms: "PC+Switch2+PS5+Xbox", heat: "中", heatNote: "GameSpot/GamesRadar/VGC/Polygon等多源评测确认发售，Fami通最受期待榜第一", gameplay: "第三人称射击+黑客解谜", source: "MCP" },
     // ===== 腾讯文档 MCP 已上线基准数据 =====
     { region: "海外", name: "宝可梦：冠军（Pokemon Champions）", publisher: "任天堂", studio: "/", releaseDate: "2026/4/9", platforms: "Switch", heat: "中低", heatNote: "宝可梦IP，主打PVP，宝可梦官方对战平台", gameplay: "主打PVP，宝可梦官方对战平台", source: "MCP" },
     { region: "国内", name: "哀鸿：城破十日记", publisher: "零创游戏", studio: "/", releaseDate: "2026/4/4", platforms: "PC", heat: "低", heatNote: "前作销量破百万", gameplay: "AVG文字冒险游戏", source: "MCP" },
