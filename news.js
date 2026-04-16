@@ -3670,20 +3670,70 @@ function isThisWeek(dateStr) {
     return d >= weekAgo;
 }
 
-// ═══════════════ 主题聚类引擎 v6.0（共享：PC端+移动端） ═══════════════
+// ═══════════════ 主题聚类引擎 v9.0（共享：PC端+移动端） ═══════════════
 // 将新闻按平台/主题自动归组，相关新闻聚合在一起展示
 
+// v9.0 辅助函数：判断新闻主体是否为特定平台
+// 核心思路：仅凭title+tags含"PS5"/"Xbox"不足以归入平台聚类
+// 必须判断该平台是否为新闻的**主语/主体**，而非仅被提及
+function _isPlatformSubject(title, tags, platformKeywords) {
+    var t = title.toLowerCase();
+    // 1) 标题以平台名开头（明确主语）
+    for (var i = 0; i < platformKeywords.length; i++) {
+        if (t.indexOf(platformKeywords[i]) === 0) return true;
+    }
+    // 2) 标题中平台名紧跟动词/事件（主体行为模式）
+    for (var j = 0; j < platformKeywords.length; j++) {
+        var pk = platformKeywords[j];
+        var idx = t.indexOf(pk);
+        if (idx >= 0) {
+            var after = t.substring(idx + pk.length, idx + pk.length + 15);
+            if (after.match(/^.{0,3}(宣布|发布|推出|上线|发售|登陆|涨价|降价|扩展|升级|公布|回归|独占|confirms?|announces?|launches?|reveals?|expands?|drops?|adds?)/)) return true;
+        }
+    }
+    return false;
+}
+
+// v9.0 辅助函数：判断新闻是否为第三方/多平台内容（非平台自身动态）
+function _isThirdPartyMultiPlatform(n) {
+    var title = (n.title || '').toLowerCase();
+    var tags = (n.tags || []).join(' ').toLowerCase();
+    var t = title + ' ' + tags;
+    // 第三方厂商关键词（非平台第一方）
+    var thirdPartyPublishers = /capcom|rockstar|take-two|ubisoft|ea games|square enix|bandai|sega|konami|embracer|epic games|warner|bethesda|from\s?software|cd projekt|supergiant|deep silver|4a games|卡普空|育碧|世嘉|万代/;
+    // 数据泄露/黑客/安全事件（平台只是数据维度）
+    var dataLeakPattern = /泄露|黑客|hack|leak|breach|shinyhunters|数据.*公开|赎金|ransom/;
+    // 多平台发售/评测（游戏发售在多个平台，不应归入单一平台）
+    var multiPlatPattern = /多平台|cross-platform|全平台|ps5.*xbox|xbox.*ps5|pc.*ps5.*xbox|评测.*解禁|mc\d+|opencritic|metacritic/;
+    if (dataLeakPattern.test(t)) return true;
+    if (thirdPartyPublishers.test(t) && multiPlatPattern.test(t)) return true;
+    if (thirdPartyPublishers.test(t) && n.category === 'game' && !title.match(/索尼|sony|微软|microsoft|xbox.*独占|ps.*独占|first.party|第一方/)) return true;
+    return false;
+}
+
+// v9.0 辅助函数：判断新闻是否为"独占结束/多平台战略"类（跨平台事件）
+function _isCrossPlatformStrategy(n) {
+    var title = (n.title || '').toLowerCase();
+    var tags = (n.tags || []).join(' ').toLowerCase();
+    var t = title + ' ' + tags;
+    return t.match(/独占.*结束|独占.*终|多平台.*战略|登陆.*ps5.*xbox|登陆.*xbox.*ps5|cross-platform.*strat/) ||
+           (t.match(/starfield|星空/) && t.match(/ps5|playstation/)) ||
+           (t.match(/微软|microsoft|xbox/) && t.match(/多平台|multi-?platform/));
+}
+
 const NEWS_TOPIC_CLUSTERS = [
-    // v8.0 聚类逻辑重构（2026-04-09）：
-    // 1) match 只匹配 title+tags（新闻主体标识），不匹配 summary（避免关联提及误分类）
-    //    例：Lenovo涨价新闻summary提到PS5→不应被分入索尼板块
-    // 2) 删除 epic 独立聚类，Epic相关新闻归入 market-info
-    // 3) upstream-hw 优先级最高（涨价/硬件类新闻优先归入硬件板块，不被平台吸走）
-    // 4) 平台聚类（sony/xbox/nintendo）只匹配以该平台为主体的新闻
+    // v9.0 聚类逻辑重构（2026-04-16）：
+    // 在v8.0基础上新增"新闻主体判断"，核心改进：
+    // 1) 平台聚类增加主体判断：title+tags含PS5/Xbox不等于该平台新闻
+    //    仅当该平台是新闻主语/主体时才归入（如"索尼宣布涨价"→索尼，"Pragmata评测MC86 PS5/Xbox"→不归索尼）
+    // 2) 第三方游戏评测/发售即使tags含PS5/Xbox也不归入平台聚类→归入other或market-info
+    // 3) 数据泄露/黑客事件即使涉及平台数据也不归入平台聚类→归入market-info
+    // 4) "独占结束/多平台战略"类新闻（如Starfield登陆PS5）归入xbox-ms（因为是微软的战略决策）
+    // 5) match仍只匹配title+tags（不匹配summary）
+
     { id: 'upstream-hw', label: '🔧 上游硬件 & 供应链', icon: '🔧',
       match: function(n) { var t = ((n.title||'')+' '+(n.tags||[]).join(' ')).toLowerCase();
           var title = (n.title||'').toLowerCase();
-          // 如果标题明确是某平台的官方涨价公告（主语是平台方），不归入此聚类
           var isPlatformOfficialAction = title.match(/^(索尼|sony|任天堂|nintendo|微软|microsoft|xbox).{0,5}(宣布|announces?|公布|confirms?)/);
           if (isPlatformOfficialAction) return false;
           return t.match(/内存|dram|ddr5|hbm|ram(?!.*arcade)|芯片.*短缺|液冷|asetek|ramageddon/) ||
@@ -3691,22 +3741,53 @@ const NEWS_TOPIC_CLUSTERS = [
                  (t.match(/涨价|price.*hike|price.*increase|降价/) && t.match(/ram|内存|芯片|组件|component|掌机|legion|硬件市场|主机定价|内存成本/)) ||
                  t.match(/nvidia|dlss|gpu|显卡|amd|rtx\s?50|裸眼3d|geforce|cuda/) ||
                  (n.category === 'hardware' && t.match(/涨价|降价|成本|内存|ram|芯片|供应|shortage|bom/)); }},
+
     { id: 'hot-product', label: '🔥 热门产品', icon: '🔥',
       match: function(n) { var t = ((n.title||'')+' '+(n.tags||[]).join(' ')).toLowerCase();
           return t.match(/红色沙漠|crimson\s?desert|杀戮尖塔|slay.*spire|生化危机.*安魂|resident\s?evil.*requiem|marathon|gta\s?6|gta\s?vi/) ||
                  (t.match(/销量.*突破|万份|百万|million|创纪录|里程碑|登顶/) && t.match(/游戏|game/)); }},
+
     { id: 'sony-ps', label: '🎮 索尼 PlayStation', icon: '🔵',
       match: function(n) { var t = ((n.title||'')+' '+(n.tags||[]).join(' ')).toLowerCase();
-          return t.match(/索尼|sony|playstation|ps5|ps6|psn|ps plus|pssr|push\s?square|ps\s?pro|dualsense|ps\s?portal|ps\s?stars|dark\s?outlaw|bungie|saros/); }},
+          var title = (n.title||'').toLowerCase();
+          // v9.0: 第三方多平台内容不归入平台聚类
+          if (_isThirdPartyMultiPlatform(n)) return false;
+          // v9.0: 微软独占结束登陆PS5类新闻归入xbox-ms（是微软的战略行为）
+          if (_isCrossPlatformStrategy(n)) return false;
+          // v9.0: 仅title包含PS关键词 或 tags中PS关键词是主体级别
+          var sonyCoreTitleMatch = title.match(/索尼|sony|playstation|psn|ps\s?plus|pssr|ps\s?pro|dualsense|ps\s?portal|ps\s?stars|dark\s?outlaw|bungie|saros/);
+          var sonyTitlePS5 = title.match(/ps5|ps6/);
+          // PS5/PS6在标题中且是主体（不是"...PS5/Xbox/PC"这种多平台罗列）
+          var isPS5Subject = sonyTitlePS5 && _isPlatformSubject(title, (n.tags||[]), ['ps5','ps6','索尼','sony','playstation']);
+          // 纯索尼关键词（非PS5/PS6硬件名）直接匹配
+          if (sonyCoreTitleMatch) return true;
+          // PS5在标题中且确认是主体
+          if (isPS5Subject) return true;
+          // tags中含索尼核心关键词（非硬件名）
+          if (t.match(/索尼|sony|playstation|psn|ps\s?plus|pssr|dualsense|ps\s?portal|ps\s?stars|bungie|saros/)) return true;
+          // PS5在tags中但标题不含→需要标题有索尼相关主体行为才归入
+          if (t.match(/ps5|ps6/) && !sonyTitlePS5) {
+              return _isPlatformSubject(title, (n.tags||[]), ['ps5','ps6','索尼','sony','playstation']);
+          }
+          return false; }},
+
     { id: 'xbox-ms', label: '🟢 微软 Xbox', icon: '🟢',
       match: function(n) { var t = ((n.title||'')+' '+(n.tags||[]).join(' ')).toLowerCase();
-          return t.match(/xbox|微软.*游戏|game\s?pass|xgp|phil\s?spencer|asha\s?sharma|helix|xbox\s?wire|bethesda.*xbox|动视暴雪|activision|copilot.*xbox|xbox.*copilot|partner\s?preview|微软.*订阅|starfield/); }},
+          var title = (n.title||'').toLowerCase();
+          // v9.0: 第三方多平台内容不归入平台聚类（但微软第一方如Starfield例外）
+          if (_isThirdPartyMultiPlatform(n) && !t.match(/starfield|星空|bethesda|halo|forza|fable|gears/)) return false;
+          // v9.0: 微软独占结束/多平台战略归入此聚类（是微软的战略决策）
+          if (_isCrossPlatformStrategy(n)) return true;
+          return t.match(/xbox|微软.*游戏|game\s?pass|xgp|phil\s?spencer|asha\s?sharma|helix|xbox\s?wire|bethesda.*xbox|动视暴雪|activision|copilot.*xbox|xbox.*copilot|partner\s?preview|微软.*订阅|starfield|星空/); }},
+
     { id: 'steam-valve', label: '🔷 Steam & Valve', icon: '🔷',
       match: function(n) { var t = ((n.title||'')+' '+(n.tags||[]).join(' ')).toLowerCase();
           return t.match(/steam|valve|steam\s?machine|steam\s?deck|steam\s?frame|steamos|steam.*特卖|steam.*spring|cs2/); }},
+
     { id: 'nintendo', label: '🔴 任天堂 Switch', icon: '🔴',
       match: function(n) { var t = ((n.title||'')+' '+(n.tags||[]).join(' ')).toLowerCase();
           return t.match(/任天堂|nintendo|switch\s?2|switch2|宝可梦|pokemon|马里奥|mario|zelda|塞尔达|indie\s?world/); }},
+
     { id: 'market-info', label: '📊 市场信息', icon: '📊',
       match: function(n) { var t = ((n.title||'')+' '+(n.tags||[]).join(' ')).toLowerCase();
           return t.match(/newzoo|circana|npd|市场.*报告|市场.*预测|行业.*报告|bafta|gdca|gdc.*报告/) ||
@@ -3714,7 +3795,8 @@ const NEWS_TOPIC_CLUSTERS = [
                  t.match(/退休|辞职|ceo.*新|新.*ceo|pif|gamestop.*财报|ea.*财报|财报|版号|整合/) ||
                  t.match(/德国.*市场|market.*grew|迪士尼|disney|epic.*裁|育碧|ubisoft.*裁/) ||
                  t.match(/诉讼|反垄断|关税|tariff/) ||
-                 t.match(/epic\s?games|fortnite|堡垒之夜|rec\s?room|关停/); }}
+                 t.match(/epic\s?games|fortnite|堡垒之夜|rec\s?room|关停/) ||
+                 t.match(/泄露|黑客|hack|leak|breach|数据.*公开|赎金/); }}
 ];
 
 function clusterNewsByTopic(newsList) {
