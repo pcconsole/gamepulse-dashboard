@@ -1,8 +1,8 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-04-15T18:00:00Z
-// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1160新增10行)+web_search 12轮)
+// 最后更新: 2026-04-16T14:55:00Z
+// 更新者: news-agent (v5.1 手动更新：MCP SpreadsheetApp成功(lastRow=1170新增10行)+web_search 8轮)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
@@ -173,6 +173,97 @@ const newsSources = [
 ];
 
 const newsData = [
+    {
+        "id": 175,
+        "title": "PS5涨价前美国销量飙升至2026年新高，消费者抢购潮推动单周翻倍",
+        "summary": "Circana分析师Mat Piscatella披露，截至4月4日当周美国PS5硬件销量(台数与金额)均达2026年最高水平，消费者赶在4月2日涨价生效前集中购买。涨价后PS5标准版从$499涨至$599(+$100)，PS5 Pro从$749涨至$899(+$150)。此为索尼3月27日宣布涨价后的直接市场反应。Kotaku指出销量在涨价周基本翻倍，但涨价后销量走势将决定此举对索尼全年主机收入的真正影响。",
+        "source": "Circana",
+        "sourceUrl": "https://www.pushsquare.com/news/2026/04/us-ps5-hardware-sales-hit-a-2026-high-prior-to-huge-price-increase",
+        "sourceUrls": [
+            {"name": "PushSquare (Circana)", "url": "https://www.pushsquare.com/news/2026/04/us-ps5-hardware-sales-hit-a-2026-high-prior-to-huge-price-increase"},
+            {"name": "Kotaku", "url": "https://kotaku.com/ps5-sales-double-massive-price-hike-playstation-sony-2000687808"},
+            {"name": "Eurogamer", "url": "https://www.eurogamer.net/ps5-sales-spike-people-rush-to-beat-ai-driven-price-hikes"},
+            {"name": "IGN", "url": "https://www.ign.com/articles/ps5-hardware-sales-spike"},
+            {"name": "TechPowerUp", "url": "https://www.techpowerup.com/348255/sonys-price-increase-triggered-playstation-5-buying-rush-for-record-2026-sales"}
+        ],
+        "category": "market",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-15",
+        "tags": ["PlayStation", "PS5", "涨价", "销量", "Circana", "美国市场"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "涨价前抢购潮是经典消费者行为(What/Why)，短期销量翻倍对索尼Q1出货量有利，但核心问题是涨价后需求弹性——$599标准版和$899 Pro版定价已接近PS3时代高价区间(So What)。Circana后续数据将揭示涨价后真实需求曲线，若持续低迷可能迫使索尼调整策略或推出新SKU(What Next)。",
+        "relatedNewsIds": [153, 133, 121]
+    },
+    {
+        "id": 174,
+        "title": "迪士尼大规模裁员超1000人，Marvel Studios美术部门几乎全裁",
+        "summary": "迪士尼在新CEO上任后启动大规模组织重组，裁员超过1000人波及旗下多个子公司。Marvel Studios受冲击最重，据报道视觉开发(Visual Development)团队几乎全员被裁，约占Marvel总人数的8%。此次裁员是迪士尼新管理层推动效率优化的一部分，可能影响漫威游戏IP授权和未来游戏项目的美术概念开发。",
+        "source": "Gameranx",
+        "sourceUrl": "https://gameranx.com/updates/id/562312/article/marvel-lays-off-8-of-their-staff-as-part-of-disney-restructuring-how-is-marvel-games-affected/",
+        "sourceUrls": [
+            {"name": "Gameranx", "url": "https://gameranx.com/updates/id/562312/article/marvel-lays-off-8-of-their-staff-as-part-of-disney-restructuring-how-is-marvel-games-affected/"},
+            {"name": "CBR", "url": "https://www.cbr.com/disney-layoffs-entire-marvel-division/"},
+            {"name": "Star Wars News Net", "url": "https://www.starwarsnewsnet.com/2026/04/disney-lays-off-over-1000-employees-across-all-studios-marvel-studios-art-department-especially-affected.html"},
+            {"name": "Gizmodo", "url": "https://gizmodo.com/disney-layoffs-marvel-cuts-visual-development-2000746765"},
+            {"name": "The Wrap", "url": "https://www.thewrap.com/creative-content/movies/disney-layoffs-marvel-publicity-teams-2026/"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "policy",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-15",
+        "tags": ["迪士尼", "Marvel", "裁员", "重组", "IP授权"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "迪士尼1000+裁员中Marvel美术部门首当其冲，反映新CEO从内容扩张转向效率优先的战略转向(What/Why)。对游戏行业的直接影响是Marvel游戏IP授权管线可能放缓，视觉开发能力下降将影响未来漫威游戏概念设计(So What)。但Marvel IP价值依然巨大，外部游戏工作室(如Insomniac)受影响有限，迪士尼可能转向更依赖授权模式而非自研(What Next)。",
+        "relatedNewsIds": [163, 159]
+    },
+    {
+        "id": 173,
+        "title": "Xbox First Look: Metro 2039今日首播，4A Games公布系列新作",
+        "summary": "Xbox于4月16日举办Xbox First Look数字展会，首次公开展示4A Games与Deep Silver合作开发的Metro系列新作《Metro 2039》。这是继Metro Exodus(2019)后系列的最新正统续作，此前曾因游戏玩法泄露引发关注。展示在Xbox YouTube频道独家首播，Xbox Wire官方已确认活动细节。",
+        "source": "Xbox Wire",
+        "sourceUrl": "https://news.xbox.com/en-us/2026/04/13/metro-2039-xbox-first-look-how-to-watch/",
+        "sourceUrls": [
+            {"name": "Xbox Wire (官方)", "url": "https://news.xbox.com/en-us/2026/04/13/metro-2039-xbox-first-look-how-to-watch/"},
+            {"name": "IGN", "url": "https://www.ign.com/articles/new-metro-sequel-reportedly-set-for-reveal-at-microsoft-xbox-show-this-week-after-major-gameplay-leak-over-the-weekend"},
+            {"name": "Polygon", "url": "https://www.polygon.com/metro-2039-announcement-4a-games-xbox-showcase/"},
+            {"name": "GameSpot", "url": "https://www.gamespot.com/articles/metro-2039-finally-emerges-with-first-look-set-for-april-16/1100-6539358/"},
+            {"name": "GamesRadar", "url": "https://www.gamesradar.com/games/fps/xbox-confirms-the-leaks-the-next-metro-game-is-called-metro-2039-and-will-be-showcased-later-this-week/"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-16",
+        "tags": ["Xbox", "Metro 2039", "4A Games", "Deep Silver", "Xbox First Look"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": [167]
+    },
+    {
+        "id": 172,
+        "title": "Embracer削减水晶动力50%预算，古墓丽影开发商持续承压",
+        "summary": "据报道Embracer Group对旗下工作室水晶动力(Crystal Dynamics)实施50%预算削减，直接影响古墓丽影新作的开发进度。这是Embracer自2023年启动大规模重组以来对水晶动力的又一次重大调整，此前该工作室已历经多轮裁员(2025年8月+11月+2026年3月共削减数十个岗位)。预算腰斩可能迫使工作室缩小项目规模或延长开发周期。",
+        "source": "3DM",
+        "sourceUrl": "https://www.3dmgame.com/news/202604/3942020.html",
+        "sourceUrls": [
+            {"name": "3DM", "url": "https://www.3dmgame.com/news/202604/3942020.html"},
+            {"name": "Game Developer (裁员)", "url": "https://www.gamedeveloper.com/business/embracer-studio-crystal-dynamics-continues-steady-stream-of-layoffs"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-15",
+        "tags": ["Embracer", "水晶动力", "古墓丽影", "预算削减", "裁员"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": [159]
+    },
     {
         "id": 171,
         "title": "Xbox内部正进行'非常重大讨论'考虑回归独占策略",
