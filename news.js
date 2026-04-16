@@ -1,8 +1,8 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-04-10T18:00:00Z
-// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1136新增10行)+web_search 12轮)
+// 最后更新: 2026-04-15T18:00:00Z
+// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1160新增10行)+web_search 12轮)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
@@ -173,6 +173,334 @@ const newsSources = [
 ];
 
 const newsData = [
+    {
+        "id": 171,
+        "title": "Xbox内部正进行'非常重大讨论'考虑回归独占策略",
+        "summary": "Windows Central执行编辑Jez Corden在XB2播客中透露，Xbox Game Studios内部正围绕独占策略展开'非常非常非常重大的讨论'，评估是否停止将第一方游戏移植至其他平台(如Switch)。此消息与Xbox CEO Asha Sharma近期叫停广告、重塑品牌形象等举措一脉相承。值得注意的是，暗黑4刚通过印尼评级获准登陆Switch 2，显示策略转向尚未定论。",
+        "source": "Windows Central",
+        "sourceUrl": "https://www.purexbox.com/news/2026/04/xbox-is-having-very-big-discussions-about-exclusivity-says-reporter",
+        "sourceUrls": [
+            {"name": "Pure Xbox", "url": "https://www.purexbox.com/news/2026/04/xbox-is-having-very-big-discussions-about-exclusivity-says-reporter"},
+            {"name": "Windows Central (Jez Corden)", "url": "https://wccftech.com/xbox-considering-return-exclusives/"},
+            {"name": "TheGamer", "url": "https://www.thegamer.com/xbox-big-discussions-exclusive-games/"},
+            {"name": "My Nintendo News", "url": "https://mynintendonews.com/2026/04/14/windows-centrals-jez-corden-says-xbox-discussing-internally-whether-to-return-to-exclusives/"},
+            {"name": "XP Gained", "url": "https://xpgained.co.uk/gaming-news/very-big-discussions-exclusives-rock-xbox-internally"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-14",
+        "tags": ["Xbox", "独占", "Asha Sharma", "平台策略", "第一方"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "Asha Sharma上任Xbox CEO后推动品牌重塑(叫停广告/Project Helix)，独占讨论是其'重振硬件信心'战略的核心环节(What/Why)。若Xbox真回归独占，将逆转微软近两年'全平台'策略，对Switch 2和PS5的第三方生态产生连锁影响(So What)。但暗黑4仍在推进Switch 2移植说明短期内不会一刀切，更可能采取'核心IP独占+长尾跨平台'分层策略(What Next)。",
+        "relatedNewsIds": [164, 136, 135]
+    },
+    {
+        "id": 170,
+        "title": "《神鬼寓言》(Fable)新作官方重申秋季发售，否认因GTA6延期传闻",
+        "summary": "此前Jeff Grubb等业内人士报道称微软旗下《神鬼寓言》新作曾内部讨论避开《GTA6》10月档期可能推迟至2027年。Playground Games官方迅速回应，在社交媒体重申'期待秋季在奥尔比恩欢迎大家'，确认仍将于2026年秋季发售。微软旗下《光环：战斗进化》《战争机器：E日》也将于年内推出。此事件凸显GTA6对整个3A游戏发售日历的巨大影响力。",
+        "source": "IGN",
+        "sourceUrl": "https://www.ign.com/articles/fable-social-media-account-reiterates-fall-2026-release-window-amid-rumors-of-an-internal-delay-to-avoid-gta-6",
+        "sourceUrls": [
+            {"name": "IGN", "url": "https://www.ign.com/articles/fable-social-media-account-reiterates-fall-2026-release-window-amid-rumors-of-an-internal-delay-to-avoid-gta-6"},
+            {"name": "Eurogamer", "url": "https://www.eurogamer.net/fable-still-coming-autumn-2026"},
+            {"name": "PC Gamer", "url": "https://www.pcgamer.com/games/rpg/despite-rumors-of-a-gta-6-inspired-delay-fable-studio-says-its-excited-to-welcome-you-back-to-albion-in-autumn-2026/"},
+            {"name": "Polygon", "url": "https://www.polygon.com/fable-release-date-delay-gta-6-debunked/"},
+            {"name": "Rock Paper Shotgun", "url": "https://www.rockpapershotgun.com/no-fables-release-window-chicken-hasnt-been-kicked-down-the-road-playground-games-say-following-report-of-potential-gta-6-related-delay"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-14",
+        "tags": ["Fable", "微软", "Playground Games", "GTA6", "发售日期"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": [158]
+    },
+    {
+        "id": 169,
+        "title": "《哈迪斯2》正式登陆PS5和Xbox，同步加入Game Pass首日入库",
+        "summary": "Supergiant Games的好评肉鸽动作游戏《哈迪斯2》(Hades II)在PC/Switch经历近两年抢先体验后，4月14日正式登陆PS5和Xbox Series X|S，并同步加入Xbox Game Pass。主机版伴随大型更新'命运之书'扩展内容，包含新剧情结局、新对话和多项改善。Digital Foundry确认PS5版60fps稳定运行。这是Supergiant首款同步登陆全主机平台的作品。",
+        "source": "Supergiant Games",
+        "sourceUrl": "https://www.supergiantgames.com/blog/hades-ii-coming-to-xbox-playstation-april-14/",
+        "sourceUrls": [
+            {"name": "Supergiant Games", "url": "https://www.supergiantgames.com/blog/hades-ii-coming-to-xbox-playstation-april-14/"},
+            {"name": "RPGSite", "url": "https://www.rpgsite.net/news/20118-hades-ii-april-2026-patch-notes-ps5-xbox-game-pass-download-discount"},
+            {"name": "Fextralife", "url": "https://fextralife.com/hades-ii-update-adds-new-patch-game-pass-launch-and-console-release/"},
+            {"name": "GameEmpress", "url": "https://gameempress.com/hades-ii-is-now-on-xbox-and-ps5-everything-you-need-to-know-about-the-game-pass-launch/"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-14",
+        "tags": ["Hades 2", "Supergiant Games", "PS5", "Xbox", "Game Pass"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": [141]
+    },
+    {
+        "id": 168,
+        "title": "Roblox引入年龄分级账户系统，Kids/Select/标准三级强化未成年保护",
+        "summary": "Roblox宣布6月起推出全新年龄分级账户体系：5-8岁用户自动分配'Roblox Kids'账户(默认关闭聊天/仅展示策展内容)，9-15岁为'Roblox Select'(家长监督下适度社交)，16岁后解锁标准账户。此举是在面临多起未成年保护诉讼后的重大合规改革，对UGC平台内容审核机制产生行业示范效应。",
+        "source": "Roblox官方",
+        "sourceUrl": "https://about.roblox.com/newsroom/2026/04/introducing-roblox-kids-and-select-accounts",
+        "sourceUrls": [
+            {"name": "Roblox官方", "url": "https://about.roblox.com/newsroom/2026/04/introducing-roblox-kids-and-select-accounts"},
+            {"name": "TechCrunch", "url": "https://techcrunch.com/2026/04/13/roblox-introduces-kids-and-select-accounts-for-age-appropriate-access-to-games-and-chat/"},
+            {"name": "GameSpot", "url": "https://www.gamespot.com/articles/roblox-is-rethinking-accounts-after-lawsuits-over-failing-to-protect-children/1100-6539359/"},
+            {"name": "CBS News", "url": "https://www.cbsnews.com/news/roblox-age-based-accounts-kids-safety-controls/"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-14",
+        "tags": ["Roblox", "未成年保护", "年龄分级", "UGC", "合规"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Roblox此举是应对美国多州儿童保护诉讼的直接回应(What)。作为全球最大UGC游戏平台(日活7000万+)，其面临的监管压力迫使其从'开放平台'向'分级管控'转型(Why)。此举将提升平台合规性但可能影响低龄用户活跃度和创作者生态(So What)。预计Epic/Steam等平台也将跟进类似的年龄分级机制，行业合规门槛整体上移(What Next)。",
+        "relatedNewsIds": [146]
+    },
+    {
+        "id": 167,
+        "title": "《识质存在》(Pragmata)评测解禁获MC86/OC87分，Steam预购冲入全球前五",
+        "summary": "卡普空科幻动作游戏《识质存在》(Pragmata)媒体评测解禁，OpenCritic均分87分('Mighty'评级)，Metacritic 86分，获主流媒体积极评价。'实时骇入'战斗机制和双主角互动设计获重点赞誉。评测公布后Steam全球付费游戏榜迅速冲至第五(仅次于《红色沙漠》)，超越《杀戮尖塔2》和《极限竞速6》预购。Digital Foundry盛赞PC版光追效果'接近预渲染CG级'。正式发售4/17(PS5/Xbox/PC)，4/24登陆Switch 2。",
+        "source": "Metacritic",
+        "sourceUrl": "https://www.metacritic.com/game/pragmata/",
+        "sourceUrls": [
+            {"name": "Metacritic", "url": "https://www.metacritic.com/game/pragmata/"},
+            {"name": "OpenCritic", "url": "https://opencritic.com/game/19920/pragmata/reviews"},
+            {"name": "腾讯文档", "url": ""},
+            {"name": "3DM", "url": ""}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-14",
+        "tags": ["Pragmata", "Capcom", "评测", "Steam", "PS5", "Switch 2"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 166,
+        "title": "《地铁2039》正式公布，4月16日Xbox First Look首发直播揭幕",
+        "summary": "4A Games和Deep Silver正式官宣《地铁》系列第四部主线新作《地铁2039》(Metro 2039)，将于4/16通过Xbox First Look直播进行全球首次完整揭露。从官方主视觉图看本作场景回归冰封莫斯科。据TweakTown报道，本作灵感部分来自乌俄冲突，设定在前作《地铁：离去》4年后。Xbox Wire官方确认该作为'世界首映'级别展示。",
+        "source": "Xbox Wire",
+        "sourceUrl": "https://news.xbox.com/en-us/2026/04/13/metro-2039-xbox-first-look-how-to-watch/",
+        "sourceUrls": [
+            {"name": "Xbox Wire", "url": "https://news.xbox.com/en-us/2026/04/13/metro-2039-xbox-first-look-how-to-watch/"},
+            {"name": "IGN", "url": "https://www.ign.com/articles/new-metro-sequel-reportedly-set-for-reveal-at-microsoft-xbox-show-this-week-after-major-gameplay-leak-over-the-weekend"},
+            {"name": "Eurogamer", "url": "https://www.eurogamer.net/metro-2039-announced-xbox-stream-reveal"},
+            {"name": "Polygon", "url": "https://www.polygon.com/metro-2039-announcement-4a-games-xbox-showcase/"},
+            {"name": "TweakTown", "url": "https://www.tweaktown.com/news/111000/metro-2039-reveal-officially-set-for-april-16-new-teaser-site-launched/index.html"},
+            {"name": "IT之家", "url": "https://www.ithome.com/0/938/729.htm"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-13",
+        "tags": ["Metro 2039", "4A Games", "Deep Silver", "Xbox", "FPS"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": [120]
+    },
+    {
+        "id": 165,
+        "title": "Rockstar被黑客泄露内部数据：GTA Online每周内购净入$850万，PS5贡献过半",
+        "summary": "黑客组织ShinyHunters因Rockstar拒绝支付$20万赎金，公开了7800万条内部运营数据。泄露显示GTA Online每周内购收入约$850万(PS5单平台$440万占比53%)；2025年9月至2026年3月7个月净预订$1.93亿；GTA系列自2013年累计营收超$103.8亿。PS5周活跃用户占比41%(347万人)，PS4仍占23%(188万人)，数据揭示了这款13年老游戏惊人的持续吸金能力。",
+        "source": "Kotaku",
+        "sourceUrl": "https://kotaku.com/hackers-reveal-rockstar-earns-over-1-million-a-day-from-gta-online-2000687207",
+        "sourceUrls": [
+            {"name": "Kotaku", "url": "https://kotaku.com/hackers-reveal-rockstar-earns-over-1-million-a-day-from-gta-online-2000687207"},
+            {"name": "TweakTown", "url": "https://www.tweaktown.com/news/111012/gta-online-makes-dollars4-4-million-per-week-on-ps5-platform-rakes-in-53-percent-of-all-gtao-weekly-bookings/index.html"},
+            {"name": "Tom's Hardware", "url": "https://www.tomshardware.com/tech-industry/cyber-security/rockstar-games-confirms-it-was-hacked-by-malicious-group-shinyhunters-takes-credit-gives-until-april-14-to-pay-ransom-or-risk-leaking-confidential-data-shinyhunters"},
+            {"name": "IT之家", "url": "https://www.ithome.com/0/938/762.htm"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "market",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-14",
+        "tags": ["GTA Online", "Rockstar", "数据泄露", "营收", "Take-Two", "PS5"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "ShinyHunters泄露的内部数据首次量化了GTA Online的惊人吸金能力(What)。即使在GTA6预热期，GTA Online仍维持周$850万内购收入，印证了Live Service模式的长尾价值(Why)。这解释了为何Rockstar可以用7年开发GTA6——现金牛持续稳定输血。PS5占比53%显示索尼平台对R星的战略重要性(So What)。GTA6上线后GTA Online用户能否平稳迁移将是Take-Two最大的商业风险(What Next)。",
+        "relatedNewsIds": [68, 158]
+    },
+    {
+        "id": 164,
+        "title": "Xbox新CEO承认Game Pass'太贵'，暗示降价重构+COD可能被移出",
+        "summary": "微软游戏新任CEO Asha Sharma在被The Verge获取的内部备忘录中公开承认Xbox Game Pass'对玩家已经太贵'，承诺短期内提供'更好的性价比'，长期将把Game Pass升级为'更灵活的订阅体系'。此前2025年10月XGP终极版月费大涨50%至$30引发用户不满。另有传言称《使命召唤》可能从Game Pass中独立计费——若属实将是Xbox订阅策略的根本性转向。",
+        "source": "The Verge",
+        "sourceUrl": "https://www.purexbox.com/news/2026/04/xbox-boss-declares-game-pass-is-too-expensive-and-needs-a-better-value-equation",
+        "sourceUrls": [
+            {"name": "Pure Xbox", "url": "https://www.purexbox.com/news/2026/04/xbox-boss-declares-game-pass-is-too-expensive-and-needs-a-better-value-equation"},
+            {"name": "GameSpot", "url": "https://www.gamespot.com/articles/game-pass-is-too-expensive-and-it-will-change-xbox-ceo-says/1100-6539369/"},
+            {"name": "Windows Central", "url": "https://www.windowscentral.com/gaming/xbox/microsofts-new-xbox-ceo-asha-sharma-says-game-pass-has-become-too-expensive-for-players-suggesting-a-price-change"},
+            {"name": "GamesRadar", "url": "https://www.gamesradar.com/games/xbox-game-pass-has-become-too-expensive-for-players-new-ceo-reportedly-admits-in-leaked-memo/"},
+            {"name": "NME", "url": "https://www.nme.com/news/gaming-news/xbox-game-pass-is-too-expensive-says-new-xbox-chief-3940199"},
+            {"name": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260414A04V2U00"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-14",
+        "tags": ["Xbox", "Game Pass", "Asha Sharma", "微软", "订阅", "COD"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "Sharma公开承认XGP'太贵'标志着微软订阅策略的重大转折信号(What)。2025年10月终极版涨至$30后用户增长放缓，叠加COD入库的高昂内容成本与实际转化率不匹配(Why)。若COD独立计费+推出低价基础套餐，将重塑Xbox的商业模型——从'大而全'回归'精而准'(So What)。预计2026年下半年将看到XGP新定价方案出台，这将直接影响第三方发行商的入库谈判筹码(What Next)。",
+        "relatedNewsIds": [158, 142, 120]
+    },
+    {
+        "id": 163,
+        "title": "《使命召唤：现代战争4》传闻10月发售，COD或将退出Xbox Game Pass首日入库",
+        "summary": "据多位可靠内部人士(Jeff Grubb/Jez Corden/TheGhostOfHope)透露，今年的《使命召唤》新作为《现代战争4》，计划10月发售以避开GTA6档期。更重磅的是，Windows Central记者Jez Corden称微软正认真考虑不再将COD新作首日加入Game Pass——此前BO6/BO7连续两年首日入库虽创纪录但对游戏销售收入和XGP盈利模式产生负面影响。若属实，将是Xbox订阅策略的重大转向。",
+        "source": "Pure Xbox",
+        "sourceUrl": "https://www.purexbox.com/news/2026/04/rumour-microsoft-might-not-launch-call-of-duty-2026-on-xbox-game-pass",
+        "sourceUrls": [
+            {"name": "Pure Xbox", "url": "https://www.purexbox.com/news/2026/04/rumour-microsoft-might-not-launch-call-of-duty-2026-on-xbox-game-pass"},
+            {"name": "TheGamer", "url": "https://www.thegamer.com/call-of-duty-modern-warfare-4-launch-window-rumor/"},
+            {"name": "GameSpot", "url": "https://www.gamespot.com/articles/call-of-duty-2026-release-date-trailer-story-modern-warfare-4/1100-6538487/"},
+            {"name": "游民星空", "url": "https://www.gamersky.com/news/202604/2122751.shtml"},
+            {"name": "17173", "url": "https://news.17173.com/content/04132026/061558355.shtml"},
+            {"name": "腾讯文档", "url": "https://docs.qq.com/"}
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-12",
+        "tags": ["使命召唤", "Game Pass", "微软", "Xbox", "MW4", "订阅策略"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "COD退出Game Pass首日入库若属实，将是微软订阅策略的重大转折点。此前微软以COD入库为XGP最大卖点，但BO6/BO7数据显示：Game Pass虽带来用户增长但严重蚕食$70全价销售收入，微软游戏收入Q4同比下滑9%。这标志着'一切首日入库'模式的经济不可持续性正被验证。对行业而言，最大的订阅服务开始为头部IP设置付费墙，意味着'订阅取代买断'的叙事遭遇现实检验。",
+        "relatedNewsIds": [155, 142, 120]
+    },
+    {
+        "id": 162,
+        "title": "《神鬼寓言》(Fable)内部延期，微软或推迟至12月甚至2027年以避开GTA6",
+        "summary": "据Giant Bomb知名记者Jeff Grubb在播客中透露，微软旗下Playground Games开发的《神鬼寓言》(Fable)新作已在内部延期。原定2026年秋季(9-11月)发售窗口被推迟，团队担忧与同年11月发售的《GTA6》正面竞争。目前微软仍争取2026年12月发售，但存在进一步推迟到2027年的可能性。Push Square/Wccftech/NotebookCheck/GamingBolt/TheGamer等多家媒体均确认此消息。对微软第一方游戏阵容压力显著增加。",
+        "source": "GamingBolt",
+        "sourceUrl": "https://gamingbolt.com/fable-internally-delayed-could-launch-in-december-to-avoid-gta-6-rumor",
+        "sourceUrls": [
+            {"name": "GamingBolt", "url": "https://gamingbolt.com/fable-internally-delayed-could-launch-in-december-to-avoid-gta-6-rumor"},
+            {"name": "Push Square", "url": "https://www.pushsquare.com/news/2026/04/fable-ps5-reportedly-delayed-gta-6-could-push-it-to-2027"},
+            {"name": "Wccftech", "url": "https://wccftech.com/fable-reboot-could-be-delayed-2027-gta6/"},
+            {"name": "NotebookCheck", "url": "https://www.notebookcheck.net/Microsoft-reportedly-delays-Fable-as-GTA-6-release-date-threatens-Xbox-game.1272151.0.html"},
+            {"name": "TheGamer", "url": "https://www.thegamer.com/fable-xbox-new-game-delay-2026/"},
+            {"name": "腾讯文档", "url": "https://docs.qq.com/"}
+        ],
+        "category": "game",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-13",
+        "tags": ["Fable", "微软", "Playground Games", "延期", "GTA6", "Xbox"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "Fable延期凸显GTA6对整个行业的'引力场效应'——即使是微软第一方旗舰也不得不主动避让。这对微软2026年阵容打击显著：Xbox今年已缺少重量级独占，Fable是为数不多的期待之一。若推至12月甚至2027年，Xbox在GTA6上市前后将面临严重的内容空窗。更深层看，GTA6已成为行业'黑洞级产品'，迫使整个产业调整发售节奏，这在游戏史上极为罕见。",
+        "relatedNewsIds": [163, 120, 135]
+    },
+    {
+        "id": 161,
+        "title": "Marathon开发预算曝光：超$2亿甚至接近$2.5亿，Bungie押注索尼关键GaaS产品",
+        "summary": "据Forbes记者Paul Tassi报道，索尼旗下Bungie开发的提取类射击游戏《Marathon》开发预算超过2亿美元，可能接近2.5亿美元(不含上线后维护费用)。IGN/Push Square/Eurogamer/TheGamer/Game Rant等多家权威媒体确认。Marathon于3月5日发售后玩家数量大幅下滑但目前尚未面临'Concord式关停'风险。该作是索尼和Bungie在GaaS(服务型游戏)领域的最大押注，高预算之下的商业表现将决定索尼GaaS战略的未来走向。",
+        "source": "IGN",
+        "sourceUrl": "https://www.ign.com/articles/marathon-reportedly-had-a-budget-of-over-200-million-and-while-the-pressure-is-on-bungie-to-gain-more-players-it-is-not-facing-an-imminent-concord-style-shutdown",
+        "sourceUrls": [
+            {"name": "IGN", "url": "https://www.ign.com/articles/marathon-reportedly-had-a-budget-of-over-200-million-and-while-the-pressure-is-on-bungie-to-gain-more-players-it-is-not-facing-an-imminent-concord-style-shutdown"},
+            {"name": "Push Square", "url": "https://www.pushsquare.com/news/2026/04/you-might-not-want-to-know-how-much-it-reportedly-cost-bungie-to-make-marathon"},
+            {"name": "Eurogamer", "url": "https://www.eurogamer.net/marathon-budget-over-200-million-dollars-likely-250-million"},
+            {"name": "Game Rant", "url": "https://gamerant.com/marathon-budget-200-million/"},
+            {"name": "腾讯文档", "url": "https://docs.qq.com/"}
+        ],
+        "category": "game",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-10",
+        "tags": ["Marathon", "Bungie", "索尼", "GaaS", "开发预算", "提取射击"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "Marathon $2-2.5亿的开发成本揭示了3A GaaS游戏的成本困境：继Concord(传闻$4亿)惨败后，Marathon成为索尼GaaS战略成败的关键试金石。玩家流失严重但尚未被关停，说明索尼吸取了Concord教训、愿意给予更长的运营窗口。然而$2.5亿的回本压力巨大，需要持续运营多年才可能盈利。这进一步证明'大预算GaaS'模式风险极高，行业可能重新评估服务型游戏的投资回报预期。",
+        "relatedNewsIds": [117, 153, 156]
+    },
+    {
+        "id": 160,
+        "title": "Epic Games开发迪士尼IP提取射击游戏，$15亿合作首款产品计划11月推出",
+        "summary": "据Bloomberg报道(4位Epic现/前员工证实)，Epic Games正利用与迪士尼的$15亿股权合作开发一款以迪士尼IP角色为主角的提取类射击游戏，玩法风格类似《Arc Raiders》。该作计划于2026年11月推出，是迪士尼-Epic合作的第一款独立游戏产品。IGN/Eurogamer/TechPowerUp/Wccftech/Game Rant等多家媒体确认。此前Epic已在Fortnite中成功引入迪士尼IP(星战/漫威/皮克斯)，此次独立游戏标志着合作升级到全新维度。",
+        "source": "Bloomberg",
+        "sourceUrl": "https://www.eurogamer.net/epic-set-to-release-arc-raiders-like-extraction-shooter-with-disney-characters-by-the-end-of-the-year",
+        "sourceUrls": [
+            {"name": "Eurogamer", "url": "https://www.eurogamer.net/epic-set-to-release-arc-raiders-like-extraction-shooter-with-disney-characters-by-the-end-of-the-year"},
+            {"name": "IGN", "url": "https://www.ign.com/articles/disney-extraction-shooter-reportedly-in-development-at-epic-games"},
+            {"name": "TechPowerUp", "url": "https://www.techpowerup.com/348151/epic-games-plans-standalone-disney-themed-extraction-shooter-similar-to-arc-raiders"},
+            {"name": "Wccftech", "url": "https://wccftech.com/epic-games-disney-game-november-2026-shooting-game-along-the-lines-of-arc-raiders/"},
+            {"name": "Game Rant", "url": "https://gamerant.com/epic-games-disney-extraction-shooter/"},
+            {"name": "腾讯文档", "url": "https://docs.qq.com/"}
+        ],
+        "category": "game",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-11",
+        "tags": ["Epic Games", "迪士尼", "提取射击", "GaaS", "IP合作"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "Epic-迪士尼合作从Fortnite联动升级到独立3A游戏，标志着全球顶级IP持有方(迪士尼)对游戏原生内容的投资深化。$15亿合作的首款产品选择提取射击品类，说明Epic认为这是继大逃杀后的下一个增长赛道。但该品类(Marathon/ARC Raiders/The Division Resurgence)已趋拥挤，迪士尼IP能否打破同质化是关键变量。若成功，将推动更多好莱坞IP进入核心游戏市场而非仅停留在手游。",
+        "relatedNewsIds": [110, 161]
+    },
+    {
+        "id": 159,
+        "title": "Amazon Luna停止支持第三方游戏商店和订阅，6月10日起EA/Ubisoft/GOG云游戏失效",
+        "summary": "Amazon宣布旗下云游戏平台Luna已于4月10日停止新增第三方游戏商店(EA/Ubisoft/GOG)的购买功能，并将于6月10日起彻底移除已购第三方游戏的云端串流权限——玩家通过Luna购买的第三方游戏将无法在Luna上游玩(可在原平台继续使用)，不提供退款。Ubisoft+和Jackbox订阅同步取消。PC Gamer/VideoCardz/Android Authority/CloudDosage等多家媒体确认。Luna战略大幅收缩，向自营内容集中。",
+        "source": "PC Gamer",
+        "sourceUrl": "https://www.pcgamer.com/software/platforms/amazons-luna-cloud-gaming-service-is-ending-support-for-game-purchases-and-subscriptions-from-third-party-stores-and-users-will-lose-streaming-access-to-purchased-third-party-games-in-june/",
+        "sourceUrls": [
+            {"name": "PC Gamer", "url": "https://www.pcgamer.com/software/platforms/amazons-luna-cloud-gaming-service-is-ending-support-for-game-purchases-and-subscriptions-from-third-party-stores-and-users-will-lose-streaming-access-to-purchased-third-party-games-in-june/"},
+            {"name": "VideoCardz", "url": "https://videocardz.com/newz/amazon-luna-disables-ea-ubisoft-and-gog-libraries-for-cloud-streaming"},
+            {"name": "Android Authority", "url": "https://www.androidauthority.com/amazon-luna-ends-game-purchases-third-party-subscriptions-3656684/"},
+            {"name": "腾讯文档", "url": "https://docs.qq.com/"}
+        ],
+        "category": "platform",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-10",
+        "tags": ["Amazon Luna", "云游戏", "平台收缩", "EA", "Ubisoft", "GOG"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 158,
+        "title": "PS6定价预测：BOM成本$743但终端售价预计$600-800区间，不会达到$1000",
+        "summary": "科技博主Moore's Law is Dead在最新视频中对PS6进行了详细物料成本(BOM)分析：PS6家用主机APU价格$110.50、电路板$48、总制造成本约$743；PS6掌机因需配备显示屏和电池总成本$493.69；低功耗PS6S型号约$404.38。GamingBolt/Digital Foundry/Push Square/游戏星空等多家媒体确认分析认为PS6终端定价将在$600-800区间，不会达到此前传闻的$1000。索尼面临在硬件成本与用户接受度之间的艰难平衡。",
+        "source": "GamingBolt",
+        "sourceUrl": "https://gamingbolt.com/ps6-wont-cost-1000-will-likely-cost-between-600-and-800-rumor",
+        "sourceUrls": [
+            {"name": "GamingBolt", "url": "https://gamingbolt.com/ps6-wont-cost-1000-will-likely-cost-between-600-and-800-rumor"},
+            {"name": "Digital Foundry", "url": "https://www.digitalfoundry.net/news/2026/04/how-much-would-you-pay-for-playstation-6"},
+            {"name": "Push Square", "url": "https://www.pushsquare.com/news/2026/03/ps6-could-be-cheaper-than-expected-despite-usd1000-concerns"},
+            {"name": "VICE", "url": "https://www.vice.com/en/article/ps6-price-could-hit-700-as-new-leak-reveals-expensive-cost-to-make-console/"},
+            {"name": "游戏星空", "url": "https://www.gamersky.com/news/202604/2122355.shtml"},
+            {"name": "腾讯文档", "url": "https://docs.qq.com/"}
+        ],
+        "category": "hardware",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-11",
+        "tags": ["PS6", "索尼", "硬件成本", "BOM", "定价", "PlayStation"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "relatedNewsIds": [129, 121, 127]
+    },
     {
         "id": 157,
         "title": "Switch 2日本累计突破500万台，宝可梦Pokopia连续五周蝉联Famitsu销量冠军",
