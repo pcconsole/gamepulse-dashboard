@@ -6,8 +6,8 @@
 
 // ============ 元数据 ============
 const storewatchMeta = {
-    lastUpdated: '2026-04-16',
-    dataRange: '2025-12-19 ~ 2026-04-15',
+    lastUpdated: '2026-04-17',
+    dataRange: '2025-12-19 ~ 2026-04-17',
     sheetId: 'LXXdrpHEWcSr',
     mainSheet: 'BB08J2',
     vendorSheet: 'xsejuk',
@@ -322,6 +322,7 @@ const storewatchVendorMap = {
 // ============ 中英文游戏名称对照表（基于腾讯文档 xsejuk 原始格式） ============
 // 腾讯文档原始格式为"中文名（英文名）"，本表提供双向映射
 const storewatchGameNameMap = {
+    ' BEYOND SPRING SALE': '春季特卖之外',
     ' Mafia: The Old Country': '四海兄弟:故乡',
     '007 First Light': '007:锋芒初露',
     '007:锋芒初露': '007 First Light',
@@ -349,6 +350,7 @@ const storewatchGameNameMap = {
     '沉没之城': 'The Sinking City Remastered',
     '初学者友好游戏专题': 'BEGINNER FRIENDLY',
     '春季特卖': 'SPRING SALE',
+    '春季特卖之外': ' BEYOND SPRING SALE',
     '刺客信条:幻景': 'Assassin\'s Creed Mirage',
     '刺客信条:影': 'Assassin\'s Creed Shadows',
     '刀剑神域:碎梦边境': 'Sword Art Online: Fractured Daydream',
@@ -414,6 +416,7 @@ const storewatchGameNameMap = {
     '极限竞速:地平线6': 'Forza Horizon 6',
     '纪元117:罗马和平': 'Anno 117: Pax Romana',
     '寂静岭2': 'Silent Hill 2',
+    '假日模式游戏专题': 'VACATION MODE:ON',
     '街头霸王6': 'Street Fighter 6',
     '晶核': 'Crystal of Atlan',
     '精灵与萤火意志': 'Ori and the Will of the Wisps',
@@ -462,6 +465,7 @@ const storewatchGameNameMap = {
     '逆转裁判123 成步堂精选集': 'Phoenix Wright: Ace Attorney Trilogy',
     '女神异闻录３ Reload': 'Persona 3 Reload',
     '女性主角游戏专题': 'AMAZING HEROINES',
+    '拍照模式游戏专题': 'PHOTOMODE',
     '跑车浪漫旅7': 'Gran Turismo 7',
     '配件': 'Accessories',
     '烹饪游戏专题': 'COOKING GAMES',
@@ -564,6 +568,7 @@ const storewatchGameNameMap = {
     '星光卡丁车竞赛': 'Starlit Kart Racing',
     '星际战甲': 'WAR FRAME',
     '星空': 'Starfield',
+    '星球大战绝地武士：幸存者': 'Star Wars Jedi: Survivor',
     '行尸走肉:命运': 'The Walking Dead: Destinies',
     '幸福工厂': 'Satisfactory',
     '凶乱魔界主义': 'Kyouran Makaism',
@@ -808,6 +813,7 @@ const storewatchGameNameMap = {
     'Persona 3 Reload': '女神异闻录３ Reload',
     'Phasmophobia': '恐鬼症',
     'Phoenix Wright: Ace Attorney Trilogy': '逆转裁判123 成步堂精选集',
+    'PHOTOMODE': '拍照模式游戏专题',
     'Plants vs. Zombies: Replanted': '植物大战僵尸:重植版',
     'Pragmata': '识质存在',
     'PS5专享升级': 'UPGRADED FOR PS5',
@@ -850,6 +856,7 @@ const storewatchGameNameMap = {
     'Split Fiction': '双影奇境',
     'SpongeBob SquarePants: Titans of the Tide': '海绵宝宝:潮汐巨神',
     'SPRING SALE': '春季特卖',
+    'Star Wars Jedi: Survivor': '星球大战绝地武士：幸存者',
     'Starfield': '星空',
     'Starlit Kart Racing': '星光卡丁车竞赛',
     'STORY-DRIVEN': '故事驱动游戏专题',
@@ -890,6 +897,7 @@ const storewatchGameNameMap = {
     'Unrailed!': '一起开火车！',
     'Unravel': '崩解',
     'UPGRADED FOR PS5': 'PS5专享升级',
+    'VACATION MODE:ON': '假日模式游戏专题',
     'VALORANT': '无畏契约',
     'Virtua Fighter 5 R.E.V.O. World Stage': 'VR战士5R.E.V.O.世界舞台',
     'VR战士5R.E.V.O.世界舞台': 'Virtua Fighter 5 R.E.V.O. World Stage',
@@ -923,10 +931,35 @@ const storewatchNonGameTags = [
 
 // ============ 商店监控数据 ============
 // 数据来源：腾讯文档 LXXdrpHEWcSr (sheet BB08J2)
-// 最后更新：2026-04-16
-// 数据范围：2025-12-19 ~ 2026-04-15
+// 最后更新：2026-04-17
+// 数据范围：2025-12-19 ~ 2026-04-17
 const storewatchData = {
     PS5: [
+        { date: '2026-04-17', slots: {
+            'Must See': { positions: [
+                { rank: 1, us: '漫威金刚狼（Marvel\'s Wolverine）', jp: '堡垒之夜（Fortnite）', hk: '红色沙漠（Crimson Desert）', vendor: '索尼' },
+                { rank: 2, us: 'GTA6预购', jp: '漫威金刚狼（Marvel\'s Wolverine）', hk: 'GTA6预购', vendor: '索尼' },
+                { rank: 3, us: '战神:斯巴达之子（God of War: Sons of Sparta）', jp: '燕云十六声（Where Winds Meet）', hk: '星空（Starfield）', vendor: '索尼' },
+                { rank: 4, us: 'EA Sports FC 26', jp: 'NBA 2K26', hk: '生化危机:安魂曲（Resident Evil: Requiem）', vendor: 'EA' },
+                { rank: 5, us: '假日模式游戏专题（VACATION MODE:ON）', jp: '生化危机:安魂曲（Resident Evil: Requiem）', hk: '在线多人游戏专题（ONLINE MULTIPLAYER）', vendor: 'CAPCOM' },
+                { rank: 6, us: '华丽动作游戏专题（STYLISH ACTION）', jp: '异环（Neverness To Everness）', hk: '格斗游戏专题（FIGHTING GAMES）' },
+            ] },
+            'Top games in your country': { positions: [
+                { rank: 1, us: '符文工房:龙之天地（Rune Factory: Guardians of Azuma）', jp: '识质存在（Pragmata）', hk: '原神（Genshin impact）', vendor: 'Marvelous Inc.' },
+                { rank: 2, us: '星球大战绝地武士：幸存者（Star Wars Jedi: Survivor）', jp: 'Apex英雄（Apex Legends）', hk: '绝地求生（PUBG: Battlegrounds）', vendor: 'EA' },
+                { rank: 3, us: '盗贼之海（Sea of Thieves）', jp: '原神（Genshin impact）', hk: '哈迪斯2（Hades2）', vendor: '微软' },
+                { rank: 4, us: '恶魔宝贝（DAMON and BABY）', jp: '明日方舟:终末地（Arknights: Endfield）', hk: '死亡岛2（Dead Island 2）', vendor: '鹰角网络' },
+                { rank: 5, us: '使命召唤:黑色行动7（Call of Duty: Black Ops 7）', jp: '守望先锋（OVERWATCH）', hk: '实况足球（eFootball）', vendor: '微软' },
+            ] },
+            "What's hot": { positions: [
+                { rank: 1, us: 'Perfect your setup', jp: '我的世界（Minecraft）', hk: '每月精选游戏', vendor: '微软' },
+                { rank: 2, us: '最受期待游戏专题（MOST ANTICIPATED）', jp: '守望先锋（OVERWATCH）', hk: '动漫改编游戏专题', vendor: '暴雪' },
+                { rank: 3, us: '我的世界（Minecraft）', jp: '堡垒之夜（Fortnite）', hk: '编辑精选', vendor: '微软' },
+                { rank: 4, us: '拍照模式游戏专题（PHOTOMODE）', jp: '侠盗猎车手在线模式（Grand Theft Auto Online）', hk: 'PS5必玩游戏', vendor: 'Take-Two' },
+                { rank: 5, us: '人中之龙:极3（Yakuza 3 Remastere）', jp: '动漫改编游戏专题', hk: '最受期待游戏专题（MOST ANTICIPATED）', vendor: 'SEGA' },
+                { rank: 6, us: '动漫改编游戏专题', jp: 'PS5必玩游戏', hk: '守望先锋（OVERWATCH）', vendor: '暴雪' },
+            ] },
+        } },
         { date: '2026-04-15', slots: {
             'Must See': { positions: [
                 { rank: 1, us: 'NBA 2K26', jp: '堡垒之夜（Fortnite）', hk: '红色沙漠（Crimson Desert）', vendor: 'Take-Two' },
@@ -2804,6 +2837,24 @@ const storewatchData = {
         } },
     ],
     Xbox: [
+        { date: '2026-04-17', slots: {
+            'Store Home-hero banner': { positions: [
+                { rank: 1, us: '地铁2039（METRO 2039 ）', jp: '春季特卖之外（ BEYOND SPRING SALE）', hk: 'Kiln', vendor: '微软' },
+            ] },
+            'Store Home-banner': { positions: [
+                { rank: 1, us: 'MOUSE: P.I. For Hire', jp: 'Kiln', hk: '哈迪斯2（Hades2）', vendor: '微软' },
+                { rank: 2, us: 'Xbox Play Now', jp: '哈迪斯2（Hades2）', hk: 'Xbox Play Now', vendor: 'Supergiant Games' },
+                { rank: 3, us: 'NBA 2K26', jp: '光与影:33号远征队（Clair Obscur:Expedition 33）', hk: 'MOUSE: P.I. For Hire', vendor: 'Take-Two' },
+                { rank: 4, us: '趋势游戏（Trending）', jp: '趋势游戏（Trending）', hk: '春季特卖之外（ BEYOND SPRING SALE）' },
+            ] },
+            'Game Home-hero banner': { positions: [
+                { rank: 1, us: '哈迪斯2（Hades2）', jp: 'Kiln', hk: '哈迪斯2（Hades2）', vendor: 'Supergiant Games' },
+            ] },
+            'Game Home-banner': { positions: [
+                { rank: 1, us: '春季特卖之外（ BEYOND SPRING SALE）', jp: '007:锋芒初露（007 First Light）', hk: '春季特卖之外（ BEYOND SPRING SALE）', vendor: 'IO Interactive A/S' },
+                { rank: 2, us: 'MOUSE: P.I. For Hire', jp: '地铁2039（METRO 2039 ）', hk: 'MOUSE: P.I. For Hire' },
+            ] },
+        } },
         { date: '2026-04-15', slots: {
             'Dash home-banner': { positions: [
                 { rank: 1, us: 'Game Pass 会员优惠', jp: '战地风云6（Battlefield 6）', hk: '春季特卖（SPRING SALE）', vendor: 'EA' },
