@@ -1,8 +1,8 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-04-16T14:55:00Z
-// 更新者: news-agent (v5.1 手动更新：MCP SpreadsheetApp成功(lastRow=1170新增10行)+web_search 8轮)
+// 最后更新: 2026-04-20T19:53:00Z
+// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1182新增12行)+web_search 12轮)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
@@ -174,6 +174,296 @@ const newsSources = [
 
 const newsData = [
     {
+        "id": 183,
+        "title": "《风启之旅》抢先体验6天销量破百万，Steam在线峰值超20万",
+        "summary": "合作海盗生存冒险游戏《风启之旅》(Windrose)由Kraken Express开发，4月14日在Steam开启抢先体验。上线仅6天，全球销量突破100万份，Steam同时在线峰值超过20万人。该游戏以PvE海盗沙盒玩法为核心，提供三大生物群系和数百个探索点，被评价为近期PC端最大爆款独立游戏之一。",
+        "source": "IGN",
+        "sourceUrl": "https://www.ign.com/articles/windrose-celebrates-1-million-copies-sold-as-player-counts-climb",
+        "sourceUrls": [
+            {"name": "IGN", "url": "https://www.ign.com/articles/windrose-celebrates-1-million-copies-sold-as-player-counts-climb"},
+            {"name": "Eurogamer", "url": "https://www.eurogamer.net/windrose-1m-copies-celebration"},
+            {"name": "Gematsu", "url": "https://www.gematsu.com/2026/04/windrose-early-access-sales-top-one-million-in-six-days"},
+            {"name": "GamesRadar", "url": "https://www.gamesradar.com/games/open-world/windrose-sells-1-million-copies-in-less-than-a-week-and-as-the-open-world-pirate-game-passes-220-000-concurrent-steam-players-devs-say-the-support-is-absolutely-astonishing/"},
+            {"name": "TweakTown", "url": "https://www.tweaktown.com/news/111127/new-indie-hit-pirate-sim-windrose-sells-1-million-copies-in-6-days-attracts-205k-players-on-steam/index.html"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "game",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-20",
+        "tags": ["Windrose", "风启之旅", "独立游戏", "Steam", "抢先体验", "海盗"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Windrose 6天破百万证明PvE多人海盗生存类仍有强烈未被满足的玩家需求(What)。Kraken Express作为小型独立工作室实现这一成绩，与Valheim、Palworld等独立爆款路径一致——低成本、高重玩性、口碑驱动社交裂变(Why)。对于3A厂商的警示是：Newzoo数据显示PC 56%收入流向Top20之外，独立游戏的长尾正在重塑PC市场格局(So What)。Kraken预计将投入资源扩展内容、多平台移植，有望成为2026年度独立游戏代表作(What Next)。",
+        "relatedNewsIds": [177, 125, 106]
+    },
+    {
+        "id": 187,
+        "title": "《龙珠：超宇宙3》正式公布，2027年发售登陆PS5/Xbox/PC",
+        "summary": "万代南梦宫在4月19日洛杉矶举办的Dragon Ball Games Battle Hour 2026活动上正式公布《龙珠：超宇宙3》(Dragon Ball Xenoverse 3)，由Dimps开发，2027年发售，登陆PlayStation 5、Xbox Series X|S和Steam。这是系列继2015年Xenoverse 2之后10年的首部正统续作。近4分钟预告片融合传统动画和实机画面展示，Xenoverse 2现役用户将在夏季收到Future Saga第4章作为闭幕章节。",
+        "source": "Bandai Namco",
+        "sourceUrl": "https://en.bandainamcoent.eu/dragon-ball/news/dragon-ball-games-battle-hour-2026-dragon-ball-xenoverse-3-announced-and-more",
+        "sourceUrls": [
+            {"name": "Bandai Namco (官方)", "url": "https://en.bandainamcoent.eu/dragon-ball/news/dragon-ball-games-battle-hour-2026-dragon-ball-xenoverse-3-announced-and-more"},
+            {"name": "Eurogamer", "url": "https://www.eurogamer.net/dragon-ball-xenoverse-3-announced"},
+            {"name": "RPG Site", "url": "https://www.rpgsite.net/news/20168-dragon-ball-xenoverse-3-2027-release-ps5-xbox-series-pc-steam"},
+            {"name": "Gematsu", "url": "https://www.gematsu.com/2026/04/dragon-ball-xenoverse-3-announced-for-ps5-xbox-series-and-pc"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-19",
+        "tags": ["龙珠", "Xenoverse 3", "Bandai Namco", "Dimps", "2027"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "龙珠IP年度稳定贡献游戏销量(Xenoverse 2累计超1100万份)，Xenoverse 3是Dimps承接10年老IP的战略续作(What/Why)。2027年发售时间点避开了万代南梦宫2026的密集排期(魂6/火影新作等)，锁定中长期龙珠粉丝经济(So What)。万代南梦宫在Battle Hour活动同步公布《龙珠 Sparking Zero》DLC等多条产品线，显示IP组合化运营提速(What Next)。",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 180,
+        "title": "Xbox Game Pass泄露新档位Triton/Duet，云游戏或引入限时机制",
+        "summary": "Better xCloud追踪者redphx从微软后端代码中发现Xbox Game Pass两个新档位代号TRITON和Duet。Triton聚焦Xbox第一方游戏(如Doom/Halo/Hellblade/State of Decay)，Duet可能整合Netflix订阅服务。两档都可能支持Xbox Cloud Gaming云游戏但引入月度或小时限时机制，类似NVIDIA GeForce Now的限流策略，旨在减轻服务器负载。这是继2025年Game Pass分层调整后的新一轮重构。",
+        "source": "Windows Central",
+        "sourceUrl": "https://www.windowscentral.com/gaming/xbox/microsoft-code-hints-at-game-pass-triton-and-duet-tier",
+        "sourceUrls": [
+            {"name": "Windows Central", "url": "https://www.windowscentral.com/gaming/xbox/microsoft-code-hints-at-game-pass-triton-and-duet-tier"},
+            {"name": "VideoCardz", "url": "https://videocardz.com/newz/xbox-game-pass-leak-suggests-new-tier-with-capped-cloud-gaming-hours"},
+            {"name": "Notebookcheck", "url": "https://www.notebookcheck.net/New-Xbox-Game-Pass-tier-may-offer-time-limited-cloud-gaming-following-GeForce-Now.1276890.0.html"},
+            {"name": "Insider Gaming", "url": "https://insider-gaming.com/xboxs-rumored-first-party-game-pass-tier-could-cap-your-cloud-gaming-allowance/"},
+            {"name": "GamingBolt", "url": "https://gamingbolt.com/new-game-pass-tier-will-offer-cloud-gaming-with-time-limits-rumor"},
+            {"name": "IT之家", "url": "https://www.ithome.com/0/940/699.htm"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-18",
+        "tags": ["Xbox", "Game Pass", "Triton", "Duet", "云游戏", "订阅服务"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "Triton/Duet暗示微软在Game Pass分层上继续精细化运营：Triton锁死第一方与订阅价值绑定，Duet可能开启与Netflix的跨服务捆绑(What/Why)。引入云游戏限时机制是对服务器成本压力的直接回应——Xbox Cloud Gaming免费时长消耗远超预期(So What)。这与3月CEO Asha Sharma承认'Game Pass太贵'的表态一致，Xbox正在重构订阅价值体系：高价值第一方锁定核心用户，云服务限时控制成本，Netflix捆绑打开新渠道(What Next)。",
+        "relatedNewsIds": [168, 128, 143]
+    },
+    {
+        "id": 185,
+        "title": "《刺客信条：黑旗 Resynced》定档7月9日，Ubisoft重制经典海盗篇",
+        "summary": "Ubisoft《刺客信条：黑旗 Resynced》(Assassin's Creed: Black Flag Resynced)据泄露的发行计划将于2026年7月9日发售。该作为2013年原版的重制版，改用新引擎升级画面、战斗和航海系统，正式公布发布会原定本周但推迟一周。Ubisoft上周已发布首张概念图。作为系列海盗主题最受欢迎作品，Resynced被视为Ubisoft在Assassin's Creed Shadows后的下一关键商业项目。",
+        "source": "IGN",
+        "sourceUrl": "https://www.ign.com/articles/assassins-creed-black-flag-remake-reportedly-set-for-july-release",
+        "sourceUrls": [
+            {"name": "IGN", "url": "https://www.ign.com/articles/assassins-creed-black-flag-remake-reportedly-set-for-july-release"},
+            {"name": "GameSpot", "url": "https://www.gamespot.com/articles/assassins-creed-black-flag-resynced-reportedly-drops-anchor-this-july/1100-6539462/"},
+            {"name": "TweakTown", "url": "https://www.tweaktown.com/news/111087/assassins-creed-black-flag-resynced-release-date-leaks-ahead-of-ubisoft-announcement/index.html"},
+            {"name": "Insider Gaming", "url": "https://insider-gaming.com/black-flag-resynced-release-date/"},
+            {"name": "NME", "url": "https://www.nme.com/news/gaming-news/assassins-creed-black-flag-resynced-july-release-date-3941325"},
+            {"name": "17173", "url": "https://news.17173.com/content/04172026/051634300.shtml"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-17",
+        "tags": ["刺客信条", "Black Flag", "Resynced", "Ubisoft", "重制版"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "黑旗Resynced是Ubisoft变现经典IP的稳健策略，与2024年Mirage小型化尝试形成互补(What)。经典海盗主题自2013年以来依然有稳固粉丝基础，Windrose等海盗游戏的成功验证了该品类需求(Why)。对Ubisoft而言，Resynced作为Shadows之后的7月档期主打，承担了填补育碧2026发行断档的功能(So What)。黑旗Resynced的口碑将决定Ubisoft重制线后续方向，若成功可能推动Revelations/Unity等作品重制(What Next)。",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 184,
+        "title": "《极限竞速地平线6》Steam预购破50万份，Playground Games有望刷新系列纪录",
+        "summary": "据Alinea Analytics分析，微软《极限竞速地平线6》(Forza Horizon 6)发售前一个月(距5月19日正式发行)Steam预购量已超51.1万份，预估收入约3000万美元。该数据是Forza系列Steam预购历史新高，预示实际销量或超200万份。本作以东京为背景，由Playground Games开发，是微软后续Xbox自研大作中的关键一作。",
+        "source": "Alinea Analytics",
+        "sourceUrl": "https://www.notebookcheck.net/Forza-Horizon-6-pre-sales-hit-500K-on-Steam-generating-nearly-30M-ahead-of-launch.1276880.0.html",
+        "sourceUrls": [
+            {"name": "Notebookcheck (Alinea)", "url": "https://www.notebookcheck.net/Forza-Horizon-6-pre-sales-hit-500K-on-Steam-generating-nearly-30M-ahead-of-launch.1276880.0.html"},
+            {"name": "eTeknix", "url": "https://www.eteknix.com/report-forza-horizon-6-preorders-reach-500000-copies-and-28-million-on-steam/"},
+            {"name": "This Week in Video Games", "url": "https://thisweekinvideogames.com/news/analyst-claims-forza-horizon-6-has-already-pre-sold-500000-copies-on-steam-alone/"},
+            {"name": "GAMES.GG", "url": "https://games.gg/news/forza-horizon-6-500k-steam-sales/"},
+            {"name": "Instant Gaming", "url": "https://news.instant-gaming.com/en/articles/19081-forza-horizon-6-has-reportedly-sold-500-000-copies-on-steam"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-17",
+        "tags": ["Forza Horizon 6", "Microsoft", "Xbox", "Steam", "Playground Games"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "FH6 Steam预购50万+领先上代FH5同期水平，验证微软PC优先战略的直接商业收益(What)。微软PC转向促使Forza系列完整登陆Steam，同时首日入库Game Pass，形成'PC销售+订阅+主机'三重变现(Why)。对比Xbox第一方其他游戏(如Starfield PS5仅14万)，Forza品牌在PC端的强势说明赛车品类与PC玩家极度契合(So What)。5月19日正式上市后若突破200万单，将是微软第一方PC成功案例，进一步推动其他游戏全平台策略(What Next)。",
+        "relatedNewsIds": [143, 174]
+    },
+    {
+        "id": 182,
+        "title": "《战锤40K：星际战士2》累计玩家突破1200万，Focus Entertainment超预期",
+        "summary": "发行商Focus Entertainment与开发商Saber Interactive联合宣布，《战锤40K：星际战士2》(Warhammer 40,000: Space Marine 2)全球累计玩家突破1200万。相比2025年6月公布的700万玩家数据，10个月内增长71%。得益于订阅服务入库(Game Pass/PS Plus)、持续DLC更新和PVE模式受捧，该游戏已超越Focus初期所有商业预期。续作开发也已确认。",
+        "source": "Focus Entertainment",
+        "sourceUrl": "https://www.ign.com/articles/warhammer-40000-space-marine-2-sales-update",
+        "sourceUrls": [
+            {"name": "IGN", "url": "https://www.ign.com/articles/warhammer-40000-space-marine-2-sales-update"},
+            {"name": "Gameworld Observer", "url": "https://gameworldobserver.com/2026/04/17/the-audience-for-warhammer-40000-space-marine-2-has-grown-to-12-million-people"},
+            {"name": "GamingBolt", "url": "https://gamingbolt.com/warhammer-40000-space-marine-2-crosses-12-million-players"},
+            {"name": "Gamereactor", "url": "https://www.gamereactor.eu/warhammer-40000-space-marine-ii-has-surpassed-12-million-players-1707123/"},
+            {"name": "Kitguru", "url": "https://www.kitguru.net/gaming/mustafa-mahmoud/warhammer-40k-space-marine-2-reaches-new-player-milestone/"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-17",
+        "tags": ["Space Marine 2", "Warhammer 40K", "Focus Entertainment", "Saber Interactive", "玩家数"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "SM2从700万(2025.6)增至1200万(2026.4)的71%增长，验证了中型IP游戏通过订阅入库延长商业寿命的可行性(What/Why)。Focus Entertainment作为中等规模发行商借此跻身头部，IP长尾价值超出预期，推动续作立项(So What)。对比Starfield PS5首周仅14万单的数据，说明单机买断+订阅双轨在中型IP上仍能走通，3A大厂应重新审视订阅服务合作价值(What Next)。",
+        "relatedNewsIds": [177, 181]
+    },
+    {
+        "id": 178,
+        "title": "'Stop Killing Games'欧盟议会听证获压倒性支持，或推进数字商品保护立法",
+        "summary": "欧洲公民倡议'Stop Killing Games'(SKG)4月16日在欧洲议会举行公开听证，活动发起人Ross Scott和组织者Moritz Katzner陈述案件。该倡议累计收集129万欧盟公民签名，要求立法禁止发行商在停服后永久性关闭已售游戏。多位议员明确表态支持，无人持反对立场。若立法推进，将重塑游戏发行商的服务生命周期策略、数字商品法律定义及DRM模式，影响范围远超游戏行业。",
+        "source": "Eurogamer",
+        "sourceUrl": "https://www.eurogamer.net/stop-killing-games-european-parliament",
+        "sourceUrls": [
+            {"name": "Eurogamer", "url": "https://www.eurogamer.net/stop-killing-games-european-parliament"},
+            {"name": "This Week in Video Games", "url": "https://thisweekinvideogames.com/news/stop-killing-games-receives-support-from-politicians-in-european-parliament-hearing/"},
+            {"name": "欧盟官方", "url": "https://commission.europa.eu/european-citizens-initiative/hearing-european-parliament-stop-destroying-videogames-european-citizens-initiative-2026-04-16_en"},
+            {"name": "Yahoo", "url": "https://www.yahoo.com/news/articles/stop-killing-games-delivers-absolutely-215059730.html"},
+            {"name": "Khelnow", "url": "https://khelnow.com/gaming/stop-killing-games-gains-major-support-from-european-parliament-202604"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "policy",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-17",
+        "tags": ["Stop Killing Games", "欧盟", "立法", "数字商品", "DRM", "服务终止"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "SKG获欧盟议会压倒性支持标志着'数字商品属于消费者资产'理念进入立法视野(What)。背后是The Crew停服、Concord关停等多起事件引发欧洲玩家集体诉求，Ubisoft等厂商被推上舆论风口(Why)。若立法，对GaaS游戏模式(Destiny/COD/Apex)产生深远影响：厂商需提供停服后的本地运行/源码保护/迁移方案，大幅推高运营成本(So What)。预计EU下一步或通过《数字市场法》修订案或专项立法，最早2027年生效；美国、中国等市场可能跟进；游戏发行合同和用户条款将迎来行业性重构(What Next)。",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 177,
+        "title": "Newzoo报告：2025年PC游戏56%收入流向Top20之外，3A主导地位削弱",
+        "summary": "Newzoo发布2026 PC & Console Gaming Report，关键数据显示2025年PC游戏Top20之外的长尾游戏收入份额从2022年的48%升至56%，游玩时长占比从33%升至45%。3A游戏统治力显著削弱，独立游戏、中型IP通过Steam EA、订阅服务获得更多商业空间。该报告印证了当前PC市场向'多元长尾+少数超级大作'的双极分化演变趋势。",
+        "source": "Newzoo",
+        "sourceUrl": "https://www.gamesindustry.biz/newzoo-more-than-half-of-pc-revenue-comes-from-games-outside-the-top-20",
+        "sourceUrls": [
+            {"name": "GamesIndustry (Newzoo)", "url": "https://www.gamesindustry.biz/newzoo-more-than-half-of-pc-revenue-comes-from-games-outside-the-top-20"},
+            {"name": "Wccftech", "url": "https://wccftech.com/aaa-dominance-eroding-pc-gaming-revenue-top-20/"},
+            {"name": "TechSpot", "url": "https://www.techspot.com/news/112092-2026-pc-console-gaming-report-shows-most-revenue.html"},
+            {"name": "Newzoo官方报告", "url": "https://newzoo.com/resources/trend-reports/newzoo-global-games-market-report-2025"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "market",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-15",
+        "tags": ["Newzoo", "PC游戏", "长尾", "3A", "市场报告", "独立游戏"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "PC Top20之外收入占比从48%(2022)→56%(2025)是PC市场结构性变革的标志性数据(What)。Steam算法推荐优化、独立游戏工具链成熟、订阅服务推动了中小项目的商业化(Why)。对3A大厂的警示是：投入2-3亿美元大作(如Marathon)的回报率风险上升，而中型IP(如Space Marine 2)和独立爆款(如Windrose)回报率大幅提升(So What)。预计未来2-3年行业将继续分化：超级大作继续少数化，独立/中型游戏的商业空间扩大，3A厂商或加速转向中预算、多项目组合策略(What Next)。",
+        "relatedNewsIds": [183, 182, 119, 162]
+    },
+    {
+        "id": 181,
+        "title": "《星空》PS5首周仅售14万份，微软多平台策略或受质疑",
+        "summary": "据Alinea Analytics估算，Bethesda《星空》(Starfield)在4月7日登陆PS5后首周仅售出约14万份，创造770万美元收入。这一数据远低于微软第一方游戏在PS5的历史表现(如Forza Horizon 5跨平台效果)，也低于Xbox版本首周数据(约200万份+Game Pass玩家)。该销量被多位分析师称为'温水'反应，引发对微软将第一方游戏'晚于Xbox发售'的PS5策略的质疑。",
+        "source": "Alinea Analytics",
+        "sourceUrl": "https://www.eurogamer.net/starfield-ps5-port-sales-estimates-first-week",
+        "sourceUrls": [
+            {"name": "Eurogamer (Alinea)", "url": "https://www.eurogamer.net/starfield-ps5-port-sales-estimates-first-week"},
+            {"name": "IGN", "url": "https://www.ign.com/articles/starfield-ps5-sales-estimate"},
+            {"name": "Notebookcheck", "url": "https://www.notebookcheck.net/Starfield-sells-over-140-000-copies-on-PS5-in-one-week-generating-7-7-million-in-revenue.1274081.0.html"},
+            {"name": "Escapist", "url": "https://www.escapistmagazine.com/news-starfield-ps5-sales-disappoint-with-140k-copies-sold-relative-to-expectations/"},
+            {"name": "Tech4Gamers", "url": "https://tech4gamers.com/starfield-sales-ps5/"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-15",
+        "tags": ["Starfield", "PS5", "Bethesda", "Microsoft", "多平台"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "Starfield PS5首周14万份(770万美元)远低预期，对比Xbox版首周200万+Game Pass免费玩家数据，PS5滞后2年上线的吸引力明显衰减(What/Why)。核心原因：①PS5玩家已错过事件窗口 ②游戏IP口碑在两年期间降温 ③Bethesda游戏稳定性问题持续(PS5版崩溃退款浪)(So What)。这对微软多平台策略是预警信号：晚发布+修复不彻底=吸引力流失，未来Halo/Forza等游戏可能需要重新设计多平台节奏(What Next)。",
+        "relatedNewsIds": [143, 135, 173]
+    },
+    {
+        "id": 186,
+        "title": "《007 First Light》遭印尼分级机构泄露，结局和剧情遭大面积剧透",
+        "summary": "IO Interactive《007: First Light》因印度尼西亚游戏评级机构(IGRS)安全漏洞，于4月13日泄露超过1小时完整游戏实况和结局剧情。该作原定5月底发售，为IOI接手詹姆斯·邦德IP后的首作。同批泄露还包括Bandai Namco《Echoes of Aincrad》等其他2026新游。PushSquare、VGC等媒体建议玩家立即屏蔽相关关键词避免被剧透。印尼评级机构已承诺进行系统整改。",
+        "source": "IGN",
+        "sourceUrl": "https://sea.ign.com/project-007/241273/news/james-bond-game-007-first-light-story-spoilers-leak-following-ratings-board-snafu",
+        "sourceUrls": [
+            {"name": "IGN", "url": "https://sea.ign.com/project-007/241273/news/james-bond-game-007-first-light-story-spoilers-leak-following-ratings-board-snafu"},
+            {"name": "Eurogamer", "url": "https://www.eurogamer.net/007-first-light-spoilers-leak"},
+            {"name": "GameSpot", "url": "https://www.gamespot.com/articles/huge-spoilers-leaked-for-007-first-light-and-other-games-in-an-unusual-way/1100-6539368/"},
+            {"name": "Wccftech", "url": "https://wccftech.com/007-first-light-ending-leak-major-spoilers-indonesian-games-rating-board/"},
+            {"name": "PushSquare", "url": "https://www.pushsquare.com/news/2026/04/beware-007-first-light-gameplay-reportedly-leaks-online-possibly-including-the-ending"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-04-15",
+        "tags": ["007 First Light", "IO Interactive", "泄露", "剧透", "印尼"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 179,
+        "title": "PS6及掌机'Canis'泄露文件：全面向下兼容PS4/PS5，RDNA5统一架构",
+        "summary": "硬件爆料人士公布多年前Sony内部文件，显示PlayStation 6主机及同代掌机(代号Canis)将全面支持PS4和PS5游戏向下兼容，通过RDNA5架构实现统一生态。泄露还暗示PS6掌机性能已超过PS5水平。由于AI驱动的内存短缺及关税影响，PS6可能以更高价格推迟发布。这是Sony首次通过内部文件被爆料详细兼容性规划，暗示Sony将以'全家族兼容'应对微软下一代Project Helix竞争。",
+        "source": "Wccftech",
+        "sourceUrl": "https://wccftech.com/ps6-backward-compatible-ps4-ps5-leak/",
+        "sourceUrls": [
+            {"name": "Wccftech", "url": "https://wccftech.com/ps6-backward-compatible-ps4-ps5-leak/"},
+            {"name": "tbreak", "url": "https://tbreak.com/ps6-backward-compatibility-leak-ps4-ps5/"},
+            {"name": "TweakTown", "url": "https://www.tweaktown.com/news/111068/ps6-and-handheld-rumored-to-feature-full-ps4-and-ps5-backward-compatibility/index.html"},
+            {"name": "Insider Gaming", "url": "https://insider-gaming.com/playstation-6-will-have-backward-compatibility-with-ps4-and-ps5-games-its-claimed/"},
+            {"name": "PSU", "url": "https://www.psu.com/news/rumour-ps6-will-be-backwards-compatible-with-ps5-ps4-games/"},
+            {"name": "TheGamer", "url": "https://www.thegamer.com/playstation-6-backwards-compatible-rumor/"},
+            {"name": "Metro", "url": "https://metro.co.uk/2026/04/15/ps6-console-handheld-backwards-compatible-ps4-games-claims-leak-27983053/"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "hardware",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-16",
+        "tags": ["PS6", "Canis", "掌机", "向下兼容", "RDNA5", "Sony"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "PS6全面向下兼容PS4/PS5是Sony生态战略的关键调整(What)。Sony过去在PS3/PS4代际未能完整继承前代游戏库的教训，以及PS5上PS4向下兼容的成功经验，驱动这一决策(Why)。对消费者而言，几百款PS4/PS5游戏资产价值保留，降低代际切换阻力，提升PS6购买意愿(So What)。与微软Project Helix的'统一架构+三屏协同'形成直接对比，PS6掌机的加入意味着Sony首次涉足掌机，进一步挤压Switch 2+Steam Deck市场空间；同时AI内存短缺+关税可能推高PS6起售价至$599+(What Next)。",
+        "relatedNewsIds": [129, 147, 132]
+    },
+    {
+        "id": 176,
+        "title": "《明末：渊虚之羽》开发团队整体解散，制作人夏思源被灵泽科技开除",
+        "summary": "国产类魂动作游戏《明末：渊虚之羽》4月10日爆出重大人事变故。据B站UP主贞子菇凉及多方知情人士爆料，主创夏思源(技术入股持股约6%联合创始人)在2026春节前后被灵泽科技强制开除，办公室被锁、设备被搬走，核心开发组几乎全员被开除。起因为灵泽科技要求开发组转为外包模式遭集体拒绝。部分员工已启动劳动仲裁，海外X平台官方账号蓝V认证已被移除，项目彻底停更。此前该作曾被视为有望继承《黑神话》的国产3A类魂代表作。",
+        "source": "新浪财经",
+        "sourceUrl": "https://finance.sina.com.cn/stock/aigcy/2026-04-10/doc-inhtzamv8007682.shtml",
+        "sourceUrls": [
+            {"name": "新浪财经", "url": "https://finance.sina.com.cn/stock/aigcy/2026-04-10/doc-inhtzamv8007682.shtml"},
+            {"name": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260419A06MX900"},
+            {"name": "游民星空", "url": "https://www.gamersky.com/news/202604/2121873.shtml"},
+            {"name": "搜狐", "url": "https://www.sohu.com/a/1007736205_121212001"},
+            {"name": "MSN (小黑盒)", "url": "https://www.msn.cn/zh-cn/news/other/%E6%98%8E%E6%9C%AB-%E6%B8%8A%E8%99%9A%E4%B9%8B%E7%BE%BD-%E5%88%B6%E4%BD%9C%E4%BA%BA%E5%A4%8F%E6%80%9D%E6%BA%90%E8%A2%AB%E6%9B%9D%E5%BC%80%E9%99%A4-%E5%BC%80%E5%8F%91%E5%9B%A2%E9%98%9F%E5%B7%B2%E8%A7%A3%E6%95%A3/ar-AA20yLHe"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "policy",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-15",
+        "tags": ["明末", "渊虚之羽", "灵泽科技", "国产3A", "类魂", "解散"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "《明末》团队解散是2026国产3A第一起重大翻车事件(What)。核心问题是资方灵泽科技(持股方)要求开发组转为外包模式以压缩成本，主创团队拒绝后被强制清洗(Why)。这揭示国产3A的深层困境：技术入股主创与资本方在长线研发投入上的根本分歧，项目型公司难以承接3A级别的持续投入(So What)。对国产3A生态的影响是负面的——证明《黑神话》的成功难以简单复制，项目型公司缺乏持续研发能力；中长期可能推动国产3A向大厂孵化(腾讯/米哈游/网易)或独立工作室+发行深度绑定模式演变(What Next)。",
+        "relatedNewsIds": []
+    },
+    {
         "id": 175,
         "title": "PS5涨价前美国销量飙升至2026年新高，消费者抢购潮推动单周翻倍",
         "summary": "Circana分析师Mat Piscatella披露，截至4月4日当周美国PS5硬件销量(台数与金额)均达2026年最高水平，消费者赶在4月2日涨价生效前集中购买。涨价后PS5标准版从$499涨至$599(+$100)，PS5 Pro从$749涨至$899(+$150)。此为索尼3月27日宣布涨价后的直接市场反应。Kotaku指出销量在涨价周基本翻倍，但涨价后销量走势将决定此举对索尼全年主机收入的真正影响。",
@@ -222,26 +512,26 @@ const newsData = [
     },
     {
         "id": 173,
-        "title": "Xbox First Look: Metro 2039今日首播，4A Games公布系列新作",
-        "summary": "Xbox于4月16日举办Xbox First Look数字展会，首次公开展示4A Games与Deep Silver合作开发的Metro系列新作《Metro 2039》。这是继Metro Exodus(2019)后系列的最新正统续作，此前曾因游戏玩法泄露引发关注。展示在Xbox YouTube频道独家首播，Xbox Wire官方已确认活动细节。",
+        "title": "《地铁2039》Xbox First Look正式公布，今年冬季发售",
+        "summary": "Xbox于4月16日举办Xbox First Look数字展会，4A Games与Deep Silver合作开发的Metro系列新作《地铁2039》正式公布，确认今年冬季发售（约2026 Q4）。这是继Metro Exodus(2019)后系列的最新正统续作，登陆Xbox Series X|S、PS5及PC平台，首日入库Xbox Game Pass。预告片展示了后末日莫斯科2039年的场景，继续承接故事线。",
         "source": "Xbox Wire",
-        "sourceUrl": "https://news.xbox.com/en-us/2026/04/13/metro-2039-xbox-first-look-how-to-watch/",
+        "sourceUrl": "https://news.xbox.com/en-us/2026/04/16/metro-2039-announcement/",
         "sourceUrls": [
-            {"name": "Xbox Wire (官方)", "url": "https://news.xbox.com/en-us/2026/04/13/metro-2039-xbox-first-look-how-to-watch/"},
+            {"name": "Xbox Wire (官方)", "url": "https://news.xbox.com/en-us/2026/04/16/metro-2039-announcement/"},
             {"name": "IGN", "url": "https://www.ign.com/articles/new-metro-sequel-reportedly-set-for-reveal-at-microsoft-xbox-show-this-week-after-major-gameplay-leak-over-the-weekend"},
             {"name": "Polygon", "url": "https://www.polygon.com/metro-2039-announcement-4a-games-xbox-showcase/"},
             {"name": "GameSpot", "url": "https://www.gamespot.com/articles/metro-2039-finally-emerges-with-first-look-set-for-april-16/1100-6539358/"},
-            {"name": "GamesRadar", "url": "https://www.gamesradar.com/games/fps/xbox-confirms-the-leaks-the-next-metro-game-is-called-metro-2039-and-will-be-showcased-later-this-week/"}
+            {"name": "腾讯文档", "url": ""}
         ],
         "category": "game",
         "importance": "medium",
         "featured": true,
-        "date": "2026-04-16",
-        "tags": ["Xbox", "Metro 2039", "4A Games", "Deep Silver", "Xbox First Look"],
+        "date": "2026-04-17",
+        "tags": ["Xbox", "Metro 2039", "4A Games", "Deep Silver", "Game Pass"],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "",
-        "relatedNewsIds": [167]
+        "analysis": "Metro系列回归是Xbox在2026秋冬档的重要第三方独占营销资源(What)。4A Games从2019年至今沉寂六年后推出新作，Deep Silver在Embracer重组后保留Metro IP说明其商业价值(Why)。发售首日入库Game Pass是Xbox内容策略延续，但对4A Games销售影响有待观察(So What)。配合Forza Horizon 6(5月)和Fable(12月)，Xbox 2026下半年阵容逐步成型(What Next)。",
+        "relatedNewsIds": [167, 158]
     },
     {
         "id": 172,
