@@ -6,7 +6,7 @@
 
 // ============ 元数据 ============
 const storewatchMeta = {
-    lastUpdated: '2026-04-20',
+    lastUpdated: '2026-04-21',
     dataRange: '2025-12-19 ~ 2026-04-20',
     sheetId: 'LXXdrpHEWcSr',
     mainSheet: 'BB08J2',
@@ -939,7 +939,7 @@ const storewatchNonGameTags = [
 
 // ============ 商店监控数据 ============
 // 数据来源：腾讯文档 LXXdrpHEWcSr (sheet BB08J2)
-// 最后更新：2026-04-20
+// 最后更新：2026-04-21
 // 数据范围：2025-12-19 ~ 2026-04-20
 const storewatchData = {
     PS5: [

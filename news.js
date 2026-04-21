@@ -1,8 +1,8 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-04-20T19:53:00Z
-// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1182新增12行)+web_search 12轮)
+// 最后更新: 2026-04-21T18:15:00Z
+// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1186新增4行)+web_search 12轮+新增9条id188-196)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
@@ -173,6 +173,223 @@ const newsSources = [
 ];
 
 const newsData = [
+    {
+        "id": 196,
+        "title": "下一代Xbox主机Project Helix放弃GPU定制，全面转向标准化PC架构",
+        "summary": "据AMD爆料人KeplerL2在NeoGAF论坛透露，微软代号为Project Helix的下一代Xbox主机在图形处理器设计上将彻底放弃定制化路线，GPU不再进行任何定制化设计。这标志着Xbox系列长期坚守的最后一项专属硬件传统被移除，新主机将采用更接近标准化PC组件的架构。Wccftech解读认为这是主机硬件发展史的重大转折——过去硬件定制是各厂商打造独特游戏体验的核心手段。该策略与Asha Sharma主导的Xbox品牌重塑方向一致，进一步模糊主机与PC的边界。",
+        "source": "IT之家",
+        "sourceUrl": "https://www.ithome.com/0/941/450.htm",
+        "sourceUrls": [
+            {"name": "IT之家", "url": "https://www.ithome.com/0/941/450.htm"},
+            {"name": "新浪财经", "url": "https://finance.sina.com.cn/tech/digi/2026-04-21/doc-inhvfqch6276333.shtml"},
+            {"name": "ZOL", "url": "https://diy.zol.com.cn/1169/11692533.html"},
+            {"name": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260421A04PNE00"},
+            {"name": "网易游戏", "url": "https://m.163.com/game/article/KR1TDLM40526D8LR.html"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "hardware",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-21",
+        "tags": ["Xbox", "Project Helix", "GPU", "AMD", "KeplerL2", "下一代主机"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "Xbox放弃GPU定制是微软'主机即PC'战略的硬件级落地(What)。过去20年主机差异化的核心优势在于定制硬件带来的专属体验(如PS5的SSD I/O架构)，放弃定制意味着微软选择通过Game Pass+Cloud+跨平台生态取代硬件壁垒(Why)。短期看，标准化架构降低开发者适配成本+加速游戏上市，但也意味着Helix将直面Steam Machine/Steam Frame等PC方案的竞争；长期看，Xbox硬件销售收入进一步下滑，订阅+服务成为核心盈利模式(So What)。对比PS6坚持AMD Orion定制+RDNA5 54CU的高端路线，微软将以低差异化+高生态覆盖应战，BlizzCon 2026或E3时间点是Helix具体规格公布关键窗口(What Next)。",
+        "relatedNewsIds": [179, 147, 130, 139]
+    },
+    {
+        "id": 195,
+        "title": "索尼PS5英国爱尔兰启用年龄验证，语音与聊天功能6月起强制",
+        "summary": "索尼宣布自2026年6月起，英国和爱尔兰PS5玩家必须完成年龄验证才能使用语音聊天和消息功能，以遵守当地在线安全法规。验证提供三种方式：面部扫描(AI分析年龄)、身份证件验证、手机号关联验证。索尼表示此举旨在'为玩家和家庭提供安全、适合年龄的体验，同时尊重他们的隐私'。此前已有英国主控台玩家收到PS5仪表盘通知。Metro评论指出这是英国Online Safety Act实施后，主机厂商首次实质性落地合规要求，XBox等平台或跟进。",
+        "source": "PushSquare",
+        "sourceUrl": "https://www.pushsquare.com/news/2026/04/ps5-age-verification-coming-to-uk-and-ireland-needed-for-messages-and-voice-chat",
+        "sourceUrls": [
+            {"name": "PushSquare", "url": "https://www.pushsquare.com/news/2026/04/ps5-age-verification-coming-to-uk-and-ireland-needed-for-messages-and-voice-chat"},
+            {"name": "VGC", "url": "https://www.videogameschronicle.com/news/playstation-has-started-telling-uk-and-ireland-players-to-verify-their-age-by-june-to-keep-certain-features/"},
+            {"name": "Metro", "url": "https://metro.co.uk/2026/04/21/playstation-consoles-will-need-age-verification-use-voice-chat-this-year-28054735/"},
+            {"name": "Sportskeeda", "url": "https://tech.sportskeeda.com/gaming-news/news-playstation-introduces-age-verification-uk-ireland-voice-chat-messaging-features"},
+            {"name": "IT之家", "url": "https://www.ithome.com/0/941/449.htm"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "policy",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-21",
+        "tags": ["PlayStation", "Sony", "年龄验证", "英国", "爱尔兰", "合规", "Online Safety Act"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "PS5英国爱尔兰年龄验证是平台合规时代的标志性事件(What)。英国Online Safety Act 2023要求在线服务保护未成年人，主机厂商过去通过家长控制等软性措施应对，但监管压力下必须升级为强制身份核验(Why)。对玩家而言，面部扫描/证件验证引发隐私争议，尤其未成年玩家门槛显著提高；对索尼而言，验证基础设施建设成本增加+转化率下降的双重压力(So What)。该举措大概率会扩散到Xbox/Nintendo等平台，以及德国/法国等欧盟其他市场。长期看，年龄验证或与欧盟DMA/Stop Killing Games等法规叠加，催生游戏行业的'合规即成本'常态，中小发行商合规负担将高于大厂(What Next)。",
+        "relatedNewsIds": [178, 146, 117]
+    },
+    {
+        "id": 194,
+        "title": "卡普空《识质存在》(Pragmata)上市两天销量破100万，股价涨超10%",
+        "summary": "卡普空(Capcom)4月20日官方IR公告宣布，全新科幻动作IP《识质存在》(Pragmata)自4月17日全球发售后，两天内累计销量突破100万份。该作由卡普空开发，是公司十年来首个原创IP，融合太空黑客与动作射击玩法。Gematsu/IGN/Eurogamer等媒体确认首发表现超出预期。受此消息带动，卡普空股价近5个交易日累计上涨超过11%。Pragmata的成功证明了卡普空新IP孵化能力，与《生化危机》等长寿IP形成互补。",
+        "source": "Capcom IR",
+        "sourceUrl": "https://www.capcom.co.jp/ir/english/news/html/e260420.html",
+        "sourceUrls": [
+            {"name": "Capcom IR (官方)", "url": "https://www.capcom.co.jp/ir/english/news/html/e260420.html"},
+            {"name": "IGN", "url": "https://www.ign.com/articles/pragmata-sales-update"},
+            {"name": "Eurogamer", "url": "https://www.eurogamer.net/pragmata-surpasses-1m-copies-sold-in-two-days"},
+            {"name": "Gematsu", "url": "https://www.gematsu.com/2026/04/pragmata-sales-top-one-million-in-two-days"},
+            {"name": "RPG Site", "url": "https://www.rpgsite.net/news/20170-pragmata-sales-numbers-1-million-copies"},
+            {"name": "TechPowerUp", "url": "https://www.techpowerup.com/348370/pragmata-opening-week-sales-figures-impress"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "game",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-20",
+        "tags": ["Pragmata", "识质存在", "Capcom", "卡普空", "新IP", "里程碑"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Pragmata两天破百万是卡普空IP战略的里程碑——十年未推新IP的谨慎策略被验证为成功(What)。相较于Bungie Marathon预算$2亿以上+索尼第一方压力，Pragmata以相对克制的成本实现了快速商业回收(Why)。对行业的信号是：(1) 独特玩法+强视觉风格仍能撬动主流市场；(2) 卡普空多IP矩阵(生化危机/怪物猎人/街霸/Pragmata)进一步强化其3A能力；(3) 日本厂商原创IP复兴趋势(继FromSoft艾尔登法环、SE的FF重启后)(So What)。卡普空后续可能扩展Pragmata宇宙(DLC/续作)，同时该成功有望激励SE/万代等加大新IP投入。股价11%涨幅也反映资本市场对卡普空多元化IP的重新估值(What Next)。",
+        "relatedNewsIds": [161, 140, 159]
+    },
+    {
+        "id": 193,
+        "title": "中国2026年Q1游戏市场收入971.72亿元，同比增长13.38%，客户端游戏暴涨39%",
+        "summary": "中国音数协游戏工委4月17日发布2026年第一季度中国游戏产业报告：实际销售收入971.72亿元，环比增长2.54%，同比增长13.38%。其中客户端游戏收入249.76亿元，同比大增39.38%，成为增长最强劲的板块，《明日方舟》《逆战》等新品驱动。移动游戏收入676.23亿元，同比仅增6.28%，增速放缓。游戏用户规模延续增长态势，海外出海收入持续扩张，3月有38家中国厂商入围全球手游发行商收入榜TOP100，占全球TOP100市场的39.2%。数据显示中国PC游戏消费力明显回升，对国产PC 3A游戏形成商业基础支撑。",
+        "source": "中国音数协游戏工委",
+        "sourceUrl": "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-04-17/doc-inhuuyhy2209019.shtml",
+        "sourceUrls": [
+            {"name": "新浪财经", "url": "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-04-17/doc-inhuuyhy2209019.shtml"},
+            {"name": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260417A06LPM00"},
+            {"name": "IT之家", "url": "https://www.ithome.com/0/941/293.htm"},
+            {"name": "搜狐财经", "url": "https://www.sohu.com/a/1010907906_121814834"},
+            {"name": "36氪", "url": "https://www.36kr.com/p/3770751773098498"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "market",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-21",
+        "tags": ["中国游戏市场", "音数协", "游戏工委", "Q1 2026", "客户端游戏", "出海"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "中国Q1 971.72亿+13.38%超市场预期，核心亮点是客户端游戏+39.38%的爆发式增长(What)。长期被移动游戏压制的PC端因《逆战》《明日方舟》等新品及老IP焕新实现复苏，反映玩家消费力向'重度+长期'游戏回流的趋势(Why)。对PC/Console全行业的战略含义：(1) 中国PC市场消费能力已从边缘转向全球第二大可单独支撑3A项目的市场(仅次于美国)；(2) Steam中国区、PS中国直营、Xbox云游戏等渠道的长期投入获得数据背书；(3) 国产3A(如《黑神话：悟空》续作/《明末：渊虚之羽》等)有望获得更强商业回收基础(So What)。手游增速放缓至6.28%的另一面是产品老化+监管收紧，出海39.2%份额表明中国厂商全球竞争力强；Q2即将发布的具体公司财报(腾讯/网易等)将验证这一增长分布(What Next)。",
+        "relatedNewsIds": [111, 119, 143]
+    },
+    {
+        "id": 192,
+        "title": "ID@Xbox 4月23日展示会定档，联合IGN推独立游戏专场",
+        "summary": "微软确认ID@Xbox与IGN合作的2026年4月展示会将于4月23日举行，重点展出登陆Xbox和PC的独立游戏。已确认亮相作品包括《雾影猎人》(Mistfall Hunter)、《远日点》(Aphelion)、《格兰德大酒店没有鬼》(There Are No Ghosts at the Grand)、《我独自升级：起立·觉醒》(Solo Leveling Arise Overdrive)等。该活动与6月7日Xbox Games Showcase+Gears of War: E-Day Direct+FanFest形成Xbox 2026年上半年三档营销节奏，旨在维持品牌关注度+持续吸引独立开发者。",
+        "source": "Xbox Wire",
+        "sourceUrl": "https://news.xbox.com/en-us/2026/04/17/next-week-on-xbox-new-games-for-april-20-to-24/",
+        "sourceUrls": [
+            {"name": "IGN", "url": "https://www.ign.com/articles/id-xbox-april-2026-how-to-watch-and-what-to-expect"},
+            {"name": "Eurogamer", "url": "https://www.eurogamer.net/id-xbox-ign-showcase-april-2026-announced"},
+            {"name": "Gematsu", "url": "https://www.gematsu.com/2026/04/idxbox-showcase-set-for-april-23"},
+            {"name": "GamingBolt", "url": "https://gamingbolt.com/idxbox-showcase-announced-for-april-23rd-features-mistfall-hunter-aphelion-and-more"},
+            {"name": "3DM", "url": "https://www.3dmgame.com/news/202604/3942451.html"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "platform",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-21",
+        "tags": ["Xbox", "ID@Xbox", "IGN", "展示会", "独立游戏", "Gears of War"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "ID@Xbox展示会是微软独立游戏生态的关键营销抓手——过去一年流失到PS Indies/Steam Next Fest的注意力需要重新夺回(What/Why)。结合6月7日Xbox Games Showcase+Gears Direct+FanFest，微软构建了'独立(4月)→综合(6月)→财报季(10月)'的季度营销矩阵，以维持Game Pass订阅价值(So What)。对于独立开发者而言，获得ID@Xbox展示位意味着Game Pass首日入库的可能性+千万级潜在曝光，合作吸引力持续强化(What Next)。",
+        "relatedNewsIds": [180, 147, 120]
+    },
+    {
+        "id": 191,
+        "title": "迪士尼大规模裁员波及漫威视觉开发部门，Andy Park在任16年后离职",
+        "summary": "迪士尼4月中旬启动约1000人规模裁员，漫威工作室视觉开发(Visual Development)部门受波及，在职16年的漫威视觉开发总监Andy Park在社交媒体宣布离职。Park自2010年加入漫威，负责《复仇者联盟》《银河护卫队》等多部MCU电影的视觉设计，是漫威美术体系核心人物之一。Variety/Nerdist/TheWrap等多家媒体证实此次裁员覆盖漫威、迪士尼娱乐宣发、家庭娱乐等多个部门。该事件发生在漫威2026密集推出电影/剧集+《漫威金刚狼》游戏开发关键节点，对漫威游戏IP的视觉一致性和开发节奏或产生影响。",
+        "source": "Variety",
+        "sourceUrl": "https://variety.com/2026/film/news/marvels-director-visual-development-andy-park-layoffs-1236726446/",
+        "sourceUrls": [
+            {"name": "Variety", "url": "https://variety.com/2026/film/news/marvels-director-visual-development-andy-park-layoffs-1236726446/"},
+            {"name": "The PopVerse", "url": "https://www.thepopverse.com/movies-avengers-doomsday-marvel-studios-andy-park-layoffs"},
+            {"name": "Nerdist", "url": "https://nerdist.com/article/marvel-layoffs-andy-park-head-of-visual-development-team/"},
+            {"name": "The Wrap", "url": "https://www.thewrap.com/creative-content/movies/disney-layoffs-marvel-publicity-teams-2026/"},
+            {"name": "ScreenRant", "url": "https://screenrant.com/disney-marvel-visual-development-team-layoffs-impact/"},
+            {"name": "3DM", "url": "https://www.3dmgame.com/news/202604/3942052.html"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-20",
+        "tags": ["漫威", "迪士尼", "裁员", "Andy Park", "漫威金刚狼", "视觉开发"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "迪士尼裁员波及漫威视觉开发部是IP运营成本结构改革的连锁反应(What)。迪士尼2024年以来连续三轮裁员，旨在应对流媒体亏损+内容成本压力；2026年漫威在电影/剧集/游戏多线并进时反而削减美术团队，反映管理层对'降本增效'的硬性要求(Why)。对游戏业务的影响：Insomniac《漫威金刚狼》定档存疑下，视觉资产继承+协作机制或受冲击；此前《漫威复仇者联盟》的失败教训也提示漫威游戏IP商业化能力边界(So What)。同时，《漫威争锋》已通过免费+多平台抢占市场，漫威在游戏领域的未来可能转向'独家合作'而非自研(What Next)。",
+        "relatedNewsIds": [175, 130, 166]
+    },
+    {
+        "id": 190,
+        "title": "Embracer削减水晶动力50%预算，《古墓丽影：亚特兰蒂斯遗产》开发承压",
+        "summary": "据爆料，Embracer Group对旗下水晶动力(Crystal Dynamics)工作室的预算削减幅度高达50%，影响正在开发的《古墓丽影：亚特兰蒂斯遗产》(Tomb Raider: Legacy of Atlantis)和《古墓丽影：催化剂》(Tomb Raider Catalyst)项目。水晶动力自2022年从Square Enix独立+2024年起经历四轮裁员，2026年预算再被腰斩意味着项目规模可能大幅收缩，开发周期恐将延长。Embracer此前已公开承认第一方3A投入成本过高(古墓丽影系列单作预算超$1.5亿)，转向成本更精简的项目组合。",
+        "source": "3DM",
+        "sourceUrl": "https://www.3dmgame.com/news/202604/3942020.html",
+        "sourceUrls": [
+            {"name": "3DM", "url": "https://www.3dmgame.com/news/202604/3942020.html"},
+            {"name": "Memesita", "url": "https://www.memesita.com/crystal-dynamics-layoffs-tomb-raider-studio-hit-by-embracer-restructuring/"},
+            {"name": "GamesRadar", "url": "https://www.gamesradar.com/games/tomb-raider/tomb-raider-developer-crystal-dynamics-continues-to-bleed-out-laying-off-under-30-more-employees-in-third-cut-of-the-year-the-realities-of-the-industry-continue-to-evolve/"},
+            {"name": "TechReviewer", "url": "https://www.techreviewer.com/gaming-news/2025-08-27-tomb-raider-pushes-forward-amid-crystal-dynamics-staff-cuts/"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-20",
+        "tags": ["Embracer", "Crystal Dynamics", "水晶动力", "古墓丽影", "预算削减", "裁员"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "水晶动力50%预算削减延续了Embracer过去两年的'财务过载→激进收缩'周期(What)。2022年从Square Enix接手水晶动力+多起收购导致Embracer 2023负债高企，2024起启动4轮裁员+剥离Saber/Piranha Bytes等工作室仍未根本改善(Why)。对古墓丽影IP的影响：Legacy of Atlantis和Catalyst大概率降级为中等规模项目+延期发售，亚马逊MGM合作的电影/剧集或先于游戏上线(So What)。行业趋势印证：3A成本天花板触顶(单作$2亿+)导致中型发行商难以持续投入，未来老牌IP可能通过小规模Remake/Remaster/电影联动变现，而非依赖正统续作(What Next)。",
+        "relatedNewsIds": [191, 175, 162]
+    },
+    {
+        "id": 189,
+        "title": "育碧秘密开发《幽灵行动》正统续作，瞄准2026年秋季发售",
+        "summary": "据Insider Gaming/IGN/Wccftech等多方爆料，育碧正秘密开发《幽灵行动》(Tom Clancy's Ghost Recon)正统新作，代号'Ovr'，计划2026年秋季发售。该作将在近期进入内部Alpha测试阶段。系列自2019年《幽灵行动：断点》口碑销量双失利后陷入5年沉寂，此次正统续作据爆料将更偏向军事模拟(Mil-Sim)风格，回归系列战术射击传统。此举是育碧《刺客信条：黑旗 Resynced》7月发售后的下一关键项目，承担填补2026下半年发行断档的作用。Far Cry系列据报道则深陷开发困境。",
+        "source": "Insider Gaming",
+        "sourceUrl": "https://insider-gaming.com/",
+        "sourceUrls": [
+            {"name": "IGN", "url": "https://www.ign.com/articles/new-ghost-recon-game-will-shortly-move-into-internal-alpha-testing-says-new-report"},
+            {"name": "Wccftech", "url": "https://wccftech.com/ghost-recon-release-date-2026-ubisoft/"},
+            {"name": "ComicBook", "url": "https://comicbook.com/gaming/news/new-ghost-recon-game-leaked-2026-release-rumor-ubisoft/"},
+            {"name": "KhelNow", "url": "https://khelnow.com/gaming/ghost-recon-next-big-ubisoft-game-far-cry-7-facing-development-struggles-report-202604"},
+            {"name": "LevelUp", "url": "https://www.levelup.com/en/news/next-ghost-recon-to-launch-in-2026-enters-alpha-testing-this-fall/"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-20",
+        "tags": ["Ghost Recon", "幽灵行动", "Ubisoft", "Tom Clancy", "军事模拟", "2026"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Ghost Recon正统续作是育碧IP战略回归的关键信号——《Breakpoint》口碑失败后5年蛰伏换来重新定位(What)。这与Far Cry系列深陷开发困境+《刺客信条：影》后排期单薄形成对比，说明育碧正在依靠'代际续作+老IP重启'组合维持收入(Why)。对战术射击品类的含义：Ready or Not/Gray Zone Warfare等新锐Mil-Sim的成功表明玩家需求复苏，Ghost Recon回归硬核风格是正确战略方向(So What)。若秋季发售顺利+口碑回升，将与黑旗Resynced(7月)、刺客信条Codename Hexe等共同撑起育碧2026-27年财报。但5年开发周期+项目重启历史表明育碧Alpha到发售的延期风险仍不可忽视(What Next)。",
+        "relatedNewsIds": [185, 138, 110]
+    },
+    {
+        "id": 188,
+        "title": "《暗黑破坏神4：憎恨之躯》DLC获印尼Switch评级，或登陆Switch 2",
+        "summary": "印尼游戏评级机构IGRS泄露显示，暴雪《暗黑破坏神4：憎恨之躯》(Diablo IV: Lord of Hatred)资料片获得了任天堂Switch平台评级。多家媒体(Nintendo Life/GamesRadar/Insider Gaming)分析认为该评级实际指向Switch 2平台——原版《暗黑破坏神4》从未在Switch上发售，且Switch 2性能更适配该游戏画面要求。若属实，可能意味着《暗黑破坏神4》本体和Lord of Hatred资料片将同期登陆Switch 2，与BlizzCon 2026披露时间重叠。暴雪尚未官方确认。此前已有Switch 2 Diablo相关传闻持续发酵。",
+        "source": "Nintendo Life",
+        "sourceUrl": "https://www.nintendolife.com/news/2026/04/random-diablo-4-lord-of-hatred-nintendo-rating-surfaces-online",
+        "sourceUrls": [
+            {"name": "Nintendo Life", "url": "https://www.nintendolife.com/news/2026/04/random-diablo-4-lord-of-hatred-nintendo-rating-surfaces-online"},
+            {"name": "GamesRadar", "url": "https://www.gamesradar.com/games/diablo/diablo-4-has-been-rated-for-nintendo-switch-in-indonesia-suggesting-the-arpg-could-go-handheld-just-like-diablo-3/"},
+            {"name": "Insider Gaming", "url": "https://insider-gaming.com/diablo-4-could-be-coming-to-switch-2/"},
+            {"name": "Newswire Games", "url": "https://newswire.games/2026/04/15/diablo-4-switch-2/"},
+            {"name": "3DM", "url": "https://www.3dmgame.com/news/202604/3942009.html"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-04-20",
+        "tags": ["暗黑破坏神4", "Diablo 4", "Switch 2", "暴雪", "Blizzard", "ESRB", "Lord of Hatred"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Diablo 4登陆Switch 2是微软Xbox第一方游戏多平台化战略的又一落地节点(What)。动视暴雪被微软收购后，《使命召唤》登陆PS5+《Hades 2》登陆Game Pass+《Oblivion Remastered》等案例已验证微软'Xbox第一方内容最大化覆盖'的新战略(Why)。Switch 2硬件销量突破1500万台+用户群倾向长期内容消费，为暴雪提供了增量市场；对任天堂而言，完善3A内容阵容+强化平台竞争力；对玩家而言，Switch 2的ARPG选择从Elden Ring等少数作品扩大到Diablo 4等暴雪大作(So What)。后续观察BlizzCon 2026是否正式公布，以及Overwatch/魔兽/炉石等其他暴雪IP的跟进节奏(What Next)。",
+        "relatedNewsIds": [180, 147, 136]
+    },
     {
         "id": 183,
         "title": "《风启之旅》抢先体验6天销量破百万，Steam在线峰值超20万",
