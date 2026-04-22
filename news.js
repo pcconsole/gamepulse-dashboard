@@ -1,8 +1,8 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-04-21T18:15:00Z
-// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1186新增4行)+web_search 12轮+新增9条id188-196)
+// 最后更新: 2026-04-22T18:05:00Z
+// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1186→1196新增5行)+web_search 12轮+新增5条id197-201)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
@@ -173,6 +173,128 @@ const newsSources = [
 ];
 
 const newsData = [
+    {
+        "id": 201,
+        "title": "微软大幅下调Game Pass价格，《使命召唤》新作退出首日入库",
+        "summary": "微软4月21日宣布对Xbox Game Pass订阅服务进行重大调整：旗舰级Game Pass Ultimate月费从29.99美元降至22.99美元（降幅约23%），PC Game Pass从16.49美元下调至13.99美元，即日起生效。同时确认《使命召唤》系列新作不再在发售首日加入订阅服务，改为发售约一年后（假期档）进入Ultimate和PC Game Pass。新任游戏业务负责人Asha Sharma表示'订阅价格对太多玩家来说已变得过于昂贵'。当前订阅中的作品不受影响。这是动视暴雪并购后Game Pass定价模式的首次重大调整。",
+        "source": "Xbox Wire",
+        "sourceUrl": "https://news.xbox.com/en-us/2026/04/21/xbox-game-pass-update/",
+        "sourceUrls": [
+            {"name": "Xbox Wire", "url": "https://news.xbox.com/en-us/2026/04/21/xbox-game-pass-update/"},
+            {"name": "IGN", "url": "https://www.ign.com/articles/microsoft-drops-price-xbox-game-pass-ultimate"},
+            {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/microsoft-cuts-game-pass-pricing-and-removes-call-of-duty-as-day-one-launch-title-in-response-to-a-lot-of-feedback"},
+            {"name": "Ars Technica", "url": "https://arstechnica.com/gaming/2026/04/microsofts-game-pass-gets-cheaper-loses-launch-day-call-of-duty-access/"},
+            {"name": "CNBC", "url": "https://www.cnbc.com/2026/04/21/microsoft-game-pass-ultimate-subscription-price-cut.html"},
+            {"name": "IT之家", "url": "https://www.ithome.com/0/941/632.htm"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-21",
+        "tags": ["Xbox", "Game Pass", "微软", "使命召唤", "订阅", "Asha Sharma", "降价"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "Game Pass降价+CoD退出首日入库是Xbox订阅战略的180度转向(What)。过去五年微软以Game Pass为核心构建'全订阅'生态，但Ultimate从9.99美元涨至29.99美元+CoD首日入库导致订阅价值被稀释，用户增长停滞——新CEO Asha Sharma直言'对太多玩家过于昂贵'(Why)。短期内价格下调刺激新订阅+降低流失率，但CoD一年独占窗口期恢复意味着多数核心玩家仍会单独购买游戏，对发行收入是利好；长期看，Game Pass从'日一入库All-in-One'退回'精选订阅+窗口期发行'的混合模式，本质承认全订阅在3A时代经济学不成立(So What)。此举将改变整个行业订阅策略——PS Plus/EA Play可能跟进重新强调'性价比'而非'独占日一'。Project Helix硬件放弃定制+Game Pass降价合并形成'低硬件门槛+低订阅门槛'的用户获取新战略(What Next)。",
+        "relatedNewsIds": [196, 147, 130, 139, 117]
+    },
+    {
+        "id": 200,
+        "title": "Xbox副总裁明确Project Helix为第一方主机，微软不退出硬件市场",
+        "summary": "Xbox游戏设备与生态副总裁Jason Ronald 4月21日在X平台发文，明确回应Project Helix定位疑虑——'Project Helix将作为第一方Xbox主机发售'，并强调微软仍致力于构建和销售自有硬件。声明搭载AMD混合SoC代号'Magnus'，支持Xbox与PC双平台游戏，预计2027假期档发布。第三方授权主机（如Xbox ROG Ally X）仅为补充而非替代。此前因GPU放弃定制传闻引发'微软退出硬件'猜测，Ronald的回应终结了这一传言。",
+        "source": "Kotaku",
+        "sourceUrl": "https://kotaku.com/xbox-project-helix-pc-asus-msi-console-jason-ronald-2000689329",
+        "sourceUrls": [
+            {"name": "Kotaku", "url": "https://kotaku.com/xbox-project-helix-pc-asus-msi-console-jason-ronald-2000689329"},
+            {"name": "TheGamer", "url": "https://www.thegamer.com/jason-ronald-project-helix-first-party-xbox-console/"},
+            {"name": "Notebookcheck", "url": "https://www.notebookcheck.net/Head-of-next-gen-Xbox-shuts-down-speculation-surrounding-1st-party-Xbox-Helix-console.1279487.0.html"},
+            {"name": "IT之家", "url": "https://www.ithome.com/0/941/895.htm"},
+            {"name": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260422A027LW00"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "hardware",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-22",
+        "tags": ["Xbox", "Project Helix", "Jason Ronald", "微软", "AMD Magnus", "第一方主机"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Jason Ronald亲自澄清Helix为第一方主机，是微软对'退出硬件'担忧的及时止损(What)。前一日GPU放弃定制+RAM涨价+掌机合作等传闻叠加，市场开始质疑Xbox硬件战略空心化，Ronald作为设备副总裁亲自发声，强调第一方身份+明确AMD Magnus SoC，传递微软硬件承诺不动摇的信号(Why)。此举对Xbox开发合作伙伴（ID@Xbox/育碧/EA等）和渠道商是定心丸，避免'观望延期新作开发'的连锁反应；对PS6是重要信号——2027假期档将形成PS6对Helix的正面竞争(So What)。但标准化架构+第一方身份组合较为罕见，Helix可能成为'PC形态的主机'——硬件销售收入不再是核心KPI，Game Pass+Cloud收入才是(What Next)。",
+        "relatedNewsIds": [196, 201, 147]
+    },
+    {
+        "id": 199,
+        "title": "传微软Xbox游戏部门将裁员15%，5月或6月官宣",
+        "summary": "匿名论坛Blind出现爆料帖，发帖者自称动视暴雪员工，指微软游戏部门将裁员15%，公告将于5月6日或6月5日发布。GamingBolt、Inven Global、Gamereactor等媒体转载该传闻。此前一个月微软已冻结云/销售部门招聘，被分析人士视为裁员前兆。同一Blind用户在今年1月也曾准确预告过微软游戏部门动态。Phil Spencer今年1月离任后，Sarah Bond等核心高管也相继离开，Asha Sharma接任游戏业务负责人。微软尚未官方确认。",
+        "source": "GamingBolt",
+        "sourceUrl": "https://gamingbolt.com/microsoft-to-announce-lay-offs-affecting-15-percent-of-gaming-division-rumor",
+        "sourceUrls": [
+            {"name": "GamingBolt", "url": "https://gamingbolt.com/microsoft-to-announce-lay-offs-affecting-15-percent-of-gaming-division-rumor"},
+            {"name": "Inven Global", "url": "https://www.invenglobal.com/articles/21161/rumors-swirl-of-15-layoffs-at-microsoft-gaming"},
+            {"name": "Gamereactor", "url": "https://www.gamereactor.eu/rumor-microsoft-prepares-a-brutal-round-of-layoffs-for-xbox-1708833/"},
+            {"name": "Instant Gaming", "url": "https://news.instant-gaming.com/en/articles/19150-microsoft-may-announce-massive-layoffs-in-the-coming-weeks"},
+            {"name": "NeoGAF", "url": "https://www.neogaf.com/threads/microsoft-to-announce-15-layoffs-on-5-6-gaming-division-impacted.1696049/"},
+            {"name": "IT之家", "url": "https://www.ithome.com/0/941/650.htm"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "policy",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-22",
+        "tags": ["微软", "Xbox", "裁员", "动视暴雪", "Blind", "Phil Spencer", "Asha Sharma"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "微软Xbox 15%裁员传闻揭示了687亿美元动视暴雪并购后的深度整合阵痛(What)。自2023年完成并购以来，微软游戏部门已历经三轮裁员（2024年1月1900人/2024年9月650人/2025年6月2400人），累计近5000人。此轮若坐实15%（约3000人），将是并购以来最大规模，源于Game Pass增长停滞+动视暴雪与Xbox/Bethesda工作室的职能重叠未彻底解决(Why)。短期内受影响的可能是动视/Bethesda的重复岗位（支持/运营/HR/BI），King和King Games Studios也可能承压；中期看，第一方工作室并表后的产能整合将加速——部分项目（Prey系列/Hi-Fi Rush续作等）可能被砍或合并(So What)。Asha Sharma+Ronald组合的新管理层需要在裁员和Helix硬件攻势之间平衡，5/6日若坐实将引发股价短期波动，但长期对Game Pass减负+专注头部IP利好(What Next)。",
+        "relatedNewsIds": [201, 200, 196, 165, 147]
+    },
+    {
+        "id": 198,
+        "title": "Valve Steam Controller开箱视频曝光，或先于Steam Machine发售",
+        "summary": "消息源Brad Lynch 4月21日在X爆料，Valve在官方后台上传了名为'steam_controller_unboxing_2026'的开箱视频条目，结合此前SteamDB配对流程软件就绪+进口记录中'无线PC控制器'货物批次，行业普遍判断Steam Controller即将发售。Valve原计划2026年初同步发售Steam Controller/Steam Machine/Steam Frame三款硬件，但受存储与DRAM价格上涨影响，Steam Machine发售窗口已从2026年初推迟至年底前。Steam Controller或率先单独上市以维持硬件路线图节奏。",
+        "source": "IT之家",
+        "sourceUrl": "https://www.ithome.com/0/941/536.htm",
+        "sourceUrls": [
+            {"name": "IT之家", "url": "https://www.ithome.com/0/941/536.htm"},
+            {"name": "Notebookcheck", "url": "https://www.notebookcheck.net/Steam-Controller-unboxing-video-raises-hopes-for-Steam-Machine-release-date-update.1279314.0.html"},
+            {"name": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260421A03ZQC00"},
+            {"name": "搜狐", "url": "https://www.sohu.com/a/1012436313_122004016"},
+            {"name": "网易数码", "url": "https://m.163.com/dy/article/KR438SC50511CPVM.html"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "hardware",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-21",
+        "tags": ["Valve", "Steam Controller", "Steam Machine", "Steam Frame", "DRAM", "掌机"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "Steam Controller抢先发售是DRAM涨价下的硬件路线图'拆包策略'(What)。Valve原计划2026年Q1三款硬件'全家桶'组合登场对标Xbox Helix+PS6，但2026年DDR5/HBM价格同比涨幅60-130%导致Steam Machine BOM成本暴增，单独降规格或推迟整机发售是必然选择(Why)。短期看，Steam Controller单独上市可以测试市场反应+积累SteamOS手柄生态，对玩家是分期获得Valve硬件的次优选；对Sony/Xbox的冲击暂时减弱（Steam Machine推迟至年底），但Valve仍能以软件生态（SteamOS 3.6）保持影响力(So What)。Steam Machine推迟到2026年底意味着它将与PS6/Helix的2027假期档形成连续竞争压力，Valve需要重新评估定价——若DRAM价格稳定则维持原价，否则跟随PS6 Lite/Xbox Helix涨价同步调整(What Next)。",
+        "relatedNewsIds": [175, 147]
+    },
+    {
+        "id": 197,
+        "title": "东映成立游戏发行品牌Toei Games，首批原创IP登陆Steam",
+        "summary": "《龙珠》《数码宝贝》《海贼王》制作公司东映（Toei Company）4月21日宣布成立Toei Games游戏发行品牌，将游戏业务作为与电影、电视并列的第三大支柱。新品牌首批发行游戏将登陆Steam，且全部为全新原创IP，而非沿用东映既有动漫IP（龙珠、数码宝贝、海贼王等）。Toei明确表态Toei Games将专注于从零打造原创IP游戏开发与发行。该举措填补日本老牌动漫公司缺席游戏自研自发的空白，Eurogamer评价这是日本动漫+游戏跨界的战略重组信号。",
+        "source": "GamesIndustry",
+        "sourceUrl": "https://www.gamesindustry.biz/toei-company-launches-publishing-label-toei-games",
+        "sourceUrls": [
+            {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/toei-company-launches-publishing-label-toei-games"},
+            {"name": "Eurogamer", "url": "https://www.eurogamer.net/dragon-ball-and-digimon-anime-producer-toei-creates-toei-games-publisher"},
+            {"name": "CBR", "url": "https://www.cbr.com/toei-steam-game-new-release/"},
+            {"name": "Icy Veins", "url": "https://www.icy-veins.com/other-games/news/toei-games-new-publisher-first-game-announcement/"},
+            {"name": "IT之家", "url": "https://www.ithome.com/0/941/632.htm"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-21",
+        "tags": ["东映", "Toei Games", "日本", "Steam", "动漫IP", "原创IP", "发行商"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "东映成立Toei Games是日本动漫巨头对游戏产业的战略重估(What)。过去几十年东映通过授权模式让万代南梦宫/Cygames等厂商开发龙珠/海贼王改编游戏，但近年来游戏IP收入超过动画本体（《海贼王》游戏年收入约占整体IP收入35%），东映转向自研意味着动漫公司将重新定位游戏业务为核心资产而非授权衍生(Why)。首批选择原创IP而非复用动漫IP意图明显——既保留现有授权收入（万代南梦宝的龙珠合作不会终止），又通过原创IP培育自有开发能力与用户资产(So What)。对索尼/万代南梦宫是中性偏负——日本老牌IP方开始纷纷下场（SE早已自发、东映现在、小学馆/集英社可能跟进），传统'IP方→发行商'产业链被重构。Steam作为首选平台印证PC市场对日系游戏的吸引力（详见COD/怪物猎人/FF7等均以PC为首发或同步平台之一）(What Next)。",
+        "relatedNewsIds": [164, 119]
+    },
     {
         "id": 196,
         "title": "下一代Xbox主机Project Helix放弃GPU定制，全面转向标准化PC架构",
@@ -1431,6 +1553,7 @@ const newsData = [
         "relatedNewsIds": []
     },
     {
+        "id": 202,
         "title": "索尼互娱收购英国AI公司Cinemersive Labs：强化PlayStation视觉计算与3D技术布局",
         "summary": "索尼互动娱乐(SIE)于4月2日正式宣布收购英国机器学习和计算机视觉公司Cinemersive Labs。该公司专注于将2D照片和视频转换为3D立体图像的技术。收购完成后，Cinemersive团队将加入索尼视觉计算集团(Visual Computing Group, VCG)，该部门专注于图形技术和AI在游戏中的应用。此次收购是索尼在关闭多家内部工作室(如Dark Outlaw Games)后持续加码AI技术投资的最新信号。",
         "source": "SIE Official",
