@@ -1,8 +1,8 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-04-22T18:05:00Z
-// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1186→1196新增5行)+web_search 12轮+新增5条id197-201)
+// 最后更新: 2026-04-23T18:05:00Z
+// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1196→1200新增9行)+web_search 12轮+新增7条id202-208)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
@@ -173,6 +173,168 @@ const newsSources = [
 ];
 
 const newsData = [
+    {
+        "id": 208,
+        "title": "美国3月游戏硬件销售额暴增69%，Switch 2成Circana记录以来最快售罄硬件",
+        "summary": "Circana公布美国2026年3月游戏消费数据：硬件销售同比增长69%，消费者总支出增长12%至53亿美元。任天堂Switch 2在3月及年初至今的销量（数量和金额）均领先于其他主机，其首10个月销量比初代Switch高出12%，成为Circana自1995年开始记录以来销售最快的硬件平台。PS5位居第二，3月销量同比增长3%。第一季度总支出同比增长5%达146亿美元。分析师Mat Piscatella指出Switch 2将是2026年消费硬件市场的核心驱动力。",
+        "source": "GamesIndustry",
+        "sourceUrl": "https://www.gamesindustry.biz/us-hardware-sales-rose-69-in-march-2026-following-strong-switch-2-performance-us-monthly-charts",
+        "sourceUrls": [
+            {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/us-hardware-sales-rose-69-in-march-2026-following-strong-switch-2-performance-us-monthly-charts"},
+            {"name": "GameSpot", "url": "https://www.gamespot.com/articles/march-2026-was-a-huge-month-for-console-sales-in-the-us/1100-6539556/"},
+            {"name": "VGChartz", "url": "https://www.vgchartz.com/article/467598/switch-2-outsells-ps5-in-the-us-in-march-2026-mlb-the-show-26-debuts-in-1st/"},
+            {"name": "FinalWeapon", "url": "https://finalweapon.net/2026/04/22/nintendo-switch-2-march-2026-circana-sales-best-selling-console/"},
+            {"name": "Delimiter", "url": "https://delimiter.online/blog/us-hardware-sales-march-2026/"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "market",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-22",
+        "tags": ["Circana", "Switch 2", "美国市场", "硬件销量", "PS5", "Q1 2026"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "美国硬件销售+69%是Switch 2上市10个月里程碑数据(What)。任天堂以创纪录的发售节奏（12%超初代Switch）+强劲首发阵容（马里奥赛车/Zelda EoW Remaster等）实现北美市场迅速铺货；对照PS5 3%增长和Xbox市场份额持续萎缩，Switch 2是当前硬件周期的绝对赢家(Why)。硬件基数扩大意味着2026-2027年Switch 2软件销量将迎来爆发期——第三方厂商（卡普空/光荣/万代南梦宫）已明确加大Switch 2投入，对PS5独占策略形成压力；53亿美元月消费规模为近两年最高，对整体游戏产业是强烈利好信号(So What)。PS6（2027假期）和Xbox Project Helix（同期）都将面对Switch 2装机量3000万+的优势位置竞争；硬件周期的'单极格局'可能持续到2027下半年(What Next)。",
+        "relatedNewsIds": [193, 194, 182, 147, 101]
+    },
+    {
+        "id": 207,
+        "title": "Q1 2026全球游戏行业并购额创15个月新高，突破1000亿美元",
+        "summary": "投资银行Drake Star发布《Q1 2026全球游戏行业报告》：第一季度全球游戏并购交易达51笔、披露交易总额突破1000亿美元，创15个月以来新高。移动游戏并购领跑活动数量，而总估值主要由派拉蒙收购华纳兄弟相关资产以及Savvy Games以60亿美元收购Moonton等大型交易驱动。Scopely、Nazara、NCSoft等公司也积极参与并购。私募融资方面，游戏初创企业在生成式AI、云游戏和区块链游戏领域获得显著关注。报告显示在2024-2025低潮后，游戏行业资本活动在2026年Q1出现强劲复苏。",
+        "source": "GamesIndustry",
+        "sourceUrl": "https://www.pocketgamer.biz/games-industry-manda-hit-15-month-high-in-q1-2026-with-over-100bn-in-deal-value/",
+        "sourceUrls": [
+            {"name": "PocketGamer.biz", "url": "https://www.pocketgamer.biz/games-industry-manda-hit-15-month-high-in-q1-2026-with-over-100bn-in-deal-value/"},
+            {"name": "Drake Star Report", "url": "https://www.drakestar.com/hubfs/Research/GAMING/Drake%20Star%20Global%20Gaming%20Report%20Q1%202026.pdf"},
+            {"name": "Games Market Global", "url": "https://www.gamesmarket.global/drake-star-gaming-m-a-private-financings-and-more-in-q1-2026/"},
+            {"name": "Outlook Respawn", "url": "https://respawn.outlookindia.com/gaming/gaming-news/q1-2026-gaming-ma-hits-100-billion-amid-major-acquisitions"},
+            {"name": "Mobile Marketing Reads", "url": "https://mobilemarketingreads.com/q1-2026-gaming-deals-hit-15-month-high-with-100b-in-value-led-by-mobile-activity/"}
+        ],
+        "category": "market",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-22",
+        "tags": ["并购", "M&A", "Drake Star", "Q1 2026", "投资", "行业报告", "Paramount", "Savvy Games"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "$100B+的Q1并购额标志游戏行业资本市场全面复苏(What)。2024-2025年因利率高企+游戏业增长放缓，并购/融资双双跌至5年低点；进入2026年，利率下行+AI应用放大+Switch 2引领的硬件周期回暖，三重利好推动战略买家（派拉蒙/Savvy Games等）重启大型并购(Why)。对行业格局的影响深远——中等规模工作室（50-300人）成为热门收购目标，中国/中东/印度资本参与度显著提升；对独立开发者是利好信号，风险投资回暖将减少裁员潮压力(So What)。预期Q2-Q3将出现更多日本（科乐美/SE）和欧美（EA/Take-Two/育碧）的结构性并购，Microsoft完成Activision整合后也可能开启下一轮收购周期(What Next)。",
+        "relatedNewsIds": [147, 191, 181]
+    },
+    {
+        "id": 206,
+        "title": "Xbox Project Helix主机细节：AMD GPU零定制、性能对标2-3千美元PC，售价或达1200美元",
+        "summary": "爆料人Moore's Law Is Dead（MLID）发布Project Helix深度分析：这款次世代Xbox主机性能将媲美2000-3000美元级游戏PC，AMD GPU方案未经微软任何定制，属Xbox系列首例，标志硬件策略从'专属定制'向'标准化PC架构'的重大转型。根据零件成本分析，主机零售起价约1200美元，若微软不补贴硬件甚至可达1500美元。结合此前GTC 2026透露的6倍光栅化性能+20倍光线追踪能力，Project Helix定位为'PC形态的Xbox主机'。TechPowerUp、Wccftech等硬件媒体进行了详细转载和分析。",
+        "source": "TechPowerUp",
+        "sourceUrl": "https://www.techpowerup.com/348444/leaker-calls-xbox-helix-console-equivalent-to-usd-2-3-000-gaming-pc",
+        "sourceUrls": [
+            {"name": "TechPowerUp", "url": "https://www.techpowerup.com/348444/leaker-calls-xbox-helix-console-equivalent-to-usd-2-3-000-gaming-pc"},
+            {"name": "Wccftech", "url": "https://wccftech.com/next-gen-xbox-project-helix-20-faster-ray-tracing/"},
+            {"name": "OverCentral", "url": "https://overcentral.com/en/xbox-project-helix-next-gen-console-expected-to-retail-between-1200-and-1500/"},
+            {"name": "GameNGadgets", "url": "https://www.gamengadgets.com/the-1000-console-moores-law-is-dead-breaks-down-project-helix-pricing/"},
+            {"name": "3DM", "url": "https://www.3dmgame.com/news/202604/3942451.html"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "hardware",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-22",
+        "tags": ["Xbox", "Project Helix", "AMD", "MLID", "次世代主机", "售价"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "$1200-1500美元售价+零GPU定制是Xbox硬件战略根本性转变(What)。过去三代Xbox均采用定制AMD APU追求能效比和独占优化，但定制芯片开发周期长+内存涨价+云游戏增长使得'定制模式'经济性下滑；Helix选择纯PC架构+高端定位，本质是将Xbox重新定位为'预装Xbox生态的游戏PC'而非传统家用机(Why)。影响三层：①玩家层：1200美元+年订阅让Xbox从PS5的替代品变成PC的替代品，目标用户显著缩小；②开发者层：无定制+标准DirectX意味着跨平台移植成本降低，但失去独占优化优势；③行业层：Sony PS6若坚持传统定制路线将成为'最后的传统主机'，Xbox此举可能永久分裂两大生态(So What)。配合Game Pass降价+CoD退出首日入库，微软硬件策略彻底转向'高端订阅生态' → 预期2027年发售后Xbox硬件销量将创新低，但订阅收入和Cloud用户可能大幅增长(What Next)。",
+        "relatedNewsIds": [200, 201, 196, 188]
+    },
+    {
+        "id": 205,
+        "title": "光荣特库摩大幅上调FY2026业绩预测，净利润增50%、《仁王3》与《宝可梦Pokopia》超预期",
+        "summary": "光荣特库摩（Koei Tecmo）4月22日发布业绩修订公告，大幅上调FY2026全年业绩预测：营业利润同比提升16.1%，经常利润提升约50%，净利润目标升至415亿日元（创历史新高）。主要驱动因素为第四季度新作《仁王3》（2月6日发售）超预期——全平台销量仅数周即突破100万份，成为系列销量最快作品；以及与任天堂联合开发的Switch 2独占《宝可梦Pokopia》销售远超预期。此外，投资收益（股权投资）表现也显著好于预期。Switch 2软件生态已成为日本厂商最大增长引擎。",
+        "source": "GamesIndustry",
+        "sourceUrl": "https://www.gamesindustry.biz/koei-tecmo-revises-fy26-results-following-success-of-pokemon-pokopia-and-nioh-3",
+        "sourceUrls": [
+            {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/koei-tecmo-revises-fy26-results-following-success-of-pokemon-pokopia-and-nioh-3"},
+            {"name": "VGC", "url": "https://www.videogameschronicle.com/news/koei-tecmo-predicts-50-higher-profit-for-fy2026-than-originally-forecast-due-to-strong-game-sales-and-investments/"},
+            {"name": "Gaming Amigos", "url": "https://www.gamingamigos.com/post/koei-tecmo-revises-fy2026-earning"},
+            {"name": "News USA Today", "url": "https://news-usa.today/koei-tecmo-raises-fy26-earnings-forecast-on-pokemon-pokopia-and-nioh-3-success/"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-22",
+        "tags": ["光荣特库摩", "Koei Tecmo", "仁王3", "Pokopia", "Switch 2", "财报", "FY2026"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "relatedNewsIds": [193, 181, 147, 120]
+    },
+    {
+        "id": 204,
+        "title": "虚幻引擎5整合微软DirectX高级着色器交付技术，剑指PC游戏卡顿痼疾",
+        "summary": "Epic Games证实将微软DirectX团队的Advanced Shader Delivery（ASD，高级着色器交付）技术整合至Unreal Engine 5，目标解决UE5游戏普遍存在的着色器编译卡顿和长加载时间问题。技术程序员Ondrej Hrušovský 4月21日率先曝光该消息，微软已在GDC 2026上详细介绍ASD技术。ASD允许游戏开发者将预编译着色器作为数据包交付给用户，而非传统的运行时编译，预计可将首次启动加载时间缩短50%以上，并消除游戏中的微卡顿。由于UE5是当前主流3A引擎（《GTA 6》《黑神话》《使命召唤》等均基于UE5），此整合将惠及整个PC游戏生态。",
+        "source": "Microsoft DevBlogs",
+        "sourceUrl": "https://devblogs.microsoft.com/directx/advanced-shader-delivery-whats-new-at-gdc-2026/",
+        "sourceUrls": [
+            {"name": "Microsoft DevBlogs", "url": "https://devblogs.microsoft.com/directx/advanced-shader-delivery-whats-new-at-gdc-2026/"},
+            {"name": "Wccftech", "url": "https://wccftech.com/unreal-engine-5-implementation-microsoft-directx12-advanced-shader-deliver-in-progress/"},
+            {"name": "TweakTown", "url": "https://www.tweaktown.com/news/111209/unreal-engine-5-may-be-getting-microsofts-directx-12-advanced-shader-delivery/index.html"},
+            {"name": "IT之家", "url": "https://www.ithome.com/0/941/966.htm"},
+            {"name": "搜狐", "url": "https://www.sohu.com/a/1012944808_121956424"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "hardware",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-22",
+        "tags": ["Unreal Engine 5", "DirectX", "Advanced Shader Delivery", "PC游戏", "卡顿", "微软", "Epic"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "relatedNewsIds": [196, 147]
+    },
+    {
+        "id": 203,
+        "title": "任天堂遭美国玩家集体起诉，因Switch 2关税退款'双重收取'问题",
+        "summary": "两名美国玩家4月21日在西雅图地区法院对任天堂美国分公司提起集体诉讼，指控任天堂在Switch 2预购和硬件销售中'双重收取'关税费用——特朗普政府关税政策下，任天堂已提高部分Switch 2配件售价；而在美国最高法院2月裁定关税违宪后，任天堂正从政府获得关税退款，但拒绝将退款部分返还给已支付加价的消费者。原告主张任天堂的做法构成不正当得利。任天堂此前为应对关税，延后Switch 2在美预售日期、提高配件价格。该案被广泛视为游戏行业首例关税退款集体诉讼，或影响其他厂商的定价策略。",
+        "source": "Ars Technica",
+        "sourceUrl": "https://arstechnica.com/tech-policy/2026/04/lawsuit-nintendo-is-getting-tariff-refunds-its-customers-should-get-them-instead/",
+        "sourceUrls": [
+            {"name": "Ars Technica", "url": "https://arstechnica.com/tech-policy/2026/04/lawsuit-nintendo-is-getting-tariff-refunds-its-customers-should-get-them-instead/"},
+            {"name": "Kotaku", "url": "https://kotaku.com/gamers-are-suing-nintendo-for-tariff-refunds-2000689733"},
+            {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/gamers-sue-nintendo-over-tariff-refunds"},
+            {"name": "Nintendo Life", "url": "https://www.nintendolife.com/news/2026/04/two-u-s-gamers-are-suing-nintendo-over-tariff-refunds"},
+            {"name": "Hoodline", "url": "https://hoodline.com/2026/04/seattle-gamers-say-nintendo-double-dipped-on-tariffs-in-new-lawsuit/"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-22",
+        "tags": ["任天堂", "Switch 2", "集体诉讼", "关税", "退款", "消费者权益"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "relatedNewsIds": [195, 105]
+    },
+    {
+        "id": 202,
+        "title": "微软考虑推出Xbox Game Pass'自选套餐'订阅选项",
+        "summary": "Windows Central报道，微软游戏业务负责人Asha Sharma近期告诉员工Game Pass将变得'更加灵活'，长期计划包含推出'自选套餐（Pick Your Own Plan）'选项——允许订阅者根据个人偏好组合游戏类型、在线服务、云游戏、EA Play等模块，形成个性化订阅。该想法目前处于内部讨论阶段，无具体发布时间。此方向与4月21日Game Pass降价+CoD退出首日入库调整一脉相承，旨在降低订阅门槛、减少流失率。若落地，Game Pass将从'All-in-One统一套餐'转变为'模块化自选菜单'，接近Netflix和Spotify家庭套餐模式。",
+        "source": "GameSpot",
+        "sourceUrl": "https://www.gamespot.com/articles/xbox-game-pass-pick-your-own-plan-being-considered-report/1100-6539544/",
+        "sourceUrls": [
+            {"name": "GameSpot", "url": "https://www.gamespot.com/articles/xbox-game-pass-pick-your-own-plan-being-considered-report/1100-6539544/"},
+            {"name": "Pure Xbox", "url": "https://www.purexbox.com/news/2026/04/rumour-xbox-might-introduce-customisable-plans-for-game-pass-in-the-future"},
+            {"name": "Kotaku", "url": "https://kotaku.com/report-xbox-game-pass-could-soon-be-offer-pick-your-own-deals-and-im-nervously-optimistic-2000689684"},
+            {"name": "GamingBolt", "url": "https://gamingbolt.com/game-pass-might-get-pick-your-own-plan-options-rumor"},
+            {"name": "GameRant", "url": "https://gamerant.com/xbox-game-pass-flexible-plan-rumor/"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "platform",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-22",
+        "tags": ["Xbox", "Game Pass", "Pick Your Own", "订阅", "Asha Sharma", "微软"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "relatedNewsIds": [201, 196, 147]
+    },
     {
         "id": 201,
         "title": "微软大幅下调Game Pass价格，《使命召唤》新作退出首日入库",
