@@ -1,8 +1,8 @@
 // ============================================
-// 待上线 Pipeline 数据模块 V3.5
+// 待上线 Pipeline 数据模块 V3.6
 // 数据源：腾讯文档 MCP（唯一基准，文档ID: LRcKfOTzgHrV）
 //         + 网络搜索验证补充（标注来源，不覆盖MCP数据）
-// 最后更新: 2026-04-16 (V3.5 MCP全量刷新+2款已发售移至released: Replaced 4/14 + PRAGMATA 4/17)
+// 最后更新: 2026-04-23 (V3.6 2款已发售移至released: 明日潮汐 4/22 + 异环 4/23)
 // ============================================
 
 // ====== 未上线产品数据（全部展示）======
@@ -12,7 +12,6 @@ const pipelineUnreleased = [
     // =============================================
 
     // --- MCP 海外产品（有具体日期）---
-    { region: "海外", name: "明日潮汐", publisher: "Digixart", studio: "/", releaseDate: "2026/4/22", platforms: "PC+PS5+Xbox", heat: "低", heatNote: "《96号公路》团队新作", gameplay: "类《无人深空》异步联机探索生存", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "暗黑破坏神4：憎恨之王", publisher: "暴雪", studio: "/", releaseDate: "2026/4/28", platforms: "PC+PS5+Xbox", heat: "低", heatNote: "暗黑4大型资料片", gameplay: "ARPG刷装备", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "SAROS", publisher: "索尼", studio: "Housemarque", releaseDate: "2026/4/30", platforms: "PS5", heat: "中低", heatNote: "索尼一方游戏", gameplay: "第三人称科幻射击，'永久成长'死亡机制", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "魔法门之英雄无敌：上古纪元", publisher: "育碧", studio: "/", releaseDate: "2026/4/30", platforms: "PC", heat: "中低", heatNote: "Steam愿望单100万+", gameplay: "欧美奇幻RPG策略", licenseStatus: "", licenseNote: "", source: "MCP" },
@@ -68,7 +67,6 @@ const pipelineUnreleased = [
     { region: "海外", name: "马克思佩恩 1&2重制版", publisher: "R星", studio: "Rockstar Games", releaseDate: "2027年", platforms: "待定", heat: "中", heatNote: "系列销量1100万", gameplay: "子弹时间射击", licenseStatus: "", licenseNote: "", source: "MCP" },
 
     // --- MCP 国内产品（有具体日期）---
-    { region: "国内", name: "异环（Neverness to Everness）", publisher: "完美世界", studio: "/", releaseDate: "2026/4/23", platforms: "移动+PC+PS", heat: "中", heatNote: "二次元+开放世界", gameplay: "开放世界二游+类GTA+多玩法缝合", licenseStatus: "已获版号", licenseNote: "移动+客户端+游戏机", source: "MCP" },
     { region: "国内", name: "影之刃零（Phantom Blade Zero）", publisher: "灵游坊", studio: "/", releaseDate: "2026/9/10", platforms: "PC+PS", heat: "中", heatNote: "虚幻5引擎，BOSS融入AI智能", gameplay: "魂类ARPG，双刀+弹反机制", licenseStatus: "已获版号", licenseNote: "移动版号", source: "MCP" },
 
     // --- MCP 国内产品（季度/年份）---
@@ -125,6 +123,9 @@ const pipelineUnreleased = [
 
 // ====== 已上线产品数据（仅展示2026年上线的）======
 const pipelineReleased = [
+    // ===== 2026-04-23 更新: 新增已发售 =====
+    { region: "海外", name: "明日潮汐", publisher: "Digixart", studio: "/", releaseDate: "2026/4/22", platforms: "PC+PS5+Xbox", heat: "低", heatNote: "《96号公路》团队新作，M站均分75分好评，IGN中国/游侠网/腾讯新闻多源确认发售", gameplay: "类《无人深空》异步联机探索生存", source: "MCP" },
+    { region: "国内", name: "异环（Neverness to Everness）", publisher: "完美世界", studio: "Hotta Studio", releaseDate: "2026/4/23", platforms: "移动+PC+PS", heat: "中", heatNote: "预约量破3000万，Hotta Studio（《幻塔》团队）超自然都市RPG，IGN中国/完美世界官网多源确认4/23全平台公测", gameplay: "开放世界二游+类GTA+多玩法缝合", source: "MCP" },
     // ===== 2026-04-16 更新: 新增已发售 =====
     { region: "海外", name: "Replaced", publisher: "Thunderful Publishing", studio: "Sad Cat Studios", releaseDate: "2026/4/14", platforms: "PC+Xbox", heat: "低", heatNote: "80年代复古未来科幻平台动作，Metacritic多源评测确认发售", gameplay: "2.5D赛博朋克动作平台+自由流动战斗", source: "MCP" },
     { region: "海外", name: "识质存在（PRAGMATA）", publisher: "卡普空", studio: "/", releaseDate: "2026/4/17", platforms: "PC+Switch2+PS5+Xbox", heat: "中", heatNote: "GameSpot/GamesRadar/VGC/Polygon等多源评测确认发售，Fami通最受期待榜第一", gameplay: "第三人称射击+黑客解谜", source: "MCP" },
