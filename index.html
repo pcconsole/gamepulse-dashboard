@@ -58,6 +58,11 @@
                 <span class="nav-label">PS&Xbox商店监控</span>
                 <span class="nav-badge" id="badgeStorewatch"></span>
             </a>
+            <a href="#" class="nav-item" data-tab="weekly">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 3h10l2 2v12H4z"/><path d="M7 8h6M7 11h6M7 14h4"/></svg>
+                <span class="nav-label">行业周报</span>
+                <span class="nav-badge" id="badgeWeekly"></span>
+            </a>
         </nav>
         <div class="sidebar-footer">
             <div class="data-freshness-panel" id="dataFreshnessPanel">
@@ -131,6 +136,7 @@
                         <div class="cmd-item" data-action="tab:news"><span class="cmd-icon">📰</span>行业热点新闻</div>
                         <div class="cmd-item" data-action="tab:earnings"><span class="cmd-icon">💰</span>重点公司财报分析</div>
                         <div class="cmd-item" data-action="tab:storewatch"><span class="cmd-icon">🏪</span>PS&Xbox商店监控</div>
+                        <div class="cmd-item" data-action="tab:weekly"><span class="cmd-icon">📰</span>行业周报</div>
                     </div>
                 </div>
             </div>
@@ -853,6 +859,57 @@
             </div>
         </section>
 
+        <!-- ==================== TAB: 行业周报 ==================== -->
+        <section class="tab-content" id="tab-weekly">
+            <div class="weekly-wrap">
+                <!-- 顶部操作条 -->
+                <div class="weekly-topbar">
+                    <div class="weekly-title-area">
+                        <h2 id="weeklyCurrentTitle">行业周报</h2>
+                        <div class="weekly-meta" id="weeklyCurrentMeta"></div>
+                    </div>
+                    <div class="weekly-actions">
+                        <div class="weekly-export-group">
+                            <button class="weekly-btn weekly-btn-primary" id="weeklyExportBtn">
+                                <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 3v10m0 0l-4-4m4 4l4-4M4 17h12"/></svg>
+                                导出长图
+                            </button>
+                            <div class="weekly-export-menu" id="weeklyExportMenu">
+                                <button data-scale="2">@2x · 860px</button>
+                                <button data-scale="3">@3x · 1290px <span class="recommend">推荐</span></button>
+                                <button data-scale="4">@4x · 1720px</button>
+                            </div>
+                        </div>
+                        <a class="weekly-btn weekly-btn-ghost" id="weeklyOpenBtn" href="#" target="_blank" rel="noopener">
+                            <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3h5v5M17 3l-8 8M8 5H4v11h11v-4"/></svg>
+                            新窗口打开
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 左列表 + 右预览 -->
+                <div class="weekly-body">
+                    <aside class="weekly-sidebar">
+                        <div class="weekly-sidebar-head">往期周报</div>
+                        <div class="weekly-list" id="weeklyList"></div>
+                    </aside>
+                    <main class="weekly-preview">
+                        <div class="weekly-frame-wrap">
+                            <iframe id="weeklyFrame" src="about:blank" title="行业周报预览"></iframe>
+                        </div>
+                    </main>
+                </div>
+
+                <!-- 导出中遮罩 -->
+                <div class="weekly-export-mask" id="weeklyExportMask">
+                    <div class="weekly-export-mask-inner">
+                        <div class="spinner"></div>
+                        <div class="mask-text" id="weeklyExportText">正在渲染长图…</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Drill-down 详情面板 -->
         <div class="drilldown-overlay" id="drilldownOverlay">
             <div class="drilldown-panel" id="drilldownPanel">
@@ -872,6 +929,8 @@
     <script src="news.js"></script>
     <script src="earnings.js"></script>
     <script src="storewatch.js"></script>
+    <script src="weekly.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

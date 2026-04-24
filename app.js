@@ -934,6 +934,8 @@ function bindEvents() {
                 setTimeout(() => updateEarningsTab(), 50);
             } else if (tab === 'storewatch') {
                 setTimeout(() => updateStorewatchTab(), 50);
+            } else if (tab === 'weekly') {
+                setTimeout(() => updateWeeklyTab(), 50);
             }
 
             // 关闭移动端菜单
@@ -3110,5 +3112,179 @@ async function checkAgentStatus() {
     } catch (e) {
         // Agent API不可用时静默处理
         console.log('[Agent] Status check failed (this is normal if API not available)');
+    }
+}
+
+
+// ==================== Weekly Report Tab ====================
+let weeklyCurrentReport = null;
+let weeklyInited = false;
+
+function updateWeeklyTab() {
+    if (!weeklyInited) initWeeklyTab();
+    // 如果当前没选中任何周报，默认打开最新一期
+    if (!weeklyCurrentReport && Array.isArray(window.WEEKLY_REPORTS) && window.WEEKLY_REPORTS.length > 0) {
+        selectWeeklyReport(window.WEEKLY_REPORTS[0]);
+    }
+}
+
+function initWeeklyTab() {
+    weeklyInited = true;
+    const list = document.getElementById('weeklyList');
+    if (!list) return;
+
+    const reports = Array.isArray(window.WEEKLY_REPORTS) ? window.WEEKLY_REPORTS : [];
+    if (reports.length === 0) {
+        list.innerHTML = '<div class="weekly-list-empty">暂无周报</div>';
+    } else {
+        list.innerHTML = reports.map((r, i) => {
+            const tagsHtml = (r.tags || []).map(t => '<span class="wk-tag">' + t + '</span>').join('');
+            const isLatest = (i === 0) ? 'latest' : '';
+            return '<div class="weekly-list-item ' + isLatest + '" data-file="' + r.file + '">' +
+                '<div>' +
+                '<span class="wk-week">' + r.week + '</span>' +
+                '<span class="wk-date">' + r.date + '</span>' +
+                '</div>' +
+                '<div class="wk-title">' + r.title + '</div>' +
+                (tagsHtml ? '<div class="wk-tags">' + tagsHtml + '</div>' : '') +
+                '</div>';
+        }).join('');
+        list.querySelectorAll('.weekly-list-item').forEach(el => {
+            el.addEventListener('click', () => {
+                const file = el.dataset.file;
+                const rpt = reports.find(r => r.file === file);
+                if (rpt) selectWeeklyReport(rpt);
+            });
+        });
+    }
+
+    // 导出按钮
+    const expBtn = document.getElementById('weeklyExportBtn');
+    const expMenu = document.getElementById('weeklyExportMenu');
+    expBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        expMenu.classList.toggle('open');
+    });
+    document.addEventListener('click', (e) => {
+        if (!expMenu.contains(e.target) && e.target !== expBtn) {
+            expMenu.classList.remove('open');
+        }
+    });
+    expMenu.querySelectorAll('button[data-scale]').forEach(b => {
+        b.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const scale = parseInt(b.dataset.scale, 10);
+            expMenu.classList.remove('open');
+            exportWeeklyImage(scale);
+        });
+    });
+
+    // 新窗口打开
+    document.getElementById('weeklyOpenBtn').addEventListener('click', (e) => {
+        if (!weeklyCurrentReport) { e.preventDefault(); return; }
+        e.currentTarget.href = weeklyCurrentReport.file;
+    });
+}
+
+function selectWeeklyReport(report) {
+    weeklyCurrentReport = report;
+    // 高亮
+    document.querySelectorAll('.weekly-list-item').forEach(el => {
+        el.classList.toggle('active', el.dataset.file === report.file);
+    });
+    // 顶部标题
+    document.getElementById('weeklyCurrentTitle').textContent = report.title;
+    document.getElementById('weeklyCurrentMeta').textContent =
+        report.week + ' · ' + report.date + (report.periodStart ? ('  ·  周期 ' + report.periodStart + ' ~ ' + report.periodEnd) : '');
+    // iframe 加载
+    const frame = document.getElementById('weeklyFrame');
+    frame.src = report.file;
+    // iframe 加载完后自适应高度
+    frame.onload = () => {
+        try {
+            const doc = frame.contentDocument;
+            if (!doc) return;
+            // 隐藏周报内部的导出工具栏（在主站展示时不需要它，由主站顶部按钮统一导出）
+            const tb = doc.getElementById('export-toolbar');
+            if (tb) tb.style.display = 'none';
+            // 自适应iframe高度
+            const page = doc.querySelector('.page');
+            if (page) {
+                const h = page.offsetHeight + 20;
+                frame.style.height = h + 'px';
+            }
+        } catch (err) {
+            console.warn('weekly iframe resize failed:', err);
+        }
+    };
+    // 更新新窗口链接
+    document.getElementById('weeklyOpenBtn').href = report.file;
+}
+
+async function exportWeeklyImage(scale) {
+    if (!weeklyCurrentReport) return;
+    const mask = document.getElementById('weeklyExportMask');
+    const maskText = document.getElementById('weeklyExportText');
+    const frame = document.getElementById('weeklyFrame');
+    mask.classList.add('show');
+    maskText.textContent = '渲染中… @' + scale + 'x';
+
+    try {
+        // 等 iframe 内部 html2canvas 和字体加载完
+        const frameWin = frame.contentWindow;
+        const frameDoc = frame.contentDocument;
+        if (!frameDoc) throw new Error('iframe 未就绪');
+
+        // 优先用 iframe 自带的 html2canvas
+        let h2c = frameWin.html2canvas;
+        // 回退用主站的
+        if (typeof h2c !== 'function') h2c = window.html2canvas;
+        if (typeof h2c !== 'function') throw new Error('html2canvas 未加载');
+
+        if (frameDoc.fonts && frameDoc.fonts.ready) await frameDoc.fonts.ready;
+        await new Promise(r => setTimeout(r, 200));
+
+        const page = frameDoc.querySelector('.page');
+        if (!page) throw new Error('未找到 .page 容器');
+
+        // 确保 iframe viewport 足够（避免html2canvas截取被视口裁切）
+        frame.style.height = (page.offsetHeight + 20) + 'px';
+        await new Promise(r => setTimeout(r, 100));
+
+        const canvas = await h2c(page, {
+            scale: scale,
+            backgroundColor: '#f4f6f9',
+            useCORS: true,
+            logging: false,
+            width: page.offsetWidth,
+            height: page.offsetHeight,
+            windowWidth: page.offsetWidth,
+            windowHeight: page.offsetHeight
+        });
+
+        maskText.textContent = '生成 PNG 中…';
+
+        canvas.toBlob((blob) => {
+            if (!blob) {
+                maskText.textContent = '导出失败：图过大';
+                setTimeout(() => mask.classList.remove('show'), 1500);
+                return;
+            }
+            const url = URL.createObjectURL(blob);
+            const baseName = weeklyCurrentReport.week + '_' + weeklyCurrentReport.date.replace(/-/g,'');
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Weekly_Briefing_' + baseName + '_' + scale + 'x.png';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            setTimeout(() => URL.revokeObjectURL(url), 1000);
+            maskText.textContent = '✓ 已导出 ' + canvas.width + '×' + canvas.height;
+            setTimeout(() => mask.classList.remove('show'), 900);
+        }, 'image/png');
+    } catch (err) {
+        console.error('exportWeeklyImage error:', err);
+        maskText.textContent = '失败：' + (err.message || err);
+        setTimeout(() => mask.classList.remove('show'), 2200);
     }
 }
