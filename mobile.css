@@ -985,3 +985,228 @@ body {
     from { opacity: 0; transform: translateY(-15px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+
+/* ==================== Mobile Weekly Report Tab ==================== */
+#m-tab-weekly {
+  padding: 0;
+  background: #f4f6f9;
+}
+
+/* 顶部操作条（悬浮） */
+.m-weekly-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  gap: 8px;
+  padding: 10px 12px;
+  background: #fff;
+  border-bottom: 1px solid #e4e8ee;
+  align-items: center;
+}
+.m-weekly-selector {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: #f4f6f9;
+  border: 1px solid #d5dae2;
+  border-radius: 6px;
+  cursor: pointer;
+  min-width: 0;
+}
+.m-weekly-selector:active { background: #e9edf2; }
+.m-weekly-current {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  min-width: 0;
+  flex: 1;
+}
+.m-weekly-week {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  color: #c85a4a;
+  letter-spacing: 0.08em;
+  flex-shrink: 0;
+}
+.m-weekly-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e3a5f;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.m-weekly-actions { display: flex; gap: 6px; flex-shrink: 0; }
+.m-weekly-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 0;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 1;
+  white-space: nowrap;
+}
+.m-weekly-btn-export {
+  background: #c85a4a;
+  color: #fff;
+}
+.m-weekly-btn-export:active { background: #a84534; }
+
+/* 下拉：周报列表 */
+.m-weekly-dropdown {
+  display: none;
+  position: sticky;
+  top: 58px;
+  z-index: 49;
+  background: #fff;
+  border-bottom: 1px solid #e4e8ee;
+  max-height: 50vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(30,58,95,0.1);
+}
+.m-weekly-dropdown.open { display: block; }
+.m-weekly-drop-item {
+  padding: 12px 14px;
+  border-bottom: 1px solid #f0f2f5;
+  cursor: pointer;
+}
+.m-weekly-drop-item:active { background: #f4f6f9; }
+.m-weekly-drop-item.active { background: #fef4f2; border-left: 3px solid #c85a4a; padding-left: 11px; }
+.m-weekly-drop-item .m-drop-head {
+  display: flex;
+  gap: 6px;
+  align-items: baseline;
+  margin-bottom: 4px;
+}
+.m-weekly-drop-item .m-drop-week {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  color: #c85a4a;
+  letter-spacing: 0.08em;
+}
+.m-weekly-drop-item .m-drop-date {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  color: #7b8a99;
+}
+.m-weekly-drop-item .m-drop-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e3a5f;
+  line-height: 1.4;
+}
+.m-weekly-drop-item.latest .m-drop-week::after {
+  content: 'LATEST';
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 4px;
+  background: #c85a4a;
+  color: #fff;
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  border-radius: 2px;
+}
+
+/* 导出菜单 */
+.m-weekly-export-menu {
+  display: none;
+  position: absolute;
+  top: 56px;
+  right: 12px;
+  z-index: 60;
+  background: #1e3a5f;
+  border-radius: 6px;
+  padding: 8px;
+  min-width: 180px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+.m-weekly-export-menu.open { display: block; }
+.m-weekly-export-menu button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,184,150,0.3);
+  padding: 10px 12px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'IBM Plex Mono', monospace;
+  cursor: pointer;
+}
+.m-weekly-export-menu button:last-child { margin-bottom: 0; }
+.m-weekly-export-menu button:active { background: #c85a4a; border-color: #c85a4a; }
+.m-weekly-export-menu .m-recommend {
+  background: #c85a4a;
+  color: #fff;
+  padding: 1px 5px;
+  border-radius: 2px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+/* iframe 预览 */
+.m-weekly-preview {
+  padding: 10px;
+  background: #e9edf2;
+  display: flex;
+  justify-content: center;
+}
+#mWeeklyFrame {
+  width: 100%;
+  max-width: 430px;
+  min-height: 600px;
+  border: 0;
+  background: #f4f6f9;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 4px 14px rgba(30,58,95,0.12);
+}
+
+/* 导出遮罩 */
+.m-weekly-export-mask {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(30,58,95,0.9);
+  z-index: 200;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(3px);
+}
+.m-weekly-export-mask.show { display: flex; }
+.m-weekly-mask-inner { text-align: center; color: #fff; }
+.m-spinner {
+  width: 46px;
+  height: 46px;
+  margin: 0 auto 14px;
+  border: 3px solid rgba(255,184,150,0.3);
+  border-top-color: #ffb896;
+  border-radius: 50%;
+  animation: m-wk-spin 0.8s linear infinite;
+}
+@keyframes m-wk-spin { to { transform: rotate(360deg); } }
+.m-mask-text {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* 窄屏 TabBar 适配：6 个 Tab */
+.m-tabbar { display: flex; }
+.m-tabbar-item { flex: 1; min-width: 0; }
+.m-tabbar-item span { font-size: 10px; }

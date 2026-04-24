@@ -343,6 +343,45 @@
                 <div class="m-storewatch-body" id="mStorewatchBody"></div>
             </div>
         </section>
+
+        <!-- ==================== TAB: 行业周报 ==================== -->
+        <section class="m-tab-content" id="m-tab-weekly">
+            <!-- 顶部周报选择器 -->
+            <div class="m-weekly-topbar">
+                <div class="m-weekly-selector" id="mWeeklySelector">
+                    <div class="m-weekly-current">
+                        <span class="m-weekly-week" id="mWeeklyCurWeek">W17</span>
+                        <span class="m-weekly-title" id="mWeeklyCurTitle">行业周报</span>
+                    </div>
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5l4 4 4-4"/></svg>
+                </div>
+                <div class="m-weekly-actions">
+                    <button class="m-weekly-btn m-weekly-btn-export" id="mWeeklyExportBtn">
+                        <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 3v10m0 0l-4-4m4 4l4-4M4 17h12"/></svg>
+                        <span>导出</span>
+                    </button>
+                </div>
+            </div>
+            <!-- 周报列表下拉（默认隐藏） -->
+            <div class="m-weekly-dropdown" id="mWeeklyDropdown"></div>
+            <!-- 导出菜单（默认隐藏） -->
+            <div class="m-weekly-export-menu" id="mWeeklyExportMenu">
+                <button data-scale="2">@2x · 860px</button>
+                <button data-scale="3">@3x · 1290px <span class="m-recommend">推荐</span></button>
+                <button data-scale="4">@4x · 1720px</button>
+            </div>
+            <!-- iframe 预览 -->
+            <div class="m-weekly-preview">
+                <iframe id="mWeeklyFrame" src="about:blank" title="行业周报"></iframe>
+            </div>
+            <!-- 导出遮罩 -->
+            <div class="m-weekly-export-mask" id="mWeeklyExportMask">
+                <div class="m-weekly-mask-inner">
+                    <div class="m-spinner"></div>
+                    <div class="m-mask-text" id="mWeeklyExportText">正在渲染长图…</div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- 详情面板（底部弹出） -->
@@ -379,6 +418,10 @@
             <svg width="22" height="22" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4h16v12H2z"/><path d="M6 8h3v4H6zM11 6h3v6h-3z"/></svg>
             <span>商店</span>
         </a>
+        <a href="#" class="m-tabbar-item" data-tab="weekly">
+            <svg width="22" height="22" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 3h10l2 2v12H4z"/><path d="M7 8h6M7 11h6M7 14h4"/></svg>
+            <span>周报</span>
+        </a>
     </nav>
 
     <!-- 数据脚本（与PC端共享） -->
@@ -389,6 +432,8 @@
     <script src="news.js"></script>
     <script src="earnings.js"></script>
     <script src="storewatch.js"></script>
+    <script src="weekly.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="mobile-app.js"></script>
 </body>
 </html>
