@@ -1,8 +1,8 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-04-23T18:05:00Z
-// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1196→1200新增9行)+web_search 12轮+新增7条id202-208)
+// 最后更新: 2026-04-24T18:05:00Z
+// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1200无新增腾讯文档数据)+web_search 12轮+新增8条id209-216)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
@@ -173,6 +173,191 @@ const newsSources = [
 ];
 
 const newsData = [
+    {
+        "id": 216,
+        "title": "ID@Xbox Spring Showcase 2026：微软联手IGN展示20+款独立新作，多款首发入库Game Pass",
+        "summary": "微软与IGN合作于4月23日举办ID@Xbox Spring Showcase 2026，这是自2025年10月以来首场ID@Xbox大型活动，持续约50分钟、展示超过20款独立作品的世界首发、发售日期公布及Game Pass预告。重点新作包括Lovecraft风格音乐游戏《There Are No Ghosts at the Grand》、陶艺力量幻想《Kiln》（4月23日首日入库Game Pass）、Vampire Crawlers、以及多款RPG/解谜/动作独立游戏。多款新作确认在发售当天加入Xbox Game Pass和PC Game Pass。微软借此重申对独立开发者和Game Pass生态的长期投入，在Helix主机硬件转型及裁员传闻背景下，为Xbox内容生态注入活力。",
+        "source": "Xbox Wire",
+        "sourceUrl": "https://news.xbox.com/en-us/2026/04/23/idxbox-spring-showcase-recap/",
+        "sourceUrls": [
+            {"name": "Xbox Wire", "url": "https://news.xbox.com/en-us/2026/04/23/idxbox-spring-showcase-recap/"},
+            {"name": "IGN", "url": "https://www.ign.com/articles/idxbox-everything-announced-at-the-2026-showcase"},
+            {"name": "Windows Central", "url": "https://www.windowscentral.com/gaming/xbox/everything-announced-for-xbox-and-pc-at-the-id-xbox-and-ign-april-2026-showcase"},
+            {"name": "Wccftech", "url": "https://wccftech.com/id-at-xbox-spring-showcase-2026-everything-announced/"},
+            {"name": "VGChartz", "url": "https://www.vgchartz.com/article/467633/idxbox-spring-showcase-featured-over-20-games/"},
+            {"name": "TrueAchievements", "url": "https://www.trueachievements.com/news/id-xbox-showcase-roundup-april-2026"}
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-23",
+        "tags": ["ID@Xbox", "Xbox Showcase", "Game Pass", "独立游戏", "IGN合作", "首日入库"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "ID@Xbox Spring Showcase是Xbox在硬件转型+裁员传闻敏感节点的关键内容侧发声(What)。微软需在Project Helix定位高端($1200+)+传15%裁员+CoD退出首日入库三重负面叙事下，通过独立游戏+Game Pass生态重塑'内容丰富度'标签；选择与IGN深度绑定而非自家单独办会，体现微软主动扩大触达面降低ID@Xbox的认知门槛(Why)。对Game Pass用户形成短期留存抓手（首日入库独立作为订阅价值锚点）；对ID@Xbox开发者是近半年最大曝光窗口（减轻GDC 2026后独立发行可见度断崖的压力）；对竞争格局是'PS5独占大作+Nintendo 1P+Xbox独立/订阅'的三极化强化(So What)。预计Summer Game Fest(6月)微软将发布Fable/Forza Horizon 6/Helix更多实机，ID@Xbox节奏可能改为季度showcase常态化(What Next)。",
+        "relatedNewsIds": [201, 200, 188, 189, 175]
+    },
+    {
+        "id": 215,
+        "title": "育碧《刺客信条：黑旗Resynced》正式公布，定档2026年7月9日发售",
+        "summary": "育碧4月23日举办全球发布会，正式公布《Assassin's Creed Black Flag Resynced》——2013年经典海盗题材作品的完整重制版，将于2026年7月9日登陆PC、PS5、Xbox Series X|S及Steam。Resynced采用Anvil新引擎重建画面、新增光线追踪，强化潜行系统，扩充加勒比海盗黄金时代剧情章节。育碧将其定位为Edward Kenway的'加勒比海盗传奇重生'，而非简单HD补丁。该项目此前已传闻数月，现为育碧继《刺客信条：影》及《幽灵行动》续作曝光之后的又一重磅动作。",
+        "source": "Ubisoft",
+        "sourceUrl": "https://www.ubisoft.com/en-us/game/assassins-creed/black-flag-resynced",
+        "sourceUrls": [
+            {"name": "Ubisoft官方", "url": "https://www.ubisoft.com/en-us/game/assassins-creed/black-flag-resynced"},
+            {"name": "GamesRadar", "url": "https://www.gamesradar.com/games/assassin-s-creed/ubisoft-confirms-assassins-creed-black-flag-resynced-reveal-showcase-as-it-clowns-on-its-own-worst-kept-secret/"},
+            {"name": "Metro", "url": "https://metro.co.uk/2026/04/23/assassins-creed-black-flag-resynced-officially-revealed-28088833/"},
+            {"name": "HypeBeast", "url": "https://hypebeast.com/zh/2026/4/assassins-creed-black-flag-resynced-remake-launches-2026"},
+            {"name": "17173", "url": "https://news.17173.com/content/04212026/001812662.shtml"}
+        ],
+        "category": "game",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-23",
+        "tags": ["育碧", "Ubisoft", "刺客信条", "黑旗", "重制版", "Resynced", "海盗"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "黑旗Resynced是育碧IP复兴战略的关键棋子(What)。育碧过去两年经历股价腰斩+ACS收入不及预期+育碧创始人家族减持危机，急需通过低风险高回报的经典IP重制回血；选择黑旗（AC系列公认口碑TOP3作品+海盗题材全球通吃）而非更新的作品，体现'经典+光追+高端版本'的稳健商业逻辑(Why)。7/9档期避开了GTA 6(11/19)和Fable秋季，抢占暑期档；同时填补育碧2026下半年的空白期，为2027年AC Hexe和《幽灵行动》续作铺垫；对PC/主机玩家形成7月最大话题营销节点；对育碧股价和FY27预期构成重要正向催化(So What)。若销量超500万份（参考旧版1500万+重制版惯例），将帮助育碧证明'IP重制组合拳'模式可行，推动后续红楼梦/波斯王子重制加速(What Next)。",
+        "relatedNewsIds": [200, 186, 208, 175]
+    },
+    {
+        "id": 214,
+        "title": "索尼PS5英国/爱尔兰年龄验证6月强制：语音、文字聊天需要年龄证明",
+        "summary": "索尼4月22日起向英国和爱尔兰PlayStation用户推送年龄验证通知，为应对英国《在线安全法》(Online Safety Act, OSA)合规要求。当前验证为可选，但自2026年6月起将成为访问语音聊天、消息等通信功能的强制条件。未满18岁用户或未通过验证的用户将被限制部分社交功能。索尼成为继Meta、X等之后首家对OSA合规的主要游戏平台；其他平台如Xbox尚未跟进。该政策可能成为未来欧盟其他国家及美国各州立法的前例参考，对全球玩家隐私与未成年保护格局产生深远影响。",
+        "source": "GamesIndustry",
+        "sourceUrl": "https://www.gamesindustry.biz/sony-begins-rolling-out-age-verification-for-playstation-in-uk-and-ireland",
+        "sourceUrls": [
+            {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/sony-begins-rolling-out-age-verification-for-playstation-in-uk-and-ireland"},
+            {"name": "Engadget", "url": "https://www.engadget.com/gaming/playstation/sony-will-require-age-checks-in-the-uk-and-ireland-to-access-playstation-communication-features-194916442.html"},
+            {"name": "PlayStation官方", "url": "https://www.playstation.com/en-gb/support/account/age-verification-faq/"},
+            {"name": "PushSquare", "url": "https://www.pushsquare.com/news/2026/04/upgraded-roblox-brings-smoother-gameplay-to-ps5-amid-increasing-scrutiny-over-child-safety"},
+            {"name": "PSU", "url": "https://www.psu.com/news/sony-is-rolling-out-playstation-age-verification-in-the-uk-ireland/"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-22",
+        "tags": ["PlayStation", "索尼", "年龄验证", "英国", "OSA", "在线安全法", "合规"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "relatedNewsIds": [203, 175]
+    },
+    {
+        "id": 213,
+        "title": "消息称微软Xbox部门计划裁员15%，公告或于5月6日/6月5日发布",
+        "summary": "匿名职场论坛Blind上一位自称动视暴雪员工4月22日发帖称，微软游戏部门正准备新一轮裁员，影响规模约15%，内部消息指公告日期为'5/6'（5月6日或6月5日）。新任游戏CEO Asha Sharma上任仅数月即推动裁员，动视、暴雪、ZeniMax、Xbox Game Studios等全线预计受影响。彭博社Jason Schreier此前已多次爆料Xbox 2026将继续裁员。该规模若属实将是微软收购动视暴雪以来最大规模裁员，远超2025年1900人规模。裁员叠加Helix硬件转型+Game Pass降价+CoD退出首日入库，反映微软游戏业务盈利压力剧增，向'高毛利订阅+高端硬件'商业模式硬转向。",
+        "source": "IT之家",
+        "sourceUrl": "https://www.ithome.com/0/941/905.htm",
+        "sourceUrls": [
+            {"name": "IT之家", "url": "https://www.ithome.com/0/941/905.htm"},
+            {"name": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260422A05C0400"},
+            {"name": "游民星空", "url": "https://www.gamersky.com/news/202604/2128443.shtml"},
+            {"name": "网易科技", "url": "https://m.163.com/tech/article/KR43STCH0526D8LR.html"},
+            {"name": "同花顺", "url": "https://stock.10jqka.com.cn/20260422/c676178069.shtml"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-22",
+        "tags": ["微软", "Xbox", "裁员", "Asha Sharma", "动视暴雪", "Game Pass"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "Xbox 15%裁员传闻是微软游戏业务结构性重整的最强信号(What)。微软以687亿美元收购动视暴雪后，游戏业务面临规模化盈利压力——2024财年动视暴雪贡献59亿美元营收但净利率低于预期；Asha Sharma接任CEO后的首要任务是提升每股盈利(EPS)，15%裁员可节省约10亿美元年度成本，支撑Game Pass降价策略的盈利弹性(Why)。对行业的冲击三层：①工作室层：动视/暴雪/Zenimax等被收购工作室首当其冲，对《使命召唤》《魔兽世界》等长青IP的更新节奏产生压力；②订阅策略层：裁员+降价=微软承认Game Pass生态投入产出比不佳，转向'高毛利付费墙'；③行业层：继2024-2025'裁员潮'后的第四轮大裁员，对开发者就业信心再次打击(So What)。若公告属实，预计Xbox发行节奏将进一步依赖第三方Game Pass交易+AI辅助开发，第一方3A数量可能减半；Helix主机发售(2027)可能与裁员结构重叠，形成'小而精'硬件路线(What Next)。",
+        "relatedNewsIds": [201, 206, 188, 172]
+    },
+    {
+        "id": 212,
+        "title": "卡普空新IP《Pragmata》2天销量破100万份，科幻ARPG新黑马",
+        "summary": "卡普空4月20日发布IR公告确认：全新原创IP《PRAGMATA》于4月17日全球发售后，仅两天全球销量突破100万份，登陆PS5、Xbox Series X|S、PC平台，并于PlayStation Plus高级版和Xbox Game Pass首发入库。该作由卡普空内部团队开发、采用RE Engine引擎，融合第三人称射击、解谜、动作角色扮演元素，讲述机器人与女孩在月球空间站的故事。作为近5年卡普空最大规模的全新IP投入（开发周期5+年），Pragmata的快速破百万证明卡普空在《怪物猎人》《生化危机》《街头霸王》等老IP之外开辟新增长曲线的能力。",
+        "source": "Capcom IR",
+        "sourceUrl": "https://www.capcom.co.jp/ir/english/news/html/e260420.html",
+        "sourceUrls": [
+            {"name": "Capcom IR", "url": "https://www.capcom.co.jp/ir/english/news/html/e260420.html"},
+            {"name": "Nasdaq", "url": "https://www.nasdaq.com/press-release/capcoms-all-new-ip-pragmata-surpasses-one-million-units-sold-two-days-2026-04-20"},
+            {"name": "RPG Site", "url": "https://www.rpgsite.net/news/20170-pragmata-sales-numbers-1-million-copies"},
+            {"name": "Gamespress", "url": "https://www.gamespress.com/zh-CN/PRAGMATA-Surpasses-One-Million-Units-Sold-in-Two-Days"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-20",
+        "tags": ["卡普空", "Capcom", "Pragmata", "新IP", "销量", "百万", "Game Pass首日"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "relatedNewsIds": [205, 181, 208]
+    },
+    {
+        "id": 211,
+        "title": "《极限竞速：地平线6》Steam预售破51万份，预估总营收$3000万+",
+        "summary": "据数据分析机构Alinea Analytics 4月16日报告，《Forza Horizon 6》在Steam平台的预售量已突破51.1万份，距离5月19日正式发售还有一个多月。按各版本均价估算，发售前Steam预售营收已达约3000万美元。作为微软首个多平台发售的Forza Horizon正传（此前仅限Xbox+PC Game Pass），FH6选择Steam发售被视为微软'第一方多平台化'的关键里程碑。FH6开启PC游戏2026年第一轮硬件升级需求——NVIDIA和AMD均发布适配Driver。该作在Steam愿望单进入前30，体现PC玩家对Xbox第一方3A的积压需求。",
+        "source": "Alinea Analytics",
+        "sourceUrl": "https://www.notebookcheck.net/Forza-Horizon-6-pre-sales-hit-500K-on-Steam-generating-nearly-30M-ahead-of-launch.1276880.0.html",
+        "sourceUrls": [
+            {"name": "Notebookcheck", "url": "https://www.notebookcheck.net/Forza-Horizon-6-pre-sales-hit-500K-on-Steam-generating-nearly-30M-ahead-of-launch.1276880.0.html"},
+            {"name": "Insider Gaming", "url": "https://insider-gaming.com/forza-horizon-6-has-reportedly-already-sold-500000-copies-on-steam/"},
+            {"name": "GameRant", "url": "https://gamerant.com/forza-horizon-6-steam-preorder-numbers/"},
+            {"name": "Expreview", "url": "https://m.expreview.com/105348.html"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-17",
+        "tags": ["Forza Horizon 6", "Steam", "预售", "微软多平台", "Alinea Analytics", "Xbox"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "relatedNewsIds": [201, 175]
+    },
+    {
+        "id": 210,
+        "title": "欧盟议会听证会：'Stop Killing Games'获压倒性支持，数字权益立法加速",
+        "summary": "4月16日欧洲议会举行'Stop Killing Games'(SKG)听证会，运动创始人Ross Scott与组织者Moritz Katzner向议员阐述玩家数字权益诉求，PC Gamer报道听证会'绝对不可思议'——'没有一位议员不给予积极回应'。SKG欧洲公民倡议(ECI)已于2026年2月正式递交，欧盟委员会需在2026年7月27日前做出正式回应。该倡议要求厂商在停服后保留玩家已购数字产品的基本游玩权(offline单机模式/私服工具/代码开源)，直接针对育碧《飙酷车神》等停服事件。4月听证会的压倒性支持意味着立法化进程已进入快车道，可能成为欧盟继《数字市场法》后对游戏行业的又一重大监管。",
+        "source": "PC Gamer",
+        "sourceUrl": "https://www.pcgamer.com/gaming-industry/stop-killing-games-delivers-absolutely-incredible-hearing-in-european-parliament-there-was-no-parliament-member-that-wasnt-responding-positively/",
+        "sourceUrls": [
+            {"name": "PC Gamer", "url": "https://www.pcgamer.com/gaming-industry/stop-killing-games-delivers-absolutely-incredible-hearing-in-european-parliament-there-was-no-parliament-member-that-wasnt-responding-positively/"},
+            {"name": "欧洲议会", "url": "https://www.europarl.europa.eu/doceo/document/E-10-2026-000981_EN.html"},
+            {"name": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260417A08PZY00"},
+            {"name": "KhelNow", "url": "https://khelnow.com/gaming/stop-killing-games-gains-major-support-from-european-parliament-202604"},
+            {"name": "PEQ42", "url": "https://peq42.com/blog/stop-killing-games-massive-w-with-new-legislation-and-eu-hearings/"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-17",
+        "tags": ["Stop Killing Games", "欧洲议会", "数字权益", "监管", "欧盟", "停服"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "relatedNewsIds": [203, 195]
+    },
+    {
+        "id": 209,
+        "title": "中国Q1游戏市场收入971.72亿元同比+13%，端游暴增39%引领复苏",
+        "summary": "中国音数协游戏工委与伽马数据4月17日联合发布《2026年第一季度中国游戏产业季度报告》：Q1中国游戏市场实际销售收入971.72亿元，环比增长2.54%，同比增长13.38%。分板块：移动游戏676.23亿元(同比+6.28%)、客户端(端游)249.76亿元(同比+39.38%)、电竞游戏463.42亿元。中国自研游戏海外市场销售收入63.31亿美元（约432亿元人民币）同比稳定增长。端游39%同比增速为五年来最高，反映《剑网3》《燕云十六声》《永劫无间》等长青端游+跨端产品《异环》《鸣潮》等高品质新作带动的结构性复苏。Q1 971亿元为2021年以来单季度新高，中国游戏市场告别两年调整期进入新增长周期。",
+        "source": "中国音数协游戏工委",
+        "sourceUrl": "https://www.ithome.com/0/941/293.htm",
+        "sourceUrls": [
+            {"name": "IT之家", "url": "https://www.ithome.com/0/941/293.htm"},
+            {"name": "新浪财经", "url": "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-04-17/doc-inhuuyhy2209019.shtml"},
+            {"name": "36氪", "url": "https://www.36kr.com/p/3770751773098498"},
+            {"name": "搜狐", "url": "https://www.sohu.com/a/1011769164_121814834"},
+            {"name": "腾讯财经", "url": "https://news.qq.com/rain/a/20260422A05ZJ900"},
+            {"name": "腾讯文档", "url": ""}
+        ],
+        "category": "market",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-17",
+        "tags": ["中国游戏", "工委", "伽马数据", "Q1", "端游", "市场数据", "同比"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Q1 971.72亿元是中国游戏市场2021年以来单季度新高(What)。两大驱动力：①端游39%暴增：跨端产品(鸣潮/异环/三角洲行动等)将手游玩家反向导入PC端+长青端游(剑网3/燕云十六声)用户回流双因素；②海外市场63亿美元稳增：米哈游/腾讯/网易在欧美/东南亚市场增长抵消了国内版号趋严影响(Why)。对PC/Console产业链影响三层：①对端游CP(光子/西山居/北极光)是结构性利好，预计Q2持续加码端游投入；②对硬件厂商(NVIDIA/AMD/联想拯救者)是PC游戏装机的长期需求催化；③对海外平台(Steam/Epic)是中国自研游戏出海通路价值的强化(So What)。预期2026全年中国游戏市场可能突破4000亿元大关，端游占比回升至28-30%；跨端产品将成为厂商头号战略，PS/Xbox在中国的第三方引进趋势可能加速(What Next)。",
+        "relatedNewsIds": [207, 208, 147]
+    },
     {
         "id": 208,
         "title": "美国3月游戏硬件销售额暴增69%，Switch 2成Circana记录以来最快售罄硬件",
