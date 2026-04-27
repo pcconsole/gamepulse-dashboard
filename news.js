@@ -1,8 +1,8 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-04-24T18:05:00Z
-// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1200无新增腾讯文档数据)+web_search 12轮+新增8条id209-216)
+// 最后更新: 2026-04-27T18:00:00Z
+// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1217新增17行)+web_search 12轮+新增9条id217-225)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
@@ -173,6 +173,200 @@ const newsSources = [
 ];
 
 const newsData = [
+    {
+        "id": 225,
+        "title": "Xbox Game Pass降价重构：移除CoD首日入库+推出Starter Edition+Discord Nitro捆绑",
+        "summary": "微软4月21日宣布Xbox Game Pass全面降价（Ultimate降至$14.99/月、PC降至$9.99/月），同时确认未来《使命召唤》新作将不再首日入库Game Pass。GamesIndustry.biz援引Newzoo数据显示CoD在Game Pass中'严重蚕食销售'而未有效驱动订阅增长，是微软做出此决定的数据依据。同步曝光的Game Pass Starter Edition（约50+游戏含Stardew Valley/Fallout 4、每月10小时云游戏）将与Discord Nitro捆绑提供，标志着Xbox从'大而全'转向'分层精准投放'的订阅策略。新CEO Asha Sharma表示Game Pass'对太多玩家来说太贵了'。",
+        "source": "GamesIndustry.biz",
+        "sourceUrl": "https://www.gamesindustry.biz/why-xbox-took-call-of-duty-out-of-game-pass",
+        "sourceUrls": [
+            {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/why-xbox-took-call-of-duty-out-of-game-pass"},
+            {"name": "The Verge", "url": "https://www.theverge.com/news/917880/xbox-game-pass-starter-edition-discord-nitro-bundle"},
+            {"name": "Ars Technica", "url": "https://arstechnica.com/gaming/2026/04/microsofts-game-pass-gets-cheaper-loses-launch-day-call-of-duty-access/"},
+            {"name": "Windows Central", "url": "https://www.windowscentral.com/gaming/xbox/xbox-game-pass-price-gets-a-massive-price-cut-call-of-duty-2026-will-not-be-included-details"},
+            {"name": "VGC", "url": "https://www.purexbox.com/news/2026/04/xbox-game-pass-starter-edition-revealed-via-discord-nitro-leak"},
+            {"name": "Reuters", "url": "https://money.usnews.com/investing/news/articles/2026-04-21/microsoft-cuts-xbox-game-pass-price-to-remove-call-of-duty-day-one-inclusions"}
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-26",
+        "tags": ["Xbox", "Game Pass", "使命召唤", "CoD", "降价", "Discord", "Starter Edition", "订阅策略"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "Xbox Game Pass降价+CoD退出首日入库+Starter Edition三连发是Asha Sharma上任后最大战略转向(What)。Newzoo数据证实CoD首日入库蚕食$40+/份的零售全价购买而订阅转化率低于预期，$750亿收购动视的Game Pass拉新逻辑被数据证伪(Why)。短期Xbox将损失一批'只为CoD订阅Game Pass'的用户，但零售全价销售回升+降价覆盖更广用户群+Starter Edition通过Discord获取PC/移动端年轻用户形成三级漏斗；对行业意味着'订阅=一切首日入库'的叙事终结，EA Play/Ubisoft+可能效仿(So What)。预计2026 Holiday季CoD将以$70全价+Game Pass延迟6-12月入库的混合模式发售，Starter Edition可能Q3正式上线(What Next)。",
+        "relatedNewsIds": [200, 189, 188, 216]
+    },
+    {
+        "id": 224,
+        "title": "Xbox品牌重塑：'Microsoft Gaming'更名回归'Xbox'，Asha Sharma公布四大优先战略+Project Helix性能领先",
+        "summary": "Xbox新CEO Asha Sharma与CCO Matt Booty于4月24日发布内部备忘录《We Are Xbox》，宣布终结'Microsoft Gaming'品牌名称、全面回归'Xbox'身份认同。四大优先战略：①重新评估独占策略(重点第一方IP)②Project Helix次世代主机将'性能领先'、兼容PC游戏、与AMD合作预计2027年推出③继续考虑收购工作室④Game Pass重新定位为分层精准投放。此前暴雪动画部门已协助Playground Games开发Fable重启版，体现跨团队协作新模式。Xbox品牌回归是对Phil Spencer时代'Microsoft Gaming'大伞化策略的根本修正。",
+        "source": "GameSpot",
+        "sourceUrl": "https://www.gamespot.com/articles/microsoft-gaming-is-dead-to-be-replaced-by-return-to-xbox-branding-report/1100-6539586/",
+        "sourceUrls": [
+            {"name": "GameSpot", "url": "https://www.gamespot.com/articles/microsoft-gaming-is-dead-to-be-replaced-by-return-to-xbox-branding-report/1100-6539586/"},
+            {"name": "虎嗅", "url": "https://www.huxiu.com/article/4853672.html"},
+            {"name": "TechNode", "url": "https://cn.technode.com/post/2026-04-24/xbox-exclusivity-project-helix-microsoft-gaming-asha-sharma/"},
+            {"name": "3DMGame", "url": "https://www.3dmgame.com/"},
+            {"name": "VGC", "url": "https://www.videogameschronicle.com/"}
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-25",
+        "tags": ["Xbox", "Microsoft Gaming", "品牌重塑", "Asha Sharma", "Project Helix", "独占策略", "次世代主机"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "终结'Microsoft Gaming'回归'Xbox'是Asha Sharma对Spencer时代品牌稀释的纠偏(What)。Spencer推动的'Microsoft Gaming'大伞化旨在统一Xbox/Bethesda/Activision，但导致Xbox硬件品牌认知弱化+核心玩家流失+内部组织边界模糊(Why)。回归Xbox品牌+公布Helix性能领先+重新评估独占=向核心玩家发出'Xbox is back'信号；Project Helix兼容PC游戏+AMD合作暗示x86架构延续，对开发者降低移植成本；'继续考虑收购'意味着微软仍有$100B+现金储备可能出手中型工作室(So What)。Helix 2027年测试版若能超越PS5 Pro性能，将是Xbox自2013年Xbox One以来首次在硬件代际争夺中占据主动(What Next)。",
+        "relatedNewsIds": [200, 189, 188, 225, 201]
+    },
+    {
+        "id": 223,
+        "title": "华纳兄弟股东投票通过派拉蒙$1100亿合并案，好莱坞+游戏版图或将剧变",
+        "summary": "华纳兄弟Discovery股东以压倒性多数批准与派拉蒙Skydance的$1100亿合并交易，创下娱乐行业史上最大规模并购。交易仍需美国司法部和欧盟委员会审批通过。合并后的新公司将拥有DC宇宙+派拉蒙影业+Warner Bros. Games(旗下NetherRealm/Rocksteady/TT Games/Monolith等游戏工作室)+Paramount Games。此前Netflix曾参与竞购。该交易对游戏行业的直接影响在于WB Games未来可能获得更大资源投入或面临整合裁员风险，DC IP游戏开发方向可能调整。",
+        "source": "GamesIndustry.biz",
+        "sourceUrl": "https://www.gamesindustry.biz/",
+        "sourceUrls": [
+            {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/"},
+            {"name": "Research Blaze", "url": "https://researchblaze.com/"}
+        ],
+        "category": "policy",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-26",
+        "tags": ["华纳兄弟", "派拉蒙", "并购", "WB Games", "DC", "Skydance", "好莱坞"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "WB+派拉蒙$1100亿合并是好莱坞+流媒体+游戏三重版图的地震级事件(What)。双方均面临流媒体亏损+院线收缩压力，合并旨在规模效应降本+IP矩阵互补(DC+变形金刚+星际迷航+碟中谍)(Why)。对游戏行业直接影响：WB Games旗下多个工作室(NetherRealm/Rocksteady/TT Games)可能面临组织整合+裁员风险；DC IP游戏线(蝙蝠侠/自杀小队)可能获得更大营销预算也可能被重新定位；Netflix此前竞购失败意味着游戏化IP将留在传统娱乐集团手中而非流媒体巨头(So What)。预计2026H2司法部反垄断审查将聚焦流媒体市场份额，交易最快2027年Q1完成(What Next)。",
+        "relatedNewsIds": [208, 186, 200]
+    },
+    {
+        "id": 222,
+        "title": "SK海力士Q1利润暴涨500%、净利润率77%：存储芯片超级周期加剧主机/PC硬件成本压力",
+        "summary": "存储芯片巨头SK海力士公布2026年Q1财报：营收52.58万亿韩元(~$379亿)、营业利润37.61万亿韩元同比暴涨405%、净利润同比激增498%、净利润率高达77%——超越NVIDIA GPU业务利润水平。主要驱动力为AI服务器HBM(高带宽内存)需求激增推高整体DRAM/NAND价格。CNBC、TrendForce等均确认SK海力士营业利润率达72%，创半导体行业历史纪录。对游戏行业而言，主机和PC的RAM/存储成本面临持续上行压力，AI与消费电子的需求竞争正在加剧硬件供应侧成本。Valve Steam Machine定价困难、PS6 BOM成本上升等均与此直接相关。",
+        "source": "SK Hynix官方",
+        "sourceUrl": "https://news.skhynix.com/q1-2026-business-results/",
+        "sourceUrls": [
+            {"name": "SK Hynix官方", "url": "https://news.skhynix.com/q1-2026-business-results/"},
+            {"name": "CNBC", "url": "https://www.cnbc.com/2026/04/23/sk-hynix-earnings-ai-memory-shortage-hbm-demand.html"},
+            {"name": "TrendForce", "url": "https://www.trendforce.com/news/2026/04/23/news-sk-hynix-reports-5x-1q26-profit-surge-operating-margin-hits-72-outpacing-tsmc-and-micron/"},
+            {"name": "Korea JoongAng Daily", "url": "https://koreajoongangdaily.joins.com/news/2026-04-23/business/industry/SK-hynix-posts-fivefold-profit-surge-in-Q1-beats-estimates/2575839"},
+            {"name": "3DMGame", "url": "https://www.3dmgame.com/"}
+        ],
+        "category": "hardware",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-25",
+        "tags": ["SK海力士", "存储芯片", "HBM", "DRAM", "内存涨价", "AI", "硬件成本", "供应链"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "SK海力士Q1利润率77%标志着存储芯片超级周期进入狂热阶段(What)。AI训练/推理服务器对HBM3E的天量需求吸走了产能，倒逼消费级DRAM/NAND同步涨价——游戏主机/PC作为消费电子，在存储芯片采购中处于AI数据中心之后的第二优先级(Why)。对游戏行业三重冲击：①Valve Steam Machine因8GB显存不足+RAM成本上升定价两难②PS6 BOM中存储成本占比可能从PS5的~15%上升至20%+③PC DIY市场DDR5内存涨价挤压中端玩家预算。SK海力士利润率超NVIDIA意味着'卖铲子的比挖金的更赚钱'——上游利润向存储集中(So What)。三星、美光Q2财报预计延续超级周期，H2消费级DRAM仍看涨10-15%(What Next)。",
+        "relatedNewsIds": [209, 201, 175, 188]
+    },
+    {
+        "id": 221,
+        "title": "《最终幻想14》Fan Fest公布新资料片Evercold(2027年1月)+Switch 2版8月上线",
+        "summary": "Square Enix在2026 FFXIV Fan Fest(洛杉矶)主题演讲中公布：①新资料片《Evercold》(8.0)将于2027年1月上线②FF14将于2026年8月登陆Switch 2平台(无需Nintendo Switch Online会员)③新增Evangelion联动团队副本④免费试玩范围扩大至Shadowbringers⑤装备成长系统大幅优化。制作人吉田直树主持全场。Switch 2版需单独订阅模式(任天堂要求)。FF14作为全球最成功的MMORPG之一(月活超2400万)登陆Switch 2，将为任天堂平台带来持续性订阅收入。",
+        "source": "Square Enix官方",
+        "sourceUrl": "https://press.na.square-enix.com/SQUARE-ENIX-ANNOUNCES-EVERCOLD-LATEST-FINAL-FANTASY-XIV-EXPANSION-SET-",
+        "sourceUrls": [
+            {"name": "Square Enix官方", "url": "https://press.na.square-enix.com/SQUARE-ENIX-ANNOUNCES-EVERCOLD-LATEST-FINAL-FANTASY-XIV-EXPANSION-SET-"},
+            {"name": "Windows Central", "url": "https://www.windowscentral.com/gaming/ffxiv-announces-new-expansion-evercold-during-fanfest-2026-keynote-and-whoa-it-already-has-a-release-date"},
+            {"name": "Gematsu", "url": "https://www.gematsu.com/2026/04/final-fantasy-xiv-evercold-expansion-switch-2-version-and-evangelion-collaboration-announced"},
+            {"name": "RPGamer", "url": "https://rpgamer.com/2026/04/final-fantasy-xiv-evercold-expansion-switch-2-version-announced/"},
+            {"name": "17173", "url": "https://news.17173.com/content/04252026/054634868.shtml"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-27",
+        "tags": ["FF14", "最终幻想14", "Evercold", "Switch 2", "Square Enix", "MMORPG", "粉丝节"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "FF14登陆Switch 2是SE多平台化+任天堂扩展核心玩家阵营的双赢(What)。FF14月活2400万+持续订阅收入是SE最稳定的现金牛，Switch 2登陆意味着任天堂首次拥有MMO级别的持续性服务型产品(Why)。对Switch 2意义重大：证明其算力足以运行大型在线游戏,拓宽从'单机休闲'到'在线服务'的用户画像(So What)。",
+        "relatedNewsIds": [200, 152]
+    },
+    {
+        "id": 220,
+        "title": "《生化危机：安魂曲》销量突破700万份，成系列史上销售最快作品",
+        "summary": "卡普空庆祝《生化危机：安魂曲(Resident Evil: Requiem)》销量突破700万份里程碑，确认该作为系列史上销售最快的作品。发行商举办庆功宴，TGA创办人Geoff Keighley出席。此前该作于3月上线后快速突破百万并持续增长(id 127覆盖过首周表现)。卡普空RE引擎+品牌力+多平台同步发售策略再次证明行之有效。",
+        "source": "VGC",
+        "sourceUrl": "https://www.videogameschronicle.com/",
+        "sourceUrls": [
+            {"name": "VGC", "url": "https://www.videogameschronicle.com/"},
+            {"name": "Eurogamer", "url": "https://www.eurogamer.net/"},
+            {"name": "IT之家", "url": "https://www.ithome.com/"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-27",
+        "tags": ["卡普空", "Capcom", "生化危机", "安魂曲", "销量里程碑", "700万"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "relatedNewsIds": [127, 212]
+    },
+    {
+        "id": 219,
+        "title": "《光与影：远征33》一周年销量突破800万，成2025年最大黑马RPG",
+        "summary": "法国独立工作室Sandfall Interactive宣布《Clair Obscur: Expedition 33》一周年累计销量突破800万份（全平台），并发布免费纪念更新（新发型等内容）。该作曾于2025年4月首日入库Xbox Game Pass，被评为Game Pass 2025年最受欢迎第三方新作。一年内从零到800万+多项TGA年度奖项，证明了Game Pass首日入库策略对中型工作室的流量放大效应。",
+        "source": "The Gamer",
+        "sourceUrl": "https://www.thegamer.com/clair-obscur-expedition-33-sales-2026/",
+        "sourceUrls": [
+            {"name": "The Gamer", "url": "https://www.thegamer.com/clair-obscur-expedition-33-sales-2026/"},
+            {"name": "Pure Xbox", "url": "https://www.purexbox.com/news/2026/04/expedition-33-celebrates-one-year-anniversary-with-small-update-on-xbox-and-beyond"},
+            {"name": "Gematsu", "url": "https://www.gematsu.com/2026/04/clair-obscur-expedition-33-sales-top-eight-million"},
+            {"name": "Eurogamer", "url": "https://www.eurogamer.net/"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-25",
+        "tags": ["远征33", "Expedition 33", "Sandfall Interactive", "销量800万", "Game Pass", "独立游戏", "RPG"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "relatedNewsIds": [216, 225]
+    },
+    {
+        "id": 218,
+        "title": "前PlayStation负责人吉田秀树：不认为PS游戏同步PC发售是好主意",
+        "summary": "前PlayStation全球独立游戏负责人吉田秀树(Shuhei Yoshida)在活动主题演讲中明确表示，不认为PlayStation第一方AAA游戏同日同步发行PC版是好策略。吉田指出PS独占窗口期是维护硬件平台价值和生态粘性的关键，但承认PC移植将继续存在以回收高昂开发成本。此言论呼应了近期索尼收紧PC策略的传闻（此前Bloomberg报道索尼正重新评估PC发行时间窗口），但吉田已非在任高管，其观点不代表现任管理层决策。",
+        "source": "Eurogamer",
+        "sourceUrl": "https://www.eurogamer.net/shuhei-yoshida-playstation-pc-strategy-keynote",
+        "sourceUrls": [
+            {"name": "Eurogamer", "url": "https://www.eurogamer.net/shuhei-yoshida-playstation-pc-strategy-keynote"},
+            {"name": "PSU", "url": "https://www.psu.com/news/shuhei-yoshida-says-ps5-games-coming-to-pc-on-day-one-isnt-a-good-strategy-for-a-platform-holder-like-playstation/"},
+            {"name": "NotebookCheck", "url": "https://www.notebookcheck.net/Ex-PlayStation-boss-thinks-PS5-PC-ports-will-continue-but-opposes-day-one-games.1281753.0.html"},
+            {"name": "RespawnFirst", "url": "https://respawnfirst.com/shuhei-yoshida-says-he-doesnt-see-any-proof-of-playstation-changing-its-pc-strategy/"}
+        ],
+        "category": "platform",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-26",
+        "tags": ["PlayStation", "索尼", "PC移植", "吉田秀树", "独占策略", "平台战略"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "relatedNewsIds": [200, 189, 214]
+    },
+    {
+        "id": 217,
+        "title": "《极限竞速：地平线5》PS5版销量突破500万份，验证Xbox多平台策略商业合理性",
+        "summary": "移植商Virtuos官网确认《Forza Horizon 5》PS5版销量突破500万份，Metacritic评分92分，成为2025年PS5平台最畅销游戏之一。这一数据直接支撑了Xbox多平台策略的商业合理性——一款3年前的Xbox/PC独占通过PS5移植实现了显著增量收入。与此形成对比的是《星空》PS5版首周仅14万份(行1169数据)，表明'品牌力+口碑'是决定多平台移植成功的关键而非所有Xbox游戏都能复制FH5的成绩。FH6将于5月19日首发PC和Xbox，PS5版延期发布。",
+        "source": "VGC",
+        "sourceUrl": "https://www.videogameschronicle.com/",
+        "sourceUrls": [
+            {"name": "VGC", "url": "https://www.videogameschronicle.com/"},
+            {"name": "3DMGame", "url": "https://www.3dmgame.com/"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-25",
+        "tags": ["极限竞速", "FH5", "PS5", "多平台", "Xbox", "Virtuos", "500万销量"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "relatedNewsIds": [211, 200, 189, 152]
+    },
     {
         "id": 216,
         "title": "ID@Xbox Spring Showcase 2026：微软联手IGN展示20+款独立新作，多款首发入库Game Pass",
