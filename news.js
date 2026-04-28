@@ -1,8 +1,8 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-04-27T18:00:00Z
-// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1217新增17行)+web_search 12轮+新增9条id217-225)
+// 最后更新: 2026-04-28T18:00:00Z
+// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1227新增10行)+web_search 14轮+新增8条id226-233)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
@@ -174,7 +174,184 @@ const newsSources = [
 
 const newsData = [
     {
-        "id": 225,
+        "id": 233,
+        "title": "Circana美国3月游戏市场：硬件销量暴涨69%至$5亿，Switch 2蝉联第一、为美国史上第二快销主机",
+        "summary": "Circana发布2026年3月美国游戏市场数据：总消费支出$53亿(同比+12%)，硬件销售$5亿(同比+69%)由Switch 2强力驱动。Switch 2蝉联月度和年度硬件销量/销售额双冠，为美国追踪历史(1995年至今)第二快销主机平台。PS5紧随其后(同比+3%)。软件方面MLB The Show 26登顶、Marathon排第4、Pokemon Pokopia排第5。主机内容消费同比+22%，其中主机游戏支出增长由Switch 2首发窗口+40%增幅驱动。",
+        "source": "Circana",
+        "sourceUrl": "https://www.gamesindustry.biz/us-hardware-sales-rose-69-in-march-2026-following-strong-switch-2-performance-us-monthly-charts",
+        "sourceUrls": [
+            {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/us-hardware-sales-rose-69-in-march-2026-following-strong-switch-2-performance-us-monthly-charts"},
+            {"name": "GameSpot", "url": "https://www.gamespot.com/articles/march-2026-was-a-huge-month-for-console-sales-in-the-us/1100-6539556/"},
+            {"name": "Insider Gaming", "url": "https://insider-gaming.com/video-game-hardware-sales-rose-69-march-2026/"},
+            {"name": "NeoGAF", "url": "https://www.neogaf.com/threads/circana-march-2026-1-mlb-the-show-3-wwe-4-marathon-5-pokopia-switch-2-1-march-and-ytd-12-vs-switch-1-10-month-ltd-2nd-fastest-console.1696060/"}
+        ],
+        "category": "market",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-22",
+        "tags": ["Circana", "美国市场", "Switch 2", "硬件销量", "PS5", "Marathon", "月度报告"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "3月美国游戏硬件+69%至$5亿是Switch 2发售以来最强月度表现(What)。Switch 2上市10个月累计销量超初代Switch同期12%，锁定'美国史上第二快销主机'(仅次于Wii)，证明$449定价+Mario Kart World首发策略成功(Why)。对行业意味着主机市场仍有强劲需求——硬件涨价周期中Switch 2逆势增长说明内容驱动>价格敏感；PS5同比+3%说明涨价后销量趋稳而非崩盘(So What)。4月有Pragmata/Diablo IV Lord of Hatred等大作集中发售，预计Q2软件支出将维持双位数增长(What Next)。",
+        "relatedNewsIds": [175, 209, 201]
+    },
+    {
+        "id": 232,
+        "title": "Valve官宣Steam Controller 5月4日发售$99、IGN 9分'PC手柄新标杆'；确认Steam Deck 2全力开发中",
+        "summary": "Valve 4月27日正式公布Steam Controller售价$99并定档5月4日发售，评测同步解禁。IGN授予9分'编辑选择奖'称其为'PC手柄新标杆'——采用隧道磁阻传感器摇杆(零漂移)、触觉反馈触控板、可替换摇杆帽。发售地区覆盖北美/欧洲/日韩/港台。同日Valve程序员Pierre-Loup Griffais接受IGN采访确认Steam Deck 2'正全力开发中'，瞄准重大升级但上市日期未定。Steam Controller将先于Steam Machine发售(后者因RAM供应危机延期)。",
+        "source": "IGN",
+        "sourceUrl": "https://nordic.ign.com/steam-controller/106850/valve-confirms-steam-controller-price-and-release-date-promises-more-news-on-steam-machine-soon",
+        "sourceUrls": [
+            {"name": "IGN", "url": "https://nordic.ign.com/steam-controller/106850/valve-confirms-steam-controller-price-and-release-date-promises-more-news-on-steam-machine-soon"},
+            {"name": "Wccftech", "url": "https://wccftech.com/steam-controller-release-date-price-no-update-on-steam-machine/"},
+            {"name": "PCMag", "url": "https://www.pcmag.com/news/steam-deck-2-development-continues-valve-says-its-hard-at-work"},
+            {"name": "GamesRadar", "url": "https://www.gamesradar.com/hardware/desktop-pc/steam-deck-2-still-in-the-works-valve-says-but-steam-machine-and-steam-controller-come-first-a-lot-of-what-were-doing-here-will-be-learnings-that-build-up-to-it/"},
+            {"name": "3DM", "url": "https://www.3dmgame.com/"}
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-28",
+        "tags": ["Valve", "Steam Controller", "Steam Deck 2", "手柄", "Steam Machine", "PC硬件"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Steam Controller $99+IGN 9分标志着Valve硬件路线图正式落地第一子(What)。Valve原计划2026年初Controller/Machine/Frame三件套同发，但RAM涨价迫使Machine延期，Controller率先发售是'拆包策略'——用低成本外设测试市场+积累SteamOS手柄生态(Why)。$99定价精准卡位DualSense($70)/Xbox($60)与SCUF($200+)之间的空白带；Steam Deck 2'全力开发中'但无日期=最早2027年，意味着Valve硬件生态短期仍以Deck 1+Controller为核心(So What)。Steam Machine若年底前发售将与PS6/Helix 2027假期档形成三方角力，Controller的市场表现将决定Valve对Machine定价和上市节奏的信心(What Next)。",
+        "relatedNewsIds": [198, 224, 222]
+    },
+    {
+        "id": 231,
+        "title": "PS5东南亚和韩国大幅涨价：韩国数字版涨43%，5月1日生效",
+        "summary": "索尼4月27日通过PlayStation Blog宣布PS5、PS5 Pro及PS Portal在东南亚和韩国地区涨价，5月1日起生效。韩国PS5数字版涨幅高达43%(至858,000韩元)，为全球PS5涨价幅度之最。标准版、Pro版和PS Portal在新加坡、马来西亚、泰国、印尼等东南亚国家同步上调。索尼归因于'全球经济环境的持续压力'。这是PS5生命周期内继美国/欧洲/日本后的第四波区域涨价，Kotaku称其为'前所未有的PS5涨价潮'(unprecedented)。",
+        "source": "PlayStation Blog",
+        "sourceUrl": "https://blog.playstation.com/2026/03/27/20260327-ps/",
+        "sourceUrls": [
+            {"name": "PlayStation Blog", "url": "https://blog.playstation.com/2026/03/27/20260327-ps/"},
+            {"name": "Wccftech", "url": "https://wccftech.com/ps5-ps5-pro-ps-portal-price-increase-asia-korea/"},
+            {"name": "VGC", "url": "https://www.videogameschronicle.com/news/south-korea-and-southeast-asia-are-the-latest-regions-to-get-a-ps5-price-increase/"},
+            {"name": "Kotaku", "url": "https://kotaku.com/sony-jacks-up-the-price-of-the-ps5-in-even-more-countries-amid-continued-pressures-in-the-global-economic-landscape-2000690815"},
+            {"name": "3DM", "url": "https://www.3dmgame.com/"}
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-28",
+        "tags": ["PlayStation", "PS5", "涨价", "韩国", "东南亚", "PS5 Pro", "硬件成本"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "PS5东南亚/韩国涨价是索尼全球涨价潮的第四波，韩国数字版+43%创PS5全球最大单区涨幅(What)。索尼在RAM成本+关税+汇率三重压力下选择逐区涨价而非一步到位，降低单次涨价的舆论冲击——但累计效果已使PS5 Pro全球均价从$699逼近$900+(Why)。韩国市场特殊性在于PC游戏主导(端游+MMORPG占比超60%)、主机渗透率本就偏低，43%涨幅可能将主机玩家加速推向PC/云游戏；东南亚作为增长市场，涨价可能抑制PS5生命末期的装机增量(So What)。索尼已完成北美/欧洲/日本/亚洲四大区域涨价，下一步可能是拉美和中东，PS5生命周期终端定价可能全面超越$600(What Next)。",
+        "relatedNewsIds": [175, 222, 200]
+    },
+    {
+        "id": 230,
+        "title": "Xbox CEO夏尔马警告：内存短缺将直接影响Project Helix定价和供应",
+        "summary": "微软Xbox CEO Asha Sharma接受Game File采访时确认，持续的全球内存短缺将对下一代Xbox主机Project Helix的定价和产品可用性产生直接影响。Sharma表示'内存成本是我们在规划Helix时必须认真面对的因素'。多家媒体(GameSpot/GamesIndustry.biz/GameRant)分析认为，AI数据中心对HBM/DDR5的天量需求是根本原因，Helix最终售价可能从此前预估的$1200-1500进一步上升。这是微软首次由CEO层级公开承认内存危机对次世代主机的影响。",
+        "source": "Game File",
+        "sourceUrl": "https://gamerant.com/xbox-project-helix-price-availability-memory-shortage-ceo-comment/",
+        "sourceUrls": [
+            {"name": "GameRant", "url": "https://gamerant.com/xbox-project-helix-price-availability-memory-shortage-ceo-comment/"},
+            {"name": "GameSpot", "url": "https://www.gamespot.com/articles/next-gen-xbox-impacted-by-memory-crisis-new-ceo-admits/1100-6539620/"},
+            {"name": "Wccftech", "url": "https://wccftech.com/xbox-asha-sharma-memory-crisis-project-helix-price/"},
+            {"name": "GamesIndustry.biz/Game Developer", "url": "https://www.gamedeveloper.com/business/xbox-boss-memory-crisis-could-impact-next-gen-hardware-availability-and-pricing"},
+            {"name": "新浪科技", "url": "https://finance.sina.com.cn/tech/digi/2026-04-28/doc-inhvzfsh8537657.shtml"}
+        ],
+        "category": "hardware",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-28",
+        "tags": ["Xbox", "Project Helix", "内存短缺", "Asha Sharma", "次世代主机", "RAM", "定价"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "Xbox CEO亲口承认内存危机影响Helix是次世代主机定价不确定性的最高级别信号(What)。AI数据中心对HBM3E/DDR5的需求吞噬了产能,SK海力士Q1利润率77%意味着存储厂商无动力向消费级倾斜产能——主机作为价格敏感型消费电子在采购优先级中排在AI之后(Why)。Helix此前$1200-1500预估已是主机史上最贵,内存涨价可能推至$1500-1800区间,与高端游戏PC正面竞争;索尼PS6同样面临BOM $760+的压力——2027年次世代主机可能全面进入'千美元时代',从根本上改变主机vs PC的竞争格局(So What)。预计2026下半年内存价格走势将决定Helix最终定价,微软可能被迫在硬件规格(内存容量/带宽)和售价之间做出痛苦取舍(What Next)。",
+        "relatedNewsIds": [222, 224, 200, 175]
+    },
+    {
+        "id": 229,
+        "title": "英特尔警告：AI算力需求正推高CPU价格,RAM与存储成本已先行上涨",
+        "summary": "英特尔正式发出预警，AI数据中心大规模采购已推高RAM和存储价格，CPU价格可能成为下一个受影响的环节。VGC/TechSpot报道，服务器CPU价格已上涨约20%，消费级CPU上涨5-10%且分析师预期2026下半年还将再涨8-10%。AMD和英特尔消费级CPU价格在过去一个月内已上涨约10%，全年累计可能达16-17%。对PC游戏硬件意味着不仅内存贵了，CPU也将变贵,PC装机总成本面临全面上行。",
+        "source": "VGC",
+        "sourceUrl": "https://www.videogameschronicle.com/news/intel-warns-cpu-prices-could-be-the-next-to-rise-due-to-ai-demand/",
+        "sourceUrls": [
+            {"name": "VGC", "url": "https://www.videogameschronicle.com/news/intel-warns-cpu-prices-could-be-the-next-to-rise-due-to-ai-demand/"},
+            {"name": "TechSpot", "url": "https://www.techspot.com/"},
+            {"name": "Wccftech", "url": "https://wccftech.com/amd-intel-consumer-cpu-prices-jump-10-percent-in-a-month/"},
+            {"name": "tbreak", "url": "https://tbreak.com/intel-cpu-prices-rise-ai-demand/"}
+        ],
+        "category": "hardware",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-28",
+        "tags": ["英特尔", "CPU", "涨价", "AI", "硬件成本", "AMD", "PC装机"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "英特尔CPU涨价预警标志着AI需求引发的硬件成本上涨从上游存储芯片蔓延至处理器层面——'RAMageddon'正在升级为全面的'半导体通胀'(What)。此前只有DRAM/NAND涨价,现在CPU加入意味着PC装机的三大核心组件(CPU+内存+存储)全线上涨,全年累计16-17%的CPU涨幅将使中端游戏PC($800-1200)预算被严重挤压(Why)。对游戏行业的传导链：PC装机成本↑→玩家推迟升级→Steam硬件调查中低端配置占比↑→开发者需兼顾更多低配PC→游戏画面优化压力↑(So What)。预计2026 Holiday季PC硬件价格仍将高位运行,NVIDIA/AMD新GPU(5070/9070)可能因芯片成本上涨而定价更高(What Next)。",
+        "relatedNewsIds": [222, 230, 175]
+    },
+    {
+        "id": 228,
+        "title": "D加密时代终结：破解组DenuvOwO首次实现所有Denuvo游戏全破,非VR游戏清零",
+        "summary": "2026年4月26日,CrackWatch/游民星空等确认：市面上所有使用Denuvo(D加密)保护的非VR PC游戏已全部被破解或绕过,未破解游戏清单首次清零。破解组DenuvOwO和voices38是主要推动者,采用Hypervisor绕过技术+传统破解双管齐下。4月密集破解了《黑神话：悟空》《Pragmata》《刺客信条：英灵殿》等大作。TheGamer/TechSpot/VGTimes等将此称为'D加密时代终结'。仅剩部分VR游戏和2026年未发售新作仍受保护。",
+        "source": "TheGamer",
+        "sourceUrl": "https://www.thegamer.com/there-are-no-more-remaining-uncracked-denuvo-games/",
+        "sourceUrls": [
+            {"name": "TheGamer", "url": "https://www.thegamer.com/there-are-no-more-remaining-uncracked-denuvo-games/"},
+            {"name": "VGTimes", "url": "https://vgtimes.com/gaming-news/154805-end-of-an-era-hackers-crack-every-denuvo-protected-game-for-the-first-time-ever-the-uncracked-list-is-empty.html"},
+            {"name": "TechSpot", "url": "https://www.techspot.com/news/112202-denuvo-may-have-reached-end-every-protected-pc.html"},
+            {"name": "游民星空", "url": "https://www.gamersky.com/news/202604/2131232.shtml"}
+        ],
+        "category": "market",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-28",
+        "tags": ["Denuvo", "D加密", "破解", "DRM", "PC游戏", "DenuvOwO", "Hypervisor"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "Denuvo非VR游戏全破清零是PC游戏DRM领域的分水岭事件(What)。Denuvo自2014年推出以来一直是PC游戏防盗版的行业标准,主要价值在于保护发售窗口期(首周/首月)销售——全部被破解意味着这一'时间窗口保护'逻辑被彻底瓦解(Why)。短期看：发行商可能加速撤除Denuvo(降低性能损耗获取好评)+转向服务端验证/在线服务模式；EA/Ubisoft等依赖Denuvo的大厂需要重新评估PC防盗版策略；对独立开发者影响较小(本就不用Denuvo)(So What)。Irdeto(Denuvo母公司)可能推出下一代DRM技术应对,但Hypervisor级别的绕过手段意味着技术军备竞赛已进入新阶段(What Next)。",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 227,
+        "title": "Digital Bros以3200万元收购《明末：渊虚之羽》完整IP,505 Games获全部所有权",
+        "summary": "意大利Digital Bros集团(505 Games母公司)宣布以3200万人民币(约400万欧元)从成都灵泽科技(Leenzee)手中完全收购类魂ARPG《明末：渊虚之羽》全部IP所有权,包括未来开发与投资权益,无需再向原开发商支付版税。该游戏2025年7月发售后市场表现亮眼,销量超百万份。核心制作人夏思源此前已离职、原团队解散,海外玩家集体呼吁主创回归主导续作开发。",
+        "source": "IT之家",
+        "sourceUrl": "https://www.ithome.com/0/944/229.htm",
+        "sourceUrls": [
+            {"name": "IT之家", "url": "https://www.ithome.com/0/944/229.htm"},
+            {"name": "游民星空", "url": "https://www.gamersky.com/news/202604/2132026.shtml"},
+            {"name": "17173", "url": "https://news.17173.com/content/04282026/080335739.shtml"},
+            {"name": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260428A04QHQ00"}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-28",
+        "tags": ["505 Games", "Digital Bros", "明末渊虚之羽", "IP收购", "类魂", "中国游戏", "灵泽科技"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "3200万元全资收购国产魂系IP是海外发行商深度布局中国原创IP的典型案例(What)。灵泽科技核心团队解散+制作人离职意味着原工作室已无力持续运营IP,505 Games作为全球发行方选择'买断IP→自建团队开发续作'的路线,本质是将'发行关系'升级为'IP所有者'(Why)。对中国游戏产业的启示：中小团队即使产品成功(百万销量),若核心人才流失仍面临IP流失风险——505 Games以约400万欧元获得了一个已验证的百万级IP,收购价格相对产品收入(据悉超3000万欧元)十分划算(So What)。",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 226,
+        "title": "《暗黑破坏神4：憎恨之躯》资料片4月28日全球发售,新增圣骑士和术士双职业+技能树2.0",
+        "summary": "暴雪《暗黑破坏神4》第二部大型资料片《憎恨之躯》(Lord of Hatred)于4月28日正式全球发售,登陆PS5/PS4/Xbox Series/Xbox One/PC全平台。资料片新增圣骑士(Paladin)和术士(Warlock)两个可玩职业,开放全新区域Skovos群岛,推出技能树2.0覆盖全部8个职业,完结'憎恨时代'主线剧情。评测普遍积极,IGN/GameSpot称其为'暗黑4至今最好的资料片'。此前印尼评级机构泄露Switch评级暗示可能登陆Switch 2。",
+        "source": "Blizzard官方",
+        "sourceUrl": "https://diablo4.blizzard.com/en-us/lord-of-hatred/",
+        "sourceUrls": [
+            {"name": "Blizzard官方", "url": "https://diablo4.blizzard.com/en-us/lord-of-hatred/"},
+            {"name": "IGN", "url": "https://www.ign.com/articles/diablo-4-lord-of-hatred-global-release-times-and-details-confirmed"},
+            {"name": "PC Gamer", "url": "https://www.pcgamer.com/games/action/diablo-4-lord-of-hatred-release-date-launch-times/"},
+            {"name": "GameSpot", "url": "https://www.gamespot.com/articles/diablo-4-lord-of-hatred-pre-load-and-launch-times-revealed/1100-6539585/"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-28",
+        "tags": ["暗黑破坏神4", "Diablo IV", "Lord of Hatred", "暴雪", "资料片", "圣骑士", "术士"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "relatedNewsIds": [188]
+    },
+    {
         "title": "Xbox Game Pass降价重构：移除CoD首日入库+推出Starter Edition+Discord Nitro捆绑",
         "summary": "微软4月21日宣布Xbox Game Pass全面降价（Ultimate降至$14.99/月、PC降至$9.99/月），同时确认未来《使命召唤》新作将不再首日入库Game Pass。GamesIndustry.biz援引Newzoo数据显示CoD在Game Pass中'严重蚕食销售'而未有效驱动订阅增长，是微软做出此决定的数据依据。同步曝光的Game Pass Starter Edition（约50+游戏含Stardew Valley/Fallout 4、每月10小时云游戏）将与Discord Nitro捆绑提供，标志着Xbox从'大而全'转向'分层精准投放'的订阅策略。新CEO Asha Sharma表示Game Pass'对太多玩家来说太贵了'。",
         "source": "GamesIndustry.biz",
