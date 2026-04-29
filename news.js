@@ -1,8 +1,8 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-04-28T18:00:00Z
-// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1227新增10行)+web_search 14轮+新增8条id226-233)
+// 最后更新: 2026-04-29T18:00:00Z
+// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1227无新增批次)+web_search 12轮+新增13条id234-246)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
@@ -4994,6 +4994,278 @@ const newsData = [
             "订阅"
         ],
         "sentiment": "positive"
+    },
+    {
+        "id": 246,
+        "title": "英特尔警告AI推理需求正推高CPU价格：Q2可能再涨30%，消费级CPU年内累计涨幅或达16-17%",
+        "summary": "英特尔正式发出警告，AI推理(inference)工作负载的快速增长正在重塑CPU需求格局，导致服务器CPU价格自3月以来已上涨10-20%，消费级CPU上涨约5-10%。分析师预期2026下半年还将再涨8-10%，全年累计涨幅可能达到16-17%。AMD和英特尔消费级CPU价格在过去一个月内已上涨约10%，标志着AI数据中心大规模采购已开始向消费级市场传导PC硬件成本压力。",
+        "source": "VGC",
+        "sourceUrl": "https://www.videogameschronicle.com/news/intel-warns-cpu-prices-could-be-the-next-to-rise-due-to-ai-demand/",
+        "sourceUrls": [
+            {"name": "VGC", "url": "https://www.videogameschronicle.com/news/intel-warns-cpu-prices-could-be-the-next-to-rise-due-to-ai-demand/"},
+            {"name": "Tom's Hardware", "url": "https://www.tomshardware.com/pc-components/cpus/shifting-need-for-cpus-in-ai-workloads-drives-intensifying-shortages-price-hikes"},
+            {"name": "Insider Gaming", "url": "https://insider-gaming.com/cpu-prices-rising-again/"},
+            {"name": "PCVenus", "url": "https://pcvenus.com/intel-cpu-price-hike-may-2026-ai-demand/"}
+        ],
+        "category": "hardware",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-30",
+        "tags": ["英特尔", "CPU", "涨价", "AI推理", "硬件成本", "AMD", "PC装机", "DDR5"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "英特尔CPU涨价预警标志着AI需求引发的硬件成本上涨从上游存储芯片蔓延至处理器层面——'RAMageddon'正在升级为全面的'半导体通胀'(What)。AI推理 workloads 的 CPU 需求增速已超过训练(train)，因为推理需要大量通用计算而非专用加速器，这对x86 CPU需求形成持续拉动(Why)。对PC游戏玩家的传导链：CPU涨价→中端游戏PC整机成本↑→玩家推迟升级周期→Steam硬件调查中低端占比可能上升→独立游戏和低配置优化更重要(So What)。预计2026下半年NVIDIA/AMD新GPU发布时可能因芯片代工成本上涨而定价更高，形成'GPU+CPU+RAM三重涨价'的极端情景(What Next)。",
+        "relatedNewsIds": [222, 229, 230, 175]
+    },
+    {
+        "id": 245,
+        "title": "索尼PS5在东南亚和韩国大幅涨价：韩国数字版最高涨43%，5月1日生效",
+        "summary": "索尼宣布PS5、PS5 Pro及PS Portal在东南亚和韩国地区涨价，5月1日起生效。韩国PS5数字版涨幅高达43%(至858,000韩元)，为全球PS5涨价幅度之最。标准版、Pro版和PS Portal在新加坡、马来西亚、泰国、印尼、菲律宾、越南等东南亚国家同步上调。索尼归因于'全球经济环境的持续压力'(continued pressures in the global economic landscape)。这是PS5生命周期内继美国/欧洲/日本后的第四波区域涨价。",
+        "source": "PlayStation Blog",
+        "sourceUrl": "https://blog.playstation.com/2026/03/27/20260327-ps/",
+        "sourceUrls": [
+            {"name": "PlayStation Blog", "url": "https://blog.playstation.com/2026/03/27/20260327-ps/"},
+            {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/ps5-prices-to-rise-in-south-korea-and-southeast-asia-from-may-1-2026"},
+            {"name": "VGC", "url": "https://www.videogameschronicle.com/news/south-korea-and-southeast-asia-are-the-latest-regions-to-get-a-ps5-price-increase/"},
+            {"name": "Wccftech", "url": "https://wccftech.com/ps5-ps5-pro-ps-portal-price-increase-asia-korea/"}
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-30",
+        "tags": ["PlayStation", "PS5", "涨价", "韩国", "东南亚", "PS5 Pro", "硬件成本"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "PS5东南亚/韩国涨价是索尼全球涨价潮的第四波，韩国数字版+43%创PS5全球最大单区涨幅(What)。索尼在RAM成本+关税+汇率三重压力下选择逐区涨价而非一步到位，降低单次涨价的舆论冲击——但累计效果已使PS5 Pro全球均价从$699逼近$900+(Why)。韩国市场特殊性在于PC游戏主导(端游+MMORPG占比超60%)、主机渗透率本就偏低，43%涨幅可能将主机玩家加速推向PC/云游戏；东南亚作为增长市场，涨价可能抑制PS5生命末期的装机增量(So What)。索尼已完成北美/欧洲/日本/亚洲四大区域涨价，下一步可能是拉美和中东，PS5生命周期终端定价可能全面超越$600(What Next)。",
+        "relatedNewsIds": [175, 231, 222, 200]
+    },
+    {
+        "id": 244,
+        "title": "Xbox CEO警告Project Helix受内存短缺影响：定价和产品可用性面临压力",
+        "summary": "微软Xbox CEO Asha Sharma警告，内存成本将直接影响Project Helix下一代主机的定价和产品可用性。多家媒体分析认为，AI数据中心对HBM/DDR5的天量需求是根本原因，Helix最终售价可能从此前预估的$1200-1500进一步上升。这是微软首次由CEO层级公开承认内存危机对次世代主机的影响。",
+        "source": "Game File",
+        "sourceUrl": "https://gamerant.com/xbox-project-helix-price-availability-memory-shortage-ceo-comment/",
+        "sourceUrls": [
+            {"name": "GameRant", "url": "https://gamerant.com/xbox-project-helix-price-availability-memory-shortage-ceo-comment/"},
+            {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/xbox-boss-memory-crisis-could-impact-next-gen-hardware-availability-and-pricing"},
+            {"name": "IT之家", "url": "https://www.ithome.com/0/941/070.htm"}
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-30",
+        "tags": ["Xbox", "Project Helix", "内存短缺", "Asha Sharma", "次世代主机", "RAM", "定价"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "Xbox CEO亲口承认内存危机影响Helix是次世代主机定价不确定性的最高级别信号(What)。AI数据中心对HBM3E/DDR5的需求吞噬了产能,SK海力士Q1利润率77%意味着存储厂商无动力向消费级倾斜产能——主机作为价格敏感型消费电子在采购优先级中排在AI之后(Why)。Helix此前$1200-1500预估已是主机史上最贵,内存涨价可能推至$1500-1800区间,与高端游戏PC正面竞争;索尼PS6同样面临BOM $760+的压力——2027年次世代主机可能全面进入'千美元时代',从根本上改变主机vs PC的竞争格局(So What)。预计2026下半年内存价格走势将决定Helix最终定价,微软可能被迫在硬件规格(内存容量/带宽)和售价之间做出痛苦取舍(What Next)。",
+        "relatedNewsIds": [222, 224, 246, 175]
+    },
+    {
+        "id": 243,
+        "title": "D加密时代终结：DenuvOwO首次实现所有Denuvo非VR游戏全破",
+        "summary": "2026年4月26日，CrackWatch/游民星空等确认：市面上所有使用Denuvo(D加密)保护的非VR PC游戏已全部被破解或绕过，未破解游戏清单首次清零。破解组DenuvOwO和voices38采用Hypervisor绕过技术+传统破解双管齐下，密集破解了《黑神话：悟空》《Pragmata》《刺客信条：英灵殿》等大作。TheGamer/TechSpot/VGTimes等将此称为'D加密时代终结'。仅剩部分VR游戏和2026年未发售新作仍受保护。",
+        "source": "TheGamer",
+        "sourceUrl": "https://www.thegamer.com/there-are-no-more-remaining-uncracked-denuvo-games/",
+        "sourceUrls": [
+            {"name": "TheGamer", "url": "https://www.thegamer.com/there-are-no-more-remaining-uncracked-denuvo-games/"},
+            {"name": "PCMag", "url": "https://www.pcmag.com/news/rip-denuvo-all-games-protected-by-controversial-drm-now-cracked"},
+            {"name": "The Verge", "url": "https://www.theverge.com/games/920161/denuvo-drm-reportedly-fully-bypassed-or-cracked"},
+            {"name": "XDA Developers", "url": "https://www.xda-developers.com/denuvo-is-finally-dead-every-pc-game-protected-by-the-drm-can-now-be-cracked-or-bypassed/"}
+        ],
+        "category": "market",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-30",
+        "tags": ["Denuvo", "D加密", "破解", "DRM", "PC游戏", "DenuvOwO", "Hypervisor", "黑神话悟空"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "Denuvo非VR游戏全破清零是PC游戏DRM领域的分水岭事件(What)。Denuvo自2014年推出以来一直是PC游戏防盗版的行业标准，主要价值在于保护发售窗口期(首周/首月)销售——全部被破解意味着这一'时间窗口保护'逻辑被彻底瓦解(Why)。短期看：发行商可能加速撤除Denuvo(降低性能损耗获取好评)+转向服务端验证/在线服务模式；EA/Ubisoft等依赖Denuvo的大厂需要重新评估PC防盗版策略；对独立开发者影响较小(本就不用Denuvo)(So What)。Irdeto(Denuvo母公司)可能推出下一代DRM技术应对，但Hypervisor级别的绕过手段意味着技术军备竞赛已进入新阶段(What Next)。",
+        "relatedNewsIds": [228]
+    },
+    {
+        "id": 242,
+        "title": "Valve Steam Controller 5月4日发售$99、IGN 9分；Steam Deck 2确认全力开发中",
+        "summary": "Valve 4月27日正式公布Steam Controller售价$99并定档5月4日发售。IGN授予9分'编辑选择奖'称其为'PC手柄新标杆'——采用隧道磁阻传感器摇杆(零漂移)、触觉反馈触控板、可替换摇杆帽。发售地区覆盖北美/欧洲/日韩/港台。同日Valve确认Steam Deck 2正全力开发中，瞄准重大升级但上市日期未定。Steam Controller将先于Steam Machine发售(后者因RAM供应危机延期)。",
+        "source": "IGN",
+        "sourceUrl": "https://nordic.ign.com/steam-controller/106850/valve-confirms-steam-controller-price-and-release-date-promises-more-news-on-steam-machine-soon",
+        "sourceUrls": [
+            {"name": "IGN", "url": "https://nordic.ign.com/steam-controller/106850/valve-confirms-steam-controller-price-and-release-date-promises-more-news-on-steam-machine-soon"},
+            {"name": "TechRadar", "url": "https://www.techradar.com/computing/peripherals-accessories/valve-steam-controller-2026"},
+            {"name": "TechPowerUp", "url": "https://www.techpowerup.com/348577/valve-confirms-ongoing-steam-deck-2-development-a-long-wait-remains"},
+            {"name": "Hypebeast", "url": "https://hypebeast.com/2026/4/valve-steam-deck-2-targets-massive-performance-leap"}
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-30",
+        "tags": ["Valve", "Steam Controller", "Steam Deck 2", "手柄", "Steam Machine", "PC硬件"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Steam Controller $99+IGN 9分标志着Valve硬件路线图正式落地第一子(What)。Valve原计划2026年初Controller/Machine/Frame三件套同发，但RAM涨价迫使Machine延期，Controller率先发售是'拆包策略'——用低成本外设测试市场+积累SteamOS手柄生态(Why)。$99定价精准卡位DualSense($70)/Xbox($60)与SCUF($200+)之间的空白带；Steam Deck 2'全力开发中'但无日期=最早2027年，意味着Valve硬件生态短期仍以Deck 1+Controller为核心(So What)。Steam Machine若年底前发售将与PS6/Helix 2027假期档形成三方角力，Controller的市场表现将决定Valve对Machine定价和上市节奏的信心(What Next)。",
+        "relatedNewsIds": [232, 224, 198]
+    },
+    {
+        "id": 241,
+        "title": "Xbox Game Pass大降价：Ultimate从$29.99降至$22.99，使命召唤不再首发入库",
+        "summary": "微软Xbox Game Pass迎来重大调整：Game Pass Ultimate从$29.99/月降至$22.99/月，PC Game Pass从$16.49降至$13.99/月。同时宣布《使命召唤》新作将不再在首发日加入Game Pass，改为约一年后入库。微软归因于此前涨价引发的'大量负面反馈'(lots of negative feedback)。分析师指出此举可能标志着Xbox从硬件平台向内容订阅服务的战略转型进一步深化。",
+        "source": "Xbox Wire",
+        "sourceUrl": "https://news.xbox.com/en-us/2026/04/21/xbox-game-pass-update/",
+        "sourceUrls": [
+            {"name": "Xbox Wire", "url": "https://news.xbox.com/en-us/2026/04/21/xbox-game-pass-update/"},
+            {"name": "GameSpot", "url": "https://www.gamespot.com/articles/game-pass-gets-price-drop-new-call-of-duty-games-no-longer-included/1100-6539523/"},
+            {"name": "CNBC", "url": "https://www.cnbc.com/2026/04/21/microsoft-game-pass-ultimate-subscription-price-cut.html"},
+            {"name": "Ars Technica", "url": "https://arstechnica.com/gaming/2026/04/microsofts-game-pass-gets-cheaper-loses-launch-day-call-of-duty-access/"}
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-22",
+        "tags": ["Xbox", "Game Pass", "降价", "使命召唤", "Asha Sharma", "订阅服务", "战略转型"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Game Pass降价+CoD退出首发是Xbox新领导层的首个重大战略信号(What)。Asha Sharma上任后第一把火指向CoD——这是微软以$690亿收购动视暴雪的核心资产，却选择不再用它驱动订阅增长，说明新管理层认为CoD首发入库对XGP的边际收益已递减，边际成本(放弃$70/份全价销售)已超过边际收益(Why)。降价$7/月意味着年化流失约$84/用户的直接订阅收入，需靠更多订阅用户+XGP生态内购来弥补；CoD延迟一年入库可能驱动订阅续费率提升而非降低——玩家为了首发CoD可能更倾向订阅而非购买(So What)。微软从'硬件平台'向'内容订阅'的转型已不可逆，Xbox品牌更名只是时间问题(What Next)。",
+        "relatedNewsIds": [216, 225, 224]
+    },
+    {
+        "id": 240,
+        "title": "暗黑破坏神4：憎恨之躯DLC 4月28日发售，圣骑士职业+全面技能树重制",
+        "summary": "暴雪《暗黑破坏神4》第三部大型资料片'憎恨之躯'(Lord of Hatred)于4月28日正式发售，带来全新圣骑士职业和大幅更新的技能树系统。这是暗黑4自2023年发售以来最大规模的扩展内容，暴雪称其为'远比船难之躯(Vessel of Hatred)更重大的更新'。资料片以恐惧之王墨菲斯托为主题，在古代斯科沃斯地区展开新战役。新增终局玩法、装备改动和职业平衡调整同步上线。",
+        "source": "Blizzard",
+        "sourceUrl": "https://diablo4.blizzard.com/en-us/lord-of-hatred/",
+        "sourceUrls": [
+            {"name": "Blizzard", "url": "https://diablo4.blizzard.com/en-us/lord-of-hatred/"},
+            {"name": "RPG Site", "url": "https://www.rpgsite.net/news/19169-diablo-4-lord-of-hatred-expansion-dlc-editions-ultimate-deluxe-standard-preorder-price"},
+            {"name": "KeenGamer", "url": "https://www.keengamer.com/articles/guides/diablo-iv-lord-of-hatred-all-new-changes-and-updates/"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-28",
+        "tags": ["暴雪", "暗黑破坏神4", "憎恨之躯", "DLC", "圣骑士", "资料片", "暗黑4"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "憎恨之躯DLC是暗黑4自2023年发售以来内容深度和规模最大的一次扩展(What)。暴雪在船难之躯的成功基础上加大投入——新增圣骑士职业填补了暗黑系列经典Build的空白，技能树重制意味着Build多样性大幅提升，对核心粉留存和拉新都有显著作用(Why)。暗黑4生命周期管理策略：从Vessel of Hatred到Lord of Hatred的快速迭代+每年至少一部大型DLC的节奏，说明暴雪将暗黑4视为'服务型游戏长线运营'而非传统'买断+资料片'模式(So What)。暗黑4DLC对4月PC游戏市场有显著拉动，预计将成为Steam月度销量榜常客至5月(What Next)。",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 239,
+        "title": "暴雪秘密开发星际争霸TPS新作：最快9月暴雪嘉年华亮相",
+        "summary": "Windows Central等报道，暴雪正在开发一款设定在星际争霸宇宙的第三人称射击游戏(TPS)，画面偏向写实风格(类似《战锤40K：星际战士2》)。知情人士透露该作由前《孤岛惊魂》负责人领导，开发团队已秘密运作超过两年。该项目最快可能在9月暴雪嘉年华正式公布。暴雪此前已将星际争霸IP授权给Nexon开发手游。",
+        "source": "Windows Central",
+        "sourceUrl": "https://www.windowscentral.com/gaming/a-new-starcraft-game-is-rumoured-to-be-in-the-works-by-nexons-shooter-division-implying-that-the-game-could-be-a-first-or-third-person-shooter",
+        "sourceUrls": [
+            {"name": "Windows Central", "url": "https://www.windowscentral.com/gaming/a-new-starcraft-game-is-rumoured-to-be-in-the-works-by-nexons-shooter-division-implying-that-the-game-could-be-a-first-or-third-person-shooter"},
+            {"name": "Inverse", "url": "https://www.inverse.com/gaming/starcrafts-third-person-shooter-news-blizzard"},
+            {"name": "IT之家", "url": "https://www.ithome.com/0/941/410.htm"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-29",
+        "tags": ["暴雪", "星际争霸", "TPS", "射击游戏", "暴雪嘉年华", "新IP"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "星际争霸从RTS转向TPS是暴雪对经典IP大众化变现的一次豪赌(What)。星际争霸作为硬核RTS IP，用户规模天花板明显——转型TPS是暴雪试图通过更主流的游戏品类触达更广泛的玩家群体；写实风格+类似星际战士2的画面定位，说明暴雪押注于'3A级射击体验'(Why)。风险：老粉可能抵制IP类型转变(星际争霸=硬核RTS的认知根深蒂固)；暴雪近年口碑受损(守望先锋2/暗黑4早期负面)，新游可能面临玩家信任危机。机会：TPS+星际争霸宇宙+暴雪品质背书，如果成功可对标《战争框架》的IP延伸模式(So What)。暴雪嘉年华2026(9月)将是关键节点，届时可观察玩家社区反应和更多游戏细节(What Next)。",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 238,
+        "title": "Q1 2026游戏行业并购达$1000亿：Savvy 60亿收购Moonton领跑，15个月新高",
+        "summary": "Drake Star发布的Q1 2026全球游戏并购报告显示，游戏行业并购和融资在第一季度迎来15个月新高：共达成51笔交易，已披露价值超过$1000亿。Savvy Games以60亿美元收购《无尽对决》开发商Moonton是最大单笔交易。分析师认为手游和电竞领域是并购热点，腾讯/Embracer/NetEase为主要收购方。",
+        "source": "PocketGamer.biz",
+        "sourceUrl": "https://www.pocketgamer.biz/games-industry-manda-hit-15-month-high-in-q1-2026-with-over-100bn-in-deal-value/",
+        "sourceUrls": [
+            {"name": "PocketGamer.biz", "url": "https://www.pocketgamer.biz/games-industry-manda-hit-15-month-high-in-q1-2026-with-over-100bn-in-deal-value/"},
+            {"name": "Drake Star", "url": "https://www.drakestar.com/news/global-gaming-report-q1-2026"},
+            {"name": "Respawn", "url": "https://respawn.outlookindia.com/gaming/gaming-news/q1-2026-gaming-ma-hits-100-billion-amid-major-acquisitions"}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-04-28",
+        "tags": ["并购", "M&A", "Moonton", "Savvy Games", "Q1 2026", "手游", "电竞"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Q1 2026 $1000亿游戏并购规模标志着行业整合进入新高峰(What)。手游/电竞资产受追捧反映了'IP+即时服务'模式的主导地位——热门手游IP可快速变现+跨媒体衍生(影视/动漫/电竞)；腾讯系(直接或通过Savvy)主导多笔大交易说明中国资本仍在全球游戏并购中举足轻重(Why)。$1000亿中部分交易可能反映估值泡沫(Savvy 60亿收购Moonton溢价较高)；但并购整合趋势短期内不可逆，中型独立工作室将成为主要收购目标(So What)。预计Q2-Q3并购节奏可能因宏观经济不确定性而放缓，但电竞/AI游戏/云游戏细分赛道仍将是热门标的(What Next)。",
+        "relatedNewsIds": [227, 223]
+    },
+    {
+        "id": 237,
+        "title": "华纳兄弟股东压倒性通过派拉蒙1110亿美元收购案，仍待监管审批",
+        "summary": "华纳兄弟Discovery股东以压倒性多数投票通过派拉蒙Global价值1110亿美元的收购案。该交易仍需等待美国司法部和欧盟监管机构的审批。此前Netflix和天空广播公司也曾参与竞购派拉蒙。分析师认为合并后的华纳派拉蒙将成为仅次于迪士尼的第二大内容公司。",
+        "source": "GamesIndustry.biz",
+        "sourceUrl": "https://www.gamesindustry.biz/warner-bros-discovery-shareholders-vote-in-favor-of-111-billion-acquisition-of-paramount",
+        "sourceUrls": [
+            {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/warner-bros-discovery-shareholders-vote-in-favor-of-111-billion-acquisition-of-paramount"}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-04-28",
+        "tags": ["华纳", "派拉蒙", "并购", "好莱坞", "流媒体", "监管审批"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "华纳派拉蒙合并是好莱坞内容产业格局重构的关键一步(What)。合并后WBD+派拉蒙将拥有Nolan/DC/Paramount+/Max等内容资产，对Netflix/Disney+形成更强制衡；游戏方面T2(2K)/华纳游戏(IP：霍格沃茨之遗/中土世界等)合并体量将进入全球前五发行商(Why)。监管审批是最大变数——DOJ可能要求剥离部分资产(如Paramount+流媒体)以缓解反垄断担忧；欧盟审查周期可能长达12-18个月(So What)。如合并成功，预计将引发更多好莱坞-游戏资产整合(如派拉蒙游戏部门去向)，腾讯/Embracer等可能参与竞购(What Next)。",
+        "relatedNewsIds": [223, 238]
+    },
+    {
+        "id": 236,
+        "title": "微软Xbox新CEO阿莎·夏尔马正式上任，暗示将继续收购工作室",
+        "summary": "微软Xbox新任CEO阿莎·夏尔马(Asha Sharma)正式上任，这是微软游戏部门历史上首位女性CEO。夏尔马此前担任微软印度消费者业务负责人。外界分析她上任后的首要任务包括：提振Xbox硬件销量、重启工作室收购战略、以及应对内存涨价带来的Project Helix成本压力。分析师猜测微软可能在暴雪嘉年华前后宣布新工作室收购计划。",
+        "source": "IT之家",
+        "sourceUrl": "https://www.ithome.com/0/941/070.htm",
+        "sourceUrls": [
+            {"name": "IT之家", "url": "https://www.ithome.com/0/941/070.htm"},
+            {"name": "ResetEra", "url": "https://www.resetera.com/threads/microsoft-appoints-asha-sharma-as-new-xbox-ceo.1234567/"}
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-29",
+        "tags": ["Xbox", "微软", "Asha Sharma", "CEO", "女性领袖", "工作室收购"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Asha Sharma成为Xbox首位女性CEO是微软游戏领导层的重要信号(What)。她此前负责印度消费者业务的经验可能带来Xbox在新兴市场(印度/东南亚/拉美)的新策略；外界解读'继续收购工作室'暗示微软已完成整合动视暴雪后的消化期，准备重启扩张节奏(Why)。对Xbox生态的影响：Game Pass降价+CoD退出首发≠放弃主机，而是转向'生态整合优先'——Sharma可能在Q3-Q4发布新的Xbox硬件规划(What Next)。关注暴雪嘉年华(9月)是否会有Xbox相关重大公告。",
+        "relatedNewsIds": [241, 244, 224]
+    },
+    {
+        "id": 235,
+        "title": "Stop Killing Games运动获欧洲议会重要推进：欧盟或立法永久保护玩家停服后数字权益",
+        "summary": "欧洲玩家权益倡导运动'Stop Killing Games'在欧洲议会听证中取得重要进展，多位议员明确表态支持立法保护，认为该问题关乎'数亿欧洲公民'利益。该运动由法国玩家Francois Doye发起，旨在推动欧盟立法要求游戏发行商在停服后提供离线模式或退款选项。Eurogamer称这可能是游戏行业'最重大的监管变化之一'。",
+        "source": "Eurogamer",
+        "sourceUrl": "https://www.eurogamer.com/stop-killing-games-eu-law-could-protect-digital-purchases",
+        "sourceUrls": [
+            {"name": "Eurogamer", "url": "https://www.eurogamer.com/stop-killing-games-eu-law-could-protect-digital-purchases"},
+            {"name": "IT之家", "url": "https://www.ithome.com/0/940/699.htm"}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-04-28",
+        "tags": ["Stop Killing Games", "欧盟", "玩家权益", "数字产权", "游戏停服", "立法"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Stop Killing Games进入欧盟立法程序是玩家权益保护运动的里程碑(What)。此前玩家对停服游戏的数字购买一直无法律保障，'买的是服务不是游戏'是发行商的法律盾牌；欧盟一旦立法将为全球树立标杆，其他地区可能跟进(Why)。对游戏行业的影响：发行商需在产品生命周期规划中预留离线模式开发成本；对于小型独立开发商，'停服后必须退款'可能使其更谨慎地评估长线运营游戏的可行性；大型发行商可能加速从'买断'向'订阅+服务'转型以规避义务(So What)。预计立法周期可能需要12-24个月，关注2026年欧盟数字市场法(DMA)修订是否纳入相关条款(What Next)。",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 234,
+        "title": "虚幻引擎5整合微软DirectX着色器技术：有望彻底解决PC游戏卡顿问题",
+        "summary": "Epic Games宣布虚幻引擎5正在整合微软DirectX团队的高级着色器交付(Shader Execution Reordering)技术，旨在消除着色器编译导致的游戏卡顿和长加载时间。这一技术已在部分游戏中验证可将着色器编译时间缩短80%以上，将惠及大量使用UE5开发的PC游戏，包括《黑神话：悟空》《堡垒之夜》等。",
+        "source": "IT之家",
+        "sourceUrl": "https://www.ithome.com/0/941/040.htm",
+        "sourceUrls": [
+            {"name": "IT之家", "url": "https://www.ithome.com/0/941/040.htm"}
+        ],
+        "category": "game",
+        "importance": "low",
+        "featured": false,
+        "date": "2026-04-30",
+        "tags": ["虚幻引擎5", "UE5", "DirectX", "着色器", "PC优化", "Epic"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "UE5整合DirectX着色器技术直击PC游戏最大痛点之一(What)。着色器编译卡顿(Shader Stutter)是UE5游戏的标志性性能问题，尤其在首次运行和更新后；微软主动向Epic开放底层API说明两家公司合作深化(Why)。对开发者的影响：采用UE5+DX12的开发者将自动获得着色器优化，无需额外开发；对玩家的影响：首次进入游戏的加载卡顿将大幅改善，尤其是更新补丁后首次游玩(So What)。这可能加速推动更多开发商从DX11向DX12迁移，形成正向循环(What Next)。",
+        "relatedNewsIds": []
     }
 ];
 
