@@ -6,8 +6,8 @@
 
 // ============ 元数据 ============
 const storewatchMeta = {
-    lastUpdated: '2026-04-29',
-    dataRange: '2025-12-19 ~ 2026-04-25',
+    lastUpdated: '2026-04-30',
+    dataRange: '2025-12-19 ~ 2026/4/30',
     sheetId: 'LXXdrpHEWcSr',
     mainSheet: 'BB08J2',
     vendorSheet: 'xsejuk',
@@ -344,10 +344,10 @@ const storewatchGameNameMap = {
     '壁虎之神': 'Gecko Gods',
     '不寐之境:女巫与魔咒': 'Never Grave: The Witch and The Curse',
     '彩虹六号:围攻X': 'Tom Clancy\'s Rainbow Six Siege X',
-    '苍翼:混沌效应X': 'BlazBlue: Entropy Effect X‌',
+    '苍翼:混沌效应X': 'BlazBlue: Entropy Effect X',
     '茶杯头': 'Cuphead',
     '超次元游戏:海王星': 'Hyperdimension Neptunia',
-    '超级机器人大战Y': 'Super Robot Wars Y‌',
+    '超级机器人大战Y': 'Super Robot Wars Y',
     '超自然车旅': 'Pacific Drive',
     '沉没之城': 'The Sinking City Remastered',
     '初学者友好游戏专题': 'BEGINNER FRIENDLY',
@@ -361,6 +361,7 @@ const storewatchGameNameMap = {
     '盗贼之海': 'Sea of Thieves',
     '地铁:离去': 'Metro Exodus',
     '地铁2039': 'METRO 2039 ',
+    '地铁合辑包': 'Metro Saga Bundle',
     '地狱即我们': 'Hell is US',
     '帝国时代4': 'Age of Empires IV',
     '第一后裔': 'The First Descendant',
@@ -404,6 +405,7 @@ const storewatchGameNameMap = {
     '华丽动作游戏专题': 'STYLISH ACTION',
     '幻灵降世录:女巫的面纱': 'Lost Eidolons: Veil of the Witch',
     '幻兽帕鲁': 'Palworld',
+    '幻想大陆战记：深渊': 'Brigandine Abyss',
     '幻想生活i:转圈圈龙和偷取时间的少女': 'FANTASY LIFE i: The Girl Who Steals Time',
     '荒野大镖客:救赎': 'Red Dead Redemption',
     '荒野大镖客:救赎2': 'Red Dead Redemption2',
@@ -441,9 +443,11 @@ const storewatchGameNameMap = {
     '雷曼:30 周年纪念版': 'Rayman 30th Anniversary Edition',
     '雷曼:传奇': 'Rayman Legends',
     '黎明杀机': 'Dead by Daylight',
+    '黎明行者之血': 'The Blood Of The Dawnwalker',
     '猎人:荒野的召唤': 'theHunter: Call of the Wild',
     '猎人之路': 'Way of the Hunter',
     '流星洛克人:完美专题': 'Mega Man Star Force: Legacy Collection',
+    '龙珠斗士 Z': 'Dragon Ball FighterZ',
     '龙珠Z:卡卡洛特': 'DRAGON BALL Z: KAKAROT',
     '轮回之兽': 'Beast of Reincarnation',
     '罗布乐思': 'Roblox',
@@ -498,6 +502,7 @@ const storewatchGameNameMap = {
     '忍者龙剑传4': 'Ninja Gaiden 4',
     '忍者神龟:施莱德的复仇': 'Teenage Mutant Ninja Turtles: Shredder\'s Revenge',
     '忍者外传:怒之羁绊': 'NINJA GAIDEN:Ragebound',
+    '日式角色扮演游戏专题': 'JAPANESE RPG',
     '荣耀战魂': 'For Honor',
     '萨尔达传说:重生之姿': 'The Legend of Zelda: Echoes of Wisdom',
     '赛博朋克2077': 'Cyberpunk 2077',
@@ -661,11 +666,13 @@ const storewatchGameNameMap = {
     'Black Myth: Wukong': '黑神话:悟空',
     'Blacksad: Under the Skin': '黑猫侦探:深入本质',
     'BlazBlue: Entropy Effect X‌': '苍翼:混沌效应X',
+    'BlazBlue: Entropy Effect X': '苍翼:混沌效应X',
     'Boomerang Fu': '随动回旋镖',
     'Borderlands 4': '无主之地4',
     'BRAIN TEASERS': '脑力解谜游戏专题',
     'Bravely Default Flying Fairy': '勇气默示录 FLYING FAIRY',
     'BrawIhalla': '英灵乱战',
+    'Brigandine Abyss': '幻想大陆战记：深渊',
     'BrokenLore UNFOLLOW': '破碎怪谈:恶意取关',
     'CAIRN': '孤山独影',
     '‌Call of Duty Mobile': '使命召唤手游',
@@ -704,6 +711,7 @@ const storewatchGameNameMap = {
     'Discover Playstation Studios': '索尼一方工作室游戏推荐',
     'Divinity: Original Sin 2': '神界:原罪2',
     'DOOM: The Dark Ages': '毁灭战士:黑暗时代',
+    'Dragon Ball FighterZ': '龙珠斗士 Z',
     'DRAGON BALL Z: KAKAROT': '龙珠Z:卡卡洛特',
     'DRAGON QUEST I & IIHD-2D Remake': '勇者斗恶龙Ⅰ&Ⅱ:HD-2D重制版',
     'Dragon Quest VII: Reimagined': '勇者斗恶龙Ⅶ Reimagined',
@@ -746,6 +754,7 @@ const storewatchGameNameMap = {
     'Ghost of Tsushima': '对马岛之魂',
     'Ghost of Tsushima Director\'s Cut': '对马之魂:导演剪辑版',
     'Ghost of Yōtei': '羊蹄山之魂',
+    'Ghost of Yotei': '羊蹄山之魂',
     'GigaBash': '巨击大乱斗',
     'God of War: Sons of Sparta': '战神:斯巴达之子',
     'God of War:Ragnarok': '战神:诸神黄昏',
@@ -773,6 +782,7 @@ const storewatchGameNameMap = {
     'Infinity Nikki': '���限暖暖',
     'Isonzo': '伊松佐河',
     'It Takes Two': '双人成行',
+    'JAPANESE RPG': '日式角色扮演游戏专题',
     'John Carpenter\'s Toxic Commando': '毒液突击队',
     'JoJo\'s Bizarre Adventure:All Star Battle': 'JOJO的奇妙冒险：全明星大乱斗R',
     'JOJO的奇妙冒险：全明星大乱斗R': 'JoJo\'s Bizarre Adventure:All Star Battle',
@@ -798,6 +808,7 @@ const storewatchGameNameMap = {
     'Metal Gear Solid 3:Snake Eater': '潜龙谍影3:食蛇者',
     'METRO 2039 ': '地铁2039',
     'Metro Exodus': '地铁:离去',
+    'Metro Saga Bundle': '地铁合辑包',
     'Microsoft Flight Simulator 2024': '微软模拟飞行2024',
     'Minecraft': '我的世界',
     'Minecraft Dungeons II': '我的世界:地下城2',
@@ -817,6 +828,7 @@ const storewatchGameNameMap = {
     'Ninja Gaiden 4': '忍者龙剑传4',
     'NINJA GAIDEN:Ragebound': '忍者外传:怒之羁绊',
     'NIOH 3': '仁王3',
+    'No Sleep For Kaname Date - From AI: The Somnium Files': '无法成眠的伊达键 - From AI:梦境档案',
     'No Sleep For Kaname Date – From AI: The Somnium Files‌': '无法成眠的伊达键 - From AI:梦境档案',
     'No Sleep For Kaname Date – From AI: The Somnium Files': '无法成眠的伊达键 - From AI:梦境档案',
     'Octopath Traveler 0': '歧路旅人0',
@@ -888,6 +900,7 @@ const storewatchGameNameMap = {
     'STYLISH ACTION': '华丽动作游戏专题',
     'Suduko Relax': '数独Relax',
     'Super Robot Wars Y‌': '超级机器人大战Y',
+    'Super Robot Wars Y': '超级机器人大战Y',
     'Sword Art Online: Fractured Daydream': '刀剑神域:碎梦边境',
     'Tales of Berseria Remastered': '绯夜传奇Remastered',
     'Tales of Xillia Remastered': '无限传说复刻版',
@@ -896,6 +909,7 @@ const storewatchGameNameMap = {
     'Tekken 8': '铁拳8',
     'Terminator2D:NO FATE': '终结者2D:NO FATE',
     'The Adventures of Elliot: The Millennium Tales': '冒险家艾略特的千年奇谭',
+    'The Blood Of The Dawnwalker': '黎明行者之血',
     'The Dark World: KARMA': '黑暗世界:因与果',
     'The Elder Scrolls Online': '上古卷轴OL',
     'THE FINALS': '终极角逐',
@@ -962,10 +976,77 @@ const storewatchNonGameTags = [
 
 // ============ 商店监控数据 ============
 // 数据来源：腾讯文档 LXXdrpHEWcSr (sheet BB08J2)
-// 最后更新：2026-04-29
-// 数据范围：2025-12-19 ~ 2026-04-25
+// 最后更新：2026-04-30
+// 数据范围：2025-12-19 ~ 2026/4/30
 const storewatchData = {
     PS5: [
+        { date: '2026/4/30', slots: {
+            'Must See': { positions: [
+                { rank: 1, us: '战神:斯巴达之子（God of War: Sons of Sparta）', jp: 'Saros', hk: 'Saros', vendor: '索尼' },
+                { rank: 2, us: '宇宙机器人（Astro Bot）', jp: '春天玩乐祭（GOLDEN WEEK SALE）', hk: '春天玩乐祭（GOLDEN WEEK SALE）', vendor: '索尼' },
+                { rank: 3, us: 'LONG HAUL LEGENDS', jp: '鸣潮（Wuthering Waves）', hk: '羊蹄山之魂（Ghost of Yotei）', vendor: '米哈游' },
+                { rank: 4, us: '最佳伙伴游戏专题（BEST COMPANIONS）', jp: '2000日元以下（games under 円2000）', hk: '热门优惠' },
+                { rank: 5, us: '在线多人游戏专题（ONLINE MULTIPLAYER）', jp: '异环（Neverness To Everness）', hk: 'PS5专享升级（UPGRADED FOR PS5）' },
+                { rank: 6, us: '无障碍功能游戏（Accessibility in games）', jp: '生化危机:安魂曲（Resident Evil: Requiem）', hk: '2026绝佳游戏（2026 GREAT GAMES）', vendor: 'CAPCOM' },
+            ] },
+            'Top games in your country': { positions: [
+                { rank: 1, us: 'NBA 2K26', jp: '异环（Neverness To Everness）', hk: 'EA Sports FC 26', vendor: 'Take-Two' },
+                { rank: 2, us: '堡垒之夜（Fortnite）', jp: '七大罪:起源（The Seven Deadly Sins:Origin）', hk: '实况足球（eFootball）', vendor: 'Epic' },
+                { rank: 3, us: '美国职业棒球大联盟26（MLB The Show 26）', jp: '明日方舟:终末地（Arknights: Endfield）', hk: '暗黑破坏神4（Diablo IV）', vendor: '索尼' },
+                { rank: 4, us: 'EA Sports FC 26', jp: '崩坏:星穹铁道（Honkai: Star Rail）', hk: 'NBA 2K26', vendor: 'EA' },
+                { rank: 5, us: '罗布乐思（Roblox）', jp: 'Apex英雄（Apex Legends）', hk: '生化危机4：重制版（Resident Evil 4 Remake）', vendor: 'Roblox' },
+            ] },
+            "What's hot": { positions: [
+                { rank: 1, us: '幻想大陆战记：深渊（Brigandine Abyss）', jp: 'シニガミ姫と異書館ノ怪物', hk: '侠盗猎车手5（Grand Theft Auto V）', vendor: 'Take-Two' },
+                { rank: 2, us: '苍翼:混沌效应X（BlazBlue: Entropy Effect X）', jp: '三角洲行动（Delta Force）', hk: '动漫改编游戏专题', vendor: '腾讯' },
+                { rank: 3, us: '最终幻想14（Final Fantasy XIV）', jp: '动漫改编游戏专题', hk: '跑车浪漫旅7（Gran Turismo 7）', vendor: 'Square Enix' },
+                { rank: 4, us: 'LONG HAUL LEGENDS', jp: '燕云十六声（Where Winds Meet）', hk: 'PS5必玩游戏', vendor: '网易' },
+                { rank: 5, us: 'Brawlhalla', jp: '侠盗猎车手5（Grand Theft Auto V）', hk: '007:锋芒初露（007 First Light）', vendor: 'Take-Two' },
+                { rank: 6, us: '明日潮汐（Tides of Tomorrow）', jp: '吸血鬼爬行者（Vampire Crawlers: The Turbo Wildcard from Vampire Survivors）', hk: '燕云十六声（Where Winds Meet）', vendor: '网易' },
+            ] },
+        } },
+        { date: '2026/4/29', slots: {
+            'Must See': { positions: [
+                { rank: 1, us: '仁王3（NIOH 3）', jp: '春天玩乐祭（GOLDEN WEEK SALE）', hk: '春天玩乐祭（GOLDEN WEEK SALE）', vendor: 'KOEI TECMO' },
+                { rank: 2, us: '宇宙机器人（Astro Bot）', jp: '热门免费游戏（Top free games）', hk: '热门优惠', vendor: '索尼' },
+                { rank: 3, us: '哈迪斯2（Hades2）', jp: '2000日元以下（games under 円2000）', hk: '2026绝佳游戏（2026 GREAT GAMES）', vendor: 'Supergiant Games' },
+                { rank: 4, us: 'CHALLENGE ACCEPTED', jp: '哈迪斯2（Hades2）', hk: 'ARC Raiders', vendor: 'Supergiant Games' },
+                { rank: 5, us: '日式角色扮演游戏专题（JAPANESE RPG）', jp: '2026绝佳游戏（2026 GREAT GAMES）', hk: 'PS5专享升级（UPGRADED FOR PS5）' },
+                { rank: 6, us: '初学者友好游戏专题（BEGINNER FRIENDLY）', jp: '羊蹄山之魂（Ghost of Yotei）', hk: 'PS5必玩游戏' },
+            ] },
+            'Top games in your country': { positions: [
+                { rank: 1, us: '明日潮汐（Tides of Tomorrow）', jp: '崩坏:星穹铁道（Honkai: Star Rail）', hk: 'EA Sports FC 26', vendor: '米哈游' },
+                { rank: 2, us: 'Darwin\'s Paradox!', jp: '原神（Genshin impact）', hk: '实况足球（eFootball）', vendor: '米哈游' },
+                { rank: 3, us: '游戏王：大师对决（Yu-Gi-Oh! MASTER DUEL）', jp: '识质存在（Pragmata）', hk: '生化危机4：重制版（Resident Evil 4 Remake）', vendor: 'CAPCOM' },
+                { rank: 4, us: '符文工房:龙之天地（Rune Factory: Guardians of Azuma）', jp: '实况足球（eFootball）', hk: 'NBA 2K26', vendor: 'Marvelous Inc.' },
+                { rank: 5, us: '星球大战绝地武士：幸存者（Star Wars Jedi: Survivor）', jp: '七大罪:起源（The Seven Deadly Sins:Origin）', hk: '暗黑破坏神4（Diablo IV）', vendor: 'Netmarble' },
+            ] },
+            "What's hot": { positions: [
+                { rank: 1, us: 'Darwin\'s Paradox!', jp: '热门免费游戏（Top free games）', hk: '侠盗猎车手5（Grand Theft Auto V）', vendor: 'Take-Two' },
+                { rank: 2, us: '人中之龙:极3（Yakuza 3 Remastere）', jp: '最终幻想14（Final Fantasy XIV）', hk: '动漫改编游戏专题', vendor: 'SEGA' },
+                { rank: 3, us: '龙珠斗士 Z（Dragon Ball FighterZ）', jp: '侠盗猎车手5（Grand Theft Auto V）', hk: '黎明行者之血（The Blood Of The Dawnwalker）', vendor: 'Take-Two' },
+                { rank: 4, us: '007:锋芒初露（007 First Light）', jp: 'ARC Raiders', hk: 'PS5必玩游戏', vendor: 'IO Interactive A/S' },
+                { rank: 5, us: '苍翼:混沌效应X（BlazBlue: Entropy Effect X）', jp: '动漫改编游戏专题', hk: 'MotoGP 26' },
+                { rank: 6, us: '格斗游戏专题（FIGHTING GAMES）', jp: '吸血鬼爬行者（Vampire Crawlers: The Turbo Wildcard from Vampire Survivors）', hk: '全境封锁2（Tom Clancy\'s The Division 2）' },
+            ] },
+        } },
+        { date: '2026/4/28', slots: {
+            'Top games in your country': { positions: [
+                { rank: 1, us: '明日潮汐（Tides of Tomorrow）', jp: '崩坏:星穹铁道（Honkai: Star Rail）', hk: 'EA Sports FC 26', vendor: '米哈游' },
+                { rank: 2, us: 'Darwin\'s Paradox!', jp: '识质存在（Pragmata）', hk: '实况足球（eFootball）', vendor: 'CAPCOM' },
+                { rank: 3, us: '游戏王：大师对决（Yu-Gi-Oh! MASTER DUEL）', jp: '实况足球（eFootball）', hk: '生化危机4：重制版（Resident Evil 4 Remake）', vendor: 'KONAMI' },
+                { rank: 4, us: '符文工房:龙之天地（Rune Factory: Guardians of Azuma）', jp: '七大罪:起源（The Seven Deadly Sins:Origin）', hk: 'NBA 2K26', vendor: 'Marvelous Inc.' },
+                { rank: 5, us: '星球大战绝地武士：幸存者（Star Wars Jedi: Survivor）', jp: '原神（Genshin impact）', hk: '识质存在（Pragmata）', vendor: '米哈游' },
+            ] },
+            "What's hot": { positions: [
+                { rank: 1, us: '无法成眠的伊达键 - From AI:梦境档案（No Sleep For Kaname Date - From AI: The Somnium Files）', jp: '动漫改编游戏专题', hk: '007:锋芒初露（007 First Light）', vendor: 'IO Interactive A/S' },
+                { rank: 2, us: '嗨嗨人生2（High On Life 2）', jp: '暗黑破坏神4（Diablo IV）', hk: '动漫改编游戏专题', vendor: 'Squanch Games, Inc.' },
+                { rank: 3, us: '超级机器人大战Y（Super Robot Wars Y）', jp: 'PS5必玩游戏', hk: '开放世界游戏专题' },
+                { rank: 4, us: '月度优惠', jp: 'MOUSE: P.I. For Hire', hk: 'PS5必玩游戏' },
+                { rank: 5, us: 'Darwin\'s Paradox!', jp: '侠盗猎车手5（Grand Theft Auto V）', hk: 'UFC 6', vendor: 'Take-Two' },
+                { rank: 6, us: '2XKO', jp: 'EA Sports FC 26', hk: '侠盗猎车手5（Grand Theft Auto V）', vendor: '��讯' },
+            ] },
+        } },
         { date: '2026-04-25', slots: {
             'Must See': { positions: [
                 { rank: 1, us: '奇异人生:重聚（Life is Strange: Reunion）', jp: '春天玩乐祭（GOLDEN WEEK SALE）', hk: '春天玩乐祭（GOLDEN WEEK SALE）', vendor: 'Square Enix' },
@@ -1092,6 +1173,9 @@ const storewatchData = {
             ] },
         } },
         { date: '2026-04-20', slots: {
+            " What's hot": { positions: [
+                { rank: 3, us: '无限暖暖（Infinity Nikki）', jp: '人中之龙游戏专题', hk: '编辑精选', vendor: '叠纸游戏' },
+            ] },
             'Must See': { positions: [
                 { rank: 1, us: '仁王3（NIOH 3）', jp: '绯夜传奇Remastered（Tales of Berseria Remastered）', hk: '仁王3（NIOH 3）', vendor: 'KOEI TECMO' },
                 { rank: 2, us: '堡垒之夜（Fortnite）', jp: '2026绝佳游戏（2026 GREAT GAMES）', hk: 'Saros', vendor: 'Epic' },
@@ -1114,9 +1198,6 @@ const storewatchData = {
                 { rank: 4, us: '007:锋芒初露（007 First Light）', jp: '开放世界游戏专题', hk: 'PS5必玩游戏', hkNonGame: true, vendor: 'IO Interactive A/S' },
                 { rank: 5, us: '鬼灭之刃:火之神血风谭2（Demon Slayer: Kimetsu no Yaiba – The Hinokami Chronicles 2）', jp: '我的世界（Minecraft）', hk: '哈迪斯2（Hades2）', vendor: 'SEGA' },
                 { rank: 6, us: '绝地求生（PUBG: Battlegrounds）', jp: '每月精选游戏', hk: '格斗游戏专题（FIGHTING GAMES）', jpNonGame: true, vendor: 'Krafton' },
-            ] },
-            " What's hot": { positions: [
-                { rank: 3, us: '无限暖暖（Infinity Nikki）', jp: '人中之龙游戏专题', hk: '编辑精选', vendor: '叠纸游戏' },
             ] },
         } },
         { date: '2026-04-17', slots: {
@@ -3046,6 +3127,68 @@ const storewatchData = {
         } },
     ],
     Xbox: [
+        { date: '2026/4/30', slots: {
+            'Dash home-banner': { positions: [
+                { rank: 1, us: 'Game Pass Ultimate会员优惠', jp: '极限竞速:地平线6（Forza Horizon 6）', hk: '获奖者专属游戏专题（Winners only）', vendor: '微软' },
+                { rank: 2, us: 'XBOX性能最佳化', jp: 'Game Pass Ultimate会员优惠', hk: '游戏优惠', isNonGame: true },
+                { rank: 3, us: '堡垒之夜（Fortnite）', jp: '最佳评选游戏特卖（Best rated sale）', hk: '黄金特卖周', vendor: 'Epic' },
+            ] },
+            'Dash home-banner2': { positions: [
+                { rank: 1, us: 'DayZ', jp: '星光卡丁车竞赛（Starlit Kart Racing）', hk: '星光卡丁车竞赛（Starlit Kart Racing）', vendor: 'Bohemia' },
+                { rank: 2, us: 'Content Warning', jp: '我的世界（Minecraft）', hk: '我的世界（Minecraft）', vendor: '微软' },
+                { rank: 3, us: '地铁合辑包（Metro Saga Bundle）', jp: '茶杯头（Cuphead）', hk: '茶杯头（Cuphead）', vendor: 'Studio MDHR' },
+                { rank: 4, us: 'MOUSE: P.I. For Hire', jp: '实况足球（eFootball）', hk: '实况足球（eFootball）', vendor: 'KONAMI' },
+                { rank: 5, us: '侠盗猎车手在线模式（Grand Theft Auto Online）', jp: '狂野飙车9:竞速传奇（Asphalt Legends）', hk: '狂野飙车9:竞速传奇（Asphalt Legends）', vendor: 'Take-Two' },
+                { rank: 6, us: 'EA Sports FC 26', jp: '精灵与萤火意志（Ori and the Will of the Wisps）', hk: '精灵与萤火意志（Ori and the Will of the Wisps）', vendor: 'EA' },
+            ] },
+            'Game Home-banner': { positions: [
+                { rank: 1, us: '黄金特卖周', jp: '黄金特卖周', hk: '黄金特卖周', isNonGame: true },
+                { rank: 2, us: 'UFC 6', jp: 'UFC 6', hk: 'UFC 6' },
+            ] },
+            'Game Home-hero banner': { positions: [
+                { rank: 1, us: '上古卷轴OL（The Elder Scrolls Online）', jp: '上古卷轴OL（The Elder Scrolls Online）', hk: '上古卷轴OL（The Elder Scrolls Online）' },
+            ] },
+            'Store Home-banner': { positions: [
+                { rank: 1, us: '黄金特卖周', jp: '黄金特卖周', hk: '黄金特卖周', isNonGame: true },
+                { rank: 2, us: '007:锋芒初露（007 First Light）', jp: '007:锋芒初露（007 First Light）', hk: '007:锋芒初露（007 First Light）', vendor: 'IO Interactive A/S' },
+                { rank: 3, us: '黎明行者之血（The Blood Of The Dawnwalker）', jp: '黎明行者之血（The Blood Of The Dawnwalker）', hk: '黎明行者之血（The Blood Of The Dawnwalker）' },
+                { rank: 4, us: '趋势游戏（Trending）', jp: '趋势游戏（Trending）', hk: 'Stranger Than Heaven' },
+            ] },
+            'Store Home-hero banner': { positions: [
+                { rank: 1, us: '上古卷轴OL（The Elder Scrolls Online）', jp: '上古卷轴OL（The Elder Scrolls Online）', hk: '上古卷轴OL（The Elder Scrolls Online）' },
+            ] },
+        } },
+        { date: '2026/4/29', slots: {
+            'Dash home-banner': { positions: [
+                { rank: 1, us: 'Game Pass Ultimate会员优惠', jp: 'Game Pass Ultimate会员优惠', hk: 'UFC 6' },
+                { rank: 2, us: 'Earth Month', jp: '暗黑破坏神4（Diablo IV）', hk: '刺客信条：黑旗 Resynced（Assassin\'s Creed Black Flag Resynced）', vendor: '暴雪' },
+                { rank: 3, us: 'Kiln', jp: 'Xbox Play Anywhere', hk: '无障碍功能游戏（Accessibility in games）', vendor: '微软' },
+            ] },
+            'Dash home-banner2': { positions: [
+                { rank: 1, us: '实况足球（eFootball）', jp: '堡垒之夜（Fortnite）', hk: 'Phasmophobia', vendor: 'KONAMI' },
+                { rank: 2, us: '星光卡丁车竞赛（Starlit Kart Racing）', jp: 'Apex英雄（Apex Legends）', hk: 'The Outlast Trials', vendor: 'Rockhead' },
+                { rank: 3, us: '狂野飙车9:竞速传奇（Asphalt Legends）', jp: '罗布乐思（Roblox）', hk: '黎明杀机（Dead by Daylight）', vendor: 'Gameloft' },
+                { rank: 4, us: '黑神话:悟空（Black Myth: Wukong）', jp: '我的世界（Minecraft）', hk: 'Poppy Playtime', vendor: '游戏科学' },
+                { rank: 5, us: '原神（Genshin impact）', jp: '极限竞速:地平线5（Forza Horizon 5）', hk: 'The Mortuary Assistant', vendor: '米哈游' },
+                { rank: 6, us: '精灵与萤火意志（Ori and the Will of the Wisps）', jp: '守望先锋（OVERWATCH）', hk: 'LOLLIPOP CHAINSAW RePOP', vendor: '微软' },
+            ] },
+            'Game Home-banner': { positions: [
+                { rank: 1, us: 'UFC 6', jp: 'UFC 6', hk: 'UFC 6' },
+                { rank: 2, us: 'Xbox立即畅玩（Xbox Play Now）', jp: 'Xbox立即畅玩（Xbox Play Now）', hk: 'Xbox立即畅玩（Xbox Play Now）' },
+            ] },
+            'Game Home-hero banner': { positions: [
+                { rank: 1, us: 'Kiln', jp: 'Kiln', hk: 'Kiln', vendor: '微软' },
+            ] },
+            'Store Home-banner': { positions: [
+                { rank: 1, us: 'Stranger Than Heaven', jp: 'Stranger Than Heaven', hk: 'Stranger Than Heaven' },
+                { rank: 2, us: '明日潮汐（Tides of Tomorrow）', jp: '明日潮汐（Tides of Tomorrow）', hk: '明日潮汐（Tides of Tomorrow）' },
+                { rank: 3, us: 'Kiln', jp: 'Kiln', hk: 'Kiln', vendor: '微软' },
+                { rank: 4, us: '趋势游戏（Trending）', jp: '趋势游戏（Trending）', hk: 'Xbox立即畅玩（Xbox Play Now）' },
+            ] },
+            'Store Home-hero banner': { positions: [
+                { rank: 1, us: '极限竞速:地平线6（Forza Horizon 6）', jp: '极限竞速:地平线6（Forza Horizon 6）', hk: '极限竞速:地平线6（Forza Horizon 6）', vendor: '微软' },
+            ] },
+        } },
         { date: '2026-04-25', slots: {
             'Dash home-banner': { positions: [
                 { rank: 1, us: 'Xbox x IGN Showcase', jp: 'Xbox x IGN Showcase', hk: 'Game Pass Ultimate会员优惠' },
