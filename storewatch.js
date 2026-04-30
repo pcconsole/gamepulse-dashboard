@@ -6,7 +6,7 @@
 
 // ============ 元数据 ============
 const storewatchMeta = {
-    lastUpdated: '2026-04-28',
+    lastUpdated: '2026-04-29',
     dataRange: '2025-12-19 ~ 2026-04-25',
     sheetId: 'LXXdrpHEWcSr',
     mainSheet: 'BB08J2',
@@ -962,7 +962,7 @@ const storewatchNonGameTags = [
 
 // ============ 商店监控数据 ============
 // 数据来源：腾讯文档 LXXdrpHEWcSr (sheet BB08J2)
-// 最后更新：2026-04-28
+// 最后更新：2026-04-29
 // 数据范围：2025-12-19 ~ 2026-04-25
 const storewatchData = {
     PS5: [
@@ -1114,6 +1114,9 @@ const storewatchData = {
                 { rank: 4, us: '007:锋芒初露（007 First Light）', jp: '开放世界游戏专题', hk: 'PS5必玩游戏', hkNonGame: true, vendor: 'IO Interactive A/S' },
                 { rank: 5, us: '鬼灭之刃:火之神血风谭2（Demon Slayer: Kimetsu no Yaiba – The Hinokami Chronicles 2）', jp: '我的世界（Minecraft）', hk: '哈迪斯2（Hades2）', vendor: 'SEGA' },
                 { rank: 6, us: '绝地求生（PUBG: Battlegrounds）', jp: '每月精选游戏', hk: '格斗游戏专题（FIGHTING GAMES）', jpNonGame: true, vendor: 'Krafton' },
+            ] },
+            " What's hot": { positions: [
+                { rank: 3, us: '无限暖暖（Infinity Nikki）', jp: '人中之龙游戏专题', hk: '编辑精选', vendor: '叠纸游戏' },
             ] },
         } },
         { date: '2026-04-17', slots: {

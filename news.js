@@ -1,8 +1,8 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-04-29T18:00:00Z
-// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1227无新增批次)+web_search 12轮+新增13条id234-246)
+// 最后更新: 2026-04-30T18:00:00Z
+// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1240新增13行)+web_search 14轮+新增12条id247-258)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
@@ -173,6 +173,261 @@ const newsSources = [
 ];
 
 const newsData = [
+    {
+        "id": 258,
+        "title": "东映成立游戏发行品牌Toei Games：专注原创IP首批游戏登陆Steam",
+        "summary": "日本娱乐巨头东映(Toei Company)正式宣布成立Toei Games游戏发行部门，将在2026年75周年之际拓展至游戏领域。与直接使用龙珠/海贼王/假面骑士等知名IP不同，Toei Games初期将专注从零打造全新原创游戏IP，首批作品已确定登陆Steam平台。东映此前曾参与游戏联合制作(如《龙珠Z：卡卡罗特》)，但此次是首次建立独立游戏发行品牌。",
+        "source": "Notebookcheck",
+        "sourceUrl": "https://www.notebookcheck.net/Toei-Games-Anime-giant-enters-gaming-but-not-with-Dragon-Ball-or-One-Piece.1282279.0.html",
+        "sourceUrls": [
+            {"name": "Notebookcheck", "url": "https://www.notebookcheck.net/Toei-Games-Anime-giant-enters-gaming-but-not-with-Dragon-Ball-or-One-Piece.1282279.0.html"},
+            {"name": "TechWiser", "url": "https://techwiser.com/toei-animation-launches-toei-games-division/"},
+            {"name": "Essential Japan", "url": "https://essential-japan.com/news/anime-powerhouse-toei-announces-massive-expansion-into-gaming-industry/"},
+            {"name": "Toei Games官网", "url": "https://games.toei.co.jp/en/"}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-29",
+        "tags": ["东映", "Toei Games", "动漫IP", "游戏发行", "原创IP", "Steam", "日本游戏"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "东映成立游戏部门标志着日本动漫巨头系统性进入游戏发行的最新案例，与万代南梦宫、光荣特库摩等已建立游戏业务的日企形成对照(What)。选择'原创IP'而非直接套用龙珠/海贼王是重要战略选择——日本动漫IP改编游戏口碑两极分化(Bandai Namco《龙珠》尚可，但其他多款IP改编游戏表现惨淡)，原创可避免粉丝期待落差并建立独立品牌(Why)。对游戏行业的意义：动漫公司进入游戏发行将加剧PC/Console独立游戏竞争，但东映75年积累的世界观和美术资产若用于原创叙事游戏，有差异化潜力(So What)。首批游戏定档Steam=选择PC作为低成本试水市场，而非直接押注主机(What Next)。",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 257,
+        "title": "Take-Two CEO回应GTA 6定价传闻：目标是收取'远低于游戏实际价值'的价格",
+        "summary": "Take-Two Interactive CEO Strauss Zelnick在IIcon大会上回应了GTA 6售价$100的传闻，表示公司的定价目标是'收取远低于游戏实际价值的价格'，称'消费者的支付意愿是定价的关键'。Zelnick重申GTA 6将于11月19日发售，但拒绝透露最终售价。多家分析师此前预测PS5/Xbox版定价可能在$80-100区间，远超现行3A游戏$70标准价。",
+        "source": "EuroGamer",
+        "sourceUrl": "https://www.eurogamer.net/take-two-ceo-on-gta-6-price-why-it-may-not-hit-100",
+        "sourceUrls": [
+            {"name": "EuroGamer", "url": "https://www.eurogamer.net/take-two-ceo-on-gta-6-price-why-it-may-not-hit-100"},
+            {"name": "Hypebeast", "url": "https://hypebeast.com/2026/4/take-two-ceo-strauss-zelnick-responds-grand-theft-auto-gta-vi-100-usd-price-rumors"},
+            {"name": "Dexerto", "url": "https://www.dexerto.com/gta/take-two-ceo-shares-update-on-gta-6-cost-amid-100-price-tag-rumors-3358783/"},
+            {"name": "Gadgets360", "url": "https://www.gadgets360.com/games/news/gta-6-price-take-two-ceo-strauss-zelnick-rockstar-games-11424336"}
+        ],
+        "category": "game",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-29",
+        "tags": ["Take-Two", "Rockstar", "GTA 6", "定价", "Strauss Zelnick", "3A游戏", "11月19日"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "Zelnick'远低于实际价值'的表态是典型的CEO话术——既安抚投资人'我们不会冒丢失用户的风险漫天要价'，又回避了具体数字(What)。GTA 6定价是2026年游戏行业最重要的商业决策之一：$70→$80意味着行业渐进式涨价，$100则可能开创'超3A定价'新时代并倒逼竞争对手跟随(Why)。从Rockstar视角：GTA 6研发成本据报道超$10亿(史上最高)，Zelnick的'价值'论述暗示Take-Two将用'消费者剩余'策略——让玩家感觉'捡了便宜'同时实现最高总收益，而非简单提价(So What)。RDO/GTA Online每年贡献数十亿收入使Take-Two有底气押注单机GTA 6的终极内容量；$80-90是最可能区间，$100若实现将是行业定价的分水岭(What Next)。",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 256,
+        "title": "索尼正式澄清PS5 DRM政策：购买后仅需一次联网验证确认许可证，非每月检查",
+        "summary": "索尼就PS4/PS5数字版权管理相关争议发布官方声明，明确澄清：玩家购买数字游戏后仅需进行一次在线验证确认许可证，之后无需再进行联网校验即可正常游玩。该机制主要用于防止用户退款后离线继续使用无合法许可的游戏。索尼表示媒体报道的'30天检查'系对客服答复的误读，已着手更正相关表述。IGN等多家媒体已收到索尼确认声明。",
+        "source": "IGN",
+        "sourceUrl": "https://www.ign.com/articles/sony-clarifies-ps5-drm-policy-license-check",
+        "sourceUrls": [
+            {"name": "IGN", "url": "https://www.ign.com/articles/sony-clarifies-ps5-drm-policy-license-check"},
+            {"name": "Metro", "url": "https://metro.co.uk/2026/04/30/ps5-drm-system-isnt-online-sony-finally-explains-works-28177992/"},
+            {"name": "GamesSpot", "url": "https://www.gamespot.com/articles/playstation-users-report-new-online-license-checks-for-digital-games/1100-6539651/"},
+            {"name": "CBR", "url": "https://www.cbr.com/sony-responds-playstation-online-license-checks/"}
+        ],
+        "category": "platform",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-04-29",
+        "tags": ["PlayStation", "PS5", "DRM", "数字版权", "索尼", "澄清", "离线游戏"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "索尼从'30天检查'到'一次验证'的政策澄清是危机公关的典型成功案例——在用户强烈反弹后48小时内主动纠正误读(What)。本质上是索尼客服在解释新机制时表述不够清晰，而非有意推行更严格的DRM；但用户的担忧折射出数字游戏所有权的根本矛盾：玩家花钱买的是'许可证'而非游戏本身，一旦平台倒闭或封号，许可证随时可被撤销(Why)。对行业影响：Epic诉苹果案持续推进，第三方支付链接开放可能引发主机平台用户'跨平台购买'的意识觉醒，玩家对数字所有权的关注度将持续上升(So What)。索尼此次快速澄清是明智之举，若形成'索尼不让离线玩'的公众认知，对PS5生命周期末期的装机增量将是致命打击(What Next)。",
+        "relatedNewsIds": [255]
+    },
+    {
+        "id": 255,
+        "title": "美国第九巡回法院驳回Apple暂停执行请求：Epic诉苹果案App Store禁令生效",
+        "summary": "苹果公司试图推迟执行'禁止收取第三方支付手续费'判决的申请再次被法院驳回。4月28日，美国第九巡回上诉法院推翻了此前批准苹果延期执行的裁定，将案件发回下级法院确定允许的佣金费率。苹果表示将向最高法院上诉，但目前外部支付链接必须保持畅通。Epic Games在2020年起诉苹果垄断，2024年地区法院裁决苹果不得阻止开发者引导用户使用外部支付渠道。",
+        "source": "TechCrunch",
+        "sourceUrl": "https://techcrunch.com/2026/04/29/apple-epic-games-app-store-fees-pause-changes-supreme-court/",
+        "sourceUrls": [
+            {"name": "TechCrunch", "url": "https://techcrunch.com/2026/04/29/apple-epic-games-app-store-fees-pause-changes-supreme-court/"},
+            {"name": "MacRumors", "url": "https://www.macrumors.com/2026/04/29/epic-games-wins-reversal-app-store-fee-battle/"},
+            {"name": "BetaNews", "url": "https://betanews.com/article/epic-wins-ninth-circuit-lifts-apple-app-store-stay/"},
+            {"name": "iClarified", "url": "https://www.iclarified.com/100711/apple-loses-bid-to-delay-app-store-changes-in-epic-games-lawsuit"}
+        ],
+        "category": "policy",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-29",
+        "tags": ["Epic Games", "Apple", "App Store", "反垄断", "第九巡回法院", "支付手续费", "监管"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "第九巡回法院驳回Apple暂停执行是Epic诉苹果5年拉锯战的重大进展——App Store'围墙花园'的法律护城河出现实质性裂缝(What)。苹果将向最高法院上诉，预计最高法院接受审理概率约40-50%(历史数据显示最高法院对反垄断案件态度保守)，但即便上诉，外部支付链接在等待期间仍须保持开放(Why)。对游戏发行渠道的影响：手游端Epic已证明绕过App Store支付可为开发者节省15-30%费用；PC/Console端虽然App Store不是主要战场，但此判例为欧盟DMA框架下的'侧载'合规提供判例支撑(So What)。若最高法院最终支持Epic，苹果可能面临数十亿美元的退款压力，并被迫开放iOS第三方支付——这将是2010年以来最重大的数字平台监管变革(What Next)。",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 254,
+        "title": "4月国产网络游戏版号发放：共154款获批，网易雷火《遗忘之海》获PS5版号",
+        "summary": "国家新闻出版署公布2026年4月国产网络游戏审批信息，共154款游戏获得版号，其中移动端139款、客户端8款，同时审批游戏机（PS5）7款。值得关注的是，网易雷火《遗忘之海》同时获得移动端、客户端和游戏机(PS5)三个平台的版号许可，这是进口PS5游戏版号中较为罕见的完整多平台覆盖。2026年累计发放版号621款，同比增加22.49%。",
+        "source": "IT之家",
+        "sourceUrl": "https://www.ithome.com/0/942/076.htm",
+        "sourceUrls": [
+            {"name": "IT之家", "url": "https://www.ithome.com/0/942/076.htm"},
+            {"name": "NewsGlobeNow", "url": "https://www.newsglobenow.com/new332738.html"}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-04-29",
+        "tags": ["版号", "中国游戏", "网易", "PS5", "审批", "国家新闻出版署", "多平台"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "154款版号延续了2025年下半年以来审批提速的趋势——月均150+款版号已基本成为新常态，标志着中国游戏监管进入'常态化审批+质量并重'阶段(What)。网易雷火《遗忘之海》获PS5版号是本期最大亮点——这意味着中国开发商正系统性推进主机游戏开发，PS5作为日系主机在中国中高端玩家中的渗透率提升得到监管侧认可(Why)。累计同比+22.49%在2025年恢复性增长基础上继续提速，反映监管层对游戏产业作为文化消费出口的积极态度(So What)。但版号'量增'不代表质量放松——实际数据显示获批游戏平均研发投入和质量要求在提高，中小游戏公司获取版号难度反而增加(What Next)。",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 253,
+        "title": "Starbreeze借助Roblox成功经验开发第二款游戏：《Notoriety》累计访问量破4亿",
+        "summary": "Starbreeze旗下新游《Notoriety: A Payday Experience》在Roblox平台累计访问量已突破4亿次，玩家好评率92%。Starbreeze借此Roblox验证'用户生成内容'商业路径的可行性后，正式宣布将基于此经验开发第二款独立游戏。Starbreeze曾因《Payday》系列闻名，但2023年曾进入破产程序，目前正通过轻资产模式重建。",
+        "source": "GIB",
+        "sourceUrl": "https://www.gamesindustry.biz/starbreeze-to-make-second-game-following-roblox-success",
+        "sourceUrls": [
+            {"name": "GIB", "url": "https://www.gamesindustry.biz/starbreeze-to-make-second-game-following-roblox-success"},
+            {"name": "Checkpoint Gaming", "url": "https://checkpointgaming.net/news/2026/04/starbreeze-to-develop-second-title-based-on-roblox-success"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-04-29",
+        "tags": ["Starbreeze", "Roblox", "Notoriety", "UGC", "用户生成内容", "Payday", "重生"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Starbreeze在破产后选择Roblox作为'轻资产验证场'是极具洞察的战略——Roblox的UGC生态允许用极低成本测试IP可行性和玩家付费意愿，4亿访问+92%好评证明了Payday IP在年轻用户中的号召力(What)。对游戏行业的启示：传统'3A投入→市场验证'模式风险极高，而Roblox/《我的世界》等UGC平台提供了中间路径——'小步快跑+用户验证+迭代放大'(Why)。Starbreeze的第二款游戏若借鉴Roblox数据(如玩家最喜欢的玩法机制、付费节点)将比传统市场调研更精准(So What)。对于其他中小型开发商，Starbreeze案例证明了'先Roblox验证再PC/Console移植'的可行路径——这可能是未来独立游戏发行的标准范式之一(What Next)。",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 252,
+        "title": "微软计划两年内追平SteamOS游戏性能，内部代号'Windows K2'改革项目曝光",
+        "summary": "微软内部正推进名为'Windows K2'的系统改革项目，核心目标是两年内在游戏性能上追平Valve的SteamOS。微软官方声明首次公开承认SteamOS已成为行业性能标杆，并将其列为Windows游戏部门的核心赶超目标。消息源称K2将重写Windows 11核心渲染管线，专注降低输入延迟和改善电源管理，2027年底前完成。",
+        "source": "3DMGame",
+        "sourceUrl": "https://www.3dmgame.com/news/202604/3942596.html",
+        "sourceUrls": [
+            {"name": "3DMGame", "url": "https://www.3dmgame.com/news/202604/3942596.html"},
+            {"name": "TheWinCentral", "url": "https://thewincentral.com/microsoft-k2-windows-11-performance-overhaul-steamos-benchmark/"}
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-29",
+        "tags": ["微软", "Windows K2", "SteamOS", "Valve", "平台性能", "游戏优化", "Windows 11"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "微软官方承认SteamOS是性能标杆并设立'两年追平'目标——这是Windows与SteamOS竞争史上微软首次放下身段，标志着PC游戏平台权力格局正在重构(What)。SteamOS的结构性优势在于Valve控制全栈(内核+图形驱动+游戏层+商店)，可针对每款游戏做定向优化；Windows作为通用操作系统需兼顾兼容性导致性能损耗。K2本质上是微软试图'用通用OS打赢专用OS'的攻坚战(Why)。若K2成功：Windows游戏体验提升→Xbox PC Game Pass吸引力↑→Xbox生态在PC端扩张→对Steam形成真正竞争压力。若失败：Steam Deck+Steam Machine生态加速渗透，Xbox PC端用户进一步流失(So What)。K2与Project Helix硬件战略需协同——Helix若想与PS6竞争，必须同时解决Windows性能短板，否则'最强性能主机'承诺无法兑现(What Next)。",
+        "relatedNewsIds": [251, 232, 230]
+    },
+    {
+        "id": 251,
+        "title": "微软FY2026 Q3财报：Xbox主机硬件收入同比下滑33%，内容与服务跌5%",
+        "summary": "微软发布2026财年第三季度财报，Xbox主机硬件收入同比下滑33%，游戏总收入$53.4亿(同比-7%)，内容与服务收入下滑5%。新任Xbox CEO阿莎·夏尔马(Asha Sharma)已开始大幅改革，目标在下一财年恢复增长。云计算与生产力业务保持强劲，整体营收829亿美元。连续第二个季度硬件跌幅超过30%。",
+        "source": "The Verge",
+        "sourceUrl": "https://www.theverge.com/tech/920785/microsoft-xbox-revenue-q3-2026-earnings",
+        "sourceUrls": [
+            {"name": "The Verge", "url": "https://www.theverge.com/tech/920785/microsoft-xbox-revenue-q3-2026-earnings"},
+            {"name": "Wccftech", "url": "https://wccftech.com/xbox-revenue-down-again-hardware-revenue-down-microsoft-fy26-q3-earnings/"},
+            {"name": "Windows Report", "url": "https://windowsreport.com/microsoft-q3-2026-earnings-cloud-and-azure-drive-18-growth-as-xbox-devices-decline/"},
+            {"name": "TalkEsport", "url": "https://www.talkesport.com/news/xbox-revenue-down-microsoft-fy26-q3-earnings/"},
+            {"name": "3DMGame", "url": "https://www.3dmgame.com/"}
+        ],
+        "category": "policy",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-04-29",
+        "tags": ["微软", "Xbox", "财报", "FY2026 Q3", "硬件下滑", "Asha Sharma", "Game Pass", "营收"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "Xbox连续第二个季度硬件跌幅超30%是微软游戏业务结构性困境的集中体现——PS5生命周期末期的供应萎缩+Switch 2持续蚕食+无强势第一方新作三重叠加效应(What)。但积极信号是内容与服务仅下滑5%，说明Game Pass订阅收入提供了部分缓冲；Asha Sharma上任后'大幅改革'表态意味着Xbox战略将从'硬件优先'转向'服务优先'(Why)。对Game Pass影响：硬件玩家流失→Game Pass潜在用户基数↓；若Game Pass订阅增长无法对冲硬件跌幅，Xbox将加速从主机厂商向'游戏服务公司'转型(So What)。Helix主机和Windows K2项目是Asha Sharma'改革'的两张底牌——前者恢复硬件竞争力，后者提升Windows游戏体验以扩大PC端Game Pass渗透(What Next)。",
+        "relatedNewsIds": [252, 230, 224]
+    },
+    {
+        "id": 250,
+        "title": "《贪婪之秋》开发商Spiders宣告倒闭，Nacon破产后首个关门工作室",
+        "summary": "法国开发商Spiders正式确认关闭，公司进入清算程序。Spiders曾开发《贪婪之秋》《钢铁崛起》《贪婪之秋2：垂死世界》等中世纪题材RPG，母公司Nacon申请破产后未能为Spiders找到接盘方而被迫关门。《贪婪之秋2》的DLC仍将由Nacon继续完成。Spiders是Nacon旗下第5家申请破产的子公司。",
+        "source": "VGC",
+        "sourceUrl": "https://www.videogameschronicle.com/news/nacons-collapse-claims-first-closure-as-rpg-studio-confirms-it-no-longer-exists/",
+        "sourceUrls": [
+            {"name": "VGC", "url": "https://www.videogameschronicle.com/news/nacons-collapse-claims-first-closure-as-rpg-studio-confirms-it-no-longer-exists/"},
+            {"name": "Wccftech", "url": "https://wccftech.com/greedfall-makers-spiders-confirms-shut-down-nacon/"},
+            {"name": "Gematsu", "url": "https://www.gematsu.com/2026/04/greedfall-developer-spiders-shuts-down"},
+            {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/greedfall-developer-spiders-reportedly-set-to-close"}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-04-29",
+        "tags": ["Spiders", "Nacon", "GreedFall", "Steelrising", "法国开发商", "倒闭", "破产"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "Spiders倒闭是Nacon破产连锁反应的第一个多米诺骨牌——Nacon旗下已有5家工作室申请破产，标志着法国中小发行商的系统性危机(What)。Spiders的核心问题在于其'中世纪RPG'定位受众较窄，《钢铁崛起》(埃菲尔铁塔机器人)更因题材过于冷门商业失败；Nacon在资金充裕时期收购大量工作室但缺乏IP运营能力，最终在市场下行周期中不堪重负(Why)。对行业影响：中小开发商被大厂'收购然后抛弃'的模式风险加剧；GreedFall 2的DLC能否完成取决于Nacon资产处置进展，忠实玩家面临'游戏未完成就工作室关门'的困境(So What)。Embracer、Nacon等欧洲发行商的'买买买然后整合'战略已被证明在行业下行期极度脆弱，其他中小发行商应引以为戒(What Next)。",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 249,
+        "title": "Steam东方游戏文化周开启：《明末：渊虚之羽》等国产游戏集体史低促销",
+        "summary": "Steam平台东方游戏文化周促销活动已于近日开启，多款国产游戏参与打折。《明末：渊虚之羽》(An Autumn's Departure)等作品达到历史最低价格。Steam东方游戏文化周是Valve支持中国/东亚独立游戏生态的系列活动之一，参与游戏涵盖动作冒险、角色扮演、策略模拟等多个品类。",
+        "source": "3DMGame",
+        "sourceUrl": "https://www.3dmgame.com/news/202604/3942596.html",
+        "sourceUrls": [
+            {"name": "3DMGame", "url": "https://www.3dmgame.com/news/202604/3942596.html"}
+        ],
+        "category": "platform",
+        "importance": "low",
+        "featured": false,
+        "date": "2026-04-29",
+        "tags": ["Steam", "东方游戏", "促销", "特卖", "明末：渊虚之羽", "中国游戏", "独立游戏"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Steam东方游戏文化周是Valve系统性扶持中国/东亚独立游戏生态的体现——与'游戏节''开放世界节''FPS节'等同类活动构成完整的细分品类扶持矩阵(What)。Valve策略：通过定期特卖活动为独立游戏提供'可预期的流量窗口'，帮助开发者规划现金流；对中国开发者而言，参与Steam全球化特卖是在Steam俄区低价策略下维持收入的重要手段(Why)。《明末：渊虚之羽》等明末历史题材游戏参与促销，反映国产独立游戏在叙事深度和题材差异化上的持续进步(So What)。Valve未来可能将东方游戏文化周升级为'Steam东方节'(类似亚洲版Summer Sale)，进一步扩大东亚游戏在Steam的可见度(What Next)。",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 248,
+        "title": "《EA Sports UFC 6》6月19日发售，登陆PS5/Xbox Series平台起售价$69.99",
+        "summary": "EA宣布《EA Sports UFC 6》将登陆PlayStation 5和Xbox Series X/S平台，并于6月19日正式发售，标准版起售价$69.99。封面运动员为Alex Pereira(标准版)和Max Holloway(终极版)，游戏口号为'Powered by Fighters'。新版本预计带来全新格斗机制扩展和早期访问特权。",
+        "source": "IGN中国",
+        "sourceUrl": "https://www.ign.com.cn/gamegame/59722/ea-sports-ufc-6-6-yue-19-ri-fa-shou",
+        "sourceUrls": [
+            {"name": "IGN中国", "url": "https://www.ign.com.cn/gamegame/59722/ea-sports-ufc-6-6-yue-19-ri-fa-shou"},
+            {"name": "GamingPromax", "url": "https://gamingpromax.com/ea-sports-ufc-6-release-date-june-2026/"},
+            {"name": "RealSport101", "url": "https://realsport101.com/article/ufc-6-release-date-cover-stars-and-pre-order-perks-revealed"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-04-29",
+        "tags": ["EA Sports", "UFC 6", "格斗游戏", "PS5", "Xbox Series", "6月19日", "Alex Pereira"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "UFC 6选择6月19日发售，正值NBA Finals结束+暑期档开启的体育游戏黄金窗口——EA有意错开与GTA 6(11月)的正面碰撞(What)。$69.99定价继续执行EA的3A体育游戏涨价策略，与FIFA系列改名为EA Sports FC后的定价策略一致；UFC作为EA Sports旗下第三大IP(Madden/UFC/FC)，年货模式确保稳定现金流但创新有限(Why)。Alex Pereira封面值得注意：作为现役UFC双量级冠军(P5P+轻重量级)，其流量价值超越体育游戏传统覆盖群体，可能吸引大量'非体育游戏核心玩家'尝试(So What)。6月~9月是游戏淡季(无Holiday档期大作)，UFC 6和The Blood of Dawnwalker(9月3日)填补了暑期档的3A空白(What Next)。",
+        "relatedNewsIds": [247]
+    },
+    {
+        "id": 247,
+        "title": "《黎明行者之血》正式定档9月3日发售：登陆Xbox/PS5/PC，售价$70",
+        "summary": "《黎明行者之血》(The Blood of Dawnwalker)正式宣布9月3日发售，售价$70，登陆Xbox Series X/S、PlayStation 5和PC(含Steam)。该作由前《巫师3》总监Konrad Tomaszkiewicz创办的Rebel Wolves开发、万代南梦宫发行，是暗黑风开放世界ARPG，将与同日档期的《神鬼寓言》正面对决。",
+        "source": "IGN",
+        "sourceUrl": "https://www.ign.com/articles/the-blood-of-dawnwalker-has-a-release-date-and-a-new-story-trailer",
+        "sourceUrls": [
+            {"name": "IGN", "url": "https://www.ign.com/articles/the-blood-of-dawnwalker-has-a-release-date-and-a-new-story-trailer"},
+            {"name": "EuroGamer", "url": "https://www.eurogamer.net/blood-of-dawnwalker-release-date"},
+            {"name": "Gematsu", "url": "https://www.gematsu.com/2026/04/the-blood-of-dawnwalker-launches-september-3"},
+            {"name": "Bandai Namco官站", "url": "https://www.bandainamcoent.com/games/dawnwalker"}
+        ],
+        "category": "game",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-04",
+        "tags": ["黎明行者之血", "Blood of Dawnwalker", "Rebel Wolves", "万代南梦宫", "巫师3", "暗黑ARPG", "9月3日"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "前巫师3总监Konrad Tomaszkiewicz携Rebel Wolves首作正式定档9月3日——这是今年最受期待的'3A新锐'vs'老牌IP'正面对决之一(What)。$70标准定价(未跟随$100超3A定价传闻)说明万代南梦宫和Rebel Wolves对首作销量的谨慎预期：开放世界ARPG竞争激烈(《宣誓》《龙腾世纪》等)，品牌认知度不如一线IP，贸然定$80-100可能适得其反(Why)。同日《神鬼寓言》同档期是巧合还是协调值得关注——若两款游戏口碑都不错，将共同做大'秋季ARPG档期'；若一方评价崩盘则可能拖累整个品类(So What)。对行业影响：独立工作室+成熟发行的'联合开发'模式成为中型游戏的标准路径，Rebel Wolves 70-100人规模在当前行业整合期是'敏捷开发'的代表性样本(What Next)。",
+        "relatedNewsIds": [248]
+    },
     {
         "id": 233,
         "title": "Circana美国3月游戏市场：硬件销量暴涨69%至$5亿，Switch 2蝉联第一、为美国史上第二快销主机",
