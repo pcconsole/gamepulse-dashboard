@@ -3,7 +3,7 @@
 // 覆盖18家上市公司的游戏业务财务与运营数据
 // 数据来源：各公司IR页面/财报/press release + GamesIndustry.biz 验证
 // 更新日期: 2026-05-08
-// 本次更新: 微软FY2026 Q3(4/29发布: Gaming收入$53.4亿-7%,硬件-33%,MAU创新高) + EA FY2026 Q4+全年(5/5发布: 净预订$80.26亿+9%创纪录,BF6 2600万+)
+// 本次更新: 微软FY2026 Q3(4/29发布: Gaming$53.4亿-7%,硬件-33%,MAU创新高) + EA FY2026 Q4+全年(5/5: 净预订$80.26亿+9%创纪录) + Roblox Q1 2026(4/30: $14.4亿+39%,下调指引) + Unity Q1 2026(5/7: $5.08亿+17%,退出非核心广告)
 //   重构范围: Sony/Microsoft/Nintendo/腾讯/网易/EA/Take-Two/Ubisoft/Nexon/
 //             万代南梦宫/Capcom/Square Enix/Konami/Sega/Krafton/Roblox/Unity/Embracer
 //   新增公司: Roblox(NYSE:RBLX)/Unity(NYSE:U)/Embracer(OMX:EMBRAC B) 加入earningsCompanies数组
@@ -955,63 +955,55 @@ const earningsCompanies = [
         logo: '🟪',
         color: '#9146FF',
         segment: '整体（平台型）',
-        fiscalPeriod: '2025 Q4 + 全年 (2025年1-12月)',
+        fiscalPeriod: '2026 Q1 (2026年1-3月)',
         currency: 'USD',
         latestQuarter: {
-            period: '2025 Q4', calendarPeriod: '2025年10-12月', filingDate: '2026-02-05',
-            revenue: { value: 1400, unit: '百万美元', yoy: 43, label: 'Q4收入$14亿(+43%)', usdEquiv: '$1.4B' },
-            bookings: { value: 2220, unit: '百万美元', yoy: 63, label: 'Q4预订$22.2亿(+63%,超预期$20.5亿)' },
-            netLoss: { value: -318, unit: '百万美元', label: 'Q4净亏损$3.18亿(去年$2.21亿)' },
+            period: '2026 Q1', calendarPeriod: '2026年1-3月', filingDate: '2026-04-30',
+            revenue: { value: 1440, unit: '百万美元', yoy: 39, label: 'Q1收入$14.4亿(+39%)', usdEquiv: '$1.44B' },
+            bookings: { value: 1730, unit: '百万美元', yoy: 43, label: 'Q1预订$17.3亿(+43%)' },
+            operatingCashFlow: { value: 629, unit: '百万美元', label: 'Q1经营现金流$6.29亿' },
+            freeCashFlow: { value: 596, unit: '百万美元', label: 'Q1自由现金流$5.96亿' },
             gameMetrics: {
-                dau: { value: 144, unit: '百万', yoy: 69, label: 'Q4 DAU 1.44亿(+69%,超预期1.38亿)' },
-                hoursEngaged: { value: 35, unit: '十亿小时', yoy: 88, label: 'Q4参与时长350亿小时(+88%)' },
-                monthlyPayers: { value: 36.7, unit: '百万', yoy: 94, label: '月均付费用户3670万(+94%)' },
-                avgSpend: { value: 20.18, unit: '美元/月', label: '用户平均月支出$20.18' }
+                dau: { value: null, unit: '百万', label: 'DAU增长中(未披露具体数字)' },
+                monthlyPayers: { value: 31, unit: '百万', label: '月独立付费用户3100万' }
             }
         },
         fullYear: {
-            period: '2025年全年(1-12月)', filingDate: '2026-02-05', status: '已发布',
-            revenue: { value: 4900, unit: '百万美元', yoy: 36, label: '2025全年收入$49亿(+36%)', usdEquiv: '$4.9B' },
-            bookings: { value: 6800, unit: '百万美元', yoy: 55, label: '全年预订$68亿(+55%)' },
-            netLoss: { value: -1070, unit: '百万美元', label: '全年净亏损$10.7亿(去年$9.4亿)' },
-            robuxGrowth: { value: 53, unit: '%', label: 'Robux消费同比+53%' },
-            marketShare: { value: 3.4, unit: '%', label: '占全球游戏内容市场3.4%' },
-            note: '标志性一年,各项核心指标创新高,显著超出年度指引和长期目标'
+            period: '2026全年指引(下调)', filingDate: '2026-04-30', status: '管理层指引(下调)',
+            revenue: { value: 6005, unit: '百万美元(指引中值)', yoy: 22.5, label: '全年收入指引$58.7-61.4亿(增20-25%)', usdEquiv: '≈$6.0B' },
+            bookings: { value: 7465, unit: '百万美元(指引中值)', yoy: 10, label: '全年预订指引$73.3-76.0亿(增8-12%)' },
+            note: '因安全措施(强制年龄验证/社交限制)带来的参与度逆风,下调了全年收入和预订指引'
         },
         companyOverall: {
-            totalRevenue: { value: 1400, unit: '百万美元(Q4)', yoy: 43, label: 'Q4总收入$14亿', source: 'Roblox Q4 2025 Earnings (2026/02/05)' },
-            totalOperatingProfit: { value: null, unit: '百万美元', yoy: null, label: '运营亏损(持续亏损中,亏损率收窄)' },
-            note: '全年收入$49亿(+36%),预订$68亿(+55%)。EPS亏损45美分,优于预期48美分。Q4 DAU 1.44亿超预期1.38亿。'
+            totalRevenue: { value: 1440, unit: '百万美元(Q1)', yoy: 39, label: 'Q1总收入$14.4亿', source: 'Roblox Q1 2026 Earnings (2026/04/30)' },
+            totalOperatingProfit: { value: null, unit: '百万美元', yoy: null, label: '运营亏损(持续亏损中,但现金流大幅改善)' },
+            note: 'Q1收入$14.4亿(+39%),预订$17.3亿(+43%),经营现金流$6.29亿。但因安全措施下调全年指引,股价暴跌19.8%。'
         },
         financials: {
-            revenue: { value: 1400, unit: '百万美元(Q4)', yoy: 43, label: 'Q4收入$14亿(+43%)', source: 'Roblox Q4 2025 Shareholder Letter (2026/02/05)' },
-            operatingProfit: { value: null, unit: '百万美元', yoy: null, label: '运营亏损(持续亏损中)' },
+            revenue: { value: 1440, unit: '百万美元(Q1)', yoy: 39, label: 'Q1收入$14.4亿(+39%)', source: 'Roblox Q1 2026 Shareholder Letter (2026/04/30)' },
+            operatingProfit: { value: null, unit: '百万美元', yoy: null, label: '运营亏损(持续中)' },
             operatingMargin: { value: null, label: '运营利润率(亏损中)' },
             segmentRevenuePct: { value: 100, label: '平台型(整体)' },
-            bookings: { value: 2220, unit: '百万美元(Q4)', yoy: 63, label: 'Q4预订$22.2亿(+63%,超预期$20.5亿)' },
-            fullYearRevenue: { value: 4900, unit: '百万美元', yoy: 36, label: '全年收入$49亿(+36%)' },
-            fullYearBookings: { value: 6800, unit: '百万美元', yoy: 55, label: '全年预订$68亿(+55%)' },
+            bookings: { value: 1730, unit: '百万美元(Q1)', yoy: 43, label: 'Q1预订$17.3亿(+43%)' },
         },
         gameMetrics: {
-            dau: { value: 144, unit: '百万(Q4)', yoy: 69, label: 'Q4 DAU 1.44亿(+69%,超预期)', source: 'Roblox Q4 2025 Shareholder Letter' },
-            hoursEngaged: { value: 35, unit: '十亿小时(Q4)', yoy: 88, label: 'Q4参与时长350亿小时(+88%)' },
-            peakConcurrent: { value: 45, unit: '百万', label: '峰值同时在线4500万' },
-            monthlyPayers: { value: 36.7, unit: '百万(Q4)', yoy: 94, label: '月均付费用户3670万(+94%)' },
-            ageVerified: { value: 45, unit: '%', label: '45%DAU已完成年龄验证(截至2026/01)' },
+            monthlyPayers: { value: 31, unit: '百万(Q1)', label: '月独立付费用户3100万', source: 'Roblox Q1 2026 Earnings Call' },
+            operatingCashFlow: { value: 629, unit: '百万美元', label: 'Q1经营现金流$6.29亿' },
+            freeCashFlow: { value: 596, unit: '百万美元', label: 'Q1自由现金流$5.96亿' },
         },
         keyProducts: ['Roblox Platform', 'Roblox Studio', 'UGC生态系统', '品牌广告平台'],
         analysis: {
-            performance: '✅ Beat: 2025Q4收入$14亿(+43%),预订$22.2亿(+63%,超华尔街预期$20.5亿约8.3%)。DAU 1.44亿(+69%,超预期1.38亿约4.3%)。EPS亏损45美分优于预期48美分。全年收入$49亿(+36%),预订$68亿(+55%),均显著超出年度指引。增长核心驱动：13+用户增速最快(扩龄策略成效显著),品牌广告起量(Shopify/Gucci等),开发者工具升级提升内容质量。月均付费用户3670万(+94%)是变现加速的关键信号。净亏损$10.7亿仍在扩大,但亏损率边际收窄。',
-            strategy: 'Roblox加速从儿童游戏平台向全年龄UGC元宇宙转型。品牌广告成为新增长支柱。强制年龄验证(Q4末开始,1月全球完成)短期带来"中个位数"参与度逆风,但长期有利于安全合规和个性化推荐。前1000名创作者平均赚取$130万,创作者经济持续壮大。2027年起将取消年度指引改为季度指引。',
-            outlook: '2026全年指引：收入$60-62亿,预订$82-85亿(均大幅增长)。Q1 2026预订指引$16.9-17.4亿(超预期$16.8亿)。公司愿景：连接10亿用户,占全球游戏市场10%。自由现金流正转是中期里程碑。',
-            newProducts: 'Roblox AI Assistant；品牌广告平台扩展；VR/AR跨平台支持；Creator Store升级；安全合规工具加强。'
+            performance: 'Q1收入$14.4亿(+39% YoY)、预订$17.3亿(+43%)，均大幅超出长期增长目标(约为目标增速的两倍)。经营现金流$6.29亿、自由现金流$5.96亿表现强劲。月独立付费用户达3100万。但公司因儿童安全合规措施(强制年龄验证、社交功能限制)带来的中个位数参与度逆风,下调了2026全年指引(收入增20-25%/预订增8-12%,低于此前更高预期),导致股价暴跌19.8%。',
+            strategy: '安全合规成为Roblox战略首要任务——强制年龄验证全球推行+13岁以下用户社交限制+内容审核加强。短期牺牲增长换取长期平台信誉和监管合规。品牌广告持续扩展(与Shopify/Gucci等合作)。取消年度指引改为季度指引(从2027起)。',
+            outlook: '2026全年指引下调：收入$58.7-61.4亿(+20-25%),预订$73.3-76.0亿(+8-12%)。安全措施逆风预计贯穿全年。但长期受益于平台安全性提升带来的家长信任和品牌合作意愿增强。自由现金流转正是积极信号。',
+            newProducts: 'Roblox AI Assistant；品牌广告平台扩展；社交安全工具升级；Creator Store迭代。'
         },
         dataSources: [
-            { type: 'Q4+年度财报', name: 'Roblox Q4 & Full Year 2025 Shareholder Letter', date: '2026-02-05', url: 'https://ir.roblox.com/news/news-details/2026/Roblox-Reports-Fourth-Quarter-and-Full-Year-2025-Financial-Results/default.aspx' },
-            { type: '行业报道', name: 'GamesIndustry.biz: Roblox hits $4.9bn in revenue', date: '2026-02-06', url: 'https://www.gamesindustry.biz/roblox-reports-significant-growth-for-2025-hitting-49bn-in-revenue' }
+            { type: '季度财报', name: 'Roblox Q1 2026 Shareholder Letter', date: '2026-04-30', url: 'https://ir.roblox.com/news/news-details/2026/Roblox-Reports-First-Quarter-2026-Financial-Results/default.aspx' },
+            { type: '电话会议', name: 'Roblox Q1 2026 Earnings Call Transcript', date: '2026-04-30', url: 'https://ir.roblox.com/' }
         ],
-        filingDate: '2026-02-05',
-        filingType: '季度+年度财报(Q4+全年)',
+        filingDate: '2026-04-30',
+        filingType: '季度财报(Q1)',
         filingUrl: 'https://ir.roblox.com/'
     },
     {
@@ -1025,47 +1017,46 @@ const earningsCompanies = [
         logo: '⬛',
         color: '#222222',
         segment: '整体（引擎+广告平台）',
-        fiscalPeriod: '2025 Q4 (2025年10-12月)',
+        fiscalPeriod: '2026 Q1 (2026年1-3月)',
         currency: 'USD',
         latestQuarter: {
-            period: '2025 Q4', calendarPeriod: '2025年10-12月', filingDate: '2026-02-20',
-            revenue: { value: 503, unit: '百万美元', yoy: null, label: 'Q4收入$5.03亿', usdEquiv: '$503M' },
-            note: 'Q4"comfortably exceeded"指引已确认'
+            period: '2026 Q1', calendarPeriod: '2026年1-3月', filingDate: '2026-05-07',
+            revenue: { value: 508, unit: '百万美元', yoy: 17, label: 'Q1收入$5.08亿(+17%)', usdEquiv: '$508M' },
+            note: 'Q1收入超指引($4.8-4.9亿),由Vector广告平台驱动;正退出非战略性广告业务(ironSource Ads Network+Supersonic)'
         },
         fullYear: {
-            period: 'FY2025全年指引', filingDate: '2026-02-20', status: '管理层指引(已超额完成)',
-            revenue: { value: 2140, unit: '百万美元(指引中值)', yoy: null, label: '全年营收指引$20.8-22亿≈$21.4亿', usdEquiv: '$2.14B' },
-            note: 'Q4超额完成,全年实际>$21.4亿中值'
+            period: '2026全年展望', filingDate: '2026-05-07', status: '战略转型中',
+            revenue: { value: null, unit: '百万美元', yoy: null, label: '退出非核心广告业务后,聚焦引擎+Vector' },
+            note: 'Unity宣布退出ironSource广告网络和Supersonic发行平台,聚焦核心引擎+Vector AI广告'
         },
         companyOverall: {
-            totalRevenue: { value: 503, unit: '百万美元(Q4)', yoy: null, label: 'Q4总收入$5.03亿', source: 'Unity Q4 2025 / Earnings (2026/02/20)' },
-            totalOperatingProfit: { value: null, unit: '百万美元', yoy: null, label: '仍处亏损,持续重组中' },
-            note: 'Unity经历CEO更换(Jim Whitehurst)、大规模裁员后进入重组恢复期'
+            totalRevenue: { value: 508, unit: '百万美元(Q1)', yoy: 17, label: 'Q1总收入$5.08亿', source: 'Unity Q1 2026 Earnings (2026/05/07)' },
+            totalOperatingProfit: { value: null, unit: '百万美元', yoy: null, label: '利润率大幅改善(Adj EBITDA超指引)' },
+            note: 'CEO Matthew Bromberg表示正实现"卓越的营收增长和利润率扩张",同时退出非战略性广告业务'
         },
         financials: {
-            revenue: { value: 503, unit: '百万美元(Q4)', yoy: null, label: 'Q4收入$5.03亿', source: 'Unity Q4 2025 Earnings (2026/02/20)' },
-            operatingProfit: { value: null, unit: '百万美元', yoy: null, label: '运营亏损(重组中)' },
-            operatingMargin: { value: null, label: '运营利润率(亏损中)' },
+            revenue: { value: 508, unit: '百万美元(Q1)', yoy: 17, label: 'Q1收入$5.08亿(+17%)', source: 'Unity Q1 2026 Earnings Release (2026/05/07)' },
+            operatingProfit: { value: null, unit: '百万美元', yoy: null, label: 'Adj EBITDA超指引(具体数字待确认)' },
+            operatingMargin: { value: null, label: '利润率改善中' },
             segmentRevenuePct: { value: 100, label: '整体' },
         },
         gameMetrics: {
-            createRevenue: { value: 200, unit: '百万美元(估)', label: 'Create Solutions收入(估)' },
-            growRevenue: { value: 300, unit: '百万美元(估)', label: 'Grow Solutions(广告)收入(估)' },
-            vectorLaunch: { value: true, unit: '', label: 'Vector广告平台提前推出' },
+            vectorPlatform: { value: true, unit: '', label: 'Vector AI广告平台持续增长', source: 'Unity Q1 2026 Earnings' },
+            strategicExit: { value: true, unit: '', label: '退出ironSource Ads Network+Supersonic发行' },
         },
-        keyProducts: ['Unity Engine 6', 'Unity Ads/Vector', 'Unity Gaming Services', 'ironSource广告'],
+        keyProducts: ['Unity Engine 6', 'Unity Vector(AI广告)', 'Unity Gaming Services', 'Unity Muse(AI)'],
         analysis: {
-            performance: 'Q4收入$5.03亿，全年营收指引$20.8-22亿(管理层称"comfortably exceeded")。Vector广告平台提前推出部分抵消Runtime Fee争议后的开发者流失。Create业务(引擎授权)企稳,Grow业务(广告)受益于移动广告市场回暖。仍处运营亏损。',
-            strategy: 'CEO Jim Whitehurst(前Red Hat CEO)主导战略重置：撤回争议性Runtime Fee、大幅裁员(约25%员工)、聚焦核心引擎+广告双引擎。重建开发者信任是首要任务。',
-            outlook: '2026年关注:Unity 6引擎正式推广效果、Vector广告平台放量、与Unreal Engine的差异化竞争。盈利仍需时间,但重组方向正确。',
-            newProducts: 'Unity 6引擎；Vector广告平台；Unity Sentis(AI推理)；Unity Muse(AI辅助开发)。'
+            performance: 'Q1收入$5.08亿(+17% YoY),超出指引上限($4.8-4.9亿)约3.5%,Adj EBITDA也超指引。CEO Bromberg称正实现"卓越的营收增长和利润率扩张"。Vector AI广告平台是核心增长驱动力,提前推出后快速放量。Unity正从2023年Runtime Fee危机中加速恢复。',
+            strategy: '重大战略决策：宣布退出非战略性广告业务(ironSource Ads Network和Supersonic发行平台),聚焦核心引擎+Vector AI广告双引擎。这标志着Unity彻底告别ironSource收购遗产中的低利润广告中介业务,转向高利润的自有AI广告技术。短期收入承压但长期利润率显著提升。',
+            outlook: '退出非核心广告业务后短期收入将有缺口,但管理层有信心通过Vector平台增长+利润率扩张实现净正效果。引擎市场份额企稳(Unreal竞争依然激烈)。AI辅助开发(Unity Muse/Sentis)是差异化方向。',
+            newProducts: 'Unity 6引擎持续迭代；Vector AI广告平台；Unity Sentis(AI推理on-device)；Unity Muse(AI辅助开发)。'
         },
         dataSources: [
-            { type: '季度财报', name: 'Unity Q4 2025 Earnings', date: '2026-02-20', url: 'https://investors.unity.com/' },
-            { type: '行业报道', name: 'Unity重组后Q4表现', date: '2026-02-20', url: 'https://www.gamesindustry.biz/' }
+            { type: '季度财报', name: 'Unity Q1 2026 Earnings Release', date: '2026-05-07', url: 'https://investors.unity.com/news/news-details/2026/Unity-Reports-First-Quarter-2026-Financial-Results/default.aspx' },
+            { type: '电话会议', name: 'Unity Q1 2026 Earnings Call', date: '2026-05-07', url: 'https://investors.unity.com/' }
         ],
-        filingDate: '2026-02-20',
-        filingType: '季度财报(Q4)',
+        filingDate: '2026-05-07',
+        filingType: '季度财报(Q1)',
         filingUrl: 'https://investors.unity.com/'
     },
     {
@@ -1207,10 +1198,10 @@ const quarterlyRevenueComparison = [
     },
     {
         name: 'Roblox',
-        revenue: 1350, // Q3 2025: $13.5亿(+48% YoY)
+        revenue: 1440, // Q1 2026: $14.4亿(+39% YoY)
         currency: 'USD',
-        period: '2025 Q3 (7-9月)',
-        note: 'Q3收入$13.5亿(+48%),预订$19.2亿(+70%),DAU增长中',
+        period: '2026 Q1 (1-3月)',
+        note: 'Q1收入$14.4亿(+39%),预订$17.3亿(+43%),下调全年指引',
         color: '#9146FF',
         dataGrade: 'A',
         yoy: 48
