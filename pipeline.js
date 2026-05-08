@@ -1,8 +1,8 @@
 // ============================================
-// 待上线 Pipeline 数据模块 V3.7
+// 待上线 Pipeline 数据模块 V3.8
 // 数据源：腾讯文档 MCP（唯一基准，文档ID: LRcKfOTzgHrV）
 //         + 网络搜索验证补充（标注来源，不覆盖MCP数据）
-// 最后更新: 2026-04-30 (V3.7 3款已发售移至released: 暗黑4憎恨之王4/28+SAROS 4/30+魔法门英雄无敌4/30; 黎明行者之血定档9/3)
+// 最后更新: 2026-05-08 (V3.8 深海迷航2定档5/14 EA; 无已发售需标记)
 // ============================================
 
 // ====== 未上线产品数据（全部展示）======
@@ -105,7 +105,7 @@ const pipelineUnreleased = [
     // ===== 二、网络搜索验证补充（不在腾讯文档中，已验证真实性）=====
     // =============================================
     { region: "海外", name: "鬼武者：剑之道", publisher: "卡普空", studio: "/", releaseDate: "2026年", platforms: "PC+PS5+Xbox", heat: "中高", heatNote: "TGA 2024公布，卡普空经典IP回归", gameplay: "日本战国剑斗动作", licenseStatus: "", licenseNote: "", source: "网络搜索" },
-    { region: "海外", name: "深海迷航2", publisher: "Krafton", studio: "Unknown Worlds", releaseDate: "2026年", platforms: "PC+Xbox", heat: "中", heatNote: "前作销量超2000万，2026年5月EA", gameplay: "海洋探索生存建造", licenseStatus: "", licenseNote: "", source: "网络搜索" },
+    { region: "海外", name: "深海迷航2", publisher: "Krafton", studio: "Unknown Worlds", releaseDate: "2026/5/14", platforms: "PC+Xbox", heat: "中", heatNote: "前作销量超2000万，5/14 EA确认(Unknown Worlds官方+Gematsu+IGN+3DM 6+源)，$29.99，首次支持4人合作", gameplay: "海洋探索生存建造", licenseStatus: "", licenseNote: "", source: "网络搜索" },
     { region: "海外", name: "恶魔城：贝尔蒙特的诅咒", publisher: "科乐美", studio: "/", releaseDate: "2026年", platforms: "PC+PS5+Xbox+Switch", heat: "中", heatNote: "恶魔城系列新作", gameplay: "哥特风横版动作冒险", licenseStatus: "", licenseNote: "", source: "网络搜索" },
     { region: "海外", name: "瘟疫传说：遗响", publisher: "Focus Entertainment", studio: "Asobo Studio", releaseDate: "2026年", platforms: "PC+PS5+Xbox", heat: "中", heatNote: "瘟疫传说续作", gameplay: "线性叙事动作冒险", licenseStatus: "", licenseNote: "", source: "网络搜索" },
     { region: "海外", name: "InZOI", publisher: "Krafton", studio: "Krafton", releaseDate: "2026年", platforms: "PS5", heat: "中", heatNote: "模拟人生竞品", gameplay: "生活模拟经营", licenseStatus: "", licenseNote: "", source: "网络搜索" },
