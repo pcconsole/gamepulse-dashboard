@@ -2,8 +2,8 @@
 // 重点公司财报分析数据模块 V10 — 全部18家统一双模块(latestQuarter+fullYear)
 // 覆盖18家上市公司的游戏业务财务与运营数据
 // 数据来源：各公司IR页面/财报/press release + GamesIndustry.biz 验证
-// 更新日期: 2026-03-19
-// 本次更新: V10 双模块重构 — 全部18家公司统一 latestQuarter(单季度) + fullYear(全年) 双数据块
+// 更新日期: 2026-05-08
+// 本次更新: 微软FY2026 Q3(4/29发布: Gaming收入$53.4亿-7%,硬件-33%,MAU创新高) + EA FY2026 Q4+全年(5/5发布: 净预订$80.26亿+9%创纪录,BF6 2600万+)
 //   重构范围: Sony/Microsoft/Nintendo/腾讯/网易/EA/Take-Two/Ubisoft/Nexon/
 //             万代南梦宫/Capcom/Square Enix/Konami/Sega/Krafton/Roblox/Unity/Embracer
 //   新增公司: Roblox(NYSE:RBLX)/Unity(NYSE:U)/Embracer(OMX:EMBRAC B) 加入earningsCompanies数组
@@ -117,56 +117,59 @@ const earningsCompanies = [
         logo: '🟩',
         color: '#107C10',
         segment: 'More Personal Computing - Gaming',
-        fiscalPeriod: 'FY2026 Q2 (2025年10-12月)',
+        fiscalPeriod: 'FY2026 Q3 (2026年1-3月)',
         currency: 'USD',
         latestQuarter: {
-            period: 'FY2026 Q2', calendarPeriod: '2025年10-12月', filingDate: '2026-01-28',
-            revenue: { value: 14300, unit: '百万美元(MPC板块)', yoy: -3, label: 'MPC板块Q2营收$143亿', usdEquiv: '$14.3B' },
-            operatingProfit: { value: 3803, unit: '百万美元', yoy: -2.9, label: 'MPC Q2营业利润$38.03亿' },
-            operatingMargin: { value: 26.6, label: 'MPC Q2营业利润率' },
+            period: 'FY2026 Q3', calendarPeriod: '2026年1-3月', filingDate: '2026-04-29',
+            revenue: { value: 13200, unit: '百万美元(MPC板块)', yoy: -1, label: 'MPC板块Q3营收$132亿', usdEquiv: '$13.2B' },
+            operatingProfit: { value: 3840, unit: '百万美元', yoy: 20, label: '集团整体营业利润$384亿(MPC未单独披露Q3)' },
+            operatingMargin: { value: 46.3, label: '集团整体Q3营业利润率' },
+            gamingRevenue: { value: 5341, unit: '百万美元', yoy: -7, label: 'Gaming收入$53.41亿' },
             gameMetrics: {
-                contentServicesRevGrowth: { value: -5, unit: '%', label: 'Xbox内容及服务收入同比' },
-                note: '下降主因较低的第一方内容收入'
+                contentServicesRevGrowth: { value: -5, unit: '%', label: 'Xbox内容及服务收入同比(-7%恒定汇率)' },
+                hardwareRevGrowth: { value: -33, unit: '%', label: 'Xbox硬件收入同比(连续三季度大幅下滑)' },
+                note: 'Xbox MAU和游戏流媒体时长创历史新高'
             }
         },
         fullYear: {
-            period: 'CY2025年化(估)', filingDate: '2026-01-28', status: '年化推算',
-            revenue: { value: 57200, unit: '百万美元(MPC年化估)', yoy: null, label: 'MPC年化≈$572亿', usdEquiv: '$57.2B' },
-            gamingEstimate: { value: 22000, unit: '百万美元(估)', label: 'Gaming约$220亿/年(估,MPC含非游戏)' },
-            note: 'Gaming未单独披露,从MPC板块和行业估算推算'
+            period: 'FY2026前三季度累计', filingDate: '2026-04-29', status: '前三季度累计',
+            revenue: { value: 40900, unit: '百万美元(MPC前三季累计估)', yoy: null, label: 'MPC前三季≈$409亿', usdEquiv: '$40.9B' },
+            gamingEstimate: { value: 16200, unit: '百万美元(前三季累计)', label: 'Gaming前三季约$162亿(Q1$5.53B+Q2$5.72→5.34B+Q3$5.34B)' },
+            note: 'Gaming收入连续三季度同比下滑,但Xbox MAU创新高反映用户规模仍在扩大'
         },
         companyOverall: {
-            totalRevenue: { value: 81300, unit: '百万美元', yoy: 17, label: '集团整体营收', source: 'Microsoft FY26 Q2 Press Release (2026/01/28)' },
-            totalOperatingProfit: { value: 38300, unit: '百万美元', yoy: 21, label: '集团营业利润' },
-            totalOperatingMargin: { value: 43.8, label: '集团营业利润率' },
-            note: '微软三大业务板块：Intelligent Cloud $32.9B、Productivity & Business $34.1B、More Personal Computing $14.3B'
+            totalRevenue: { value: 82900, unit: '百万美元', yoy: 18, label: '集团整体Q3营收', source: 'Microsoft FY26 Q3 Press Release (2026/04/29)' },
+            totalOperatingProfit: { value: 38400, unit: '百万美元', yoy: 20, label: '集团营业利润' },
+            totalOperatingMargin: { value: 46.3, label: '集团营业利润率' },
+            note: '微软三大业务板块：Intelligent Cloud(Azure+40%)、Productivity & Business、More Personal Computing $132亿(-1%)'
         },
         financials: {
-            revenue: { value: 14300, unit: '百万美元(MPC板块)', yoy: -3, label: 'MPC板块营收', source: 'Microsoft FY26 Q2 Press Release (2026/01/28)' },
-            operatingProfit: { value: 3803, unit: '百万美元', yoy: -2.9, label: 'MPC营业利润', source: 'Microsoft FY26 Q2 Press Release (2026/01/28)' },
-            operatingMargin: { value: 26.6, label: 'MPC营业利润率' },
-            segmentRevenuePct: { value: 17.6, label: '占集团营收比例' },
+            revenue: { value: 5341, unit: '百万美元(Gaming)', yoy: -7, label: 'Gaming收入', source: 'Microsoft FY26 Q3 10-Q Filing (2026/04/29)' },
+            operatingProfit: { value: null, unit: '百万美元', yoy: null, label: 'Gaming营业利润(未单独披露)' },
+            operatingMargin: { value: null, label: 'Gaming利润率(未单独披露)' },
+            segmentRevenuePct: { value: 6.4, label: 'Gaming占集团营收比例' },
         },
         gameMetrics: {
-            contentServicesRevGrowth: { value: -5, unit: '%', label: 'Xbox内容及服务收入同比', source: 'Microsoft FY26 Q2 Press Release' },
-            contentServicesNote: { value: '下降主因较低的第一方内容收入', unit: '', label: '备注' },
-            windowsOEMGrowth: { value: 1, unit: '%', label: 'Windows OEM和设备收入增长' },
-            searchAdsGrowth: { value: 10, unit: '%', label: '搜索和新闻广告收入增长(不含TAC)' },
+            contentServicesRevGrowth: { value: -5, unit: '%', label: 'Xbox内容及服务收入同比(-7%恒定汇率)', source: 'Microsoft FY26 Q3 Press Release' },
+            hardwareRevGrowth: { value: -33, unit: '%', label: 'Xbox硬件收入同比', source: 'Microsoft FY26 Q3 Press Release' },
+            xboxMAU: { value: null, unit: '创新高', label: 'Xbox月活跃用户创历史新纪录(CFO确认)', source: 'FY26 Q3 Earnings Call' },
+            gameStreamingHours: { value: null, unit: '创新高', label: '游戏流媒体时长创新纪录', source: 'FY26 Q3 Earnings Call' },
         },
-        keyProducts: ['《使命召唤》系列', '《印第安纳·琼斯》', '《帝国时代5》', 'Xbox Game Pass'],
+        keyProducts: ['《使命召唤》系列', 'Xbox Game Pass(降价至$22.99/月)', '《战争机器：E-Day》', 'Cloud Gaming'],
         analysis: {
-            performance: 'More Personal Computing板块FY26Q2收入$143亿(-3% YoY)，MPC营业利润$38.03亿(上年同期$39.17亿)。Xbox内容及服务收入同比下降5%（按固定汇率下降6%），主因较低的第一方内容收入。Windows OEM收入增长1%，搜索和新闻广告收入(不含TAC)增长10%。微软未单独披露Gaming板块详细数据。',
-            strategy: 'Xbox多平台策略持续推进，更多第一方游戏登陆PlayStation和Nintendo平台。Game Pass继续作为核心增长引擎。完成ABK整合后进入常态化运营。',
-            outlook: '集团整体表现强劲(总营收$812.7亿，+12.3%)，云和AI是核心增长引擎。游戏板块短期受第一方内容节奏影响，长期看好Game Pass和Cloud Gaming增长。',
-            newProducts: '《战争机器：E-Day》开发中；《极限竞速》新作；《完美暗杀》；《上古卷轴6》开发中。'
+            performance: 'Gaming收入$53.41亿同比下滑7%(恒定汇率-9%)，连续第三个季度同比下降。Xbox内容及服务收入-5%(-7%恒定汇率)，主因去年同期强劲的第一方内容对比基数(CoD等)。Xbox硬件收入暴跌33%，连续第二季度跌幅超30%，反映主机世代末期需求疲软。但Xbox MAU和游戏流媒体时长均创历史新高(CFO Amy Hood确认)，说明用户规模仍在扩大。集团整体营收$829亿(+18%)，EPS $4.27(+21%)超分析师预期$0.21。',
+            strategy: 'Xbox CEO Asha Sharma公开承认Game Pass"太贵"，4月宣布Ultimate降价至$22.99/月+取消Game Core层级。CEO Nadella表示正"重新承诺核心粉丝"(recommitting to core fans)。多平台策略继续推进但正重新评估。Azure AI年化收入$370亿成为集团核心增长引擎。',
+            outlook: 'Q4指引未具体披露Gaming预期。管理层暗示中到高个位数内容及服务收入下降将延续。但Game Pass降价策略预计在Q4/FY27带来订阅增长。2026年资本支出指引$1900亿(远超预期)全部投向AI/云基础设施，Gaming投入优先级下降。',
+            newProducts: '《战争机器：E-Day》(2026年发售)；《完美暗杀》；《Fable》(2026年秋季)；Xbox次世代硬件布局中。'
         },
         dataSources: [
-            { type: '季度财报', name: 'Microsoft FY26 Q2 Press Release', date: '2026-01-28', url: 'https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q2/press-release-webcast' },
-            { type: '电话会议', name: 'Earnings Conference Call Transcript', date: '2026-01-28', url: 'https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q2/press-release-webcast' }
+            { type: '季度财报', name: 'Microsoft FY26 Q3 Press Release & 10-Q', date: '2026-04-29', url: 'https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q3/press-release-webcast' },
+            { type: '电话会议', name: 'FY26 Q3 Earnings Conference Call Transcript', date: '2026-04-29', url: 'https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q3' },
+            { type: '行业报道', name: 'This Week in Video Games: Gaming Revenue -7%, Hardware -33%', date: '2026-04-30', url: 'https://thisweekinvideogames.com/news/microsoft-reports-7-drop-in-gaming-revenue-33-drop-in-xbox-hardware-revenue/' }
         ],
-        filingDate: '2026-01-28',
+        filingDate: '2026-04-29',
         filingType: '季度财报',
-        filingUrl: 'https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q2/press-release-webcast'
+        filingUrl: 'https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q3/press-release-webcast'
     },
     {
         id: 'nintendo',
@@ -360,44 +363,62 @@ const earningsCompanies = [
         logo: '⚽',
         color: '#1A1A2E',
         segment: '整体（游戏专用）',
-        fiscalPeriod: 'FY2026 Q3 (2025年10-12月)',
+        fiscalPeriod: 'FY2026 Q4 + 全年 (2025年4月-2026年3月)',
         currency: 'USD',
         latestQuarter: {
-            period: 'FY2026 Q3', calendarPeriod: '2025年10-12月', filingDate: '2026-02-03',
-            revenue: { value: 1950, unit: '百万美元(估)', yoy: 3.6, label: 'Q3净营收≈$19.5亿(估)', usdEquiv: '≈$1.95B' },
-            netBookings: { value: 3000, unit: '百万美元', yoy: 38, label: 'Q3净预订>$30亿(BF6驱动创纪录)' },
+            period: 'FY2026 Q4', calendarPeriod: '2026年1-3月', filingDate: '2026-05-05',
+            revenue: { value: 2120, unit: '百万美元', yoy: 12, label: 'Q4净营收$21.2亿(+12%)', usdEquiv: '$2.12B' },
+            operatingProfit: { value: 564, unit: '百万美元', yoy: 43, label: 'Q4营业利润$5.64亿(+43%)' },
+            operatingMargin: { value: 26.6, label: 'Q4营业利润率' },
+            netIncome: { value: 461, unit: '百万美元', yoy: 81, label: 'Q4净利润$4.61亿(+81%)' },
+            eps: { value: 1.81, unit: '美元', yoy: 85, label: 'Q4摊薄EPS $1.81(+85%)' },
             gameMetrics: {
-                liveServicesRevenue: { value: 75, unit: '%', label: 'Live Services收入占比(估)' }
+                liveServicesRevenue: { value: 5383, unit: '百万美元(全年)', label: '全年Live Services收入$53.83亿' }
             }
         },
         fullYear: {
-            period: 'FY2026全年指引', filingDate: '2026-02-03', status: '管理层指引',
-            revenue: { value: 7500, unit: '百万美元(净预订指引)', yoy: null, label: '全年净预订$74-75亿', usdEquiv: '$7.5B' },
-            note: '基于管理层全年指引;BF6免费化推动上调'
+            period: 'FY2026全年(2025/4-2026/3)', filingDate: '2026-05-05', status: '已发布(创纪录)',
+            revenue: { value: 7531, unit: '百万美元', yoy: 1, label: '全年净营收$75.31亿(+1%)', usdEquiv: '$7.53B' },
+            netBookings: { value: 8026, unit: '百万美元', yoy: 9, label: '全年净预订$80.26亿(+9% 创历史纪录)' },
+            operatingIncome: { value: 1162, unit: '百万美元', yoy: -24, label: '全年营业利润$11.62亿(-24%)' },
+            netIncome: { value: 887, unit: '百万美元', label: '全年净利润$8.87亿' },
+            eps: { value: 3.51, unit: '美元', label: '全年摊薄EPS $3.51' },
+            operatingCashFlow: { value: 2553, unit: '百万美元', yoy: 23, label: '经营现金流$25.53亿(+23% 创纪录)' },
+            note: 'EA史上净预订和经营现金流双创纪录,由Battlefield 6和Live Services推动'
+        },
+        companyOverall: {
+            totalRevenue: { value: 7531, unit: '百万美元', yoy: 1, label: '全年净营收(EA为纯游戏公司)', source: 'EA FY26 Q4 & Full Year Press Release (2026/05/05)' },
+            totalOperatingProfit: { value: 1162, unit: '百万美元', yoy: -24, label: '全年营业利润' },
+            totalOperatingMargin: { value: 15.4, label: '全年营业利润率' },
+            note: 'EA为纯游戏公司,集团=游戏业务。全年利润下滑因Battlefield 6上市期高额营销投入+REDSEC免费模式成本'
         },
         financials: {
-            revenue: { value: 1950, unit: '百万美元(估)', yoy: 3.6, label: '净营收(GAAP,估)', source: 'EA FY2026 Q3 Earnings Release (2026/02/03,估)' },
-            operatingProfit: { value: 440, unit: '百万美元(估)', yoy: 4.8, label: '营业利润(估)' },
-            operatingMargin: { value: 22.6, label: '营业利润率(估)' },
+            revenue: { value: 2120, unit: '百万美元', yoy: 12, label: 'Q4净营收', source: 'EA FY2026 Q4 & Full Year Earnings Release (2026/05/05)' },
+            operatingProfit: { value: 564, unit: '百万美元', yoy: 43, label: 'Q4营业利润' },
+            operatingMargin: { value: 26.6, label: 'Q4营业利润率' },
             segmentRevenuePct: { value: 100, label: '游戏占比' },
-            netBookings: { value: 2500, unit: '百万美元(估)', label: '净预定(non-GAAP,估)' },
+            netBookings: { value: 8026, unit: '百万美元(全年)', yoy: 9, label: '全年净预订$80.26亿(创纪录)' },
         },
         gameMetrics: {
-            liveServicesRevenue: { value: 75, unit: '%', label: 'Live Services收入占比(估)' },
-            eaSportsFC: { value: 50, unit: '百万+', label: 'EA Sports FC 26月活(估)' },
+            liveServicesRevenue: { value: 5383, unit: '百万美元', label: '全年Live Services & Other收入$53.83亿', source: 'EA FY26 Full Year Press Release' },
+            fullGameRevenue: { value: 2148, unit: '百万美元', label: '全年完整游戏收入$21.48亿' },
+            battlefield6: { value: 2600, unit: '万份+', label: 'Battlefield 6累计销量超2600万(系列历史最佳)', source: 'Alinea Analytics + EA确认' },
+            apexLegends: { value: null, unit: 'Q4最强季度', label: 'Apex Legends Q4净预订为全年最高' },
         },
-        keyProducts: ['EA Sports FC 26', 'Madden NFL 26', 'Apex Legends', 'The Sims系列', 'College Football 26'],
+        keyProducts: ['Battlefield 6(2600万+)', 'EA Sports FC 26', 'Apex Legends', 'College Football 25', 'The Sims系列'],
         analysis: {
-            performance: 'FY2026 Q3预计净营收约$19.5亿(+3.6% YoY)，净预定约$25亿(估)。EA Sports FC 26首个完整非FIFA品牌赛季表现稳健。College Football 25成功验证体育矩阵扩展。Apex Legends收入持续承压但基盘稳固。注：具体数据以2026/02/03官方Press Release为准。',
-            strategy: 'EA聚焦体育IP矩阵+Live Service模式。College Football品类拓展成功。AI加速内容生产。Battlefield新作开发持续推进中。',
-            outlook: '全年净预定预期约$74-75亿。体育品类核心稳固。等待Battlefield新作重振射击品类。',
-            newProducts: 'EA Sports FC 27 (2026/09)；Madden NFL 27 (2026/08)；Battlefield新作(2026)；College Football 26。'
+            performance: 'FY2026全年净预订$80.26亿(+9% YoY)创EA历史新高,经营现金流$25.53亿(+23%)同创纪录。Q4净营收$21.2亿(+12%)、净利润$4.61亿(+81%)、EPS $1.81(+85%)大幅超预期。但全年GAAP营业利润$11.62亿同比下滑24%,主因Battlefield 6高额发布营销成本和REDSEC免费模式前期投入。Battlefield 6成为系列史上最成功作品(2600万+销量、2025年美国最畅销游戏/Circana确认)。Apex Legends Q4交出全年最强净预订季度,参与度和变现持续改善。',
+            strategy: 'EA正被沙特PIF/Silver Lake/Affinity Partners联合体以$550亿进行私有化收购(EA承担$200亿债务融资),PIF将持有93.4%股权。交易处于最后监管审批阶段。本季度未举行财报电话会议(因私有化交易进行中)。同时继续裁员:3月裁减Battlefield Studios部分人员(尽管BF6表现创纪录)。',
+            outlook: '因$550亿私有化交易进行中,EA未提供FY2027前瞻指引。交易预计近期完成(CFIUS审查为最后障碍)。EA Sports FC全球足球净预订全年增长中个位数。Live Services组合(Apex+FC Online+FC Mobile)持续增长。',
+            newProducts: 'EA Sports FC 27(2026/09)；Madden NFL 27(2026/08)；Battlefield 6持续运营更新；College Football 26。'
         },
         dataSources: [
-            { type: '季度财报', name: 'EA FY2026 Q3 Earnings Release', date: '2026-02-03', url: 'https://ir.ea.com/financial-information/quarterly-results/default.aspx' }
+            { type: '季度财报+全年报', name: 'EA FY2026 Q4 & Full Year Earnings Release', date: '2026-05-05', url: 'https://ir.ea.com/financial-information/quarterly-results/default.aspx' },
+            { type: '行业报道', name: 'GamesIndustry.biz: EA closes FY26 with record performance', date: '2026-05-07', url: 'https://www.gamesindustry.biz/ea-closes-fy26-with-record-performance-thanks-to-battlefield-6-and-apex-legends' },
+            { type: '财经分析', name: 'StockTitan: EA FY26 net bookings hit record $8B', date: '2026-05-05', url: 'https://www.stocktitan.net/news/EA/electronic-arts-reports-q4-and-fy26-kp9t1yvs94ah.html' }
         ],
-        filingDate: '2026-02-03',
-        filingType: '季度财报',
+        filingDate: '2026-05-05',
+        filingType: '季度财报+全年报',
         filingUrl: 'https://ir.ea.com/financial-information/quarterly-results/default.aspx'
     },
     {
@@ -1133,15 +1154,15 @@ const quarterlyRevenueComparison = [
         yoy: 4.6
     },
     {
-        name: '微软(MPC)',
-        revenue: 14300, // MPC板块整体(含Gaming+Windows+Search)
+        name: '微软(Gaming)',
+        revenue: 5341, // Gaming收入$53.41亿(-7% YoY)
         currency: 'USD',
-        period: 'FY26 Q2 (10-12月)',
-        note: 'MPC板块$143亿(Gaming未单独披露,Xbox内容服务-5%)',
+        period: 'FY26 Q3 (1-3月)',
+        note: 'Gaming收入$53.41亿(-7%),Xbox内容服务-5%,硬件-33%',
         color: '#107C10',
         dataGrade: 'A',
-        yoy: -3,
-        caveat: 'MPC含Windows/Search,纯Gaming约$50-60亿'
+        yoy: -7,
+        caveat: 'Q3首次单独披露Gaming收入(非MPC板块),Xbox MAU创新高'
     },
     {
         name: '任天堂',
@@ -1156,13 +1177,13 @@ const quarterlyRevenueComparison = [
     },
     {
         name: 'EA',
-        revenue: 3000, // 净预订>$30亿(+38%,BF6驱动) — 使用net bookings口径
+        revenue: 2120, // Q4净营收$21.2亿(+12% YoY)
         currency: 'USD',
-        period: 'FY26 Q3 (10-12月)',
-        note: 'Q3净预订>$30亿(+38% YoY),BF6免费+季票驱动创纪录',
+        period: 'FY26 Q4 (1-3月)',
+        note: 'Q4净营收$21.2亿(+12%),全年净预订$80.26亿创纪录(+9%)',
         color: '#1A1A2E',
         dataGrade: 'A',
-        yoy: 38
+        yoy: 12
     },
     {
         name: '网易',
@@ -1364,14 +1385,14 @@ const fullYearRevenueComparison = [
     },
     {
         name: 'EA',
-        revenue: 7500, // FY26全年净预订指引约$74-75亿(BF6推动上调)
+        revenue: 7531, // FY26全年净营收$75.31亿(+1%),净预订$80.26亿(+9%创纪录)
         currency: 'USD',
-        period: 'FY26全年指引',
-        note: 'FY26全年净预订指引约$74-75亿(BF6免费化推动上调)',
+        period: 'FY26全年(已发布)',
+        note: 'FY26全年净营收$75.31亿(+1%),净预订$80.26亿(+9%创纪录),BF6+Live Services驱动',
         color: '#1A1A2E',
-        dataGrade: 'B',
-        yoy: null,
-        caveat: '基于管理层全年指引;BF6 Q3驱动净预订+38%'
+        dataGrade: 'A',
+        yoy: 1,
+        caveat: 'GAAP营收+1%,但净预订+9%创纪录;全年营业利润-24%(BF6发布高额营销)'
     },
     {
         name: 'Take-Two',
