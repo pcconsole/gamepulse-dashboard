@@ -1,8 +1,8 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-04-30T18:00:00Z
-// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1240新增13行)+web_search 14轮+新增12条id247-258)
+// 最后更新: 2026-05-11T18:00:00Z
+// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1301)+web_search 14轮+新增7条id259-265)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
@@ -173,6 +173,157 @@ const newsSources = [
 ];
 
 const newsData = [
+    {
+        "id": 265,
+        "title": "PS6掌机Canis曝光：显存差距仅30%，与主机同步发售，2027年秋季面世",
+        "summary": "据爆料，索尼PS6主机与代号Canis的掌机将同步发售，显存差距控制在30%以内——主要影响分辨率而非游戏兼容性，刻意避免Xbox Series S/X的性能断层问题。Canis预计2027年秋季量产，采用AMD Zen 6 CPU+RDNA 5 GPU，预估售价399-499美元，显存差距30%意味着掌机模式可能以720p/900p运行而非4K，确保游戏功能完整而非降级阉割。",
+        "source": "IT之家",
+        "sourceUrl": "https://www.ithome.com/0/947/269.htm",
+        "sourceUrls": [
+            {"name": "IT之家", "url": "https://www.ithome.com/0/947/269.htm"},
+            {"name": "TechPP", "url": "https://techpp.com/roundup/playstation-6-ps6/"},
+            {"name": "GameMarkt", "url": "https://www.gamermarkt.com/blog/ps6-three-models-rumor-leaked-prices-next-gen/"}
+        ],
+        "category": "hardware",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-11",
+        "tags": ["PlayStation", "PS6", "掌机", "Canis", "索尼", "次世代主机", "2027"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "PS6掌机Canis与主机同步发售是索尼硬件战略的重大转向(What)。索尼此前在掌机领域仅有过PS Vita（2011年），且因缺乏独占内容和网络服务最终败给3DS；此次Canis定位为PS6的'配套便携形态'而非独立产品，吸取了Vita教训——与Nintendo Switch 2的'同款游戏多形态'策略正面竞争(Why)。30%显存差距设计合理：分辨率降级不影响游戏功能完整性，避免了Xbox Series S的性能阉割争议；399-499美元定价若能实现，掌机将成为PS6生态的差异化竞争力，而非拖累利润的负担(So What)。2027年秋季与PS6主机同步意味着索尼将在2027年假期档同时迎战Nintendo Switch 2（中期）和Xbox Project Helix（若Helix同年），三主机同台竞技将是2013年以来最激烈的主机更新周期(What Next)。",
+        "relatedNewsIds": [264, 263, 247]
+    },
+    {
+        "id": 264,
+        "title": "微软Project Helix技术详情公开：光追性能\"数量级\"超越XSX，采用Zstandard压缩技术",
+        "summary": "微软在Xbox游戏开发者更新中披露Project Helix（Xbox下代主机）核心规格：光追性能\"数量级\"超越Series X，支持Path Tracing、ML超采样和多帧生成；同时大量利用Zstandard直接从SSD流式读取资产，采用最新神经纹理压缩技术。Zstandard由Facebook开发，是一种高效实时压缩算法，可显著减少游戏存储空间需求并加速加载。Project Helix预计2027年alpha版本，2028年全面上市。",
+        "source": "GamingBolt",
+        "sourceUrl": "https://gamingbolt.com/project-helix-will-lean-heavily-into-zstandard-to-directly-stream-assets-from-the-ssd",
+        "sourceUrls": [
+            {"name": "GamingBolt", "url": "https://gamingbolt.com/project-helix-will-lean-heavily-into-zstandard-to-directly-stream-assets-from-the-ssd"},
+            {"name": "Eurogamer", "url": "https://www.eurogamer.net/project-helix-ray-tracing-a-order-of-magnitude-better-than-series-x"},
+            {"name": "borecraft", "url": "https://borecraft.com/findings/helix-zstd-directstorage-findings.html"},
+            {"name": "XboxDynasty", "url": "https://www.xboxdynasty.de/news/xbox-next/project-helix-setzt-auf-zstandard-und-neural-compression/"}
+        ],
+        "category": "hardware",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-10",
+        "tags": ["Xbox", "Project Helix", "微软", "光追", "Zstandard", "SSD", "次世代主机"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Project Helix光追\"数量级\"超越XSX+全面拥抱Zstandard是微软技术路线图的根本性升级(What)。\"数量级\"意味着10倍以上光追性能，意味着Helix将具备当前XSX完全无法实现的光照效果——这不仅是硬件迭代，更是Xbox在主机技术上首次具备与PC高端显卡正面对话的资本(Why)。Zstandard+DirectStorage组合直击当前主机最大的技术瓶颈：存储读取速度。GTA 6安装包接近200GB已暴露传统压缩技术极限；Zstandard配合神经纹理压缩可让开发者用更少存储空间实现更高画质，同时保持流畅加载(So What)。2027 alpha→2028 full launch的时间表意味着Helix将在PS6发布后1年再全面上市，微软策略是以技术代差换时间——用\"PS6发布后的次世代Plus体验\"吸引从PS转投Xbox的核心玩家(What Next)。",
+        "relatedNewsIds": [265, 230, 263]
+    },
+    {
+        "id": 263,
+        "title": "PS5全球出货量突破9370万台！Q4出货150万台同比减少90万台，数字版游戏占比攀升",
+        "summary": "索尼FY2026 Q4财报显示PS5全球累计出货量突破9370万台。2026年1-3月PS5出货150万台，较去年同期240万台减少90万台（-37.5%）。PlayStation Network月活跃用户达1.25亿（YoY+100万）。PS5与PS4平台软件合计售出7460万份（YoY-150万）。玩家偏好正向数字版迁移，数字游戏占比持续攀升。分析师指出PS5出货下滑与内存涨价和全球价格策略调整直接相关，Q4传统旺季出货反而腰斩是危险信号。",
+        "source": "Gematsu",
+        "sourceUrl": "https://www.gematsu.com/2026/05/ps5-shipments-top-93-7-million",
+        "sourceUrls": [
+            {"name": "Gematsu", "url": "https://www.gematsu.com/2026/05/ps5-shipments-top-93-7-million"},
+            {"name": "Push Square", "url": "https://www.pushsquare.com/news/2026/05/sony-ships-93-7-million-ps5-consoles-but-recent-sales-down-by-almost-50percent"},
+            {"name": "3DMGame", "url": "https://www.3dmgame.com/news/202605/3943722.html"},
+            {"name": "GamingBolt", "url": "https://gamingbolt.com/ps5-shipments-reach-93-7-million-but-latest-quarter-down-37-percent"}
+        ],
+        "category": "market",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-09",
+        "tags": ["PlayStation", "PS5", "索尼", "出货量", "财报", "数字版", "销量"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "PS5累计9370万台，但Q4旺季腰斩是生命末期的危险信号(What)。9370万已超越PS4（1.17亿最终销量）在同周期的表现，但Q4旺季出货150万同比-37.5%说明玩家正在系统性\"持币等待\"PS6——历史数据显示主机换代前12-18个月销量会出现规律性下滑，PS5已提前进入这个阶段(Why)。数字游戏占比攀升是索尼喜忧参半的消息：喜的是数字版毛利率更高、用户黏性更强；忧的是硬件出货量下降意味着新用户获取在减少、存量用户正在从购买硬件转向纯粹的数字消费——这对PS6发售初期装机冲刺不利(So What)。索尼预计2027年假期档发售PS6，这意味着2026年PS5销量将持续下滑，主机生命周期末期的内容策略（向下兼容+老游戏重置）将比硬件销售更重要(What Next)。",
+        "relatedNewsIds": [231, 265, 247]
+    },
+    {
+        "id": 262,
+        "title": "Unity Q1财报：营收增长17%至5.08亿美元，但净亏损扩大至3.47亿美元（含IronSource减值）",
+        "summary": "Unity 2026年Q1财报显示总营收5.08亿美元（同比+17%），小幅超预期；但净亏损达3.47亿美元（去年同期7800万美元），主要受IronSource关闭和Supersonic剥离相关的2.79亿美元减值费用影响。调整后EBITDA盈利。CEO表示战略重心转向核心游戏引擎业务，AI工具套件Unity AI Beta已推出，帮助开发者更有效使用平台工具。股价盘前大涨10.81%。",
+        "source": "GamesIndustry.biz",
+        "sourceUrl": "https://www.gamesindustry.biz/unity-q1-revenue-rises-17-posts-347m-loss-following-ironsource-closure",
+        "sourceUrls": [
+            {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/unity-q1-revenue-rises-17-posts-347m-loss-following-ironsource-closure"},
+            {"name": "Investing.com", "url": "https://cn.investing.com/news/transcripts/article-93CH-3354189"},
+            {"name": "雪球", "url": "https://xueqiu.com/1464699229/388062626"}
+        ],
+        "category": "market",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-05-10",
+        "tags": ["Unity", "游戏引擎", "财报", "IronSource", "AI工具", "亏损"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "Unity营收+17%但净亏损扩大3.5倍，说明战略转型阵痛期仍在继续(What)。IronSource关闭和Supersonic剥离是Unity 2023年激进移动端扩张的清算——彼时Unity以全部换股方式溢价收购IronSource（估值140亿美元），如今减值2.79亿美元相当于承认那次收购的战略失误(Why)。营收增长+股价大涨说明华尔街将战略收缩解读为利好：Unity回归游戏引擎核心业务比\"平台化扩张\"更符合市场预期。AI工具Beta的推出是Unity在后Unity 6时代的差异化重点——AI辅助开发可降低UE5的竞争压力，留住对价格敏感的独立开发者(So What)。游戏引擎市场Unity（40%全球份额）与Epic UE5（60% AAA份额）的竞争将在AI工具链上决定下一波开发者选择(What Next)。",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 261,
+        "title": "Valve硬件战略升级：从\"支线任务\"到\"全面雄心\"，Steam Machine定价与存储争议持续",
+        "summary": "GamesIndustry.biz发表评论文章，分析Valve硬件业务从Steam Controller到Steam Machine的发展轨迹，指出Valve硬件已从早期的边缘实验项目发展为公司的核心战略方向。同时，由于内存短缺，Steam Machine定价传出暴涨传闻，Steam Deck也无法运行带Enigma DRM的游戏（如卡普空《生化危机》三部曲），引发平台兼容争议。分析师预测Steam Machine定价应在700美元以下才能有市场竞争力。",
+        "source": "GamesIndustry.biz",
+        "sourceUrl": "https://www.gamesindustry.biz/valve-is-pivoting-from-a-side-quest-to-a-full-blown-ambition-with-its-hardware",
+        "sourceUrls": [
+            {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/valve-is-pivoting-from-a-side-quest-to-a-full-blown-ambition-with-its-hardware"},
+            {"name": "CBR", "url": "https://www.cbr.com/steam-machine-price-officially-sparks-backlash-2026-launch-delay/"},
+            {"name": "IT之家", "url": "https://www.ithome.com/0/947/252.htm"},
+            {"name": "CNET", "url": "https://www.cnet.com/tech/gaming/valves-steam-machine-how-much-will-it-cost-when-does-it-come-out-and-more/"}
+        ],
+        "category": "platform",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-05-09",
+        "tags": ["Valve", "Steam Machine", "Steam Deck", "硬件战略", "内存", "DRM", "平台"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "Valve硬件从\"支线任务\"到\"全面雄心\"标志着Steam生态从软件平台向软硬一体化扩张(What)。Valve历史上对硬件保持\"保守实验\"态度——Steam Controller（2015）、Steam Link（2015）、Valve Index（2019）都是针对性补足Steam生态短板的单点突破；2026年的Steam Machine是首次系统性\"平台级\"硬件布局，说明Valve判断PC游戏客厅化趋势已成熟(Why)。内存短缺和DRM争议是Valve硬件扩张的现实阻力：RAM涨价压缩硬件利润空间，Enigma DRM导致Steam Deck对部分主流游戏无法运行，说明Valve在软件生态的话语权尚未延伸到所有PC游戏(So What)。Steam Machine若成功，Valve将成为继Apple之后又一个\"软件定义硬件\"的生态构建者，对抗微软Xbox和索尼PS的客厅地位(What Next)。",
+        "relatedNewsIds": [232]
+    },
+    {
+        "id": 260,
+        "title": "卡普空PRAGMATA 16天销量破200万份，Switch 2多平台策略推动新IP快速破圈",
+        "summary": "卡普空宣布，2026年4月17日发售的全新IP《PRAGMATA》（识质存在）16天累计销量突破200万份。2天破百万、16天破200万，卡普空以\"试玩版先行+Switch 2多平台同步\"策略推动新IP快速破圈。卡普空还宣布《生化危机：安魂曲》全球销量已达700万份，进一步巩固其2026年双爆款格局。PRAGMATA现已登陆PS5、Xbox Series X|S、Nintendo Switch 2和PC（Steam）全平台。",
+        "source": "Capcom IR",
+        "sourceUrl": "https://www.capcom.co.jp/ir/english/news/html/e260507.html",
+        "sourceUrls": [
+            {"name": "Capcom IR", "url": "https://www.capcom.co.jp/ir/english/news/html/e260507.html"},
+            {"name": "Gematsu", "url": "https://www.gematsu.com/2026/05/pragmata-sales-top-two-million-in-16-days"},
+            {"name": "IT之家", "url": "https://www.ithome.com/0/947/260.htm"},
+            {"name": "Play.asia", "url": "https://play.asia/blog/2026/05/08/pragmata-sales-surpassed-two-million-in-16-days/"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-10",
+        "tags": ["卡普空", "PRAGMATA", "销量", "Switch 2", "多平台", "游戏发行", "科幻"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "PRAGMATA 16天200万份+2天100万的速度说明卡普空的新IP策略成功(What)。卡普空此前长期依赖《生化危机》《怪物猎人》《街霸》等成熟IP，新IP产出极少；PRAGMATA从科幻Hack+Slash类型切入，规避了与自身强势IP的竞争，同时借助Switch 2多平台同步首发最大化市场覆盖(Why)。试玩版先行是关键的营销创新：卡普空在正式发售前提供免费试玩，让玩家在购买决策前充分体验核心玩法，降低了新IP的\"陌生感门槛\"；16天转化率说明试玩→购买的漏斗效率极高(So What)。2026卡普空双爆款（PRAGMATA+RE安魂曲700万）意味着日本厂商在主机游戏市场的话语权持续强化，对比欧美厂商的研发效率劣势正在缩小(What Next)。",
+        "relatedNewsIds": [247]
+    },
+    {
+        "id": 259,
+        "title": "索尼支付7800万美元和解PlayStation Store诉讼，数字游戏垄断指控告一段落",
+        "summary": "加州联邦法官初步批准索尼PlayStation Store集体诉讼和解方案，索尼预计支付7800万美元（约合人民币5.7亿元），用于解决\"消除竞争并垄断市场\"的指控。该诉讼指控索尼通过限制第三方零售商销售PlayStation数字版游戏、设定最低价格等方式垄断数字游戏市场。符合条件的美国PlayStation用户可能获得积分补偿，但金额可能较小。索尼拒绝承认不当行为。",
+        "source": "Wired",
+        "sourceUrl": "https://www.wired.com/story/what-to-know-about-sony-785-million-playstation-settlement/",
+        "sourceUrls": [
+            {"name": "Wired", "url": "https://www.wired.com/story/what-to-know-about-sony-785-million-playstation-settlement/"},
+            {"name": "CNET", "url": "https://www.cnet.com/tech/gaming/sony-playstation-store-settlement-what-to-know/"},
+            {"name": "GameMarkt", "url": "https://www.gamermarkt.com/blog/sony-playstation-store-antitrust-settlement-7-85-million-digital-games/"}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-05-10",
+        "tags": ["索尼", "PlayStation", "反垄断", "诉讼", "和解", "数字游戏", "垄断"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "7800万美元和解是索尼PlayStation数字分发垄断争议的阶段性结束(What)。诉讼核心指控是索尼禁止第三方零售商（如Amazon、BestBuy）折扣销售PlayStation数字版游戏，并要求实体零售商维持最低价格——这限制了价格竞争、推高了数字游戏定价。$7.85M相对索尼PlayStation业务规模极小（约等于PS5单日全球营收），但和解后索尼将被迫允许零售商在数字游戏促销上拥有更多灵活度(Why)。对数字游戏定价的影响：和解后零售商可能获得更大的折扣权限，PSN数字游戏价格战可能加剧；同时PS5主机涨价+数字游戏可能降价形成组合策略，平衡索尼收入(So What)。Epic诉Apple第九巡回法院裁决与本案均为数字平台垄断案，但Sony和解金额远小于Apple案的潜在风险，反映出索尼选择\"快速和解\"以避免更高法律成本(What Next)。",
+        "relatedNewsIds": [256]
+    },
     {
         "id": 258,
         "title": "东映成立游戏发行品牌Toei Games：专注原创IP首批游戏登陆Steam",
