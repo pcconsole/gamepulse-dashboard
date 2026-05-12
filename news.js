@@ -1,8 +1,8 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-05-11T18:00:00Z
-// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1301)+web_search 14轮+新增7条id259-265)
+// 最后更新: 2026-05-12T18:00:00Z
+// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1316)+web_search 14轮+新增14条id266-279)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
@@ -173,6 +173,294 @@ const newsSources = [
 ];
 
 const newsData = [
+    {
+        "id": 266,
+        "title": "《杀戮尖塔2》因女性权益顾问Sarkeesian署名遭遇第三波Steam差评轰炸",
+        "summary": "《杀戮尖塔2》因在制作人员名单中加入女权主义者Anita Sarkeesian的署名（游戏文化顾问），触发Steam第三波大规模差评轰炸。约6万条近期评测中67%为差评，整体降至\"多半差评\"，评论区一度触发熔断机制被关闭。这是该作三个月内第三次因社会争议遭遇差评：前两次分别是4月平衡性补丁和更早的\"觉醒\"补丁。开发商Mega Crit尚未公开回应。",
+        "source": "3DM",
+        "sourceUrl": "https://www.3dmgame.com/news/202605/3943740.html",
+        "sourceUrls": [
+            {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3943740.html"},
+            {"name": "Kotaku", "url": "https://kotaku.com/slay-the-spire-2-is-getting-review-bombed-again-this-time-because-of-chuds-2000693961"},
+            {"name": "GameRant", "url": "https://gamerant.com/slay-the-spire-2-review-bombed/"},
+            {"name": "BadLandGame", "url": "https://badlandgame.com/slay-the-spire-2-sarkeesian-review-bomb/"}
+        ],
+        "category": "game",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-11",
+        "tags": ["杀戮尖塔2", "Slay the Spire 2", "Mega Crit", "Steam", "差评轰炸", "Anita Sarkeesian", "社会争议"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "《杀戮尖塔2》三个月内三次差评轰炸反映游戏社区极化加剧(What)。第三次锁定Sarkeesian——这位女权主义者是Gamergate时代的标志性人物，将其加入署名直接引爆了游戏社区最敏感的文化冲突(Why)。67%差评+Steam熔断机制说明即使《杀戮尖塔2》本体质量优秀（首发57万同时在线），Steam评分机制的开放性使其极易被组织性行动影响——这对独立游戏开发者是重要警示：任何文化立场表态都可能成为双刃剑(So What)。长期影响：Mega Crit选择\"沉默\"而非正面回应，说明开发者认为任何回应都会火上浇油；历史数据显示此类争议通常在2-4周后自然平息，除非有新的引爆点(What Next)。",
+        "relatedNewsIds": [242]
+    },
+    {
+        "id": 267,
+        "title": "《深海迷航2》抢先体验5月14日上线，愿望单突破500万",
+        "summary": "Unknown Worlds Entertainment《深海迷航2》抢先体验版将于5月14日发售，愿望单已突破500万。官方宣布所有首周内购买的玩家均可获赠Reaper Leviathan雕像蓝图，新实机预告同步发布。《深海迷航》初代2018年发布，Steam好评率96%，至今仍是最受欢迎的海底探索游戏之一。",
+        "source": "GamingBolt",
+        "sourceUrl": "https://gamingbolt.com/subnautica-2-early-access-may-14",
+        "sourceUrls": [
+            {"name": "GamingBolt", "url": "https://gamingbolt.com/subnautica-2-early-access-may-14"},
+            {"name": "Eurogamer", "url": "https://www.eurogamer.net/subnautica-2-early-access-coming-may-14"},
+            {"name": "IGN中国", "url": "https://www.ign.com/subnautica-2-early-access-may-14-2026"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-05-11",
+        "tags": ["深海迷航2", "Subnautica 2", "抢先体验", "Unknown Worlds", "愿望单", "5月"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "500万愿望单+抢先体验发售是独立游戏最健康的发布节奏(What)。初代《深海迷航》Steam 96%好评率积累了大量品牌忠诚度，《深海迷航2》延续抢先体验模式（而非一次性完整发布）说明开发者希望让核心玩家参与开发迭代，降低商业风险(Why)。对行业意味着\"海底探索\"品类仍有大量未被满足的需求——玩家对高质量沙盒探索游戏的耐心的远超一般3A大作(So What)。抢先体验发布策略对同品类开发者有参考价值：初期薄利换口碑+玩家参与迭代=长期品牌资产积累(What Next)。",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 268,
+        "title": "游科（游戏科学）杭州园区大规模扩张：周边多栋楼划归，天眼查显示101+43人",
+        "summary": "打卡网友称游科杭州园区安保极严，保安透露周边数栋楼现已划归游科使用。天眼查显示公司人数已达101+43人（主体+子公司分开统计），外界猜测为《黑神话：钟馗》大规模备战。该公司此前凭借《黑神话：悟空》全球销量超3000万份确立了中国第一3A开发商地位。",
+        "source": "3DM",
+        "sourceUrl": "https://www.3dmgame.com/news/202605/3943736.html",
+        "sourceUrls": [
+            {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3943736.html"},
+            {"name": "IT之家", "url": "https://www.ithome.com/0/947/303.htm"}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-05-11",
+        "tags": ["游戏科学", "游科", "黑神话", "钟馗", "杭州", "扩张", "招聘"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "游科大规模扩张是《黑神话：悟空》商业成功后的自然溢出(What)。《悟空》3000万份销量+全球影响力让游科从\"小工作室\"跃升为\"中国第一3A开发商\"，扩张招聘是支撑《钟馗》开发体量的必要投入(Why)。周边多栋楼划归说明游科已从\"租用一个办公室\"的小团队演化为需要统一园区管理的中型公司，这对保持核心团队稳定和保密管理都有正面意义(So What)。对行业影响：《钟馗》作为《悟空》之后的第二款3A，若保持同等质量将巩固中国游戏工业的世界地位，并可能催生更多头部资本流入3A开发领域(What Next)。",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 269,
+        "title": "Discord Nitro与Xbox Game Pass正式整合：Nitro用户可享Game Pass入门版+Orbs加成",
+        "summary": "微软与Discord正式宣布扩大合作：Discord Nitro付费会员正式获得Xbox Game Pass入门版（Starter）使用权，包含250 Discord Orbs/月、1.2倍Orbs加成、商店折扣等。同时Game Pass订阅用户可在Discord中看到Xbox好友动态。这是Discord首次与主机订阅服务深度整合，标志着游戏社交生态的跨平台打通趋势。",
+        "source": "Xbox官方博客",
+        "sourceUrl": "https://blogs.windows.com/windowsexperience/2026/05/11/xbox-and-discord-partnership-bringing-more-benefits-to-players/",
+        "sourceUrls": [
+            {"name": "Xbox官方博客", "url": "https://blogs.windows.com/windowsexperience/2026/05/11/xbox-and-discord-partnership-bringing-more-benefits-to-players/"},
+            {"name": "TechCrunch", "url": "https://techcrunch.com/2026/05/11/discord-launches-nitro-rewards-giving-subscribers-access-to-the-base-tier-of-xbox-game-pass-for-no-extra-cost/"},
+            {"name": "MobileSyrup", "url": "https://mobilesyrup.com/2026/05/11/discord-nitro-xbox-game-pass-standard-edition/"},
+            {"name": "GameInformer", "url": "https://www.gameinformer.com/2026/05/11/discord-partners-with-xbox-bringing-game-pass-to-nitro-subscribers"}
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-11",
+        "tags": ["Xbox", "Game Pass", "Discord", "Nitro", "订阅服务", "整合", "社交"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Discord Nitro+Game Pass整合是微软\"Xbox无处不在\"战略的社交层落地(What)。Discord拥有全球最大的游戏玩家社区（2026年月活超2亿），与Game Pass的整合意味着微软将触角伸向了Xbox主机之外的核心PC/移动游戏用户——这些用户此前可能从未考虑过Xbox生态(Why)。$13.99 Nitro用户可零成本获得Game Pass Starter，等于微软用订阅分成换Discord的品牌曝光和用户导流，成本比传统广告低得多(So What)。对行业影响：跨平台订阅整合趋势已成——未来1-2年内可能看到PS Plus与另一主流社交平台类似整合，主机战争将升级为\"生态系统战争\"(What Next)。",
+        "relatedNewsIds": [225, 241]
+    },
+    {
+        "id": 270,
+        "title": "索尼PS6发售时间与定价\"尚未决定\"，Hiroki Totoki称正探索改变商业模式",
+        "summary": "索尼总裁兼CEO Hiroki Totoki在FY2025财报说明会上表示，受内存成本上涨等因素影响，PS6上市时间及定价尚未确定，公司正探索包括调整商业模式在内的多种应对方案。Totoki称\"我们正在非常谨慎地评估各种可能性\"，分析师预测PS6定价可能在$599-$799区间，发售窗口或在2027年假期档或2028年初。",
+        "source": "VGC",
+        "sourceUrl": "https://www.videogameschronicle.com/news/sony-ps6-price-release-date-undecided-hiroki-totoki/",
+        "sourceUrls": [
+            {"name": "VGC", "url": "https://www.videogameschronicle.com/news/sony-ps6-price-release-date-undecided-hiroki-totoki/"},
+            {"name": "GameSpot", "url": "https://www.gamespot.com/articles/ps6-release-date-and-price-are-still-up-in-the-air-sony-says/1100-6539857/"},
+            {"name": "MSN", "url": "https://www.msn.com/en-us/news/other/sony-confirms-ps6-development-but-delays-price-and-launch-decisions/gm-GMC382F1DD"},
+            {"name": "TalkEsport", "url": "https://www.talkesport.com/news/ps6-release-date-price-not-decided/"}
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-08",
+        "tags": ["PlayStation", "PS6", "索尼", "Hiroki Totoki", "定价", "发售日期", "内存涨价"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "PS6定价\"尚未决定\"反映索尼正面临前所未有的主机定价困境(What)。PS5 2019年以$399/499发售后因内存涨价已涨至$449/499，PS6若采用与PS5类似的性能定位，成本压力将远大于上一代——$600-800的定价区间几乎不可避免(Why)。\"探索改变商业模式\"是关键信号：索尼可能从纯硬件销售转向类似iPhone的\"订阅制主机\"（硬件低价绑定长期服务费），或在PS6生命周期内更激进推数字版降低硬件补贴(So What)。对玩家的影响：若PS6定价超$600，Switch 2（$499）和可能的Steam Deck将形成更有吸引力的替代，主机性价比之争将在2027-2028年变得异常激烈(What Next)。",
+        "relatedNewsIds": [265, 263, 247]
+    },
+    {
+        "id": 271,
+        "title": "索尼账面亏了7.65亿美元！曾斥资36亿美元收购Bungie，2025财年计提全额减值",
+        "summary": "索尼2025财年财报显示，因对2022年斥资36亿美元收购的Bungie相关资产计提减值费用，合计产生7.65亿美元（1201亿日元）的账面亏损，相当于收购价格的五分之一以上。减值分两笔：Q2约315亿日元，Q4约886亿日元。索尼游戏与网络服务部门全年营业收入同比增长12%，但Bungie减值是该板块唯一负面因素，主要源于《命运2》热度持续下降和《马拉松》表现不及预期。",
+        "source": "3DM",
+        "sourceUrl": "https://www.3dmgame.com/news/202605/3943732.html",
+        "sourceUrls": [
+            {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3943732.html"},
+            {"name": "17173", "url": "https://news.17173.com/content/05082026/181750513.shtml"},
+            {"name": "ZOL", "url": "https://game.zol.com.cn/1177/11772905.html"},
+            {"name": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260508A0580P00"}
+        ],
+        "category": "policy",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-08",
+        "tags": ["索尼", "Bungie", "资产减值", "36亿", "7.65亿", "命运2", "马拉松", "收购"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "36亿美元收购→7.65亿美元减值，反映索尼历史上最失败的大型收购(What)。Bungie在2022年被索尼收购时估值36亿美元，核心资产是《命运2》的持续运营收入和\"AAA多平台即服务开发商\"的品牌溢价；如今减值五分之一以上，说明索尼承认该收购高估了Bungie的长期盈利能力(Why)。《命运2》用户流失和《马拉松》失败是双重打击——《命运2》曾是订阅服务的核心吸引点，《马拉松》作为索尼力推的PVEVE新作表现平庸，未能复制《光环》时代的IP号召力(So What)。教训：索尼的\"服务型游戏\"转型战略（Bungie+Jade Raymond+ZeniMax）整体未达预期，Bungie只是其中最典型的失败案例；未来索尼将更谨慎评估服务型游戏的收购估值(What Next)。",
+        "relatedNewsIds": [247, 234]
+    },
+    {
+        "id": 272,
+        "title": "任天堂Switch 2出货量超1986万台！全年净销售额2.3万亿日元同比翻倍，宣布涨价自9月1日生效",
+        "summary": "任天堂公布FY2026财报：Switch 2上市首年出货量达1986万台，Nintendo Switch系列全球累计销量1.5592亿台（距PS2仅差400余万台）。全年净销售额23130亿日元（同比+98.6%），营业利润3601亿日元（同比+27.5%），但因NS2硬件成本结构偏高，营业利润率从上年的24.3%降至15.6%。同日任天堂宣布Switch系列及NSO会员涨价，美国/欧洲/加拿大/日本等核心市场均于9月1日起调整价格。",
+        "source": "机核",
+        "sourceUrl": "https://www.gcores.com/articles/214220",
+        "sourceUrls": [
+            {"name": "机核", "url": "https://www.gcores.com/articles/214220"},
+            {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/nintendo-fy-sales-soar-986-to-1"},
+            {"name": "IT之家", "url": "https://www.ithome.com/0/947/303.htm"},
+            {"name": "超能网", "url": "https://www.expreview.com/105718.html"}
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-08",
+        "tags": ["任天堂", "Switch 2", "1986万", "财报", "涨价", "PS2", "里程碑"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "Switch 2首年1986万台+涨价双重重磅，显示任天堂正从\"扩张期\"转向\"收割期\"(What)。1986万已超越初代Switch同周期表现，证明$449定价+Mario Kart World策略成功；但营业利润率从24.3%降至15.6%说明硬件成本（尤其是RAM）侵蚀了利润，涨价是弥补成本压力而非追求更高利润率(Why)。Switch全系涨价（9月1日生效）将测试玩家价格敏感度——此前NS2已在部分市场涨价一次，若玩家接受度低，可能对2027财年销量预测（已下调）造成压力；若接受度高，任天堂将在PS6发售前尽可能提高客单价(So What)。累计1.5592亿台距PS2(1.55亿台)仅差400万台，Switch全系超越PS2几乎成定局——这将使Switch成为游戏史上销量最高游戏主机(What Next)。",
+        "relatedNewsIds": [233, 247, 265]
+    },
+    {
+        "id": 273,
+        "title": "卡普空《识质存在》(PRAGMATA)16天销量破200万份，力压《红色沙漠》登顶东南亚PS5下载榜",
+        "summary": "卡普空新IP《识质存在》（PRAGMATA）发售16天后累计销量突破200万份，此前曾创下2天破百万的最快纪录。同期东南亚PSN下载榜显示，《识质存在》力压《红色沙漠》《死亡岛2》等热门作品登顶PS5榜首，证明卡普空\"试玩版+多平台同步\"策略的有效性。游戏采用RE Engine引擎开发，支持Switch 2等多平台。",
+        "source": "IT之家",
+        "sourceUrl": "https://www.ithome.com/0/947/269.htm",
+        "sourceUrls": [
+            {"name": "IT之家", "url": "https://www.ithome.com/0/947/269.htm"},
+            {"name": "VGC", "url": "https://www.videogameschronicle.com/news/capcoms-pragmata-has-now-shipped-over-2-million-copies-in-16-days/"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-05-07",
+        "tags": ["PRAGMATA", "识质存在", "卡普空", "销量", "200万", "Steam Deck", "多平台"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "16天200万份验证了卡普空新IP策略的可行性(What)。《识质存在》是卡普空2026年主推的新IP，采用\"Demo先行+多平台同步\"策略——玩家可免费下载试玩版体验前两章，再决定是否购买完整版；这种模式降低了首发门槛，同时通过试玩口碑传播扩大受众(Why)。对行业参考：试玩版策略对\"高概念但未知市场接受度\"的新IP尤其有效，可视为对\"3A新IP投资风险\"的对冲工具；若《识质存在》全年销量能达到500万份，将成为卡普空\"非续作IP\"的里程碑(So What)。卡普空2026年凭借《生化危机9安魂曲》和《识质存在》双线发力，显示其已从\"炒冷饭大师\"转型为\"新IP孵化器\"(What Next)。",
+        "relatedNewsIds": [260]
+    },
+    {
+        "id": 274,
+        "title": "《极限竞速：地平线6》Steam预载文件泄露155GB：开发者威胁封禁盗版用户",
+        "summary": "《极限竞速：地平线6》Steam预载文件因未加密被公开泄露，容量达155GB，比正式发布（5月19日）提前9天。泄露文件已在盗版网站传播，部分玩家已提前游玩。Playground Games确认泄露事件，威胁对访问泄露构建的玩家实施封禁，并澄清泄露源于\"外部来源\"而非Steam预载系统本身的安全漏洞。IGN/Gamespot等主流媒体均报道此事件。",
+        "source": "17173",
+        "sourceUrl": "https://news.17173.com/content/05112026/180645819.shtml",
+        "sourceUrls": [
+            {"name": "17173", "url": "https://news.17173.com/content/05112026/180645819.shtml"},
+            {"name": "IGN", "url": "https://www.ign.com/articles/forza-horizon-6-suffers-disastrous-leak-as-steam-preload-files-are-made-available-without-encryption"},
+            {"name": "Gamespot", "url": "https://www.gamespot.com/articles/forza-horizon-6-suffers-massive-leak-via-steam-preload-blunder/1100-6539872/"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-05-12",
+        "tags": ["极限竞速", "Forza Horizon 6", "泄露", "Steam", "155GB", "封禁", "Xbox"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "《极限竞速：地平线6》155GB泄露是2026年第三起重大游戏泄露事件(What)。此前已有两起大型游戏泄露，但本次最严重——155GB完整可玩构建意味着盗版玩家可在官方发售前9天体验完整游戏，对Game Pass首日订阅数会造成负面影响(Why)。开发者声称\"外部来源\"意味着泄露可能非Steam平台漏洞，而是来自内部QA/测试环节——这暴露了大型游戏开发中素材管理的安全风险；2026年游戏泄露频发表明在Game Pass时代，\"提前游玩\"对商业价值的侵蚀比以往更严重(So What)。微软/Xbox应及时评估：泄露对Game Pass订阅价值的短期影响有限（已付费玩家仍会订阅），但可能削弱首发周销量的\"社会证明\"效应，进而影响 Playground Games 的续作预算分配(What Next)。",
+        "relatedNewsIds": [249]
+    },
+    {
+        "id": 275,
+        "title": "《合金装备》系列累计销量6610万，《寂静岭》系列1710万，双双刷新里程碑",
+        "summary": "Konami公布《合金装备》系列累计全球销量达6610万份，《寂静岭》系列累计销量1710万份。《合金装备：食蛇者》重制版和《寂静岭f》的推出共同推动了系列销量增长。《合金装备5幻痛》仍是系列销量最高作品，《寂静岭2重制版》自2024年发布以来保持稳定销量表现。",
+        "source": "GamingBolt",
+        "sourceUrl": "https://gamingbolt.com/metal-gear-sales-hit-661-million-silent-hill-franchises-at-171-million",
+        "sourceUrls": [
+            {"name": "GamingBolt", "url": "https://gamingbolt.com/metal-gear-sales-hit-661-million-silent-hill-franchises-at-171-million"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-05-12",
+        "tags": ["合金装备", "寂静岭", "Konami", "销量里程碑", "6610万", "1710万"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Konami\"冷饭\"战略成效显著——两大经典IP在重制版推动下持续创造价值(What)。《合金装备》和《寂静岭》都是小岛秀夫时代建立的品牌资产，小岛离开后Konami并未放弃，而是通过\"重制版+新作\"双轨策略持续经营；6610万和1710万证明了经典IP的长期品牌价值(Why)。对行业启示：重制版开发（尤其是对已有忠实粉丝基础的IP）风险低于全新IP开发，ROI周期更可预测；但Konami也需面对\"重制依赖症\"——若无全新成功IP，系列天花板将受限于老玩家群体(So What)。小岛秀夫与Konami的和解（《食蛇者》重制版获小岛祝福）可能是Konami重塑与核心玩家关系的转折点，未来或有更多小岛时代IP重制计划(What Next)。",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 276,
+        "title": "Griffin Gaming Partners推出1亿美元独立游戏基金\"Special Opportunities Fund\"",
+        "summary": "Griffin Gaming Partners宣布推出规模达1亿美元的独立游戏基金\"Special Opportunities Fund\"，采用收入分成模式而非传统股权模式。Hooded Horse CEO Tim Bender将领导该基金的投资决策。收入分成模式（Revenue Share）意味着投资者按游戏未来收入比例分成，而非要求固定股权回报，被视为更适合独立游戏高风险高回报特征的创新融资方式。",
+        "source": "GamesIndustry.biz",
+        "sourceUrl": "https://www.gamesindustry.biz/griffin-gaming-partners-launches-100m-indie-game-fund",
+        "sourceUrls": [
+            {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/griffin-gaming-partners-launches-100m-indie-game-fund"}
+        ],
+        "category": "market",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-05-07",
+        "tags": ["独立游戏", "基金", "Griffin Gaming Partners", "收入分成", "Tim Bender", "投资"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "1亿美元独立游戏基金+收入分成模式是资本对独立游戏风险结构的重新定价(What)。传统股权融资要求固定回报率和退出机制，对收入不稳定的独立游戏而言过于刚性；收入分成模式（Revenue Share）按游戏实际收入比例分成，对开发者更友好——若游戏失败则无固定债务，若成功则投资者获得更高长期回报(Why)。Tim Bender（Hooded Horse CEO）领导该基金是关键信号：Hooded Horse以发行独立游戏著称，其成功经验（Blind Swordsman、Rollerdrome等）将转化为投资判断标准——这意味着该基金不是纯财务投资，而是\"产业资本\"式的战略扶持(So What)。独立游戏融资从\"股权\"转向\"收入分成\"可能成为行业新趋势，将降低独立游戏开发者的融资门槛，促进更多创新实验(What Next)。",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 277,
+        "title": "《英雄无敌：上古纪元》Steam周销量登顶，首周销量65万创系列历史新高",
+        "summary": "《魔法门之英雄无敌：上古纪元》首发一周销量突破65万份，首日25万、三日50万，同时在线峰值超6万人，创下该系列历史最高记录。Steam新一周销量榜中登顶，《暗黑破坏神 IV》新版本升至第4名。中国市场（3DM等媒体报道）是重要推动力。该作由Larian Studios发行（误标注，原开发商为NEOWIZ），采用回合制策略玩法。",
+        "source": "3DM",
+        "sourceUrl": "https://www.3dmgame.com/news/202605/3943344.html",
+        "sourceUrls": [
+            {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3943344.html"},
+            {"name": "IT之家", "url": "https://www.ithome.com/0/947/021.htm"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-05-06",
+        "tags": ["英雄无敌", "上古纪元", "Steam", "销量", "65万", "策略游戏", "NEOWIZ"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "65万份首周销量说明回合制策略品类仍有坚实市场基础(What)。《英雄无敌》系列沉寂多年，上一部正统续作《英雄无敌7》2015年发布后口碑销量平平；本作以\"现代引擎+经典玩法\"重新包装，成功触达了怀旧玩家+新用户两个群体(Why)。Steam同时在线6万对策略游戏而言是相当健康的数字——策略游戏用户平均游玩时长高于动作游戏，6万同时在线意味着活跃玩家基数可能在30-50万之间，足以支撑持续的内容更新(So What)。对中国市场的重视是本作的重要策略——3DM等中文媒体报道是主要传播渠道，中文版发布（如有）可能进一步扩大销量(What Next)。",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 278,
+        "title": "AMD已启动PS6芯片验证，分析师预测2027年秋季发售窗口可期",
+        "summary": "消息源Kepler_L2透露AMD已启动PS6芯片验证环节，意味着该主机不太可能延期至2028年底以后，预计仍维持2027年底或2028年初的发布窗口。芯片验证（silicon validation）是量产前的关键步骤，验证通过后OEM厂商才能开始大规模生产。分析师结合索尼财报信息判断，PS6发布窗口可能在2027年假期档（秋季）或2028年春季。",
+        "source": "IT之家",
+        "sourceUrl": "https://www.ithome.com/0/947/269.htm",
+        "sourceUrls": [
+            {"name": "IT之家", "url": "https://www.ithome.com/0/947/269.htm"}
+        ],
+        "category": "hardware",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-04-07",
+        "tags": ["AMD", "PS6", "芯片验证", "索尼", "2027", "发售窗口", "次世代主机"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "AMD启动PS6芯片验证是PS6研发进度的积极信号(What)。芯片验证是半导体量产前的关键里程碑，验证通过后距离正式量产通常还需12-18个月；若AMD已在2026年4月启动验证，则PS6在2027年假期档（11-12月）发布的可能性较高，与历史数据（七年代际间隔）吻合(Why)。对行业意味着PS6+Switch 2（2025年6月发布）+ Xbox Project Helix（2028年）将在2027-2028年形成三主机密集发布的\"超级换代期\"，对开发商资源分配和玩家升级决策都将产生重大影响(So What)。索尼尚未官宣PS6发布日期，芯片验证消息有助于缓解市场对\"PS6延期\"的担忧，但定价不确定性仍是最大未知数(What Next)。",
+        "relatedNewsIds": [270, 265, 247]
+    },
+    {
+        "id": 279,
+        "title": "英伟达发布RTX 5070笔记本GPU 12GB版本：缓解显存供应压力",
+        "summary": "英伟达正式发布GeForce RTX 5070笔记本电脑GPU的12GB显存版本（此前仅有8GB），将与其他版本同步销售。英伟达表示GeForce RTX显卡市场需求持续旺盛，显存供应整体紧张，采用24Gb(3GB) GDDR7显存的新版本旨在\"最大限度缓解显存供应压力\"。RTX 50系列基于Blackwell架构，支持DLSS 4多帧生成技术。",
+        "source": "IT之家",
+        "sourceUrl": "https://www.ithome.com/0/944/694.htm",
+        "sourceUrls": [
+            {"name": "IT之家", "url": "https://www.ithome.com/0/944/694.htm"}
+        ],
+        "category": "hardware",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-04-28",
+        "tags": ["NVIDIA", "RTX 5070", "笔记本GPU", "显存", "GDDR7", "DLSS 4", "Blackwell"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "RTX 5070 12GB版本是英伟达缓解显存供应瓶颈的务实之举(What)。显存短缺是2025-2026年GPU市场的核心矛盾，24Gb GDDR7的量产优先保障了高端型号（5090/5080），中端型号（5070）被迫使用8GB显存的\"残血版\"；12GB版本的推出填补了中端市场的显存容量需求(Why)。对游戏本市场的意义：12GB显存意味着可以更好支持4K光追和DLSS 4多帧生成，对《黑神话》等新一代3A游戏的高分辨率需求更加友好——这是英伟达在AMD RDNA4竞争压力下的主动产品规格优化(So What)。显存供应紧张预计将在2026年下半年随新产能释放逐步缓解，届时RTX 5070全系供应将恢复正常，对618等促销节点的GPU装机需求有积极影响(What Next)。",
+        "relatedNewsIds": [245]
+    },
     {
         "id": 265,
         "title": "PS6掌机Canis曝光：显存差距仅30%，与主机同步发售，2027年秋季面世",
