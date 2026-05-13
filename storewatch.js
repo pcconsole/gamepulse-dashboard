@@ -6,8 +6,8 @@
 
 // ============ 元数据 ============
 const storewatchMeta = {
-    lastUpdated: '2026-05-11',
-    dataRange: '2025-12-19 ~ 2026-05-11',
+    lastUpdated: '2026-05-12',
+    dataRange: '2025-12-19 ~ 2026-05-12',
     sheetId: 'LXXdrpHEWcSr',
     mainSheet: 'BB08J2',
     vendorSheet: 'xsejuk',

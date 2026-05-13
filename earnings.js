@@ -2,8 +2,8 @@
 // 重点公司财报分析数据模块 V10 — 全部18家统一双模块(latestQuarter+fullYear)
 // 覆盖18家上市公司的游戏业务财务与运营数据
 // 数据来源：各公司IR页面/财报/press release + GamesIndustry.biz 验证
-// 更新日期: 2026-05-08
-// 本次更新: 微软FY2026 Q3(4/29发布: Gaming$53.4亿-7%,硬件-33%,MAU创新高) + EA FY2026 Q4+全年(5/5: 净预订$80.26亿+9%创纪录) + Roblox Q1 2026(4/30: $14.4亿+39%,下调指引) + Unity Q1 2026(5/7: $5.08亿+17%,退出非核心广告)
+// 更新日期: 2026-05-13
+// 本次更新: 索尼FY2026全年(G&NS¥4685.7亿,营业利润¥463.3亿创纪录,PS5出货93.6M) + 任天堂FY2026全年(净销售¥2.24万亿+98.6%创历史性突破,Switch2出货1986万台,马趴1470万套) + 卡普空FY2026全年(净销售¥1953亿+2.8%创历史新高,营业利润¥752亿连续13年增长,怪猎荒野1100万+生化危机安魂曲691万)
 //   重构范围: Sony/Microsoft/Nintendo/腾讯/网易/EA/Take-Two/Ubisoft/Nexon/
 //             万代南梦宫/Capcom/Square Enix/Konami/Sega/Krafton/Roblox/Unity/Embracer
 //   新增公司: Roblox(NYSE:RBLX)/Unity(NYSE:U)/Embracer(OMX:EMBRAC B) 加入earningsCompanies数组
@@ -56,54 +56,50 @@ const earningsCompanies = [
         logo: '🎮',
         color: '#003087',
         segment: 'Game & Network Services (G&NS)',
-        fiscalPeriod: 'FY2025 Q3 (2025年10-12月)',
+        fiscalPeriod: 'FY2026 全年 (2025年4月-2026年3月)',
         currency: 'JPY',
         latestQuarter: {
-            period: 'FY2025 Q3', calendarPeriod: '2025年10-12月', filingDate: '2026-02-05',
-            revenue: { value: 1198000, unit: '百万日元', yoy: 4.6, label: 'G&NS Q3营收¥1.198万亿', usdEquiv: '≈$8.01B' },
-            operatingProfit: { value: 128500, unit: '百万日元', yoy: 23.8, label: 'G&NS Q3营业利润¥1285亿', usdEquiv: '≈$860M' },
-            operatingMargin: { value: 10.7, label: 'Q3营业利润率' },
-            gameMetrics: {
-                monthlyActiveUsers: { value: 138, unit: '百万', yoy: 4.5, label: 'PSN月活用户' },
-                psPlus: { value: 50, unit: '百万', yoy: 2.0, label: 'PS Plus订阅用户' },
-                ps5Shipments: { value: 5.8, unit: '百万台', label: 'Q3 PS5出货' }
-            }
+            period: 'FY2026 Q4 (推算)', calendarPeriod: '2026年1-3月', filingDate: '2026-05-08',
+            revenue: { value: 1098300, unit: '百万日元(Q4估)', yoy: null, label: 'Q4 G&NS≈¥1.098万亿(年化-单季)', usdEquiv: '≈$7.35B' },
+            note: 'FY2026全年已发布,全年G&NS¥4685.7亿,Q4单季从全年-三个季度推算'
         },
         fullYear: {
-            period: 'FY2025年化(估)', filingDate: '2026-02-05', status: '九月累计+年化推算',
-            revenue: { value: 4792000, unit: '百万日元(年化估)', yoy: null, label: 'G&NS年化≈¥4.79万亿', usdEquiv: '≈$32.1B' },
-            note: '基于Q3单季年化推算,实际全年数据需等FY25全年报(2026/05)'
+            period: 'FY2026全年(已发布)', filingDate: '2026-05-08', status: '已发布(创纪录)',
+            revenue: { value: 4685700, unit: '百万日元(全年)', yoy: 0, label: 'G&NS全年¥4685.7亿(≈$31.3B)', usdEquiv: '≈$31.3B' },
+            operatingProfit: { value: 463300, unit: '百万日元(全年)', yoy: null, label: 'G&NS营业利润¥4633亿创历史纪录(≈$3.1B)' },
+            operatingMargin: { value: 9.9, label: 'G&NS全年营业利润率' },
+            note: 'PS5硬件下滑被FX和网络服务增长抵消,营业利润创纪录,Bungie减值影响已体现'
         },
         companyOverall: {
-            totalRevenue: { value: 3985000, unit: '百万日元', yoy: 6.2, label: '集团Q3营收', source: 'Sony FY2025 Q3 Earnings (2026/02/05)' },
-            totalOperatingProfit: { value: 498000, unit: '百万日元', yoy: 9.4, label: '集团Q3营业利润' },
-            totalOperatingMargin: { value: 12.5, label: '集团Q3利润率' },
-            note: '索尼集团六大业务板块：G&NS(游戏)、音乐、影视、ET&S(电子)、I&SS(传感器)、金融'
+            totalRevenue: { value: 12479600, unit: '百万日元', yoy: 4, label: '集团全年营收¥12.48万亿(+4%)', source: 'Sony FY2026 Q4 & Full Year Results (2026/05/08)' },
+            totalOperatingProfit: { value: 1447500, unit: '百万日元', yoy: null, label: '集团营业利润¥1.4475万亿(历史最高)' },
+            note: '索尼集团FY2026(2025年4月-2026年3月): 营收+4%至¥12.48万亿创历史新高,集团营业利润¥1.4475万亿创历史新高。G&NS板块营收基本持平¥4685.7亿,但营业利润创纪录¥4633亿。Bungie减值$2.15亿(第二次)已计入。PS5累计出货93.6M台。'
         },
         financials: {
-            revenue: { value: 1198000, unit: '百万日元', yoy: 4.6, label: 'G&NS营收', source: 'Sony FY2025 Q3 Supplemental (2026/02/05)', usdEquiv: '≈$8.01B' },
-            operatingProfit: { value: 128500, unit: '百万日元', yoy: 23.8, label: '营业利润', usdEquiv: '≈$860M' },
-            operatingMargin: { value: 10.7, label: '营业利润率' },
-            segmentRevenuePct: { value: 30.1, label: '占集团营收比例' },
+            revenue: { value: 4685700, unit: '百万日元(全年)', yoy: 0, label: 'G&NS全年营收(基本持平)', source: 'Sony FY2026 Full Year Earnings Release (2026/05/08)', usdEquiv: '≈$31.3B' },
+            operatingProfit: { value: 463300, unit: '百万日元(全年)', yoy: null, label: 'G&NS营业利润创历史纪录', usdEquiv: '≈$3.1B' },
+            operatingMargin: { value: 9.9, label: 'G&NS营业利润率' },
+            segmentRevenuePct: { value: 37.5, label: 'G&NS占集团营收比例' },
         },
         gameMetrics: {
-            monthlyActiveUsers: { value: 138, unit: '百万', yoy: 4.5, label: 'PSN月活用户', source: 'Sony Q3 Presentation' },
-            psPlus: { value: 50, unit: '百万', yoy: 2.0, label: 'PS Plus订阅用户' },
-            ps5Shipments: { value: 5.8, unit: '百万台', cumulative: 101.5, label: 'PS5本季出货(累计1.015亿)', source: 'Sony IR' },
+            ps5CumulativeShipments: { value: 93.6, unit: '百万台(累计)', label: 'PS5累计出货9360万台', source: 'Sony FY2026 Q4 Earnings' },
+            psPlusSubscribers: { value: null, unit: '百万', label: 'PS Plus订阅用户(未单独披露)' },
+            networkServicesGrowth: { value: null, unit: '%', label: '网络服务收入增长(FX抵消硬件下滑)' },
         },
-        keyProducts: ['《Astro Bot》', '《蜘蛛侠2》PC', '《Horizon系列》PC', 'PS5 Pro'],
+        keyProducts: ['《GT赛车7》', 'PS5 Pro', 'PS Plus高级订阅', '《蜘蛛侠2》PC', '《Horizon》PC'],
         analysis: {
-            performance: 'G&NS板块FY25Q3营收同比增长4.6%至¥1.198万亿(≈$80.1亿)，营业利润大增23.8%至¥1285亿(≈$8.6亿)，利润率改善至10.7%。PS5累计出货突破1亿台里程碑(1.015亿)。PSN月活用户增至1.38亿人创新高。PS Plus调价策略推动ARPU提升。',
-            strategy: '索尼持续加大PC移植力度，蜘蛛侠2和Horizon系列PC版表现出色。PS5 Pro上市拉动高端需求。Live Service战略调整中(Concord教训后更审慎)。',
-            outlook: '管理层上调全年G&NS营收预期。Switch 2发售后市场竞争格局变化值得关注。2026年重点关注第一方大作和订阅生态。',
-            newProducts: '多款第一方大作开发中；更多PC移植；PS5 Pro持续推广。'
+            performance: 'FY2026(2025.4-2026.3)G&NS板块全年营收¥4685.7亿(≈$31.3亿,基本持平YoY),但营业利润创历史纪录¥463.3亿(≈$3.1亿)。PS5硬件销售下滑被外汇汇率有利和网络服务收入增长完全抵消。PS5累计出货突破9360万台(里程碑)。集团全年营收¥12.48万亿(+4%)创历史新高,集团营业利润¥1.4475万亿创历史新高,但Q4 GAAP EPS下滑因G&NS利润-41.6%和Honda EV合资亏损影响。G&NS营业利润率约9.9%,反映订阅+服务转型成效。',
+            strategy: '索尼游戏业务加速从硬件驱动向服务+订阅转型。网络服务收入增长弥补硬件周期性下滑。PS5 Pro维持高端定位。Live Service策略更审慎(Concord停服教训)。Bungie进行第二笔$2.15亿减值,整合仍在进行。管理层宣布FY2027营业利润目标¥1600亿(+10.5%),股价回购500亿日元。',
+            outlook: 'FY2027(2026.4-2027.3)展望: 管理层预期集团营业利润增长双位数至约¥1600亿。PS5出货预计继续下行(世代末期),但网络服务+订阅收入持续增长弥补。AI在游戏开发和运营中的应用加速。第一方大作管线关注。2026年竞争焦点: Switch 2超级周期下PS5如何守住份额。',
+            newProducts: '多款第一方大作开发中；更多PC移植项目；PS5 Pro持续推广；订阅服务矩阵升级。'
         },
         dataSources: [
-            { type: '季度财报', name: 'Sony FY2025 Q3 Financial Results', date: '2026-02-05', url: 'https://www.sony.com/en/SonyInfo/IR/library/presen/er/archive.html' },
-            { type: '补充数据', name: 'G&NS Segment Supplemental Data', date: '2026-02-05', url: 'https://www.sony.com/en/SonyInfo/IR/library/presen/er/archive.html' }
+            { type: '年度财报', name: 'Sony FY2026 Q4 & Full Year Financial Results', date: '2026-05-08', url: 'https://www.sony.com/en/SonyInfo/IR/library/presen/er/archive.html' },
+            { type: '行业报道', name: 'This Week in Video Games: PlayStation Reports Record Profits FY2025', date: '2026-05-09', url: 'https://thisweekinvideogames.com/news/playstation-reports-record-profits-for-fy2025-despite-second-bungie-impairment-loss/' },
+            { type: '行业分析', name: 'Invenglobal: Sony Posts Record Gaming Operating Profit', date: '2026-05-09', url: 'https://www.invenglobal.com/articles/21682/sony-posts-record-gaming-operating-profit-though-bungie-impairment-casts-a-shadow' }
         ],
-        filingDate: '2026-02-05',
-        filingType: '季度财报',
+        filingDate: '2026-05-08',
+        filingType: '年度财报(全年)',
         filingUrl: 'https://www.sony.com/en/SonyInfo/IR/library/presen/er/archive.html'
     },
     {
@@ -182,50 +178,57 @@ const earningsCompanies = [
         logo: '🍄',
         color: '#E60012',
         segment: '游戏专用（整体业务）',
-        fiscalPeriod: 'FY2026 Q3 九个月累计(2025年4月-12月)',
+        fiscalPeriod: 'FY2026 全年 (2025年4月-2026年3月)',
         currency: 'JPY',
         latestQuarter: {
-            period: 'FY2026 Q3(推算)', calendarPeriod: '2025年10-12月', filingDate: '2026-02-03',
-            revenue: { value: 759000, unit: '百万日元(Q3推算)', yoy: null, label: 'Q3单季≈¥7590亿(九月累计-H1推算)', usdEquiv: '≈$5.08B' },
+            period: 'FY2026 Q4', calendarPeriod: '2026年1-3月', filingDate: '2026-05-08',
+            revenue: { value: 716200, unit: '百万日元(Q4估)', yoy: null, label: 'Q4≈¥7162亿(全年-前三季)', usdEquiv: '≈$4.79B' },
             gameMetrics: {
-                switch2Shipments: { value: 17.37, unit: '百万台(累计)', label: 'Switch 2累计出货至Q3末' },
-                marioKartWorld: { value: 20, unit: '百万套+(估)', label: '马力欧卡丁车世界累计' }
+                switch2Shipments: { value: 2.49, unit: '百万台(Q4)', label: 'Switch 2 Q4出货249万台' }
             },
-            note: '从九月累计¥1.523万亿减H1≈¥7640亿推算单季度'
+            note: '全年已发布,Q4单季从全年¥2.24万亿-前三季推算'
         },
         fullYear: {
-            period: 'FY2026九月累计', filingDate: '2026-02-03', status: '九月累计(全年待2026/05/08)',
-            revenue: { value: 1523000, unit: '百万日元(九月累计)', yoy: 30.7, label: '九月累计¥1.523万亿', usdEquiv: '≈$10.19B' },
-            operatingProfit: { value: 459000, unit: '百万日元(九月累计)', yoy: 12.1, label: '九月营业利润¥4590亿' },
-            operatingMargin: { value: 30.1, label: '九月营业利润率' },
-            note: '全年将于2026/05/08公布,Switch 2超级周期推动历史最强财年预期'
+            period: 'FY2026全年(已发布)', filingDate: '2026-05-08', status: '已发布(历史性突破)',
+            revenue: { value: 2239500, unit: '百万日元(全年)', yoy: 98.6, label: '全年净销售¥2.24万亿(+98.6%)', usdEquiv: '≈$14.99B' },
+            operatingProfit: { value: 360100, unit: '百万日元(全年)', yoy: 27.5, label: '全年营业利润¥3601亿(+27.5%)', usdEquiv: '≈$2.41B' },
+            operatingMargin: { value: 16.1, label: '全年营业利润率(硬件发售年)' },
+            note: 'Switch 2超级周期驱动,首个完整财年净销售突破$14.9亿(¥2.24万亿)'
+        },
+        companyOverall: {
+            totalRevenue: { value: 2239500, unit: '百万日元(全年)', yoy: 98.6, label: '全年净销售¥2.24万亿(+98.6%,≈$14.99B)', source: 'Nintendo FY2026 Full Year Results (2026/05/08)' },
+            totalOperatingProfit: { value: 360100, unit: '百万日元', yoy: 27.5, label: '全年营业利润¥3601亿(+27.5%)' },
+            totalOperatingMargin: { value: 16.1, label: '全年营业利润率' },
+            note: '任天堂FY2026(2025年4月-2026年3月): Switch 2发售首个完整财年,净销售¥2.24万亿(+98.6%)创历史性突破,营业利润¥3601亿(+27.5%)。Switch 2累计出货1986万台超预期。股价因定价上涨和游戏管线担忧跌40%。'
         },
         financials: {
-            revenue: { value: 1523000, unit: '百万日元(九月累计)', yoy: 30.7, label: '9个月累计营收', source: 'Nintendo FY2026 Q3 Earnings Release (2026/02/03)', usdEquiv: '≈$10.19B' },
-            operatingProfit: { value: 459000, unit: '百万日元(九月累计)', yoy: 12.1, label: '9个月营业利润', usdEquiv: '≈$3.07B' },
-            operatingMargin: { value: 30.1, label: '9个月营业利润率' },
+            revenue: { value: 2239500, unit: '百万日元(全年)', yoy: 98.6, label: '专用游戏平台净销售(创纪录)', source: 'Nintendo FY2026 Full Year Results (2026/05/08)', usdEquiv: '≈$14.99B' },
+            operatingProfit: { value: 360100, unit: '百万日元', yoy: 27.5, label: '营业利润(历史性突破)' },
+            operatingMargin: { value: 16.1, label: '营业利润率' },
             segmentRevenuePct: { value: 100, label: '游戏占比' },
         },
         gameMetrics: {
-            switch2Shipments: { value: 17.37, unit: '百万台(累计)', label: 'Switch 2累计出货', source: 'Nintendo IR (2026/02)' },
-            switchShipments: { value: 155.37, unit: '百万台(累计)', label: 'Switch累计出货', source: 'Nintendo IR (2026/02)' },
-            softwareSales: { value: 141.56, unit: '百万套(Switch累计)', label: 'Switch软件累计销量' },
-            marioKartWorld: { value: 20, unit: '百万套+(估)', label: '马力欧卡丁车世界累计(估)' },
-            nsoSubscribers: { value: 36, unit: '百万+', label: 'NSO订阅用户(估)' },
+            switch2Shipments: { value: 19.86, unit: '百万台(累计)', label: 'Switch 2累计出货1986万台', source: 'Nintendo IR (2026/05/08)' },
+            switchShipments: { value: 155.92, unit: '百万台(累计)', label: 'Switch累计出货1.5592亿台', source: 'Nintendo IR (2026/05/08)' },
+            softwareSales: { value: 185.62, unit: '百万套(全年)', label: '全年软件销量1.8562亿套' },
+            marioKartWorld: { value: 14.70, unit: '百万套', label: '马力欧卡丁车世界累计1470万套', source: 'Nintendo IR (2026/05/08)' },
+            digitalSalesRatio: { value: 57.9, unit: '%', label: '数字销售占比57.9%' },
+            nsoSubscribers: { value: null, unit: '百万+', label: 'NSO订阅用户(未单独披露)' },
         },
-        keyProducts: ['《马力欧卡丁车世界》(Switch 2)', '《大金刚大狂欢》', '《宝可梦传说Z-A》', 'Switch 2'],
+        keyProducts: ['《马力欧卡丁车世界》(1470万)', '《宝可梦传说Z-A》', 'Switch 2', 'Donkey Kong Bananza(452万)', 'Pokopia'],
         analysis: {
-            performance: 'FY2026前九个月营收¥1.523万亿(≈$101.9亿,+30.7%)，营业利润¥4590亿(+12.1%)，利润率30.1%。Switch 2于2025年6月5日发售，首周全球sell-through超350万台创任天堂历史纪录。截至12月底Switch 2累计出货1737万台。《马力欧卡丁车世界》首发大卖。Switch初代累计达1.5537亿台。',
-            strategy: 'Switch 2成功发售标志着新一代超级周期开启。向下兼容策略推动用户无缝迁移。任天堂着力构建Switch 2独占游戏阵容。',
-            outlook: 'FY2026全年财报将于2026年5月8日发布。Switch 2供不应求，持续扩大产能。《宝可梦传说Z-A》10月发售将是下半年关键催化剂。2026年有望成为任天堂历史最强财年之一。',
-            newProducts: '《宝可梦传说Z-A》(2025/10)；《星之卡比Switch 2版》(2025/08)；更多Switch 2独占新作。'
+            performance: '🔥FY2026(2025.4-2026.3)首个Switch 2完整财年爆发: 净销售¥2.24万亿(+98.6%,≈$14.99亿)创历史性突破,营业利润¥3601亿(+27.5%)。Switch 2累计出货1986万台,发售9个月内超越原版Switch同期表现。《马力欧卡丁车世界》狂销1470万套(含捆绑版)创Switch 2首发最高。全年软件销量1.8562亿套,数字占比57.9%。海外销售占67%以上。但股价因Switch 2涨价和游戏管线担忧从高点跌约40%。',
+            strategy: 'Switch 2成功发售标志着新一代超级周期开启。向下兼容策略推动用户无缝迁移。数字销售占比提升至57.9%。Pokemon Pokopia(2026年3月)驱动季度末硬件销售增长。管理层已开始提价应对成本压力。',
+            outlook: 'FY2027(2026.4-2027.3)展望已发布但被市场视为负面——因定价上涨和薄游戏管线。净销售预期¥1.5万亿(-32.7%),营业利润¥3000亿(-16.7%)。Switch 2进入第二个财年,生命周期管理重点从硬件铺量转向软件驱动。关键催化剂: 宝可梦Z-A(10月)+更多Switch 2独占大作。',
+            newProducts: '《宝可梦传说Z-A》(2025/10 Switch 2独占)；《星之卡比》Switch 2版；更多Switch 2独占新作。'
         },
         dataSources: [
-            { type: '季度财报', name: 'Nintendo FY2026 Q3 Nine Months Earnings Release', date: '2026-02-03', url: 'https://www.nintendo.co.jp/ir/en/' },
-            { type: '补充数据', name: 'Financial Results Explanatory Material', date: '2026-02-06', url: 'https://www.nintendo.co.jp/ir/en/' }
+            { type: '年度财报', name: 'Nintendo FY2026 Full Year Financial Results', date: '2026-05-08', url: 'https://www.nintendo.co.jp/ir/en/' },
+            { type: '业绩说明会', name: 'Financial Results Explanatory Material', date: '2026-05-08', url: 'https://www.nintendo.co.jp/ir/pdf/2026/260508_5e.pdf' },
+            { type: '行业报道', name: 'GamesIndustry.biz: Nintendo FY sales soar 98.6% to $14.6bn', date: '2026-05-08', url: 'https://www.gamesindustry.biz/nintendo-fy-sales-soar-986-to-146bn-following-launch-of-switch-2' }
         ],
-        filingDate: '2026-02-03',
-        filingType: '季度财报(九个月累计)',
+        filingDate: '2026-05-08',
+        filingType: '年度财报(全年)',
         filingUrl: 'https://www.nintendo.co.jp/ir/en/'
     },
     {
@@ -656,53 +659,59 @@ const earningsCompanies = [
         logo: '🐉',
         color: '#003C71',
         segment: '数字内容（Digital Contents）',
-        fiscalPeriod: 'FY2025 Q3 九个月累计(2025年4月-12月)',
+        fiscalPeriod: 'FY2026 全年 (2025年4月-2026年3月)',
         currency: 'JPY',
         latestQuarter: {
-            period: 'FY2025 Q3(推算)', calendarPeriod: '2025年10-12月', filingDate: '2026-01-27',
-            revenue: { value: 48900, unit: '百万日元(DC Q3推算)', yoy: null, label: 'DC Q3≈¥489亿(九月-H1推算)', usdEquiv: '≈$327M' },
+            period: 'FY2026 Q4', calendarPeriod: '2026年1-3月', filingDate: '2026-05-13',
+            revenue: { value: 521900, unit: '百万日元(Q4估)', yoy: null, label: 'Q4 DC≈¥5219亿(全年-前三季)', usdEquiv: '≈$349M' },
             gameMetrics: {
-                mhWildsShipments: { value: 11, unit: '百万套+', label: '怪猎荒野累计销量(1100万+,2月发售)' }
+                reRequiemSales: { value: 6.91, unit: '百万套', label: '生化危机：安魂曲累计销量691万套' }
             },
-            note: '从九月累计DC ¥734亿减H1推算;怪猎荒野Q4才发售'
+            note: '全年已发布,Q4从¥1953亿-前三季推算;RE Requiem 2月发售即691万'
         },
         fullYear: {
-            period: 'FY2025全年指引', filingDate: '2026-01-27', status: '管理层指引',
-            revenue: { value: 190000, unit: '百万日元(集团全年指引)', yoy: 12, label: '全年净销售指引¥1900亿', usdEquiv: '≈$12.71B' },
-            dcRevenue: { value: 127500, unit: '百万日元(DC估)', label: 'DC约¥1275亿≈$85.3亿(估)' },
-            operatingProfit: { value: 73000, unit: '百万日元(指引)', yoy: 11, label: '全年营业利润指引¥730亿' },
-            note: '怪猎荒野推动破纪录财年,目标年销量1亿套'
+            period: 'FY2026全年(已发布)', filingDate: '2026-05-13', status: '已发布(连续13年利润增长)',
+            revenue: { value: 1953000, unit: '百万日元(全年)', yoy: 2.8, label: '集团全年净销售¥1953亿(+2.8%)', usdEquiv: '≈$13.06B' },
+            operatingProfit: { value: 752000, unit: '百万日元(全年)', yoy: 3.0, label: 'DC全年营业利润¥752亿(+3.0%)', usdEquiv: '≈$5.03B' },
+            operatingMargin: { value: 38.5, label: 'DC全年营业利润率(连续13年增长)' },
+            note: '集团净销售¥1953亿(+2.8%)创历史新高,营业利润连续13年增长,第11年超10%增长'
         },
         companyOverall: {
-            totalRevenue: { value: 115315, unit: '百万日元(九月累计)', yoy: 29.8, label: '集团九月累计营收', source: 'Capcom FY2025 Q3 Results (2026/01/27)' },
-            totalOperatingProfit: { value: 54302, unit: '百万日元(九月累计)', yoy: 75.1, label: '集团九月累计营业利润' },
-            totalOperatingMargin: { value: 47.1, label: '集团九月累计利润率' },
-            note: '卡普空九个月净销售¥1153亿(+29.8%)，营业利润¥543亿(+75.1%)。数字内容占主导。'
+            totalRevenue: { value: 1953000, unit: '百万日元(全年)', yoy: 2.8, label: '集团全年净销售¥1953亿(+2.8%,创历史新高)', source: 'Capcom FY2026 Full Year Results (2026/05/13)' },
+            totalOperatingProfit: { value: 752000, unit: '百万日元', yoy: 3.0, label: '集团全年营业利润¥752亿(+3.0%)' },
+            totalOperatingMargin: { value: 38.5, label: '集团全年营业利润率(创纪录)' },
+            note: '卡普空FY2026(2025年4月-2026年3月): 连续第13年营业利润增长,第11年超10%增长。生化危机+怪物猎人双擎驱动。数字销售占比93%。目录销量创纪录4946万套。'
         },
         financials: {
-            revenue: { value: 73411, unit: '百万日元(九月DC)', yoy: 25.4, label: '数字内容九月营收', source: 'Capcom FY2025 Q3 Financial Review (2026/01/27)', usdEquiv: '≈$491M' },
-            operatingProfit: { value: 46067, unit: '百万日元(九月DC)', yoy: 57.5, label: 'DC营业利润', usdEquiv: '≈$308M' },
-            operatingMargin: { value: 62.8, label: 'DC营业利润率(九月累计)' },
-            segmentRevenuePct: { value: 63.7, label: '数字内容占集团比例' },
+            revenue: { value: 1442000, unit: '百万日元(DC全年)', yoy: null, label: '数字内容全年净销售¥1.442万亿', source: 'Capcom FY2026 Full Year Results (2026/05/13)', usdEquiv: '≈$9.65B' },
+            operatingProfit: { value: 752000, unit: '百万日元(集团全年)', yoy: 3.0, label: '集团营业利润(创纪录)' },
+            operatingMargin: { value: 38.5, label: '集团营业利润率(业界顶级)' },
+            segmentRevenuePct: { value: 73.8, label: '数字内容占集团比例' },
         },
         gameMetrics: {
-            mhWildsShipments: { value: 11, unit: '百万套+', label: '怪猎荒野累计销量(1100万+)', source: 'Capcom IR (2026/01/27)' },
-            totalUnitsSold: { value: 34.64, unit: '百万套(九月)', label: '九月累计总销量(247款)' },
-            sf6Sales: { value: 6, unit: '百万套+', label: '街霸6累计销量(600万+)' },
+            mhWildsSales: { value: 11, unit: '百万套(累计)', label: '怪猎荒野累计销量1100万套', source: 'Capcom IR (2026/05/13)' },
+            reRequiemSales: { value: 6.91, unit: '百万套', label: '生化危机：安魂曲累计销量691万套(2月发售)', source: 'Capcom IR (2026/05/13)' },
+            sf6Sales: { value: 6.05, unit: '百万套(累计)', label: '街霸6累计销量605万套(+204万FY26)' },
+            re4Sales: { value: 3.69, unit: '百万套(累计)', label: '生化危机4重制版累计369万套' },
+            reVillageSales: { value: 3.62, unit: '百万套(累计)', label: '生化危机8累计362万套' },
+            catalogSales: { value: 49.46, unit: '百万套', label: '目录销量创纪录4946万套' },
+            digitalSalesRatio: { value: 93, unit: '%', label: '数字销售占比93%' },
+            pcDigitalRatio: { value: 50, unit: '%+', label: 'PC数字购买超数字销量一半' },
         },
-        keyProducts: ['怪物猎人：荒野', '生化危机系列', '街头霸王6', '鬼武者2', '鬼泣系列'],
+        keyProducts: ['怪物猎人：荒野(1100万+)', '生化危机：安魂曲(691万)', '街头霸王6(605万)', '生化危机4重制版', '鬼武者2'],
         analysis: {
-            performance: '九个月累计：集团净销售¥1153亿(+29.8%，≈$7.71亿)，营业利润¥543亿(+75.1%，≈$3.63亿)，利润率高达47.1%。数字内容业务营收¥734亿(+25.4%)，DC营业利润率62.8%，业界顶级。《怪物猎人：荒野》2025年2月发售，累计销量突破1100万套。《街霸6》累计突破600万套。',
-            strategy: '卡普空"百万销量计划"持续推进。《怪猎荒野》大幅推动业绩创历史新高。PC端拓展+旧作长尾变现策略成效卓越。电竞(Capcom Pro Tour)和媒体(鬼泣动画)多元化。',
-            outlook: '全年预期：净销售¥1900亿(+12%)、营业利润¥730亿(+11%)。怪猎荒野后续DLC和更新将持续推动收入。公司战略目标年销量1亿套。',
-            newProducts: '《怪物猎人荒野》DLC/更新；《生化危机：安魂曲》(2026/02)；更多PC端移植。'
+            performance: '🔥FY2026(2025.4-2026.3)连续第13年营业利润增长,第11年超10%增长: 集团净销售¥1953亿(+2.8%,创历史新高),DC净销售¥1442亿,集团营业利润¥752亿(+3.0%,≈$5.03亿,利润率38.5%业界顶级)。《怪猎荒野》累计1100万套成为2025年最畅销游戏之一。《生化危机：安魂曲》(2026/02)发售即691万套。《街霸6》FY26销204万套,累计突破600万套。目录销量创纪录4946万套(数字版占比93%,PC超一半)。实体销量下降10%,但数字增长21%完全弥补。',
+            strategy: '卡普空"百万销量计划"持续推进。双擎策略: 生化危机+怪物猎人驱动业绩。数字优先战略成效显著(93%数字占比+21%增长)。PC端扩张持续(PC收入超数字一半)。电竞(Capcom Pro Tour)和媒体合作多元化。',
+            outlook: 'FY2027(2026.4-2027.3)展望: 净销售预期¥1400亿(-27.8%),营业利润¥560亿(-25.5%),反映管线相对较少。但怪猎荒野DLC+更多生化危机内容+街霸6持续更新仍将是核心驱动。年销量目标1亿套。',
+            newProducts: '《怪物猎人荒野》DLC/更新；《生化危机9》开发中；更多PC端移植；街霸6持续更新。'
         },
         dataSources: [
-            { type: '季度财报', name: 'Capcom FY2025 Q3 (Nine Months) Results', date: '2026-01-27', url: 'https://www.capcom.co.jp/ir/english/finance/review.html' },
-            { type: '业绩演示', name: 'Business Performance Review', date: '2026-01-27', url: 'https://www.capcom.co.jp/ir/english/finance/review.html' }
+            { type: '年度财报', name: 'Capcom FY2026 Full Year Financial Results', date: '2026-05-13', url: 'https://www.capcom.co.jp/ir/english/finance/review.html' },
+            { type: '新闻稿', name: 'Capcom Sets Record in All Profit Categories for Ninth Consecutive Year', date: '2026-05-13', url: 'https://www.capcom.co.jp/ir/english/news/pdf/e260513b.pdf' },
+            { type: '行业报道', name: 'TwistedVoxel: Capcom Reports Record FY2026 Results', date: '2026-05-13', url: 'https://twistedvoxel.com/capcom-reports-record-fy2026-results-led-by-resident-evil-and-monster-hunter/' }
         ],
-        filingDate: '2026-01-27',
-        filingType: '季度财报(九个月累计)',
+        filingDate: '2026-05-13',
+        filingType: '年度财报(全年)',
         filingUrl: 'https://www.capcom.co.jp/ir/english/finance/review.html'
     },
     {
@@ -1136,13 +1145,14 @@ const quarterlyRevenueComparison = [
     },
     {
         name: '索尼(G&NS)',
-        revenue: 8013, // ¥1.198万亿 / 149.5
+        revenue: 31338, // FY2026全年 G&NS ¥4685.7亿 / 149.5
         currency: 'USD',
-        period: 'FY25 Q3 (10-12月)',
-        note: 'G&NS ¥1.198万亿≈$80.1亿',
+        period: 'FY26全年 (2025年4月-2026年3月)',
+        note: 'G&NS全年¥4685.7亿≈$31.3亿(≈$8B/季),营业利润创纪录¥463.3亿',
         color: '#003087',
         dataGrade: 'A',
-        yoy: 4.6
+        yoy: 0,
+        caveat: 'FY26全年已发布,基本持平YoY但营业利润创历史纪录'
     },
     {
         name: '微软(Gaming)',
@@ -1157,14 +1167,13 @@ const quarterlyRevenueComparison = [
     },
     {
         name: '任天堂',
-        revenue: 5080, // Q3推算: 九月¥1.523万亿, H1约¥7640亿 → Q3≈¥7590亿 / 149.5
+        revenue: 14986, // FY2026全年净销售 ¥2.2395万亿 / 149.5
         currency: 'USD',
-        period: 'FY26 Q3 (10-12月)',
-        note: 'Q3单季≈¥7590亿≈$50.8亿(Switch 2旺季,九月累计-H1推算)',
+        period: 'FY26全年 (2025年4月-2026年3月)',
+        note: '全年净销售¥2.24万亿(+98.6%)≈$15.0亿创历史性突破',
         color: '#E60012',
-        dataGrade: 'B',
-        yoy: null,
-        caveat: '从九月累计¥1.523万亿减H1≈¥7640亿推算'
+        dataGrade: 'A',
+        yoy: 98.6
     },
     {
         name: 'EA',
@@ -1259,14 +1268,13 @@ const quarterlyRevenueComparison = [
     },
     {
         name: '卡普空(DC)',
-        revenue: 327, // Q3推算: 九月DC ¥734亿, H1约¥245亿 → Q3≈¥489亿 / 149.5 ≈ $327M
+        revenue: 13064, // FY2026全年集团净销售 ¥1953亿 / 149.5
         currency: 'USD',
-        period: 'FY25 Q3 (10-12月)',
-        note: 'Q3 DC≈¥489亿≈$3.27亿(怪猎荒野2月才发售,Q3无贡献)',
+        period: 'FY26全年 (2025年4月-2026年3月)',
+        note: 'DC全年¥1.442万亿≈$9.65亿;集团¥1953亿(+2.8%创历史新高)',
         color: '#003C71',
-        dataGrade: 'B',
-        yoy: null,
-        caveat: '从九月累计DC ¥734亿减H1推算;怪猎荒野Q4才发售'
+        dataGrade: 'A',
+        yoy: 2.8
     },
     {
         name: '万代南梦宫(DE)',
@@ -1333,14 +1341,14 @@ const fullYearRevenueComparison = [
     },
     {
         name: '索尼(G&NS)',
-        revenue: 32052, // Q3单季$80.1亿×4=约$320亿(年化,含旺季偏高)
+        revenue: 31338, // FY2026全年 G&NS ¥4685.7亿 / 149.5
         currency: 'USD',
-        period: 'FY25年化(估)',
-        note: 'G&NS Q3 ¥1.198万亿×4≈$320亿(年化估算,含旺季偏高)',
+        period: 'FY26全年(已发布)',
+        note: 'G&NS全年¥4685.7亿≈$31.3亿,营业利润创纪录¥463.3亿(≈$3.1B)',
         color: '#003087',
-        dataGrade: 'C',
-        yoy: null,
-        caveat: '仅Q3数据年化,实际全年数据需等FY25全年报(2026/05)'
+        dataGrade: 'A',
+        yoy: 0,
+        caveat: 'FY26全年已发布,基本持平YoY但营业利润创历史纪录,Bungie减值影响已体现'
     },
     {
         name: '微软(Gaming)',
@@ -1365,14 +1373,14 @@ const fullYearRevenueComparison = [
     },
     {
         name: '任天堂',
-        revenue: 10187, // 九月¥1.523万亿/149.5 (九月累计,全年需等05月)
+        revenue: 14986, // FY2026全年净销售 ¥2.2395万亿 / 149.5
         currency: 'USD',
-        period: 'FY26九月累计',
-        note: '九月累计¥1.523万亿≈$101.9亿(全年待FY26全年报)',
+        period: 'FY26全年(已发布)',
+        note: '全年净销售¥2.24万亿(+98.6%)≈$15.0亿创历史性突破,Switch 2超级周期',
         color: '#E60012',
-        dataGrade: 'B',
-        yoy: 30.7,
-        caveat: '仅九个月累计,全年将于2026/05/08公布'
+        dataGrade: 'A',
+        yoy: 98.6,
+        breakdown: 'Switch 2 1986万台 / 马趴1470万套 / 软件1.8562亿套 / 数字占比57.9%'
     },
     {
         name: 'EA',
@@ -1418,14 +1426,14 @@ const fullYearRevenueComparison = [
     },
     {
         name: '卡普空',
-        revenue: 8528, // 全年预期¥1900亿→DC约¥1275亿
+        revenue: 13064, // FY2026全年集团净销售 ¥1953亿 / 149.5
         currency: 'USD',
-        period: 'FY25全年指引',
-        note: 'FY25全年净销售指引¥1900亿,DC约¥1275亿≈$85.3亿',
+        period: 'FY26全年(已发布)',
+        note: '集团净销售¥1953亿(+2.8%创历史新高),营业利润¥752亿(+3.0%),利润率38.5%',
         color: '#003C71',
-        dataGrade: 'B',
-        yoy: 12,
-        caveat: '基于管理层全年指引;怪猎荒野推动破纪录财年'
+        dataGrade: 'A',
+        yoy: 2.8,
+        breakdown: 'DC净销售¥1442亿 / 怪猎荒野1100万 / RE安魂曲691万 / 数字占比93%'
     },
     {
         name: 'Krafton',
