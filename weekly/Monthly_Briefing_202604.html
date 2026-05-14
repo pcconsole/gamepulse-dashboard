@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>端主行业月报 · 2026年4月</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4f6f9;
+    --ink: #1e3a5f;
+    --ink-2: #2c4a6e;
+    --ink-dim: #4a5c6e;
+    --ink-ghost: #7b8a99;
+    --red: #c85a4a;
+    --red-bg: #f5e0db;
+    --red-dim: #a0483b;
+    --gold: #8b6914;
+    --gold-bg: #ede4cf;
+    --green: #3d6b57;
+    --green-bg: #dde7e0;
+    --blue: #0055a5;
+    --blue-bg: #e0ecf7;
+    --surface: #ffffff;
+    --surface-2: #eef1f5;
+    --rule: #d5dce3;
+    --rule-dim: #e5e9ee;
+    --xbox: #107c41;
+    --ps: #0055a5;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: #c8ced6;
+    font-family: 'Microsoft YaHei', '微软雅黑', -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  .page {
+    width: 430px;
+    background: var(--bg);
+    color: var(--ink);
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  /* ======== Hero Header ======== */
+  .hero {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2c4a6e 100%);
+    color: white;
+    padding: 26px 22px 28px;
+    position: relative;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--red) 0%, var(--gold) 100%);
+  }
+  .hero .brand {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.32em;
+    color: #ff8b76;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .hero h1 {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  .hero .sub {
+    font-size: 14px;
+    color: rgba(255,255,255,0.82);
+    margin-top: 10px;
+    letter-spacing: 0.02em;
+    line-height: 1.6;
+  }
+  .hero .meta {
+    display: flex;
+    gap: 20px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.18);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: rgba(255,255,255,0.75);
+    letter-spacing: 0.1em;
+  }
+  .hero .meta strong { color: white; font-weight: 700; font-size: 12px; }
+
+  /* ======== Section (W17 identical) ======== */
+  .section { padding: 28px 20px 22px; }
+  .section + .section { border-top: 10px solid #e2e7ed; }
+
+  .sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 3px solid var(--ink);
+    position: relative;
+  }
+  .sec-head::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: -3px;
+    width: 60px; height: 3px;
+    background: var(--red);
+  }
+  .sec-head .num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--red);
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+  }
+  .sec-head .title {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--ink);
+    flex: 1;
+    line-height: 1.25;
+    letter-spacing: -0.005em;
+  }
+  .sec-head .title em {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--red);
+    font-style: normal;
+    margin-top: 4px;
+    letter-spacing: 0.02em;
+  }
+  .sec-head .badge {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    color: #fff;
+    background: var(--red);
+    padding: 4px 9px;
+    border-radius: 3px;
+    font-weight: 700;
+    align-self: flex-start;
+    margin-top: 4px;
+  }
+
+  .lead {
+    font-size: 14px;
+    color: var(--ink-dim);
+    line-height: 1.65;
+    margin-bottom: 18px;
+  }
+  .lead strong { color: var(--ink); }
+
+  /* Key Conclusion — 核心结论高亮卡 */
+  .key-conclusion {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.7;
+    color: var(--ink);
+    padding: 12px 16px;
+    margin-bottom: 18px;
+    background: linear-gradient(135deg, #fef5f2 0%, #fdf0ed 100%);
+    border: 1px solid #f0c8be;
+    border-left: 5px solid var(--red);
+    border-radius: 6px;
+  }
+  .key-conclusion strong { color: var(--red); }
+
+  /* ======== Platform Comparison Table ======== */
+  .vs-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 0 2px;
+  }
+  .vs-header .vs-h {
+    padding: 10px 14px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .vs-header .vs-h.xbox { background: #107c41; color: #fff; }
+  .vs-header .vs-h.ps { background: #0055a5; color: #fff; }
+  .vs-header .vs-h .dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.6); }
+
+  .vs-cat {
+    padding: 10px 14px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    background: linear-gradient(to right, #eef2f7, #f5f7fa);
+    border-top: 2px solid var(--rule);
+    border-bottom: 1px solid var(--rule-dim);
+    margin-top: 0;
+  }
+
+  .vs-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid var(--rule-dim);
+    min-height: 1px;
+  }
+  .vs-row:last-child { border-bottom: none; }
+  .vs-cell {
+    padding: 10px 14px;
+    font-size: 12.5px;
+    line-height: 1.7;
+    color: var(--ink-dim);
+    position: relative;
+  }
+  .vs-cell strong { color: var(--ink); }
+  .vs-cell.xbox { border-left: 3px solid #107c41; background: #f6fbf8; }
+  .vs-cell.ps { border-left: 3px solid #0055a5; background: #f5f8fc; }
+  .vs-cell .d {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-ghost);
+    font-weight: 700;
+  }
+  .vs-cell .tg {
+    display: inline-block;
+    font-size: 9.5px;
+    padding: 2px 5px;
+    border-radius: 2px;
+    font-weight: 700;
+    margin: 0 2px;
+    vertical-align: middle;
+  }
+
+  /* 独立事件行 - 两行结构 */
+  .ev-line {
+    padding: 7px 0;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: var(--ink-dim);
+    border-bottom: 1px dashed rgba(0,0,0,0.06);
+  }
+  .ev-line:last-child { border-bottom: 0; }
+  .ev-line:first-child { padding-top: 0; }
+  .ev-line strong { color: var(--ink); }
+  .ev-line .ev-head {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 2px;
+  }
+  .ev-line .ev-body {
+    font-size: 12px;
+    line-height: 1.55;
+    padding-left: 0;
+  }
+  .tg-p { background: #fef3c7; color: #92400e; }
+  .tg-c { background: #dbeafe; color: #1e40af; }
+  .tg-h { background: #d1fae5; color: #065f46; }
+  .tg-o { background: #fee2e2; color: #991b1b; }
+
+  /* Ref Box */
+  .ref-box {
+    background: #fefce8;
+    border: 1px solid #eab308;
+    border-radius: 4px;
+    padding: 8px 10px;
+    margin: 0 0 6px;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .ref-box .ref-label {
+    font-weight: 700;
+    color: var(--gold);
+    font-size: 10px;
+    margin-bottom: 4px;
+    letter-spacing: 0.03em;
+  }
+  .ref-box .ref-item { color: var(--ink-dim); padding: 1px 0; }
+  .ref-box .ref-item strong { color: var(--ink); }
+  .ref-box .ref-date {
+    font-weight: 700;
+    color: var(--ink);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+  }
+
+  /* VS Wrapper */
+  .vs-wrap {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 8px 0 16px;
+    box-shadow: 0 1px 6px rgba(30,58,95,0.07);
+  }
+
+  /* ======== Verdict ======== */
+  .verdict {
+    padding: 18px 20px 14px;
+    margin: 16px 0;
+    border-radius: 6px;
+    border-left: 4px solid var(--ink);
+    background: var(--surface);
+    color: var(--ink-dim);
+    box-shadow: 0 1px 4px rgba(30,58,95,0.06);
+  }
+  .verdict .v-title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--red);
+    font-weight: 800;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px dashed var(--rule);
+    text-transform: uppercase;
+  }
+  .verdict p {
+    font-size: 13.5px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+  }
+  .verdict p:last-child { margin-bottom: 0; }
+  .verdict strong { color: var(--ink); }
+  .verdict em { color: var(--red); font-style: normal; font-weight: 700; }
+
+  /* ======== Headline Card ======== */
+  .headline-card {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2c4a6e 100%);
+    color: #fff;
+    padding: 22px;
+    border-radius: 8px;
+    margin: 6px 0 18px;
+  }
+  .headline-card .hl-date {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    background: var(--gold);
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 3px;
+    margin-bottom: 12px;
+    letter-spacing: 0.08em;
+  }
+  .headline-card .hl-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: rgba(255,255,255,0.55);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .headline-card h3 {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1.35;
+    margin-bottom: 12px;
+    color: #ffffff;
+  }
+  .headline-card .hl-sub {
+    font-size: 14px;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.7;
+  }
+  .headline-card .hl-sub strong { color: #fff; }
+
+  /* ======== Priority Grid ======== */
+  .pri-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 14px 0; }
+  .pri-card {
+    padding: 14px;
+    border-radius: 6px;
+    border: 1px solid var(--rule);
+    background: var(--surface);
+    box-shadow: 0 1px 3px rgba(30,58,95,0.04);
+  }
+  .pri-card .pri-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--red);
+    line-height: 1;
+    margin-bottom: 5px;
+  }
+  .pri-card .pri-name { font-size: 14px; font-weight: 800; color: var(--ink); margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--rule-dim); }
+  .pri-card .pri-list { list-style: none; padding: 0; margin: 0; }
+  .pri-card .pri-list li {
+    font-size: 12px;
+    color: var(--ink-dim);
+    line-height: 1.6;
+    padding: 3px 0 3px 12px;
+    position: relative;
+  }
+  .pri-card .pri-list li::before {
+    content: '';
+    position: absolute;
+    left: 2px; top: 10px;
+    width: 4px; height: 4px;
+    background: var(--red);
+    border-radius: 50%;
+  }
+  .pri-card .pri-list li strong { color: var(--ink); }
+  .pri-card .pri-list li.warn { color: var(--red); font-size: 11px; font-weight: 600; margin-top: 4px; }
+  .pri-card .pri-list li.warn::before { display: none; }
+
+  /* ======== Causal Banner ======== */
+  .cb {
+    background: var(--surface);
+    padding: 15px 17px 13px 19px;
+    margin: 20px 0 12px;
+    position: relative;
+    border-left: 5px solid var(--ink);
+    border-top: 2px solid var(--ink);
+    box-shadow: 0 2px 6px rgba(30,58,95,0.08);
+  }
+  .cb .cb-tag {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    color: #ffffff;
+    background: var(--red);
+    font-weight: 700;
+    padding: 3px 10px;
+    margin-bottom: 9px;
+  }
+  .cb h4 {
+    font-size: 17px;
+    font-weight: 900;
+    line-height: 1.35;
+    color: var(--ink);
+    margin: 0;
+  }
+  .cb h4 em { color: var(--red); font-style: normal; border-bottom: 2px solid var(--red); padding-bottom: 1px; }
+
+  /* ======== Root Cause Card ======== */
+  .root-cause {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2c4a6e 100%);
+    color: #fff;
+    padding: 16px 18px;
+    border-radius: 6px;
+    margin: 10px 0 8px;
+    line-height: 1.6;
+  }
+  .root-cause .rc-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    color: rgba(255,255,255,0.55);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .root-cause .rc-title { font-size: 14.5px; font-weight: 700; }
+  .root-cause .rc-data { font-size: 12.5px; color: rgba(255,255,255,0.75); margin-top: 8px; }
+  .root-cause .rc-data .neg { color: #ff8080; font-weight: 700; }
+
+  /* Five Dimensions Grid */
+  .dim-arrow {
+    text-align: center;
+    color: var(--red);
+    font-size: 13px;
+    margin: 8px 0;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+  }
+  .dim-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 8px 0 16px; }
+  .dim-card {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 12px 13px;
+    border-top: 3px solid var(--red);
+  }
+  .dim-card.span2 { grid-column: 1 / 3; }
+  .dim-card .dim-icon { font-size: 11.5px; font-weight: 700; color: var(--red); margin-bottom: 4px; }
+  .dim-card .dim-name { font-size: 13.5px; font-weight: 800; color: var(--ink); margin-bottom: 6px; padding-bottom: 5px; border-bottom: 1px solid var(--rule-dim); }
+  .dim-card .dim-detail { font-size: 12px; color: var(--ink-dim); line-height: 1.65; }
+  .dim-card .dim-detail strong { color: var(--ink); }
+  .dim-card .dim-list { list-style: none; padding: 0; margin: 0; }
+  .dim-card .dim-list li {
+    font-size: 12px;
+    color: var(--ink-dim);
+    line-height: 1.55;
+    padding: 2px 0;
+  }
+  .dim-card .dim-list li strong { color: var(--ink); font-weight: 700; }
+
+  /* ======== Insight ======== */
+  .insight {
+    padding: 18px 20px 14px;
+    margin: 16px 0;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #1e3a5f 0%, #2c4a6e 100%);
+    color: #fff;
+  }
+  .insight .il {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    color: rgba(255,184,150,0.85);
+    font-weight: 700;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px dashed rgba(255,255,255,0.15);
+  }
+  .insight p { font-size: 13.5px; line-height: 1.8; margin-bottom: 10px; color: rgba(255,255,255,0.88); }
+  .insight p:last-child { margin-bottom: 0; }
+  .insight .insight-lead { font-size: 14.5px; color: #fff; }
+  .insight em { color: #ffb896; font-style: normal; font-weight: 700; }
+  .insight strong { color: #fff; }
+
+  /* ======== Opportunity/Risk ======== */
+  .opp-risk {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin: 14px 0;
+  }
+  .opp-risk .or-block {
+    padding: 12px 14px;
+    background: var(--surface);
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--ink-dim);
+    border-left: 3px solid var(--ink-ghost);
+  }
+  .opp-risk .or-block:first-child { border-left-color: var(--green); background: #f3faf5; }
+  .opp-risk .or-block:last-child { border-left-color: var(--red); background: #fef5f2; }
+  .opp-risk .or-label {
+    display: inline-block;
+    font-weight: 800;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-right: 6px;
+  }
+  .opp-risk .or-label.opp { color: #fff; background: var(--green); }
+  .opp-risk .or-label.risk { color: #fff; background: var(--red); }
+
+  /* ======== Tables ======== */
+  .stbl { width: 100%; font-size: 13px; border-collapse: collapse; margin: 10px 0; background: var(--surface); border-radius: 6px; overflow: hidden; box-shadow: 0 1px 4px rgba(30,58,95,0.06); table-layout: fixed; }
+  .stbl th {
+    text-align: left;
+    padding: 10px 8px;
+    border-bottom: 2px solid var(--ink);
+    font-size: 10.5px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+    background: var(--ink);
+    text-transform: uppercase;
+  }
+  .stbl td {
+    padding: 9px 8px;
+    border-bottom: 1px solid #eef0f4;
+    line-height: 1.55;
+    font-size: 12px;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+  .stbl tr:nth-child(even) td { background: #fafbfc; }
+  .stbl tr:last-child td { border-bottom: 0; }
+  .stbl tr:hover td { background: #fff9f5; }
+  .stbl .num { text-align: right; font-family: 'IBM Plex Mono', monospace; font-weight: 700; white-space: nowrap; }
+  .stbl .hl-row td { background: var(--red-bg) !important; font-weight: 600; }
+  .stbl .hl-row td strong { color: var(--red-dim); }
+
+  /* Country flag badges */
+  .flag {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    font-weight: 800;
+    padding: 1px 4px;
+    border-radius: 2px;
+    margin-left: 4px;
+    letter-spacing: 0.03em;
+    vertical-align: middle;
+    line-height: 1.3;
+  }
+  .flag.cn { background: #fff1f0; color: #cf1322; border: 1px solid #ffa39e; }
+  .flag.us { background: #e6f4ff; color: #1d39c4; border: 1px solid #adc6ff; }
+  .flag.kr { background: #f9f0ff; color: #531dab; border: 1px solid #d3adf7; }
+  .flag.jp { background: #fff2e8; color: #d4380d; border: 1px solid #ffbb96; }
+  .flag.gb { background: #e6fffb; color: #006d75; border: 1px solid #87e8de; }
+  .flag.sa { background: #f6ffed; color: #389e0d; border: 1px solid #b7eb8f; }
+
+  /* ======== Trend Box ======== */
+  .trend {
+    padding: 16px 18px;
+    margin: 16px 0;
+    border-radius: 6px;
+    border-left: 4px solid var(--gold);
+    background: var(--gold-bg);
+    font-size: 13px;
+    line-height: 1.75;
+    color: var(--ink-dim);
+  }
+  .trend .tl {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    margin-bottom: 6px;
+  }
+  .trend strong { color: var(--ink); }
+
+  /* Note */
+  .note-sm {
+    font-size: 11.5px;
+    color: var(--ink-dim);
+    line-height: 1.6;
+    margin: 8px 0;
+    padding: 10px 12px;
+    background: var(--surface);
+    border-radius: 4px;
+    border-left: 3px solid var(--ink-ghost);
+  }
+  .note-sm strong { color: var(--ink); }
+
+  /* Paragraph helper */
+  .body-text {
+    font-size: 13px;
+    color: var(--ink-dim);
+    line-height: 1.7;
+    margin: 8px 0 12px;
+    padding: 0 2px;
+  }
+  .body-text strong { color: var(--ink); }
+
+  /* Footer */
+  .footer {
+    padding: 20px 20px 26px;
+    background: var(--surface-2);
+    text-align: center;
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--ink-ghost);
+  }
+  .footer .logo { font-size: 14px; font-weight: 800; letter-spacing: 0.2em; color: var(--ink-dim); margin-bottom: 10px; }
+  .footer .src { font-size: 10px; line-height: 1.8; letter-spacing: 0.04em; max-width: 360px; margin: 0 auto; }
+  .footer .src-date { font-size: 10px; letter-spacing: 0.12em; margin-top: 8px; color: var(--red); font-weight: 700; }
+
+  /* Export Toolbar */
+  #export-toolbar { position: fixed; top: 10px; right: 10px; z-index: 9999; font-family: 'Microsoft YaHei', sans-serif; user-select: none; }
+  #exp-main { background: #c85a4a; color: #fff; border: 0; padding: 6px 12px; border-radius: 4px; font-size: 11px; font-weight: 700; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.2); }
+  #exp-main:hover { background: #a84534; }
+  #exp-panel { display: none; margin-top: 6px; background: rgba(30,58,95,.96); padding: 8px; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,.25); }
+  #exp-panel.open { display: block; }
+  .exp-btn { background: transparent; color: #fff; border: 1px solid rgba(255,184,150,.5); padding: 5px 8px; border-radius: 3px; font-size: 10px; font-weight: 700; cursor: pointer; font-family: 'IBM Plex Mono', monospace; display: block; width: 100%; margin-bottom: 4px; text-align: left; }
+  .exp-btn:last-child { margin-bottom: 0; }
+  .exp-btn:hover { background: #c85a4a; border-color: #c85a4a; }
+  #exp-status { font-size: 9px; color: #ffb896; margin-top: 6px; min-height: 11px; }
+  @media print { #export-toolbar { display: none !important; } }
+</style>
+</head>
+<body>
+<div id="export-toolbar"><button id="exp-main">📥 导出长图</button><div id="exp-panel"><button data-scale="2" class="exp-btn">@2x · 860px</button><button data-scale="3" class="exp-btn">@3x · 1290px（推荐）</button><button data-scale="4" class="exp-btn">@4x · 1720px</button><div id="exp-status"></div></div></div>
+
+<div class="page">
+
+  <!-- ======== Hero ======== -->
+  <div class="hero">
+    <div class="brand">GAMEPULSE · MONTHLY BRIEFING</div>
+    <h1>端主行业月报<br>2026年4月</h1>
+    <div class="sub">Xbox 系统性重组 · PS5 涨价收缩 · 3A 产业收缩与资本回暖</div>
+    <div class="meta">
+      <span><strong>2026.04.01 – 04.30</strong></span>
+      <span><strong>102</strong> 条新闻</span>
+      <span><strong>227</strong> 条累计</span>
+    </div>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- PART 01                                                          -->
+  <!-- ================================================================ -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="num">01</div>
+      <div class="title">两大平台4月策略&动作对比<em>Xbox vs PlayStation · 定价/内容/硬件/组织</em></div>
+    </div>
+    <div class="key-conclusion">
+      <strong>Xbox</strong> 系统性推翻前任路线、全面收缩重建；<strong>PlayStation</strong> 选择涨价透支 PS5 末期、为 PS6 蓄水。
+    </div>
+
+    <div class="vs-wrap">
+      <!-- Header: 平台名只出现一次 -->
+      <div class="vs-header">
+        <div class="vs-h xbox"><span class="dot"></span>XBOX</div>
+        <div class="vs-h ps"><span class="dot"></span>PLAYSTATION</div>
+      </div>
+
+      <!-- 定价 & 订阅 -->
+      <div class="vs-cat">💵 定价 & 订阅</div>
+      <div class="vs-row">
+        <div class="vs-cell xbox">
+          <div class="ref-box">
+            <div class="ref-label">📌 上周已分析</div>
+            <div class="ref-item"><span class="ref-date">4/21</span> GP降价$29.99→$22.99 + COD拆出首日入库</div>
+          </div>
+          <div class="ev-line"><div class="ev-head"><span class="d">4/14</span> <span class="tg tg-p">备忘录</span></div><div class="ev-body">Sharma承认GP"太贵"</div></div>
+          <div class="ev-line"><div class="ev-head"><span class="d">4/26</span> <span class="tg tg-p">爆料·未实锤</span></div><div class="ev-body">GP Starter Edition（低价入门订阅层）+Discord Nitro捆绑</div></div>
+        </div>
+        <div class="vs-cell ps">
+          <div class="ev-line"><div class="ev-head"><span class="d">4/2</span> <span class="tg tg-p">持续涨价</span></div><div class="ev-body">PS5第5次全球涨价生效（美/欧/日/亚太）标准版+$100，Pro+$150</div></div>
+          <div class="ev-line"><div class="ev-head"><span class="d">4/15</span> <span class="tg tg-p">市场效应</span></div><div class="ev-body">涨价前美国销量翻倍抢购</div></div>
+          <div class="ev-line"><div class="ev-head"><span class="d">4/28</span> <span class="tg tg-p">持续涨价</span></div><div class="ev-body">东南亚+韩国继续涨·韩数字版<strong>+43%</strong></div></div>
+        </div>
+      </div>
+
+      <!-- 内容 & 独占 -->
+      <div class="vs-cat">🎮 内容 & 独占</div>
+      <div class="vs-row">
+        <div class="vs-cell xbox">
+          <div class="ev-line"><div class="ev-head"><span class="d">4/3</span> <span class="tg tg-c">多平台落地</span></div><div class="ev-body">Starfield登PS5（独占2.5年结束），首周仅<strong>14万份</strong></div></div>
+          <div class="ev-line"><div class="ev-head"><span class="d">4/11</span> <span class="tg tg-c">独占讨论</span></div><div class="ev-body">内部"重大讨论"重评独占策略</div></div>
+          <div class="ev-line"><div class="ev-head"><span class="d">4/25</span> <span class="tg tg-c">战略优先级</span></div><div class="ev-body"><strong>重评独占+windowing+AI</strong></div></div>
+        </div>
+        <div class="vs-cell ps">
+          <div class="ev-line"><div class="ev-head"><span class="d">4/10</span> <span class="tg tg-c">GaaS预算</span></div><div class="ev-body">Marathon预算曝光<strong>$2-2.5亿</strong></div></div>
+          <div class="ev-line"><div class="ev-head"><span class="d">4/4</span> <span class="tg tg-c">PC收入</span></div><div class="ev-body">PS PC三年$3亿（仅占0.7%）</div></div>
+          <div class="ev-line"><div class="ev-head"><span class="d">4/26</span> <span class="tg tg-c">PC策略</span></div><div class="ev-body">前总裁吉田：不支持PC同发</div></div>
+        </div>
+      </div>
+
+      <!-- 硬件 & 次世代 -->
+      <div class="vs-cat">🖥️ 硬件 & 次世代</div>
+      <div class="vs-row">
+        <div class="vs-cell xbox">
+          <div class="ev-line"><div class="ev-head"><span class="d">4/21</span> <span class="tg tg-h">硬件架构</span></div><div class="ev-body">Helix GPU零定制·标准PC架构</div></div>
+          <div class="ev-line"><div class="ev-head"><span class="d">4/22</span> <span class="tg tg-h">定价曝光</span></div><div class="ev-body">Helix售价<strong>$1200-1500</strong>，对标2-3千PC</div></div>
+          <div class="ev-line"><div class="ev-head"><span class="d">4/28</span> <span class="tg tg-h">成本压力</span></div><div class="ev-body">CEO承认内存影响Helix定价</div></div>
+        </div>
+        <div class="vs-cell ps">
+          <div class="ev-line"><div class="ev-head"><span class="d">4/16</span> <span class="tg tg-h">次世代泄露</span></div><div class="ev-body">PS6+掌机Canis·RDNA5·全兼容</div></div>
+          <div class="ev-line"><div class="ev-head"><span class="d">4/11</span> <span class="tg tg-h">BOM成本</span></div><div class="ev-body">PS6 BOM $743，预计售价<strong>$600-800</strong></div></div>
+        </div>
+      </div>
+
+      <!-- 组织 & 品牌 -->
+      <div class="vs-cat">🏢 组织 & 品牌</div>
+      <div class="vs-row">
+        <div class="vs-cell xbox">
+          <div class="ref-box">
+            <div class="ref-label">📌 PART 02 展开</div>
+            <div class="ref-item"><span class="ref-date">4/25</span> <strong>"Microsoft Gaming"→回归Xbox</strong></div>
+            <div class="ref-item"><span class="ref-date">4/25</span> 北极星 MAU→<strong>DAU</strong></div>
+          </div>
+          <div class="ev-line"><div class="ev-head"><span class="d">4/22</span> <span class="tg tg-o">传裁员</span></div><div class="ev-body">裁员15%(~3000人)</div></div>
+          <div class="ev-line" style="background:#fef2f0;border:1px solid #f0c8be;border-radius:4px;padding:7px 8px;margin:4px 0;"><div class="ev-head"><span class="d">4/29</span> <span class="tg" style="background:#c85a4a;color:#fff;">Q3财报</span></div><div class="ev-body">Gaming <strong>-7%</strong>·硬件<strong>-33%</strong>·连续3季度30%+下滑</div></div>
+        </div>
+        <div class="vs-cell ps">
+          <div class="ev-line"><div class="ev-head"><span class="d">4/2</span> <span class="tg tg-o">AI收购</span></div><div class="ev-body">收购AI公司Cinemersive Labs</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="verdict">
+      <div class="v-title">战略诊断</div>
+      <p><strong style="color:var(--xbox)">Xbox</strong>：Sharma 60天系统性推翻 Spencer 路线——降价 → 拆COD → 品牌回归 → DAU转向 → 传裁员。<em>方向从"规模换利润"转向"日活驱动平台"</em>。</p>
+      <p><strong style="color:var(--ps)">PlayStation</strong>：选择"<em>逐区涨价榨取PS5末期收入</em>"为PS6蓄水，同时收缩PC策略、保守独占底线。</p>
+      <p><strong>值得关注</strong>：次世代定价分化——PS6 <em>$600-800</em> vs Helix <em>$1200-1500</em>，"主机市场"概念正在分裂。</p>
+    </div>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- PART 02                                                          -->
+  <!-- ================================================================ -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="num">02</div>
+      <div class="title">Xbox "We Are Xbox" 战略重构宣言<em>Sharma新政60天 · 四大优先级 · DAU北极星</em></div>
+      <div class="badge">DEEP DIVE</div>
+    </div>
+
+    <div class="headline-card">
+      <div class="hl-date">2026 · 04 · 25</div>
+      <div class="hl-tag">头条事件 · HEADLINE</div>
+      <h3>Xbox CEO Asha Sharma 与 CCO Matt Booty 联署内部信 "We Are Xbox"</h3>
+      <div class="hl-sub">宣布<strong>"Microsoft Gaming"品牌更名回归"Xbox"</strong>，公布四大战略优先级（硬件/内容/体验/服务），将<strong>DAU（日活跃玩家）</strong>定为新北极星指标，确认将<strong>重新评估独占、发行窗口期和AI策略</strong>。这是Xbox自2013年以来最重大的战略重构宣言。</div>
+    </div>
+
+    <div class="cb">
+      <div class="cb-tag">四大战略优先级</div>
+      <h4>备忘录原文：<em>"Our new north star will be daily active players"</em></h4>
+    </div>
+    <p class="body-text">Sharma出身Meta，DAU是社交平台核心指标。从MAU改为DAU = Xbox要"每天都来"而非"一月一次"。Discord捆绑和Starter Edition都服务于DAU。</p>
+
+    <div class="pri-grid">
+      <div class="pri-card">
+        <div class="pri-num">①</div>
+        <div class="pri-name">Hardware 硬件</div>
+        <ul class="pri-list">
+          <li><strong>稳定Gen9</strong>为健康基础</li>
+          <li><strong>Helix性能领先</strong>兼容主机+PC</li>
+          <li>GPU零定制·$1200+</li>
+        </ul>
+      </div>
+      <div class="pri-card">
+        <div class="pri-num">②</div>
+        <div class="pri-name">Content 内容</div>
+        <ul class="pri-list">
+          <li><strong>扩展IP</strong>+第三方深度合作</li>
+          <li>重评独占/windowing/AI</li>
+          <li class="warn">▲ 均"尚未定论"</li>
+        </ul>
+      </div>
+      <div class="pri-card">
+        <div class="pri-num">③</div>
+        <div class="pri-name">Experience 体验</div>
+        <ul class="pri-list">
+          <li>搜索/发现/社交/个性化</li>
+          <li><strong>"too fragmented"</strong></li>
+          <li>开发者需better tools</li>
+        </ul>
+      </div>
+      <div class="pri-card">
+        <div class="pri-num">④</div>
+        <div class="pri-name">Services 服务</div>
+        <ul class="pri-list">
+          <li><strong>GP可持续性</strong></li>
+          <li>降价+拆COD+分层投放</li>
+          <li>Starter Ed.+Discord拉新</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cb">
+      <div class="cb-tag">为什么要改？</div>
+      <h4>Sharma 接手时，Xbox <em>到底烂到什么程度</em></h4>
+    </div>
+
+    <div class="root-cause">
+      <div class="rc-tag">根本战略失误</div>
+      <div class="rc-title">Phil Spencer"规模换利润"赌注：$68.7B 收购动视 + 全跨平台 + All-in-GP</div>
+      <div class="rc-data">FY26 Q3（4/29发布）证伪：Gaming <span class="neg">-7%</span>（$5.34B）、硬件 <span class="neg">-33%</span>、C&S <span class="neg">-5%</span></div>
+      <div class="rc-data">Xbox硬件收入已<strong>连续3个季度跌幅超30%</strong>（Q1 -29% / Q2 -32% / Q3 -33%），CEO Nadella称"recommitting to our core fans"</div>
+    </div>
+
+    <div class="dim-arrow">▼ 导致五个维度同时恶化（相互加剧但非单链因果）</div>
+
+    <div class="dim-grid">
+      <div class="dim-card span2">
+        <div class="dim-icon">🖥️ 硬件（最大问题）</div>
+        <div class="dim-name">市场份额持续萎缩 · 连续3季度跌幅30%+</div>
+        <div class="dim-detail">全跨平台<strong>弱化购买动机</strong> · Circana 3月美国硬件市场整体<strong>+69%</strong>但Xbox<strong>接近0增长</strong> · FY26三季度硬件收入：Q1 -29% / Q2 -32% / Q3 <strong>-33%</strong></div>
+      </div>
+      <div class="dim-card">
+        <div class="dim-icon">💰 订阅</div>
+        <div class="dim-name">GP 经济模型失灵</div>
+        <ul class="dim-list">
+          <li>COD入库<strong>蚕食$70买断</strong></li>
+          <li>$29.99涨价后<strong>增长停滞</strong></li>
+          <li>BO7销量<strong>腰斩</strong></li>
+        </ul>
+      </div>
+      <div class="dim-card">
+        <div class="dim-icon">🏷️ 品牌</div>
+        <div class="dim-name">认知模糊</div>
+        <ul class="dim-list">
+          <li><strong>"Microsoft Gaming"</strong></li>
+          <li>+ <strong>"This is an Xbox"</strong></li>
+          <li>核心用户困惑</li>
+        </ul>
+      </div>
+      <div class="dim-card">
+        <div class="dim-icon">⚙️ 平台</div>
+        <div class="dim-name">体验碎片化</div>
+        <ul class="dim-list">
+          <li>搜索/社交/个性化</li>
+          <li><strong>"too fragmented"</strong></li>
+          <li>开发者要求更好工具</li>
+        </ul>
+      </div>
+      <div class="dim-card">
+        <div class="dim-icon">🏢 组织</div>
+        <div class="dim-name">并购消化不良</div>
+        <ul class="dim-list">
+          <li><strong>$68.7B并购</strong>四套班子重叠</li>
+          <li>传裁员<strong>15%（~3000人）</strong></li>
+          <li>节省<strong>~$10亿/年</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="insight">
+      <div class="il">CORE INSIGHT · 核心洞察</div>
+      <p class="insight-lead"><strong>Sharma 的最终目标不是"让 Xbox 重新卖得好"，而是"让 Xbox 成为日活平台"。</strong></p>
+      <p>降价 / 拆COD / 品牌回归 / Discord 捆绑都是手段，<em>DAU 才是目的</em>。Xbox 的未来竞争对手不只是 PlayStation，而是 <em>Steam + Discord</em>——争夺"玩家每天打开哪个平台"。</p>
+    </div>
+
+    <div class="opp-risk">
+      <div class="or-block">
+        <span class="or-label opp">合作机会</span>
+        Xbox 重评独占 = 第三方议价提升 · ID@Xbox 门槛降低 · Helix $1200+ 留下中低端缺口
+      </div>
+      <div class="or-block">
+        <span class="or-label risk">风险信号</span>
+        15% 裁员 → 对接人变动 · 独占方向未定 → 跨平台预期收紧
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- PART 03                                                          -->
+  <!-- ================================================================ -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="num">03</div>
+      <div class="title">资本市场与产业收缩<em>西方裁员瘦身 · 中东资本入场 · 亚洲加速并购</em></div>
+    </div>
+    <div class="lead">据Drake Star《Q1 2026全球游戏行业报告》：Q1游戏M&A总额突破<strong>$1000亿</strong>创15个月新高，但裁员/解散同步加速。</div>
+
+    <div class="cb">
+      <div class="cb-tag">裁员 / 解散 / 预算砍半</div>
+      <h4>全球游戏产业持续<em>瘦身</em></h4>
+    </div>
+    <table class="stbl"><colgroup><col style="width:44px"><col style="width:35%"><col style="width:25%"><col style="width:22%"></colgroup><thead><tr><th>日期</th><th>公司</th><th>规模</th><th>性质</th></tr></thead><tbody>
+      <tr><td>4/10</td><td>明末·灵泽科技<span class="flag cn">CN</span></td><td>团队解散</td><td>主创出走↓</td></tr>
+      <tr><td>4/28</td><td>505收购明末IP<span class="flag cn">CN</span></td><td>3200万元</td><td>↑IP流失</td></tr>
+      <tr><td>4/15</td><td>迪士尼-Marvel<span class="flag us">US</span></td><td>1000+人</td><td>美术全裁</td></tr>
+      <tr><td>4/15</td><td>Embracer-水晶动力</td><td>预算砍50%</td><td>古墓承压</td></tr>
+      <tr class="hl-row"><td>4/22</td><td><strong>微软Xbox（传）</strong></td><td><strong>15%~3000人</strong></td><td>消化收购</td></tr>
+    </tbody></table>
+
+    <div class="cb">
+      <div class="cb-tag">并购 / 收购 / 投资</div>
+      <h4>资本<em>回暖</em></h4>
+    </div>
+    <table class="stbl"><colgroup><col style="width:52px"><col style="width:30%"><col><col style="width:78px"></colgroup><thead><tr><th>日期</th><th>买方</th><th>标的</th><th>金额</th></tr></thead><tbody>
+      <tr><td>4/1</td><td>Shift Up<span class="flag kr">KR</span></td><td>UNBOUND(三上真司)<span class="flag jp">JP</span></td><td>未披露</td></tr>
+      <tr><td>4/2</td><td>索尼互娱</td><td>Cinemersive Labs<span class="flag gb">GB</span></td><td>未披露</td></tr>
+      <tr><td>4/7</td><td>沙特EGDC<span class="flag sa">SA</span></td><td>卡普空→6.04%</td><td>$6.7亿</td></tr>
+      <tr><td>4/11</td><td>Epic-迪士尼</td><td>首款提取射击游戏</td><td>$15亿合作</td></tr>
+      <tr class="hl-row"><td>4/26</td><td>华纳+派拉蒙</td><td><strong>Skydance合并通过</strong></td><td><strong>$1100亿</strong></td></tr>
+    </tbody></table>
+
+    <div class="cb">
+      <div class="cb-tag">沙特PIF体系</div>
+      <h4>游戏行业布局·估算市值 <em>~$150-180亿</em></h4>
+    </div>
+    <!-- PIF 关系图 -->
+    <div style="background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:16px;margin:6px 0 10px;font-size:12px;line-height:1.5;">
+      <!-- 顶层 PIF -->
+      <div style="text-align:center;margin-bottom:0;">
+        <div style="display:inline-block;background:#1a5c2e;color:#fff;padding:8px 18px;border-radius:6px;font-size:14px;font-weight:900;letter-spacing:0.05em;box-shadow:0 2px 8px rgba(26,92,46,0.3);"><span class="flag sa" style="margin-right:6px;">SA</span>PIF 沙特主权基金</div>
+        <div style="color:var(--ink-dim);font-size:11px;margin-top:6px;font-weight:600;">最终出资方 · 游戏资产估值 ~$150-180亿</div>
+      </div>
+      <!-- 连接线 -->
+      <div style="display:flex;justify-content:center;margin:8px 0 4px;">
+        <div style="width:2px;height:20px;background:#1a5c2e;"></div>
+      </div>
+      <div style="display:flex;justify-content:center;align-items:flex-start;gap:0;">
+        <div style="width:calc(50% - 20px);height:2px;background:#1a5c2e;margin-top:0;"></div>
+        <div style="width:2px;height:2px;"></div>
+        <div style="width:calc(50% - 20px);height:2px;background:#1a5c2e;margin-top:0;"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:0;">
+        <div style="display:flex;justify-content:center;"><div style="width:2px;height:12px;background:#1a5c2e;"></div></div>
+        <div style="display:flex;justify-content:center;"><div style="width:2px;height:12px;background:#1a5c2e;"></div></div>
+      </div>
+      <!-- 子实体 -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+        <div style="background:#f0faf3;border:2px solid #52c41a;border-radius:6px;padding:10px;text-align:center;">
+          <div style="font-weight:900;color:#1a5c2e;font-size:13px;">EGDC</div>
+          <div style="font-size:10px;color:var(--ink-dim);margin-top:3px;font-weight:600;">沙特电竞开发公司</div>
+          <div style="font-size:10px;color:var(--ink-ghost);margin-top:2px;">隶属 MiSK 基金</div>
+          <div style="font-size:10px;color:var(--ink);margin-top:6px;padding-top:6px;border-top:1px solid #b7eb8f;font-weight:600;">任天堂8.6%($60亿)<br>卡普空6%($6.7亿)<br>Nexon ~$9亿</div>
+        </div>
+        <div style="background:#f0faf3;border:2px solid #52c41a;border-radius:6px;padding:10px;text-align:center;">
+          <div style="font-weight:900;color:#1a5c2e;font-size:13px;">Savvy Games</div>
+          <div style="font-size:10px;color:var(--ink-dim);margin-top:3px;font-weight:600;">2022成立 → 2024并入EGDC</div>
+          <div style="font-size:10px;color:var(--ink-ghost);margin-top:2px;">执行平台</div>
+          <div style="font-size:10px;color:var(--ink);margin-top:6px;padding-top:6px;border-top:1px solid #b7eb8f;font-weight:600;">沐瞳$60亿（控股）<br>Embracer $10亿+</div>
+        </div>
+      </div>
+      <!-- 关系说明 -->
+      <div style="margin-top:10px;padding-top:8px;border-top:1px dashed var(--rule);font-size:10px;color:var(--ink-ghost);text-align:center;">
+        PIF 100%控股 → EGDC/Savvy为执行平台 · 2024年Savvy整合并入EGDC · PIF统一审批投资决策
+      </div>
+    </div>
+    <table class="stbl"><colgroup><col style="width:26%"><col><col style="width:32%"><col style="width:20%"></colgroup><thead><tr><th>执行实体</th><th>标的</th><th>金额/持股</th><th>类型</th></tr></thead><tbody>
+      <tr><td>PIF→EGDC</td><td>任天堂</td><td>8.6% (~$60亿)</td><td>战略入股</td></tr>
+      <tr><td>PIF→EGDC</td><td>卡普空</td><td>6.04% / $6.7亿</td><td>第四大股东</td></tr>
+      <tr><td>PIF→Savvy</td><td>沐瞳(MLBB)</td><td>$60亿（传）</td><td>控股收购</td></tr>
+      <tr><td>PIF→Savvy</td><td>Embracer</td><td>$10亿+</td><td>战略投资</td></tr>
+      <tr><td>PIF→EGDC</td><td>Nexon</td><td>~$9亿</td><td>增持</td></tr>
+    </tbody></table>
+
+    <div class="trend">
+      <div class="tl">趋势判断 · WHAT IT MEANS</div>
+      <strong>资本与人才正在重新分配</strong>——沙特PIF体系以$150-180亿布局日韩IP，WB+派拉蒙$1100亿合并重塑好莱坞+游戏版图，西方3A工作室持续裁员/预算砍半。<strong>未来两年优质海外团队的收购/合作窗口打开</strong>，议价权向买方倾斜。
+    </div>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- PART 04                                                          -->
+  <!-- ================================================================ -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="num">04</div>
+      <div class="title">4月游戏销量全景表<em>12款游戏里程碑 · 按销量降序</em></div>
+    </div>
+    <div class="lead">新IP短周期爆款 vs 老IP长尾续作两极分化：</div>
+
+    <table class="stbl"><colgroup><col style="width:23%"><col style="width:19%"><col style="width:14%"><col><col style="width:14%"></colgroup><thead><tr><th>游戏</th><th>厂商</th><th class="num">销量</th><th>口径</th><th>用时</th></tr></thead><tbody>
+      <tr><td>战锤SM2</td><td>Saber+Focus</td><td class="num"><strong>1200万</strong></td><td>累计</td><td>19个月</td></tr>
+      <tr><td>光与影：远征33</td><td>Sandfall</td><td class="num"><strong>800万</strong></td><td>一周年累计</td><td>1年</td></tr>
+      <tr class="hl-row"><td><strong>生化危机：安魂曲</strong></td><td>Capcom</td><td class="num"><strong>700万</strong></td><td>累计·系列最快</td><td><strong>~55天</strong></td></tr>
+      <tr class="hl-row"><td><strong>杀戮尖塔2</strong></td><td>Mega Crit</td><td class="num"><strong>530万</strong></td><td>3月单月·$1.08亿</td><td><strong>~31天</strong></td></tr>
+      <tr><td>极限竞速FH5 PS5</td><td>Playground</td><td class="num">500万</td><td>PS5版累计</td><td>~1年</td></tr>
+      <tr class="hl-row"><td><strong>红色沙漠</strong></td><td>Pearl Abyss</td><td class="num"><strong>~500万</strong></td><td>CEO股东会</td><td><strong>~30天</strong></td></tr>
+      <tr class="hl-row"><td><strong>识质存在Pragmata</strong></td><td>Capcom</td><td class="num"><strong>100万</strong></td><td>2天</td><td><strong>2天★</strong></td></tr>
+      <tr class="hl-row"><td><strong>风启之旅Windrose</strong></td><td>Kraken Express</td><td class="num"><strong>100万</strong></td><td>6天(EA)</td><td><strong>6天★</strong></td></tr>
+      <tr><td>仁王3</td><td>光荣特库摩</td><td class="num">100万+</td><td>数周</td><td>~75天</td></tr>
+      <tr><td>FH6 Steam预售</td><td>Playground</td><td class="num">51万</td><td>预售·$3000万</td><td>预售期</td></tr>
+      <tr style="color:var(--red)"><td>星空Starfield PS5</td><td>Bethesda</td><td class="num">14万</td><td>首周</td><td>7天⚠️</td></tr>
+    </tbody></table>
+
+    <div class="trend">
+      <div class="tl">趋势判断 · WHAT IT MEANS</div>
+      Newzoo 4月报告：PC Top20之外收入占比 2022年48%→2025年<strong>56%</strong>。4月榜印证两极分化：
+      <ul style="margin:8px 0 0 14px;list-style:none;padding:0;">
+        <li style="padding:3px 0;font-size:12.5px;">✅ <strong>大作IP续作</strong>：生化700万(系列最快) / 杀戮尖塔530万($1.08亿)</li>
+        <li style="padding:3px 0;font-size:12.5px;">🚀 <strong>新IP爆发</strong>：红色沙漠500万(30天) / Pragmata 2天百万 / Windrose 6天百万</li>
+        <li style="padding:3px 0;font-size:12.5px;">⚠️ <strong>反面案例</strong>：Starfield PS5首周仅14万</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- PART 05                                                          -->
+  <!-- ================================================================ -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="num">05</div>
+      <div class="title">未来月份关注日历<em>5月至2027假期 · 关键节点</em></div>
+    </div>
+    <table class="stbl"><colgroup><col style="width:68px"><col><col style="width:40%"></colgroup><thead><tr><th>日期</th><th>事件</th><th>关注点</th></tr></thead><tbody>
+      <tr><td>4/30</td><td>Saros PS5独占发售</td><td>PS5末期独占大作</td></tr>
+      <tr><td>5/4</td><td>Steam Controller $99开售</td><td>Valve硬件生态</td></tr>
+      <tr class="hl-row"><td><strong>5/6?</strong></td><td><strong>Xbox裁员公告（传）</strong></td><td>规模/波及/对GP影响</td></tr>
+      <tr><td>5/19</td><td>极限竞速FH6正式发售</td><td>Xbox多平台+GP验证</td></tr>
+      <tr><td>6/7</td><td>Xbox Games Showcase+Gears E-Day</td><td>Sharma新政后首个大展</td></tr>
+      <tr><td>7/9</td><td>刺客信条：黑旗Resynced</td><td>育碧IP复兴验证</td></tr>
+      <tr><td>Q3-Q4</td><td>Fable/Halo CE/Gears E-Day</td><td>Xbox第一方兑现</td></tr>
+      <tr><td>2027假期</td><td>PS6 / Project Helix</td><td>次世代正面竞争</td></tr>
+    </tbody></table>
+  </div>
+
+  <!-- ======== Footer ======== -->
+  <div class="footer">
+    <div class="logo">GAMEPULSE · MONTHLY</div>
+    <div class="src">SOURCE · Xbox Wire · The Verge · GeekWire · Eurogamer · GamesIndustry · Circana · Kotaku · Alinea Analytics · Newzoo · Drake Star · Microsoft IR · SK Hynix IR</div>
+    <div class="src-date">2026.04.29 · M04 · DATA CUTOFF 04.28</div>
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+(function(){
+  const tb=document.getElementById('export-toolbar'),mb=document.getElementById('exp-main'),pn=document.getElementById('exp-panel'),st=document.getElementById('exp-status'),bs=document.querySelectorAll('.exp-btn'),pg=document.querySelector('.page');
+  mb.addEventListener('click',()=>pn.classList.toggle('open'));
+  document.addEventListener('click',e=>{if(!tb.contains(e.target))pn.classList.remove('open');});
+  function ss(t,err){st.textContent=t;st.style.color=err?'#ff8080':'#ffb896';}
+  function lk(l){bs.forEach(b=>b.disabled=l);mb.disabled=l;}
+  async function ex(s){
+    if(typeof html2canvas==='undefined'){ss('html2canvas未加载',true);return;}
+    lk(true);ss('渲染中…@'+s+'x');tb.style.visibility='hidden';
+    try{if(document.fonts&&document.fonts.ready)await document.fonts.ready;await new Promise(r=>setTimeout(r,200));
+    const c=await html2canvas(pg,{scale:s,backgroundColor:'#f4f6f9',useCORS:true,logging:false,width:pg.offsetWidth,height:pg.offsetHeight,windowWidth:pg.offsetWidth,windowHeight:pg.offsetHeight});
+    ss('生成PNG…');c.toBlob(b=>{if(!b){ss('失败',true);tb.style.visibility='visible';lk(false);return;}
+    const u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download='Monthly_Briefing_202604_'+s+'x.png';document.body.appendChild(a);a.click();document.body.removeChild(a);setTimeout(()=>URL.revokeObjectURL(u),1e3);ss('✓@'+s+'x');tb.style.visibility='visible';lk(false);},'image/png');
+    }catch(e){ss('失败:'+e.message,true);tb.style.visibility='visible';lk(false);}
+  }
+  bs.forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();ex(parseInt(b.dataset.scale,10));}));
+})();
+</script>
+</body>
+</html>
