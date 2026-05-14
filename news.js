@@ -1,8 +1,8 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-05-12T18:00:00Z
-// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1316)+web_search 14轮+新增14条id266-279)
+// 最后更新: 2026-05-14T18:00:00Z
+// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1323)+web_search 14轮+新增15条id280-294)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
@@ -460,6 +460,335 @@ const newsData = [
         "tdocMarking": "none",
         "analysis": "RTX 5070 12GB版本是英伟达缓解显存供应瓶颈的务实之举(What)。显存短缺是2025-2026年GPU市场的核心矛盾，24Gb GDDR7的量产优先保障了高端型号（5090/5080），中端型号（5070）被迫使用8GB显存的\"残血版\"；12GB版本的推出填补了中端市场的显存容量需求(Why)。对游戏本市场的意义：12GB显存意味着可以更好支持4K光追和DLSS 4多帧生成，对《黑神话》等新一代3A游戏的高分辨率需求更加友好——这是英伟达在AMD RDNA4竞争压力下的主动产品规格优化(So What)。显存供应紧张预计将在2026年下半年随新产能释放逐步缓解，届时RTX 5070全系供应将恢复正常，对618等促销节点的GPU装机需求有积极影响(What Next)。",
         "relatedNewsIds": [245]
+    },
+    {
+        "id": 280,
+        "title": "Xbox PC更新代码揭露\"Saluki\"项目：Game Pass或将正式进入中国市场",
+        "summary": "微软Xbox PC应用最新更新代码中发现代号\"Project Saluki\"（萨路基计划），描述为\"面向中国市场拓展Game Pass、Rewards和订阅档位\"。Windows Central报道该服务为中国市场定制，包含受限内容库和本地化订阅档位。此举呼应了Xbox CEO阿莎·夏尔马此前关于微软游戏\"无处不在\"的战略愿景，若落地将标志着Xbox生态首次正式进入中国游戏订阅市场。",
+        "source": "Windows Central",
+        "sourceUrl": "https://www.ali213.net/news/html/2026-5/1011367.html",
+        "sourceUrls": [
+            {"name": "Windows Central", "url": "https://www.ali213.net/news/html/2026-5/1011367.html"},
+            {"name": "新浪科技", "url": "https://finance.sina.com.cn/tech/digi/2026-05-13/doc-inhxufve9230056.shtml"},
+            {"name": "ZOL", "url": "https://game.zol.com.cn/1180/11807800.html"},
+            {"name": "TheCodersBlog", "url": "https://thecodersblog.com/xbox-pc-app-hints-at-game-pass-expansion-to-china-2026/"}
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-14",
+        "tags": ["Xbox", "Game Pass", "Saluki", "中国市场", "微软", "订阅服务", "入华"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Project Saluki是微软将Game Pass带入中国市场的实质性行动(What)。中国是全球最大的游戏市场之一，但主机和PC订阅服务一直受制于内容审查和本地化门槛；Saluki的\"受限内容库\"说明微软已接受以合规换市场的路径，而非坚持\"全球统一库\"(Why)。若Game Pass入华成功，将打破腾讯/网易主导的中国游戏分发格局，为Steam/Epic等平台的中国竞争提供新参照系；对中国玩家而言，合法渠道的海外3A游戏库将是重要增量(So What)。关键变量：内容审查范围、定价策略（人民币定价）、与本地运营商合作模式——若Saluki仅提供少量合规游戏，则与现有国行Xbox生态差异不大，难以形成订阅吸引力(What Next)。",
+        "relatedNewsIds": [269, 225, 241]
+    },
+    {
+        "id": 281,
+        "title": "世嘉正式取消五年前公布的\"超级游戏\"项目，全面收缩免费游戏转向单机",
+        "summary": "世嘉（Sega Sammy）正式宣布取消公布已五年的\"超级游戏\"（Super Game）项目，FY2026财年净亏损57亿日元（$3160万），主因是Rovio减值损失$2亿和Stakelogic减值。世嘉表示将降低GaaS（游戏即服务）在产品组合中的优先级，全面转向单机游戏开发。经典IP重制（疯狂出租车、Jet Set Radio）不受影响，将继续推进。",
+        "source": "GamesIndustry.biz",
+        "sourceUrl": "https://www.gamesindustry.biz/sega-reports-316m-net-loss-during-fy26-cancels-super-game-project-amid-strategic-pivot",
+        "sourceUrls": [
+            {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/sega-reports-316m-net-loss-during-fy26-cancels-super-game-project-amid-strategic-pivot"},
+            {"name": "IGN中国", "url": "https://www.ign.com.cn/sega/59988/shi-jia-que-ren-qu-xiao-yi-gong-bu-wu-nian-de-shen-mi-chao-ji-you-xi-xiang-mu"},
+            {"name": "Push Square", "url": "https://www.pushsquare.com/news/2026/05/sega-cancels-super-game-project-and-moves-away-from-live-service"},
+            {"name": "Nintendo Life", "url": "https://www.nintendolife.com/news/2026/05/sega-explains-why-exactly-it-cancelled-its-super-game"}
+        ],
+        "category": "policy",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-12",
+        "tags": ["世嘉", "SEGA", "超级游戏", "Super Game", "取消", "GaaS", "转向单机", "Rovio"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "世嘉取消\"超级游戏\"是GaaS泡沫破灭的又一标志性事件(What)。五年前\"超级游戏\"被定义为世嘉的GaaS旗舰，投入巨大但始终无法产出可上线的产品；同期Rovio收购（$7.75亿）因《愤怒的小鸟》IP贬值导致$2亿减值——世嘉的GaaS转型全面失败(Why)。行业含义：继Anthem、Hyenas、Concord后，\"超级游戏\"是又一款被取消的GaaS旗舰项目，证明GaaS对传统主机游戏开发商的门槛极高，不是\"投入预算+大IP\"就能成功——索尼、Square Enix此前也收缩了GaaS投入(So What)。世嘉全面转向单机（经典IP重制+Persona系列）是务实选择，经典IP重制的风险和开发周期远低于GaaS，与世嘉当前管理能力匹配(What Next)。",
+        "relatedNewsIds": [250]
+    },
+    {
+        "id": 282,
+        "title": "《剑星2》将由Shift Up自主发行，终结与Sony独占合作，多平台发售在即",
+        "summary": "Shift Up在Q1财报中宣布《剑星2》将采用自主发行方式推出，不再由Sony担任发行商。前作《剑星》由Sony发行并作为PS5限时独占。Shift Up表示自主发行旨在\"最大化销售额并从首日触达全球广泛受众\"，意味着续作很可能同步登陆多平台。Shift Up同时收购了三上真司Unbound工作室股份，也将自主发行其新作。",
+        "source": "Automaton Media",
+        "sourceUrl": "https://automaton-media.com/en/news/shift-up-plans-to-self-publish-stellar-blade-sequel-and-shinji-mikami-titles-update-on-mysterious-new-flagship-ip-due-within-2026/",
+        "sourceUrls": [
+            {"name": "Automaton Media", "url": "https://automaton-media.com/en/news/shift-up-plans-to-self-publish-stellar-blade-sequel-and-shinji-mikami-titles-update-on-mysterious-new-flagship-ip-due-within-2026/"},
+            {"name": "Gadgets360", "url": "https://www.gadgets360.com/games/news/stellar-blade-2-shift-up-shelf-publish-release-ps5-exclusive-11484298"},
+            {"name": "GameLuster", "url": "https://gameluster.com/shift-up-self-publish-stellar-blade-2-sony/"},
+            {"name": "Checkpoint", "url": "https://checkpointgaming.net/news/2026/05/stellar-blade-studio-shift-up-to-self-publish-sequel/"}
+        ],
+        "category": "policy",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-12",
+        "tags": ["剑星2", "Stellar Blade 2", "Shift Up", "自主发行", "Sony", "独占结束", "多平台"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "Shift Up放弃Sony发行选择自主发行，是韩国开发商从\"平台独占\"走向\"全球多平台\"的标志性转变(What)。前作《剑星》由Sony发行取得商业成功，但独占模式限制了PC/Xbox用户触达；Shift Up认为续作多平台同步发售的收入将超过Sony发行费+独占溢价的组合(Why)。对Sony影响：失去《剑星2》独占意味着PS5的韩系动作游戏护城河收窄——继《Stellar Blade》PC版、《尼尔》多平台后，Sony在韩日中端独占IP的吸引力正在被\"全球发行更赚钱\"的现实瓦解(So What)。Shift Up同时投资三上真司工作室，显示其战略是\"自主发行+投资外部IP\"双轨并行——若《剑星2》多平台成功，更多Sony限时独占开发商可能效仿(What Next)。",
+        "relatedNewsIds": [249]
+    },
+    {
+        "id": 283,
+        "title": "Steam Machine四配置版本泄露：512GB入门$499起，含预约排队防黄牛机制",
+        "summary": "Steam客户端元数据泄露显示Valve的Steam Machine将推出四个硬件配置版本，涵盖512GB和2TB存储选项，入门级预计$499起。同时Steam Tracker中发现了预约排队机制代码，与Steam Controller的防黄牛策略类似。Mashable、IGN、TechSpot等多家媒体确认泄露真实性。具体发售日期尚未公布。",
+        "source": "IGN",
+        "sourceUrl": "https://sea.ign.com/steam-machine/242588/update-leak-suggests-four-steam-machine-packages-available-at-launch-alongside-reservation-queue",
+        "sourceUrls": [
+            {"name": "IGN", "url": "https://sea.ign.com/steam-machine/242588/update-leak-suggests-four-steam-machine-packages-available-at-launch-alongside-reservation-queue"},
+            {"name": "Mashable", "url": "https://mashable.com/article/steam-machine-details-leaked-pre-orders-begin-soon"},
+            {"name": "TechSpot", "url": "https://www.techspot.com/news/112364-steam-machine-may-launch-soon-reservation-system-four.html"},
+            {"name": "AllKeyShop", "url": "https://www.allkeyshop.com/blog/en-gb/valve-steam-machine-2026-hardware-leak-shipments-news-d/"}
+        ],
+        "category": "hardware",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-12",
+        "tags": ["Steam Machine", "Valve", "硬件泄露", "四配置", "$499", "预约排队", "黄牛"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": [261, 242]
+    },
+    {
+        "id": 284,
+        "title": "原田胜弘离开万代南梦宫后与SNK联合成立\"VS Studio\"，格斗游戏格局生变",
+        "summary": "《铁拳》系列制作人原田胜弘（Katsuhiro Harada）在离开万代南梦宫4个月后，正式宣布与SNK联合成立新工作室\"VS Studio\"，总部位于东京。原田在万代任职31年，是《铁拳》系列的灵魂人物，其离职被行业视为格斗游戏领域的\"地震级\"变动。VS Studio尚未公布首款游戏，但原田+SNK的组合引发格斗游戏社区高度期待。",
+        "source": "Nintendo Life",
+        "sourceUrl": "https://www.nintendolife.com/news/2026/05/former-tekken-boss-establishes-new-studio-under-snk-corporation",
+        "sourceUrls": [
+            {"name": "Nintendo Life", "url": "https://www.nintendolife.com/news/2026/05/former-tekken-boss-establishes-new-studio-under-snk-corporation"},
+            {"name": "Gameranx", "url": "https://gameranx.com/updates/id/562668/article/katsuhiro-harada-is-back-making-video-games-under-snk-with-a-new-subsidiary-called-vs-studio/"},
+            {"name": "GodIsAGeek", "url": "https://godisageek.com/2026/05/harada-vs-studio-snk-launch/"},
+            {"name": "GoSuGamers", "url": "https://www.gosugamers.net/entertainment/news/78423-former-tekken-director-katsuhiro-harada-joins-snk-to-establish-vs-studio"}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-12",
+        "tags": ["原田胜弘", "Harada", "VS Studio", "SNK", "铁拳", "Tekken", "万代南梦宫", "格斗游戏"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 285,
+        "title": "《红色沙漠》推动Pearl Abyss Q1营收创历史新高，同比暴涨420%至$2.2亿",
+        "summary": "Pearl Abyss公布Q1 2026财报：营收3285亿韩元（$2.206亿），同比增长419.8%；营业利润2121亿韩元，同比增长2585%。《红色沙漠》六周内营收2665亿韩元（$1.79亿），售出500万份，PC/主机各占50%。公司同时确认《DokeV》开发加速中。这是Pearl Abyss成立以来的最佳季度业绩。",
+        "source": "Inven Global",
+        "sourceUrl": "https://www.invenglobal.com/articles/21780/pearl-abyss-posts-record-high-q1-operating-profit-of-2121-billion",
+        "sourceUrls": [
+            {"name": "Inven Global", "url": "https://www.invenglobal.com/articles/21780/pearl-abyss-posts-record-high-q1-operating-profit-of-2121-billion"},
+            {"name": "TechTimes", "url": "https://www.techtimes.com/articles/316584/20260513/crimson-desert-earns-179m-six-weeks-pushing-pearl-abyss-its-highest-quarterly-revenue-record.htm"},
+            {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3944024.html"},
+            {"name": "Chosun Biz", "url": "https://biz.chosun.com/en/en-it/2026/05/12/MADVR6SNSNAORAKV5JMY3BNTE4/"}
+        ],
+        "category": "market",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-12",
+        "tags": ["红色沙漠", "Crimson Desert", "Pearl Abyss", "Q1财报", "500万", "DokeV", "营收纪录"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "《红色沙漠》500万份+Q1营收$2.2亿是韩国游戏工业的历史性突破(What)。Pearl Abyss此前以《黑色沙漠》MMO为核心，长期陷入\"一款产品养公司\"的结构性风险；《红色沙漠》单作贡献80%Q1营收，证明韩国开发商有能力在主机/PC单机赛道与欧美日厂商正面竞争(Why)。PC/主机50/50的销售分布意味着《红色沙漠》成功打破了\"韩国游戏=PC/MMO\"的刻板印象，在主机市场获得了对等竞争力(So What)。《DokeV》加速开发+《红色沙漠》DLC是下一阶段关键——若能维持双产品线健康运转，Pearl Abyss将从\"单产品公司\"升级为\"多产品矩阵公司\"，估值逻辑将发生根本变化(What Next)。",
+        "relatedNewsIds": [266]
+    },
+    {
+        "id": 286,
+        "title": "Capcom泄露：《生化危机10》Claire主角+《鬼泣1》重制版等多项目曝光",
+        "summary": "多个内部消息源（Dusk Golem、StiviwonderN）泄露Capcom开发路线图：《生化危机10》以Claire Redfield为主角开发中，《鬼泣1》重制版启动，《生化危机1》全面重制版已进入全面制作阶段。此外《生化危机：安魂曲》Ada Wong DLC也在计划中。Capcom未官方确认任何泄露信息。注意：Dusk Golem后续否认参与部分传言。",
+        "source": "Vice",
+        "sourceUrl": "https://www.vice.com/en/article/resident-evil-10-and-multiple-capcom-remakes-reportedly-leaked-by-insider/",
+        "sourceUrls": [
+            {"name": "Vice", "url": "https://www.vice.com/en/article/resident-evil-10-and-multiple-capcom-remakes-reportedly-leaked-by-insider/"},
+            {"name": "Wccftech", "url": "https://wccftech.com/capcom-leak-devil-may-cry-1-remake-re1-re10-full-roadmap/"},
+            {"name": "MSN", "url": "https://www.msn.com/en-us/news/other/capcom-leaks-hint-at-resident-evil-10-and-devil-may-cry-remake/gm-GMEA58C145"},
+            {"name": "Gfinity", "url": "https://www.gfinityesports.com/article/new-capcom-leak-hints-devil-may-cry-may-finally-get-the-resident-evil-treatment"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-11",
+        "tags": ["Capcom", "泄露", "生化危机10", "鬼泣重制", "RE1重制", "Claire", "路线图"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": [275]
+    },
+    {
+        "id": 287,
+        "title": "Win11 Xbox模式实测确认：NVIDIA显卡提升显著高于AMD，多款游戏帧率改善",
+        "summary": "Windows 11五月更新正式面向所有PC推出Xbox模式（原\"Xbox全屏体验\"），实测数据显示该模式能在NVIDIA和AMD显卡平台上带来显著性能提升。测试表明NVIDIA显卡的增益幅度明显高于AMD，差异可能源于驱动优化程度不同。Xbox模式将PC切换为\"Xbox全屏专属体验\"，减少RAM占用并优化游戏流畅度，对CPU受限场景提升尤为明显。",
+        "source": "Windows Central",
+        "sourceUrl": "https://www.windowscentral.com/microsoft/windows-11/windows-11s-may-2026-update-is-packed-with-11-powerful-features-you-cant-ignore",
+        "sourceUrls": [
+            {"name": "Windows Central", "url": "https://www.windowscentral.com/microsoft/windows-11/windows-11s-may-2026-update-is-packed-with-11-powerful-features-you-cant-ignore"},
+            {"name": "Tech4Gamers", "url": "https://tech4gamers.com/windows-11-xbox-mode-gaming-gains/"},
+            {"name": "知乎", "url": "https://zhuanlan.zhihu.com/p/2037074621703401585"},
+            {"name": "WindowsLatest", "url": "https://www.windowslatest.com/2026/03/11/microsoft-confirms-xbox-mode-for-windows-11-pcs-in-2026-and-i-tested-the-new-console-style-gaming-interface/"}
+        ],
+        "category": "platform",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-11",
+        "tags": ["Windows 11", "Xbox模式", "NVIDIA", "AMD", "性能提升", "微软", "游戏优化"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": [264]
+    },
+    {
+        "id": 288,
+        "title": "《寂静岭f》出货量破200万，《寂静岭2》重制版玩家突破600万",
+        "summary": "Konami宣布《寂静岭f》全球出货量超过200万份（截至4/22），《寂静岭2》重制版注册玩家突破600万（截至4/24）。《寂静岭》系列累计销量达1710万份。Konami的\"重制版+新作\"双轨策略成功激活了这一沉寂多年的恐怖IP，《寂静岭f》作为全新续作在不到一年内达到200万出货量，证明了该系列的市场潜力。",
+        "source": "IGN",
+        "sourceUrl": "https://www.ign.com/articles/silent-hill-2-remake-reaches-6-million-players-as-silent-hill-f-hits-new-sales-milestone",
+        "sourceUrls": [
+            {"name": "IGN", "url": "https://www.ign.com/articles/silent-hill-2-remake-reaches-6-million-players-as-silent-hill-f-hits-new-sales-milestone"},
+            {"name": "Push Square", "url": "https://www.pushsquare.com/news/2026/05/konami-successfully-revives-silent-hill-with-strong-sales-for-2-remake-f"},
+            {"name": "Ungeek", "url": "https://www.ungeek.ph/2026/05/silent-hill-f-exceeds-2-million-units-shipped-silent-hill-2-remake-surpasses-6-million-players/"},
+            {"name": "GamerMatters", "url": "https://gamermatters.com/silent-hill-f-sales-pass-2-million-copies-silent-hill-2-remake-has-more-than-6-million-players/"}
+        ],
+        "category": "game",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-13",
+        "tags": ["寂静岭f", "Silent Hill f", "寂静岭2", "重制版", "200万", "600万", "Konami", "里程碑"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "《寂静岭f》200万+《寂静岭2重制版》600万玩家标志着Konami\"冷饭+新作\"战略在恐怖品类的全面成功(What)。《寂静岭》系列在小岛秀夫离开后沉寂多年，Konami以Bloober Team重制《寂静岭2》重建品牌信任，再以全新续作《寂静岭f》承接——这是经典IP复活的教科书级操作(Why)。200万出货量对新恐怖游戏而言是优秀成绩（对比《Returnal》约150万+），600万\"玩家\"（含PS Plus/二手）说明IP影响力远超直接销量(So What)。Konami恐怖IP矩阵正在形成——《寂静岭》+《合金装备》+《恶魔城》三线并行，若持续投入可能建立恐怖游戏品类的长期竞争优势(What Next)。",
+        "relatedNewsIds": [275]
+    },
+    {
+        "id": 289,
+        "title": "索尼回应PS Store 30%抽成争议：维持万名开发者支持体系需\"巨额投资\"",
+        "summary": "索尼就PlayStation Store收取30%平台佣金争议正式回应，称维持1万名开发者支持体系需要\"巨额投资\"。此前英国$26亿集体诉讼指控索尼在2016-2026年间通过30%佣金推高数字游戏价格。索尼辩称该费用用于开发者工具、技术支持、QA测试和营销资源。Epic诉Apple案后，平台30%标准佣金在全球范围内面临越来越大的法律和舆论压力。",
+        "source": "Insider Gaming",
+        "sourceUrl": "https://insider-gaming.com/sony-says-supporting-ps5-devs-is-a-big-investment-amid-30-commission-fee-discussion/",
+        "sourceUrls": [
+            {"name": "Insider Gaming", "url": "https://insider-gaming.com/sony-says-supporting-ps5-devs-is-a-big-investment-amid-30-commission-fee-discussion/"},
+            {"name": "Kotaku", "url": "https://kotaku.com/sony-playstation-prices-you-owe-us-lawsuit-ruling-fees-2000693593"},
+            {"name": "GameApps", "url": "https://www.gameapps.hk/news/69618/sony-playstation-store-30-percent-commission-response/"},
+            {"name": "PCQuest", "url": "https://www.pcquest.com/gaming/sonys-30-commission-faces-26b-uk-legal-fire-gamers-eye-cheaper-ps5-games-11810303"}
+        ],
+        "category": "policy",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-13",
+        "tags": ["Sony", "PS Store", "30%抽成", "佣金", "集体诉讼", "$26亿", "开发者", "英国"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "索尼为30%佣金辩护是平台方在反垄断压力下的标准表态(What)。Epic诉Apple案确立了\"平台可收佣金但不得限制替代支付\"的先例，英国$26亿集体诉讼正基于此逻辑——索尼的\"巨额投资\"辩护理由在法律上是否充分，取决于能否证明30%费率与实际服务成本成比例(Why)。对行业影响：若索尼败诉或被迫降低佣金，将产生连锁效应——Steam、Xbox、Nintendo eShop的30%标准都将面临挑战；微软此前已主动降低PC Game Pass分成比例至12%作为差异化竞争手段(So What)。短期内索尼不会主动降低佣金（诉讼尚在进行中），但开发者替代选择正在增多：Epic Store 12%分成+Steam新政策正在蚕食30%标准的合理性(What Next)。",
+        "relatedNewsIds": [251]
+    },
+    {
+        "id": 290,
+        "title": "Saros首发两周销量仅30万，低于前作《Returnal》同期表现",
+        "summary": "据Alinea Analytics估算，Housemarque新作《Saros》（Returnal精神续作）首发两周销量约30万份，收入$2200万。尽管PS5装机量远大于《Returnal》发售时，Saros的销售速度仍低于前作。约1/3销量来自抢先体验期。评测方面获得积极评价，但PS5独占+高难度定位可能限制了受众规模。",
+        "source": "Push Square",
+        "sourceUrl": "https://www.pushsquare.com/news/2026/05/saros-ps5-sales-estimates-at-300k-selling-slower-than-returnal-on-a-bigger-install-base",
+        "sourceUrls": [
+            {"name": "Push Square", "url": "https://www.pushsquare.com/news/2026/05/saros-ps5-sales-estimates-at-300k-selling-slower-than-returnal-on-a-bigger-install-base"},
+            {"name": "Gadgets360", "url": "https://www.gadgets360.com/games/news/saros-sales-300k-2-weeks-estimate-ps5-exclusive-sony-housemarque-11488733"},
+            {"name": "TechPowerUp", "url": "https://www.techpowerup.com/349018/saros-estimated-to-have-sold-300-000-units-in-2-weeks-with-high-daily-active-players"},
+            {"name": "ResetEra", "url": "https://www.resetera.com/threads/saros-has-sold-300k-in-its-first-two-weeks-generating-over-22m-based-on-alinea-analytics-estimates.1518475/"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-13",
+        "tags": ["Saros", "Housemarque", "Returnal", "PS5独占", "30万", "销量", "Alinea Analytics"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 291,
+        "title": "《怪物猎人：荒野》FY2026仅售132万份，大幅不及前作及扩展包",
+        "summary": "Capcom FY2026财报显示，《怪物猎人：荒野》整个财年仅售出132万份，远不及《怪物猎人：崛起》同期表现及扩展包销量。该作累计销量已超1100万份（主要来自FY2025发售首年），但进入第二年后销售急剧放缓。Capcom整体FY2026创历史新高，主要靠《生化危机：安魂曲》691万份和《识质存在》200万份推动。",
+        "source": "Push Square",
+        "sourceUrl": "https://www.pushsquare.com/news/2026/05/monster-hunter-wilds-sales-really-have-fallen-off-a-cliff",
+        "sourceUrls": [
+            {"name": "Push Square", "url": "https://www.pushsquare.com/news/2026/05/monster-hunter-wilds-sales-really-have-fallen-off-a-cliff"},
+            {"name": "TwistedVoxel", "url": "https://twistedvoxel.com/capcom-reports-record-fy2026-results-led-by-resident-evil-and-monster-hunter/"},
+            {"name": "NewsGlobeNow", "url": "https://www.newsglobenow.com/new353995.html"},
+            {"name": "Capcom IR", "url": "https://www.capcom.co.jp/ir/english/data/pdf/explanation/2025/full/explanation_2025_full_01.pdf"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-05-13",
+        "tags": ["怪物猎人", "Monster Hunter Wilds", "132万", "Capcom", "FY2026", "销量下滑"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 292,
+        "title": "Falcom《空之轨迹the 1st》驱动海外收入暴增，营业利润同比增长1227%",
+        "summary": "日本Falcom公布FY2026上半年财报：营业利润同比增长1227%，收入增长150.7%。核心驱动力是《英雄传说：空之轨迹the 1st》重制版的海外授权收入达14.19亿日元。Falcom同时上调了全年业绩预期，目前有7款新作在开发中。《空之轨迹the 1st》是2025年9月发售的系列初代重制版，在海外市场表现远超预期。",
+        "source": "Automaton Media",
+        "sourceUrl": "https://automaton-media.com/en/news/nihon-falcom-reports-1227-year-on-year-operating-profit-growth-thanks-to-strong-overseas-sales/",
+        "sourceUrls": [
+            {"name": "Automaton Media", "url": "https://automaton-media.com/en/news/nihon-falcom-reports-1227-year-on-year-operating-profit-growth-thanks-to-strong-overseas-sales/"},
+            {"name": "Push Square", "url": "https://www.pushsquare.com/news/2026/05/overseas-trails-in-the-sky-1st-chapter-sales-propel-falcom-profits-to-insane-heights"},
+            {"name": "Final Weapon", "url": "https://finalweapon.net/2026/05/13/falcom-1227-percent-profit-growth-trails-in-the-sky-1st-chapter-success/"},
+            {"name": "NoisyPixel", "url": "https://noisypixel.net/falcom-fy2026-financial-results-trails-ys-sales/"}
+        ],
+        "category": "market",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-14",
+        "tags": ["Falcom", "空之轨迹", "Trails in the Sky", "1227%", "海外收入", "重制版", "利润暴增"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 293,
+        "title": "PS Plus 5月新增游戏公布：含《荒野大镖客2》和《星球大战：亡命之徒》",
+        "summary": "索尼公布PS Plus Extra/Premium 5月新增游戏阵容，共8款游戏将于5月19日上线。最重磅为Rockstar《荒野大镖客2》和育碧《星球大战：亡命之徒》，其余包括动作RPG和独立游戏。Essential档5月月度游戏由EA Sports FC 26领衔。PS Plus持续以3A大作填充目录应对Game Pass竞争。",
+        "source": "Gematsu",
+        "sourceUrl": "https://www.gematsu.com/2026/04/playstation-plus-monthly-games-lineup-for-may-2026-announced",
+        "sourceUrls": [
+            {"name": "Gematsu", "url": "https://www.gematsu.com/2026/04/playstation-plus-monthly-games-lineup-for-may-2026-announced"},
+            {"name": "FandomWire", "url": "https://fandomwire.com/all-games-coming-to-ps-plus-game-catalog-in-may-2026-extra-premium-lineup-revealed/"},
+            {"name": "NotebookCheck", "url": "https://www.notebookcheck.net/PS-Plus-May-2026-Game-Catalogue-officially-revealed-featuring-Red-Dead-Redemption-2-Star-Wars-Outlaws-and-more.1296075.0.html"},
+            {"name": "PS Lifestyle", "url": "https://www.playstationlifestyle.net/2026/05/13/ps-plus-extra-premium-may-2026-games-full-list/"}
+        ],
+        "category": "platform",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-05-14",
+        "tags": ["PS Plus", "荒野大镖客2", "RDR2", "星球大战", "Sony", "5月", "订阅服务"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": [269]
+    },
+    {
+        "id": 294,
+        "title": "《乐高蝙蝠侠：黑暗骑士遗产》Steam愿望单突破95万，发售在即",
+        "summary": "TT Games开发、华纳兄弟发行的《乐高蝙蝠侠：黑暗骑士遗产》Steam愿望单已突破95万，在Steam最期待榜单排名第24位。该作将于5月22日发售，登陆PS5/Xbox/PC/Switch 2全平台。Deluxe版玩家可提前3天游玩。95万愿望单是乐高系列历史上最高预售关注度，但PC配置要求引发部分玩家担忧。",
+        "source": "GamingBolt",
+        "sourceUrl": "https://gamingbolt.com/lego-batman-legacy-of-the-dark-knight-has-950000-wishlists-on-steam-ahead-of-launch",
+        "sourceUrls": [
+            {"name": "GamingBolt", "url": "https://gamingbolt.com/lego-batman-legacy-of-the-dark-knight-has-950000-wishlists-on-steam-ahead-of-launch"},
+            {"name": "App2Top", "url": "https://app2top.com/news/lego-batman-legacy-of-the-dark-knight-garnered-950-thousand-wishlists-on-steam-290365.html"},
+            {"name": "AllKeyShop", "url": "https://www.allkeyshop.com/blog/lego-batman-goes-gold-pc-spec-worries-news-r/"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-05-14",
+        "tags": ["乐高蝙蝠侠", "LEGO Batman", "TT Games", "华纳", "95万愿望单", "5月22日", "Steam"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": []
     },
     {
         "id": 265,
