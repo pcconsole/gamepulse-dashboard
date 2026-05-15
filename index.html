@@ -785,6 +785,18 @@
                         </div>
                     </div>
 
+                    <!-- 可折叠公司总览表格 -->
+                    <div style="margin-top:16px;">
+                        <div onclick="document.getElementById('earningsOverviewTable').style.display=document.getElementById('earningsOverviewTable').style.display==='none'?'block':'none';this.querySelector('.toggle-icon').textContent=document.getElementById('earningsOverviewTable').style.display==='none'?'▶':'▼';" style="cursor:pointer;display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--card-bg,#1e293b);border:1px solid var(--border,#334155);border-radius:10px;">
+                            <span class="toggle-icon" style="font-size:0.7rem;color:var(--text-muted,#94a3b8);">▶</span>
+                            <span style="font-size:0.85rem;font-weight:600;color:var(--text,#e2e8f0);">📋 18家公司财报总览</span>
+                            <span style="font-size:0.7rem;color:var(--text-muted,#94a3b8);margin-left:auto;">点击展开/收起</span>
+                        </div>
+                        <div id="earningsOverviewTable" style="display:none;margin-top:8px;overflow-x:auto;border:1px solid var(--border,#334155);border-radius:10px;background:var(--card-bg,#1e293b);">
+                            <!-- JS动态填充 -->
+                        </div>
+                    </div>
+
                     <!-- 行业对比图表 — 收入图前置 + 利润率/增速在下 -->
                     <!-- 第一排：核心收入对比（单季度 + 全年），含增速标注 -->
                     <div class="earnings-charts-grid-2x2" style="margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">

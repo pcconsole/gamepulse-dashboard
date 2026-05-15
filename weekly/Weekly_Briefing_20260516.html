@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>端主行业周报 · W20</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4f6f9; --ink: #1e3a5f; --ink-2: #2c4a6e; --ink-dim: #4a5c6e; --ink-ghost: #7b8a99;
+    --red: #c85a4a; --red-bg: #f5e0db; --red-dim: #a0483b;
+    --gold: #8b6914; --gold-bg: #ede4cf;
+    --green: #3d6b57; --green-bg: #dde7e0;
+    --surface: #ffffff; --surface-2: #eef1f5;
+    --rule: #d5dce3; --rule-dim: #e5e9ee;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #c8ced6; font-family: 'Microsoft YaHei', '微软雅黑', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  .page { width: 430px; background: var(--bg); color: var(--ink); margin: 0 auto; overflow: hidden; }
+
+  .hero { background: linear-gradient(135deg, #1e3a5f 0%, #2c4a6e 100%); color: white; padding: 22px 20px 26px; position: relative; }
+  .hero::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background: linear-gradient(90deg, var(--red) 0%, var(--gold) 100%); }
+  .hero .brand { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.3em; color: #c85a4a; font-weight: 700; margin-bottom: 10px; }
+  .hero h1 { font-size: 30px; font-weight: 800; line-height: 1.15; }
+  .hero .sub { font-size: 13px; color: rgba(255,255,255,0.75); margin-top: 8px; line-height: 1.5; }
+  .hero .meta { display: flex; gap: 18px; margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.15); font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: rgba(255,255,255,0.7); letter-spacing: 0.1em; }
+  .hero .meta strong { color: white; font-weight: 700; }
+
+  .section { padding: 26px 20px 20px; }
+  .section + .section { border-top: 10px solid #e2e7ed; }
+  .sec-head { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid var(--ink); position: relative; }
+  .sec-head::after { content:''; position:absolute; left:0; bottom:-2px; width:50px; height:2px; background:var(--red); }
+  .sec-head .num { font-family:'IBM Plex Mono',monospace; font-size:32px; font-weight:800; color:var(--red); line-height:0.9; }
+  .sec-head .title { font-size:18px; font-weight:800; color:var(--ink); flex:1; line-height:1.3; }
+  .sec-head .title em { display:block; font-size:12px; font-weight:600; color:var(--red); font-style:normal; margin-top:3px; }
+
+  .lead { font-size:13px; color:var(--ink-dim); line-height:1.65; margin-bottom:16px; }
+  .lead strong { color:var(--ink); }
+
+  .headline-card { background: linear-gradient(135deg, #1e3a5f 0%, #2c4a6e 100%); color: #fff; padding: 18px 20px; border-radius: 8px; margin: 6px 0 16px; }
+  .headline-card .hl-tag { font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.15em; color:rgba(255,255,255,0.5); font-weight:700; margin-bottom:8px; }
+  .headline-card h3 { font-size:18px; font-weight:900; line-height:1.3; margin-bottom:10px; color:#fff; }
+  .headline-card .hl-sub { font-size:13px; color:rgba(255,255,255,0.8); line-height:1.65; }
+  .headline-card .hl-sub strong { color:#fff; }
+
+  .ev-line { padding:7px 0; font-size:12.5px; line-height:1.55; color:var(--ink-dim); border-bottom:1px dashed rgba(0,0,0,0.06); }
+  .ev-line:last-child { border-bottom:0; }
+  .ev-line .ev-head { display:flex; align-items:center; gap:4px; margin-bottom:2px; }
+  .ev-line .ev-body { font-size:12px; line-height:1.55; }
+  .ev-line .ev-body strong { color:var(--ink); }
+  .ev-line .d { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-ghost); font-weight:700; }
+  .ev-line .tg { display:inline-block; font-size:9px; padding:2px 5px; border-radius:2px; font-weight:700; margin:0 2px; }
+  .tg-r { background:#fee2e2; color:#991b1b; }
+  .tg-g { background:#d1fae5; color:#065f46; }
+  .tg-b { background:#dbeafe; color:#1e40af; }
+  .tg-y { background:#fef3c7; color:#92400e; }
+
+  .insight { padding:16px 18px 12px; margin:14px 0; border-radius:6px; background:linear-gradient(135deg,#1e3a5f 0%,#2c4a6e 100%); color:#fff; }
+  .insight .il { font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.15em; color:rgba(255,184,150,0.8); font-weight:700; margin-bottom:8px; padding-bottom:6px; border-bottom:1px dashed rgba(255,255,255,0.15); }
+  .insight p { font-size:13px; line-height:1.75; margin-bottom:8px; color:rgba(255,255,255,0.88); }
+  .insight p:last-child { margin-bottom:0; }
+  .insight em { color:#ffb896; font-style:normal; font-weight:700; }
+  .insight strong { color:#fff; }
+
+  .cb { background:var(--surface); padding:12px 16px 10px 18px; margin:16px 0 10px; position:relative; border-left:5px solid var(--ink); border-top:2px solid var(--ink); box-shadow:0 2px 6px rgba(30,58,95,0.08); }
+  .cb .cb-tag { display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.15em; color:#fff; background:var(--red); font-weight:700; padding:3px 10px; margin-bottom:7px; border-radius:2px; }
+  .cb h4 { font-size:15px; font-weight:900; line-height:1.35; color:var(--ink); margin:0; }
+  .cb h4 em { color:var(--red); font-style:normal; }
+
+  .stbl { width:100%; font-size:12px; border-collapse:collapse; margin:10px 0; background:var(--surface); border-radius:6px; overflow:hidden; box-shadow:0 1px 3px rgba(30,58,95,0.05); }
+  .stbl th { text-align:left; padding:8px 8px; border-bottom:2px solid var(--ink); font-size:10px; font-weight:700; letter-spacing:0.06em; color:#fff; background:var(--ink); font-family:'IBM Plex Mono',monospace; }
+  .stbl td { padding:7px 8px; border-bottom:1px solid #eef0f4; line-height:1.45; }
+  .stbl tr:nth-child(even) td { background:#fafbfc; }
+  .stbl tr:last-child td { border-bottom:0; }
+  .stbl .num { text-align:right; font-family:'IBM Plex Mono',monospace; font-weight:700; white-space:nowrap; }
+  .stbl .hl-row td { background:var(--red-bg)!important; font-weight:600; }
+
+  .summary-box { background:#fff; border:2px solid var(--ink); padding:20px 18px 16px; margin:16px 0; position:relative; border-radius:0; }
+  .summary-box .sb-label { position:absolute; top:-12px; left:14px; background:var(--ink); color:#fff; padding:3px 10px; font-size:11px; font-weight:700; letter-spacing:0.1em; }
+  .summary-box p { font-size:13px; line-height:1.75; margin-bottom:10px; color:var(--ink); }
+  .summary-box p:last-child { margin-bottom:0; }
+  .summary-box strong { color:var(--ink); }
+  .summary-box em { color:var(--red); font-style:normal; font-weight:700; }
+
+  .trend { padding:14px 16px; margin:14px 0; border-radius:6px; border-left:3px solid var(--gold); background:var(--gold-bg); font-size:12px; line-height:1.65; color:var(--ink-dim); }
+  .trend .tl { font-family:'IBM Plex Mono',monospace; font-size:9px; font-weight:700; color:var(--gold); letter-spacing:0.12em; margin-bottom:4px; }
+  .trend strong { color:var(--ink); }
+
+  .footer { padding:20px; text-align:center; border-top:4px solid var(--ink); }
+  .footer .logo { font-size:13px; font-weight:800; letter-spacing:0.2em; color:var(--ink-dim); margin-bottom:8px; }
+  .footer .src { font-size:9px; line-height:1.7; color:var(--ink-ghost); letter-spacing:0.04em; max-width:360px; margin:0 auto; }
+  .footer .src-date { font-size:10px; letter-spacing:0.12em; margin-top:6px; color:var(--red); font-weight:700; }
+</style>
+</head>
+<body>
+
+<!-- 导出工具栏 -->
+<div id="export-toolbar" style="position:fixed;top:10px;right:10px;z-index:9999;font-family:'Microsoft YaHei',sans-serif;user-select:none;">
+  <div style="display:flex;gap:6px;">
+    <button id="exp-main" style="background:#c85a4a;color:#fff;border:0;padding:6px 12px;border-radius:4px;font-size:11px;font-weight:700;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,0.2);letter-spacing:.05em;">📥 导出长图</button>
+    <button id="edit-toggle" style="background:#1e3a5f;color:#fff;border:0;padding:6px 12px;border-radius:4px;font-size:11px;font-weight:700;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,0.2);letter-spacing:.05em;">✏️ 编辑文字</button>
+  </div>
+  <div id="exp-panel" style="display:none;margin-top:6px;background:rgba(30,58,95,0.96);padding:8px;border-radius:4px;box-shadow:0 4px 12px rgba(0,0,0,0.25);">
+    <div style="display:flex;flex-direction:column;gap:4px;">
+      <button data-scale="2" class="exp-btn">@2x · 860px</button>
+      <button data-scale="3" class="exp-btn">@3x · 1290px</button>
+      <button data-scale="4" class="exp-btn">@4x · 1720px</button>
+    </div>
+    <div id="exp-status" style="font-size:9px;color:#ffb896;margin-top:6px;letter-spacing:.03em;line-height:1.3;min-height:11px;"></div>
+  </div>
+</div>
+<style>
+  #export-toolbar .exp-btn { background:transparent; color:#fff; border:1px solid rgba(255,184,150,0.5); padding:5px 8px; border-radius:3px; font-size:10px; font-weight:700; cursor:pointer; font-family:'IBM Plex Mono',monospace; transition:all .15s; text-align:left; }
+  #export-toolbar .exp-btn:hover { background:#c85a4a; border-color:#c85a4a; }
+  @media print { #export-toolbar { display:none!important; } }
+</style>
+
+<div class="page">
+
+  <!-- ================================================================ -->
+  <!-- HERO                                                             -->
+  <!-- ================================================================ -->
+  <div class="hero">
+    <div class="brand">GAMEPULSE · WEEKLY</div>
+    <h1>端主行业动态周报 W20</h1>
+    <div class="sub">PC & Console Industry Weekly Briefing</div>
+    <div class="meta">
+      <div>DATE · <strong>2026.05.16</strong></div>
+      <div>COVERAGE · <strong>5.9 – 5.16</strong></div>
+    </div>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- PART 01 · FH6                                                    -->
+  <!-- ================================================================ -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="num">01</div>
+      <div class="title">极限竞速：地平线6<em>Xbox第一方3A大考 · 泄露+PS5延期双线分析</em></div>
+    </div>
+
+    <!-- 泄露事件 -->
+    <div class="cb">
+      <div class="cb-tag">FORZA HORIZON 6 · 泄露事件</div>
+      <h4>155GB未加密上传Steam，发售前9天<em>全网扩散</em></h4>
+    </div>
+
+    <div class="ev-line" style="background:var(--surface);border:1px solid var(--rule-dim);border-radius:5px;padding:10px 12px;margin-bottom:6px;"><div class="ev-head"><span class="d">5/10</span> <span class="tg tg-r">泄露</span></div><div class="ev-body">SteamDB检测到FH6完整版<strong>未加密</strong>上传（155GB），数小时内被盗版网站传播。EA早期访问<strong>5/15</strong>，正式发售<strong>5/19</strong></div></div>
+    <div class="ev-line" style="background:var(--surface);border:1px solid var(--rule-dim);border-radius:5px;padding:10px 12px;margin-bottom:6px;"><div class="ev-head"><span class="d">5/11</span> <span class="tg tg-b">回应</span></div><div class="ev-body">Playground声明"非预加载问题"，对泄露版用户执行<strong>终身硬件封禁</strong></div></div>
+    <div class="ev-line" style="background:var(--surface);border:1px solid var(--rule-dim);border-radius:5px;padding:10px 12px;margin-bottom:6px;"><div class="ev-head"><span class="d">5/12</span> <span class="tg tg-g">韧性</span></div><div class="ev-body">泄露后Steam预购仍维持<strong>全球收入榜第2</strong>，盗版版缺少在线功能（多人/排行榜/Forzathon）</div></div>
+
+    <div class="summary-box">
+      <div class="sb-label">泄露影响评估</div>
+      <p><strong>短期销量损失</strong>：参考EU JRC研究PC盗版替代率10-20%，若FH6 PC首月200万份基准，泄露可能造成<em>20-40万份短期流失</em>（约$1,400-2,800万）。但在线服务+DLC+GP生态会回收部分用户，<strong style="color:var(--red);">长期影响有限</strong>。</p>
+      <p><strong>更大的损失是信任</strong>：这是Playground的低级技术失误。Sharma时代"move faster"节奏下，质量管控隐患首次暴露。参考FH5生命周期2,000万+份（PS5端500万 / Steam端700-800万），<strong style="color:var(--red);">FH6的品牌损伤比销量损失更值得警惕</strong>。</p>
+    </div>
+
+    <!-- PS5延期 -->
+    <div class="cb">
+      <div class="cb-tag">FORZA HORIZON 6 · PS5延期策略</div>
+      <h4>Xbox/PC 5/19首发，PS5版<em>"later in 2026"</em></h4>
+    </div>
+
+    <div class="insight">
+      <div class="il">Sharma独占策略首次落地</div>
+      <p>Sharma 4月内部信四大战略之一"重新评估独占"（详见4月月报）的<em>首次实战</em>——从长独占转向短窗口独占：</p>
+    </div>
+
+    <table class="stbl">
+      <thead><tr><th>对比</th><th style="text-align:center;">FH5（Spencer）</th><th style="text-align:center;">FH6（Sharma）</th></tr></thead>
+      <tbody>
+        <tr><td>Xbox/PC首发</td><td style="text-align:center;" class="num">2021.11</td><td style="text-align:center;" class="num">2026.5.19</td></tr>
+        <tr><td>PS5上线</td><td style="text-align:center;" class="num">2025.4（3.5年后）</td><td style="text-align:center;" class="num">"later in 2026"</td></tr>
+        <tr><td>独占窗口</td><td style="text-align:center;" class="num"><strong>3.5年</strong></td><td style="text-align:center;" class="num"><strong>3-6个月</strong></td></tr>
+        <tr><td>策略定位</td><td style="text-align:center;"><strong>旧作移植补完</strong></td><td style="text-align:center;"><strong>新作短窗口独占</strong></td></tr>
+        <tr><td>PS5销量</td><td style="text-align:center;"><strong>~500万/8月（Alinea估）</strong></td><td style="text-align:center;"><strong>待观察</strong></td></tr>
+      </tbody>
+    </table>
+
+    <div class="summary-box">
+      <div class="sb-label">Wonderland发行影响分析</div>
+      <p><strong>前提</strong>：FH6 PS5版预计2026 Q3-Q4 · Wonderland 2027 H1上PS5</p>
+      <p><strong>有利</strong>：FH6 PS5若Q3上线→间隔6月+→<em>品类空白期</em></p>
+      <p><strong>不利</strong>：FH6 PS5若推迟至Q4/2027Q1→<em>直接竞争</em></p>
+      <p><strong>建议</strong>：跟踪FH6 PS5定档，调整Wonderland节奏</p>
+    </div>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- PART 02 · 财报                                                   -->
+  <!-- ================================================================ -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="num">02</div>
+      <div class="title">财报速递<em>Capcom · Nexon 本周发布</em></div>
+    </div>
+
+    <!-- Capcom -->
+    <div class="cb">
+      <div class="cb-tag">CAPCOM · 5/13发布 · FY26全年（2025.4–2026.3）</div>
+      <h4>营业利润<em>连续9年创新高</em> · 全年卖出5,907万份</h4>
+    </div>
+
+    <table class="stbl">
+      <thead><tr><th>FY26</th><th>金额</th><th>YoY</th></tr></thead>
+      <tbody>
+        <tr><td><strong>净销售额</strong></td><td class="num"><strong>¥(JPY)1,953亿/$13.0亿</strong></td><td class="num"><strong>+15.2%</strong></td></tr>
+        <tr><td><strong>营业利润</strong></td><td class="num"><strong>¥(JPY)753亿/$5.0亿</strong></td><td class="num"><strong>+14.5%</strong></td></tr>
+        <tr><td>游戏销量</td><td class="num"><strong>5,907万份</strong></td><td class="num">历史最高</td></tr>
+        <tr><td>数字占比</td><td class="num"><strong>93%</strong></td><td class="num">—</td></tr>
+      </tbody>
+    </table>
+
+    <table class="stbl">
+      <thead><tr><th>关键游戏</th><th>销量</th><th>备注</th></tr></thead>
+      <tbody>
+        <tr class="hl-row"><td><strong>《生化危机:安魂曲》</strong></td><td class="num"><strong>691万份</strong></td><td>系列首发最快</td></tr>
+        <tr><td>《识质存在》</td><td class="num">200万+</td><td>新IP · 16天</td></tr>
+        <tr><td>《怪猎荒野》累计</td><td class="num">1,140万+</td><td>持续增长</td></tr>
+      </tbody>
+    </table>
+
+    <div class="trend">
+      <div class="tl">CAPCOM 一句话</div>
+      <strong>布局Switch 2</strong> + 目标年销量破亿 + 旧作目录数字长尾 = 增长飞轮。数字化93%意味着几乎每卖一份都是高毛利。
+    </div>
+
+    <!-- Nexon -->
+    <div class="cb">
+      <div class="cb-tag">NEXON · 5/14发布 · Q1 2026（1-3月）</div>
+      <h4>营收+34%创纪录 · ARC Raiders<em>1,600万份</em> · 西方收入占比10%→29%</h4>
+    </div>
+
+    <table class="stbl">
+      <thead><tr><th>Q1核心数据</th><th>金额</th><th>YoY</th></tr></thead>
+      <tbody>
+        <tr><td><strong>营收</strong></td><td class="num"><strong>¥(JPY)1,522亿/$9.71亿</strong></td><td class="num"><strong>+34%</strong></td></tr>
+        <tr><td><strong>营业利润</strong></td><td class="num"><strong>¥(JPY)582亿/$3.71亿</strong></td><td class="num"><strong>+40%</strong></td></tr>
+        <tr><td>净利润</td><td class="num">¥(JPY)572亿/$3.65亿</td><td class="num">+118%</td></tr>
+        <tr><td>PC/Console占比</td><td class="num"><strong>77%</strong></td><td class="num">ARC Raiders驱动</td></tr>
+      </tbody>
+    </table>
+
+    <table class="stbl">
+      <thead><tr><th>关键游戏</th><th>数据</th><th>备注</th></tr></thead>
+      <tbody>
+        <tr class="hl-row"><td><strong>ARC Raiders</strong></td><td class="num"><strong>1,600万份</strong></td><td>公司史上最成功发行 · 15亿小时</td></tr>
+        <tr><td>MapleStory系列</td><td class="num">+42% YoY</td><td>Idle RPG+Worlds驱动</td></tr>
+        <tr><td>FC ONLINE</td><td class="num">+47% YoY</td><td>Season 9 · 中国获ISBN</td></tr>
+        <tr><td>DNF系列</td><td class="num" style="color:var(--red);">-26% YoY</td><td>手游下滑 · 开发转交腾讯</td></tr>
+      </tbody>
+    </table>
+
+    <div class="trend">
+      <div class="tl">Nexon洞察</div>
+      <strong>全球化转型标志性季度</strong>：北美+欧洲收入从¥109亿→¥445亿（<em>+310%</em>），占比从10%跃至29%。ARC Raiders验证了韩国厂商打造全球3A IP的能力。
+    </div>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- FOOTER                                                           -->
+  <!-- ================================================================ -->
+  <div class="footer">
+    <div class="logo">GAMEPULSE · PC & CONSOLE</div>
+    <div class="src">
+      数据来源：腾讯文档行业新闻库 · IGN · GameSpot · GamesIndustry.biz · Eurogamer · Kantenna · Automaton · Capcom IR · Nexon IR · SteamDB · EU JRC (2017)
+    </div>
+    <div class="src-date">2026.05.16 · W20 · DATA CUTOFF 05.16</div>
+  </div>
+
+</div>
+
+<!-- 导出脚本 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+(function(){
+  const toolbar = document.getElementById('export-toolbar');
+  const mainBtn = document.getElementById('exp-main');
+  const panel   = document.getElementById('exp-panel');
+  const status  = document.getElementById('exp-status');
+  const buttons = document.querySelectorAll('.exp-btn');
+  const page    = document.querySelector('.page');
+  mainBtn.addEventListener('click', () => { panel.style.display = (panel.style.display === 'none') ? 'block' : 'none'; });
+  document.addEventListener('click', (e) => { if(!toolbar.contains(e.target)) panel.style.display = 'none'; });
+  function setStatus(t, err){ status.textContent = t; status.style.color = err ? '#ff8080' : '#ffb896'; }
+  function lockButtons(l){ buttons.forEach(b => b.disabled = l); mainBtn.disabled = l; }
+  async function exportAt(scale){
+    if(typeof html2canvas === 'undefined'){ setStatus('html2canvas 未加载', true); return; }
+    lockButtons(true); setStatus('渲染中… @' + scale + 'x', false);
+    toolbar.style.visibility = 'hidden';
+    try {
+      if(document.fonts && document.fonts.ready) await document.fonts.ready;
+      await new Promise(r => setTimeout(r, 150));
+      const canvas = await html2canvas(page, { scale, backgroundColor: '#f4f6f9', useCORS: true, logging: false, width: page.offsetWidth, height: page.offsetHeight, windowWidth: page.offsetWidth, windowHeight: page.offsetHeight });
+      setStatus('生成PNG中…', false);
+      canvas.toBlob(function(blob){
+        if(!blob){ setStatus('导出失败', true); toolbar.style.visibility = 'visible'; lockButtons(false); return; }
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a'); a.href = url; a.download = '端主行业周报_W20_' + scale + 'x.png';
+        document.body.appendChild(a); a.click(); document.body.removeChild(a);
+        setTimeout(()=> URL.revokeObjectURL(url), 1000);
+        setStatus('✓ @' + scale + 'x 已导出', false); toolbar.style.visibility = 'visible'; lockButtons(false);
+      }, 'image/png');
+    } catch(err){ setStatus('失败：' + err.message, true); toolbar.style.visibility = 'visible'; lockButtons(false); }
+  }
+  buttons.forEach(btn => btn.addEventListener('click', (e) => { e.stopPropagation(); exportAt(parseInt(btn.dataset.scale, 10)); }));
+})();
+</script>
+
+<!-- 编辑文字功能 -->
+<style>
+  .editing-mode [contenteditable="true"] { outline: 1px dashed rgba(200,90,74,0.4); outline-offset: 2px; min-height: 1em; }
+  .editing-mode [contenteditable="true"]:focus { outline: 2px solid #c85a4a; background: rgba(200,90,74,0.03); }
+  #edit-save-bar { position:fixed; bottom:0; left:0; right:0; background:rgba(30,58,95,0.97); padding:10px 20px; display:flex; align-items:center; justify-content:center; gap:12px; z-index:10000; box-shadow:0 -2px 10px rgba(0,0,0,0.3); }
+  #edit-save-bar button { padding:8px 18px; border:0; border-radius:4px; font-size:12px; font-weight:700; cursor:pointer; letter-spacing:.03em; }
+  #edit-save-bar .save-btn { background:#4caf50; color:#fff; }
+  #edit-save-bar .save-btn:hover { background:#388e3c; }
+  #edit-save-bar .cancel-btn { background:transparent; color:#fff; border:1px solid rgba(255,255,255,0.4); }
+  #edit-save-bar .cancel-btn:hover { background:rgba(255,255,255,0.1); }
+  #edit-save-bar .status { font-size:10px; color:#ffb896; }
+</style>
+<script>
+(function(){
+  const editBtn = document.getElementById('edit-toggle');
+  const page = document.querySelector('.page');
+  const toolbar = document.getElementById('export-toolbar');
+  let isEditing = false;
+  let fileHandle = null;
+  const editableSelectors = 'h1, h2, h3, h4, p, .ev-body, .trend, .lead, td, .summary-box p, .insight p, .verdict p, .cb-tag, .sub, .hl-sub, .brand';
+  function enterEditMode() {
+    isEditing = true; document.body.classList.add('editing-mode');
+    editBtn.style.background = '#4caf50'; editBtn.textContent = '🟢 编辑中';
+    page.querySelectorAll(editableSelectors).forEach(el => el.setAttribute('contenteditable', 'true'));
+    showSaveBar();
+  }
+  function exitEditMode() {
+    isEditing = false; document.body.classList.remove('editing-mode');
+    editBtn.style.background = '#1e3a5f'; editBtn.textContent = '✏️ 编辑文字';
+    page.querySelectorAll('[contenteditable]').forEach(el => el.removeAttribute('contenteditable'));
+    const bar = document.getElementById('edit-save-bar'); if (bar) bar.remove();
+  }
+  function showSaveBar() {
+    if (document.getElementById('edit-save-bar')) return;
+    const bar = document.createElement('div'); bar.id = 'edit-save-bar';
+    bar.innerHTML = '<span class="status">编辑模式：直接点击文字修改</span><button class="save-btn" id="save-edit-btn">💾 保存修改</button><button class="cancel-btn" id="cancel-edit-btn">取消</button>';
+    document.body.appendChild(bar);
+    document.getElementById('save-edit-btn').addEventListener('click', saveFile);
+    document.getElementById('cancel-edit-btn').addEventListener('click', () => { if(confirm('放弃所有修改？')) exitEditMode(); });
+  }
+  async function saveFile() {
+    const statusEl = document.querySelector('#edit-save-bar .status');
+    page.querySelectorAll('[contenteditable]').forEach(el => el.removeAttribute('contenteditable'));
+    document.body.classList.remove('editing-mode');
+    const bar = document.getElementById('edit-save-bar'); if (bar) bar.style.display = 'none';
+    toolbar.style.display = 'none';
+    const html = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+    toolbar.style.display = ''; if (bar) bar.style.display = '';
+    page.querySelectorAll(editableSelectors).forEach(el => el.setAttribute('contenteditable', 'true'));
+    document.body.classList.add('editing-mode');
+    try {
+      if ('showSaveFilePicker' in window) {
+        if (!fileHandle) { fileHandle = await window.showSaveFilePicker({ suggestedName: 'Weekly_Briefing_20260516.html', types: [{ description: 'HTML文件', accept: { 'text/html': ['.html'] } }] }); }
+        const writable = await fileHandle.createWritable(); await writable.write(html); await writable.close();
+        statusEl.textContent = '✅ 已保存到文件'; setTimeout(() => { statusEl.textContent = '编辑模式：直接点击文字修改'; }, 2000); return;
+      }
+    } catch (e) { if (e.name === 'AbortError') { statusEl.textContent = '已取消'; return; } }
+    const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+    const url = URL.createObjectURL(blob); const a = document.createElement('a');
+    a.href = url; a.download = 'Weekly_Briefing_20260516.html';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    statusEl.textContent = '✅ 已下载（请替换原文件）';
+  }
+  editBtn.addEventListener('click', () => { if (isEditing) exitEditMode(); else enterEditMode(); });
+})();
+</script>
+
+</body>
+</html>

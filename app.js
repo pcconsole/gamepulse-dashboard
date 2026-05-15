@@ -1725,6 +1725,7 @@ function updateEarningsTab() {
     }
 
     // 图表（收入图前置，利润率/增速在后）
+    renderEarningsOverviewTable(filtered);
     renderEarningsRevenueCompareChart();
     renderEarningsFullYearChart();
     renderEarningsEstimationLegend();
@@ -1736,6 +1737,39 @@ function updateEarningsTab() {
 
     // 非上市公司
     renderEarningsPrivateGrid();
+}
+
+function renderEarningsOverviewTable(companies) {
+    var container = document.getElementById('earningsOverviewTable');
+    if (!container) return;
+    var today = new Date();
+    var rows = companies.map(function(c) {
+        var rev = c.financials?.revenue;
+        var op = c.financials?.operatingProfit;
+        var revStr = rev?.value ? (rev.unit?.includes('百万日元') ? '¥' + (rev.value / 100).toFixed(0) + '亿' : rev.unit?.includes('百万人民币') ? '¥' + (rev.value / 100).toFixed(0) + '亿' : rev.unit?.includes('百万美元') ? '$' + (rev.value / 1000).toFixed(2) + 'B' : rev.unit?.includes('百万韩元') ? '₩' + (rev.value / 10000).toFixed(2) + '万亿' : (rev.label || '--')) : '--';
+        var opStr = op?.value != null ? (op.unit?.includes('百万日元') ? '¥' + (op.value / 100).toFixed(0) + '亿' : op.unit?.includes('百万人民币') ? '¥' + (op.value / 100).toFixed(0) + '亿' : op.unit?.includes('百万美元') ? '$' + (op.value).toFixed(0) + 'M' : op.unit?.includes('百万韩元') ? '₩' + (op.value / 10000).toFixed(2) + '万亿' : (op.label || '--')) : '--';
+        var fd = c.filingDate || '--';
+        var daysAgo = c.filingDate ? Math.floor((today - new Date(c.filingDate)) / 86400000) : null;
+        var freshColor = daysAgo === null ? '#6b7280' : daysAgo <= 14 ? '#10b981' : daysAgo <= 60 ? '#f59e0b' : daysAgo <= 120 ? '#ef4444' : '#dc2626';
+        var freshLabel = daysAgo !== null ? daysAgo + '天前' : '--';
+        return '<tr style="border-bottom:1px solid var(--border,#334155);">' +
+            '<td style="padding:6px 10px;white-space:nowrap;font-weight:600;font-size:0.78rem;">' + (c.logo || '') + ' ' + c.name + '</td>' +
+            '<td style="padding:6px 10px;font-size:0.75rem;color:var(--text-muted,#94a3b8);">' + (c.fiscalPeriod || '--') + '</td>' +
+            '<td style="padding:6px 10px;font-size:0.75rem;">' + fd + '</td>' +
+            '<td style="padding:6px 10px;font-size:0.75rem;"><span style="color:' + freshColor + ';font-weight:600;">' + freshLabel + '</span></td>' +
+            '<td style="padding:6px 10px;font-size:0.78rem;font-weight:600;text-align:right;">' + revStr + (rev?.yoy != null ? ' <span style="font-size:0.68rem;color:' + (rev.yoy >= 0 ? '#10b981' : '#ef4444') + ';">' + (rev.yoy >= 0 ? '+' : '') + rev.yoy + '%</span>' : '') + '</td>' +
+            '<td style="padding:6px 10px;font-size:0.78rem;font-weight:600;text-align:right;">' + opStr + (op?.yoy != null ? ' <span style="font-size:0.68rem;color:' + (op.yoy >= 0 ? '#10b981' : '#ef4444') + ';">' + (op.yoy >= 0 ? '+' : '') + op.yoy + '%</span>' : '') + '</td>' +
+            '</tr>';
+    }).join('');
+    container.innerHTML = '<table style="width:100%;border-collapse:collapse;font-size:0.8rem;">' +
+        '<thead><tr style="border-bottom:2px solid var(--border,#475569);background:var(--bg-alt,#0f172a);">' +
+        '<th style="padding:8px 10px;text-align:left;font-size:0.72rem;color:var(--text-muted,#94a3b8);font-weight:600;">公司</th>' +
+        '<th style="padding:8px 10px;text-align:left;font-size:0.72rem;color:var(--text-muted,#94a3b8);font-weight:600;">最新财报期间</th>' +
+        '<th style="padding:8px 10px;text-align:left;font-size:0.72rem;color:var(--text-muted,#94a3b8);font-weight:600;">发布日期</th>' +
+        '<th style="padding:8px 10px;text-align:left;font-size:0.72rem;color:var(--text-muted,#94a3b8);font-weight:600;">新鲜度</th>' +
+        '<th style="padding:8px 10px;text-align:right;font-size:0.72rem;color:var(--text-muted,#94a3b8);font-weight:600;">游戏收入</th>' +
+        '<th style="padding:8px 10px;text-align:right;font-size:0.72rem;color:var(--text-muted,#94a3b8);font-weight:600;">营业利润</th>' +
+        '</tr></thead><tbody>' + rows + '</tbody></table>';
 }
 
 function renderEarningsMarginChart(companies) {

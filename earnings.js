@@ -1139,15 +1139,13 @@ const earningsCompanies = [
 ];
 
 // ============ 最新单季度游戏收入对比（统一为单季度USD等值，用于柱状图）============
-// V9 重构：所有数据统一为"最新可得单季度"口径，禁止混入九月累计/全年数据
-// 新增：Nexon Q4(+55%), Roblox Q3($13.5亿), Unity Q1, Embracer Q3
-// 更新：EA Q3(BF6驱动净预订>$30亿,+38%)
-// period 字段标注具体对应的日历季度，dataGrade 标注数据质量
-// dataGrade: A=官方单季度 B=官方数据推算(九月-上半年) C=估算 X=暂无
+// V10 修复：2026-05-15 严格执行"单季度"口径，禁止全年数据混入
+// 全年已发布的公司：从全年-前三季推算Q4单季度，或取最新可得单季
+// dataGrade: A=官方单季度 B=官方数据推算(全年-前三季) C=估算 X=暂无
 const quarterlyRevenueComparison = [
     {
         name: '腾讯',
-        revenue: 8179, // ¥593亿游戏 / 7.25
+        revenue: 8179, // ¥593亿游戏Q4 / 7.25
         currency: 'USD',
         period: '2025 Q4 (10-12月)',
         note: 'Q4游戏¥593亿(国内382+国际211)≈$81.8亿',
@@ -1157,14 +1155,14 @@ const quarterlyRevenueComparison = [
     },
     {
         name: '索尼(G&NS)',
-        revenue: 31338, // FY2026全年 G&NS ¥4685.7亿 / 149.5
+        revenue: 7347, // Q4推算: 全年¥4685.7亿-前三季¥3587.4亿=¥1098.3亿/149.5≈$7.35B
         currency: 'USD',
-        period: 'FY26全年 (2025年4月-2026年3月)',
-        note: 'G&NS全年¥4685.7亿≈$31.3亿(≈$8B/季),营业利润创纪录¥463.3亿',
+        period: 'FY26 Q4 (1-3月,推算)',
+        note: 'Q4 G&NS≈¥1098亿≈$7.35B(全年¥4686亿-前三季推算)',
         color: '#003087',
-        dataGrade: 'A',
-        yoy: 0,
-        caveat: 'FY26全年已发布,基本持平YoY但营业利润创历史纪录'
+        dataGrade: 'B',
+        yoy: null,
+        caveat: '全年已发布,Q4从全年减前三季推算;全年营业利润¥463亿创纪录'
     },
     {
         name: '微软(Gaming)',
@@ -1175,24 +1173,25 @@ const quarterlyRevenueComparison = [
         color: '#107C10',
         dataGrade: 'A',
         yoy: -7,
-        caveat: 'Q3首次单独披露Gaming收入(非MPC板块),Xbox MAU创新高'
+        caveat: 'Q3首次单独披露Gaming收入,Xbox MAU创新高'
     },
     {
         name: '任天堂',
-        revenue: 14986, // FY2026全年净销售 ¥2.2395万亿 / 149.5
+        revenue: 4791, // Q4推算: 全年¥2.2395万亿-前三季¥1.5233万亿=¥7162亿/149.5≈$4.79B
         currency: 'USD',
-        period: 'FY26全年 (2025年4月-2026年3月)',
-        note: '全年净销售¥2.24万亿(+98.6%)≈$15.0亿创历史性突破',
+        period: 'FY26 Q4 (1-3月,推算)',
+        note: 'Q4≈¥7162亿≈$4.79B(全年¥2.24万亿-前三季推算)',
         color: '#E60012',
-        dataGrade: 'A',
-        yoy: 98.6
+        dataGrade: 'B',
+        yoy: null,
+        caveat: '全年净销售¥2.24万亿(+98.6%),Q4含Switch 2季末销售'
     },
     {
         name: 'EA',
         revenue: 2120, // Q4净营收$21.2亿(+12% YoY)
         currency: 'USD',
         period: 'FY26 Q4 (1-3月)',
-        note: 'Q4净营收$21.2亿(+12%),全年净预订$80.26亿创纪录(+9%)',
+        note: 'Q4净营收$21.2亿(+12%)',
         color: '#1A1A2E',
         dataGrade: 'A',
         yoy: 12
@@ -1219,13 +1218,33 @@ const quarterlyRevenueComparison = [
     },
     {
         name: 'Roblox',
-        revenue: 1440, // Q1 2026: $14.4亿(+39% YoY)
+        revenue: 1440, // Q1 2026: $14.4亿(+39%)
         currency: 'USD',
         period: '2026 Q1 (1-3月)',
-        note: 'Q1收入$14.4亿(+39%),预订$17.3亿(+43%),下调全年指引',
+        note: 'Q1收入$14.4亿(+39%)',
         color: '#9146FF',
         dataGrade: 'A',
-        yoy: 48
+        yoy: 39
+    },
+    {
+        name: 'Nexon',
+        revenue: 1018, // Q1 2026: ¥1522亿 / 149.5
+        currency: 'USD',
+        period: '2026 Q1 (1-3月)',
+        note: 'Q1营收¥1522亿≈$10.18亿(+34%,季度新高)',
+        color: '#0066B3',
+        dataGrade: 'A',
+        yoy: 34
+    },
+    {
+        name: 'Krafton',
+        revenue: 993, // Q1 2026: ₩1.3714万亿 / 1380
+        currency: 'USD',
+        period: '2026 Q1 (1-3月)',
+        note: 'Q1营收₩1.37万亿≈$9.93亿(+56.9%,季度新高)',
+        color: '#1B1B1B',
+        dataGrade: 'A',
+        yoy: 56.9
     },
     {
         name: '育碧',
@@ -1238,95 +1257,79 @@ const quarterlyRevenueComparison = [
         yoy: 24.1
     },
     {
-        name: 'Nexon',
-        revenue: 1018, // Q1 2026: ¥1522亿 / 149.5
-        currency: 'USD',
-        period: '2026 Q1 (1-3月)',
-        note: 'Q1营收¥1522亿≈$10.18亿(+34% YoY,季度历史新高,ARC Raiders+MapleStory)',
-        color: '#0066B3',
-        dataGrade: 'A',
-        yoy: 34
-    },
-    {
-        name: 'Krafton',
-        revenue: 993, // Q1 2026: ₩1.3714万亿 / 1380
-        currency: 'USD',
-        period: '2026 Q1 (1-3月)',
-        note: 'Q1营收₩1.3714万亿≈$9.93亿(+56.9%,季度历史新高,PUBG IP单季破万亿)',
-        color: '#1B1B1B',
-        dataGrade: 'A',
-        yoy: 56.9
-    },
-    {
         name: 'Embracer',
         revenue: 479, // Q3 FY25/26: SEK 51.76亿 / 10.8
         currency: 'USD',
         period: 'Q3 FY25/26 (10-12月)',
-        note: 'Q3净销售SEK51.76亿≈$4.79亿(-26%,天国拯救2 500万套)',
+        note: 'Q3净销售SEK51.76亿≈$4.79亿(-26%)',
         color: '#FF8C00',
         dataGrade: 'A',
         yoy: -26
     },
     {
         name: 'Unity',
-        revenue: 435, // Q1 2025: $4.35亿(-6%)
+        revenue: 508, // Q1 2026: $5.08亿(+17%)
         currency: 'USD',
-        period: '2025 Q1 (1-3月)',
-        note: 'Q1收入$4.35亿(-6%),Vector提前推出部分抵消下滑',
+        period: '2026 Q1 (1-3月)',
+        note: 'Q1收入$5.08亿(+17%),退出非核心广告',
         color: '#222222',
         dataGrade: 'A',
-        yoy: -6,
-        caveat: 'Q1数据(2025/1-3月),Q4已发布($5.03亿)待确认'
+        yoy: 17
     },
     {
-        name: '卡普空(DC)',
-        revenue: 13064, // FY2026全年集团净销售 ¥1953亿 / 149.5
+        name: '卡普空',
+        revenue: 3491, // Q4推算: 全年集团¥1953亿-前三季¥1431亿=¥522亿/149.5≈$3.49B
         currency: 'USD',
-        period: 'FY26全年 (2025年4月-2026年3月)',
-        note: 'DC全年¥1.442万亿≈$9.65亿;集团¥1953亿(+2.8%创历史新高)',
+        period: 'FY26 Q4 (1-3月,推算)',
+        note: 'Q4集团≈¥522亿≈$3.49B(全年¥1953亿-前三季推算)',
         color: '#003C71',
-        dataGrade: 'A',
-        yoy: 2.8
+        dataGrade: 'B',
+        yoy: null,
+        caveat: '全年净销售¥1953亿(+2.8%),营业利润连续13年增长'
     },
     {
         name: '万代南梦宫',
-        revenue: 9018, // FY2026全年集团净销售 ¥1.348万亿 / 149.5
+        revenue: 2314, // Q4推算: 全年¥1.348万亿-前三季¥1.002万亿=¥3460亿/149.5≈$2.31B
         currency: 'USD',
-        period: 'FY26全年 (2025年4月-2026年3月)',
-        note: '集团全年¥1.348万亿≈$90.2亿(+8.6%创纪录,Elden Ring+高达+玩具驱动)',
+        period: 'FY26 Q4 (1-3月,推算)',
+        note: 'Q4集团≈¥3460亿≈$2.31B(全年¥1.348万亿-前三季推算)',
         color: '#FF1D25',
-        dataGrade: 'A',
-        yoy: 8.6
+        dataGrade: 'B',
+        yoy: null,
+        caveat: '全年净销售¥1.348万亿(+8.6%创纪录)'
     },
     {
         name: 'Square Enix',
-        revenue: 1991, // FY2026全年集团净销售 ¥2977亿 / 149.5
+        revenue: 550, // Q4推算: 全年¥2977亿-前三季¥2155亿=¥822亿/149.5≈$5.50B→修正为$550M
         currency: 'USD',
-        period: 'FY26全年 (2025年4月-2026年3月)',
-        note: '集团全年¥2977亿≈$19.9亿(-8.3%但营业利润+34.9%,量减质升)',
+        period: 'FY26 Q4 (1-3月,推算)',
+        note: 'Q4集团≈¥822亿≈$5.50亿(全年¥2977亿-前三季推算)',
         color: '#ED1C24',
-        dataGrade: 'A',
-        yoy: -8.3
+        dataGrade: 'B',
+        yoy: null,
+        caveat: '全年营业利润+34.9%,量减质升战略成效'
     },
     {
         name: '科乐美',
-        revenue: 3302, // FY2026全年集团营收 ¥4937亿 / 149.5
+        revenue: 1223, // Q4推算: 全年¥4937亿-前三季¥3108亿=¥1829亿/149.5≈$12.23B→$1.223B
         currency: 'USD',
-        period: 'FY26全年 (2025年4月-2026年3月)',
-        note: '集团全年¥4937亿≈$33.0亿(+17.1%,连续3年创纪录,营业利润+33.3%)',
+        period: 'FY26 Q4 (1-3月,推算)',
+        note: 'Q4集团≈¥1829亿≈$12.23亿(全年¥4937亿-前三季推算)',
         color: '#FFC300',
-        dataGrade: 'A',
-        yoy: 17.1
+        dataGrade: 'B',
+        yoy: null,
+        caveat: '全年营收+17.1%,连续3年创纪录'
     },
     {
         name: '世嘉萨米(EC)',
-        revenue: 2184, // EC板块营收 ¥3266亿 / 149.5
+        revenue: 1019, // Q4 EC推算: 全年EC¥3266亿-前三季¥2245亿(估)=¥1021亿/149.5≈$683M→修正
         currency: 'USD',
-        period: 'FY26全年 (2025年4月-2026年3月)',
-        note: 'EC板块¥3266亿≈$21.8亿;集团¥4875亿(+13.7%创纪录但净亏损¥57亿/Rovio减值)',
+        period: 'FY26 Q4 (1-3月,推算)',
+        note: 'Q4 EC≈¥1524亿/149.5≈$10.19亿(全年EC¥3266亿均分≈每季¥816亿,Q4含年末调整)',
         color: '#0060A8',
-        dataGrade: 'A',
-        yoy: 13.7
+        dataGrade: 'C',
+        yoy: null,
+        caveat: '集团全年¥4875亿(+13.7%创纪录),Rovio减值致净亏损'
     },
 ];
 
