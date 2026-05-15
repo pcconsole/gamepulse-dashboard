@@ -610,47 +610,50 @@ const earningsCompanies = [
         logo: '🤖',
         color: '#FF1D25',
         segment: 'Digital Entertainment',
-        fiscalPeriod: 'FY2026 Q3 九个月累计(2025年4-12月,估)',
+        fiscalPeriod: 'FY2026 全年 (2025年4月-2026年3月)',
         currency: 'JPY',
         latestQuarter: {
-            period: 'FY2026 Q3(估)', calendarPeriod: '2025年10-12月', filingDate: '2026-02-07',
-            revenue: { value: null, unit: '百万日元', yoy: null, label: 'DE Q3单季数据未获取', usdEquiv: null },
-            note: 'FY26Q3已发布(2026/02/05)但DE单季数据未获取'
+            period: 'FY2026 Q4', calendarPeriod: '2026年1-3月', filingDate: '2026-05-13',
+            revenue: { value: 346000, unit: '百万日元(Q4)', yoy: null, label: 'Q4集团营收≈¥3460亿(全年-前三季推算)', usdEquiv: '≈$2.31B' },
+            note: '全年已发布,Q4从¥1.348万亿-前三季推算'
         },
         fullYear: {
-            period: 'FY2026九月累计(估)', filingDate: '2026-02-07', status: '九月累计估算',
-            revenue: { value: 248500, unit: '百万日元(DE估)', yoy: -5.3, label: 'DE九月累计≈¥2485亿(估)', usdEquiv: '≈$1.66B' },
-            note: '基于FY2025 Q3+行业趋势推算'
+            period: 'FY2026全年(已发布)', filingDate: '2026-05-13', status: '已发布(创历史新高)',
+            revenue: { value: 1348246, unit: '百万日元(全年)', yoy: 8.6, label: '集团全年净销售¥1.348万亿(+8.6%,创纪录)', usdEquiv: '≈$9.02B' },
+            operatingProfit: { value: 140223, unit: '百万日元(全年)', yoy: 5.2, label: '集团全年营业利润¥1402亿(+5.2%)', usdEquiv: '≈$938M' },
+            operatingMargin: { value: 10.4, label: '集团全年营业利润率10.4%' },
+            note: '创历史营收新高,艾尔登法环+高达+龙珠驱动,玩具&爱好品部门强劲增长'
         },
         companyOverall: {
-            totalRevenue: { value: 735000, unit: '百万日元(季度估)', yoy: 3, label: '集团Q3营收(估)', source: '万代南梦宫IR推算' },
-            totalOperatingProfit: { value: 85000, unit: '百万日元(季度估)', yoy: 10, label: '集团Q3营业利润(估)' },
-            totalOperatingMargin: { value: 11.6, label: '集团Q3利润率(估)' },
-            note: '万代南梦宫集团：数字娱乐(游戏)、玩具、IP创作、游乐设施等四大事业'
+            totalRevenue: { value: 1348246, unit: '百万日元(全年)', yoy: 8.6, label: '集团全年净销售¥1.348万亿(+8.6%,创纪录)', source: 'Bandai Namco FY2026 Full Year Results (2026/05/13)' },
+            totalOperatingProfit: { value: 140223, unit: '百万日元', yoy: 5.2, label: '集团全年营业利润¥1402亿(+5.2%)' },
+            totalOperatingMargin: { value: 10.4, label: '集团全年营业利润率' },
+            note: '万代南梦宫FY2026(2025年4月-2026年3月): 创历史营收新高¥1.348万亿(+8.6%),净利润+8.8%,ROE稳健。玩具&爱好品部门增长亮眼。'
         },
         financials: {
-            revenue: { value: 248500, unit: '百万日元(估)', yoy: -5.3, label: '数字娱乐营收(估)', usdEquiv: '≈$1.66B' },
-            operatingProfit: { value: 38200, unit: '百万日元(估)', yoy: -18.4, label: '营业利润(估)', usdEquiv: '≈$256M' },
-            operatingMargin: { value: 15.4, label: '营业利润率(估)' },
-            segmentRevenuePct: { value: 33.8, label: '占集团营收比例(估)' },
+            revenue: { value: 1348246, unit: '百万日元(全年)', yoy: 8.6, label: '集团全年净销售(创历史新高)', source: 'Bandai Namco FY2026 Full Year Results (2026/05/13)', usdEquiv: '≈$9.02B' },
+            operatingProfit: { value: 140223, unit: '百万日元(全年)', yoy: 5.2, label: '集团全年营业利润(+5.2%)' },
+            operatingMargin: { value: 10.4, label: '集团全年营业利润率' },
+            segmentRevenuePct: { value: 100, label: '集团整体(含DE+Toys+IP+Amusement)' },
         },
         gameMetrics: {
-            repeatSalesPct: { value: 56, unit: '%', label: '重复型收入占比' },
-            ipTitlesActive: { value: 28, unit: '款', label: '活跃运营IP数' },
-            overseasRevenuePct: { value: 52, unit: '%', label: '海外收入占比' },
+            eldenRingContribution: { value: null, unit: '', label: '艾尔登法环DLC持续贡献(具体数字未单独披露)' },
+            toyHobbyGrowth: { value: null, unit: '%', label: '玩具&爱好品部门强劲增长(高达/龙珠IP驱动)' },
+            profitAttributable: { value: null, unit: '', label: '归母净利润+8.8%' },
         },
-        keyProducts: ['艾尔登法环DLC', '高达系列', '龙珠系列', '铁拳8'],
+        keyProducts: ['艾尔登法环(含DLC)', '高达系列', '龙珠系列', '铁拳8', 'One Piece'],
         analysis: {
-            performance: '数字娱乐营收同比下降约5.3%(估，≈$16.6亿)，主要因去年同期《艾尔登法环DLC》高基数效应。28款IP持续运营，重复型收入占比56%。海外收入占比超过一半。',
-            strategy: '强化"IP Axis"战略，将游戏IP跨媒体变现。《铁拳8》Live Service取得成效。',
-            outlook: '2025年pipeline包含多款IP续作，管理层表示将更审慎评估新项目投资。',
-            newProducts: '《龙珠》新作；《高达》新项目；更多FromSoftware合作。'
+            performance: 'FY2026(2025.4-2026.3)集团净销售¥1.348万亿(+8.6%)创历史新高,营业利润¥1402亿(+5.2%),归母净利润+8.8%(What)。增长主要由玩具&爱好品部门强劲表现驱动,高达/龙珠等核心IP跨媒体变现持续提升;数字娱乐板块受艾尔登法环DLC后高基数影响增长相对平稳(Why)。集团营业利润率10.4%保持稳健,ROE水平维持,显示多元化IP运营战略的抗周期能力(So What)。',
+            strategy: '"IP Axis"战略持续推进——将核心IP(高达/龙珠/ONE PIECE)跨游戏/玩具/影视变现。FromSoftware合作关系深化。数字娱乐部门加大Live Service投入。',
+            outlook: 'FY2027展望: 管理层维持增长预期,更多FromSoftware新项目+IP续作驱动。玩具部门持续受益于全球动漫热潮。数字娱乐需新大作接力艾尔登法环。',
+            newProducts: 'FromSoftware新项目；《龙珠》新作；高达系列新游戏；更多IP跨媒体项目。'
         },
         dataSources: [
-            { type: '季度财报(估)', name: '万代南梦宫FY2026 Q3估算(基于FY2025 Q3+行业趋势)', date: '2026-02-07', url: 'https://www.bandainamco.co.jp/en/ir/library/result.html' }
+            { type: '年度财报', name: 'Bandai Namco FY2026 Full Year Consolidated Results', date: '2026-05-13', url: 'https://www.bandainamco.co.jp/en/ir/library/result.html' },
+            { type: '财务补充', name: 'Financial Highlights for FY Ended March 31, 2026', date: '2026-05-13', url: 'https://www.bandainamco.co.jp/files/ir/financialstatements/pdf/20260513_en_Complement.pdf' }
         ],
-        filingDate: '2026-02-07',
-        filingType: '季度财报(九个月累计,估算)',
+        filingDate: '2026-05-13',
+        filingType: '年度财报(全年)',
         filingUrl: 'https://www.bandainamco.co.jp/en/ir/library/result.html'
     },
     {
@@ -730,48 +733,51 @@ const earningsCompanies = [
         logo: '⚔️',
         color: '#ED1C24',
         segment: 'Digital Entertainment (HD Games + MMO)',
-        fiscalPeriod: 'FY2026 Q3 九个月累计(2025年4-12月,估)',
+        fiscalPeriod: 'FY2026 全年 (2025年4月-2026年3月)',
         currency: 'JPY',
         latestQuarter: {
-            period: 'FY2026 Q3(估)', calendarPeriod: '2025年10-12月', filingDate: '2026-02-05',
-            revenue: { value: null, unit: '百万日元', yoy: null, label: 'DE Q3单季数据未获取', usdEquiv: null },
-            note: '需从九月累计拆分单季度'
+            period: 'FY2026 Q4', calendarPeriod: '2026年1-3月', filingDate: '2026-05-14',
+            revenue: { value: 82142, unit: '百万日元(Q4推算)', yoy: null, label: 'Q4集团营收≈¥821亿(全年-前三季推算)', usdEquiv: '≈$549M' },
+            note: '全年已发布,Q4从¥2977亿-前三季¥2155亿推算'
         },
         fullYear: {
-            period: 'FY2026九月累计(估)', filingDate: '2026-02-05', status: '九月累计估算',
-            revenue: { value: 248519, unit: '百万日元(集团九月累计)', yoy: -3.5, label: '集团九月累计¥2485亿', usdEquiv: '≈$16.6B' },
-            deRevenue: { value: 170000, unit: '百万日元(DE估)', yoy: -5, label: 'DE九月累计≈¥1700亿(估)' },
-            note: 'DQ3 HD-2D重制版表现超预期,FF14持续贡献稳定MMO收入'
+            period: 'FY2026全年(已发布)', filingDate: '2026-05-14', status: '已发布(利润大增)',
+            revenue: { value: 297661, unit: '百万日元(全年)', yoy: -8.3, label: '集团全年净销售¥2977亿(-8.3%)', usdEquiv: '≈$1.99B' },
+            operatingProfit: { value: 54736, unit: '百万日元(全年)', yoy: 34.9, label: '集团全年营业利润¥547亿(+34.9%)', usdEquiv: '≈$366M' },
+            operatingMargin: { value: 18.4, label: '集团全年营业利润率18.4%(大幅提升)' },
+            note: '销售下降但利润率大幅提升,HD Game增收增益,"量减质升"转型成功'
         },
         companyOverall: {
-            totalRevenue: { value: 248519, unit: '百万日元(九月累计)', yoy: -3.5, label: '集团九月累计营收', source: 'Square Enix FY2025 Q3 Results (2025/02/05)' },
-            totalOperatingProfit: { value: 33381, unit: '百万日元(九月累计)', yoy: -4.4, label: '集团九月累计营业利润' },
-            totalOperatingMargin: { value: 13.4, label: '集团九月累计利润率' },
-            note: 'SE九个月销售额¥2485亿(-3.5%)。《勇者斗恶龙3 HD-2D重制版》表现超出预期。'
+            totalRevenue: { value: 297661, unit: '百万日元(全年)', yoy: -8.3, label: '集团全年净销售¥2977亿(-8.3%)', source: 'Square Enix FY2026 Full Year Results (2026/05/14)' },
+            totalOperatingProfit: { value: 54736, unit: '百万日元', yoy: 34.9, label: '集团全年营业利润¥547亿(+34.9%)' },
+            totalOperatingMargin: { value: 18.4, label: '集团全年营业利润率' },
+            note: 'SE FY2026(2025.4-2026.3): 净销售-8.3%但营业利润+34.9%,"少做精品"战略成效显著。HD Game增收增益,MMO和手游/PC浏览器收入下降。'
         },
         financials: {
-            revenue: { value: 170000, unit: '百万日元(九月DE估)', yoy: -5, label: 'DE九月累计营收(估)', source: 'Square Enix IR推算', usdEquiv: '≈$1.14B' },
-            operatingProfit: { value: 25000, unit: '百万日元(估)', yoy: -8, label: 'DE营业利润(估)', usdEquiv: '≈$167M' },
-            operatingMargin: { value: 14.7, label: 'DE营业利润率(估)' },
-            segmentRevenuePct: { value: 68.4, label: '占集团营收比例(估)' },
+            revenue: { value: 297661, unit: '百万日元(全年)', yoy: -8.3, label: '集团全年净销售(-8.3%)', source: 'Square Enix FY2026 Full Year Results (2026/05/14)', usdEquiv: '≈$1.99B' },
+            operatingProfit: { value: 54736, unit: '百万日元(全年)', yoy: 34.9, label: '集团全年营业利润(+34.9%大幅增长)' },
+            operatingMargin: { value: 18.4, label: '集团全年营业利润率(vs上年13.6%)' },
+            segmentRevenuePct: { value: 100, label: '集团整体(DE为主)' },
         },
         gameMetrics: {
-            ff14Subscribers: { value: 27, unit: '百万(累计注册)', label: 'FF14累计注册用户' },
-            dq3hdSales: { value: 7, unit: '百万+(估)', label: 'DQ3 HD-2D累计销量(估)' },
-            mmRevenue: { value: 32, unit: '%', label: 'MMO收入占比' },
+            hdGameGrowth: { value: null, unit: '%', label: 'HD Game子板块增收增益' },
+            mmoDecline: { value: null, unit: '%', label: 'MMO收入同比下降' },
+            smartDeviceOptimize: { value: null, unit: '', label: '手游/PC浏览器通过支付方式多元化+成本优化提升利润率' },
         },
-        keyProducts: ['最终幻想14', '勇者斗恶龙3 HD-2D重制版', '最终幻想7 Rebirth PC', 'NieR系列'],
+        keyProducts: ['最终幻想14', '勇者斗恶龙3 HD-2D重制版', 'FF7 Rebirth PC', 'NieR系列'],
         analysis: {
-            performance: '九个月累计销售额¥2485亿(-3.5%，≈$16.6亿)，营业利润¥334亿(-4.4%)。虽然新作销售额低于去年同期，但开发成本摊销减少。《勇者斗恶龙3 HD-2D重制版》表现超出预期，成为本季最大亮点。FF14持续贡献稳定MMO收入。',
-            strategy: 'SE完成重组后聚焦核心IP(FF、DQ、NieR)，大幅削减中小项目。已出售西方工作室，回归日式RPG核心。',
-            outlook: '聚焦DQ和FF系列后续。"更少、更高质量"为原则。DQ3 HD-2D的成功验证了经典IP翻新策略。',
-            newProducts: '《勇者斗恶龙12》开发中；《FF7 第三部》开发中；FF14新资料片。'
+            performance: 'FY2026(2025.4-2026.3)净销售¥2977亿(-8.3%)但营业利润¥547亿(+34.9%)大幅增长(What)。HD Game子板块增收增益成为最大亮点,MMO和手游/PC浏览器收入有所下降但通过成本优化维持了利润率(Why)。利润率从13.6%跃升至18.4%(+4.8pt),验证了"少做精品,提高单品质量和商业回报"的中期战略转型方向(So What)。',
+            strategy: '"量减质升"战略转型成效明显——削减中小项目,聚焦核心IP(FF/DQ/NieR)的高质量开发。HD Game板块利润率改善显著。手游通过支付方式多元化和成本优化提升利润。西方工作室已剥离,回归日式RPG核心。',
+            outlook: 'FY2027展望: 管理层预计营业利润下降约10.5%,反映HD Game管线节奏。中长期战略继续推进"更少更精"。DQ12和FF7第三部为未来重磅催化剂。',
+            newProducts: '《勇者斗恶龙12》开发中；《FF7 第三部》开发中；FF14新资料片；更多HD-2D重制项目。'
         },
         dataSources: [
-            { type: '季度财报(估)', name: 'Square Enix FY2026 Q3估算(基于FY2025 Q3+DQ3 HD-2D趋势)', date: '2026-02-05', url: 'https://www.hd.square-enix.com/eng/ir/library/financial.html' }
+            { type: '年度财报', name: 'Square Enix FY2026 Full Year Results', date: '2026-05-14', url: 'https://www.hd.square-enix.com/eng/ir/library/financial.html' },
+            { type: '业绩说明', name: 'Results Briefing Session FY2026', date: '2026-05-14', url: 'https://www.hd.square-enix.com/eng/ir/pdf/26q4slides.pdf' },
+            { type: '行业报道', name: 'GamesIndustry.biz: SE FY26 operating income surges 34.9%', date: '2026-05-15', url: 'https://www.gamesindustry.biz/square-enix-fy26-operating-income-surges-349-despite-net-sales-decline' }
         ],
-        filingDate: '2026-02-05',
-        filingType: '季度财报(九个月累计,估算)',
+        filingDate: '2026-05-14',
+        filingType: '年度财报(全年)',
         filingUrl: 'https://www.hd.square-enix.com/eng/ir/library/financial.html'
     },
     {
@@ -785,49 +791,54 @@ const earningsCompanies = [
         logo: '⚡',
         color: '#FFC300',
         segment: 'Digital Entertainment',
-        fiscalPeriod: 'FY2026 Q3 九个月累计(2025年4-12月,估)',
+        fiscalPeriod: 'FY2026 全年 (2025年4月-2026年3月)',
         currency: 'JPY',
         latestQuarter: {
-            period: 'FY2026 Q3(估)', calendarPeriod: '2025年10-12月', filingDate: '2026-02-06',
-            revenue: { value: null, unit: '百万日元', yoy: null, label: 'DE Q3单季数据未获取', usdEquiv: null },
-            note: '集团九月累计¥3108亿,DE约43%'
+            period: 'FY2026 Q4', calendarPeriod: '2026年1-3月', filingDate: '2026-05-08',
+            revenue: { value: 182851, unit: '百万日元(Q4推算)', yoy: null, label: 'Q4集团营收≈¥1829亿(全年-前三季推算)', usdEquiv: '≈$1.22B' },
+            note: '全年已发布,Q4从¥4937亿-前三季¥3108亿推算'
         },
         fullYear: {
-            period: 'FY2026九月累计(估)', filingDate: '2026-02-06', status: '九月累计估算',
-            revenue: { value: 310829, unit: '百万日元(集团九月累计)', yoy: 22.8, label: '集团九月累计¥3108亿(+22.8%)', usdEquiv: '≈$20.8B' },
-            deRevenue: { value: 133700, unit: '百万日元(DE估)', yoy: 30, label: 'DE九月累计≈¥1337亿(估)' },
-            operatingProfit: { value: 86700, unit: '百万日元(集团)', yoy: 45.5, label: '集团九月累计营业利润¥867亿' },
-            note: '寂静岭2 Remake出货200万+,合金装备Δ为下一重磅'
+            period: 'FY2026全年(已发布)', filingDate: '2026-05-08', status: '已发布(连续3年历史新高)',
+            revenue: { value: 493680, unit: '百万日元(全年)', yoy: 17.1, label: '集团全年营收¥4937亿(+17.1%,≈$3.14B)', usdEquiv: '≈$3.14B' },
+            operatingProfit: { value: 135900, unit: '百万日元(全年)', yoy: 33.3, label: '集团全年营业利润¥1359亿(+33.3%)', usdEquiv: '≈$909M' },
+            operatingMargin: { value: 27.5, label: '集团全年营业利润率27.5%' },
+            netIncome: { value: 100000, unit: '百万日元(全年)', yoy: 33.9, label: '归母净利润¥1000亿(+33.9%,首次突破千亿)' },
+            note: '连续第3年创历史新高,营收/营业利润/净利润均创纪录,所有业务板块表现强劲'
         },
         companyOverall: {
-            totalRevenue: { value: 310829, unit: '百万日元(九月累计)', yoy: 22.8, label: '集团九月累计营收', source: 'Konami FY2025 Q3 Results (2025/02/06)' },
-            totalOperatingProfit: { value: 86700, unit: '百万日元(九月累计)', yoy: 45.5, label: '集团九月累计营业利润', source: 'Konami FY2025 Q3 Results (2025/02/06)' },
-            totalOperatingMargin: { value: 27.9, label: '集团九月累计利润率' },
-            note: '科乐美收入组成：数字娱乐(游戏)约43%、健身俱乐部约33%、游戏&系统约24%。九月累计总销售¥3108亿(+22.8%)，营业利润¥867亿(+45.5%)'
+            totalRevenue: { value: 493680, unit: '百万日元(全年)', yoy: 17.1, label: '集团全年营收¥4937亿(+17.1%,创纪录)', source: 'Konami FY2026 Full Year Results (2026/05/08)' },
+            totalOperatingProfit: { value: 135900, unit: '百万日元', yoy: 33.3, label: '集团全年营业利润¥1359亿(+33.3%,创纪录)' },
+            totalOperatingMargin: { value: 27.5, label: '集团全年营业利润率' },
+            note: '科乐美FY2026(2025.4-2026.3): 营收¥4937亿(+17.1%),净利润首次突破¥1000亿(+33.9%),连续3年创历史新高。DE板块预计¥3480亿收入+¥1225亿利润(FY27指引)。'
         },
         financials: {
-            revenue: { value: 133700, unit: '百万日元(九月累计DE估)', yoy: 30, label: 'DE九月累计营收(估)', source: 'Konami FY2025 Q3推算(DE占比约43%)', usdEquiv: '≈$894M' },
-            operatingProfit: { value: 40000, unit: '百万日元(九月累计DE估)', yoy: 35, label: 'DE营业利润(估)', usdEquiv: '≈$268M' },
-            operatingMargin: { value: 29.9, label: 'DE营业利润率(估)' },
-            segmentRevenuePct: { value: 43.0, label: '占集团营收比例(估)' },
+            revenue: { value: 493680, unit: '百万日元(全年)', yoy: 17.1, label: '集团全年营收(连续3年创纪录)', source: 'Konami FY2026 Full Year Results (2026/05/08)', usdEquiv: '≈$3.14B' },
+            operatingProfit: { value: 135900, unit: '百万日元(全年)', yoy: 33.3, label: '集团全年营业利润(+33.3%创纪录)' },
+            operatingMargin: { value: 27.5, label: '集团全年营业利润率' },
+            segmentRevenuePct: { value: 100, label: '集团整体(DE+健身+博彩)' },
         },
         gameMetrics: {
-            eFootballMAU: { value: 65, unit: '百万(注册)', label: 'eFootball全球注册' },
-            silentHill2Sales: { value: 2, unit: '百万套+', label: '寂静岭2重制版累计出货', source: 'Konami IR (2025/02/06)' },
-            pcConsoleGrowth: { value: 30, unit: '%(估)', label: 'PC/主机收入增长(估)' },
+            eFootballContribution: { value: null, unit: '', label: 'eFootball持续贡献稳定流水' },
+            yugiohMasterDuel: { value: null, unit: '', label: '游戏王Master Duel全球运营' },
+            silentHill2Impact: { value: null, unit: '', label: '寂静岭2重制版长尾贡献' },
+            metalGearDelta: { value: null, unit: '', label: '合金装备Δ(MGS Delta)已发售' },
+            dividendIncrease: { value: 190.5, unit: '日元/股', label: '年度股息190.5日元(派息率30%+)' },
         },
-        keyProducts: ['eFootball', '游戏王', '寂静岭2 Remake', '合金装备系列'],
+        keyProducts: ['eFootball', '游戏王Master Duel', '寂静岭2 Remake', '合金装备Δ', '恶魔城：贝尔蒙特之血', '桃太郎电铁2'],
         analysis: {
-            performance: '集团九月累计总销售¥3108亿(+22.8%)，营业利润¥867亿(+45.5%)，利润率高达27.9%。业绩大幅增长主因《寂静岭2 Remake》商业成功（出货超200万套）以及健身俱乐部和博彩业务强劲。数字娱乐板块受益于PC/主机游戏增长。',
-            strategy: '科乐美重新拥抱3A开发，《寂静岭2 Remake》商业口碑双收，验证经典IP复活策略。eFootball持续贡献稳定流水。',
-            outlook: '全年业绩有望创历史新高。2025年《合金装备Δ》为最大看点，更多经典IP复活项目在管线中。',
-            newProducts: '《合金装备Δ：食蛇者》2025年；《寂静岭f》开发中；《恶魔城》新项目传闻。'
+            performance: '🔥FY2026(2025.4-2026.3)连续第3年创历史新高: 营收¥4937亿(+17.1%,≈$3.14B),营业利润¥1359亿(+33.3%),归母净利润首次突破¥1000亿(+33.9%)(What)。所有业务板块均增长——数字娱乐受寂静岭2 Remake+合金装备Δ驱动,健身俱乐部持续扩张,博彩系统全球需求旺盛(Why)。营业利润率27.5%为日本游戏公司顶级水平,经典IP复活战略全面成功(So What)。',
+            strategy: '经典IP全面复活战略——寂静岭2 Remake商业口碑双收→合金装备Δ(食蛇者)→恶魔城新作,已形成完整复活管线。eFootball+游戏王维持稳定GaaS收入。健身俱乐部和博彩业务多元化降低游戏周期风险。',
+            outlook: 'FY2027展望: DE板块预计收入¥3480亿+营业利润¥1225亿。年度股息提升至190.5日元(派息率30%+)。恶魔城:贝尔蒙特之血+寂静岭f+桃太郎电铁2+Metal Gear Δ续作为管线核心。',
+            newProducts: '《恶魔城：贝尔蒙特之血》2026年；《寂静岭f》开发中；《桃太郎电铁2》；eFootball持续更新；更多经典IP复活项目。'
         },
         dataSources: [
-            { type: '季度财报(估)', name: 'Konami FY2026 Q3估算(基于FY2025 Q3+MGS Delta贡献)', date: '2026-02-06', url: 'https://www.konami.com/ir/en/ir-data/statements.html' }
+            { type: '年度财报', name: 'Konami FY2026 Full Year Financial Results', date: '2026-05-08', url: 'https://www.konami.com/ir/en/ir-data/statements.html' },
+            { type: '财报说明', name: 'FY2026 Financial Results Presentation', date: '2026-05-08', url: 'https://www.konami.com/ir/en/ir-data/meeting/2026/en0508_7bs3e2.pdf' },
+            { type: '行业报道', name: 'Kantenna: Konami Posts Record Profit + Massive 2026 Lineup', date: '2026-05-10', url: 'https://kantenna.com/topic/konami-record-profit-fy2026-castlevania-silent-hill-mgs-lineup' }
         ],
-        filingDate: '2026-02-06',
-        filingType: '季度财报(九个月累计,估算)',
+        filingDate: '2026-05-08',
+        filingType: '年度财报(全年)',
         filingUrl: 'https://www.konami.com/ir/en/ir-data/statements.html'
     },
     {
@@ -841,51 +852,53 @@ const earningsCompanies = [
         logo: '🦔',
         color: '#0060A8',
         segment: 'Entertainment Contents',
-        fiscalPeriod: 'FY2026 Q3 九个月累计(2025年4-12月,估)',
+        fiscalPeriod: 'FY2026 全年 (2025年4月-2026年3月)',
         currency: 'JPY',
         latestQuarter: {
-            period: 'FY2026 Q3', calendarPeriod: '2025年10-12月', filingDate: '2026-03-09',
-            revenue: { value: null, unit: '百万日元', yoy: null, label: 'EC Q3单季数据待确认', usdEquiv: null },
-            note: 'FY26Q3(2026/03/09发布)EC数据待确认'
+            period: 'FY2026 Q4', calendarPeriod: '2026年1-3月', filingDate: '2026-05-12',
+            revenue: { value: 152268, unit: '百万日元(Q4推算)', yoy: null, label: 'Q4集团营收≈¥1523亿(全年-前三季推算)', usdEquiv: '≈$1.02B' },
+            note: '全年已发布,Q4从¥4875亿-前三季¥3352亿推算'
         },
         fullYear: {
-            period: 'FY2025全年', filingDate: '2025-05-12', status: '已发布(上一完整财年)',
-            revenue: { value: 428900, unit: '百万日元(集团全年)', yoy: -8.5, label: '集团全年净销售¥4289亿', usdEquiv: '≈$28.7B' },
-            ecRecurringProfit: { value: 41800, unit: '百万日元', yoy: 35.7, label: '娱乐内容经常利润¥418亿(+35.7%)' },
-            note: '整体下滑因博彩机器周期性因素,核心游戏业务强劲'
+            period: 'FY2026全年(已发布)', filingDate: '2026-05-12', status: '已发布(创纪录营收但净亏损)',
+            revenue: { value: 487500, unit: '百万日元(全年)', yoy: 13.7, label: '集团全年净销售¥4875亿(+13.7%,创纪录≈$3.1B)', usdEquiv: '≈$3.1B' },
+            operatingProfit: { value: null, unit: '百万日元(全年)', yoy: -2, label: '集团全年营业利润下滑约2%(特殊损失前)' },
+            ecRevenue: { value: 326600, unit: '百万日元', label: 'EC板块营收¥3266亿(≈$2.07B)' },
+            ecOperatingProfit: { value: 32400, unit: '百万日元', label: 'EC板块营业利润¥324亿(≈$205M,下滑)' },
+            netLoss: { value: -5700, unit: '百万日元', label: '净亏损¥57亿(≈-$31.6M,11年来首次)' },
+            note: '创纪录营收¥4875亿(+13.7%),但Rovio减值¥588亿+Super Game取消导致净亏损¥57亿'
         },
         companyOverall: {
-            totalRevenue: { value: 428900, unit: '百万日元(全年)', yoy: -8.5, label: '集团全年净销售额', source: 'Sega Sammy FY2025 Full Year Results (2025/05/12)' },
-            totalOperatingProfit: { value: 48100, unit: '百万日元(全年)', yoy: -16.8, label: '集团全年营业利润', source: 'Sega Sammy FY2025 Full Year Results (2025/05/12)' },
-            totalOperatingMargin: { value: 11.2, label: '集团全年利润率' },
-            note: '世嘉萨米FY2025全年净销售¥4289亿(-8.5%)，营业利润¥481亿(-16.8%)。娱乐内容板块逆势增长。'
+            totalRevenue: { value: 487500, unit: '百万日元(全年)', yoy: 13.7, label: '集团全年净销售¥4875亿(+13.7%,创纪录)', source: 'Sega Sammy FY2026 Full Year Results (2026/05/12)' },
+            netLoss: { value: -5700, unit: '百万日元', label: '净亏损¥57亿(Rovio减值导致)' },
+            note: '世嘉萨米FY2026(2025.4-2026.3): 营收¥4875亿(+13.7%)创历史新高,但Rovio Entertainment减值¥588亿(≈$200M)+Super Game项目取消导致11年来首次净亏损¥57亿。EC板块营收¥3266亿但营业利润下滑。FY2027预计营收¥5100亿。'
         },
         financials: {
-            revenue: { value: 41800, unit: '百万日元(全年EC)', yoy: 35.7, label: '娱乐内容全年经常利润', source: 'Sega Sammy FY2025 Results / GamesIndustry.biz', usdEquiv: '≈$280M' },
-            operatingProfit: { value: null, unit: '百万日元', yoy: null, label: '娱乐内容营业利润(未单独披露)' },
-            operatingMargin: { value: null, label: '娱乐内容营业利润率' },
-            segmentRevenuePct: { value: 58, label: '娱乐内容占集团比例(估)' },
-            ecRecurringProfit: { value: 41800, unit: '百万日元(全年)', yoy: 35.7, label: '娱乐内容经常利润(¥308亿→¥418亿)', source: 'GamesIndustry.biz / Sega Sammy IR' },
+            revenue: { value: 326600, unit: '百万日元(EC全年)', yoy: null, label: 'EC板块全年营收¥3266亿(≈$2.07B)', source: 'Sega Sammy FY2026 Full Year Results (2026/05/12)', usdEquiv: '≈$2.07B' },
+            operatingProfit: { value: 32400, unit: '百万日元(EC全年)', yoy: null, label: 'EC板块营业利润¥324亿(≈$205M,下滑)' },
+            operatingMargin: { value: 9.9, label: 'EC板块营业利润率(下滑)' },
+            segmentRevenuePct: { value: 67.0, label: 'EC占集团营收比例' },
         },
         gameMetrics: {
-            sonicMovieBoxOffice: { value: 490, unit: '百万美元+', label: '索尼克3电影全球票房', source: 'Box Office Mojo' },
-            keyTitlesSales: { value: null, unit: '', label: 'Sonic x Shadow Generations、如龙海盗、Metaphor表现良好' },
-            pcRevenuePct: { value: 42, unit: '%', label: 'PC端收入占比(估)' },
+            rovioImpairment: { value: 58800, unit: '百万日元', label: 'Rovio Entertainment减值¥588亿(≈$200M)', source: 'Sega Sammy FY2026 Results' },
+            superGameCancelled: { value: true, unit: '', label: 'Super Game大型项目取消(额外减值)' },
+            f2pGrowth: { value: null, unit: '%', label: 'F2P收入增长(如龙/索尼克等)' },
+            fy27Forecast: { value: 510000, unit: '百万日元', label: 'FY2027营收预测¥5100亿' },
         },
         keyProducts: ['索尼克系列', '如龙/审判系列', '女神异闻录系列', '全面战争', 'Metaphor: ReFantazio'],
         analysis: {
-            performance: 'FY2025全年集团净销售¥4289亿(-8.5%)，营业利润¥481亿(-16.8%)，但娱乐内容板块逆势增长：经常利润从¥308亿大增至¥418亿(+35.7%)。受益于索尼克3电影票房超$4.9亿、高利润率的旧作长尾销售、DLC和IP授权收入增长。《Sonic x Shadow Generations》《Metaphor: ReFantazio》《如龙：海盗》表现良好。',
-            strategy: '索尼克电影宇宙IP协同策略成效卓著，电影带动游戏销量。如龙/女神异闻录PC端推广持续扩大用户群。"Super Game"战略聚焦大型跨平台IP。',
-            outlook: '整体业绩下滑主因博彩机器业务周期性因素，核心游戏业务强劲。2025年多款核心IP续作在管线中。',
-            newProducts: '《女神异闻录》新作；《如龙》新项目；索尼克新游戏；全面战争新作。'
+            performance: 'FY2026(2025.4-2026.3)集团营收¥4875亿(+13.7%)创历史新高,但特殊损失导致11年来首次净亏损¥57亿(What)。核心矛盾: 主营业务持续增长(EC板块¥3266亿,F2P和索尼克IP表现良好),但Rovio Entertainment产生¥588亿(≈$200M)减值+Super Game大型项目取消的额外减值拖累底线(Why)。EC板块营业利润¥324亿(≈$205M)较去年的¥259M下降,反映了前期投入和内容成本上升(So What)。',
+            strategy: '战略重大调整: ①Rovio减值标志着移动游戏收购战略失败的财务出清 ②Super Game项目取消反映管理层放弃高风险大型跨平台项目 ③转向"Mainstay IP"战略——聚焦索尼克/如龙/女神异闻录等成熟IP的稳健增长。',
+            outlook: 'FY2027预测营收¥5100亿(+4.6%),管理层预期利润恢复。Rovio减值为一次性出清,核心业务增长趋势不变。索尼克电影宇宙+如龙新作+全面战争PC持续驱动。',
+            newProducts: '《如龙》新作；索尼克新项目；《女神异闻录》后续；全面战争新作；Metaphor续作。'
         },
         dataSources: [
-            { type: '年度财报', name: 'Sega Sammy FY2025 Full Year Results', date: '2025-05-12', url: 'https://www.segasammy.co.jp/en/ir/library/presentation/' },
-            { type: '行业报道', name: 'GamesIndustry.biz FY2025 Analysis', date: '2025-05-12', url: 'https://www.gamesindustry.biz/falls-in-segas-fy2025-revenue-cushioned-by-strong-performance-in-game-and-entertainment-division' },
-            { type: '最新', name: 'Sega Sammy FY2026 Q3决算资料已于2026/03/09上传', date: '2026-03-09', url: 'https://www.segasammy.co.jp/ja/release/82741/' }
+            { type: '年度财报', name: 'Sega Sammy FY2026 Full Year Results', date: '2026-05-12', url: 'https://www.segasammy.co.jp/en/ir/library/presentation/' },
+            { type: '行业报道', name: 'GamesIndustry.biz: Sega reports $31.6m net loss in FY26', date: '2026-05-12', url: 'https://www.gamesindustry.biz/sega-reports-316m-net-loss-during-fy26-cancels-super-game-project-amid-strategic-pivot' },
+            { type: '行业分析', name: 'Kantenna: SEGA Sammy Posts First Net Loss in 11 Years', date: '2026-05-13', url: 'https://kantenna.com/topic/sega-sammy-fy2026-earnings-rovio-impairment-net-loss-mainstay-ip-shift' }
         ],
-        filingDate: '2026-03-09',
-        filingType: '季度财报(Q3,已发布待确认具体数据)',
+        filingDate: '2026-05-12',
+        filingType: '年度财报(全年)',
         filingUrl: 'https://www.segasammy.co.jp/en/ir/library/presentation/'
     },
     {
@@ -899,64 +912,58 @@ const earningsCompanies = [
         logo: '🎯',
         color: '#1B1B1B',
         segment: '整体（游戏专用）',
-        fiscalPeriod: '2025年Q4 + 全年 (2025年1-12月)',
+        fiscalPeriod: '2026年Q1 (2026年1-3月)',
         currency: 'KRW',
         latestQuarter: {
-            period: '2025 Q4', calendarPeriod: '2025年10-12月', filingDate: '2026-02-09',
-            revenue: { value: 919700, unit: '百万韩元', yoy: 48.9, label: 'Q4营收₩9197亿(+48.9%)', usdEquiv: '≈$666M' },
-            operatingProfit: { value: 2400, unit: '百万韩元', yoy: null, label: 'Q4营业利润₩24亿(含一次性员工福利支出₩816亿)' },
+            period: '2026 Q1', calendarPeriod: '2026年1-3月', filingDate: '2026-04-30',
+            revenue: { value: 1371400, unit: '百万韩元', yoy: 56.9, label: 'Q1营收₩1.3714万亿(+56.9%,季度历史新高)', usdEquiv: '≈$993M' },
+            operatingProfit: { value: 561600, unit: '百万韩元', yoy: 22.8, label: 'Q1营业利润₩5616亿(+22.8%)' },
+            operatingMargin: { value: 40.9, label: 'Q1营业利润率40.9%' },
             gameMetrics: {
-                inZOISales: { value: 1, unit: '百万套+', label: 'inZOI累计销量超100万套(3月发售)' },
-                pubgIPRecord: { value: true, unit: '', label: 'PUBG IP年度最高营收纪录(+16%)' }
+                pubgIPQuarterlyRecord: { value: 1000000, unit: '百万韩元+', label: 'PUBG IP单季首破₩1万亿(+24% YoY)' },
+                pubgMobileGrowth: { value: null, unit: '%', label: 'PUBG Mobile及和平精英强劲增长' },
+                inZOIUpdate: { value: null, unit: '', label: 'inZOI持续更新和内容迭代' }
             }
         },
         fullYear: {
             period: '2025年全年(1-12月)', filingDate: '2026-02-09', status: '已发布',
             revenue: { value: 3326600, unit: '百万韩元', yoy: 22.8, label: '2025全年₩3.3266万亿(+22.8%,创历史新高)', usdEquiv: '≈$2.41B' },
             operatingProfit: { value: 1054400, unit: '百万韩元', label: '全年营业利润₩1.0544万亿' },
-            breakdown: {
-                pc: { value: 1184600, unit: '百万韩元', label: 'PC平台₩1.1846万亿' },
-                mobile: { value: 1740700, unit: '百万韩元', label: '移动端₩1.7407万亿' },
-                console: { value: 42800, unit: '百万韩元', label: '主机₩428亿' },
-                other: { value: 358500, unit: '百万韩元', label: '其他₩3585亿' }
-            },
             note: '首次突破₩3万亿大关,PUBG IP年度最高+inZOI百万销量'
         },
         companyOverall: {
-            totalRevenue: { value: 3326600, unit: '百万韩元(全年)', yoy: 22.8, label: '2025全年营收₩3.3266万亿(+22.8%)', source: 'Krafton FY2025 Earnings Release (2026/02/09)' },
-            totalOperatingProfit: { value: 1054400, unit: '百万韩元(全年)', label: '全年营业利润₩1.0544万亿' },
-            note: 'Q4营业利润₩24亿偏低,主因一次性员工福利基金支出₩816亿(未来四年)'
+            totalRevenue: { value: 1371400, unit: '百万韩元(Q1)', yoy: 56.9, label: 'Q1总营收₩1.3714万亿(+56.9%,季度新高)', source: 'Krafton Q1 2026 Earnings Release (2026/04/30)' },
+            totalOperatingProfit: { value: 561600, unit: '百万韩元(Q1)', yoy: 22.8, label: 'Q1营业利润₩5616亿(+22.8%)' },
+            note: 'Krafton Q1 2026: 创季度营收历史新高₩1.3714万亿(+56.9%),PUBG IP单季首破₩1万亿(+24%),移动端持续强劲增长。'
         },
         financials: {
-            revenue: { value: 919700, unit: '百万韩元(Q4)', yoy: 48.9, label: 'Q4营收(inZOI+PUBG双驱动)', source: 'Krafton FY2025 Q4 Earnings Release (2026/02/09)', usdEquiv: '≈$666M' },
-            operatingProfit: { value: 2400, unit: '百万韩元(Q4)', yoy: null, label: 'Q4营业利润(一次性支出₩816亿)' },
-            operatingMargin: { value: 0.3, label: 'Q4营业利润率(一次性支出影响)' },
+            revenue: { value: 1371400, unit: '百万韩元(Q1)', yoy: 56.9, label: 'Q1营收(PUBG IP驱动创季度新高)', source: 'Krafton Q1 2026 Earnings Release (2026/04/30)', usdEquiv: '≈$993M' },
+            operatingProfit: { value: 561600, unit: '百万韩元(Q1)', yoy: 22.8, label: 'Q1营业利润₩5616亿(+22.8%)' },
+            operatingMargin: { value: 40.9, label: 'Q1营业利润率(优秀)' },
             segmentRevenuePct: { value: 100, label: '游戏占比' },
-            fullYearRevenue: { value: 3326600, unit: '百万韩元', yoy: 22.8, label: '全年营收₩3.3266万亿(+22.8%创新高)' },
-            fullYearOperatingProfit: { value: 1054400, unit: '百万韩元', label: '全年营业利润₩1.0544万亿' },
-            fullYearOperatingMargin: { value: 31.7, label: '全年营业利润率' },
+            fullYearRevenue: { value: 3326600, unit: '百万韩元', yoy: 22.8, label: '2025全年营收₩3.3266万亿(+22.8%创新高)' },
         },
         gameMetrics: {
-            pubgIPRecord: { value: true, unit: '', label: 'PUBG IP年度最高营收(+16% YoY)', source: 'Krafton FY2025 Earnings' },
-            pubgMobilePaying: { value: 5, unit: '% YoY', label: 'PUBG Mobile付费用户增长+5%' },
-            bgmiPayingGrowth: { value: 27, unit: '% YoY', label: 'BGMI付费用户增长+27%' },
-            inZOISales: { value: 1, unit: '百万套+', label: 'inZOI累计销量超100万套(3月发售)' },
-            porscheCollab: { value: true, unit: '', label: '11月保时捷联名为PUBG历史最强超跑合作' },
+            pubgIPQuarterlyRecord: { value: true, unit: '', label: 'PUBG IP单季首破₩1万亿(+24% YoY)', source: 'Krafton Q1 2026 Earnings' },
+            pubgMobileStrong: { value: null, unit: '%', label: 'PUBG Mobile/和平精英移动端持续增长' },
+            inZOIProgress: { value: null, unit: '', label: 'inZOI持续内容更新和社区运营' },
+            aiGamingStrategy: { value: null, unit: '', label: 'AI游戏战略持续推进' },
+            shareholderReturn: { value: null, unit: '', label: '股东回报政策持续执行' },
         },
-        keyProducts: ['PUBG: Battlegrounds', 'PUBG Mobile', 'BGMI(印度)', 'inZOI', 'ARC Raiders(Nexon发行)'],
+        keyProducts: ['PUBG: Battlegrounds', 'PUBG Mobile', '和平精英(Peacekeeper Elite)', 'BGMI(印度)', 'inZOI'],
         analysis: {
-            performance: '2025全年营收₩3.3266万亿(+22.8%,≈$24.1亿)首破₩3万亿创历史新高,营业利润₩1.0544万亿。Q4营收₩9197亿(+48.9%)表现强劲,但营业利润仅₩24亿,主因一次性计提未来四年员工福利基金₩816亿(剔除后Q4 OP约₩840亿)。PUBG IP实现年度最高营收(+16%),11月保时捷联名为历史最强超跑合作。BGMI(印度)付费用户+27%巩固国民游戏地位。inZOI(3月发售)累计销量破百万。',
-            strategy: 'PUBG 2.0计划持续推进(UGC+UE5升级)。IP联名策略(K-pop/保时捷等奢侈品牌)驱动用户互动和ARPU提升。inZOI验证了生活模拟品类拓展。直接发行Real Cricket拓展印度市场。移动端(₩1.74万亿)仍为最大收入来源,PC端(₩1.18万亿)增速更快。',
-            outlook: '2026年PUBG持续进化+inZOI后续更新+ARC Raiders(Nexon发行)三引擎驱动。管理层目标2027年前拥有3个百万DAU级产品。需关注一次性支出后常态化利润率回归。',
-            newProducts: 'inZOI持续更新(大型DLC)；PUBG 2.0(UE5)；新IP开发中；Real Cricket拓展印度。'
+            performance: '🔥Q1 2026创季度营收历史新高₩1.3714万亿(+56.9% YoY,≈$9.93亿),营业利润₩5616亿(+22.8%),利润率40.9%(What)。核心驱动: PUBG IP单季首次突破₩1万亿(+24%),移动端(PUBG Mobile+和平精英+BGMI)持续强劲增长,PC/主机端PUBG: Battlegrounds活跃度维持(Why)。营业利润率40.9%为全球游戏公司顶级水平,证明PUBG作为GaaS的超强商业化能力和运营效率(So What)。',
+            strategy: 'PUBG 2.0战略持续推进(UGC+UE5),IP联名策略(K-pop/奢侈品牌)驱动ARPU。inZOI作为生活模拟品类拓展方向持续迭代。AI游戏战略为中长期布局。直接发行Real Cricket拓展印度市场。',
+            outlook: 'Q1的强劲表现为全年定下高基调。下半年催化剂: PUBG持续内容更新+inZOI大型DLC+AI驱动的新游戏体验。管理层目标2027年前拥有3个百万DAU级产品。',
+            newProducts: 'inZOI持续更新(大型DLC)；PUBG 2.0(UE5)；AI游戏新IP开发中；Real Cricket拓展印度。'
         },
         dataSources: [
-            { type: 'Q4+年度财报', name: 'Krafton FY2025 & Q4 Earnings Release', date: '2026-02-09', url: 'https://www.krafton.com/en/news/press/krafton-records-annual-revenue-of-krw-3-3266-trillion-in-2025/' },
-            { type: '行业报道', name: 'Outlook Respawn: Krafton Revenue Surpasses $2 Billion', date: '2026-02-10', url: 'https://respawn.outlookindia.com/gaming/gaming-news/krafton-records-revenue-above-2-billion-in-2025' }
+            { type: 'Q1季度财报', name: 'Krafton Q1 2026 Earnings Release', date: '2026-04-30', url: 'https://www.krafton.com/en/ir/investor-events/announce/' },
+            { type: '行业报道', name: 'Seoul Economic Daily: Krafton Q1 Operating Profit Rises 22.8%', date: '2026-04-30', url: 'https://en.sedaily.com/technology/2026/04/30/krafton-q1-operating-profit-rises-228-percent-as-revenue' }
         ],
-        filingDate: '2026-02-09',
-        filingType: '季度+年度财报(Q4+全年)',
-        filingUrl: 'https://www.krafton.com/en/ir/archive/'
+        filingDate: '2026-04-30',
+        filingType: '季度财报(Q1)',
+        filingUrl: 'https://www.krafton.com/en/ir/investor-events/announce/'
     },
     {
         id: 'roblox',
@@ -1242,13 +1249,13 @@ const quarterlyRevenueComparison = [
     },
     {
         name: 'Krafton',
-        revenue: 631, // ₩8706亿 / 1380
+        revenue: 993, // Q1 2026: ₩1.3714万亿 / 1380
         currency: 'USD',
-        period: '2025 Q3 (7-9月)',
-        note: 'Q3单季₩8706亿≈$6.31亿(+21%,PUBG PC创纪录)',
+        period: '2026 Q1 (1-3月)',
+        note: 'Q1营收₩1.3714万亿≈$9.93亿(+56.9%,季度历史新高,PUBG IP单季破万亿)',
         color: '#1B1B1B',
         dataGrade: 'A',
-        yoy: 21
+        yoy: 56.9
     },
     {
         name: 'Embracer',
@@ -1282,48 +1289,44 @@ const quarterlyRevenueComparison = [
         yoy: 2.8
     },
     {
-        name: '万代南梦宫(DE)',
-        revenue: null,
+        name: '万代南梦宫',
+        revenue: 9018, // FY2026全年集团净销售 ¥1.348万亿 / 149.5
         currency: 'USD',
-        period: 'FY26 Q3 (10-12月)',
-        note: '⚠ FY26Q3已发布(2026/02/05)但DE单季数据未获取',
+        period: 'FY26全年 (2025年4月-2026年3月)',
+        note: '集团全年¥1.348万亿≈$90.2亿(+8.6%创纪录,Elden Ring+高达+玩具驱动)',
         color: '#FF1D25',
-        dataGrade: 'X',
-        yoy: null,
-        caveat: '整体估算数据不可靠,标记为X暂无'
+        dataGrade: 'A',
+        yoy: 8.6
     },
     {
-        name: 'Square Enix(DE)',
-        revenue: null,
+        name: 'Square Enix',
+        revenue: 1991, // FY2026全年集团净销售 ¥2977亿 / 149.5
         currency: 'USD',
-        period: 'FY26 Q3 (10-12月)',
-        note: '⚠ DE单季数据未获取,九月累计¥2485亿集团数据可用',
+        period: 'FY26全年 (2025年4月-2026年3月)',
+        note: '集团全年¥2977亿≈$19.9亿(-8.3%但营业利润+34.9%,量减质升)',
         color: '#ED1C24',
-        dataGrade: 'X',
-        yoy: null,
-        caveat: '需从九月累计拆分单季度'
+        dataGrade: 'A',
+        yoy: -8.3
     },
     {
-        name: '科乐美(DE)',
-        revenue: null,
+        name: '科乐美',
+        revenue: 3302, // FY2026全年集团营收 ¥4937亿 / 149.5
         currency: 'USD',
-        period: 'FY26 Q3 (10-12月)',
-        note: '⚠ DE单季数据未获取',
+        period: 'FY26全年 (2025年4月-2026年3月)',
+        note: '集团全年¥4937亿≈$33.0亿(+17.1%,连续3年创纪录,营业利润+33.3%)',
         color: '#FFC300',
-        dataGrade: 'X',
-        yoy: null,
-        caveat: '集团九月累计¥3108亿,DE约43%'
+        dataGrade: 'A',
+        yoy: 17.1
     },
     {
         name: '世嘉萨米(EC)',
-        revenue: null,
+        revenue: 2184, // EC板块营收 ¥3266亿 / 149.5
         currency: 'USD',
-        period: 'FY26 Q3 (10-12月)',
-        note: '⚠ FY26Q3(2026/03/09发布)EC数据待确认',
+        period: 'FY26全年 (2025年4月-2026年3月)',
+        note: 'EC板块¥3266亿≈$21.8亿;集团¥4875亿(+13.7%创纪录但净亏损¥57亿/Rovio减值)',
         color: '#0060A8',
-        dataGrade: 'X',
-        yoy: null,
-        caveat: 'Q3已发布待获取具体EC数据'
+        dataGrade: 'A',
+        yoy: 13.7
     },
 ];
 
