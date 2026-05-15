@@ -243,14 +243,14 @@ const earningsCompanies = [
         logo: '🐧',
         color: '#25A2E0',
         segment: '增值服务 - 游戏',
-        fiscalPeriod: '2025年Q4 (2025年10-12月)',
+        fiscalPeriod: '2026年Q1 (2026年1-3月)',
         currency: 'CNY',
         dataIntegrity: 'A',
         latestQuarter: {
-            period: '2025年Q4', calendarPeriod: '2025年10-12月', filingDate: '2026-03-18',
-            revenue: { value: 59300, unit: '百万人民币(Q4游戏)', yoy: 21, label: 'Q4游戏总收入(国内382亿+国际211亿)', usdEquiv: '≈$8.18B' },
-            gameMetrics: { domesticGames: { value: 382, unit: '亿', yoy: 15 }, internationalGames: { value: 211, unit: '亿', yoy: 32 } },
-            companyRevenue: { value: 194370, unit: '百万人民币', yoy: 13, label: 'Q4总营收¥1943.7亿' }
+            period: '2026年Q1', calendarPeriod: '2026年1-3月', filingDate: '2026-05-13',
+            revenue: { value: 64200, unit: '百万人民币(Q1游戏)', yoy: 8, label: 'Q1游戏总收入¥642亿(国内454亿+6%,海外188亿+13%)', usdEquiv: '≈$8.86B' },
+            gameMetrics: { domesticGames: { value: 454, unit: '亿', yoy: 6 }, internationalGames: { value: 188, unit: '亿', yoy: 13 } },
+            companyRevenue: { value: 196458, unit: '百万人民币', yoy: 9, label: 'Q1总营收¥1964.58亿(+9%)' }
         },
         fullYear: {
             period: '2025年全年', filingDate: '2026-03-18', status: '已发布',
@@ -259,34 +259,37 @@ const earningsCompanies = [
             gameBreakdown: { domestic: { value: 1642, unit: '亿', yoy: 18 }, international: { value: 774, unit: '亿', yoy: 33 } }
         },
         companyOverall: {
-            totalRevenue: { value: 194370, unit: '百万人民币(Q4)', yoy: 13, label: 'Q4总营收¥1943.7亿', source: '腾讯2025Q4及全年业绩公告(2026/03/18)' },
-            nonIfrsOp: { value: 69520, unit: '百万人民币(Q4)', yoy: 17, label: 'Q4 Non-IFRS经营利润¥695.2亿' },
-            note: '全年营收¥7517.7亿(+14%)，全年游戏¥2416亿(+22%)，国际游戏年收入首破$100亿'
+            totalRevenue: { value: 196458, unit: '百万人民币(Q1)', yoy: 9, label: 'Q1总营收¥1964.58亿(+9%)', source: '腾讯2026Q1业绩公告(2026/05/13)' },
+            nonIfrsOp: { value: 75630, unit: '百万人民币(Q1)', yoy: 9, label: 'Q1 Non-IFRS经营利润¥756.3亿(+9%)' },
+            grossProfit: { value: 111265, unit: '百万人民币(Q1)', yoy: 11, label: 'Q1毛利¥1112.65亿(+11%,毛利率57%)' },
+            note: 'Q1总营收¥1965亿(+9%),毛利率57%(+1pt)。剔除AI新产品影响Non-IFRS OP同比+17%至¥844亿。自由现金流¥567亿。'
         },
         financials: {
-            revenue: { value: 59300, unit: '百万人民币(Q4游戏)', yoy: 21, label: 'Q4游戏总收入(国内382亿+国际211亿)', source: '腾讯2025Q4及全年业绩(2026/03/18)', usdEquiv: '≈$8.18B' },
+            revenue: { value: 64200, unit: '百万人民币(Q1游戏)', yoy: 8, label: 'Q1游戏总收入¥642亿(国内454+海外188)', source: '腾讯2026Q1业绩公告(2026/05/13)', usdEquiv: '≈$8.86B' },
             operatingProfit: { value: null, unit: '百万人民币', yoy: null, label: '游戏营业利润(未单独披露)' },
             operatingMargin: { value: null, label: '游戏利润率(未单独披露)' },
-            segmentRevenuePct: { value: 30.5, label: '游戏占Q4总营收比例' },
+            segmentRevenuePct: { value: 32.7, label: '游戏占Q1总营收比例' },
         },
         gameMetrics: {
-            domesticGames: { value: 382, unit: '亿人民币(Q4)', yoy: 15, label: 'Q4国内游戏收入', source: '腾讯2025Q4业绩公告' },
-            internationalGames: { value: 211, unit: '亿人民币(Q4)', yoy: 32, label: 'Q4国际游戏收入' },
-            fullYearGames: { value: 2416, unit: '亿人民币(全年)', yoy: 22, label: '2025全年游戏¥2416亿' },
+            domesticGames: { value: 454, unit: '亿人民币(Q1)', yoy: 6, label: 'Q1国内游戏收入¥454亿(+6%,春节递延影响)', source: '腾讯2026Q1业绩公告' },
+            internationalGames: { value: 188, unit: '亿人民币(Q1)', yoy: 13, label: 'Q1国际游戏收入¥188亿(+13%)' },
+            fullYearGames: { value: 2416, unit: '亿人民币(2025全年)', yoy: 22, label: '2025全年游戏¥2416亿' },
+            springFestivalDefer: { value: null, unit: '', label: '春节收入递延至Q2确认(国内+6%增速偏低的主因)' },
         },
         keyProducts: ['王者荣耀', 'PUBG Mobile', 'Valorant', 'League of Legends', '三角洲行动', 'Supercell旗下游戏', '无畏契约手游', '鸣潮', '和平精英'],
         analysis: {
-            performance: '🔥2025Q4总营收¥1943.7亿(+13%)，Q4游戏收入¥593亿：国内¥382亿(+15%)，国际¥211亿(+32%)。全年游戏收入¥2416亿(+22%)，其中国内¥1642亿(+18%)，国际¥774亿(+33%，首破$100亿)。全年总营收¥7517.7亿(+14%)。三角洲行动DAU破5000万。',
-            strategy: 'AI深度赋能核心业务。国际游戏通过Supercell+收购工作室(Techland)实现高速增长。2025年资本支出107亿美元加码AI/GPU投入。',
-            outlook: '国际游戏年化收入已超$100亿。AI投入持续加速商业化。管理层提示行业供给过剩，警惕数量泡沫。',
-            newProducts: '鸣潮持续更新；无畏契约手游；三角洲行动持续更新；Supercell新作；Level Infinite新项目。'
+            performance: '🔥2026Q1总营收¥1964.58亿(+9%),游戏收入¥642亿(国内¥454亿+6%,海外¥188亿+13%)(What)。国内游戏增速偏低(+6% vs 2025Q4+15%)主因春节收入递延至Q2确认,实际Gross Receipts增速更高;海外游戏+13%保持稳健增长(Why)。毛利¥1113亿(+11%),毛利率57%(+1pt),Non-IFRS OP¥756亿(+9%),剔除AI新产品投入后Non-IFRS OP+17%至¥844亿——核心业务盈利能力持续提升(So What)。',
+            strategy: '大幅加码AI投入: Q1资本开支+研发+营销超¥650亿,销售费用+44%。马化腾"漏船论"表露AI转型紧迫感。AI赋能核心游戏(王者荣耀/PUBG/三角洲行动)。国际游戏通过Supercell+Level Infinite双引擎增长。',
+            outlook: 'Q2将确认春节递延收入,国内游戏增速预计回升。AI投入短期压利润但长期提升效率。国际游戏年化已超$100亿。管理层提示AI是"必须投入的战略方向"。',
+            newProducts: '鸣潮持续更新；无畏契约手游；三角洲行动持续更新；AI驱动的新产品矩阵；Supercell新作。'
         },
         dataSources: [
-            { type: '季度+年度财报', name: '腾讯2025年Q4及全年业绩公告', date: '2026-03-18', url: 'https://www.tencent.com/en-us/investors/financial-releases.html' },
-            { type: '行业报道', name: '36氪/财经网/东方财富网多源验证', date: '2026-03-18', url: 'https://36kr.com/p/3728603827912329' }
+            { type: '季度财报', name: '腾讯2026年Q1业绩公告', date: '2026-05-13', url: 'https://www.tencent.com/en-us/investors/financial-releases.html' },
+            { type: '官方新闻稿', name: 'Tencent Announces 2026 First Quarter Results', date: '2026-05-13', url: 'https://static.www.tencent.com/uploads/2026/05/13/47382ae415a209fd161bc19a1f9b3704.pdf' },
+            { type: '行业报道', name: 'CNBC: Tencent sees boost from gaming, AI demand', date: '2026-05-13', url: 'https://www.cnbc.com/2026/05/13/tencent-q1-earnings-gaming-ai-demand-revenue-miss.html' }
         ],
-        filingDate: '2026-03-18',
-        filingType: '季度财报(Q4+全年)',
+        filingDate: '2026-05-13',
+        filingType: '季度财报(Q1)',
         filingUrl: 'https://www.tencent.com/en-us/investors/financial-releases.html'
     },
     {
@@ -1145,13 +1148,13 @@ const earningsCompanies = [
 const quarterlyRevenueComparison = [
     {
         name: '腾讯',
-        revenue: 8179, // ¥593亿游戏Q4 / 7.25
+        revenue: 8855, // ¥642亿游戏Q1 / 7.25
         currency: 'USD',
-        period: '2025 Q4 (10-12月)',
-        note: 'Q4游戏¥593亿(国内382+国际211)≈$81.8亿',
+        period: '2026 Q1 (1-3月)',
+        note: 'Q1游戏¥642亿(国内454+海外188)≈$88.6亿(+8%)',
         color: '#25A2E0',
         dataGrade: 'A',
-        yoy: 21
+        yoy: 8
     },
     {
         name: '索尼(G&NS)',
