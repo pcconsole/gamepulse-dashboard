@@ -2,8 +2,9 @@
 // 重点公司财报分析数据模块 V10 — 全部18家统一双模块(latestQuarter+fullYear)
 // 覆盖18家上市公司的游戏业务财务与运营数据
 // 数据来源：各公司IR页面/财报/press release + GamesIndustry.biz 验证
-// 更新日期: 2026-05-13
-// 本次更新: 索尼FY2026全年(G&NS¥4685.7亿,营业利润¥463.3亿创纪录,PS5出货93.6M) + 任天堂FY2026全年(净销售¥2.24万亿+98.6%创历史性突破,Switch2出货1986万台,马趴1470万套) + 卡普空FY2026全年(净销售¥1953亿+2.8%创历史新高,营业利润¥752亿连续13年增长,怪猎荒野1100万+生化危机安魂曲691万)
+// 更新日期: 2026-05-15
+// 本次更新: Nexon Q1 2026(5/14发布: 季度收入¥1522亿+34%创新高,营业利润¥582亿+40%,ARC Raiders 1600万+,MapleStory+42%,北美欧洲+309%,股票回购300亿)
+// 上次更新(5/13): 索尼FY2026全年 + 任天堂FY2026全年 + 卡普空FY2026全年
 //   重构范围: Sony/Microsoft/Nintendo/腾讯/网易/EA/Take-Two/Ubisoft/Nexon/
 //             万代南梦宫/Capcom/Square Enix/Konami/Sega/Krafton/Roblox/Unity/Embracer
 //   新增公司: Roblox(NYSE:RBLX)/Unity(NYSE:U)/Embracer(OMX:EMBRAC B) 加入earningsCompanies数组
@@ -538,17 +539,19 @@ const earningsCompanies = [
         logo: '🎲',
         color: '#0066B3',
         segment: '整体（游戏专用）',
-        fiscalPeriod: '2025年Q4 + 全年 (2025年1-12月)',
+        fiscalPeriod: '2026年Q1 (2026年1-3月)',
         currency: 'JPY',
         latestQuarter: {
-            period: '2025 Q4', calendarPeriod: '2025年10-12月', filingDate: '2026-02-12',
-            revenue: { value: 123600, unit: '百万日元', yoy: 55, label: 'Q4营收¥1236亿(+55%,ARC Raiders驱动创纪录)', usdEquiv: '≈$827M' },
-            operatingProfit: { value: 7200, unit: '百万日元', yoy: null, label: 'Q4营业利润¥72亿(递延ARC Raiders收入¥277亿影响)' },
-            netIncome: { value: 10900, unit: '百万日元', label: 'Q4净利润¥109亿' },
+            period: '2026 Q1', calendarPeriod: '2026年1-3月', filingDate: '2026-05-14',
+            revenue: { value: 152234, unit: '百万日元', yoy: 34, label: 'Q1营收¥1522亿(+34%,季度历史新高)', usdEquiv: '≈$1.02B' },
+            operatingProfit: { value: 58163, unit: '百万日元', yoy: 40, label: 'Q1营业利润¥582亿(+40%,季度历史新高)' },
+            netIncome: { value: 57225, unit: '百万日元', yoy: 118, label: 'Q1净利润¥572亿(+118%,翻倍)' },
+            operatingMargin: { value: 38.2, label: 'Q1营业利润率38.2%(vs去年Q1 36.5%)' },
             gameMetrics: {
-                arcRaidersSales: { value: 14, unit: '百万套', label: 'ARC Raiders累计销量1400万套' },
-                arcRaidersDeferred: { value: 27700, unit: '百万日元', label: 'Q4递延ARC Raiders收入¥277亿' },
-                mapleStoryGrowth: { value: 54, unit: '%', label: 'MapleStory系列Q4营收+54%' }
+                arcRaidersSales: { value: 16, unit: '百万套', label: 'ARC Raiders累计销量超1600万套' },
+                mapleStoryGrowth: { value: 42, unit: '%', label: 'MapleStory系列Q1营收+42% YoY' },
+                pcOnlineRevenue: { value: 116614, unit: '百万日元', label: 'PC Online¥1166亿(76.6%)' },
+                mobileRevenue: { value: 34668, unit: '百万日元', label: 'Mobile¥347亿(22.8%)' }
             }
         },
         fullYear: {
@@ -556,42 +559,44 @@ const earningsCompanies = [
             revenue: { value: 475500, unit: '百万日元', yoy: 6, label: '2025全年¥4755亿(+6%,创历史新高)', usdEquiv: '≈$31.8B' },
             operatingProfit: { value: 124000, unit: '百万日元', yoy: 0, label: '全年营业利润¥1240亿(持平)' },
             netIncome: { value: 92100, unit: '百万日元', yoy: -32, label: '全年净利润¥921亿(-32%)' },
-            note: 'ARC Raiders 1400万套驱动Q4大增55%,MapleStory创22年历史最高全年营收'
+            note: 'ARC Raiders 1600万+套驱动Q4大增55%,MapleStory创22年历史最高全年营收'
         },
         companyOverall: {
-            totalRevenue: { value: 123600, unit: '百万日元(Q4)', yoy: 55, label: 'Q4总营收¥1236亿', source: 'Nexon Q4 2025 Earnings Release (2026/02/12)' },
-            totalOperatingProfit: { value: 7200, unit: '百万日元(Q4)', yoy: null, label: 'Q4营业利润¥72亿' },
-            note: '全年营收¥4755亿(+6%)创新高,Q4递延ARC Raiders收入¥277亿(约一半将在2026Q1确认)'
+            totalRevenue: { value: 152234, unit: '百万日元(Q1)', yoy: 34, label: 'Q1总营收¥1522亿(+34%,季度新高)', source: 'Nexon Q1 2026 Earnings Release (2026/05/14)' },
+            totalOperatingProfit: { value: 58163, unit: '百万日元(Q1)', yoy: 40, label: 'Q1营业利润¥582亿(+40%,季度新高)' },
+            note: 'Q1收入+利润双双创季度历史新高。ARC Raiders 1600万+套,MapleStory系列+42%。韩国市场+6%,北美欧洲暴增309%。'
         },
         financials: {
-            revenue: { value: 123600, unit: '百万日元(Q4)', yoy: 55, label: 'Q4营收(ARC Raiders+MapleStory双驱动)', source: 'Nexon Q4 2025 Earnings Release (2026/02/12)', usdEquiv: '≈$827M' },
-            operatingProfit: { value: 7200, unit: '百万日元(Q4)', yoy: null, label: 'Q4营业利润(递延¥277亿ARC Raiders收入)' },
-            operatingMargin: { value: 5.8, label: 'Q4营业利润率(递延收入影响)' },
+            revenue: { value: 152234, unit: '百万日元(Q1)', yoy: 34, label: 'Q1营收(ARC Raiders+MapleStory双驱动创季度新高)', source: 'Nexon Q1 2026 Earnings Release (2026/05/14)', usdEquiv: '≈$1.02B' },
+            operatingProfit: { value: 58163, unit: '百万日元(Q1)', yoy: 40, label: 'Q1营业利润¥582亿(+40%,季度新高)' },
+            operatingMargin: { value: 38.2, label: 'Q1营业利润率(vs去年36.5%)' },
             segmentRevenuePct: { value: 100, label: '游戏占比' },
-            fullYearRevenue: { value: 475500, unit: '百万日元', yoy: 6, label: '全年营收¥4755亿(+6%创新高)' },
-            fullYearOperatingProfit: { value: 124000, unit: '百万日元', yoy: 0, label: '全年营业利润¥1240亿(持平)' },
+            fullYearRevenue: { value: 475500, unit: '百万日元', yoy: 6, label: '2025全年营收¥4755亿(+6%创新高)' },
+            fullYearOperatingProfit: { value: 124000, unit: '百万日元', yoy: 0, label: '2025全年营业利润¥1240亿(持平)' },
         },
         gameMetrics: {
-            arcRaidersSales: { value: 14, unit: '百万套', label: 'ARC Raiders累计销量1400万套', source: 'Nexon Q4 2025 Earnings' },
-            arcRaidersCCU: { value: 960000, unit: '峰值同时在线', label: 'ARC Raiders峰值CCU 96万' },
-            arcRaidersWeeklyActive: { value: 6, unit: '百万', label: 'ARC Raiders周活跃用户600万' },
-            mapleStoryQ4Growth: { value: 54, unit: '%', label: 'MapleStory系列Q4营收+54%(22年历史新高)' },
-            mapleStoryGlobalGrowth: { value: 24, unit: '%', label: 'MapleStory全球版年营收+24%' },
-            dnfNote: { value: null, unit: '', label: 'DNF系列移动端承压,PC端保持增长' },
+            arcRaidersSales: { value: 16, unit: '百万套+', label: 'ARC Raiders累计销量超1600万套', source: 'Nexon Q1 2026 Earnings (2026/05/14)' },
+            arcRaidersEngagement: { value: 1.5, unit: '十亿小时', label: 'ARC Raiders总游戏时间超15亿小时,50%+玩家超100小时' },
+            mapleStoryQ1Growth: { value: 42, unit: '%', label: 'MapleStory系列Q1营收+42% YoY(Idle RPG+Worlds驱动)' },
+            naEuGrowth: { value: 309, unit: '%', label: '北美欧洲Q1营收+309%(¥445亿,ARC Raiders主导)' },
+            chinaRevenue: { value: 31393, unit: '百万日元', label: '中国区Q1营收¥314亿(-16%,DNF Mobile承压)' },
+            koreaRevenue: { value: 57481, unit: '百万日元', label: '韩国Q1营收¥575亿(+6%,MapleStory+FC Online)' },
+            sharesBuyback: { value: 30000, unit: '百万日元', label: '股票回购300亿日元(1400万股,5/15-7/31)' },
         },
-        keyProducts: ['ARC Raiders', 'MapleStory', '地下城与勇士(DNF)', 'FC Online', 'The Finals', '蔚蓝档案', 'MABINOGI MOBILE'],
+        keyProducts: ['ARC Raiders(1600万+)', 'MapleStory(+42%)', '地下城与勇士(DNF PC)', 'FC Online(EA续约)', 'The Finals', '蔚蓝档案', 'MABINOGI MOBILE'],
         analysis: {
-            performance: '2025Q4营收¥1236亿(+55% YoY)，全年¥4755亿(+6%)均创历史新高。Q4爆发式增长核心驱动力为ARC Raiders(10月发售,累计1400万套,峰值CCU 96万,周活600万),但递延收入¥277亿压低了Q4确认营业利润至¥72亿。MapleStory系列Q4收入+54%达22年历史最高,全球版+24%。全年营业利润¥1240亿(持平),净利润¥921亿(-32%,受ARC Raiders递延+DNF移动端影响)。',
-            strategy: 'Nexon"IP Growth Initiative"战略取得突破——ARC Raiders验证了其在西方PC/主机3A市场的竞争力。MapleStory通过Idle RPG品类拓展和World区域扩张实现franchise重生。管道储备Project DX Durango(MMORPG)、Vindictus Defying Fate、Nakwon等多款多人游戏推进中。',
-            outlook: '2026Q1指引营收¥1505-1640亿(+32~44% YoY),营业利润¥512-611亿(+23~47%),主因ARC Raiders递延收入确认+MapleStory持续增长+DNF PC端复苏。韩国及世界其他地区预计增长,中国区因DNF移动端承压。',
-            newProducts: 'ARC Raiders持续更新(大型内容赛季)；Project DX Durango(MMORPG)；Vindictus Defying Fate；Nakwon: Last Paradise(撤离生存)；MABINOGI MOBILE全球扩张。'
+            performance: '🔥2026Q1收入¥1522亿(+34% YoY,按固定汇率+26%)和营业利润¥582亿(+40%)双双创季度历史新高(What)。核心驱动: ①ARC Raiders累计超1600万套,北美欧洲收入暴增309%至¥445亿 ②MapleStory系列+42%(Idle RPG品类扩展+Worlds区域扩张) ③FC Online韩国续约EA长期协议确保稳定收入流(Why)。营业利润率38.2%(+1.7pt),净利润¥572亿翻倍(+118%),受益于ARC Raiders递延收入确认+外汇收益¥145亿。中国区-16%(DNF Mobile承压)是唯一负面(So What)。',
+            strategy: 'Nexon"IP Growth Initiative"三大支柱全面开花: ①垂直增长(MapleStory系列+42%,franchise扩展为全行业标杆) ②水平扩张(ARC Raiders验证全球3A能力) ③成本管控(headcount和HR成本持平计划)。战略合作矩阵: 腾讯续约DNF PC中国十年+EA续约FC韩国长期。3个项目被砍(portfolio review),资金重新分配给NAKWON和Woochi。',
+            outlook: 'Q2 2026指引: 营收¥1260-1380亿(+3~13% YoY)——Q2为季节性低谷且ARC Raiders无大型更新。下半年催化剂: ①MABINOGI MOBILE台湾+日本上线 ②ARC Raiders "Frozen Trail"最大更新+Premium内容(10月) ③DNF PC中国国庆节更新+新副本 ④Dungeon&Fighter: Idle RPG全球发行 ⑤Azur Promilia+Project T代理发行。FY2026全年展望积极。',
+            newProducts: 'ARC Raiders Frozen Trail大更新(2026年10月,含付费内容)；MABINOGI MOBILE台湾+日本上线(2H2026)；Dungeon&Fighter: Idle RPG(2H2026)；Azur Promilia代理发行；Project T代理发行；NAKWON开发中。'
         },
         dataSources: [
-            { type: 'Q4+年度财报', name: 'Nexon Q4 & Full Year 2025 Earnings Release', date: '2026-02-12', url: 'https://www.nexon.co.jp/en/ir/quarterly-disclosure/' },
-            { type: '行业报道', name: 'MassivelyOP: ARC Raiders drives record annual revenue', date: '2026-02-12', url: 'https://massivelyop.com/2026/02/12/nexon-q4-2025-blockbuster-arc-raiders-drives-record-annual-revenue-and-global-ambition/' }
+            { type: 'Q1季度财报', name: 'Nexon Q1 2026 Earnings Release', date: '2026-05-14', url: 'https://www.nexon.co.jp/en/ir/quarterly-disclosure/' },
+            { type: '投资者演示', name: 'Nexon Q1 2026 Investor Presentation', date: '2026-05-14', url: 'https://www.nexon.co.jp/en/ir/quarterly-disclosure/' },
+            { type: 'IFRS财务报告', name: 'Consolidated Financial Results Q1 2026 [IFRS]', date: '2026-05-14', url: 'https://www.nexon.co.jp/en/ir/quarterly-disclosure/' }
         ],
-        filingDate: '2026-02-12',
-        filingType: '季度+年度财报(Q4+全年)',
+        filingDate: '2026-05-14',
+        filingType: '季度财报(Q1)',
         filingUrl: 'https://www.nexon.co.jp/en/ir/quarterly-disclosure/'
     },
     {
@@ -1227,13 +1232,13 @@ const quarterlyRevenueComparison = [
     },
     {
         name: 'Nexon',
-        revenue: 827, // Q4 2025: ¥1236亿 / 149.5
+        revenue: 1018, // Q1 2026: ¥1522亿 / 149.5
         currency: 'USD',
-        period: '2025 Q4 (10-12月)',
-        note: 'Q4营收¥1236亿≈$8.27亿(+55% YoY,Arc Raiders驱动)',
+        period: '2026 Q1 (1-3月)',
+        note: 'Q1营收¥1522亿≈$10.18亿(+34% YoY,季度历史新高,ARC Raiders+MapleStory)',
         color: '#0066B3',
         dataGrade: 'A',
-        yoy: 55
+        yoy: 34
     },
     {
         name: 'Krafton',
