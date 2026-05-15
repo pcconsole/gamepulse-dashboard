@@ -30772,5 +30772,408 @@ const storewatchMeta = {
     ps5Days: 96,
     xboxDays: 96,
     totalEntries: 3258,
-    vendorMatchRate: 10%
+    vendorMatchRate: '58%'
 };
+
+// ============ 资源位价值排序定义 ============
+const storewatchSlotPriority = {
+    PS5: [
+        { name: 'Must See', label: 'Tier 1 · 必看推荐', tier: 1 },
+        { name: 'Top games in your country', label: 'Tier 2 · 地区热门', tier: 2 },
+        { name: "What's hot", label: 'Tier 3 · 热门趋势', tier: 3 }
+    ],
+    Xbox: [
+        { name: '主界面Banner', label: 'Tier 1 · 主界面Banner', tier: 1, subSlots: ['Dash home-banner', 'Dash home-banner2'] },
+        { name: '商店Banner', label: 'Tier 2 · 商店Banner', tier: 2, subSlots: ['Store Home-hero banner', 'Store Home-banner'] },
+        { name: '游戏Banner', label: 'Tier 3 · 游戏Banner', tier: 3, subSlots: ['Game Home-hero banner', 'Game Home-banner'] }
+    ]
+};
+
+// ============ Xbox 资源位归并工具 ============
+const xboxSlotGroupMap = {
+    'Dash home-banner': '主界面Banner',
+    'Dash home-banner2': '主界面Banner',
+    'Store Home-hero banner': '商店Banner',
+    'Store Home-banner': '商店Banner',
+    'Game Home-hero banner': '游戏Banner',
+    'Game Home-banner': '游戏Banner'
+};
+
+function mergeXboxSlots(slots) {
+    if (!slots) return {};
+    const merged = {};
+    Object.entries(slots).forEach(([slotName, slotData]) => {
+        const group = xboxSlotGroupMap[slotName] || slotName;
+        if (!merged[group]) merged[group] = { positions: [] };
+        if (slotData && slotData.positions) {
+            slotData.positions.forEach(p => {
+                merged[group].positions.push({ ...p, sourceSlot: slotName });
+            });
+        }
+    });
+    // 每组内按 rank 排序
+    Object.values(merged).forEach(g => g.positions.sort((a, b) => a.rank - b.rank));
+    return merged;
+}
+
+// ============ 游戏名显示工具 ============
+function getGameDisplayName(gameName, compact) {
+    if (!gameName) return { primary: '—', secondary: '' };
+    // 格式: "中文名（英文名）" → primary=中文名, secondary=英文名
+    const m = gameName.match(/^(.+?)（(.+?)）$/);
+    if (m) return { primary: m[1], secondary: m[2] };
+    // 格式: "中文名(英文名)"
+    const m2 = gameName.match(/^(.+?)\((.+?)\)$/);
+    if (m2) return { primary: m2[1], secondary: m2[2] };
+    return { primary: gameName, secondary: '' };
+}
+
+// ============ 星期工具 ============
+function getWeekday(dateStr) {
+    if (!dateStr) return '';
+    const d = new Date(dateStr);
+    if (isNaN(d.getTime())) return '';
+    return ['日', '一', '二', '三', '四', '五', '六'][d.getDay()];
+}
+
+// ============ 统计工具函数 ============
+function getStorewatchStats(platformKey) {
+    const data = storewatchData[platformKey] || [];
+    const totalDays = data.length;
+    const latestDate = data.length > 0 ? data[0].date : '—';
+
+    // 统计近7天厂商占位
+    const vendorCount = {};
+    let totalPos = 0;
+    const recentData = data.slice(0, 7);
+    recentData.forEach(day => {
+        const slots = platformKey === 'Xbox' ? mergeXboxSlots(day.slots) : day.slots;
+        Object.values(slots).forEach(slot => {
+            (slot.positions || []).forEach(pos => {
+                if (pos.isNonGame) return;
+                totalPos++;
+                const v = pos.vendor || (storewatchVendorMap ? storewatchVendorMap[pos.us] : null) || '其他';
+                vendorCount[v] = (vendorCount[v] || 0) + 1;
+            });
+        });
+    });
+
+    const topVendors = Object.entries(vendorCount)
+        .map(([name, count]) => ({ name, count, pct: totalPos > 0 ? (count / totalPos * 100).toFixed(1) : '0' }))
+        .sort((a, b) => b.count - a.count)
+        .slice(0, 10);
+
+    return { totalDays, latestDate, topVendors, totalPositions: totalPos };
+}
+
+function getCombinedWeeklyStats(days) {
+    days = days || 7;
+    const ps5 = storewatchData.PS5 || [];
+    const xbox = storewatchData.Xbox || [];
+
+    // 收集所有日期并排序
+    const allDates = new Set();
+    ps5.forEach(d => allDates.add(d.date));
+    xbox.forEach(d => allDates.add(d.date));
+    const sortedDates = Array.from(allDates).sort((a, b) => b.localeCompare(a));
+    const latestDate = sortedDates[0] || '';
+    const dateFrom = sortedDates[Math.min(days - 1, sortedDates.length - 1)] || latestDate;
+
+    const recentPs5 = ps5.filter(d => d.date >= dateFrom && d.date <= latestDate);
+    const recentXbox = xbox.filter(d => d.date >= dateFrom && d.date <= latestDate);
+
+    // 统计 Top Games
+    const gameCount = {};
+    const gameVendor = {};
+    let totalPositions = 0;
+
+    function countSlots(dayList, isXbox) {
+        dayList.forEach(day => {
+            const slots = isXbox ? mergeXboxSlots(day.slots) : day.slots;
+            Object.values(slots).forEach(slot => {
+                (slot.positions || []).forEach(pos => {
+                    if (pos.isNonGame) return;
+                    totalPositions++;
+                    ['us', 'jp', 'hk'].forEach(region => {
+                        const name = pos[region];
+                        if (!name || pos.isNonGame) return;
+                        gameCount[name] = (gameCount[name] || 0) + 1;
+                        if (pos.vendor) gameVendor[name] = pos.vendor;
+                    });
+                });
+            });
+        });
+    }
+    countSlots(recentPs5, false);
+    countSlots(recentXbox, true);
+
+    const topGames = Object.entries(gameCount)
+        .map(([name, count]) => ({ name, count, vendor: gameVendor[name] || (storewatchVendorMap ? storewatchVendorMap[name] : '') || '其他' }))
+        .sort((a, b) => b.count - a.count)
+        .slice(0, 10)
+        .map((g, i) => ({ ...g, rank: i + 1 }));
+
+    // 发行商覆盖
+    const vendorData = {};
+    function addVendorCoverage(dayList, platform, isXbox) {
+        dayList.forEach(day => {
+            const slots = isXbox ? mergeXboxSlots(day.slots) : day.slots;
+            Object.entries(slots).forEach(([slotName, slot]) => {
+                (slot.positions || []).forEach(pos => {
+                    if (pos.isNonGame) return;
+                    const v = pos.vendor || (storewatchVendorMap ? storewatchVendorMap[pos.us] : '') || '其他';
+                    if (v === '其他' || v === '游戏专题') return;
+                    if (!vendorData[v]) vendorData[v] = { total: 0, platforms: new Set(), slots: new Set() };
+                    vendorData[v].total++;
+                    vendorData[v].platforms.add(platform);
+                    vendorData[v].slots.add(slotName);
+                });
+            });
+        });
+    }
+    addVendorCoverage(recentPs5, 'PS5', false);
+    addVendorCoverage(recentXbox, 'Xbox', true);
+
+    const vendorCoverage = Object.entries(vendorData)
+        .map(([name, d]) => ({ name, total: d.total, platforms: Array.from(d.platforms).join(' / '), slots: Array.from(d.slots), slotCount: d.slots.size }))
+        .sort((a, b) => b.total - a.total);
+
+    const actualDates = sortedDates.filter(d => d >= dateFrom && d <= latestDate);
+
+    return {
+        topGames,
+        vendorCoverage,
+        totalPositions,
+        dateRange: {
+            actualFrom: actualDates[actualDates.length - 1] || dateFrom,
+            actualTo: latestDate,
+            actualDayCount: actualDates.length
+        }
+    };
+}
+
+// ============ PC 版渲染函数 ============
+
+function renderGameCell(gameName, isNonGame, posData) {
+    if (!gameName) return '<span class="sw2-game-promo">—</span>';
+    if (isNonGame) return '<span class="sw2-game-promo">' + gameName + '</span>';
+    const display = getGameDisplayName(gameName, false);
+    const vendor = (posData && posData.vendor) || (storewatchVendorMap ? storewatchVendorMap[gameName] : null);
+    const vendorHtml = vendor ? '<span class="sw2-vendor-micro">' + vendor + '</span>' : '';
+    return '<div class="sw2-game-cell">' +
+        '<div class="sw2-game-primary">' + display.primary + '</div>' +
+        (display.secondary ? '<div class="sw2-game-secondary">' + display.secondary + '</div>' : '') +
+        vendorHtml +
+        '</div>';
+}
+
+function renderStorewatchOverview() {
+    const weeklyStats = getCombinedWeeklyStats(7);
+    const ps5Days = (storewatchData.PS5 || []).length;
+    const xboxDays = (storewatchData.Xbox || []).length;
+    const dr = weeklyStats.dateRange;
+    const fmtShort = (d) => d ? parseInt(d.slice(5,7)) + '/' + parseInt(d.slice(8,10)) : '-';
+    const dateLabel = fmtShort(dr.actualFrom) + '~' + fmtShort(dr.actualTo);
+
+    let html = '';
+
+    // KPI
+    html += '<div class="sw2-kpi-strip">' +
+        '<div class="sw2-kpi-item sw2-kpi-ps-accent"><div class="sw2-kpi-num">' + ps5Days + '</div><div class="sw2-kpi-desc">PS5 监控天数</div></div>' +
+        '<div class="sw2-kpi-item sw2-kpi-xbox-accent"><div class="sw2-kpi-num">' + xboxDays + '</div><div class="sw2-kpi-desc">Xbox 监控天数</div></div>' +
+        '<div class="sw2-kpi-item"><div class="sw2-kpi-num">' + weeklyStats.totalPositions + '</div><div class="sw2-kpi-desc">近7天资源位总数</div></div>' +
+        '<div class="sw2-kpi-item sw2-kpi-highlight"><div class="sw2-kpi-num" style="font-size:1.2rem;">' + dateLabel + '</div><div class="sw2-kpi-desc">' + dr.actualDayCount + '天数据范围</div></div>' +
+        '</div>';
+
+    // 数据来源
+    html += '<div class="sw2-source-bar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg> 数据来源：人工监控美国🇺🇸、日本🇯🇵、香港🇭🇰三区域商店推荐位 · 数据范围：' + (storewatchMeta ? storewatchMeta.dataRange : '') + '</div>';
+
+    // Top 10
+    if (weeklyStats.topGames && weeklyStats.topGames.length > 0) {
+        html += '<div class="sw2-panel"><div class="sw2-panel-header"><h3>🔥 近7天 Top 10 曝光游戏 <span class="sw2-panel-sub">(' + dr.actualFrom + ' ~ ' + dr.actualTo + '，' + dr.actualDayCount + '天) · 双平台合计</span></h3></div>';
+        html += '<table class="sw2-exec-table"><thead><tr><th style="width:50px">排名</th><th>游戏</th><th style="width:80px">厂商</th><th style="width:90px">曝光次数</th><th style="width:220px">占比</th></tr></thead><tbody>';
+        const maxCount = weeklyStats.topGames[0].count;
+        weeklyStats.topGames.forEach(g => {
+            const pct = (g.count / maxCount * 100).toFixed(0);
+            const display = getGameDisplayName(g.name, true);
+            const rowCls = g.rank <= 3 ? ' class="sw2-row-top3"' : '';
+            html += '<tr' + rowCls + '>' +
+                '<td><span class="sw2-rank' + (g.rank <= 3 ? ' gold' : '') + '">' + g.rank + '</span></td>' +
+                '<td><div class="sw2-game-cell"><div class="sw2-game-primary">' + display.primary + '</div>' + (display.secondary ? '<div class="sw2-game-secondary">' + display.secondary + '</div>' : '') + '</div></td>' +
+                '<td><span class="sw2-vendor-name">' + g.vendor + '</span></td>' +
+                '<td><span class="sw2-count-bold">' + g.count + '</span></td>' +
+                '<td><div class="sw2-bar-bg"><div class="sw2-bar-fg" style="width:' + pct + '%"></div></div></td>' +
+                '</tr>';
+        });
+        html += '</tbody></table></div>';
+    }
+
+    // 发行商覆盖
+    if (weeklyStats.vendorCoverage && weeklyStats.vendorCoverage.length > 0) {
+        html += '<div class="sw2-panel"><div class="sw2-panel-header"><h3>🏢 发行商资源位覆盖 <span class="sw2-panel-sub">跨平台统计 · Top ' + Math.min(weeklyStats.vendorCoverage.length, 10) + '</span></h3></div>';
+        weeklyStats.vendorCoverage.slice(0, 10).forEach(v => {
+            const platforms = v.platforms.split(' / ').map(function(p) {
+                return '<span class="sw2-platform-pill ' + (p === 'PS5' ? 'ps' : 'xbox') + '">' + p + '</span>';
+            }).join('');
+            const slots = v.slots.map(function(s) { return '<span class="sw2-slot-chip">' + s + '</span>'; }).join('');
+            html += '<div style="display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-bottom:1px solid rgba(255,255,255,0.04);">' +
+                '<div><div class="sw2-vendor-name">' + v.name + '</div><div style="margin-top:4px;">' + platforms + ' · ' + v.slotCount + '个资源位</div></div>' +
+                '<div class="sw2-count-bold">' + v.total + '次</div></div>' +
+                '<div class="sw2-slot-chips" style="padding:0 16px 8px;">' + slots + '</div>';
+        });
+        html += '</div>';
+    }
+
+    return html;
+}
+
+function renderStorewatchPlatform(platformKey) {
+    const data = storewatchData[platformKey] || [];
+    if (data.length === 0) return '<div style="text-align:center;padding:60px;color:var(--text-muted);">暂无数据</div>';
+
+    const isXbox = platformKey === 'Xbox';
+    const cls = isXbox ? 'xbox' : 'ps';
+    const stats = getStorewatchStats(platformKey);
+    const slotPriority = storewatchSlotPriority[platformKey] || [];
+
+    let html = '';
+
+    // KPI
+    html += '<div class="sw2-kpi-strip sw2-kpi-' + cls + '">' +
+        '<div class="sw2-kpi-item"><div class="sw2-kpi-num">' + stats.totalDays + '</div><div class="sw2-kpi-desc">监控天数</div></div>' +
+        '<div class="sw2-kpi-item"><div class="sw2-kpi-num" style="font-size:1.1rem;">' + (stats.topVendors[0] ? stats.topVendors[0].name : '—') + '</div><div class="sw2-kpi-desc">近7天占位最多厂商</div></div>' +
+        '<div class="sw2-kpi-item"><div class="sw2-kpi-num">' + (stats.topVendors[0] ? stats.topVendors[0].pct : 0) + '%</div><div class="sw2-kpi-desc">头部占比</div></div>' +
+        '<div class="sw2-kpi-item"><div class="sw2-kpi-num" style="font-size:1.1rem;">' + stats.latestDate + '</div><div class="sw2-kpi-desc">最新数据日期</div></div>' +
+        '</div>';
+
+    // Tier 说明
+    if (slotPriority.length > 0) {
+        html += '<div class="sw2-slot-legend sw2-legend-' + cls + '"><div class="sw2-legend-title">📌 资源位价值排序</div><div class="sw2-legend-items">';
+        slotPriority.forEach(function(s, i) {
+            html += '<div class="sw2-legend-item">' +
+                '<span class="sw2-legend-rank" style="background:var(--' + cls + '-tier' + s.tier + ',rgba(255,255,255,0.1));">#' + (i + 1) + '</span>' +
+                '<span>' + s.label + '</span>' +
+                (s.subSlots ? '<span style="color:var(--text-muted);font-size:0.75rem;margin-left:8px;">(' + s.subSlots.join(' + ') + ')</span>' : '') +
+                '</div>';
+        });
+        html += '</div></div>';
+    }
+
+    // 厂商柱状图
+    if (stats.topVendors && stats.topVendors.length > 0) {
+        const maxCount = stats.topVendors[0].count || 1;
+        html += '<div class="sw2-panel"><div class="sw2-panel-header"><h3>📊 厂商商店资源占位 <span class="sw2-panel-sub">全部 ' + stats.totalDays + ' 天数据统计</span></h3></div>';
+        html += '<div class="sw2-h-bars">';
+        stats.topVendors.slice(0, 8).forEach(function(v) {
+            var pct = (v.count / maxCount * 100).toFixed(1);
+            html += '<div class="sw2-h-bar-row">' +
+                '<div class="sw2-h-bar-label">' + v.name + '</div>' +
+                '<div class="sw2-h-bar-track"><div class="sw2-h-bar-fill sw2-fill-' + cls + '" style="width:' + pct + '%"></div></div>' +
+                '<div class="sw2-h-bar-val">' + v.count + '次 (' + v.pct + '%)</div>' +
+                '</div>';
+        });
+        html += '</div></div>';
+    }
+
+    // 近7天资源位详情
+    html += '<div class="sw2-panel"><div class="sw2-panel-header"><h3>📋 近7天资源位详情</h3></div>';
+
+    data.slice(0, 7).forEach(function(day, dayIdx) {
+        var processedSlots = isXbox ? mergeXboxSlots(day.slots) : day.slots;
+        var weekday = getWeekday(day.date);
+
+        html += '<div class="sw2-day-section">';
+        html += '<div class="sw2-day-header' + (dayIdx === 0 ? ' sw2-day-latest' : '') + '">📅 ' + (day.date || 'Day ' + (dayIdx + 1)) + ' 周' + weekday + (dayIdx === 0 ? ' <span class="sw2-day-badge">🟢 最新</span>' : '') + '</div>';
+
+        slotPriority.forEach(function(slotDef) {
+            var slotData = processedSlots[slotDef.name];
+            if (!slotData || !slotData.positions || slotData.positions.length === 0) return;
+
+            html += '<div class="sw2-slot-section">' +
+                '<div class="sw2-slot-title">' +
+                '<span class="sw2-legend-rank" style="margin-right:8px;">' + slotDef.label + '</span>' +
+                '<span style="color:var(--text-muted);font-size:0.8rem;">' + slotDef.name + '</span>' +
+                '</div>';
+
+            html += '<table class="sw2-exec-table"><thead><tr>' +
+                '<th style="width:40px">#</th>' +
+                '<th>🇺🇸 美国</th>' +
+                '<th>🇯🇵 日本</th>' +
+                '<th>🇭🇰 香港</th>' +
+                '</tr></thead><tbody>';
+
+            slotData.positions.forEach(function(pos) {
+                var isNg = pos.isNonGame;
+                var srcTag = pos.sourceSlot && pos.sourceSlot !== slotDef.name
+                    ? ' <span style="font-size:0.65rem;padding:1px 4px;border-radius:3px;background:rgba(255,255,255,0.06);color:var(--text-muted);">' + pos.sourceSlot.replace(/\s*banner\d?$/i,'').trim() + '</span>' : '';
+                html += '<tr' + (isNg ? ' class="sw2-non-game"' : '') + '>' +
+                    '<td>' + pos.rank + srcTag + '</td>' +
+                    '<td>' + renderGameCell(pos.us, isNg, pos) + '</td>' +
+                    '<td>' + renderGameCell(pos.jp, isNg, pos) + '</td>' +
+                    '<td>' + renderGameCell(pos.hk, isNg, pos) + '</td>' +
+                    '</tr>';
+            });
+
+            html += '</tbody></table></div>';
+        });
+
+        html += '</div>';
+    });
+
+    html += '</div>';
+    return html;
+}
+
+function updateStorewatchTab() {
+    var container = document.getElementById('tab-storewatch');
+    if (!container) return;
+
+    if (typeof storewatchData === 'undefined' || !storewatchData) {
+        container.innerHTML = '<div class="sw-loading"><div class="status-dot pulse"></div><span>加载数据失败</span></div>';
+        return;
+    }
+
+    var html = '';
+
+    // 标题区
+    html += '<div class="sw2-top-area">' +
+        '<div class="sw2-title-bar"><div class="sw2-title-left">' +
+        '<h2 class="sw2-main-title">🖥️ PS & Xbox 商店资源监控 <span class="agent-badge" title="由 StoreWatch Agent 自动维护">🤖 Agent维护</span></h2>' +
+        '<div class="sw2-meta-info">' +
+        '<span class="sw2-meta-chip">PS5 ' + (storewatchData.PS5 || []).length + '天</span>' +
+        '<span class="sw2-meta-chip">Xbox ' + (storewatchData.Xbox || []).length + '天</span>' +
+        (storewatchMeta ? '<span class="sw2-meta-chip">' + storewatchMeta.dataRange + '</span>' : '') +
+        '</div></div></div>';
+
+    // 导航
+    html += '<div class="sw2-nav">' +
+        '<button class="sw2-nav-btn sw2-nav-summary active" data-view="summary">📊 近期汇总</button>' +
+        '<button class="sw2-nav-btn sw2-nav-ps" data-view="ps5"><span class="sw2-ps-icon">P</span> PlayStation</button>' +
+        '<button class="sw2-nav-btn sw2-nav-xbox" data-view="xbox"><span class="sw2-xbox-icon">X</span> Xbox</button>' +
+        '</div>';
+
+    html += '</div>';
+
+    // 内容区
+    html += '<div id="swContentArea">' + renderStorewatchOverview() + '</div>';
+
+    container.innerHTML = html;
+
+    // 绑定导航事件
+    container.querySelectorAll('.sw2-nav-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            container.querySelectorAll('.sw2-nav-btn').forEach(function(b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            var view = btn.dataset.view;
+            var area = document.getElementById('swContentArea');
+            if (!area) return;
+            if (view === 'summary') {
+                area.innerHTML = renderStorewatchOverview();
+            } else if (view === 'ps5') {
+                area.innerHTML = renderStorewatchPlatform('PS5');
+            } else if (view === 'xbox') {
+                area.innerHTML = renderStorewatchPlatform('Xbox');
+            }
+        });
+    });
+}

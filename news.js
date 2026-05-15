@@ -1,8 +1,8 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-05-14T18:00:00Z
-// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功(lastRow=1323)+web_search 14轮+新增15条id280-294)
+// 最后更新: 2026-05-15T18:00:00Z
+// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp部分可用(无输出)+web_search 14轮+新增3条id295-297+更新2条id267/id285)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
@@ -174,6 +174,72 @@ const newsSources = [
 
 const newsData = [
     {
+        "id": 295,
+        "title": "《极限竞速：地平线6》评测解禁MC91，登顶2026年评分最高游戏",
+        "summary": "Playground Games《极限竞速：地平线6》评测解禁，Metacritic均分91，OpenCritic推荐率97%，成为2026年迄今评分最高的游戏。Xbox CEO Asha Sharma发文祝贺。本作舞台设定日本，被评\"系列最佳开放世界\"。Premium版5月15日抢先体验，5月19日正式发售+Game Pass首日入库。Steam预售已超50万份，分析师预测首24小时Steam销量可达200万。但发售前PC版遭遇严重泄露，微软威胁硬件永久封禁盗版用户。",
+        "source": "Polygon",
+        "sourceUrl": "https://www.polygon.com/forza-horizon-6-review-round-up/",
+        "sourceUrls": [
+            {"name": "Polygon", "url": "https://www.polygon.com/forza-horizon-6-review-round-up/"},
+            {"name": "Metacritic", "url": "https://www.metacritic.com/game/forza-horizon-6/"},
+            {"name": "TheGamer", "url": "https://www.thegamer.com/forza-horizon-6-review-scores/"},
+            {"name": "GameRanx", "url": "https://gameranx.com/updates/id/562696/article/forza-horizon-6-reaches-the-highest-metacritic-rating-of-the-year-so-far/"}
+        ],
+        "category": "game",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-15",
+        "tags": ["极限竞速", "Forza Horizon 6", "Playground Games", "MC91", "评测", "Game Pass", "Xbox"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "FH6 MC91登顶2026年最高分是微软第一方工作室连续第三个年度大作成功(What)。Playground Games将系列带到日本——玩家最期待的地区，开放世界设计和驾驶手感获得一致好评，证明'公式化'赛车游戏仍有创新空间(Why)。MC91+Game Pass首日入库的组合意味着微软'质量驱动订阅'策略正在奏效：高评分作品吸引玩家订阅，订阅收入反哺开发预算(So What)。50万Steam预售+潜在200万首日销量说明Xbox第一方跨PC/PS发布策略不会削弱自身平台价值——反而扩大了品牌影响力。FH6可能是2026年销量最高的赛车游戏(What Next)。",
+        "relatedNewsIds": [274, 269]
+    },
+    {
+        "id": 296,
+        "title": "《极限竞速：地平线6》PC版未加密文件泄露，微软威胁硬件永久封禁",
+        "summary": "《极限竞速：地平线6》PC版在发售前一周遭遇严重泄露：Steam预载文件未被加密，完整游戏数据流出并被破解。盗版用户已可提前游玩，多个YouTube视频流出实机画面。Playground Games迅速回应称'这不是预载问题'，并威胁对盗版用户实施全系列+硬件永久封禁。已有YouTuber因发布45分钟实机画面被硬件封禁。该事件引发关于PC游戏防盗版策略的广泛讨论。",
+        "source": "IGN",
+        "sourceUrl": "https://www.ign.com/articles/forza-horizon-6-suffers-disastrous-leak-as-steam-preload-files-are-made-available-without-encryption",
+        "sourceUrls": [
+            {"name": "IGN", "url": "https://www.ign.com/articles/forza-horizon-6-suffers-disastrous-leak-as-steam-preload-files-are-made-available-without-encryption"},
+            {"name": "Windows Central", "url": "https://www.windowscentral.com/gaming/xbox/what-an-insane-screw-up-xbox-itself-leaks-forza-horizon-6-pc-files-in-full-a-week-before-launch-and-pirates-already-cracked-it"},
+            {"name": "Notebookcheck", "url": "https://www.notebookcheck.net/Playground-Games-warns-Forza-Horizon-6-pirates-of-franchise-wide-and-hardware-permabans.1295178.0.html"},
+            {"name": "Digital Foundry", "url": "https://www.digitalfoundry.net/news/2026/05/forza-horizon-6-has-been-leaked-a-week-early-playground-promises-franchise-wide-hardware-bans-for-pirates"}
+        ],
+        "category": "platform",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-15",
+        "tags": ["Forza Horizon 6", "泄露", "盗版", "Steam", "硬件封禁", "微软", "Playground Games"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": [295]
+    },
+    {
+        "id": 297,
+        "title": "夏日游戏节2026确认6月5日举办，Xbox/PlayStation展示会同期举行",
+        "summary": "Geoff Keighley确认夏日游戏节（Summer Game Fest 2026）将于6月5日在洛杉矶Dolby Theatre举办。Xbox Games Showcase和PlayStation State of Play预计同周举行。这是2026年最大的游戏行业展示窗口，预计将有GTA6最新预告、PS6新消息、以及大量新游公布。",
+        "source": "PC Gamer",
+        "sourceUrl": "https://www.pcgamer.com/gaming-industry/events-conferences/summer-game-fest-2026/",
+        "sourceUrls": [
+            {"name": "PC Gamer", "url": "https://www.pcgamer.com/gaming-industry/events-conferences/summer-game-fest-2026/"},
+            {"name": "Summer Game Fest", "url": "https://www.summergamefest.com/"},
+            {"name": "GamesRadar", "url": "https://www.gamesradar.com/summer-game-fest-schedule-2026/"},
+            {"name": "PushSquare", "url": "https://www.pushsquare.com/features/what-do-you-want-from-a-may-2026-state-of-play-showcase"}
+        ],
+        "category": "market",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-05-14",
+        "tags": ["Summer Game Fest", "SGF 2026", "6月5日", "Xbox Showcase", "State of Play", "游戏展"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": [270]
+    },
+    {
         "id": 266,
         "title": "《杀戮尖塔2》因女性权益顾问Sarkeesian署名遭遇第三波Steam差评轰炸",
         "summary": "《杀戮尖塔2》因在制作人员名单中加入女权主义者Anita Sarkeesian的署名（游戏文化顾问），触发Steam第三波大规模差评轰炸。约6万条近期评测中67%为差评，整体降至\"多半差评\"，评论区一度触发熔断机制被关闭。这是该作三个月内第三次因社会争议遭遇差评：前两次分别是4月平衡性补丁和更早的\"觉醒\"补丁。开发商Mega Crit尚未公开回应。",
@@ -197,23 +263,24 @@ const newsData = [
     },
     {
         "id": 267,
-        "title": "《深海迷航2》抢先体验5月14日上线，愿望单突破500万",
-        "summary": "Unknown Worlds Entertainment《深海迷航2》抢先体验版将于5月14日发售，愿望单已突破500万。官方宣布所有首周内购买的玩家均可获赠Reaper Leviathan雕像蓝图，新实机预告同步发布。《深海迷航》初代2018年发布，Steam好评率96%，至今仍是最受欢迎的海底探索游戏之一。",
-        "source": "GamingBolt",
-        "sourceUrl": "https://gamingbolt.com/subnautica-2-early-access-may-14",
+        "title": "《深海迷航2》EA首日1小时破100万销量，46万同时在线创2026年Steam记录",
+        "summary": "Unknown Worlds《深海迷航2》5月14日抢先体验上线后即爆发：1小时内销量破100万份，Steam同时在线峰值超46万（初代峰值5.8万的8倍），创2026年Steam抢先体验游戏最高记录。Steam好评率90%，Game Pass同步入库。此前愿望单已突破500万。发售前虽有微交易争议，但实际首发表现远超预期。",
+        "source": "TheGamer",
+        "sourceUrl": "https://www.thegamer.com/subnautica-2-more-than-400k-playercount-launch-less-than-an-hour/",
         "sourceUrls": [
-            {"name": "GamingBolt", "url": "https://gamingbolt.com/subnautica-2-early-access-may-14"},
-            {"name": "Eurogamer", "url": "https://www.eurogamer.net/subnautica-2-early-access-coming-may-14"},
-            {"name": "IGN中国", "url": "https://www.ign.com/subnautica-2-early-access-may-14-2026"}
+            {"name": "TheGamer", "url": "https://www.thegamer.com/subnautica-2-more-than-400k-playercount-launch-less-than-an-hour/"},
+            {"name": "GameSpot", "url": "https://www.gamespot.com/articles/subnautica-2-overcomes-pre-release-controversy-to-become-massive-hit-on-steam/1100-6539956/"},
+            {"name": "IGN", "url": "https://www.ign.com/articles/subnautica-2-lures-in-nearly-half-a-million-concurrent-players-on-steam-within-first-hour-of-release"},
+            {"name": "Insider Gaming", "url": "https://insider-gaming.com/subnautica-2-shatters-first-games-peak-player-count-hits-1-million-copies-sold/"}
         ],
         "category": "game",
-        "importance": "medium",
-        "featured": false,
-        "date": "2026-05-11",
-        "tags": ["深海迷航2", "Subnautica 2", "抢先体验", "Unknown Worlds", "愿望单", "5月"],
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-14",
+        "tags": ["深海迷航2", "Subnautica 2", "Unknown Worlds", "Steam", "100万销量", "46万在线", "抢先体验", "Game Pass"],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "500万愿望单+抢先体验发售是独立游戏最健康的发布节奏(What)。初代《深海迷航》Steam 96%好评率积累了大量品牌忠诚度，《深海迷航2》延续抢先体验模式（而非一次性完整发布）说明开发者希望让核心玩家参与开发迭代，降低商业风险(Why)。对行业意味着\"海底探索\"品类仍有大量未被满足的需求——玩家对高质量沙盒探索游戏的耐心的远超一般3A大作(So What)。抢先体验发布策略对同品类开发者有参考价值：初期薄利换口碑+玩家参与迭代=长期品牌资产积累(What Next)。",
+        "analysis": "《深海迷航2》首日1小时100万销量+46万同时在线是2026年独立游戏最强首发(What)。500万愿望单转化率极高，说明初代96%好评积累的品牌忠诚度在5年间持续增值——这是独立游戏少见的\"跨代品牌资产\"效应(Why)。Game Pass同步入库并未削弱Steam销量，反而说明多渠道分发是独立游戏最大化覆盖的最优策略(So What)。46万同时在线超过红色沙漠首发，意味着海底探索品类需求远被低估，可能催生更多同类竞品(What Next)。",
         "relatedNewsIds": []
     },
     {
