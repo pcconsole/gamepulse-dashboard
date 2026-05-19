@@ -1478,7 +1478,6 @@ function mUpdateEarningsTab() {
     }
 
     // ── 图表 ──
-    mRenderEarningsOverviewTable(filtered);
     mRenderEarningsCharts(filtered);
 
     // ── 公司卡片 ──
@@ -1566,32 +1565,6 @@ function mUpdateEarningsTab() {
             card.classList.toggle('expanded');
         });
     });
-}
-
-function mRenderEarningsOverviewTable(companies) {
-    var el = document.getElementById('mEarningsOverviewTable');
-    if (!el) return;
-    var today = new Date();
-    var rows = companies.map(function(c) {
-        var rev = c.financials?.revenue;
-        var op = c.financials?.operatingProfit;
-        var revStr = rev?.value ? (rev.unit?.includes('百万日元') ? '¥' + (rev.value / 100).toFixed(0) + '亿' : rev.unit?.includes('百万人民币') ? '¥' + (rev.value / 100).toFixed(0) + '亿' : rev.unit?.includes('百万美元') ? '$' + (rev.value / 1000).toFixed(2) + 'B' : rev.unit?.includes('百万韩元') ? '₩' + (rev.value / 10000).toFixed(2) + '万亿' : '--') : '--';
-        var fd = c.filingDate || '--';
-        var daysAgo = c.filingDate ? Math.floor((today - new Date(c.filingDate)) / 86400000) : null;
-        var freshColor = daysAgo === null ? '#6b7280' : daysAgo <= 14 ? '#10b981' : daysAgo <= 60 ? '#f59e0b' : '#ef4444';
-        return '<tr style="border-bottom:1px solid rgba(255,255,255,0.06);">' +
-            '<td style="padding:5px 6px;white-space:nowrap;font-weight:600;font-size:0.72rem;">' + (c.logo||'') + c.name + '</td>' +
-            '<td style="padding:5px 6px;font-size:0.68rem;">' + fd + '</td>' +
-            '<td style="padding:5px 6px;font-size:0.68rem;"><span style="color:' + freshColor + ';">' + (daysAgo !== null ? daysAgo + 'd' : '--') + '</span></td>' +
-            '<td style="padding:5px 6px;font-size:0.72rem;font-weight:600;text-align:right;">' + revStr + '</td></tr>';
-    }).join('');
-    el.innerHTML = '<table style="width:100%;border-collapse:collapse;font-size:0.72rem;">' +
-        '<thead><tr style="border-bottom:2px solid rgba(255,255,255,0.1);">' +
-        '<th style="padding:6px;text-align:left;font-size:0.65rem;color:#94a3b8;">公司</th>' +
-        '<th style="padding:6px;text-align:left;font-size:0.65rem;color:#94a3b8;">发布</th>' +
-        '<th style="padding:6px;text-align:left;font-size:0.65rem;color:#94a3b8;">鲜度</th>' +
-        '<th style="padding:6px;text-align:right;font-size:0.65rem;color:#94a3b8;">收入</th>' +
-        '</tr></thead><tbody>' + rows + '</tbody></table>';
 }
 
 function mRenderEarningsCharts(companies) {
