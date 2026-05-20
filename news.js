@@ -1,8 +1,8 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-05-20T11:42:00Z
-// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp返回空+web_search 14轮+更新id295/id267+新增5条id298-302)
+// 最后更新: 2026-05-20T18:00:00Z
+// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功+web_search 14轮+新增10条id303-312+更新id301+删除1条id66)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
@@ -174,6 +174,226 @@ const newsSources = [
 
 const newsData = [
     {
+        "id": 303,
+        "title": "索尼重大战略转向：第一方叙事单人游戏停止登陆PC，回归PS独占",
+        "summary": "PlayStation Studios CEO Hermen Hulst在员工大会上确认：未来索尼第一方叙事类单人游戏（如《战神》《地平线》系列）将停止移植PC，回归PS独占。多人/服务类游戏不受影响。彭博Jason Schreier率先爆料，随后Polygon、TechRadar等多家媒体确认。受影响作品包括《Ghost of Yotei》和《Marvel's Wolverine》。这是索尼自2020年起推行PC策略以来的重大反转，将直接影响Steam端索尼游戏供给。",
+        "source": "Polygon",
+        "sourceUrl": "https://www.polygon.com/sony-playstation-exclusives-officially-ending-pc/",
+        "sourceUrls": [
+            {"name": "Polygon", "url": "https://www.polygon.com/sony-playstation-exclusives-officially-ending-pc/"},
+            {"name": "TechRadar", "url": "https://www.techradar.com/gaming/playstation/pc-gamers-say-goodbye-to-playstation-exclusives-as-sony-confirms-single-player-games-arent-coming-to-pc-anymore-except-for-one"},
+            {"name": "Wccftech", "url": "https://wccftech.com/playstation-first-party-single-player-games-not-coming-to-pc-anymore-herman-hulst/"},
+            {"name": "TweakTown", "url": "https://www.tweaktown.com/news/111678/sony-first-party-singleplayer-games-to-stay-playstation-console-exclusive-no-longer-release-on-pc/index.html"}
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-17",
+        "tags": ["索尼", "PlayStation", "PC独占", "Hermen Hulst", "战神", "地平线", "Steam", "战略转向"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "索尼终止PC移植是2020年以来PlayStation策略的最大反转(What)。2020-2026年间PC移植为索尼贡献了可观增量收入，但Hulst判断独占内容回归对PS生态的长期价值超过短期PC收入——核心逻辑是：PS6将于2027年发售，需要强力独占阵容驱动主机销量(Why)。这对Steam玩家是明显利空，但对PS5/PS6用户是核心价值加码；同时与微软Xbox的多平台策略形成鲜明对比，两大平台走向截然相反的独占路线(So What)。预期索尼将在5月24日State of Play上正式宣布独占回归，配合《战神》Faye衍生作等重磅新作巩固'只有PS才能玩到'的品牌定位(What Next)。",
+        "relatedNewsIds": [269, 240, 223]
+    },
+    {
+        "id": 304,
+        "title": "PS Plus新订阅户涨价约10%：Essential月费$9.99涨至$10.99，5月20日生效",
+        "summary": "索尼宣布PS Plus Essential新订户从5月20日起涨价：美区月费$9.99→$10.99，季度$24.99→$27.99。年费暂不调整。英国及多地区同步跟进。现有订户在多数地区不受影响（土耳其和印度除外）。索尼归因于'持续的市场条件'。此次涨价与索尼'独占回归'策略叠加，被分析人士视为索尼从'规模扩张'转向'单客价值提升'的信号。",
+        "source": "PushSquare",
+        "sourceUrl": "https://www.pushsquare.com/news/2026/05/ps-plus-price-increase-announced-by-sony-for-new-members",
+        "sourceUrls": [
+            {"name": "PushSquare", "url": "https://www.pushsquare.com/news/2026/05/ps-plus-price-increase-announced-by-sony-for-new-members"},
+            {"name": "CNET", "url": "https://www.cnet.com/tech/gaming/playstation-plus-prices-are-increasing-for-new-subscribers-starting-may-20/"},
+            {"name": "TalkEsport", "url": "https://www.talkesport.com/news/ps-plus-price-increase-may-2026/"},
+            {"name": "TechPowerUp", "url": "https://www.techpowerup.com/349162/playstation-plus-price-hike-sees-new-subscribers-pay-up-to-12-more"}
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-17",
+        "tags": ["索尼", "PS Plus", "涨价", "订阅", "Essential", "$10.99", "5月20日"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "PS Plus涨价10%是索尼订阅服务自2023年分层改革后的首次提价(What)。与Xbox Game Pass频繁调整阵容不同，索尼选择直接提价——说明PS Plus的'刚需'属性（在线多人必需）让索尼对价格弹性有更高信心(Why)。涨价仅针对新订户是'温水煮青蛙'策略：避免现有用户流失的同时逐步提升ARPU。与独占回归策略叠加，索尼正在构建'更贵但更值'的PS生态(So What)。若PS Plus Essential月费突破$11心理关口，可能推动部分轻量用户转向年费方案或直接退出订阅，对PS在线活跃度有潜在影响(What Next)。",
+        "relatedNewsIds": [303, 269]
+    },
+    {
+        "id": 305,
+        "title": "索尼遭美国玩家集体诉讼：被指借关税政策'双重获利'，PS5涨价退款疑云",
+        "summary": "美国PS5用户对索尼发起集体诉讼，指控其借关税政策'双重获利'：先以关税为由提高PS5售价，后在美国最高法院裁定相关关税非法后，索尼可能仍保留政府退税。IGN、AndroidHeadlines等多家媒体报道。亚马逊、任天堂等公司也面临类似指控。美国最高法院已于4月20日裁定相关关税非法，但消费者已为涨价买单。",
+        "source": "IGN",
+        "sourceUrl": "https://www.ign.com/articles/playstation-console-owners-launch-class-action-lawsuit-against-sony-over-tariff-refunds",
+        "sourceUrls": [
+            {"name": "IGN", "url": "https://www.ign.com/articles/playstation-console-owners-launch-class-action-lawsuit-against-sony-over-tariff-refunds"},
+            {"name": "AndroidHeadlines", "url": "https://www.androidheadlines.com/2026/05/sony-gamers-lawsuit-illegal-tariff-money-price-hikes.html"},
+            {"name": "GizmoChina", "url": "https://www.gizmochina.com/2026/05/19/sony-faces-class-action-lawsuit-over-ps5-price-hikes-tied-to-tariffs/"},
+            {"name": "InfiniteStart", "url": "https://infinitestart.com/2026/05/sony-faces-class-action-lawsuit-over-retention-of-post-tariff-refunds/"}
+        ],
+        "category": "policy",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-19",
+        "tags": ["索尼", "PS5", "集体诉讼", "关税", "双重获利", "退款", "消费者权益"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "索尼'双重获利'诉讼暴露了关税驱动涨价的法律风险(What)。美国最高法院已裁定相关关税非法，但索尼已通过涨价将成本转嫁给消费者；若索尼再获得政府退税，则构成'两头吃'——这在法律和道德层面都站不住脚(Why)。亚马逊、任天堂面临类似诉讼说明这不是索尼独有问题，而是'关税涨价潮'的系统性法律后果(So What)。诉讼目前处于起诉阶段，距离实质性判决尚远；但若原告胜诉，可能迫使所有因关税涨价的硬件厂商退还差价，对行业利润率构成重大冲击(What Next)。",
+        "relatedNewsIds": [301, 245]
+    },
+    {
+        "id": 306,
+        "title": "《堡垒之夜》全球回归App Store，Epic宣布'苹果税终结的开始'",
+        "summary": "Epic Games CEO Tim Sweeney宣布《堡垒之夜》iOS版回归全球App Store（澳大利亚除外），结束长达6年的下架。Sweeney称苹果在美国最高法院的陈述意味着全球监管机构将以此为基准划定平台抽成比例，并称此为'苹果税终结的开始'。此前美国第九巡回法院已驳回Apple暂停执行请求，Epic诉苹果案App Store禁令生效。",
+        "source": "Epic Games",
+        "sourceUrl": "https://www.epicgames.com/site/news/fortnite-is-back-on-the-app-store-around-the-world-as-the-final-battle-approaches",
+        "sourceUrls": [
+            {"name": "Epic Games", "url": "https://www.epicgames.com/site/news/fortnite-is-back-on-the-app-store-around-the-world-as-the-final-battle-approaches"},
+            {"name": "MacRumors", "url": "https://www.macrumors.com/2026/05/19/fortnite-returns-to-app-store-worldwide/"},
+            {"name": "Digital Trends", "url": "https://www.digitaltrends.com/gaming/fortnite-is-back-on-the-app-store-worldwide-as-epic-and-apples-battle-enters-its-final-phase/"},
+            {"name": "GamingProMax", "url": "https://gamingpromax.com/fortnite-back-apple-app-store-worldwide-epic-apple-tax-2026/"}
+        ],
+        "category": "policy",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-19",
+        "tags": ["Epic Games", "堡垒之夜", "Fortnite", "App Store", "苹果", "平台抽成", "反垄断", "Tim Sweeney"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Fortnite回归App Store是Epic与苹果6年法律战的里程碑式进展(What)。美国最高法院拒绝Apple暂停执行请求后，苹果被迫在全球（除澳大利亚）恢复Fortnite上架——这不仅是单一游戏的回归，更确立了'法院禁令优先于平台自主权'的判例(Why)。Sweeney将此定义为'苹果税终结的开始'虽带有营销色彩，但确有依据：苹果在最高法院的陈述承认全球监管机构将关注此案，这意味着30%抽成模式在全球面临系统性挑战(So What)。短期内其他被App Store下架的开发者将援引此案要求回归；中长期可能推动苹果在全球范围降低抽成比例，对整个移动游戏生态的利润分配产生深远影响(What Next)。",
+        "relatedNewsIds": [189]
+    },
+    {
+        "id": 307,
+        "title": "Steam大幅调整商店标签集：新增17个含'武侠''仙侠'，删除28个",
+        "summary": "Valve调整Steam平台商店标签集合：新增17个（含'武侠''仙侠''Bullet Heaven'等）、删除28个（含'众筹''剧情'等）、并对部分命名与合并规则进行调整。此次调整优化了游戏分类与搜索发现机制，中文向品类首次获得正式标签承认，对国产/华语向中重度产品长期利好。",
+        "source": "IGN",
+        "sourceUrl": "https://www.ign.com/articles/steam-adds-edits-and-removes-dozens-of-store-tags",
+        "sourceUrls": [
+            {"name": "IGN", "url": "https://www.ign.com/articles/steam-adds-edits-and-removes-dozens-of-store-tags"},
+            {"name": "ComicBook", "url": "https://comicbook.com/gaming/news/valve-just-made-some-big-changes-to-steam-tags-and-the-new-additions-shed-light-on-recent-trends/"},
+            {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/valve-overhauls-tag-system-on-steam-to-improve-game-discoverability"},
+            {"name": "TechPowerUp", "url": "https://www.techpowerup.com/349196/valve-streamlines-steam-store-tags-list-reveals-most-ubiquitous-tags"}
+        ],
+        "category": "platform",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-18",
+        "tags": ["Steam", "Valve", "商店标签", "武侠", "仙侠", "Bullet Heaven", "分类", "发现机制"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 308,
+        "title": "微软上线XBOX Player Voice反馈平台，玩家首位呼声：'重启独占策略'",
+        "summary": "微软为加强与玩家社区沟通，上线'XBOX Player Voice'新反馈平台。这是Xbox品牌重塑（XBOX全大写+Asha Sharma上任）后首项面向用户的具体举措。但上线后首位玩家呼声是'重启主机独占策略'——玩家普遍认为失去独占游戏让Xbox失去竞争力和品牌辨识度。IGN报道称此诉求与索尼同步收紧独占形成鲜明对照：市场需求侧给出明确信号，玩家仍把独占视为主机价值核心锚点。",
+        "source": "Xbox Wire",
+        "sourceUrl": "https://news.xbox.com/en-us/2026/05/18/introducing-xbox-player-voice/",
+        "sourceUrls": [
+            {"name": "Xbox Wire", "url": "https://news.xbox.com/en-us/2026/05/18/introducing-xbox-player-voice/"},
+            {"name": "IGN", "url": "https://www.ign.com/articles/microsoft-launches-xbox-player-voice-to-gather-feedback-fans-immediately-demand-a-return-to-exclusives"},
+            {"name": "Pure Xbox", "url": "https://www.purexbox.com/news/2026/05/microsoft-announces-fan-feedback-program-xbox-player-voice-and-its-now-live"},
+            {"name": "Gadgets360", "url": "https://www.gadgets360.com/games/news/xbox-player-voice-portal-launched-bring-back-exclusives-user-feedback-11521610"}
+        ],
+        "category": "platform",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-18",
+        "tags": ["微软", "Xbox", "Player Voice", "独占", "Asha Sharma", "反馈", "玩家社区"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": [303, 269]
+    },
+    {
+        "id": 309,
+        "title": "《Lords of the Fallen 2》终止Epic PC独占协议，有望登陆Steam",
+        "summary": "CI Games宣布已与Epic Games终止《Lords of the Fallen 2》的PC版全球独家发行协议，本作原计划2026年发售。终止独占后，该作将有机会登陆Steam等更多PC平台。这一事件标志着Epic第三方独占预算和吸引力进一步收缩——继多款游戏放弃Epic独占后，又一个AA级产品选择回归Steam生态。",
+        "source": "Eurogamer",
+        "sourceUrl": "https://www.eurogamer.net/lord-of-the-fallen-2-exits-epic-exclusivity",
+        "sourceUrls": [
+            {"name": "Eurogamer", "url": "https://www.eurogamer.net/lord-of-the-fallen-2-exits-epic-exclusivity"},
+            {"name": "Escapist", "url": "https://www.escapistmagazine.com/news-ci-games-ending-its-epic-games-pc-exclusivity-agreement-lords-of-the-fallen-2/"},
+            {"name": "TweakTown", "url": "https://www.tweaktown.com/news/111684/lords-of-the-fallen-2-can-now-launch-on-steam-as-ci-games-and-epic-terminate-exclusivity-deal/index.html"},
+            {"name": "GamingProMax", "url": "https://gamingpromax.com/lords-of-the-fallen-2-epic-exclusivity-terminated-steam-2026/"}
+        ],
+        "category": "platform",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-19",
+        "tags": ["Lords of the Fallen 2", "Epic Games", "独占", "Steam", "CI Games", "Soulslike"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 310,
+        "title": "卡普空FY2026业绩创历史新高：营收1953亿日元+连续9年利润增长，全年售出5907万份游戏",
+        "summary": "卡普空公布FY2026财报（截至2026年3月）：净销售额1953亿日元（约$12.4亿），营业利润753亿日元（约$4.79亿），连续9年创利润新高。全年售出5907万份游戏，创历史纪录。核心驱动：《生化危机：安魂曲》691万份，《识质存在》(PRAGMATA)累计200万+，《怪物猎人：荒野》FY内132万份（低于预期）。公司员工数持续增长。",
+        "source": "Capcom IR",
+        "sourceUrl": "https://www.capcom.co.jp/ir/english/2026",
+        "sourceUrls": [
+            {"name": "Capcom IR", "url": "https://www.capcom.co.jp/ir/english/2026"},
+            {"name": "TwistedVoxel", "url": "https://twistedvoxel.com/capcom-reports-record-fy2026-results-led-by-resident-evil-and-monster-hunter/"},
+            {"name": "Kantenna", "url": "https://kantenna.com/topic/capcom-fy2026-record-earnings-resident-evil-requiem-monster-hunter-eleventh-straight-growth"},
+            {"name": "Insider Gaming", "url": "https://insider-gaming.com/capcom-reports-record-profits-and-59-million-games-sold/"}
+        ],
+        "category": "market",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-13",
+        "tags": ["卡普空", "Capcom", "FY2026", "财报", "1953亿日元", "5907万份", "生化危机", "PRAGMATA", "连续9年增长"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": [506]
+    },
+    {
+        "id": 311,
+        "title": "肉鸽游戏主导2026年Steam：总收入近5亿美元，《杀戮尖塔2》累计650万份",
+        "summary": "据Alinea Analytics数据，肉鸽品类已成Steam 2026年度最强品类：上半年总收入接近5亿美元。《杀戮尖塔2》累计售出约650万份（3月单月530万份+$1.08亿），60天内近1亿玩家游玩超100小时；《喵喵的结合》售出180万份；肉鸽DLC附加率全品类最高。品类高重玩性和随机性契合Steam生态，已成为独立游戏最成功的商业化路径。",
+        "source": "3DM",
+        "sourceUrl": "https://www.3dmgame.com/news/202605/3944303.html",
+        "sourceUrls": [
+            {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3944303.html"},
+            {"name": "Tech4Gamers", "url": "https://tech4gamers.com/roguelikes-steam-500m-2026/"},
+            {"name": "GameMinr", "url": "https://gameminr.com/articles/193?t=Slay-the-Spire-2-Tops-Steam-Sales%253A-Why-Roguelikes-Are-Dominating-2026"},
+            {"name": "Sohu", "url": "https://www.sohu.com/a/1023213778_122598898"}
+        ],
+        "category": "market",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-05-17",
+        "tags": ["肉鸽", "Roguelike", "Steam", "杀戮尖塔2", "5亿美元", "Alinea Analytics", "品类趋势"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": [266]
+    },
+    {
+        "id": 312,
+        "title": "《Far Far West》三周破百万+发行商Fireshine拒绝GenAI合作：'核心创作绝不碰'",
+        "summary": "科幻奇幻合作射击《Far Far West》4/28登陆Steam EA，3周内销量破100万份，Steam好评率97%。发行方Fireshine Games明确表态拒绝与使用生成式AI工具的开发团队合作（仅允许部分非生成式AI工具），CEO直言'玩家不买账AI生成的艺术'。这是AA/AAA发行端首次就'AI用工'问题公开画红线。",
+        "source": "Eurogamer",
+        "sourceUrl": "https://www.eurogamer.net/far-far-west-sells-one-million-copies",
+        "sourceUrls": [
+            {"name": "Eurogamer", "url": "https://www.eurogamer.net/far-far-west-sells-one-million-copies"},
+            {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/far-far-west-publisher-says-we-dont-work-with-partners-that-are-relying-on-generative-ai"},
+            {"name": "TechPowerUp", "url": "https://www.techpowerup.com/349195/publisher-of-indie-hit-far-far-west-rejects-gen-ai-in-videogames"},
+            {"name": "GamingProMax", "url": "https://gamingpromax.com/far-far-west-1-million-sales-fireshine-games-no-generative-ai/"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-05-19",
+        "tags": ["Far Far West", "Fireshine", "GenAI", "独立游戏", "百万销量", "AI政策", "Steam EA"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": []
+    },
+    {
         "id": 295,
         "title": "《极限竞速：地平线6》MC92+抢先体验破纪录：1.1M玩家/$140M收入，5月19日正式发售",
         "summary": "《极限竞速：地平线6》Premium版抢先体验(5/15-5/18)创下系列纪录：48小时超110万玩家、估算收入$1.4亿；Steam同时在线峰值181,775（FH5同期81,096的2.2倍），正式发售后更攀升至273K+。Metacritic均分上调至92，OpenCritic推荐率97%，稳居2026年评分最高游戏。5月19日正式发售+Game Pass首日入库，全平台玩家突破百万。$120 Premium版销量超100万份。但发售前PC版遭遇泄露事件，微软威胁硬件永久封禁盗版用户。",
@@ -308,7 +528,7 @@ const newsData = [
     {
         "id": 301,
         "title": "Switch 2全球涨价确认：美国$499.99（9/1生效），内存芯片短缺为主因",
-        "summary": "任天堂确认Switch 2全球涨价：美国$449.99→$499.99（+50，9月1日生效），日本5月25日起涨价10,000日元，欧洲涨至EUR 499.99。主因为DRAM内存价格因AI数据中心需求暴涨而翻倍，任天堂无法继续吸收成本。这是Switch 2发售以来首次涨价。同日任天堂公布FY2026财报：Switch 2累计出货1986万台，全年净销售额+98.6%至2.31万亿日元，但营业利润率从24.3%降至15.6%。FY27硬件销量预测下调16.9%至1650万台。",
+        "summary": "任天堂确认Switch 2全球涨价：美国$449.99→$499.99（+50，9月1日生效），日本5月25日起涨价10,000日元，欧洲涨至EUR 499.99。主因为DRAM内存价格因AI数据中心需求暴涨而翻倍，任天堂无法继续吸收成本。这是Switch 2发售以来首次涨价。同日任天堂公布FY2026财报：Switch 2累计出货1986万台，全年净销售额+98.6%至2.31万亿日元，但营业利润率从24.3%降至15.6%。FY27硬件销量预测下调16.9%至1650万台。社长古川俊太郎后续在财报Q&A中详解：涨价仍不足以覆盖全部成本增加（估算生产成本增约1000亿日元），且元器件及内存价格短期内不会回落，影响料将延续至明年。任天堂仍优先扩大装机量，但无法继续以亏损价格销售硬件。",
         "source": "Nintendo Inquirer",
         "sourceUrl": "https://nintendoinquirer.com/nintendo-switch-2-global-price-hike-september-2026-details/",
         "sourceUrls": [
@@ -6177,23 +6397,6 @@ const newsData = [
             "并购"
         ],
         "sentiment": "neutral"
-    },
-    {
-        "id": 66,
-        "title": "Newzoo 报告：2026年PC & Console游戏市场规模将达$420亿",
-        "summary": "Newzoo发布2026年全球PC与主机游戏市场年度预测报告，预计总市场规模将达$420亿（同比+6.2%）。",
-        "source": "Newzoo",
-        "sourceUrl": "https://newzoo.com/resources",
-        "category": "market",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-02-15",
-        "tags": [
-            "Newzoo",
-            "市场数据",
-            "订阅"
-        ],
-        "sentiment": "positive"
     },
     {
         "id": 246,
