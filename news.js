@@ -1,8 +1,8 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-05-20T18:00:00Z
-// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功+web_search 14轮+新增10条id303-312+更新id301+删除1条id66)
+// 最后更新: 2026-05-20T18:15:00Z
+// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功+web_search 14轮+新增12条id303-314+更新id301+删除1条id66)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
@@ -392,6 +392,45 @@ const newsData = [
         "tdocMarking": "none",
         "analysis": "",
         "relatedNewsIds": []
+    },
+    {
+        "id": 313,
+        "title": "传Nintendo Direct将于6月中旬举行，锚定Summer Game Fest窗口",
+        "summary": "业内人士Jeff Grubb与GamingBolt报道：下一场Nintendo Direct可能在Summer Game Fest前后（6月中旬）举行，但尚不确认是否为第一方专场。对Q3行业排期具有锚点意义，所有发行商档期都将围绕这一窗口决策。若属实，将是Switch 2涨价后的首场大型直面会。",
+        "source": "MyNintendoNews",
+        "sourceUrl": "https://mynintendonews.com/2026/05/19/jeff-grub-says-hes-heard-therell-be-a-nintendo-direct-by-mid-j",
+        "sourceUrls": [
+            {"name": "MyNintendoNews", "url": "https://mynintendonews.com/2026/05/19/jeff-grub-says-hes-heard-therell-be-a-nintendo-direct-by-mid-j"},
+            {"name": "GamingBolt", "url": "https://gamingbolt.com/nintendo-direct-reportedly-coming-before-summer-game-fest"}
+        ],
+        "category": "platform",
+        "importance": "low",
+        "featured": false,
+        "date": "2026-05-19",
+        "tags": ["任天堂", "Nintendo Direct", "Summer Game Fest", "Jeff Grubb", "6月"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": [295, 301]
+    },
+    {
+        "id": 314,
+        "title": "任天堂股价单日涨6.8%：受'AI疲劳'避险情绪推动，游戏内容股获对冲价值重估",
+        "summary": "任天堂股价单日上涨6.8%，市场解读为投资者从AI主题股切换至'非AI、确定性强、内容驱动'标的避险。资本市场对游戏内容股相对AI股的对冲价值上调，这对游戏行业一级市场情绪有正向影响。任天堂被视为'AI免疫'的少数大盘科技股之一。",
+        "source": "MyNintendoNews",
+        "sourceUrl": "https://mynintendonews.com/2026/05/19/nintendos-stock-has-climbed-as-much-as-6-8-thanks-to-ai-fatigu",
+        "sourceUrls": [
+            {"name": "MyNintendoNews", "url": "https://mynintendonews.com/2026/05/19/nintendos-stock-has-climbed-as-much-as-6-8-thanks-to-ai-fatigu"}
+        ],
+        "category": "market",
+        "importance": "low",
+        "featured": false,
+        "date": "2026-05-19",
+        "tags": ["任天堂", "股价", "AI疲劳", "避险", "资本市场", "内容驱动"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": [301]
     },
     {
         "id": 295,
