@@ -2,8 +2,9 @@
 // 重点公司财报分析数据模块 V10 — 全部18家统一双模块(latestQuarter+fullYear)
 // 覆盖18家上市公司的游戏业务财务与运营数据
 // 数据来源：各公司IR页面/财报/press release + GamesIndustry.biz 验证
-// 更新日期: 2026-05-15
-// 本次更新: Nexon Q1 2026(5/14发布: 季度收入¥1522亿+34%创新高,营业利润¥582亿+40%,ARC Raiders 1600万+,MapleStory+42%,北美欧洲+309%,股票回购300亿)
+// 更新日期: 2026-05-20
+// 本次更新: Embracer Q4+FY25/26全年(5/20发布: Q4净销售SEK39.31亿-24%,全年SEK159.06亿-25%,SEK72亿非现金减值,REANIMAL超100万套,FY26/27 Cash EBIT≥SEK10亿)
+// 上次更新(5/15): Nexon Q1 2026
 // 上次更新(5/13): 索尼FY2026全年 + 任天堂FY2026全年 + 卡普空FY2026全年
 //   重构范围: Sony/Microsoft/Nintendo/腾讯/网易/EA/Take-Two/Ubisoft/Nexon/
 //             万代南梦宫/Capcom/Square Enix/Konami/Sega/Krafton/Roblox/Unity/Embracer
@@ -1094,49 +1095,58 @@ const earningsCompanies = [
         logo: '🟠',
         color: '#FF8C00',
         segment: '整体（多工作室控股）',
-        fiscalPeriod: 'Q3 FY25/26 (2025年10-12月)',
+        fiscalPeriod: 'FY25/26 全年 (2025年4月-2026年3月)',
         currency: 'SEK',
         latestQuarter: {
-            period: 'Q3 FY25/26', calendarPeriod: '2025年10-12月', filingDate: '2026-02-13',
-            revenue: { value: 5176, unit: '百万瑞典克朗', yoy: -26, label: 'Q3净销售SEK51.76亿(-26%)', usdEquiv: '≈$479M' },
+            period: 'Q4 FY25/26', calendarPeriod: '2026年1-3月', filingDate: '2026-05-20',
+            revenue: { value: 3931, unit: '百万瑞典克朗', yoy: -24, label: 'Q4净销售SEK39.31亿(-24%)', usdEquiv: '≈$364M' },
+            adjustedEBIT: { value: 360, unit: '百万瑞典克朗', yoy: -64, label: 'Q4调整后EBIT SEK3.60亿(-64%)' },
             gameMetrics: {
-                kdh2Sales: { value: 5, unit: '百万套', label: '天国拯救2累计500万套' }
+                pcConsole: { value: 1554, unit: '百万瑞典克朗', label: 'PC/主机 SEK15.54亿(-46%,有机-37%)' },
+                mobile: { value: 682, unit: '百万瑞典克朗', label: '手游 SEK6.82亿(-28%,有机+2%)' },
+                entServices: { value: 1695, unit: '百万瑞典克朗', label: '娱乐与服务 SEK16.95亿(+23%,有机+36%)' },
+                reanimalSales: { value: 1, unit: '百万套', label: 'REANIMAL新IP超100万套' }
             }
         },
         fullYear: {
-            period: 'FY25/26九月累计年化', filingDate: '2026-02-13', status: '九月累计年化推算',
-            revenue: { value: 15967, unit: '百万瑞典克朗(年化)', yoy: -26, label: '年化≈SEK159.7亿≈$14.8亿', usdEquiv: '≈$1.48B' },
-            note: '九月累计SEK119.75亿(-26%),剥离Coffee Stain后收入下降;天国拯救2 500万套'
+            period: 'FY25/26全年(已发布)', filingDate: '2026-05-20', status: '已发布(大幅下滑+减值)',
+            revenue: { value: 15906, unit: '百万瑞典克朗(全年)', yoy: -25, label: '全年净销售SEK159.06亿(-25%)', usdEquiv: '≈$1.47B' },
+            adjustedEBIT: { value: 905, unit: '百万瑞典克朗(全年)', yoy: -68, label: '全年调整后EBIT SEK9.05亿(-68%)' },
+            cashEBIT: { value: 511, unit: '百万瑞典克朗(全年)', label: 'Cash EBIT SEK5.11亿(新指标)' },
+            note: 'SEK72亿非现金减值(商誉60亿+未公布项目12亿),Coffee Stain剥离影响收入,KCD2持续驱动'
         },
         companyOverall: {
-            totalRevenue: { value: 5176, unit: '百万瑞典克朗(Q3)', yoy: -26, label: 'Q3净销售SEK51.76亿', source: 'Embracer Q3 FY25/26 Report (2026/02/13)' },
-            totalOperatingProfit: { value: null, unit: '百万瑞典克朗', yoy: null, label: '运营利润(重组中)' },
-            note: 'Embracer经历大规模重组,已拆分为3家独立公司(Asmodee/Coffee Stain/Embracer核心)'
+            totalRevenue: { value: 15906, unit: '百万瑞典克朗(全年)', yoy: -25, label: '全年净销售SEK159.06亿(-25%)', source: 'Embracer Q4 & FY25/26 Report (2026/05/20)' },
+            totalOperatingProfit: { value: -7053, unit: '百万瑞典克朗(全年)', label: 'EBIT -SEK70.53亿(SEK72亿非现金减值)' },
+            note: 'Embracer FY25/26: 净销售-25%,调整后EBIT-68%,Cash EBIT SEK5.11亿。SEK72亿非现金减值(商誉60亿+1个大型未公布游戏12亿)。KCD2持续驱动+REANIMAL超100万套。FY26/27 Cash EBIT指引≥SEK10亿。'
         },
         financials: {
-            revenue: { value: 5176, unit: '百万瑞典克朗(Q3)', yoy: -26, label: 'Q3净销售SEK51.76亿', source: 'Embracer Q3 FY25/26 Report (2026/02/13)', usdEquiv: '≈$479M' },
-            operatingProfit: { value: null, unit: '百万瑞典克朗', yoy: null, label: '运营利润(重组中)' },
-            operatingMargin: { value: null, label: '运营利润率(重组中)' },
+            revenue: { value: 3931, unit: '百万瑞典克朗(Q4)', yoy: -24, label: 'Q4净销售', source: 'Embracer Q4 FY25/26 Interim Report (2026/05/20)', usdEquiv: '≈$364M' },
+            operatingProfit: { value: -7304, unit: '百万瑞典克朗(Q4)', yoy: null, label: 'Q4 EBIT -SEK73.04亿(非现金减值)' },
+            operatingMargin: { value: null, label: '调整后EBIT利润率9%(vs去年19%)' },
             segmentRevenuePct: { value: 100, label: '多工作室控股' },
         },
         gameMetrics: {
-            kdh2Sales: { value: 5, unit: '百万套', label: '天国拯救2累计500万套', source: 'Embracer Q3 Report' },
-            studioCount: { value: 69, unit: '家(估)', label: '旗下工作室数量(重组后)' },
-            ipCount: { value: 850, unit: '+', label: '拥有IP数量(含THQ Nordic/Deep Silver/Gearbox等)' },
+            reanimalSales: { value: 1, unit: '百万套', label: 'REANIMAL新IP超100万套', source: 'Embracer Q4 FY25/26 Report' },
+            kdh2Sales: { value: 5, unit: '百万套+', label: '天国拯救2累计500万+套(持续驱动)', source: 'Embracer Q4 Report' },
+            netCashPosition: { value: 3800, unit: '百万瑞典克朗', label: '净现金头寸SEK38亿' },
+            gameDevProjects: { value: 79, unit: '个', label: '游戏开发项目(从94减少)' },
+            developers: { value: 4485, unit: '人', label: '游戏开发者(从5140减少)' },
+            impairments: { value: 72000, unit: '百万瑞典克朗', label: '非现金减值SEK72亿(商誉60亿+未公布项目12亿)', source: 'Embracer Q4 Report' },
         },
-        keyProducts: ['天国拯救2', 'Saints Row', 'Metro系列', 'Gothic Remake', 'Dead Island 2'],
+        keyProducts: ['天国拯救2', 'REANIMAL(100万+)', 'Gothic 1 Remake', 'Metro 2039', 'Tomb Raider: Legacy of Atlantis'],
         analysis: {
-            performance: 'Q3 FY25/26净销售SEK51.76亿(-26% YoY)，收入下降主因Coffee Stain剥离(+40%可比收入减少)和上年同期《Alone in the Dark》高基数。但《天国拯救2》(2025/02发售)累计销量500万套成为亮点。九月累计SEK119.75亿(-26%)。',
-            strategy: '2024年大重组后Embracer拆分为三家独立公司：Asmodee(桌游)、Coffee Stain(独立游戏,已剥离)、Embracer核心(PC/Console)。聚焦减债和提升运营效率。旗下约69家工作室、850+个IP。',
-            outlook: '重组阵痛期预计2026年中基本消化。《Gothic Remake》《Metro新作》是下一波增长催化剂。减债优先,暂停大型收购。',
-            newProducts: '《Gothic Remake》(开发中)；《Metro新作》；《Kingdom Come: Deliverance 2》DLC；更多THQ Nordic IP重启。'
+            performance: 'FY25/26全年净销售SEK159.06亿(-25% YoY),Q4 SEK39.31亿(-24%)(What)。收入下降主因Coffee Stain剥离(-57%手游板块),PC/主机有机-17%反映KCD2后管线空窗期。但娱乐与服务板块有机+15%成为亮点(Why)。SEK72亿非现金减值(商誉60亿+1个大型未公布游戏12亿)导致GAAP EBIT -SEK70.53亿。调整后EBIT SEK9.05亿(-68%),Cash EBIT SEK5.11亿。新IP REANIMAL超100万套是正面信号(So What)。',
+            strategy: 'Coffee Stain已剥离,分拆为Fellowship Entertainment计划2027年在纳斯达克斯德哥尔摩上市。FY26/27起Fellowship承诺每年至少2款重大游戏发布。从FY26/27 Q1起引入Cash EBIT作为主要盈利指标(不含开发成本资本化/摊销,扣除租赁)。CFO Muge Bouillon升任集团副CEO。游戏开发项目从94减少至79,聚焦质量。',
+            outlook: 'FY26/27 Cash EBIT指引≥SEK10亿(对比FY25/26的SEK5.11亿,接近翻倍)。Q1 FY26/27预计Cash EBIT为负(季节性)。重点游戏发布: 上半年Gothic 1 Remake+Warhammer 40K: Dawn of War IV;下半年METRO 2039(心愿单超100万)+Tomb Raider: Legacy of Atlantis。Fellowship分拆2027年完成。',
+            newProducts: 'Gothic 1 Remake(H1 FY26/27)；Warhammer 40K: Dawn of War IV(H1)；METRO 2039(H2,100万+心愿单)；Tomb Raider: Legacy of Atlantis(H2)；KCD2 DLC持续。'
         },
         dataSources: [
-            { type: '季度财报', name: 'Embracer Q3 FY25/26 Interim Report', date: '2026-02-13', url: 'https://embracer.com/investors/' },
-            { type: '行业报道', name: 'GamesIndustry.biz Embracer Q3', date: '2026-02-13', url: 'https://www.gamesindustry.biz/' }
+            { type: '季度+全年财报', name: 'Embracer Q4 & FY25/26 Interim Report', date: '2026-05-20', url: 'https://embracer.com/releases/embracer-group-publishes-interim-report-q4-january-march-2026-adjusted-ebit-amounted-to-sek-360-million/' },
+            { type: '投资者演示', name: 'Embracer Q4 FY25/26 Presentation', date: '2026-05-20', url: 'https://embracer.com/investors/reports-presentations/' }
         ],
-        filingDate: '2026-02-13',
-        filingType: '季度财报(Q3)',
+        filingDate: '2026-05-20',
+        filingType: '季度+全年财报',
         filingUrl: 'https://embracer.com/investors/'
     },
 ];
@@ -1261,13 +1271,14 @@ const quarterlyRevenueComparison = [
     },
     {
         name: 'Embracer',
-        revenue: 479, // Q3 FY25/26: SEK 51.76亿 / 10.8
+        revenue: 364, // Q4 FY25/26: SEK 39.31亿 / 10.8
         currency: 'USD',
-        period: 'Q3 FY25/26 (10-12月)',
-        note: 'Q3净销售SEK51.76亿≈$4.79亿(-26%)',
+        period: 'Q4 FY25/26 (1-3月)',
+        note: 'Q4净销售SEK39.31亿≈$3.64亿(-24%),调整后EBIT SEK3.60亿(-64%)',
         color: '#FF8C00',
         dataGrade: 'A',
-        yoy: -26
+        yoy: -24,
+        caveat: '全年SEK159.06亿(-25%),SEK72亿非现金减值,REANIMAL超100万套'
     },
     {
         name: 'Unity',
@@ -1483,14 +1494,14 @@ const fullYearRevenueComparison = [
     },
     {
         name: 'Embracer',
-        revenue: 1478, // 九月累计SEK119.75亿÷9×12=SEK159.67亿/10.8≈$14.78亿(年化)
+        revenue: 1473, // FY25/26全年 SEK159.06亿 / 10.8 ≈ $14.73亿
         currency: 'USD',
-        period: 'FY25/26九月年化',
-        note: '九月累计SEK119.75亿(-26%),年化≈$14.8亿(重组中)',
+        period: 'FY25/26全年(已发布)',
+        note: '全年净销售SEK159.06亿(-25%)≈$14.7亿,调整后EBIT -68%,Cash EBIT SEK5.11亿',
         color: '#FF8C00',
-        dataGrade: 'C',
-        yoy: -26,
-        caveat: '九月累计年化推算;剥离Coffee Stain后收入下降;天国拯救2 500万套'
+        dataGrade: 'A',
+        yoy: -25,
+        caveat: 'Coffee Stain剥离+SEK72亿非现金减值;REANIMAL 100万+;FY26/27 Cash EBIT指引≥SEK10亿'
     },
 ];
 
