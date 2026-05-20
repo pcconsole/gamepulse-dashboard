@@ -3152,6 +3152,328 @@ async function checkAgentStatus() {
 }
 
 
+// ==================== StoreWatch Tab ====================
+
+let swCurrentView = 'summary'; // 'summary' | 'ps5' | 'xbox'
+
+function updateStorewatchTab() {
+    const tab = document.getElementById('tab-storewatch');
+    if (!tab) return;
+
+    if (typeof storewatchData === 'undefined' || !storewatchData) {
+        tab.innerHTML = '<div class="sw-loading"><div class="status-dot pulse"></div><span>加载 PS & Xbox 商店资源监控数据...</span></div>';
+        return;
+    }
+
+    // Build full PC StoreWatch UI
+    const ps5Days = (storewatchData.PS5 || []).length;
+    const xboxDays = (storewatchData.Xbox || []).length;
+    const weeklyStats = getCombinedWeeklyStats(7);
+    const dr = weeklyStats.dateRange;
+    const fmtShort = (d) => d ? `${parseInt(d.slice(5,7))}/${parseInt(d.slice(8,10))}` : '-';
+    const dateRangeLabel = `${fmtShort(dr.actualFrom)}~${fmtShort(dr.actualTo)}`;
+
+    let html = '';
+
+    // === Title bar ===
+    html += `<div class="sw2-top-area">
+        <div class="sw2-title-bar">
+            <div class="sw2-title-left">
+                <h2 class="sw2-main-title">PS & Xbox 商店资源监控</h2>
+                <div class="sw2-meta-info">
+                    <span class="sw2-meta-chip">PS5 ${ps5Days}天</span>
+                    <span class="sw2-meta-chip">Xbox ${xboxDays}天</span>
+                    <span class="sw2-meta-chip">近7天 ${weeklyStats.totalPositions}位</span>
+                </div>
+            </div>
+        </div>
+        <div class="sw2-source-bar">
+            <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="8"/><path d="M10 6v4l3 3"/></svg>
+            数据来源：人工监控美国🇺🇸、日本🇯🇵、香港🇭🇰三区域商店推荐位 · 数据截止 ${storewatchMeta.lastUpdated}
+        </div>
+    </div>`;
+
+    // === Navigation tabs ===
+    html += `<div class="sw2-nav" id="sw2Nav">
+        <button class="sw2-nav-btn sw2-nav-summary ${swCurrentView === 'summary' ? 'active' : ''}" data-view="summary">
+            <span>📊</span> 总览
+        </button>
+        <button class="sw2-nav-btn sw2-nav-ps ${swCurrentView === 'ps5' ? 'active' : ''}" data-view="ps5">
+            <span class="sw2-ps-icon">PS</span> PS5
+        </button>
+        <button class="sw2-nav-btn sw2-nav-xbox ${swCurrentView === 'xbox' ? 'active' : ''}" data-view="xbox">
+            <span class="sw2-xbox-icon">X</span> Xbox
+        </button>
+    </div>`;
+
+    // === Content area ===
+    html += `<div class="sw2-content" id="sw2Content">`;
+    if (swCurrentView === 'summary') {
+        html += renderStorewatchSummary(weeklyStats, ps5Days, xboxDays, dateRangeLabel, dr);
+    } else if (swCurrentView === 'ps5') {
+        html += renderStorewatchPlatform('PS5');
+    } else {
+        html += renderStorewatchPlatform('Xbox');
+    }
+    html += `</div>`;
+
+    tab.innerHTML = html;
+
+    // Bind nav events
+    tab.querySelectorAll('#sw2Nav .sw2-nav-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            swCurrentView = btn.dataset.view;
+            updateStorewatchTab();
+        });
+    });
+}
+
+function renderStorewatchSummary(weeklyStats, ps5Days, xboxDays, dateRangeLabel, dr) {
+    let html = '';
+
+    // === KPI Strip ===
+    html += `<div class="sw2-kpi-strip">
+        <div class="sw2-kpi-item sw2-kpi-ps-accent">
+            <div class="sw2-kpi-num">${ps5Days}</div>
+            <div class="sw2-kpi-desc">PS5 监控天数</div>
+        </div>
+        <div class="sw2-kpi-item sw2-kpi-xbox-accent">
+            <div class="sw2-kpi-num">${xboxDays}</div>
+            <div class="sw2-kpi-desc">Xbox 监控天数</div>
+        </div>
+        <div class="sw2-kpi-item sw2-kpi-highlight">
+            <div class="sw2-kpi-num">${weeklyStats.totalPositions}</div>
+            <div class="sw2-kpi-desc">近7天资源位</div>
+        </div>
+        <div class="sw2-kpi-item">
+            <div class="sw2-kpi-num" style="font-size:18px;">${dateRangeLabel}</div>
+            <div class="sw2-kpi-desc">${dr.actualDayCount}天数据</div>
+        </div>
+    </div>`;
+
+    // === Top 10 曝光游戏 ===
+    if (weeklyStats.topGames && weeklyStats.topGames.length > 0) {
+        html += `<div class="sw2-panel">
+            <div class="sw2-panel-header"><h3>🔥 近7天 Top 10 曝光游戏</h3>
+                <span class="sw2-panel-sub">${dr.actualFrom} ~ ${dr.actualTo}（${dr.actualDayCount}天） · 双平台合计</span>
+            </div>
+            <table class="sw2-exec-table">
+                <thead><tr>
+                    <th style="width:50px">#</th>
+                    <th>游戏</th>
+                    <th style="width:80px">厂商</th>
+                    <th style="width:200px">曝光次数</th>
+                </tr></thead>
+                <tbody>`;
+
+        weeklyStats.topGames.forEach((g, i) => {
+            const display = getGameDisplayName(g.name, false);
+            const pct = Math.min((g.count / weeklyStats.topGames[0].count * 100), 100).toFixed(0);
+            const rowCls = i < 3 ? 'sw2-row-top3' : '';
+            html += `<tr class="${rowCls}">
+                <td class="sw2-rank-cell"><span class="sw2-rank ${i < 3 ? 'gold' : ''}">${g.rank}</span></td>
+                <td>
+                    <div class="sw2-game-cell">
+                        <div class="sw2-game-primary">${display.primary}</div>
+                        ${display.secondary ? `<div class="sw2-game-secondary">${display.secondary}</div>` : ''}
+                    </div>
+                </td>
+                <td><span class="sw2-vendor-micro">${g.vendor}</span></td>
+                <td>
+                    <div style="display:flex;align-items:center;gap:10px;">
+                        <div class="sw2-bar-bg" style="flex:1;"><div class="sw2-bar-fg" style="width:${pct}%"></div></div>
+                        <span class="sw2-count-bold">${g.count}</span>
+                    </div>
+                </td>
+            </tr>`;
+        });
+
+        html += `</tbody></table></div>`;
+    }
+
+    // === 发行商资源位覆盖 ===
+    if (weeklyStats.vendorCoverage && weeklyStats.vendorCoverage.length > 0) {
+        html += `<div class="sw2-panel">
+            <div class="sw2-panel-header"><h3>🏢 发行商资源位覆盖</h3>
+                <span class="sw2-panel-sub">跨平台统计 · Top ${Math.min(weeklyStats.vendorCoverage.length, 8)}</span>
+            </div>
+            <div class="sw2-bar-chart-area"><div class="sw2-h-bars">`;
+
+        weeklyStats.vendorCoverage.slice(0, 8).forEach(v => {
+            const platforms = v.platforms.split(' / ').map(p =>
+                `<span class="sw2-platform-pill ${p === 'PS5' ? 'ps' : 'xbox'}">${p}</span>`
+            ).join('');
+            const slots = v.slots.slice(0, 3).map(s => `<span class="sw2-slot-chip">${s.replace(/banner\d?$/i,'').trim()}</span>`).join('');
+            const maxTotal = weeklyStats.vendorCoverage[0].total || 1;
+            const barPct = (v.total / maxTotal * 100).toFixed(1);
+            const fillCls = v.platforms.includes('PS5') && v.platforms.includes('Xbox') ? 'sw2-fill-ps' : v.platforms.includes('PS5') ? 'sw2-fill-ps' : 'sw2-fill-xbox';
+
+            html += `<div class="sw2-h-bar-row">
+                <div class="sw2-h-bar-label">
+                    <span class="sw2-vendor-name">${v.name}</span>
+                    <div style="margin-top:4px;">${platforms} ${slots}</div>
+                </div>
+                <div class="sw2-h-bar-track">
+                    <div class="sw2-h-bar-fill ${fillCls}" style="width:${barPct}%;">
+                        <span class="sw2-h-bar-val">${v.total}次 · ${v.slotCount}资源位</span>
+                    </div>
+                </div>
+            </div>`;
+        });
+
+        html += `</div></div></div>`;
+    }
+
+    return html;
+}
+
+function renderStorewatchPlatform(platformKey) {
+    const data = storewatchData[platformKey] || [];
+    if (data.length === 0) return '<div class="sw2-empty">暂无数据</div>';
+
+    const cls = platformKey === 'PS5' ? 'ps' : 'xbox';
+    const stats = getStorewatchStats(platformKey);
+    const slotPriority = storewatchSlotPriority[platformKey] || [];
+    let html = '';
+
+    // === Platform KPI ===
+    html += `<div class="sw2-kpi-strip sw2-kpi-${cls}">
+        <div class="sw2-kpi-item">
+            <div class="sw2-kpi-num">${stats.totalDays}</div>
+            <div class="sw2-kpi-desc">监控天数</div>
+        </div>
+        <div class="sw2-kpi-item">
+            <div class="sw2-kpi-num" style="font-size:16px;">${stats.topVendors[0]?.name || '-'}</div>
+            <div class="sw2-kpi-desc">占位最多</div>
+        </div>
+        <div class="sw2-kpi-item">
+            <div class="sw2-kpi-num">${stats.topVendors[0]?.pct || 0}%</div>
+            <div class="sw2-kpi-desc">头部占比</div>
+        </div>
+        <div class="sw2-kpi-item">
+            <div class="sw2-kpi-num" style="font-size:14px;">${stats.latestDate}</div>
+            <div class="sw2-kpi-desc">最新数据</div>
+        </div>
+    </div>`;
+
+    // === Slot priority legend ===
+    if (slotPriority.length > 0) {
+        html += `<div class="sw2-slot-legend sw2-legend-${cls}">
+            <div class="sw2-legend-title">📌 资源位价值排序</div>
+            <div class="sw2-legend-items">`;
+        slotPriority.forEach((s, i) => {
+            html += `<div class="sw2-legend-item sw2-tier-${s.tier} sw2-${cls}">
+                <span class="sw2-legend-rank">#${i + 1}</span>
+                <span class="sw2-legend-label">${s.label}</span>
+                <span class="sw2-legend-name">${s.name}</span>
+                ${s.subSlots ? `<div class="sw2-legend-sub">${s.subSlots.join(' + ')}</div>` : ''}
+            </div>`;
+        });
+        html += `</div></div>`;
+    }
+
+    // === Vendor bar chart ===
+    if (stats.topVendors && stats.topVendors.length > 0) {
+        const maxCount = stats.topVendors[0].count || 1;
+        html += `<div class="sw2-panel">
+            <div class="sw2-panel-header"><h3>📊 厂商商店资源占位</h3>
+                <span class="sw2-panel-sub">全部 ${stats.totalDays} 天数据统计</span>
+            </div>
+            <div class="sw2-bar-chart-area"><div class="sw2-h-bars">`;
+
+        stats.topVendors.slice(0, 8).forEach((v, i) => {
+            const pct = (v.count / maxCount * 100).toFixed(1);
+            html += `<div class="sw2-h-bar-row">
+                <div class="sw2-h-bar-label">${v.name}</div>
+                <div class="sw2-h-bar-track">
+                    <div class="sw2-h-bar-fill sw2-fill-${cls}" style="width:${pct}%;">
+                        <span class="sw2-h-bar-val">${v.count}次 (${v.pct}%)</span>
+                    </div>
+                </div>
+            </div>`;
+        });
+
+        html += `</div></div></div>`;
+    }
+
+    // === 近7天资源位详情 ===
+    html += `<div class="sw2-panel">
+        <div class="sw2-panel-header"><h3>📋 近7天资源位详情</h3></div>
+        <div class="sw2-days-stack">`;
+
+    data.slice(0, 7).forEach((day, dayIdx) => {
+        const processedSlots = platformKey === 'Xbox' ? mergeXboxSlots(day.slots) : day.slots;
+        const weekday = getWeekday(day.date);
+
+        html += `<div class="sw2-day-block sw2-day-${cls}">
+            <div class="sw2-day-head sw2-head-${cls}">
+                <span class="sw2-day-date-label">📅 ${day.date || `Day ${dayIdx + 1}`}</span>
+                <span class="sw2-day-weekday-label">${weekday}</span>
+                ${dayIdx === 0 ? '<span style="font-size:11px;color:#4da6ff;margin-left:8px;">🟢 最新</span>' : ''}
+            </div>
+            <div class="sw2-day-body">`;
+
+        // Render slots by priority
+        slotPriority.forEach(slotDef => {
+            const slotData = processedSlots[slotDef.name];
+            if (!slotData || !slotData.positions || slotData.positions.length === 0) return;
+
+            html += `<div class="sw2-slot-section sw2-tier-${slotDef.tier}-${cls}">
+                <div class="sw2-slot-title-bar">
+                    <span class="sw2-slot-tier-dot sw2-dot-${cls}-${slotDef.tier}"></span>
+                    <span class="sw2-slot-label">${slotDef.label}</span>
+                    <span class="sw2-slot-name">${slotDef.name}</span>
+                </div>
+                <table class="sw2-region-table">
+                    <thead><tr>
+                        <th style="width:36px">#</th>
+                        <th>🇺🇸 美国</th>
+                        <th>🇯🇵 日本</th>
+                        <th>🇭🇰 香港</th>
+                    </tr></thead>
+                    <tbody>`;
+
+            slotData.positions.forEach(pos => {
+                const isNg = pos.isNonGame;
+                const rowCls = isNg ? 'sw2-non-game' : '';
+                const srcTag = pos.sourceSlot && pos.sourceSlot !== slotDef.name
+                    ? `<span class="sw2-src-tag">${pos.sourceSlot.replace(/\s*banner\d?$/i,'').trim()}</span>` : '';
+
+                html += `<tr class="${rowCls}">
+                    <td class="sw2-rank-cell"><span class="sw2-pos-num">${pos.rank}</span>${srcTag}</td>
+                    <td>${renderSWGameCell(pos.us, isNg || pos.usNonGame, pos)}</td>
+                    <td>${renderSWGameCell(pos.jp, isNg || pos.jpNonGame, pos)}</td>
+                    <td>${renderSWGameCell(pos.hk, isNg || pos.hkNonGame, pos)}</td>
+                </tr>`;
+            });
+
+            html += `</tbody></table></div>`;
+        });
+
+        html += `</div></div>`;
+    });
+
+    html += `</div></div>`;
+
+    return html;
+}
+
+function renderSWGameCell(gameName, isNonGame, posData) {
+    if (!gameName) return '<span style="color:var(--text-tertiary);">—</span>';
+    if (isNonGame) return `<span class="sw2-game-promo">${gameName}</span>`;
+
+    const display = getGameDisplayName(gameName, false);
+    const vendor = (posData && posData.vendor) || (typeof storewatchVendorMap !== 'undefined' ? storewatchVendorMap[gameName] : null);
+    const vendorHtml = vendor ? `<span class="sw2-vendor-micro">${vendor}</span>` : '';
+
+    return `<div class="sw2-game-cell">
+        <div class="sw2-game-primary">${display.primary}</div>
+        ${display.secondary ? `<div class="sw2-game-secondary">${display.secondary}</div>` : ''}
+        ${vendorHtml}
+    </div>`;
+}
+
+
 // ==================== Weekly Report Tab ====================
 let weeklyCurrentReport = null;
 let weeklyInited = false;

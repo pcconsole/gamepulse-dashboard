@@ -31554,5 +31554,189 @@ const storewatchMeta = {
     ps5Days: 99,
     xboxDays: 99,
     totalEntries: 3339,
-    vendorMatchRate: 10%
+    vendorMatchRate: '10%'
 };
+
+// ============ Shared Helper Functions (PC + Mobile) ============
+
+// Slot priority definition per platform
+const storewatchSlotPriority = {
+    PS5: [
+        { name: 'Must See', label: '必看推荐', tier: 1 },
+        { name: 'Top games in your country', label: '本国热门', tier: 2 },
+        { name: "What's hot", label: '热门趋势', tier: 3 }
+    ],
+    Xbox: [
+        { name: 'Dash home-banner', label: '首页Banner 1', tier: 1, subSlots: ['Dash home-banner'] },
+        { name: 'Dash home-banner2', label: '首页Banner 2', tier: 1, subSlots: ['Dash home-banner2'] },
+        { name: 'Store Home-hero banner', label: '商店首页英雄位', tier: 2 },
+        { name: 'Store Home-banner', label: '商店Banner', tier: 3 }
+    ]
+};
+
+// Get weekday name from date string
+function getWeekday(dateStr) {
+    if (!dateStr) return '';
+    const weekdays = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+    try {
+        const d = new Date(dateStr + 'T00:00:00');
+        return weekdays[d.getDay()];
+    } catch (e) {
+        return '';
+    }
+}
+
+// Split game name into primary (Chinese) and secondary (English) parts
+function getGameDisplayName(name, showSecondary = true) {
+    if (!name) return { primary: '', secondary: '' };
+    const match = name.match(/^(.+?)[\s]*[（(](.+?)[)）]$/);
+    if (match) {
+        return { primary: match[1], secondary: showSecondary ? match[2] : '' };
+    }
+    return { primary: name, secondary: '' };
+}
+
+// Merge Xbox slots that have banner variants into unified entries
+function mergeXboxSlots(slots) {
+    if (!slots) return {};
+    const merged = {};
+    const bannerGroups = {};
+
+    Object.entries(slots).forEach(([key, val]) => {
+        // Group "Dash home-banner" and "Dash home-banner2" into "Dash home-banner"
+        const baseKey = key.replace(/banner\d?$/i, 'banner').replace(/-banner-banner$/i, '-banner');
+        if (key === 'Dash home-banner' || key === 'Dash home-banner2') {
+            if (!bannerGroups[baseKey]) {
+                bannerGroups[baseKey] = { positions: [] };
+            }
+            (val.positions || []).forEach(pos => {
+                const p = { ...pos, sourceSlot: key };
+                bannerGroups[baseKey].positions.push(p);
+            });
+        } else {
+            merged[key] = val;
+        }
+    });
+
+    Object.entries(bannerGroups).forEach(([key, val]) => {
+        val.positions.sort((a, b) => a.rank - b.rank);
+        merged[key] = val;
+    });
+
+    return merged;
+}
+
+// Calculate platform stats (vendor distribution, day count, etc.)
+function getStorewatchStats(platformKey) {
+    const data = storewatchData[platformKey] || [];
+    const totalDays = data.length;
+    const latestDate = data.length > 0 ? data[0].date : '-';
+    const vendorCounts = {};
+
+    data.forEach(day => {
+        const slots = platformKey === 'Xbox' ? mergeXboxSlots(day.slots) : day.slots;
+        Object.values(slots || {}).forEach(slot => {
+            (slot.positions || []).forEach(pos => {
+                if (pos.isNonGame) return;
+                const v = pos.vendor || '其他';
+                vendorCounts[v] = (vendorCounts[v] || 0) + 1;
+            });
+        });
+    });
+
+    const totalPositions = Object.values(vendorCounts).reduce((a, b) => a + b, 0);
+    const topVendors = Object.entries(vendorCounts)
+        .sort((a, b) => b[1] - a[1])
+        .map(([name, count]) => ({
+            name,
+            count,
+            pct: totalPositions > 0 ? (count / totalPositions * 100).toFixed(1) : '0'
+        }));
+
+    return { totalDays, latestDate, topVendors, totalPositions };
+}
+
+// Calculate combined weekly stats across both platforms
+function getCombinedWeeklyStats(days) {
+    const result = {
+        totalPositions: 0,
+        dateRange: { from: '', to: '', actualFrom: '', actualTo: '', actualDayCount: 0 },
+        topGames: [],
+        vendorCoverage: []
+    };
+
+    const gameCounts = {};
+    const vendorData = {};
+
+    ['PS5', 'Xbox'].forEach(platform => {
+        const data = storewatchData[platform] || [];
+        const sliceDays = data.slice(0, days);
+
+        sliceDays.forEach((day, i) => {
+            const slots = platform === 'Xbox' ? mergeXboxSlots(day.slots) : day.slots;
+            Object.values(slots || {}).forEach(slot => {
+                (slot.positions || []).forEach(pos => {
+                    if (pos.isNonGame) return;
+                    result.totalPositions++;
+
+                    // Track game exposure
+                    const regions = [pos.us, pos.jp, pos.hk].filter(Boolean);
+                    regions.forEach(name => {
+                        if (!name || name.includes('优惠') || name.includes('专题') || name.includes('会员')) return;
+                        gameCounts[name] = (gameCounts[name] || 0) + 1;
+                    });
+
+                    // Track vendor
+                    const v = pos.vendor || '其他';
+                    if (!vendorData[v]) vendorData[v] = { total: 0, platforms: new Set(), slots: new Set() };
+                    vendorData[v].total++;
+                    vendorData[v].platforms.add(platform === 'Xbox' ? 'Xbox' : 'PS5');
+                    const slotNames = Object.keys(slots);
+                    slotNames.forEach(s => vendorData[v].slots.add(s));
+                });
+            });
+
+            // Date range tracking
+            if (i === 0 && (!result.dateRange.to || day.date > result.dateRange.to)) {
+                result.dateRange.to = day.date;
+                result.dateRange.actualTo = day.date;
+            }
+            if (i === sliceDays.length - 1 && (!result.dateRange.from || day.date < result.dateRange.from)) {
+                result.dateRange.from = day.date;
+                result.dateRange.actualFrom = day.date;
+            }
+        });
+    });
+
+    // Calculate actual day count
+    if (result.dateRange.actualFrom && result.dateRange.actualTo) {
+        const from = new Date(result.dateRange.actualFrom);
+        const to = new Date(result.dateRange.actualTo);
+        result.dateRange.actualDayCount = Math.round((to - from) / (1000 * 60 * 60 * 24)) + 1;
+    }
+
+    // Top games
+    result.topGames = Object.entries(gameCounts)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 10)
+        .map(([name, count], i) => ({
+            rank: i + 1,
+            name,
+            count,
+            vendor: (typeof storewatchVendorMap !== 'undefined' && storewatchVendorMap[name]) || '其他'
+        }));
+
+    // Vendor coverage
+    result.vendorCoverage = Object.entries(vendorData)
+        .sort((a, b) => b[1].total - a[1].total)
+        .slice(0, 10)
+        .map(([name, data]) => ({
+            name,
+            total: data.total,
+            platforms: Array.from(data.platforms).join(' / '),
+            slotCount: data.slots.size,
+            slots: Array.from(data.slots)
+        }));
+
+    return result;
+}
