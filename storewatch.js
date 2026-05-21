@@ -32046,3 +32046,68 @@ const storewatchMeta = {
     totalEntries: 3394,
     vendorMatchRate: '10%'
 };
+
+// ---- 资源位优先级配置 ----
+const storewatchSlotPriority = {
+    PS5: [
+        { tier: 'S', label: 'Hero Banner', name: '主轮播大Banner', subSlots: ['Hero 1', 'Hero 2', 'Hero 3'] },
+        { tier: 'A', label: 'Featured', name: '精选推荐', subSlots: ['Featured 1', 'Featured 2'] },
+        { tier: 'A', label: 'Deal', name: '促销推荐' },
+        { tier: 'B', label: 'New Release', name: '新品推荐' },
+        { tier: 'B', label: 'Popular', name: '热门推荐' },
+        { tier: 'C', label: 'Category', name: '分类推荐' },
+    ],
+    Xbox: [
+        { tier: 'S', label: 'Hero', name: '主轮播Banner', subSlots: ['Hero 1', 'Hero 2'] },
+        { tier: 'A', label: 'Featured', name: '精选推荐' },
+        { tier: 'A', label: 'Game Pass', name: 'Game Pass推荐' },
+        { tier: 'B', label: 'New Release', name: '新品推荐' },
+        { tier: 'B', label: 'Deal', name: '促销推荐' },
+        { tier: 'C', label: 'Most Popular', name: '最热推荐' },
+    ]
+};
+
+// ---- 商店统计数据计算 ----
+function getStorewatchStats(platformKey) {
+    const data = storewatchData[platformKey] || [];
+    if (data.length === 0) return { totalDays: 0, topVendors: [], latestDate: '-' };
+
+    // Count vendor occurrences across all days
+    const vendorCounts = {};
+    let latestDate = '';
+
+    for (const day of data) {
+        if (day.date && day.date > latestDate) latestDate = day.date;
+        const slots = day.slots || day.positions || {};
+        for (const [slotName, gameInfo] of Object.entries(slots)) {
+            if (!gameInfo) continue;
+            const gameName = typeof gameInfo === 'string' ? gameInfo : (gameInfo.name || gameInfo.us || gameInfo.jp || '');
+            if (!gameName || gameName === '-') continue;
+            // Skip non-game entries
+            if (typeof gameInfo === 'object' && gameInfo.isNonGame) continue;
+
+            const vendor = (typeof gameInfo === 'object' && gameInfo.vendor) ||
+                           (typeof storewatchVendorMap !== 'undefined' ? storewatchVendorMap[gameName] : null) ||
+                           '其他';
+            vendorCounts[vendor] = (vendorCounts[vendor] || 0) + 1;
+        }
+    }
+
+    // Sort vendors by count
+    const totalSlots = Object.values(vendorCounts).reduce((a, b) => a + b, 0) || 1;
+    const topVendors = Object.entries(vendorCounts)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 10)
+        .map(([name, count]) => ({
+            name,
+            count,
+            pct: Math.round(count / totalSlots * 100)
+        }));
+
+    return {
+        totalDays: data.length,
+        topVendors,
+        latestDate
+    };
+}
+

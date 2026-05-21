@@ -39096,3 +39096,289 @@ const newsData = [
     }
 ];
 
+// ============================================
+// 新闻元数据与辅助函数（PC端+移动端共享）
+// ============================================
+
+// ---- 信息源定义 ----
+const newsSources = [
+    // 官方渠道
+    { name: 'PlayStation Blog', category: 'official', url: 'https://blog.playstation.com', platform: 'PS', type: '官方博客' },
+    { name: 'Xbox Wire', category: 'official', url: 'https://news.xbox.com', platform: 'Xbox', type: '官方博客' },
+    { name: 'Nintendo News', category: 'official', url: 'https://www.nintendo.com/news', platform: 'Nintendo', type: '官方新闻' },
+    { name: 'Steam Blog', category: 'official', url: 'https://store.steampowered.com/news', platform: 'Steam', type: '官方博客' },
+    { name: 'PlayStation State of Play', category: 'official', url: 'https://www.playstation.com/events', platform: 'PS', type: '发布会' },
+    { name: 'Xbox Showcase', category: 'official', url: 'https://www.xbox.com/events', platform: 'Xbox', type: '发布会' },
+    { name: 'Nintendo Direct', category: 'official', url: 'https://www.nintendo.com/nintendo-direct', platform: 'Nintendo', type: '发布会' },
+    // 游戏媒体
+    { name: 'IGN', category: 'media', url: 'https://www.ign.com', platform: 'Multi', type: '综合媒体' },
+    { name: 'GameSpot', category: 'media', url: 'https://www.gamespot.com', platform: 'Multi', type: '综合媒体' },
+    { name: 'VGC', category: 'media', url: 'https://www.videogameschronicle.com', platform: 'Multi', type: '行业媒体' },
+    { name: 'GamesIndustry.biz', category: 'media', url: 'https://www.gamesindustry.biz', platform: 'Multi', type: '行业媒体' },
+    { name: 'Kotaku', category: 'media', url: 'https://kotaku.com', platform: 'Multi', type: '综合媒体' },
+    { name: 'Eurogamer', category: 'media', url: 'https://www.eurogamer.net', platform: 'Multi', type: '综合媒体' },
+    { name: 'Polygon', category: 'media', url: 'https://www.polygon.com', platform: 'Multi', type: '综合媒体' },
+    { name: 'The Verge', category: 'media', url: 'https://www.theverge.com', platform: 'Multi', type: '科技媒体' },
+    { name: '3DM', category: 'media', url: 'https://www.3dmgame.com', platform: 'Multi', type: '综合媒体' },
+    { name: 'IT之家', category: 'media', url: 'https://www.ithome.com', platform: 'Multi', type: '科技媒体' },
+    { name: '游民星空', category: 'media', url: 'https://www.gamersky.com', platform: 'Multi', type: '综合媒体' },
+    { name: 'Push Square', category: 'media', url: 'https://www.pushsquare.com', platform: 'PS', type: '专题媒体' },
+    { name: 'Pure Xbox', category: 'media', url: 'https://www.purexbox.com', platform: 'Xbox', type: '专题媒体' },
+    { name: 'NintendoLife', category: 'media', url: 'https://www.nintendolife.com', platform: 'Nintendo', type: '专题媒体' },
+    { name: '腾讯文档策展', category: 'data', url: '', platform: 'Multi', type: '人工策展' },
+    { name: '腾讯文档', category: 'data', url: '', platform: 'Multi', type: '人工策展' },
+    // 数据平台
+    { name: 'SteamDB', category: 'data', url: 'https://steamdb.info', platform: 'Steam', type: '数据平台' },
+    { name: 'VGChartz', category: 'data', url: 'https://www.vgchartz.com', platform: 'Multi', type: '销量追踪' },
+    { name: 'NPD', category: 'data', url: 'https://www.npd.com', platform: 'US', type: '市场数据' },
+    { name: 'Sensor Tower', category: 'data', url: 'https://sensortower.com', platform: 'Mobile', type: '移动数据' },
+];
+
+// ---- 主题聚类配置 ----
+const NEWS_TOPIC_CLUSTERS = {
+    'sony-ps': {
+        icon: '🎮',
+        label: 'Sony / PlayStation',
+        keywords: ['索尼', 'PlayStation', 'PS5', 'PS Plus', 'PSN', 'State of Play', 'SIE', 'Naughty Dog', 'Insomniac', 'Santa Monica', 'Guerrilla', 'Housemarque', 'Bungie', 'SONY', 'PSVR', 'PS Store', 'PS+', 'PS5 Pro', '金刚狼', 'Wolverine'],
+        category: ['platform']
+    },
+    'xbox-ms': {
+        icon: '🟢',
+        label: 'Xbox / Microsoft',
+        keywords: ['Xbox', '微软', 'Microsoft', 'Game Pass', 'XGP', 'Phil Spencer', 'Bethesda', 'Activision', 'Blizzard', 'Halo', 'Forza', 'Fable', 'Obsidian', 'Ninja Theory', 'Starfield', 'Xbox Series', 'Xbox Store', 'Xcloud', 'Xbox Game Studios', 'Matt Booty', 'Sarah Bond', '地平线'],
+        category: ['platform']
+    },
+    'hot-product': {
+        icon: '🔥',
+        label: '重点产品',
+        keywords: ['GTA', '塞尔达', 'Zelda', 'Switch 2', '怪物猎人', 'Monster Hunter', '黑神话', 'Wukong', '漫威', 'Marvel', '战神', 'God of War', '最终幻想', 'Final Fantasy', '生化危机', 'Resident Evil', '艾尔登法环', 'Elden Ring', '暗黑破坏神', 'Diablo', '刺客信条', 'Assassin', '极限竞速', 'Forza', '孤岛惊魂', 'Far Cry', 'R.E.P.O.', 'PEAK', '杀戮尖塔', 'Slay the Spire'],
+        category: ['game']
+    },
+    'upstream-hw': {
+        icon: '🔧',
+        label: '硬件/上游',
+        keywords: ['AMD', 'NVIDIA', 'Intel', '芯片', 'GPU', 'CPU', 'Steam Machine', 'Steam Deck', '掌机', '硬件', '内存', 'SSD', '光驱', '手柄', 'VR', '虚幻引擎', 'Unreal', 'Unity', '引擎', '开发工具'],
+        category: ['hardware', 'technology']
+    },
+    'steam-valve': {
+        icon: '💨',
+        label: 'Steam / Valve',
+        keywords: ['Steam', 'Valve', 'Gabe', 'Steam Deck', 'SteamOS', 'Steam销量', 'Steam同时在线', 'Steam Machine', 'Steam标签'],
+        category: ['platform']
+    },
+    'nintendo': {
+        icon: '🍄',
+        label: 'Nintendo',
+        keywords: ['任天堂', 'Nintendo', 'Switch', 'Switch 2', 'Mario', '塞尔达', 'Zelda', '宝可梦', 'Pokemon', 'Splatoon', 'Kirby', 'Metroid', 'F-Zero', 'Animal Crossing', 'Direct', '古川'],
+        category: ['platform']
+    },
+    'market-info': {
+        icon: '📊',
+        label: '市场/数据',
+        keywords: ['销量', '收入', '营收', '财报', '利润', '下载量', '市场份额', '榜单', 'Top', 'NPD', 'Circana', 'Steam销量榜', '股价', '市值', '投资', '并购', '收购', '融资', 'IPO', '裁员', '关闭'],
+        category: ['market', 'data', 'earnings', 'industry']
+    },
+    'other': {
+        icon: '📋',
+        label: '其他',
+        keywords: [],
+        category: []
+    }
+};
+
+// ---- 主题聚类引擎 ----
+function clusterNewsByTopic(newsItems) {
+    const clusters = {};
+
+    // Initialize all clusters
+    for (const [key, config] of Object.entries(NEWS_TOPIC_CLUSTERS)) {
+        clusters[key] = { icon: config.icon, label: config.label, news: [] };
+    }
+
+    for (const item of newsItems) {
+        let assigned = false;
+        const title = (item.title || '').toLowerCase();
+        const tags = (item.tags || []).map(t => t.toLowerCase());
+        const category = item.category || '';
+
+        for (const [key, config] of Object.entries(NEWS_TOPIC_CLUSTERS)) {
+            if (key === 'other') continue;
+
+            // Check keyword match in title
+            const kwMatch = config.keywords.some(kw => title.includes(kw.toLowerCase()));
+            // Check category match
+            const catMatch = config.category.includes(category);
+
+            if (kwMatch || catMatch) {
+                clusters[key].news.push(item);
+                assigned = true;
+                break; // Each item goes to first matching cluster
+            }
+        }
+
+        if (!assigned) {
+            clusters['other'].news.push(item);
+        }
+    }
+
+    // Remove empty clusters
+    for (const key of Object.keys(clusters)) {
+        if (clusters[key].news.length === 0) {
+            delete clusters[key];
+        }
+    }
+
+    return clusters;
+}
+
+// ---- 聚类新闻合并（同主题多条新闻合并展示） ----
+function mergeClusterNews(sortedNews, clusterKey) {
+    if (sortedNews.length <= 3) return sortedNews;
+
+    // For large clusters, merge similar news (same topic within 3 days)
+    const merged = [];
+    const used = new Set();
+
+    for (let i = 0; i < sortedNews.length; i++) {
+        if (used.has(i)) continue;
+        const item = sortedNews[i];
+        const subNews = [];
+
+        for (let j = i + 1; j < sortedNews.length; j++) {
+            if (used.has(j)) continue;
+            const other = sortedNews[j];
+
+            // Same day or adjacent day + title keyword overlap
+            const daysDiff = Math.abs((new Date(item.date) - new Date(other.date)) / (1000 * 60 * 60 * 24));
+            if (daysDiff <= 3) {
+                const titleAWords = (item.title || '').replace(/[《》「」【】\s\-:：，。！？、]/g, ' ').split(/\s+/).filter(w => w.length >= 2);
+                const titleBWords = (other.title || '').replace(/[《》「」【】\s\-:：，。！？、]/g, ' ').split(/\s+/).filter(w => w.length >= 2);
+                const overlap = titleAWords.filter(w => titleBWords.includes(w)).length;
+                if (overlap >= 2) {
+                    subNews.push(other);
+                    used.add(j);
+                }
+            }
+        }
+
+        if (subNews.length > 0) {
+            item._mergedSubNews = subNews;
+            item._mergedCount = subNews.length + 1;
+            item._mergedLabel = clusterKey === 'hot-product' ? '多版本' : '持续报道';
+        }
+
+        merged.push(item);
+        used.add(i);
+    }
+
+    return merged;
+}
+
+// ---- 重点新闻原因标签 ----
+function getFeaturedReason(n) {
+    if (!n) return '';
+    const title = n.title || '';
+
+    // High importance keywords
+    const highReasons = [
+        { kw: ['收购', '并购'], reason: '🟡 并购事件' },
+        { kw: ['裁员', '关闭工作室'], reason: '🔴 组织变动' },
+        { kw: ['独占', '独占策略'], reason: '🟣 独占相关' },
+        { kw: ['涨价', '降价'], reason: '💰 价格变动' },
+        { kw: ['诉讼', '法庭', '反垄断'], reason: '⚖️ 法律事件' },
+        { kw: ['首发破', '销量破', '创纪录', '里程碑'], reason: '📈 里程碑' },
+        { kw: ['发布会', 'Showcase', 'State of Play', 'Direct'], reason: '🎙️ 发布会' },
+        { kw: ['官宣', '确认', '正式'], reason: '✅ 官方确认' },
+        { kw: ['财报', '营收', '利润', '亏损'], reason: '📊 财报数据' },
+        { kw: ['DLC', '扩展', '资料片'], reason: '🎮 内容更新' },
+        { kw: ['延迟', '推迟', '跳票'], reason: '⏰ 延期' },
+        { kw: ['取消', '终止'], reason: '❌ 取消' },
+    ];
+
+    for (const r of highReasons) {
+        if (r.kw.some(k => title.includes(k))) return r.reason;
+    }
+
+    if (n.importance === 'high') return '⭐ 重点关注';
+    if (n.tdocMarking) return '📰 策展精选';
+    return '⭐ 重点关注';
+}
+
+// ---- 自动洞察生成 ----
+function generateAutoInsight(n) {
+    if (!n) return '';
+    const title = n.title || '';
+    const category = n.category || '';
+    const sentiment = n.sentiment || '';
+
+    // Category-based insights
+    const categoryInsights = {
+        'platform': '此事件可能影响平台竞争格局与玩家生态。',
+        'game': '关注该产品对品类竞争和玩家选择的影响。',
+        'industry': '此变动可能对产业链上下游产生连锁反应。',
+        'policy': '政策变动可能重塑行业合规框架与运营策略。',
+        'market': '市场数据变化反映行业结构性趋势。',
+        'hardware': '硬件生态变化可能影响平台迭代节奏与玩家体验。',
+        'technology': '技术进展可能改变开发范式与产品形态。',
+        'data': '数据指标反映市场结构与玩家偏好变化。',
+        'earnings': '财报数据反映公司战略执行与市场表现。',
+    };
+
+    let insight = categoryInsights[category] || '持续关注此事件对PC/主机行业的影响。';
+
+    // Sentiment overlay
+    if (sentiment === 'negative') {
+        insight = '⚠️ ' + insight;
+    } else if (sentiment === 'positive') {
+        insight = '📈 ' + insight;
+    }
+
+    return insight;
+}
+
+// ---- 新闻分类标签 ----
+function getNewsCategory(cat) {
+    const map = {
+        'platform': '🎮 平台动态',
+        'game': '🕹️ 重点新品',
+        'industry': '🏭 业内动态',
+        'policy': '📋 政策战略',
+        'market': '📊 市场数据',
+        'hardware': '🔧 硬件生态',
+        'technology': '💻 技术前沿',
+        'data': '📊 数据追踪',
+        'earnings': '💰 财报'
+    };
+    return map[cat] || '📰 综合';
+}
+
+// ---- 重要性标签 ----
+function getImportanceLabel(imp) {
+    const map = {
+        'high': '🔴 高',
+        'medium': '🟡 中',
+        'low': '⚪ 低'
+    };
+    return map[imp] || '⚪ 低';
+}
+
+// ---- 情绪标签 ----
+function getNewsSentimentLabel(sentiment) {
+    const map = {
+        'positive': '📈 利好',
+        'negative': '📉 利空',
+        'neutral': '➡️ 中性'
+    };
+    return map[sentiment] || '➡️ 中性';
+}
+
+// ---- 情绪颜色 ----
+function getNewsSentimentColor(sentiment) {
+    const map = {
+        'positive': '#10b981',
+        'negative': '#ef4444',
+        'neutral': '#94a3b8'
+    };
+    return map[sentiment] || '#94a3b8';
+}
+
