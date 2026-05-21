@@ -1,13 +1,97 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-05-21T14:50:00Z
-// 更新者: news-agent (v5.2 MCP HTTP API V2全量读取1372行→1333条+全量导入999条+总计1531条+日期2025-11~2026-05)
+// 最后更新: 2026-05-21T18:00:00Z
+// 更新者: news-agent (v5.2 HTTP API V2 1375行+web_search 14轮+新增4条+更新2条+总计约1535条)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
 // ============================================
 const newsData = [
+    {
+        "id": 1542,
+        "title": "Luna Abyss今日发售PS5/Xbox/PC，Game Pass首日入库",
+        "summary": "Kwalee Labs开发的第一人称弹幕地狱动作冒险游戏Luna Abyss正式发售，登陆PS5、Xbox Series X|S和PC(Steam/Epic)，Xbox Game Pass Ultimate和PC Game Pass首日入库。玩家将在神秘模拟月球内部的废弃殖民地中探索，融合平台跳跃与弹幕战斗。",
+        "source": "VGChartz",
+        "sourceUrl": "https://www.vgchartz.com/article/467665/luna-abyss-launches-may-21-for-ps5-xbox-series-pc-and-game-pass/",
+        "sourceUrls": [
+            {"name": "VGChartz", "url": "https://www.vgchartz.com/article/467665/luna-abyss-launches-may-21-for-ps5-xbox-series-pc-and-game-pass/"},
+            {"name": "AllKeyshop", "url": "https://www.allkeyshop.com/blog/en-gb/luna-abyss-launch-atmospheric-sci-fi-horror-news-l/"}
+        ],
+        "category": "game",
+        "importance": "low",
+        "featured": false,
+        "date": "2026-05-21",
+        "tags": ["Luna Abyss", "Game Pass", "Kwalee"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": [299]
+    },
+    {
+        "id": 1541,
+        "title": "网易Q1 2026营收306亿元+6.1%，游戏收入257亿元+6.9%",
+        "summary": "网易公布2026年Q1财报：净收入306亿元（约44亿美元）同比+6.1%，超出市场预期；游戏及相关增值服务收入257亿元同比+6.9%；毛利润212亿元同比+14.8%。Marvel Rivals等游戏表现强劲，公司继续执行50亿美元股票回购计划。",
+        "source": "NetEase IR",
+        "sourceUrl": "https://ir.netease.com/node/15401/pdf",
+        "sourceUrls": [
+            {"name": "NetEase IR", "url": "https://ir.netease.com/node/15401/pdf"},
+            {"name": "Grafa", "url": "https://grafa.com/en/news/united-states/netease-q1-2026-earnings-gaming-revenue-growth"},
+            {"name": "Rallies.ai", "url": "https://rallies.ai/news/netease-q1-revenue-hits-rmb306-billion-gross-profit-jumps-148"}
+        ],
+        "category": "market",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-21",
+        "tags": ["网易", "财报", "Marvel Rivals"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "网易Q1游戏收入257亿元占比84%，Marvel Rivals持续贡献增量。毛利润增速(14.8%)远超收入增速(6.1%)，说明产品结构优化和运营效率提升。50亿美元回购彰显管理层信心，与腾讯共同构成中国游戏双引擎格局。",
+        "relatedNewsIds": [300]
+    },
+    {
+        "id": 1540,
+        "title": "Take-Two Q4 FY2026财报今日公布，市场关注GTA6最新动态与全年业绩",
+        "summary": "Take-Two Interactive于5月21日收盘后公布FY2026 Q4及全年财报。Q3净预订额$17.6亿超预期，全年指引上调至$66.5-67亿。市场焦点在于：GTA6是否维持2026年秋季发售窗口、Q4是否达到$15.1-15.6亿预订指引、以及FY2027展望。",
+        "source": "MarketBeat",
+        "sourceUrl": "https://www.marketbeat.com/earnings/reports/2026-5-21-take-two-interactive-software-inc-stock/",
+        "sourceUrls": [
+            {"name": "MarketBeat", "url": "https://www.marketbeat.com/earnings/reports/2026-5-21-take-two-interactive-software-inc-stock/"},
+            {"name": "AlphaStreet", "url": "https://news.alphastreet.com/take-two-ttwo-heads-into-fy2026-results-with-gta-vi-expectations-doing-the-heavy-lifting/"},
+            {"name": "TipRanks", "url": "https://www.tipranks.com/stocks/ttwo/earnings"}
+        ],
+        "category": "market",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-21",
+        "tags": ["Take-Two", "GTA6", "财报"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "Take-Two Q4财报是GTA6发售前最重要的信息节点。Q3已超预期(预订$17.6亿 vs 指引$15.5-16亿)，若Q4维持$15亿+预订则全年将达$67亿创纪录。GTA6确认2026秋季窗口将是最大催化剂，任何延期信号将重挫股价。BF6累计2600万套为系列最佳，支撑RCS持续增长。",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 1539,
+        "title": "《耀西与不可思议的图鉴》今日发售Switch 2独占，MC81 IGN仅6分引争议",
+        "summary": "任天堂第一方Switch 2独占《耀西与不可思议的图鉴》5月21日正式发售。Metacritic均分81(64家媒体)，但IGN仅给6分认为创意深度不足、重复游玩动力弱，与其他媒体评价形成显著分歧。由Good-Feel开发，是Yoshi系列时隔多年的全新作品。",
+        "source": "Metacritic",
+        "sourceUrl": "https://www.metacritic.com/game/yoshi-and-the-mysterious-book/",
+        "sourceUrls": [
+            {"name": "Metacritic", "url": "https://www.metacritic.com/game/yoshi-and-the-mysterious-book/"},
+            {"name": "Game Rant", "url": "https://gamerant.com/yoshi-mysterious-book-reviews-round-up/"},
+            {"name": "Nintendo Life", "url": "https://www.nintendolife.com/games/nintendo-switch-2/yoshi-and-the-mysterious-book"},
+            {"name": "新浪科技", "url": "https://finance.sina.com.cn/tech/digi/2026-05-19/doc-inhymytf7395544.shtml"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-21",
+        "tags": ["任天堂", "Switch 2", "耀西"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "Yoshi新作作为Switch 2第一方独占，MC81属中上水平但IGN 6分引发评测分歧讨论。任天堂第一方低分现象近年渐增(宝可梦冠军也遭混合口碑)，反映玩家对IP创新的更高期待。Good-Feel此前作品(毛线耀西/耀西手作世界)评价相近，系列定位偏休闲但定价3A引发性价比争议。",
+        "relatedNewsIds": [298]
+    },
     {
         "id": 1534,
         "title": "《生灵重塑》（Reanimal）销量破百万，DLC确认开发中",
@@ -85,25 +169,6 @@ const newsData = [
         "relatedNewsIds": []
     },
     {
-        "id": 1536,
-        "title": "索尼宣布State of Play将于6月2日举办，主角为《漫威金刚狼》，超60分钟",
-        "summary": "索尼官方确认State of Play将于北京时间6月3日举办，重点展示Insomniac《漫威金刚狼》最新内容，同时将有PS5多款新作的发布与公告，时长超60分钟，拉开夏日游戏节序幕。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-05-20",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
         "id": 1537,
         "title": "PlayStation Plus多地区涨价，港服已直接涨价未发公告",
         "summary": "索尼宣布PlayStation Plus向新用户涨价，现有订阅用户暂不受影响（土耳其、印度除外）。港服已静默涨价，基本（一档）会员的月度订阅由62港币（约54元人民币）涨至70港币（约61元人民币），季度订阅由160港币（约140元人民币）涨至180港币（约157元人民币）,引发大量用户不满。",
@@ -148,10 +213,10 @@ const newsData = [
     },
     {
         "id": 538,
-        "title": "育碧发布2025-26财年财报：创纪录亏损13亿欧元，裁员约1200人",
-        "summary": "育碧2025-26财年运营亏损达13亿欧元（约14亿美元），创公司历史纪录；净预订额同比下降17.4%至15.3亿欧元；全年裁员约1200人，全球员工降至约16,600人；取消6款游戏导致资产减值约6.5亿欧元；固定成本已较2023财年削减约18%。",
-        "source": "3DM · Eurogamer",
-        "sourceUrl": "",
+        "title": "育碧FY2026全年营收14亿欧元暴跌21.8%，运营亏损13亿欧元创纪录",
+        "summary": "育碧公布2025-26财年全年业绩：营收14亿欧元(-21.8%)，净预订额15.3亿欧元(-17.4%)，Q4营收4.195亿欧元(-47.3%)为全年最弱季度。运营亏损从1.965亿欧元扩大至13亿欧元，主要因重组减值。取消7款游戏、延期6款、裁员约1200人。R6 Siege MAU突破1000万，AC系列玩家超3000万。AC黑旗Resynced定档7月9日，FY27为自由现金流低点，FY28-29预期强劲反弹。",
+        "source": "GamesIndustry.biz",
+        "sourceUrl": "https://www.gamesindustry.biz/ubisofts-full-fy26-financials-report-shows-a-sharp-decline-in-revenue-and-net-bookings",
         "sourceUrls": [],
         "category": "industry",
         "importance": "high",
