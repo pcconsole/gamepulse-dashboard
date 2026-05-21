@@ -1,8 +1,8 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-05-20T18:15:00Z
-// 更新者: news-agent (v5.1 自动化定时更新：MCP SpreadsheetApp成功+web_search 14轮+新增12条id303-314+更新id301+删除1条id66)
+// 最后更新: 2026-05-21T11:30:00Z
+// 更新者: news-agent (v5.1 手动触发更新：MCP SpreadsheetApp 7级梯队全部返回空+web_search 14轮+新增3条id315-317+更新1条id294)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
@@ -173,6 +173,72 @@ const newsSources = [
 ];
 
 const newsData = [
+    {
+        "id": 315,
+        "title": "索尼确认State of Play 6月2日回归：60+分钟，Marvel's Wolverine实机首发",
+        "summary": "索尼正式宣布下一场State of Play将于6月2日举行，时长超过60分钟，是近年来规模最大的SoP之一。开场将为Marvel's Wolverine提供扩展实机演示，此外还将包含来自全球顶级工作室的更新、公告和实机揭示。此次SoP恰逢索尼'独占回归'战略后首场大型展示，市场预期将看到《战神》Faye衍生作等重磅新作。活动将在YouTube/Twitch同步直播。",
+        "source": "PlayStation Blog",
+        "sourceUrl": "https://blog.playstation.com/2026/05/20/state-of-play-returns-tuesday-june-2/",
+        "sourceUrls": [
+            {"name": "PlayStation Blog", "url": "https://blog.playstation.com/2026/05/20/state-of-play-returns-tuesday-june-2/"},
+            {"name": "Polygon", "url": "https://www.polygon.com/playstation-state-of-play-june-2026-date-time/"},
+            {"name": "PushSquare", "url": "https://www.pushsquare.com/news/2026/05/state-of-play-confirmed-for-2nd-june-60plus-minutes-of-wolverine-and-ps5-games"},
+            {"name": "GameSpot", "url": "https://www.gamespot.com/articles/playstation-state-of-play-confirmed-for-june-2/1100-6540054/"}
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-20",
+        "tags": ["索尼", "PlayStation", "State of Play", "6月2日", "Marvel's Wolverine", "60分钟", "PS5"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "60+分钟State of Play是索尼2026年最大规模的单场展示(What)。选择6月2日而非SGF 6月5日同周，说明索尼有意在Summer Game Fest前'抢首发'——先让Wolverine实机出圈，再由SGF放大声量(Why)。结合索尼'独占回归'战略，这场SoP被视为PS6发布前最重要的独占阵容展示窗口——Wolverine+可能的战神新作将验证'PS独占价值'路线的商业可行性(So What)。若Wolverine实机表现超预期，将直接拉动PS5硬件销量和PS Plus订阅；反之则给'独占回归'策略蒙上阴影(What Next)。",
+        "relatedNewsIds": [303, 269]
+    },
+    {
+        "id": 316,
+        "title": "育碧FY26全年营收€1.4B暴跌21.8%，CEO称'公司史上最激进转型'",
+        "summary": "育碧公布FY2025-26全年财报：营收€1.4B（-21.8% YoY），净预订额€1.5B（-17.4% YoY），数字收入占比87%。Q4净预订€415M（-54% YoY），虽超预期（指引€390M）但与去年AC Shadows创纪录Q4相比大幅滑坡。CEO Yves Guillemot称这是'公司史上最果断的转型之年'，FY27指引：净预订高个位数下降+高个位数负运营利润率。重组+裁员持续进行中。",
+        "source": "GamesIndustry",
+        "sourceUrl": "https://www.gamesindustry.biz/ubisofts-full-fy26-financials-report-shows-a-sharp-decline-in-revenue-and-net-bookings",
+        "sourceUrls": [
+            {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/ubisofts-full-fy26-financials-report-shows-a-sharp-decline-in-revenue-and-net-bookings"},
+            {"name": "GameDeveloper", "url": "https://www.gamedeveloper.com/business/ubisoft-s-net-bookings-are-down-54-year-on-year"},
+            {"name": "GamesBeat", "url": "https://gamesbeat.com/ubisoft-reports-482m-in-fyq4-net-bookings-down-54-from-a-year-ago-but-above-expectations/"},
+            {"name": "Euronext", "url": "https://live.euronext.com/en/products/equities/company-news/2026-05-20-ubisoft-reports-full-year-2025-26-earnings-figures"}
+        ],
+        "category": "market",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-20",
+        "tags": ["育碧", "Ubisoft", "FY26", "财报", "€1.4B", "-21.8%", "转型", "裁员", "AC Shadows"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "育碧FY26营收暴跌21.8%是欧洲3A发行商中表现最差的财报之一(What)。FY25的AC Shadows创纪录Q4造成了极高基数效应，但FY26没有同量级新作补位——'年货3A'模式失灵是根本原因(Why)。CEO将此定义为'最激进转型'意味着育碧将从'大制作+高频发布'转向'精选IP+深度运营'，但这需要2-3年才能见效(So What)。FY27指引继续看跌说明转型尚未触底，腾讯增持+私有化传闻可能加速——育碧的独立发行商地位正面临历史性考验(What Next)。",
+        "relatedNewsIds": [310]
+    },
+    {
+        "id": 317,
+        "title": "《Mixtape》OC94登顶2026年OpenCritic最高评分，3小时叙事冒险引发定价争议",
+        "summary": "Beethoven & Dinosaur开发、Annapurna Interactive发行的《Mixtape》5月7日发售，OpenCritic均分94（推荐率98%），成为2026年迄今OpenCritic评分最高的游戏。但3小时流程+$20定价引发玩家两极分化：部分认为'精品短体验物有所值'，另一部分认为'性价比过低'。Game Pass同步入库缓和了定价争议。该作以90年代青春期叙事+互动迷你游戏+精选授权原声带著称。",
+        "source": "TheGamer",
+        "sourceUrl": "https://www.thegamer.com/mixtape-highest-review-scores-2026/",
+        "sourceUrls": [
+            {"name": "TheGamer", "url": "https://www.thegamer.com/mixtape-highest-review-scores-2026/"},
+            {"name": "OpenCritic", "url": "https://opencritic.com/game/20188/mixtape/reviews"},
+            {"name": "Game8", "url": "https://game8.co/articles/reviews/mixtape-game-review"},
+            {"name": "Playfront", "url": "https://playfront.de/en/mixtape-im-review-check-ein-interaktives-album-als-adventure-highlight-raeumt-ab/"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-07",
+        "tags": ["Mixtape", "Annapurna Interactive", "OC94", "叙事冒险", "Game Pass", "定价争议", "独立游戏"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Mixtape OC94超越了FH6的MC91成为2026年最高评分游戏(OpenCritic口径)(What)。3小时流程+$20的定价争议本质是'游戏价值论'的碰撞：传统玩家按小时计价（$6.7/h偏高），但叙事体验派认为情感密度才是核心价值(Why)。Game Pass入库是Annapurna的明智选择——让定价争议在订阅制框架内消解，同时扩大曝光(So What)。Mixtape的成功可能推动更多'短精品'叙事游戏采用'首发Game Pass+独立定价'双轨策略，改变独立游戏首发模式(What Next)。",
+        "relatedNewsIds": [295, 299]
+    },
     {
         "id": 303,
         "title": "索尼重大战略转向：第一方叙事单人游戏停止登陆PC，回归PS独占",
@@ -1207,9 +1273,9 @@ const newsData = [
     },
     {
         "id": 294,
-        "title": "《乐高蝙蝠侠：黑暗骑士遗产》Steam愿望单突破95万，发售在即",
-        "summary": "TT Games开发、华纳兄弟发行的《乐高蝙蝠侠：黑暗骑士遗产》Steam愿望单已突破95万，在Steam最期待榜单排名第24位。该作将于5月22日发售，登陆PS5/Xbox/PC/Switch 2全平台。Deluxe版玩家可提前3天游玩。95万愿望单是乐高系列历史上最高预售关注度，但PC配置要求引发部分玩家担忧。",
-        "source": "GamingBolt",
+        "title": "《乐高蝙蝠侠：黑暗骑士遗产》评测MC84，乐高系列史上最高评分，5/22全平台发售",
+        "summary": "TT Games《乐高蝙蝠侠：黑暗骑士遗产》评测解禁：Metacritic均分84，OpenCritic推荐率98%，成为乐高系列史上评分最高的游戏。IGN 8/10称其'实现了玩家等了11年的Arkham风格玩法'。此前Steam愿望单已突破95万。5月22日发售登陆PS5/Xbox/PC/Switch 2全平台，Deluxe版可提前3天游玩。MC84同时是2026年迄今评分最高的乐高/授权IP游戏。",
+        "source": "TheGamer",
         "sourceUrl": "https://gamingbolt.com/lego-batman-legacy-of-the-dark-knight-has-950000-wishlists-on-steam-ahead-of-launch",
         "sourceUrls": [
             {"name": "GamingBolt", "url": "https://gamingbolt.com/lego-batman-legacy-of-the-dark-knight-has-950000-wishlists-on-steam-ahead-of-launch"},
