@@ -2,7 +2,7 @@
 // 待上线 Pipeline 数据模块 V3.9
 // 数据源：腾讯文档 MCP（唯一基准，文档ID: LRcKfOTzgHrV）
 //         + 网络搜索验证补充（标注来源，不覆盖MCP数据）
-// 最后更新: 2026-05-14 (V3.9 4款已发售+2款MCP新增+1款网络搜索新增+AC黑旗日期更新)
+// 最后更新: 2026-05-21 (V3.10 2款已发售移至released: 极限竞速地平线6+耀西)
 // ============================================
 
 // ====== 未上线产品数据（全部展示）======
@@ -12,7 +12,6 @@ const pipelineUnreleased = [
     // =============================================
 
     // --- MCP 海外产品（有具体日期）---
-    { region: "海外", name: "极限竞速：地平线6", publisher: "微软", studio: "Playground Games", releaseDate: "2026/5/19", platforms: "PC+Xbox", heat: "中低", heatNote: "IP续作，垂类头部", gameplay: "赛车竞速游戏头部游戏", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "乐高蝙蝠侠：黑暗骑士的遗产", publisher: "华纳兄弟", studio: "/", releaseDate: "2026/5/23", platforms: "PC+Switch2+PS5+Xbox", heat: "中低", heatNote: "乐高+蝙蝠侠双IP", gameplay: "潜行跑酷+开放世界探索，乐高积木风格", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "007：锋芒初露", publisher: "世嘉", studio: "IO Interactive", releaseDate: "2026/5/28", platforms: "PC+PS5+Xbox", heat: "中", heatNote: "开发成本达1.8亿美元", gameplay: "特工题材ACG，潜行及多武器枪战刺杀", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "Marvel Tokon Fighting Souls", publisher: "索尼", studio: "/", releaseDate: "2026/6/8", platforms: "PS5+PC", heat: "低", heatNote: "漫威IP，PS 6/8先发，PC 8/6", gameplay: "4v4团队格斗游戏", licenseStatus: "", licenseNote: "", source: "MCP" },
@@ -114,12 +113,14 @@ const pipelineUnreleased = [
     { region: "海外", name: "碧蓝幻想Relink：无尽黄昏", publisher: "Cygames", studio: "Cygames", releaseDate: "2026/7/9", platforms: "PC+Switch2+PS5", heat: "中", heatNote: "前作全球300万+，据GamesRadar确认7/9", gameplay: "多人联机ARPG", licenseStatus: "", licenseNote: "", source: "网络搜索" },
     { region: "海外", name: "最终幻想7 重生 Xbox/Switch版", publisher: "史克威尔艾尼克斯", studio: "/", releaseDate: "2026/6/3", platforms: "Xbox+Switch", heat: "中高", heatNote: "FF7重制三部曲第二作移植版，据GamesRadar确认6/3", gameplay: "ARPG", licenseStatus: "", licenseNote: "", source: "网络搜索" },
     { region: "海外", name: "Gothic 1 Remake", publisher: "THQ Nordic", studio: "Alkimia Interactive", releaseDate: "2026/6/5", platforms: "PC+Xbox+PS5", heat: "中", heatNote: "经典RPG重制，据GamesRadar确认6/5发售", gameplay: "开放世界动作RPG", licenseStatus: "", licenseNote: "", source: "网络搜索" },
-    { region: "海外", name: "耀西与不可思议的图鉴（Yoshi and the Mysterious Book）", publisher: "任天堂", studio: "/", releaseDate: "2026/5/21", platforms: "Switch2", heat: "中", heatNote: "任天堂官方确认5/21，超级马力欧40周年纪念作品", gameplay: "横版平台跳跃冒险", licenseStatus: "", licenseNote: "", source: "网络搜索" },
     { region: "国内", name: "刺客信条：影（国行版）", publisher: "育碧/腾讯", studio: "/", releaseDate: "2026年", platforms: "PC+PS5+Xbox", heat: "中", heatNote: "国行版审核中", gameplay: "潜行动作冒险", licenseStatus: "审核中", licenseNote: "腾讯代理国行版", source: "网络搜索" },
 ];
 
 // ====== 已上线产品数据（仅展示2026年上线的）======
 const pipelineReleased = [
+    // ===== 2026-05-21 更新: 新增已发售 =====
+    { region: "海外", name: "极限竞速：地平线6", publisher: "微软", studio: "Playground Games", releaseDate: "2026/5/19", platforms: "PC+Xbox", heat: "中低", heatNote: "IP续作，垂类头部，日本设定MC高分(IGN/TechRadar/PCGamer/GamesRadar多源评测确认5/19发售)", gameplay: "赛车竞速游戏头部游戏", source: "MCP" },
+    { region: "海外", name: "耀西与不可思议的图鉴（Yoshi and the Mysterious Book）", publisher: "任天堂", studio: "Good-Feel", releaseDate: "2026/5/21", platforms: "Switch2", heat: "中", heatNote: "任天堂官方确认5/21，超级马力欧40周年纪念作品(Nintendo官方+NintendoLife+Gematsu多源确认)", gameplay: "横版平台跳跃冒险", source: "网络搜索" },
     // ===== 2026-05-14 更新: 新增已发售 =====
     { region: "海外", name: "黑相集：指令8020（Directive 8020）", publisher: "Supermassive Games", studio: "/", releaseDate: "2026/5/12", platforms: "PC+PS5+Xbox", heat: "低", heatNote: "直到黎明开发商，黑相集系列新作", gameplay: "科幻题材生存冒险恐怖游戏", source: "MCP" },
     { region: "海外", name: "古神之呼唤（Call of the Elder Gods）", publisher: "Kwalee", studio: "Out of the Blue Games", releaseDate: "2026/5/13", platforms: "PC+PS5+Xbox+Switch2", heat: "低", heatNote: "《海之呼唤》续作，克苏鲁题材", gameplay: "克苏鲁题材冒险解谜", source: "MCP" },
