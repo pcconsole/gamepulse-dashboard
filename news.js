@@ -1,13 +1,505 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-05-21T18:00:00Z
-// 更新者: news-agent (v5.2 HTTP API V2 1375行+web_search 14轮+新增4条+更新2条+总计约1535条)
+// 最后更新: 2026-05-22T18:00:00Z
+// 更新者: news-agent (v5.2 HTTP API V2 1384行+web_search 14轮+新增13条+更新3条+90天清理)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
 // ============================================
 const newsData = [
+    {
+        "id": 1547,
+        "title": "卡普空白金销量榜更新：RE Requiem 691万+MH Wilds半年仅增40万",
+        "summary": "卡普空更新白金销量榜（截至3/31）：《生化危机：安魂曲》699万份保持系列最快销售纪录；《怪物猎人：荒野》半年仅增40万份至1月数据；RE2 Remake 1830万份系列最高。全公司127款游戏销量超百万，66款超200万。FY2026净销售额1953亿日元连续9年创新高。",
+        "source": "Gematsu",
+        "sourceUrl": "https://www.gematsu.com/2026/05/capcom-platinum-titles-sales-update-as-of-march-31-2026",
+        "sourceUrls": [
+            {
+                "name": "Gematsu",
+                "url": "https://www.gematsu.com/2026/05/capcom-platinum-titles-sales-update-as-of-march-31-2026"
+            },
+            {
+                "name": "FinalWeapon",
+                "url": "https://finalweapon.net/2026/05/21/capcom-platinum-titles-march-2026/"
+            },
+            {
+                "name": "VGChartz",
+                "url": "https://www.vgchartz.com/article/467888/capcom-updates-its-best-sellers-list-re-requiem-at-69m-re2-remake-at-183m-more/"
+            }
+        ],
+        "category": "market",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-22",
+        "tags": [
+            "Capcom",
+            "生化危机",
+            "怪物猎人",
+            "白金销量"
+        ],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "RE Requiem 699万份稳居系列最快销售纪录，但MH Wilds半年仅增40万值得警惕——可能反映后发型怪物猎人增长放缓或玩家转向新作。RE2 Remake 1830万份登顶系列说明经典IP重制策略的复利效应。Capcom连续9年增长在行业裁员潮中尤为突出，产品组合策略（重制+新作交替）成为护城河。",
+        "relatedNewsIds": [
+            310
+        ]
+    },
+    {
+        "id": 1555,
+        "title": "Bungie停更《命运2》6月9日最终更新+大规模裁员+《命运3》未获批准",
+        "summary": "Bungie宣布《命运2》将于6月9日发布最终更新'Monument of Triumph'后停止新内容开发，游戏仍可游玩。据Bloomberg记者Jason Schreier报道，Bungie随后将面临'大规模'裁员，且《命运3》目前未获绿灯批准。工作室将转向其他项目，包括已发布的Marathon和未公开新作。此前Bungie已于2026年1月裁减约50%员工。",
+        "source": "Kotaku",
+        "sourceUrl": "https://kotaku.com/destiny-2-final-update-bungie-layoffs-sony-marathon-2000698425",
+        "sourceUrls": [
+            {
+                "name": "Kotaku",
+                "url": "https://kotaku.com/destiny-2-final-update-bungie-layoffs-sony-marathon-2000698425"
+            },
+            {
+                "name": "IGN",
+                "url": "https://www.ign.com/articles/bungie-walks-away-from-destiny-2-final-content-update-coming-in-june"
+            },
+            {
+                "name": "PushSquare",
+                "url": "https://www.pushsquare.com/news/2026/05/bungie-is-not-making-destiny-3-dev-to-be-rocked-by-significant-layoffs"
+            },
+            {
+                "name": "Bloomberg/Schreier",
+                "url": "https://gamingpromax.com/bungie-layoffs-destiny-3-not-in-development-marathon-2026/"
+            }
+        ],
+        "category": "policy",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-21",
+        "tags": [
+            "Bungie",
+            "Destiny 2",
+            "裁员",
+            "Sony"
+        ],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "Bungie停更命运2标志着live-service时代的标志性转折。索尼2022年以36亿美元收购Bungie后，命运2持续表现不及预期，已导致索尼大幅减值。'命运3未获批准'意味着该IP前景不明，而Marathon作为唯一在运营的新作将承担更大压力。大规模裁员继续2026年1月裁减50%员工的趋势，反映出索尼对Bungie整合的艰难和live-service模式的系统性风险。",
+        "relatedNewsIds": [
+            538,
+            300
+        ]
+    },
+    {
+        "id": 1554,
+        "title": "《荒野大镖客：救赎2》销量破8500万，跻身史上最畅销游戏第三",
+        "summary": "Take-Two在Q4 FY2026财报中披露，《荒野大镖客：救赎2》累计销量突破8500万份，超越Wii Sports成为史上第三畅销游戏。GTA V累计销量达2.3亿份稳居第一。RDR2自2018年发售以来持续增长，过去12个月销量创下发售年以来新高，且无PS5升级版和DLC。",
+        "source": "IGN",
+        "sourceUrl": "https://www.ign.com/articles/red-dead-redemption-2-overtakes-wii-sports-in-best-selling-games-of-all-time-list",
+        "sourceUrls": [
+            {
+                "name": "IGN",
+                "url": "https://www.ign.com/articles/red-dead-redemption-2-overtakes-wii-sports-in-best-selling-games-of-all-time-list"
+            },
+            {
+                "name": "RockstarIntel",
+                "url": "https://rockstarintel.com/red-dead-redemption-2-is-now-the-3rd-best-selling-game-of-all-time-with-85-million-copies-sold/"
+            },
+            {
+                "name": "RDR2.org",
+                "url": "https://www.rdr2.org/news/rockstar-now-owns-two-of-the-three-best-selling-games-ever-made/"
+            },
+            {
+                "name": "Instant Gaming",
+                "url": "https://news.instant-gaming.com/en/articles/19680-gta-v-has-sold-230-million-copies-and-red-dead-redemption-2-has-sold-85-million"
+            }
+        ],
+        "category": "market",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-21",
+        "tags": [
+            "RDR2",
+            "Take-Two",
+            "销量里程碑",
+            "Rockstar"
+        ],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Rockstar独占史上最畅销游戏前三中的两席（GTA V 2.3亿+RDR2 8500万），彰显其IP的极致长尾价值。RDR2无PS5升级无DLC却持续创新高，证明开放世界叙事体验的不可替代性。这为GTA6的长期收入模型提供了强心针——Take-Two FY2027指引$80-82亿正是基于此信心。",
+        "relatedNewsIds": [
+            1540,
+            300
+        ]
+    },
+    {
+        "id": 1553,
+        "title": "Take-Two Q4 FY2026: 净预订$15.8亿超预期+GTA6确认11/19+FY2027指引$80-82亿",
+        "summary": "Take-Two公布Q4 FY2026财报：净预订$15.8亿同比+17%超预期上限；全年净预订$67.2亿创纪录同比+15%。CEO Zelnick确认GTA6仍将于11月19日发售不会再延期，夏季启动营销活动。FY2027指引净预订$80-82亿，反映GTA6首发贡献。GTA V累计2.3亿份，Zynga贡献最强季度。",
+        "source": "Take-Two IR",
+        "sourceUrl": "https://www.take2games.com/ir/quarterly-earnings",
+        "sourceUrls": [
+            {
+                "name": "Take-Two IR",
+                "url": "https://www.take2games.com/ir/quarterly-earnings"
+            },
+            {
+                "name": "Intellectia",
+                "url": "https://intellectia.ai/news/stock/taketwo-interactive-reports-strong-q4-2026-earnings-with-gta-vi-launch-ahead"
+            },
+            {
+                "name": "Seeking Alpha",
+                "url": "https://seekingalpha.com/news/4596120-take-two-forecasts-8b-8_2b-fiscal-2027-net-bookings-led-by-grand-theft-auto-vi-launch-on"
+            },
+            {
+                "name": "ScreenRant",
+                "url": "https://screenrant.com/gta-6-release-date-update-earnings-call-may-2026/"
+            }
+        ],
+        "category": "market",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-21",
+        "tags": [
+            "Take-Two",
+            "GTA6",
+            "财报",
+            "FY2027"
+        ],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Take-Two FY2027指引$80-82亿意味着GTA6首年将贡献约$13-15亿增量（vs FY2026 $67.2亿），这是游戏行业史上最大的单年增长预期。CEO刻意重申11/19发售日'不是为了延迟'，旨在消除市场疑虑。Zynga贡献最强季度说明移动端仍是稳定基本盘。关注点：营销夏季启动、预购即将开放、$3.7B减值损失已消化。",
+        "relatedNewsIds": [
+            1540,
+            1554
+        ]
+    },
+    {
+        "id": 1552,
+        "title": "索尼注册'Break In'商标，疑Haven工作室Fairgames品牌重塑",
+        "summary": "索尼互动娱乐5月20日在美国和欧洲注册'Break In'商标，并注册多个社交媒体账号。业界普遍推测这是Haven Studios开发的合作抢劫游戏Fairgame$的品牌重塑。该游戏2023年公布后开发困难，Concord灾难性首发后Sony对live-service项目更为谨慎。6/2 State of Play可能正式公布。",
+        "source": "VGC",
+        "sourceUrl": "https://www.videogameschronicle.com/news/sony-trademarks-break-in-state-of-play-showcase/",
+        "sourceUrls": [
+            {
+                "name": "VGC",
+                "url": "https://www.videogameschronicle.com/news/sony-trademarks-break-in-state-of-play-showcase/"
+            },
+            {
+                "name": "PushSquare",
+                "url": "https://www.pushsquare.com/news/2026/05/sony-trademarks-new-ps5-game-break-in-registers-several-social-media-accounts"
+            },
+            {
+                "name": "IGN",
+                "url": "https://www.ign.com/articles/sony-files-trademark-for-new-game-called-break-in"
+            },
+            {
+                "name": "IGN中国",
+                "url": "https://www.ign.com.cn/playstation-5/60189/suo-ni-zhu-ce-shen-mi-xin-you-xi-shang-biao-break-in"
+            }
+        ],
+        "category": "platform",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-21",
+        "tags": [
+            "Sony",
+            "PS5",
+            "Haven Studios",
+            "Fairgames"
+        ],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "Fairgame$品牌重塑为Break In反映Sony对live-service策略的调整——Concord灾难后，品牌重启成为规避负面联想的手段。但更名不解决核心问题：合作抢劫品类已有GTA Online和Sea of Thieves占据，Break In需要差异化。6/2 State of Play是验证产品力的关键窗口。",
+        "relatedNewsIds": [
+            315
+        ]
+    },
+    {
+        "id": 1551,
+        "title": "索尼PS Store动态定价或违欧盟法，丹麦消费者组织已介入",
+        "summary": "索尼在PlayStation Store试行动态定价（对不同用户显示不同价格），据Eurogamer报道，丹麦消费者组织评估认为此举可能违反欧盟消费者保护法。此前3月索尼开始大规模测试时已引发玩家强烈反弹，质疑'这不是违法吗？'。欧盟正将动态定价纳入数字公平性审查。",
+        "source": "Eurogamer",
+        "sourceUrl": "https://www.eurogamer.net/playstation-dynamic-pricing-sony-transparency-eu-law",
+        "sourceUrls": [
+            {
+                "name": "Eurogamer",
+                "url": "https://www.eurogamer.net/playstation-dynamic-pricing-sony-transparency-eu-law"
+            },
+            {
+                "name": "PCMag",
+                "url": "https://www.pcmag.com/news/how-much-did-you-pay-sony-may-be-trialing-dynamic-pricing-for-ps5-games"
+            },
+            {
+                "name": "GamingProMax",
+                "url": "https://gamingpromax.com/sony-playstation-store-dynamic-pricing-eu-law-violation/"
+            }
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-21",
+        "tags": [
+            "Sony",
+            "PS Store",
+            "动态定价",
+            "欧盟",
+            "消费者保护"
+        ],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "动态定价在电商领域已不新鲜，但在数字游戏商店的应用尚无明确法律先例。若欧盟裁定违法，不仅Sony需赔偿和调整，Steam/Epic等平台也可能受波及。这是游戏行业从'一刀切定价'向'个性化定价'转型过程中面临的重大法律风险，可能重塑数字商品定价规则。",
+        "relatedNewsIds": [
+            305,
+            307
+        ]
+    },
+    {
+        "id": 1550,
+        "title": "Valve申请驳回CS2开箱$60亿赌博诉讼，辩称与盲盒无本质区别",
+        "summary": "Valve向纽约联邦法院提交驳回动议，针对纽约总检察长2月提起的$60亿CS2开箱赌博诉讼。Valve辩称开箱与宝可梦卡牌等实体盲盒无本质区别，不构成非法赌博。此前华盛顿州也提起了类似集体诉讼。纽约总检察长Letitia James指控Valve通过CS2/TF2/Dota 2开箱推广非法赌博。",
+        "source": "Talkesport",
+        "sourceUrl": "https://www.talkesport.com/news/cs2/valve-ny-gambling-lawsuit-motion-dismiss/",
+        "sourceUrls": [
+            {
+                "name": "Talkesport",
+                "url": "https://www.talkesport.com/news/cs2/valve-ny-gambling-lawsuit-motion-dismiss/"
+            },
+            {
+                "name": "Hagens Berman",
+                "url": "https://www.hbsslaw.com/cases/valve-loot-box-gambling-class-action"
+            },
+            {
+                "name": "Ars Technica",
+                "url": "https://arstechnica.com/gaming/2026/02/new-york-sues-valve-for-enabling-illegal-gambling-with-loot-boxes/"
+            }
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-21",
+        "tags": [
+            "Valve",
+            "CS2",
+            "开箱",
+            "诉讼",
+            "赌博"
+        ],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "Valve将开箱与实体盲盒类比是核心抗辩策略，若法院采纳则开箱法律风险大幅降低，反之则可能引发行业地震。纽约总检察长2月起诉+华盛顿3月集体诉讼形成双线压力，$60亿索赔金额创游戏行业纪录。此案判决将深刻影响全球开箱商业模式和监管走向。",
+        "relatedNewsIds": [
+            305,
+            306
+        ]
+    },
+    {
+        "id": 1549,
+        "title": "《战锤40K：战争黎明4》公布发售日9月17日，Warhammer Skulls重磅发布",
+        "summary": "在Warhammer Skulls 2026活动上，King Art Games和Deep Silver正式公布《战锤40K：战争黎明4》将于9月17日发售（豪华版9/14抢先体验），登陆PC Steam。游戏回归RTS核心玩法，包含4个阵营和Kronus战役，并公布了后续DLC阵营路线图。距系列上一款作品已近10年。",
+        "source": "IGN",
+        "sourceUrl": "https://www.ign.com/articles/everything-announced-at-warhammer-skulls-2026",
+        "sourceUrls": [
+            {
+                "name": "IGN",
+                "url": "https://www.ign.com/articles/everything-announced-at-warhammer-skulls-2026"
+            },
+            {
+                "name": "GeekCulture",
+                "url": "https://geekculture.co/warhammer-40k-dawn-of-war-iv-rts-sets-sept-launch-will-add-factions-via-dlc/"
+            },
+            {
+                "name": "GameDaily",
+                "url": "https://gamedaily.com/games/dawn-of-war-iv-reveal-releases-september-2026"
+            },
+            {
+                "name": "GamingProMax",
+                "url": "https://gamingpromax.com/warhammer-40k-dawn-of-war-4-release-date-factions-roadmap/"
+            }
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-21",
+        "tags": [
+            "Warhammer 40K",
+            "Dawn of War 4",
+            "RTS",
+            "King Art Games"
+        ],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "战争黎明系列回归RTS本源是对DoW3动作化失败的纠偏。King Art Games接棒Relic，4阵营+Kronus战役+DLC路线图显示成熟的产品规划。RTS品类近年来新作稀缺，DoW4和即将到来的AOE4 DLC构成品类复兴双引擎。9月发售窗口避开了假日季3A竞争。",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 1548,
+        "title": "Terraria发售15周年累计销量破7000万，开发商承诺持续运营",
+        "summary": "Re-Logic宣布《Terraria》发售15周年之际累计销量突破7000万份，成为独立游戏史上最成功的作品之一。开发商承诺游戏生态将持续运营，跨平台更新计划仍在推进中。Terraria以$9.99的基础定价和持续免费更新著称，2020年至今销量几乎翻倍。",
+        "source": "VerticalSliceGames",
+        "sourceUrl": "https://www.verticalslicegames.com/news/terraria-70-million-sales-anniversary-crossplay-updates-re-logic",
+        "sourceUrls": [
+            {
+                "name": "VerticalSliceGames",
+                "url": "https://www.verticalslicegames.com/news/terraria-70-million-sales-anniversary-crossplay-updates-re-logic"
+            },
+            {
+                "name": "腾讯文档",
+                "url": ""
+            }
+        ],
+        "category": "market",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-21",
+        "tags": [
+            "Terraria",
+            "Re-Logic",
+            "独立游戏",
+            "销量里程碑"
+        ],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Terraria 7000万份/$9.99定价的组合证明：低价+持续免费更新+社区驱动的长尾模式可以产生巨大商业回报。2020年3500万→2026年7000万，6年翻倍说明沙盒品类的超长生命周期。对行业启示：LiveOps不等于微交易，免费内容更新也能驱动销量增长。",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 1546,
+        "title": "4月美国游戏销量：朋友收集夺冠+Capcom双冠+Switch 2领先硬件",
+        "summary": "Circana发布4月美国游戏市场数据：软件支出同比+3%，《朋友收集：梦想生活》夺冠，《Pragmata》第二。Capcom包揽月度Top 2和年度累计Top 1（RE Requiem）。PS5独占《Saros》首周仅排第9。硬件方面，Switch 2领先原版Switch同期11%。Circana开始纳入数字销量预估。",
+        "source": "Wccftech",
+        "sourceUrl": "https://wccftech.com/tomodachi-life-pragmata-tops-april-2026-us-sales-charts-circana-new-method/",
+        "sourceUrls": [
+            {
+                "name": "Wccftech",
+                "url": "https://wccftech.com/tomodachi-life-pragmata-tops-april-2026-us-sales-charts-circana-new-method/"
+            },
+            {
+                "name": "ResetEra",
+                "url": "https://www.resetera.com/threads/circana-us-sales-april-2026-1-tomodachi-life-2-pragmata-9-saros-switch-2-1-11-ahead-of-switch-1.1525381/"
+            },
+            {
+                "name": "Nintendo Everything",
+                "url": "https://nintendoeverything.com/best-selling-games-in-the-u-s-for-april-2026-tomodachi-life-beats-out-everything/"
+            }
+        ],
+        "category": "market",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-05-21",
+        "tags": [
+            "Circana",
+            "美国市场",
+            "Switch 2",
+            "4月销量"
+        ],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": [
+            301
+        ]
+    },
+    {
+        "id": 1545,
+        "title": "《生灵重塑》(Reanimal)销量破百万，DLC'The Expanded World'确认",
+        "summary": "Tarsier Studios开发的恐怖冒险游戏《生灵重塑》(REANIMAL)销量突破100万份。发行商THQ Nordic/Embracer确认DLC'The Expanded World'将分三章发布，第一章预计2026年夏季推出。Tarsier此前放弃了《小小噩梦》IP，Reanimal成为其新原创IP的成功验证。",
+        "source": "TwistedVoxel",
+        "sourceUrl": "https://twistedvoxel.com/reanimal-surpasses-1-million-sales-as-embracer-confirms-dlc-expansion-plans/",
+        "sourceUrls": [
+            {
+                "name": "TwistedVoxel",
+                "url": "https://twistedvoxel.com/reanimal-surpasses-1-million-sales-as-embracer-confirms-dlc-expansion-plans/"
+            },
+            {
+                "name": "Gamereactor",
+                "url": "https://www.gamereactor.eu/reanimal-has-sold-1-million-copies-with-embracer-regarding-it-as-something-to-really-build-on-for-the-long-term-1721953/"
+            },
+            {
+                "name": "GamesIndustry",
+                "url": "https://www.gamesindustry.biz/embracer-group-announces-plans-to-spin-off-fellowship-entertainment"
+            }
+        ],
+        "category": "game",
+        "importance": "low",
+        "featured": false,
+        "date": "2026-05-21",
+        "tags": [
+            "Reanimal",
+            "Tarsier Studios",
+            "Embracer",
+            "DLC"
+        ],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 1544,
+        "title": "Xbox Game Studios Shop官方周边商店上线，替代原Xbox Gear Shop",
+        "summary": "微软5月21日正式推出Xbox Game Studios Shop，替代原有Xbox Gear Shop。新商店专注于Xbox第一方游戏官方授权周边，覆盖《光环》《极限竞速》《战争机器》《神鬼寓言》《盗贼之海》等IP。该商店加入微软现有的Blizzard Gear Store、COD Shop、Bethesda Gear Store等周边生态。",
+        "source": "Xbox Wire",
+        "sourceUrl": "https://news.xbox.com/en-us/2026/05/21/introducing-the-xbox-game-studios-shop/",
+        "sourceUrls": [
+            {
+                "name": "Xbox Wire",
+                "url": "https://news.xbox.com/en-us/2026/05/21/introducing-the-xbox-game-studios-shop/"
+            },
+            {
+                "name": "PureXbox",
+                "url": "https://www.purexbox.com/news/2026/05/xbox-game-studios-now-has-an-official-shop-featuring-merch-for-major-first-party-games"
+            }
+        ],
+        "category": "platform",
+        "importance": "low",
+        "featured": false,
+        "date": "2026-05-21",
+        "tags": [
+            "Xbox",
+            "周边",
+            "微软"
+        ],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 1543,
+        "title": "FH6首周破600万玩家+Steam峰值17.8万创系列纪录，Xbox游戏Steam新高",
+        "summary": "Playground Games宣布《极限竞速：地平线6》发售首周突破600万玩家。Steam同时在线峰值达178,009人，是前作FH5的2倍以上，创下Xbox第一方游戏在Steam的历史最高纪录。5月15日Premium版抢先体验开始即打破系列纪录，正式版5/19上线后持续增长。Game Pass首日入库贡献大量玩家。",
+        "source": "GameSpot",
+        "sourceUrl": "https://www.gamespot.com/articles/forza-horizon-6-crushes-franchise-record-on-steam-despite-the-need-to-pay-extra/1100-6539998/",
+        "sourceUrls": [
+            {
+                "name": "GameSpot",
+                "url": "https://www.gamespot.com/articles/forza-horizon-6-crushes-franchise-record-on-steam-despite-the-need-to-pay-extra/1100-6539998/"
+            },
+            {
+                "name": "GamingProMax",
+                "url": "https://gamingpromax.com/forza-horizon-6-steam-player-count-record-early-access/"
+            },
+            {
+                "name": "nsaneforums",
+                "url": "https://nsaneforums.com/news/technology-news/forza-horizon-6-hits-a-massive-milestone-across-xbox-pc-and-game-pass-after-its-explosive-release-%E2%80%94-it-just-set-a-new-steam-peak-player-count-too-r35087/"
+            }
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-21",
+        "tags": [
+            "Forza Horizon 6",
+            "Steam",
+            "Xbox",
+            "Game Pass"
+        ],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "FH6首周600万玩家+Steam 17.8万峰值标志着Xbox第一方在PC端的突破性进展。Steam峰值是FH5的2倍+，说明日本舞台和5年等待积累了巨大需求。Game Pass首日入库是600万玩家的关键推手，但也意味着传统销量占比降低。这是Xbox多平台+订阅策略的最强验证案例。",
+        "relatedNewsIds": [
+            295,
+            299
+        ]
+    },
     {
         "id": 1542,
         "title": "Luna Abyss今日发售PS5/Xbox/PC，Game Pass首日入库",
@@ -15,18 +507,30 @@ const newsData = [
         "source": "VGChartz",
         "sourceUrl": "https://www.vgchartz.com/article/467665/luna-abyss-launches-may-21-for-ps5-xbox-series-pc-and-game-pass/",
         "sourceUrls": [
-            {"name": "VGChartz", "url": "https://www.vgchartz.com/article/467665/luna-abyss-launches-may-21-for-ps5-xbox-series-pc-and-game-pass/"},
-            {"name": "AllKeyshop", "url": "https://www.allkeyshop.com/blog/en-gb/luna-abyss-launch-atmospheric-sci-fi-horror-news-l/"}
+            {
+                "name": "VGChartz",
+                "url": "https://www.vgchartz.com/article/467665/luna-abyss-launches-may-21-for-ps5-xbox-series-pc-and-game-pass/"
+            },
+            {
+                "name": "AllKeyshop",
+                "url": "https://www.allkeyshop.com/blog/en-gb/luna-abyss-launch-atmospheric-sci-fi-horror-news-l/"
+            }
         ],
         "category": "game",
         "importance": "low",
         "featured": false,
         "date": "2026-05-21",
-        "tags": ["Luna Abyss", "Game Pass", "Kwalee"],
+        "tags": [
+            "Luna Abyss",
+            "Game Pass",
+            "Kwalee"
+        ],
         "sentiment": "neutral",
         "tdocMarking": "none",
         "analysis": "",
-        "relatedNewsIds": [299]
+        "relatedNewsIds": [
+            299
+        ]
     },
     {
         "id": 1541,
@@ -35,36 +539,64 @@ const newsData = [
         "source": "NetEase IR",
         "sourceUrl": "https://ir.netease.com/node/15401/pdf",
         "sourceUrls": [
-            {"name": "NetEase IR", "url": "https://ir.netease.com/node/15401/pdf"},
-            {"name": "Grafa", "url": "https://grafa.com/en/news/united-states/netease-q1-2026-earnings-gaming-revenue-growth"},
-            {"name": "Rallies.ai", "url": "https://rallies.ai/news/netease-q1-revenue-hits-rmb306-billion-gross-profit-jumps-148"}
+            {
+                "name": "NetEase IR",
+                "url": "https://ir.netease.com/node/15401/pdf"
+            },
+            {
+                "name": "Grafa",
+                "url": "https://grafa.com/en/news/united-states/netease-q1-2026-earnings-gaming-revenue-growth"
+            },
+            {
+                "name": "Rallies.ai",
+                "url": "https://rallies.ai/news/netease-q1-revenue-hits-rmb306-billion-gross-profit-jumps-148"
+            }
         ],
         "category": "market",
         "importance": "medium",
         "featured": true,
         "date": "2026-05-21",
-        "tags": ["网易", "财报", "Marvel Rivals"],
+        "tags": [
+            "网易",
+            "财报",
+            "Marvel Rivals"
+        ],
         "sentiment": "positive",
         "tdocMarking": "none",
         "analysis": "网易Q1游戏收入257亿元占比84%，Marvel Rivals持续贡献增量。毛利润增速(14.8%)远超收入增速(6.1%)，说明产品结构优化和运营效率提升。50亿美元回购彰显管理层信心，与腾讯共同构成中国游戏双引擎格局。",
-        "relatedNewsIds": [300]
+        "relatedNewsIds": [
+            300
+        ]
     },
     {
         "id": 1540,
-        "title": "Take-Two Q4 FY2026财报今日公布，市场关注GTA6最新动态与全年业绩",
-        "summary": "Take-Two Interactive于5月21日收盘后公布FY2026 Q4及全年财报。Q3净预订额$17.6亿超预期，全年指引上调至$66.5-67亿。市场焦点在于：GTA6是否维持2026年秋季发售窗口、Q4是否达到$15.1-15.6亿预订指引、以及FY2027展望。",
+        "title": "Take-Two Q4 FY2026: 净预订$15.8亿+17%超预期，GTA6确认11/19+FY2027指引$80-82亿",
+        "summary": "Take-Two公布Q4 FY2026财报：净预订$15.8亿同比+17%超预期上限；全年净预订$67.2亿创纪录同比+15%。CEO Zelnick确认GTA6仍将于11月19日发售不会再延期，夏季启动营销。FY2027指引净预订$80-82亿。GTA V累计2.3亿份，RDR2 8500万份跻身史上第三。Zynga贡献最强季度。",
         "source": "MarketBeat",
         "sourceUrl": "https://www.marketbeat.com/earnings/reports/2026-5-21-take-two-interactive-software-inc-stock/",
         "sourceUrls": [
-            {"name": "MarketBeat", "url": "https://www.marketbeat.com/earnings/reports/2026-5-21-take-two-interactive-software-inc-stock/"},
-            {"name": "AlphaStreet", "url": "https://news.alphastreet.com/take-two-ttwo-heads-into-fy2026-results-with-gta-vi-expectations-doing-the-heavy-lifting/"},
-            {"name": "TipRanks", "url": "https://www.tipranks.com/stocks/ttwo/earnings"}
+            {
+                "name": "MarketBeat",
+                "url": "https://www.marketbeat.com/earnings/reports/2026-5-21-take-two-interactive-software-inc-stock/"
+            },
+            {
+                "name": "AlphaStreet",
+                "url": "https://news.alphastreet.com/take-two-ttwo-heads-into-fy2026-results-with-gta-vi-expectations-doing-the-heavy-lifting/"
+            },
+            {
+                "name": "TipRanks",
+                "url": "https://www.tipranks.com/stocks/ttwo/earnings"
+            }
         ],
         "category": "market",
         "importance": "high",
         "featured": true,
         "date": "2026-05-21",
-        "tags": ["Take-Two", "GTA6", "财报"],
+        "tags": [
+            "Take-Two",
+            "GTA6",
+            "财报"
+        ],
         "sentiment": "neutral",
         "tdocMarking": "none",
         "analysis": "Take-Two Q4财报是GTA6发售前最重要的信息节点。Q3已超预期(预订$17.6亿 vs 指引$15.5-16亿)，若Q4维持$15亿+预订则全年将达$67亿创纪录。GTA6确认2026秋季窗口将是最大催化剂，任何延期信号将重挫股价。BF6累计2600万套为系列最佳，支撑RCS持续增长。",
@@ -77,27 +609,45 @@ const newsData = [
         "source": "Metacritic",
         "sourceUrl": "https://www.metacritic.com/game/yoshi-and-the-mysterious-book/",
         "sourceUrls": [
-            {"name": "Metacritic", "url": "https://www.metacritic.com/game/yoshi-and-the-mysterious-book/"},
-            {"name": "Game Rant", "url": "https://gamerant.com/yoshi-mysterious-book-reviews-round-up/"},
-            {"name": "Nintendo Life", "url": "https://www.nintendolife.com/games/nintendo-switch-2/yoshi-and-the-mysterious-book"},
-            {"name": "新浪科技", "url": "https://finance.sina.com.cn/tech/digi/2026-05-19/doc-inhymytf7395544.shtml"}
+            {
+                "name": "Metacritic",
+                "url": "https://www.metacritic.com/game/yoshi-and-the-mysterious-book/"
+            },
+            {
+                "name": "Game Rant",
+                "url": "https://gamerant.com/yoshi-mysterious-book-reviews-round-up/"
+            },
+            {
+                "name": "Nintendo Life",
+                "url": "https://www.nintendolife.com/games/nintendo-switch-2/yoshi-and-the-mysterious-book"
+            },
+            {
+                "name": "新浪科技",
+                "url": "https://finance.sina.com.cn/tech/digi/2026-05-19/doc-inhymytf7395544.shtml"
+            }
         ],
         "category": "game",
         "importance": "medium",
         "featured": true,
         "date": "2026-05-21",
-        "tags": ["任天堂", "Switch 2", "耀西"],
+        "tags": [
+            "任天堂",
+            "Switch 2",
+            "耀西"
+        ],
         "sentiment": "neutral",
         "tdocMarking": "none",
         "analysis": "Yoshi新作作为Switch 2第一方独占，MC81属中上水平但IGN 6分引发评测分歧讨论。任天堂第一方低分现象近年渐增(宝可梦冠军也遭混合口碑)，反映玩家对IP创新的更高期待。Good-Feel此前作品(毛线耀西/耀西手作世界)评价相近，系列定位偏休闲但定价3A引发性价比争议。",
-        "relatedNewsIds": [298]
+        "relatedNewsIds": [
+            298
+        ]
     },
     {
         "id": 1534,
         "title": "《生灵重塑》（Reanimal）销量破百万，DLC确认开发中",
         "summary": "Embracer旗下Tarsier Studios新作《生灵重塑》自发售以来全球销量突破100万份，获媒体与用户好评。Embracer CEO表示将作为长期系列IP持续发展，DLC开发获确认。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "high",
@@ -116,7 +666,7 @@ const newsData = [
         "title": "2026年4月美国游戏销量榜：《朋友收集 梦想生活》夺冠，年度累计冠军仍为《生化危机：安魂曲》",
         "summary": "Circana公布2026年4月美国游戏销量前十：月榜冠军《朋友收集 梦想生活》（任天堂），《识质存在》（卡普空）第2，《红色沙漠》第3；年度累计冠军仍为《生化危机：安魂曲》，《超级马力奥银河》合集因同名动画上映大幅上涨至第7名。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -131,13 +681,104 @@ const newsData = [
         "relatedNewsIds": []
     },
     {
+        "id": 295,
+        "title": "《极限竞速：地平线6》MC92+抢先体验破纪录：1.1M玩家/$140M收入，5月19日正式发售",
+        "summary": "Playground Games《极限竞速：地平线6》5月15日抢先体验、5月19日正式发售。MC92，Steam峰值178,009人创Xbox第一方Steam纪录。首周突破600万玩家，创Xbox游戏Steam首发历史新高。Game Pass首日入库。日本舞台+550辆真实车辆+5年等待积累的巨大需求推动了破纪录表现。",
+        "source": "Outlook Respawn",
+        "sourceUrl": "https://respawn.outlookindia.com/gaming/gaming-news/forza-horizon-6-shatters-records-with-140m-early-access-launch",
+        "sourceUrls": [
+            {
+                "name": "Outlook Respawn",
+                "url": "https://respawn.outlookindia.com/gaming/gaming-news/forza-horizon-6-shatters-records-with-140m-early-access-launch"
+            },
+            {
+                "name": "Hypebeast",
+                "url": "https://hypebeast.com/2026/5/playground-games-forza-horizon-6-over-1-million-players-ahead-of-official-launch-report"
+            },
+            {
+                "name": "TweakTown",
+                "url": "https://www.tweaktown.com/news/111704/forza-horizon-6-breaks-player-records-on-pc-premium-edition-copies-achieve-platinum-sales/index.html"
+            },
+            {
+                "name": "AllKeyshop",
+                "url": "https://www.allkeyshop.com/blog/forza-horizon-6-ratings-early-access-records-news-n/"
+            }
+        ],
+        "category": "game",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-21",
+        "tags": [
+            "极限竞速",
+            "Forza Horizon 6",
+            "Playground Games",
+            "MC92",
+            "$140M",
+            "Game Pass",
+            "Xbox",
+            "破纪录"
+        ],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "FH6抢先体验$1.4亿+1.1M玩家是微软第一方游戏商业化的新标杆(What)。$120 Premium版销量超百万说明玩家愿意为'早玩72小时'支付溢价——这是微软'分层定价+抢先体验'策略的首次大规模验证(Why)。Steam 273K同时在线是赛车游戏历史新高，证明Xbox第一方跨PC发布不会削弱PC端热度；MC92是微软连续第三个年度MC90+大作，'质量驱动订阅'策略已成体系(So What)。FH6正式发售后Game Pass入库将带来第二波玩家潮，预计首周全平台玩家可超500万，有望成为2026年销量最高赛车游戏(What Next)。",
+        "relatedNewsIds": [
+            296,
+            274,
+            269
+        ]
+    },
+    {
+        "id": 267,
+        "title": "《深海迷航2》EA 12小时破200万销量，65.1万同时在线创2026年EA纪录",
+        "summary": "Unknown Worlds开发的《深海迷航2》5月15日开启抢先体验，12小时售出200万份，5天内累计售出逾400万份。但EULA中“禁止VPN使用”和“$50最高损害赔偿”等条款引发玩家强烈反弹，Eurogamer称其“掠夺性极强”。Krafton与Unknown Worlds此前的法律纠纷已解决。游戏预计EA持续2-3年。",
+        "source": "IGN",
+        "sourceUrl": "https://www.ign.com/articles/subnautica-2-is-already-making-waves-selling-2-million-copies-in-just-12-hours",
+        "sourceUrls": [
+            {
+                "name": "IGN",
+                "url": "https://www.ign.com/articles/subnautica-2-is-already-making-waves-selling-2-million-copies-in-just-12-hours"
+            },
+            {
+                "name": "GamesRadar",
+                "url": "https://www.gamesradar.com/games/survival/subnautica-2-makes-a-splash-with-2-million-copies-sold-in-12-hours-18-000-positive-steam-reviews-and-651-000-concurrent-players-across-pc-and-xbox/"
+            },
+            {
+                "name": "PC Gamer",
+                "url": "https://www.pcgamer.com/games/survival-crafting/subnautica-2-has-sold-2-million-copies-in-12-hours-with-9x-the-players-as-the-first-and-at-this-point-i-figure-that-krafton-ceo-is-already-on-his-second-bottle/"
+            },
+            {
+                "name": "GameDeveloper",
+                "url": "https://www.gamedeveloper.com/business/subnautica-2-has-surpassed-2-million-sales-in-12-hours"
+            }
+        ],
+        "category": "game",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-21",
+        "tags": [
+            "深海迷航2",
+            "Subnautica 2",
+            "Unknown Worlds",
+            "Steam",
+            "200万销量",
+            "65万在线",
+            "抢先体验",
+            "Game Pass",
+            "Krafton"
+        ],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "《深海迷航2》12小时200万销量+65.1万同时在线刷新了EA首发纪录(What)。初代96%好评积累的品牌忠诚度在5年间持续增值，500万愿望单转化率极高——这是独立游戏少见的'跨代品牌资产'效应(Why)。Krafton法律纠纷非但未影响销量，反而因媒体曝光度提升了玩家关注度，CEO被解雇后玩家反而更支持开发者(So What)。Game Pass同步入库未削弱Steam销量，说明多渠道分发是独立游戏最大化覆盖的最优策略。65万同时在线超过红色沙漠首发，海底探索品类需求远被低估，可能催生更多同类竞品(What Next)。",
+        "relatedNewsIds": []
+    },
+    {
         "id": 1532,
         "title": "育碧承诺2029年前推出《刺客信条》《孤岛惊魂》《幽灵行动》三大新作",
         "summary": "育碧在财报中宣布，近期作品Metacritic评分均达80+，并计划在2029年前针对旗下三大核心IP推出品质超越既往的新作产品线；但《幽灵行动》新作已正式推迟至2027年发售。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "medium",
         "featured": true,
         "date": "2026-05-20",
@@ -154,9 +795,9 @@ const newsData = [
         "title": "Embracer宣布一分为二，拆分为独立的\"Fellowship Entertainment\"",
         "summary": "Embracer Group宣布将拆分为两家独立上市公司，游戏开发业务将剥离成立\"Fellowship Entertainment\"，旗下包含《地铁》《亡命徒》《天国：拯救》《死亡岛》等IP；原Embracer将保留《古墓丽影》《魔戒》等IP。拆分预计明年完成，有望为众多\"休眠IP\"引入外部合作。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "medium",
         "featured": true,
         "date": "2026-05-20",
@@ -173,7 +814,7 @@ const newsData = [
         "title": "PlayStation Plus多地区涨价，港服已直接涨价未发公告",
         "summary": "索尼宣布PlayStation Plus向新用户涨价，现有订阅用户暂不受影响（土耳其、印度除外）。港服已静默涨价，基本（一档）会员的月度订阅由62港币（约54元人民币）涨至70港币（约61元人民币），季度订阅由160港币（约140元人民币）涨至180港币（约157元人民币）,引发大量用户不满。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "high",
@@ -214,11 +855,11 @@ const newsData = [
     {
         "id": 538,
         "title": "育碧FY2026全年营收14亿欧元暴跌21.8%，运营亏损13亿欧元创纪录",
-        "summary": "育碧公布2025-26财年全年业绩：营收14亿欧元(-21.8%)，净预订额15.3亿欧元(-17.4%)，Q4营收4.195亿欧元(-47.3%)为全年最弱季度。运营亏损从1.965亿欧元扩大至13亿欧元，主要因重组减值。取消7款游戏、延期6款、裁员约1200人。R6 Siege MAU突破1000万，AC系列玩家超3000万。AC黑旗Resynced定档7月9日，FY27为自由现金流低点，FY28-29预期强劲反弹。",
+        "summary": "育碧公布FY2025-26财报：IFRS运营亏损13亿欧元创纪录，净预订15.25亿欧元同比-17.4%。Q4营收4.195亿欧元同比-47.3%。R6 MAU 1000万，AC系列累计3000万玩家。7款游戏取消、6款延期。承诺2029年前推出AC/孤岛惊魂/幽灵行动三大新作。AC黑旗Remake确认7/9公布。",
         "source": "GamesIndustry.biz",
         "sourceUrl": "https://www.gamesindustry.biz/ubisofts-full-fy26-financials-report-shows-a-sharp-decline-in-revenue-and-net-bookings",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "high",
         "featured": true,
         "date": "2026-05-20",
@@ -242,7 +883,7 @@ const newsData = [
                 "url": "https://www.videogameschronicle.com/news/xbox-hires-leadership-team-strengthen-console-brand/"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-05-20",
@@ -777,53 +1418,6 @@ const newsData = [
         ]
     },
     {
-        "id": 295,
-        "title": "《极限竞速：地平线6》MC92+抢先体验破纪录：1.1M玩家/$140M收入，5月19日正式发售",
-        "summary": "《极限竞速：地平线6》Premium版抢先体验(5/15-5/18)创下系列纪录：48小时超110万玩家、估算收入$1.4亿；Steam同时在线峰值181,775（FH5同期81,096的2.2倍），正式发售后更攀升至273K+。Metacritic均分上调至92，OpenCritic推荐率97%，稳居2026年评分最高游戏。5月19日正式发售+Game Pass首日入库，全平台玩家突破百万。$120 Premium版销量超100万份。但发售前PC版遭遇泄露事件，微软威胁硬件永久封禁盗版用户。",
-        "source": "Outlook Respawn",
-        "sourceUrl": "https://respawn.outlookindia.com/gaming/gaming-news/forza-horizon-6-shatters-records-with-140m-early-access-launch",
-        "sourceUrls": [
-            {
-                "name": "Outlook Respawn",
-                "url": "https://respawn.outlookindia.com/gaming/gaming-news/forza-horizon-6-shatters-records-with-140m-early-access-launch"
-            },
-            {
-                "name": "Hypebeast",
-                "url": "https://hypebeast.com/2026/5/playground-games-forza-horizon-6-over-1-million-players-ahead-of-official-launch-report"
-            },
-            {
-                "name": "TweakTown",
-                "url": "https://www.tweaktown.com/news/111704/forza-horizon-6-breaks-player-records-on-pc-premium-edition-copies-achieve-platinum-sales/index.html"
-            },
-            {
-                "name": "AllKeyshop",
-                "url": "https://www.allkeyshop.com/blog/forza-horizon-6-ratings-early-access-records-news-n/"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-05-19",
-        "tags": [
-            "极限竞速",
-            "Forza Horizon 6",
-            "Playground Games",
-            "MC92",
-            "$140M",
-            "Game Pass",
-            "Xbox",
-            "破纪录"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "none",
-        "analysis": "FH6抢先体验$1.4亿+1.1M玩家是微软第一方游戏商业化的新标杆(What)。$120 Premium版销量超百万说明玩家愿意为'早玩72小时'支付溢价——这是微软'分层定价+抢先体验'策略的首次大规模验证(Why)。Steam 273K同时在线是赛车游戏历史新高，证明Xbox第一方跨PC发布不会削弱PC端热度；MC92是微软连续第三个年度MC90+大作，'质量驱动订阅'策略已成体系(So What)。FH6正式发售后Game Pass入库将带来第二波玩家潮，预计首周全平台玩家可超500万，有望成为2026年销量最高赛车游戏(What Next)。",
-        "relatedNewsIds": [
-            296,
-            274,
-            269
-        ]
-    },
-    {
         "id": 299,
         "title": "Xbox Game Pass 5月第二批阵容公布：侏罗纪世界进化3+天外世界首发入库",
         "summary": "微软公布Xbox Game Pass 5月第二批阵容：核心新作包括《侏罗纪世界：进化3》首发入库、《天外世界：太空人之选版》首发入库、《Pigeon Simulator》Game Pass首发。此外《Final Fantasy VI》6月加入。此前5月第一批已包含《极限竞速：地平线6》首日入库。多款游戏离库也已确认。这是2026年Game Pass阵容最强月份之一，分析认为与FH6发售和Summer Game Fest前窗口期策略相关。",
@@ -873,7 +1467,7 @@ const newsData = [
         "title": "肉鸽游戏主导2026年Steam平台，总收入近5亿美元；《杀戮尖塔2》售出650万份",
         "summary": "据Alinea Analytics数据，肉鸽品类已成Steam年度最强品类；《杀戮尖塔2》60天内近1亿玩家游玩超100小时；《喵喵的结合》售出180万份；肉鸽DLC附加率全品类最高",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -1028,9 +1622,9 @@ const newsData = [
         "title": "PC平台连续三年成卡普空最高销量平台；社长预测PC将成全球第一大游戏平台",
         "summary": "Capcom 2025财年PC销量3217万份，远超主机的2276万份；低价折扣策略被证明有效，社长辻本宪三在采访中预测PC将成\"全球第一大游戏平台\"。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-05-17",
@@ -1047,7 +1641,7 @@ const newsData = [
         "title": "《极限竞速：地平线6》发售，收入突破1.4亿美元，Steam峰值17.8万人，M站92分",
         "summary": "Playground Games赛车新作以日本为舞台，高级版预售吸引120万玩家；正式发售首日在高级版基础上Steam在线峰值17.8万，游戏获IGN满分、GamingBolt高度评价；被誉为\"开放世界竞速游戏新标杆\"",
         "source": "IT之家 / GamingBolt",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "high",
@@ -1066,7 +1660,7 @@ const newsData = [
         "title": "《泰拉瑞亚》15周年销量破7000万，PC日均活跃46万；承诺后续持续更新",
         "summary": "Re-Logic庆祝15周年公布数据：全球第七畅销游戏，PC 3960万份；日均活跃46万；将新增跨平台联机，不涨价不内购",
         "source": "3DM / IT之家 / Eurogamer",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "high",
@@ -1109,7 +1703,7 @@ const newsData = [
         "title": "多位爆料人否认《GTA6》5月18日开启预购，实质消息或推迟到7-8月",
         "summary": "Tom Henderson（Insider Gaming主...",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -1264,9 +1858,9 @@ const newsData = [
         "title": "Square Enix FY26营业利润增长34.9%，但净销售额下降；FY27预计再降10.5%",
         "summary": "《勇者斗恶龙1&2 HD-2D重制版》等HD Game销售策略和成本优化推动利润增长；但全年营收不及预期；下财年预期继续承压",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-05-16",
@@ -1283,9 +1877,9 @@ const newsData = [
         "title": "Nexon Q1净利润同比增118%至3.607亿美元，创历史纪录；Arc Raiders销量达1600万份",
         "summary": "撤离射击游戏Arc Raiders季度销量460万份，Q1总销量1600万；MapleStory持续贡献",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-05-16",
@@ -1302,9 +1896,9 @@ const newsData = [
         "title": "米哈游刘伟：AI领域3年最多投入1000亿人民币，\"没成就当放个大烟花\"",
         "summary": "米哈游总裁在公开场合透露极高AI投入决心；表达了对失败风险的坦然态度",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-05-16",
@@ -1321,7 +1915,7 @@ const newsData = [
         "title": "Xbox品牌正式更名为全大写\"XBOX\"；CEO Asha Sharma发起投票后宣布",
         "summary": "新任Xbox业务负责人Asha Sharma在X平台发起粉丝投票后，宣布官方账号全改为大写@XBOX；微软游戏账号已率先更名",
         "source": "IT之家 / Eurogamer / VGC / GamingBolt",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "medium",
@@ -1340,7 +1934,7 @@ const newsData = [
         "title": "任天堂解释Switch 2涨价原因：元器件及内存价格持续高企，影响料将延续至明年",
         "summary": "任天堂总裁表示若维持原定价格，硬件盈利能力将大幅受损；组件价格短期内不会回落",
         "source": "Eurogamer / GamesIndustry.biz",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "high",
@@ -1383,7 +1977,7 @@ const newsData = [
         "title": "索尼State of Play据报将于5月24日举行，或公布以\"菲\"为主角的《战神》衍生作",
         "summary": "爆料称新《战神》衍生作以奎托斯之妻Faye为主角，引入多神话体系；尚待官方确认",
         "source": "IT之家",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "medium",
@@ -1402,9 +1996,9 @@ const newsData = [
         "title": "GTA6预购消息持续发酵：5月18日开启预购获爆料人证实，T2股价暴涨近5%",
         "summary": "Best Buy内部邮件泄露显示GTA6预购或于5月18日开启，此消息获知名爆料人汤姆·亨德森证实；Take-Two股价单日涨近5%，市值激增约20亿美元；玩家调查显示约40%受访者认为100美元定价合理",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "high",
         "featured": true,
         "date": "2026-05-15",
@@ -1421,9 +2015,9 @@ const newsData = [
         "title": "亚马逊取消《指环王》MMO项目",
         "summary": "亚马逊游戏部门负责人确认公司正在取消《指环王》MMO项目，但表示正在开发该IP的\"全新游戏体验\"。这是亚马逊继《新世界》之后再次调整其大型多人在线游戏战略",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "high",
         "featured": true,
         "date": "2026-05-15",
@@ -1440,7 +2034,7 @@ const newsData = [
         "title": "Xbox云游戏专用手柄泄露",
         "summary": "Xbox云游戏手柄泄露，这款专为Xbox Game Pass Ultimate云游戏设计的控制器体积相当小巧，引发对云游戏未来的讨论",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -1459,7 +2053,7 @@ const newsData = [
         "title": "《深海迷航2》发售1小时销量破百万，Steam峰值46.7万",
         "summary": "《Subnautica 2》EA版登陆Steam及Xbox Series，首发进Game Pass，发售仅1小时销量突破百万，Steam愿望单早已超500万，峰值同时在线约46.7万人，是前作的9倍",
         "source": "3DM / GamingBolt",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "high",
@@ -1478,7 +2072,7 @@ const newsData = [
         "title": "ARC Raiders销量突破1600万，半数活跃玩家游玩时长超百小时",
         "summary": "发行商Nexon称ARC Raiders为\"公司历史上最成功的新品发布\"；开发商Embark宣布将由月更改为每年两次重大更新，10月将推出史上最大地图",
         "source": "GamingBolt",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "high",
@@ -1497,7 +2091,7 @@ const newsData = [
         "title": "Xbox Elite 3手柄泄露",
         "summary": "Xbox Elite 3手柄在网上泄露，这是Xbox Series X平台的高端控制器新品，显示出微软在高端外设市场的持续投入",
         "source": "ign.com",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -1516,7 +2110,7 @@ const newsData = [
         "title": "Epic游戏商城开启2026年度大促，至6月11日，最高2.5折；本周免费领《Telltale蝙蝠侠》",
         "summary": "Epic游戏商城2026年度大促已开启并持续至2026年6月11日，多款游戏迎来史低，最高可享2.5折，并继续保持每周免费游戏赠送（本周《Telltale蝙蝠侠：暗影版》）。此为Epic对抗Steam夏促前的关键商业化节点。",
         "source": "IT之家",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -1579,9 +2173,9 @@ const newsData = [
         "title": "5月PS Plus新增游戏公布",
         "summary": "索尼公布5月PS Plus会员免费游戏阵容，包括《荒野大镖客2》《星球大战：亡命之徒》等3A大作。这是索尼订阅服务的重要月度更新，为PS4和PS5玩家提供高质量的游戏体验",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "data",
+        "category": "market",
         "importance": "medium",
         "featured": true,
         "date": "2026-05-14",
@@ -1598,7 +2192,7 @@ const newsData = [
         "title": "Xbox为成就党增加新功能，即将面向所有玩家开放",
         "summary": "Xbox宣布为成就系统新增若干功能，具体细节待官方正式说明，即将全量推送",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -1617,9 +2211,9 @@ const newsData = [
         "title": "PS6内存规格爆料",
         "summary": "PS6内存规格成焦点，爆料出现分歧：Kepler称可能缩减至24GB以控制成本，而\"摩尔定律已死\"则坚称不会低于30GB，并认为索尼会延续PS5的定价策略。此外，爆料还提到PS6掌机或先于主机推出，配备24GB内存",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-05-14",
@@ -1636,7 +2230,7 @@ const newsData = [
         "title": "《乐高蝙蝠侠：黑暗骑士遗产》Steam愿望单95万",
         "summary": "即将发售的《乐高蝙蝠侠：黑暗骑士遗产》在Steam平台已获得95万个愿望单，显示出蝙蝠侠这一IP在现代游戏中依然具有强大的吸引力。这款乐高风格的蝙蝠侠游戏在发售前就获得了大量玩家关注",
         "source": "gamingbolt.com",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -1655,9 +2249,9 @@ const newsData = [
         "title": "5月PS Plus新增游戏公布",
         "summary": "索尼公布5月PS Plus会员免费游戏阵容，包括《荒野大镖客2》《星球大战：亡命之徒》等3A大作。这是索尼订阅服务的重要月度更新，为PS4和PS5玩家提供高质量的游戏体验",
         "source": "3dmgame.com / blog.playstation.com / eurogamer.net",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "data",
+        "category": "market",
         "importance": "medium",
         "featured": true,
         "date": "2026-05-14",
@@ -1711,50 +2305,6 @@ const newsData = [
         "relatedNewsIds": [
             270
         ]
-    },
-    {
-        "id": 267,
-        "title": "《深海迷航2》EA 12小时破200万销量，65.1万同时在线创2026年EA纪录",
-        "summary": "Unknown Worlds《深海迷航2》5月14日抢先体验上线：2小时内破100万份，12小时内破200万份，Steam同时在线峰值65.1万（全平台），创2026年抢先体验游戏最高纪录，为初代峰值5.8万的11倍。Steam好评率90%+（18,000+评测）。此前与发行商Krafton的法律纠纷和CEO被解雇事件未影响发售表现。愿望单超500万，Game Pass同步入库。发售当日即公布补丁路线图。",
-        "source": "IGN",
-        "sourceUrl": "https://www.ign.com/articles/subnautica-2-is-already-making-waves-selling-2-million-copies-in-just-12-hours",
-        "sourceUrls": [
-            {
-                "name": "IGN",
-                "url": "https://www.ign.com/articles/subnautica-2-is-already-making-waves-selling-2-million-copies-in-just-12-hours"
-            },
-            {
-                "name": "GamesRadar",
-                "url": "https://www.gamesradar.com/games/survival/subnautica-2-makes-a-splash-with-2-million-copies-sold-in-12-hours-18-000-positive-steam-reviews-and-651-000-concurrent-players-across-pc-and-xbox/"
-            },
-            {
-                "name": "PC Gamer",
-                "url": "https://www.pcgamer.com/games/survival-crafting/subnautica-2-has-sold-2-million-copies-in-12-hours-with-9x-the-players-as-the-first-and-at-this-point-i-figure-that-krafton-ceo-is-already-on-his-second-bottle/"
-            },
-            {
-                "name": "GameDeveloper",
-                "url": "https://www.gamedeveloper.com/business/subnautica-2-has-surpassed-2-million-sales-in-12-hours"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-05-14",
-        "tags": [
-            "深海迷航2",
-            "Subnautica 2",
-            "Unknown Worlds",
-            "Steam",
-            "200万销量",
-            "65万在线",
-            "抢先体验",
-            "Game Pass",
-            "Krafton"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "none",
-        "analysis": "《深海迷航2》12小时200万销量+65.1万同时在线刷新了EA首发纪录(What)。初代96%好评积累的品牌忠诚度在5年间持续增值，500万愿望单转化率极高——这是独立游戏少见的'跨代品牌资产'效应(Why)。Krafton法律纠纷非但未影响销量，反而因媒体曝光度提升了玩家关注度，CEO被解雇后玩家反而更支持开发者(So What)。Game Pass同步入库未削弱Steam销量，说明多渠道分发是独立游戏最大化覆盖的最优策略。65万同时在线超过红色沙漠首发，海底探索品类需求远被低估，可能催生更多同类竞品(What Next)。",
-        "relatedNewsIds": []
     },
     {
         "id": 280,
@@ -1931,9 +2481,9 @@ const newsData = [
         "title": "卡普空2026财年业绩创历史新高",
         "summary": "《生化危机：安魂曲》首发近700万份，数字营收占比已达93%。公司透露未来将重点布局Switch 2平台，并计划通过电竞、影视等多元化方式实现年销量破亿的长期目标。经典旧作库存持续热销，《生化危机》系列成最强劲IP",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-05-13",
@@ -1950,7 +2500,7 @@ const newsData = [
         "title": "《沉默之丘2》重制版玩家突破600万，《沉默之丘F》全球出货量超200万份",
         "summary": "Bloober Team 重制版自2024年登陆PS5/PC起广受好评，后推出Xbox版本；《沉默之丘F》全球出货量突破200万份",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "high",
@@ -1969,7 +2519,7 @@ const newsData = [
         "title": "Returnal 精神续作《Saros》首发两周销量仅30万",
         "summary": "分析机构 Alinea Analytics 估算《Saros》发售两周销量超30万份，但受拥挤发售窗口影响，表现不及预期，或面临回本压力；值得注意的是购买者游戏时长较高",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -1988,7 +2538,7 @@ const newsData = [
         "title": "《怪物猎人：荒野》2026财年仅售132万份，不及前作《崛起》及扩展包",
         "summary": "卡普空财报显示《怪物猎人：荒野》2026全财年销量仅132万份，低于同期《崛起》的151万和《曙光》的142万，公司寄望于大型DLC（G位）挽救颓势",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -2007,7 +2557,7 @@ const newsData = [
         "title": "《寂静岭f》全球出货量破200万，《寂静岭2》重制版玩家数突破600万",
         "summary": "科乐美公布里程碑数据：《寂静岭f》全球出货量（含实体+数字）已达200万份（截至4月24日）；《寂静岭2》重制版累计玩家突破600万（含实体、数字及订阅）。同时推出双作6折优惠套装促销",
         "source": "3DM / ITHome",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "high",
@@ -2026,7 +2576,7 @@ const newsData = [
         "title": "索尼就PlayStation Store 30%抽成作出回应，称维持1万名开发者支持体系是\"巨额投资\"",
         "summary": "索尼正面临平台垄断集体诉讼，高管公开阐述30%佣金逻辑：PS5生态有1万名合作开发者，Sony设立5个专门支持团队，此支持体系需\"巨额投资\"。PS三方游戏副总裁强调索尼\"历来是最重视三方生态的平台\"",
         "source": "3DM",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -2264,7 +2814,7 @@ const newsData = [
         "title": "《合金装备》系列销量达6610万",
         "summary": "《合金装备》系列销量达6610万，《寂静岭》系列超1710万，《寂静岭f》和《合金装备:食蛇者》推动销售里程碑",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -2283,7 +2833,7 @@ const newsData = [
         "title": "《极限竞速：地平线6》遭遇灾难性泄露",
         "summary": "Steam预加载文件被公开且未加密，容量155GB，开发者确认对盗版用户进行封禁，部分玩家已提前游玩",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -2302,9 +2852,9 @@ const newsData = [
         "title": "世嘉取消五年前公布的\"超级游戏\"项目，全面转向单机",
         "summary": "世嘉在最新财报中悄然宣布取消开发五年的\"Super Game\"项目，原因是《Sonic Rumble Party》等GaaS游戏表现不佳以及2023年收购Rovio失利（计提逾2亿美元损失）。逾百名F2P开发者已转调单机全价项目，聚焦《疯狂出租车》等经典IP重制重启；未来将收缩GaaS布局，资源重新押注《索尼克》等核心单机IP",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "high",
         "featured": true,
         "date": "2026-05-12",
@@ -2321,9 +2871,9 @@ const newsData = [
         "title": "铁拳之父原田胜弘离开万代南梦宫后，与SNK联合成立新工作室\"VS Studio\"",
         "summary": "原田胜弘去年宣布离开万代南梦宫及其经营逾20年的铁拳团队，现与《拳皇》开发商SNK合作，在东京成立独立新工作室VS Studio，SNK将提供\"长期持续支持\"，但工作室保持独立并聚焦创意",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-05-12",
@@ -2340,9 +2890,9 @@ const newsData = [
         "title": "前网易高管新公司为《星球大战：旧共和国命运》(Bulletfarm)提供资金",
         "summary": "GamingBolt报道，一家由前网易高管创立的新公司正为动作游戏工作室Bulletfarm开发的《星球大战：旧共和国命运》提供融资支持",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-05-12",
@@ -2359,7 +2909,7 @@ const newsData = [
         "title": "任天堂推出Switch 2任选游戏套装",
         "summary": "Nintendo宣布6月起推出含《马力欧卡丁车》《大金刚》或《Pokopia》的Switch 2同捆套装，定价499.99美元，赶在涨价前推出。社长古川俊太郎同期表示本财年后半段还有未公开新作将陆续公开，强调Switch 2生命周期目标与Switch持平",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "medium",
@@ -2378,9 +2928,9 @@ const newsData = [
         "title": "Steam新一周销量榜公布",
         "summary": "《极限竞速：地平线6》预购冲上全球榜首",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "data",
+        "category": "market",
         "importance": "medium",
         "featured": true,
         "date": "2026-05-12",
@@ -2397,7 +2947,7 @@ const newsData = [
         "title": "《合金装备》系列销量达6610万",
         "summary": "《合金装备》系列销量达6610万，《寂静岭》系列超1710万，《寂静岭f》和《合金装备:食蛇者》推动销售里程碑",
         "source": "gamingbolt.com",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -2416,7 +2966,7 @@ const newsData = [
         "title": "任天堂推出Switch 2任选游戏套装",
         "summary": "Nintendo宣���6月起推出含《马力欧卡丁车》《大金刚》或《Pokopia》的Switch 2同捆套装，定价499.99美元，赶在涨价前推出。社长古川俊太郎同期表示本财年后半段还有未公开新作将陆续公开，强调Switch 2生命周期目标与Switch持平",
         "source": "gamingbolt.com / videogameschronicle.com",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "medium",
@@ -2435,9 +2985,9 @@ const newsData = [
         "title": "Steam新一周销量榜公布",
         "summary": "《极限竞速：地平线6》预购冲上全球榜首",
         "source": "eurogamer.net",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "data",
+        "category": "market",
         "importance": "medium",
         "featured": true,
         "date": "2026-05-12",
@@ -2744,7 +3294,7 @@ const newsData = [
         "title": "《杀戮尖塔2》因聘请女权顾问遭Steam大规模差评轰炸",
         "summary": "近6万条近期评测中67%为差评，整体降至\"多半差评\"，评论区一度触发Steam熔断机制被关闭。开发商Mega Crit尚未公开回应。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -2763,7 +3313,7 @@ const newsData = [
         "title": "Win11 Xbox模式实测：N卡A卡均实现性能提升",
         "summary": "微软正式向Win11推出Xbox全屏模式，测试显示RTX 4070 Ti Super与RX 9070在《CS2》《生化危机》等11款游戏中均获得可观帧数提升，微软意图应对SteamOS竞争压力。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -2782,7 +3332,7 @@ const newsData = [
         "title": "Steam Machine四个配置版本泄露",
         "summary": "泄露显示Steam Machine将在发布时提供四个不同配置版本，同时设置预订队列",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -2801,9 +3351,9 @@ const newsData = [
         "title": "卡普空泄露：《生化危机10》《鬼泣》初代重制版等多项目在列",
         "summary": "自称内部人士爆料称卡普空正开发《生化危机10》及初代《鬼泣》重制版等多个项目，延续近年重制+续作双轨策略。2026年已凭借《生化危机9：安魂曲》和《识质存在》表现强势。",
         "source": "3DM",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-05-11",
@@ -2820,7 +3370,7 @@ const newsData = [
         "title": "《杀戮尖塔2》因聘请女权顾问遭Steam大规模差评轰炸",
         "summary": "近6万条近期评测中67%为差评，整体降至\"多半差评\"，评论区一度触发Steam熔断机制被关闭。开发商Mega Crit尚未公开回应。",
         "source": "3DM / IGN中国",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -2839,7 +3389,7 @@ const newsData = [
         "title": "Steam Machine四个配置版本泄露",
         "summary": "泄露显示Steam Machine将在发布时提供四个不同配置版本，同时设置预订队列",
         "source": "ign.com",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -2858,7 +3408,7 @@ const newsData = [
         "title": "《深海迷航2》上线前达500万愿望单，5月14日抢先体验发售",
         "summary": "Unknown Worlds《深海迷航2》抢先体验版即将于5月14日发售，愿望单突破500万，官方宣布所有首周内购买玩家均可获赠Reaper Leviathan雕像蓝图。新实机预告同步发布。",
         "source": "GamingBolt / Eurogamer / IGN中国",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -2877,7 +3427,7 @@ const newsData = [
         "title": "任天堂将更名\"My Nintendo Store\"，月底全区同步生效",
         "summary": "任天堂宣布即将对My Nintendo Store进行品牌更名，改动将于本月底在全球所有地区同步执行，具体新名称未提前透露。",
         "source": "VGC",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -3149,9 +3699,9 @@ const newsData = [
         "title": "索尼PSN东南亚区4月下载榜：《识质存在》登顶PS5榜首",
         "summary": "卡普空新IP《识质存在》力压《红色沙漠》《死亡岛2》等热门作品拿下PS5下载榜冠军，该作上市仅16天即达200万销量里程碑。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "data",
+        "category": "market",
         "importance": "low",
         "featured": true,
         "date": "2026-05-10",
@@ -3335,7 +3885,7 @@ const newsData = [
         "title": "索尼官宣所有第一方工作室全面整合AI技术，与万代南梦宫联合探索生成式AI",
         "summary": "索尼在FY2025 Q4财报中正式宣布PlayStation全部工作室正在整合AI，将与万代南梦宫合作推进生成式AI应用，用于QA加速、3D建模、动画生产等，CEO强调AI目标是\"放大\"而非\"取代\"人类创造力",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "high",
@@ -3354,9 +3904,9 @@ const newsData = [
         "title": "英伟达GeForce NOW更新：强化XGP及育碧+游戏展示，多款新游上线",
         "summary": "GeForce NOW新版本上线，新增标签系统强化XGP和育碧+游戏推荐，新加入《吸血鬼爬行者》《红色沙漠》《暗黑破坏神3》育碧Connect版等",
         "source": "3DM",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "medium",
         "featured": true,
         "date": "2026-05-09",
@@ -3373,7 +3923,7 @@ const newsData = [
         "title": "《极限竞速：地平线6》PS5延期引发质疑",
         "summary": "《Forza Horizon 6》已正式宣布“进厂压盘”，但推迟登陆PS5平台的合理性受到质疑。作为Xbox第一方大作，其开发进度、营销策略、主机厂商排他性需求以及前作《Forza Horizon 5》在PS5平台的优异销售表现，共同构成了此次延期的相关背景，目前该作PS5版的发布时间尚未确定。",
         "source": "gamingbolt.com",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -3482,7 +4032,7 @@ const newsData = [
         "title": "Valve开放Steam控制器预约排队机制以遏制黄牛",
         "summary": "Valve宣布Steam控制器将于5月8日启动预约队列制度，每位用户获得购买资格后有72小时下单窗口，防止黄牛囤货",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -3501,9 +4051,9 @@ const newsData = [
         "title": "Unity推出AI工具套件",
         "summary": "Unity AI Beta推出智能助手功能，帮助开发者更有效地使用平台工具，加速游戏开发",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "medium",
         "featured": true,
         "date": "2026-05-08",
@@ -3544,7 +4094,7 @@ const newsData = [
         "title": "任天堂公布最新财报，NS2主机出货量超1986万台",
         "summary": "任天堂公布截至2026年3月31日的财年财报，披露了NS2、初代NS的硬件及对应游戏销量、盈利相关数据，任天堂全年净销售额为23130亿日元，同比增长98.6%。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "medium",
@@ -3563,7 +4113,7 @@ const newsData = [
         "title": "任天堂宣布Nintendo Switch系列以及Online会员将迎来涨价",
         "summary": "任天堂今日正式宣布Nintendo Switch、Nintendo Switch 2、Nintendo Switch Online会员将迎来价格涨幅，不同地区的价格调整生效日期不同。备注为AI提取结果",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "high",
@@ -3582,7 +4132,7 @@ const newsData = [
         "title": "索尼称PS6发售时间与定价\"尚未决定\"，考虑改变商业模式",
         "summary": "索尼总裁兼CEO Hiroki Totoki在财报说明会上表示，受内存成本上涨等因素影响，PS6上市时间及定价尚未确定，公司正探索包括调整商业模式在内的多种应对方案",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "medium",
@@ -3601,7 +4151,7 @@ const newsData = [
         "title": "Xbox掌机开发工具曝光",
         "summary": "YouTuber Moore’s Law is Dead发布新报告，提及微软在取消自研掌机、转与华硕合作推出ROG Xbox Ally和Xbox Ally X后，仍在继续推进掌机软件支持，同时打造了代号Project Green Leaf的原型机用于相关功能开发",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -3620,9 +4170,9 @@ const newsData = [
         "title": "Unity Q1财报：收入增长17%，亏损3.47亿美元",
         "summary": "第一季度收入增长17%，但净亏损达3.47亿美元，包括与IronSource关闭和Supersonic剥离相关的2.79亿美元减值费用",
         "source": "gamesindustry.biz",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-05-08",
@@ -3639,9 +4189,9 @@ const newsData = [
         "title": "Unity推出AI工具套件",
         "summary": "Unity AI Beta推出智能助手功能，帮助开发者更有效地使用平台工具，加速游戏开发",
         "source": "gamesindustry.biz",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "medium",
         "featured": true,
         "date": "2026-05-08",
@@ -3658,7 +4208,7 @@ const newsData = [
         "title": "PS5全球出货量突破9370万台！主机生态正“换挡” 玩家倾向购买数字版游戏",
         "summary": "PS5全球出货量突破9370万。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "high",
@@ -3677,7 +4227,7 @@ const newsData = [
         "title": "索尼账面亏了7.65亿！曾斥资36亿美元收购Bungie",
         "summary": "索尼2025财年游戏与网络服务部门营业收入同比增长12%，但因对2022年...",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "high",
@@ -3696,7 +4246,7 @@ const newsData = [
         "title": "《流放之路2》将于5月底通过Steam Deck验证",
         "summary": "Grinding Gear Games确认游戏将支持Steam Deck掌机",
         "source": "eurogamer.net",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -3900,9 +4450,9 @@ const newsData = [
         "title": "Supercell收购Metacore",
         "summary": "Supercell收购Merge Mansion，将其加入其\"实时游戏产品组合\"。其游戏《Merge Mansion》于 2020 年发布，至今下载量已超过 6000 万次。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "high",
         "featured": true,
         "date": "2026-05-07",
@@ -3926,7 +4476,7 @@ const newsData = [
                 "url": "https://www.ithome.com/0/947/021.htm"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "medium",
         "featured": true,
         "date": "2026-05-07",
@@ -3943,9 +4493,9 @@ const newsData = [
         "title": "分析师：GTA6发售后主机价格或涨至1000美元",
         "summary": "分析师警告，受内存价格上涨与关税影响，主机价格已普涨，GTA6上市将刺激大量新玩家入坑，届时主机价格门槛可能接近千美元",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "medium",
         "featured": true,
         "date": "2026-05-07",
@@ -3962,7 +4512,7 @@ const newsData = [
         "title": "微软次世代主机 Project Helix 技术详情公开：光追性能\"数量级\"超Xbox Series X",
         "summary": "微软在Xbox游戏开发者更新中披露Project Helix（Xbox下代主机）核心规格：光追性能数量级超越Series X，支持Path Tracing、ML超采样和多帧生成；同时大量利用Zstandard直接从SSD流式读取资产，采用最新神经纹理压缩技术",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "medium",
@@ -3981,7 +4531,7 @@ const newsData = [
         "title": "Project Helix采用Zstandard压缩技术",
         "summary": "将大量使用Zstandard压缩技术直接从SSD流式传输资源，采用最新神经纹理压缩技术解决内存和存储限制",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -4000,7 +4550,7 @@ const newsData = [
         "title": "《Stranger Than Heaven》（龙如系列新作）公布冬季发售，主演阵容含Snoop Dogg",
         "summary": "龙如工作室下一款游戏披露剧情细节，玩家扮演横跨50年旅程跑遍五座城市（含神室町），将登陆Xbox Game Pass。",
         "source": "VGC / GamingBolt",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -4019,9 +4569,9 @@ const newsData = [
         "title": "Supercell收购Metacore",
         "summary": "Supercell收购Merge Mansion，将其加入其\"实时游戏产品组合\"。其游戏《Merge Mansion》于 2020 年发布，至今下载量已超过 6000 万次。",
         "source": "gamesindustry.biz",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "high",
         "featured": true,
         "date": "2026-05-07",
@@ -4045,7 +4595,7 @@ const newsData = [
                 "url": "https://www.ithome.com/0/947/021.htm"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "medium",
         "featured": true,
         "date": "2026-05-07",
@@ -4062,7 +4612,7 @@ const newsData = [
         "title": "卡普空新IP《识质存在》16天销量破200万份",
         "summary": "发售16天后，卡普空《PRAGMATA》（识质存在）累计销量突破200万。2天破百万、16天破200万，卡普空以试玩版+Switch 2多平台策略推动新IP快速破圈",
         "source": "IT之家 / Eurogamer / VGC",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "high",
@@ -4081,7 +4631,7 @@ const newsData = [
         "title": "《GTA6》容量接近200GB，标准版PS5内置硬盘告急",
         "summary": "据爆料，GTA6在PS5/XSX上安装容量或接近200GB，相比GTA5次世代版95GB大幅增加，将显著压缩...",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -4234,7 +4784,7 @@ const newsData = [
         "title": "Switch 2因内存短缺面临涨价压力——传闻",
         "summary": "据彭博社报道，任天堂面临投资者压力，被要求提高Switch 2的售价，相关涨价消息或在本周晚些时候的公司财报公布时宣布。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "high",
@@ -4277,7 +4827,7 @@ const newsData = [
         "title": "Xbox领导层变动，停止主机Copilot开发",
         "summary": "新任CEO Asha Sharma承认\"Xbox需要更快行动\"，开始缩减移动端Copilot并停止主机端开发",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -4296,9 +4846,9 @@ const newsData = [
         "title": "IGN、伯克利联合报告：逾六成硬核玩家不再全价购买游戏新作",
         "summary": "IGN与伯克利联合报告显示，逾六成硬核玩家改变消费习惯，年龄较大的玩家最不可能全价购买",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-05-06",
@@ -4315,7 +4865,7 @@ const newsData = [
         "title": "Steam新一周销量榜公布",
         "summary": "《魔法门之英雄无敌：上古纪元》排行第一，《暗黑破坏神 IV》新版本升至第4名",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "medium",
@@ -4334,7 +4884,7 @@ const newsData = [
         "title": "Valve承诺补货Steam Controller",
         "summary": "表示\"售罄速度超出预期\"，承诺将补货，\"讨厌不是每个想要的人都能买到\"",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -4353,7 +4903,7 @@ const newsData = [
         "title": "PlayStation Store 2026年4月下载榜发布：机器人题材游戏领衔",
         "summary": "索尼公布4月PS Store全球下载排行，\"机器人伙伴/队友\"主题游戏占据榜首，完整榜单详见PS Blog。",
         "source": "PS Blog",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "medium",
@@ -4379,7 +4929,7 @@ const newsData = [
                 "url": "https://www.3dmgame.com/news/202605/3943597.html"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-05-06",
@@ -4396,9 +4946,9 @@ const newsData = [
         "title": "Take-Two承认Switch 2非\"主要平台\"，但《无主之地4》移植\"仍有可能\"",
         "summary": "在财报会议上，Zelni...",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-05-06",
@@ -4415,7 +4965,7 @@ const newsData = [
         "title": "Valve承诺补货Steam Controller",
         "summary": "表示\"售罄速度超出预期\"，承诺将补货，\"讨厌不是每个想要的人都能买到\"",
         "source": "eurogamer.net / gamesindustry.biz",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -4513,9 +5063,9 @@ const newsData = [
         "title": "PlayStation Plus五月会免游戏上线",
         "summary": "索尼公布了5月份PlayStation Plus会员免费游戏阵容。本月会免游戏包括：类魂动作RPG《明末：渊虚之羽》（Wuchang: Fallen Feathers）、体育游戏《EA Sports FC 26》等。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "medium",
         "featured": true,
         "date": "2026-05-05",
@@ -4532,7 +5082,7 @@ const newsData = [
         "title": "Take-Two CEO 确认《GTA6》首发无缘 PC 平台",
         "summary": "Take-Two首席执行官Strauss Zelnick明确表示，Rockstar游戏（如GTA）会优先在主机平台发售，PC版将延后推出。同时，索尼已与R星达成营销合作协议，PS5将获得游戏营销权，这可能导致PC版发布进一步延迟。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "high",
@@ -4551,7 +5101,7 @@ const newsData = [
         "title": "《使命召唤》2026将跳过PS4/Xbox One",
         "summary": "动视正式确认，2026年发布的《使命召唤》新作将首次跳过上一代主机PS4和Xbox One，仅登陆本世代主机（PS5、Xbox Series X/S）和PC平台。这标志着该系列结束了长达12年的跨世代发布传统。动视表示这是为了充分利用次世代主机硬件性能，为玩家提供更好的游戏体验。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -4570,9 +5120,9 @@ const newsData = [
         "title": "EA艺电2026财年净预订额破80亿美元",
         "summary": "艺电（Electronic Arts）公布2026财年财报，净预订额（Net Bookings）突破80亿美元，同比增长9%，创下历史新高。其中《战地6》（Battlefield 6）表现强劲，成为主要增长驱动力之一。此外，《EA Sports UFC 6》确定将于6月19日发售。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "earnings",
+        "category": "market",
         "importance": "low",
         "featured": true,
         "date": "2026-05-05",
@@ -4589,9 +5139,9 @@ const newsData = [
         "title": "Steam手柄开售秒没，黄牛转手卖三倍价",
         "summary": "Valve新款Steam Controller正式发售，售价85英镑（约99美元）。产品在部分地区30分钟内即告售罄，所有主要市场迅速进入缺货状态。黄牛立即在eBay等转售平台上以原价三倍（超过300美元）的价格倒卖。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-05-05",
@@ -4608,9 +5158,9 @@ const newsData = [
         "title": "索尼预计支付7800万美元PlayStation和解金",
         "summary": "加州法官初步批准了一项集体诉讼和解方案，索尼预计将支付7800万美元用于解决PlayStation Store相关诉讼。该诉讼指控索尼\"消除竞争并垄断市场\"，导致数字游戏价格过高。根据和解方案，符合条���的美国PlayStation用户可能获得赔偿。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-05-05",
@@ -4627,7 +5177,7 @@ const newsData = [
         "title": "业内人士分析Steam Machine定价",
         "summary": "业内分析师预测，Valve的Steam Machine游戏主机定价应在700美元以下才能具有市场竞争力。这一价格定位需要考虑与PS5、Xbox Series X的差异化竞争，同时保持PC游戏的开放性和可升级性。分析师指出，如果定价过高，Steam Machine将难以吸引主流玩家；如果定价过低，则可能影响硬件性能和用户体验。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -4646,7 +5196,7 @@ const newsData = [
         "title": "Epic与迪士尼推出最大规模IP工具集",
         "summary": "Epic Games与迪士尼宣布合作推出迄今为止最大规模的IP工具集。该工具集允许创作者在《堡垒之夜》（Fortnite）的创意模式中制作基于《星球大战》等迪士尼IP的游戏内容。这是双方合作的重大升级，将极大扩展Fortnite的创作生态，同时为迪士尼IP提供新的数字化体验渠道。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "medium",
@@ -4665,7 +5215,7 @@ const newsData = [
         "title": "Xbox探索多种方案以实现2030年30%利润率目标",
         "summary": "有已验证文件显示Xbox领导层正讨论通过砍掉主机向后兼容性、转向软件化等成本削减方案，在2030年前完成微软要求的利润率提升30%的目标，该目标自2025年10月曝光以来已导致Xbox硬件和Game Pass订阅涨价、工作室关闭、项目取消，且当前Xbox存在硬件缺货问题，叠加GTA6即将发售的预期，可能进一步影响硬件销售。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -4684,9 +5234,9 @@ const newsData = [
         "title": "分析师：《GTA 6》首日销量需达2500万份才算\"成功\"，开发成本已超10亿美元",
         "summary": "彭博社分析指出，《GTA 6》因开发预算超10亿美元，被设定的成功标准是首日销量2500万份；即便首日售出1000-1500万份，仍可能被视为\"灾难性\"表现。美银分析师建议售价应提至80美元甚至更高，以引领行业整体涨价。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-05-05",
@@ -4703,7 +5253,7 @@ const newsData = [
         "title": "Xbox高层大换血：2位老将卸任，5位AI系高管空降",
         "summary": "微软Xbox部门进行重大人事调整，负责人Asha Sharma宣布领导层重组。2位资深高管卸任，同时引入5位具有AI背景的高管加入团队。此次重组旨在\"更快推进\"（move faster）项目开发，反映出微软对Xbox业务深度整合AI技术的战略意图。",
         "source": "ithome.com / ign.com",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -4722,9 +5272,9 @@ const newsData = [
         "title": "Xbox Game Pass五月游戏阵容公布",
         "summary": "Xbox公布了Game Pass订阅服务5月第一波新增游戏阵容，共13款游戏。重点作品包括：《极限竞速：地平线6》（Forza Horizon 6）、《深海迷航2》（Subnautica 2）、《Mixtape》等。",
         "source": "videogameschronicle.com / gamingbolt.com",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "medium",
         "featured": true,
         "date": "2026-05-05",
@@ -4741,9 +5291,9 @@ const newsData = [
         "title": "PlayStation Plus五月会免游戏上线",
         "summary": "索尼公布了5月份PlayStation Plus会员免费游戏阵容。本月会免游戏包括：类魂动作RPG《明末：渊虚之羽》（Wuchang: Fallen Feathers）、体育游戏《EA Sports FC 26》等。",
         "source": "ithome.com / eurogamer.net",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "medium",
         "featured": true,
         "date": "2026-05-05",
@@ -4760,7 +5310,7 @@ const newsData = [
         "title": "游戏《控制》销量突破 600 万，续作《控制：共振》仍计划在年内发售",
         "summary": "Remedy Entertainment宣布《控制》（Control）系列累计销量突破600万份，同时《控制：共振》仍计划在2026年内发售，并定位为\"必须首日购买\"（must-have day-one purchase）的作品。",
         "source": "ithome.com / eurogamer.net / gamingbolt.com / gamingbolt.com",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "high",
@@ -4779,9 +5329,9 @@ const newsData = [
         "title": "索尼预计支付7800万美元PlayStation和解金",
         "summary": "加州法官初步批准了一项集体诉讼和解方案，索尼预计将支付7800万美元用于解决PlayStation Store相关诉讼。该诉讼指控索尼\"消除竞争并垄断市场\"，导致数字游戏价格过高。根据和解方案，符合条件的美国PlayStation用户可能获得赔偿。",
         "source": "gamesindustry.biz / eurogamer.net / ign.com",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-05-05",
@@ -4798,7 +5348,7 @@ const newsData = [
         "title": "业内人士分析Steam Machine定价",
         "summary": "业内分析师预测，Valve的Steam Machine游戏主机定价应在700美元以下才能具有市场竞争力。这一价格定位需要考虑与PS5、Xbox Series X的差异化竞争，同时保持PC游戏的开放性和可升级性。分析师指出，如果定价过高，Steam Machine将难以吸引主流玩家；如果定价过低，则可能影响硬件性能和用户体验。",
         "source": "ithome.com",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -4817,7 +5367,7 @@ const newsData = [
         "title": "Steam Machine价格因内存短缺暴涨（传闻）",
         "summary": "Valve硬件工程师Steve Cardinali在接受采访时表示，Steam手柄可以顺利发布是因为\"没有内置内存\"。这一言论暗示Steam Machine主机因RAM短缺面临严重的供应链压力和成本上涨。全球AI产业对高性...",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "high",
@@ -4881,9 +5431,9 @@ const newsData = [
         "title": "独占作品仍是玩家选择主机的首要因素",
         "summary": "市场研究机构Circana发布的最新调查显示，独占游戏仍然是玩家在主机上玩游戏的首要原因。尽管跨平台游戏越来越普遍，但独占内容对主机购买决策的影响力依然最大。不过报告也指出，相比去年，独占游戏作为购买动力的强度有所下降，显示出玩家对跨平台体验的接受度正在提高。索尼的PS5和任天堂的Switch在独占内容方面仍具优势。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "high",
         "featured": true,
         "date": "2026-05-04",
@@ -4900,7 +5450,7 @@ const newsData = [
         "title": "Valve硬件从支线任务升级为全面雄心",
         "summary": "GamesIndustry.biz发表观点文章分析Valve硬件业务的发展轨迹。文章指出，Valve的硬件业务已从早期的边缘实验项目（\"支线任务\"side quest）发展成为公司的核心战略方向（\"全面雄心\"full-blown ambition）。从Steam Controller到Steam Deck，再到传闻中的Steam Machine，Valve正在构建完整的硬件生态系统。这一转变标志着Valve不再满足于只做数字发行平台，而是要成为软硬件一体化的游戏科技公司。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -4919,7 +5469,7 @@ const newsData = [
         "title": "Valve硬件从支线任务升级为全面雄心",
         "summary": "GamesIndustry.biz发表观点文章分析Valve硬件业务的发展轨迹。文章指出，Valve的硬件业务已从早期的边缘实验项目（\"支线任务\"side quest）发展成为公司的核心战略方向（\"全面雄心\"full-blown ambition）。从Steam Controller到Steam Deck，再到传闻中的Steam Machine，Valve正在构建完整的硬件生态系统。这一转变标志着Valve不再满足于只做数字发行平台，而是要成为软硬件一体化的游戏科技公司。",
         "source": "gamesindustry.biz",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -4982,7 +5532,7 @@ const newsData = [
         "title": "《Metro 2039》上线Steam愿望单一周突破100万",
         "summary": "4A Games宣布新作《Metro 2039》在发布预告仅两周内即获得100万Steam愿望单，验证了IP的强大号召力。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "high",
@@ -5001,9 +5551,9 @@ const newsData = [
         "title": "亚马逊在Twitch试点可玩游戏演示",
         "summary": "亚马逊宣布在Twitch平台试点可玩游戏演示功能，允许用户直接在直播中试玩游戏。这一创新功能可能彻底改变游戏发现和营销方式——观众无需下载即可在直播间直接体验游戏，极大降低了试玩门槛。对于游戏发行商来说，这是一种全新的营销渠道",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-05-01",
@@ -5020,7 +5570,7 @@ const newsData = [
         "title": "《失落星船：马拉松》首月玩家达220万，但流失率高达80%",
         "summary": "Bungie《Marathon》首月吸引220万玩家（PS5约66万、Xbox约52.5万、PC约110万），但热度排行已跌出前100，80%玩家流失。Bungie仍坚持长线运营，表示已规划未来数年叙事路线图。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -5039,7 +5589,7 @@ const newsData = [
         "title": "Xbox将于5月7日举办\"游戏开发更新\"直播，深入介绍Project Helix",
         "summary": "微软宣布将于5月7日举办首次Xbox Game Dev Update直播，重点展示Project Helix新主机，由Chris Charla和Jason Ronald主持，介绍其\"代表Xbox未来的方向\"。",
         "source": "GamingBolt",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -5058,7 +5608,7 @@ const newsData = [
         "title": "索尼就PS5 DRM问题发布官方声明",
         "summary": "索尼就PS4和PS5的数字版权管理相关问题发布声明，明确玩家购买数字游戏仅需进行一次在线验证确认许可证，之后无需再进行联网校验，可正常游玩，该机制主要用于防止用户退款后离线继续使用无合法许可的游戏。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "medium",
@@ -5077,7 +5627,7 @@ const newsData = [
         "title": "Xbox 财报：主机硬件收入同比下滑33%，内容与服务收入跌5%",
         "summary": "微软发布FY2026 Q3财报，Xbox主机硬件收入-33%，游戏收入-7%，内容与服务-5%。新任 Xbox CEO 阿莎·夏尔马（Asha Sharma）已开始大幅改革，目标明年恢复增长；微软整体营收829亿美元，云计算与生产力业务保持强劲。",
         "source": "3DMGame",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -5397,7 +5947,7 @@ const newsData = [
         "title": "Starbreeze打算借助Roblox 成功经验开发第二款游戏",
         "summary": "旗下新游《Notoriety: A Payday Experience》在 Roblox 上已突破4亿次访问，玩家好评率92%，Starbreeze 将借此模式开发第二款 Roblox 游戏，验证\"用户生成内容\"商业路径。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -5416,9 +5966,9 @@ const newsData = [
         "title": "4月国产网络游戏版号发放",
         "summary": "共154款游戏获批版号，其中网易雷火《遗忘之海》获得移动、客户端、游戏机（PS5）版号",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-04-29",
@@ -5435,7 +5985,7 @@ const newsData = [
         "title": "Take-Two CEO谈《GTA 6》定价策略",
         "summary": "针对100美元传闻，CEO表示目标是\"收取远低于游戏实际价值的价格\"，称定价将取决于消费者愿意支付多少",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -5454,9 +6004,9 @@ const newsData = [
         "title": "《贪婪之秋》开发商 Spiders 宣告倒闭",
         "summary": "母公司 Nacon 申请破产后未能为 Spiders 工作室找到买家，Spiders 确认\"已不复存在\"。《贪婪之秋2：垂死世界》的 DLC 仍会继续。Nacon 旗下此前已有4家子公司申请破产。",
         "source": "GIB / Eurogamer / VGC / GamingBolt / IGN中国",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "high",
         "featured": true,
         "date": "2026-04-29",
@@ -5473,7 +6023,7 @@ const newsData = [
         "title": "《吸血鬼爬行者》（Vampire Survivors续作）一周内玩家数破100万",
         "summary": "Poncle 旗下卡牌肉鸽新作《吸血鬼爬行者》跨 Steam/PS/Xbox/Switch 平台一周玩家数破百万，Steam 好评率96%，已超1万条评价，首个修复补丁同步上线。",
         "source": "3DMGame",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -5492,7 +6042,7 @@ const newsData = [
         "title": "5月PS Plus会免：《EA Sports FC 26》、《明末：渊虚之羽》等",
         "summary": "PS Plus 5月免费游戏（Essential级）：《EA Sports FC 26》（PS5/PS4）+ 《明末：渊虚之羽》（PS5）+ 《九日》（Nine Sols，PS5），5月5日起开领。",
         "source": "PS Blog / Eurogamer / VGC / 3DMGame",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -6024,9 +6574,9 @@ const newsData = [
         "title": "Denuvo破解后2K添加强制14天在线验证",
         "summary": "NBA 2K26和《漫威暗夜之子》等游戏实施新的在线验证机制",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-04-28",
@@ -6043,7 +6593,7 @@ const newsData = [
         "title": "《暗黑破坏神4：憎恨之王》上线遭技术问题，玩家大规模无法登录",
         "summary": "大量用户反映长时间排队、错误提示、Xbox奖励无法显示；暴雪承认故障并推出修复补丁，但问题尚未完全解决",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -6062,7 +6612,7 @@ const newsData = [
         "title": "《黎明行者之血》定档9月3日发售",
         "summary": "售价70美元，登陆Xbox Series X/S、PS5和PC，将与《神鬼寓言》秋季正面对决",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -6081,7 +6631,7 @@ const newsData = [
         "title": "Steam东方游戏文化周开启",
         "summary": "《明末：渊虚之羽》等国产游戏集体史低促销",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -6100,9 +6650,9 @@ const newsData = [
         "title": "PlayStation 为 PS4/PS5 数字游戏新增 30 天 DRM 联网验证，引发强烈抵制",
         "summary": "所有新购数字版游戏设置30天计时器，超期不联网则无法运行；GameStop 推出\"NO LIMITS\"广告并推出阶梯折扣（购6+件享30%折扣），以此揽客",
         "source": "VGC | 3DM",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-04-28",
@@ -6618,9 +7168,9 @@ const newsData = [
         "title": "DenuvOwO首次全破D加密游戏",
         "summary": "破解组DenuvOwO首次成功破解所有带D加密的游戏，包括《黑神话：悟空》",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-04-27",
@@ -6637,9 +7187,9 @@ const newsData = [
         "title": "505 Games母公司收购《明末：渊虚之羽》IP",
         "summary": "505 Games母公司以3200万元斥资收购《明末：渊虚之羽》游戏IP",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "high",
         "featured": true,
         "date": "2026-04-27",
@@ -6656,9 +7206,9 @@ const newsData = [
         "title": "英特尔警告：AI算力需求正推高CPU价格，RAM与存储成本已先行上涨",
         "summary": "英特尔正式发出预警，AI数据中心大规模采购存储器已推高RAM和存储价格，CPU价格可能是下一个受影响的环节，对PC游戏硬件成本构成压力。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-04-27",
@@ -6675,7 +7225,7 @@ const newsData = [
         "title": "索尼PS5在东南亚和韩国大幅涨价，韩国数字版最高涨43%",
         "summary": "索尼宣布PS5、PS5 Pro及PS Portal在东南亚、韩国地区涨价，5月1日起生效，韩国数字版涨幅高达43%，引发玩家强烈不满。此前PS5全球多地已历经涨价。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "high",
@@ -6694,7 +7244,7 @@ const newsData = [
         "title": "微软XGP\"入门版\"曝光",
         "summary": "微软XGP\"入门版\"曝光：含《群星》《星露谷物语》等50多款游戏但限制在线联机，每月仅10小时...",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -6713,7 +7263,7 @@ const newsData = [
         "title": "索尼PS5在东南亚和韩国大幅涨价，韩国数字版最高涨43%",
         "summary": "索尼宣布PS5、PS5 Pro及PS Portal在东南亚、韩国地区涨价，5月1日起生效，韩国数字版涨幅高达43%，引发玩家强烈不满。此前PS5全球多地已历经涨价。",
         "source": "3DM / VGC / GamingBolt",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "high",
@@ -6732,7 +7282,7 @@ const newsData = [
         "title": "Valve确认Steam Deck 2全力开发中",
         "summary": "Valve确认正全力开发Steam Deck 2，瞄准重大升级，但上市日期尚未确定",
         "source": "ithome.com / 3dmgame.com / gamingbolt.com / ign.com",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "medium",
@@ -6839,7 +7389,7 @@ const newsData = [
         "title": "卡普空庆祝《生化危机：安魂曲》销量突破700万",
         "summary": "《生化危机：安魂曲》成为系列史上销售最快的作品，突破700万份。卡普空举办庆功宴，TGA创办人杰夫·基思利出席",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "high",
@@ -6858,7 +7408,7 @@ const newsData = [
         "title": "微软Xbox新掌舵人阿莎·夏尔马正式上任，暗示将继续收购工作室",
         "summary": "微软Xbox新掌舵人阿莎·夏尔马暗示未来或将继续收购游戏工作室。CEO表示Xbox是\"对公司未来至关重要的受众和品类\"",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "high",
@@ -6877,7 +7427,7 @@ const newsData = [
         "title": "Valve Steam Machine定价接近敲定，面临内存成本难题",
         "summary": "爆料称Valve正权衡Steam Machine定价，8GB显存或成性能短板，对标高端主机市场",
         "source": "IT之家 / GamingBolt Steam Controller",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -6896,7 +7446,7 @@ const newsData = [
         "title": "微软Xbox新掌舵人阿莎·夏尔马正式上任，暗示将继续收购工作室",
         "summary": "微软Xbox新掌舵人阿莎·夏尔马暗示未来或将继续收购游戏工作室。CEO表示Xbox是\"对公司未来至关重要的受众和品类\"",
         "source": "ithome.com / videogameschronicle.com",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "high",
@@ -6963,7 +7513,8 @@ const newsData = [
             189,
             188,
             216
-        ]
+        ],
+        "id": 1556
     },
     {
         "id": 223,
@@ -7052,7 +7603,7 @@ const newsData = [
         "title": "《最终幻想14》新资料片《银海之天舟（Evercold）》公布，FF14将登陆Switch 2",
         "summary": "SE在FF14粉丝节宣布新资料片2027年1月上线，同时确认FF14将于2026年8月登陆Switch 2平台，无需Nintendo Switch Online",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -7257,9 +7808,9 @@ const newsData = [
         "title": "华纳兄弟股东以压倒多数通过派拉蒙1110亿美元收购案",
         "summary": "WB股东批准派拉蒙收购，仍待美国司法部和欧盟审批，此前Netflix亦参与竞购",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "high",
         "featured": true,
         "date": "2026-04-24",
@@ -7276,7 +7827,7 @@ const newsData = [
         "title": "前PlayStation负责人吉田秀树：不认为PS游戏同步PC发行是好主意",
         "summary": "吉田在主题演讲中表示反对AAA级PS游戏同日发行PC版，但未确认索尼将放弃PC版发行",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -7295,7 +7846,7 @@ const newsData = [
         "title": "泄露：Xbox将推出新订阅层级\"Game Pass Starter Edition\"，捆绑Discord Nitro销售，包含50+款游戏和每月10小时云游戏",
         "summary": "Discord客户端数据挖掘显示，Xbox正在筹备名为\"Game Pass Starter Edition\"的全新订阅层，将与Discord Nitro会员捆绑提供，包含50+款游戏（如Stardew Valley、Fallout 4等）和每月10小时云游戏时间。这是Xbox在Game Pass降价后进一步下沉拉新的重要信号，也是与Discord深度合作的具体落地。",
         "source": "VGC / Eurogamer",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "medium",
@@ -7314,9 +7865,9 @@ const newsData = [
         "title": "华纳兄弟股东以压倒多数通过派拉蒙1110亿美元收购案",
         "summary": "WB股东批准派拉蒙收购，仍待美国司法部和欧盟审批，此前Netflix亦参与竞购",
         "source": "GamesIndustry.biz",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "high",
         "featured": true,
         "date": "2026-04-24",
@@ -7333,7 +7884,7 @@ const newsData = [
         "title": "前PlayStation负责人吉田秀树：不认为PS游戏同步PC发行是好主意",
         "summary": "吉田在主题演讲中表示反对AAA级PS游戏同日发行PC版，但未确认索尼将放弃PC版发行",
         "source": "Eurogamer",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -7352,7 +7903,7 @@ const newsData = [
         "title": "Xbox为何将《使命召唤》移出Game Pass：数据显示严重蚕食销售",
         "summary": "Newzoo数据显示，《使命召唤》在XGP中并不驱动订阅增长，反而大幅削减销售，Xbox新CEO计划将更多《使命召唤》旧作补入XGP",
         "source": "GamesIndustry.biz /",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -7371,7 +7922,7 @@ const newsData = [
         "title": "ID@Xbox：4月展示会全部公布内容",
         "summary": "Xbox独立游戏开发者计划ID@Xbox在4月展示会上公布的所有游戏和内容",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "medium",
@@ -7390,9 +7941,9 @@ const newsData = [
         "title": "SK海力士Q1利润暴涨5倍（500%），净利润率高达77%，超越NVIDIA显卡利润水平",
         "summary": "存储芯片巨头SK海力士Q1季度营业利润同比激增405%，净利润同比暴涨498%，净利润率高达77%。主要受AI服务器HBM需求驱动，季度利润率已超过NVIDIA GPU业务。游戏行业主机和PC的RAM/存储成本面临持续上行压力，AI与消费电子的需求竞争正在加剧硬件供应侧成本。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "technology",
+        "category": "hardware",
         "importance": "high",
         "featured": true,
         "date": "2026-04-23",
@@ -7409,9 +7960,9 @@ const newsData = [
         "title": "德国游戏行业从业人数连续第二年下降，降幅3%",
         "summary": "2026年德国游戏公司数量增至956家，但从业人数持续收缩，反映欧洲市场结构性调整",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-04-23",
@@ -7428,7 +7979,7 @@ const newsData = [
         "title": "《Tomodachi Life: Living the Dream》登顶日本排行榜",
         "summary": "《Tomodachi Life: Living the Dream》登顶日本游戏排行榜，销量超过TOP 10其余所有游戏总和的7倍",
         "source": "videogameschronicle.com",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -7447,7 +7998,7 @@ const newsData = [
         "title": "Xbox新CEO Asha Sharma宣布\"Microsoft Gaming\"品牌更名回归\"Xbox\"，公布四大优先战略；次世代主机Project Helix将\"性能领先\"，兼容PC游戏",
         "summary": "Xbox CEO Asha Sharma与首席内容官Matt Booty联署内部信并公开发布，宣布：①\"Microsoft Gaming\"品牌全面回归\"Xbox\"命名；②四大战略优先级：硬件（Project Helix性能领先、兼容PC游戏）、内容（扩充IP矩阵、深耕中国及新兴市场）、体验（优化搜索发现、社交、个性化）、服务（强化Game Pass可持续性）；③将重新评估独占游戏、窗口化发行和AI应用策略，现阶段未做定论；④新核心KPI确定为\"日活跃玩家数\"（DAU），而非订阅或销量。这是Xbox 2026年最重大的战略重构宣言，影响整个主机渠道格局。",
         "source": "3DMGame / 3DMGame独占策略 / VGC / GamingBolt",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "medium",
@@ -7466,9 +8017,9 @@ const newsData = [
         "title": "德国游戏行业从业人数连续第二年下降，降幅3%",
         "summary": "2026年德国游戏公司数量增至956家，但从业人数持续收缩，反映欧洲市场结构性调整",
         "source": "GamesIndustry.biz",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-04-23",
@@ -7591,7 +8142,7 @@ const newsData = [
         "title": "Xbox副总裁明确：Project Helix为第一方主机，不退出硬件市场",
         "summary": "Xbox设备与生态副总裁Jason Ronald在X平台声明，Project Helix将以第一方主机形式推出，搭载AMD混合SoC\"Magnus\"，支持Xbox与PC双平台游戏。第三方授权主机仅为补充。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -7610,7 +8161,7 @@ const newsData = [
         "title": "传微软将裁减Xbox游戏部门15%员工，公告可能5月/6月发布",
         "summary": "匿名论坛Blind爆料微软游戏部门将裁员15%，发帖者自称动视暴雪员工，指公告将于5月6日或6月5日发布。此前一个月微软已冻结云/销售部门招聘，被分析人士视为裁员前兆。尚未官方确认。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "medium",
@@ -7660,7 +8211,7 @@ const newsData = [
                 "url": "https://www.gamesindustry.biz/not-surprising-at-all-analysts-see-xbox-game-pass-price-cut-as-inevitable-shift-that-will-drive-subscription-growth-in-2026https://www.videogameschronicle.com/news/analysts-say-xbox-game-pass-price-drop-is-unsurprising-after-cod-failed-to-significantly-increase-subscriptions/"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-04-22",
@@ -7677,7 +8228,7 @@ const newsData = [
         "title": "Xbox次世代主机Project Helix传言：AMD GPU为\"零定制\"，性能比肩2-3万元PC，目标售价约$1200",
         "summary": "爆料人Moore's Law Is Dead称该机性能媲美$2000-$3000级PC；另有消息称AMD GPU未经微软任何定制，属Xbox系列首例，标志硬件策略转型",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -7696,9 +8247,9 @@ const newsData = [
         "title": "科乐美光荣（Koei Tecmo）上调FY2026全年业绩预测：净利润增50%、《宝可梦Pokopia》与《仁王3》表现超预期",
         "summary": "公司大幅上调全年预测，净利润目标升至415亿日元；《宝可梦Pokopia》超预期表现为主要驱动力",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-04-22",
@@ -7715,9 +8266,9 @@ const newsData = [
         "title": "虚幻引擎5整合微软DirectX高级着色器交付技术，有望解决PC游戏卡顿",
         "summary": "DirectX团队技术正被引入UE5，旨在消除着色器编译导致的游戏卡顿及长加载时间，将惠及大量PC平台UE5游戏",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-04-22",
@@ -7758,9 +8309,9 @@ const newsData = [
         "title": "美国3月硬件销售额增长69%，Switch 2表现强劲",
         "summary": "美国2026年3月视频游戏消费数据呈现增长趋势，硬件销售同比增长69%，消费者总支出增长12%至53亿美元，硬件销售表现强劲主要由任天堂Switch 2带动。第一季度总支出同比增长5%，达到146亿美元。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-04-22",
@@ -8556,7 +9107,7 @@ const newsData = [
                 "url": "https://www.ithome.com/0/941/632.htmhttps://www.eurogamer.net/dragon-ball-and-digimon-anime-producer-toei-creates-toei-games-publisherhttps://www.gamesindustry.biz/toei-company-launches-publishing-label-toei-games"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-04-21",
@@ -8604,7 +9155,7 @@ const newsData = [
                 "url": "https://www.ithome.com/0/941/632.htmhttps://www.eurogamer.net/dragon-ball-and-digimon-anime-producer-toei-creates-toei-games-publisherhttps://www.gamesindustry.biz/toei-company-launches-publishing-label-toei-games"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-04-21",
@@ -9000,7 +9551,7 @@ const newsData = [
         "title": "《风启之旅》抢先体验六天销量破百万，Steam在线超20万",
         "summary": "合作生存冒险游戏《风启之旅》（Windrose）开启抢先体验仅六天，销量突破100万份，Steam同时在线玩家超20万，属于近期爆款之一。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "high",
@@ -9019,9 +9570,9 @@ const newsData = [
         "title": "中国音数协游戏工委：2026年一季度游戏市场收入971.72亿元",
         "summary": "2026年Q1中国游戏市场收入同比增长13.38%",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-04-20",
@@ -9038,7 +9589,7 @@ const newsData = [
         "title": "育碧确认《刺客信条：黑旗重制版》将于4月23日全球正式公布",
         "summary": "育碧官方确认，《刺客信条：黑旗 Resynced》将通过直播于本周正式揭晓，此前已有大量泄露",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "high",
@@ -9057,7 +9608,7 @@ const newsData = [
         "title": "《龙珠：超宇宙3》4分钟预告正式公布，2027年发售",
         "summary": "万代南梦宫正式公布《龙珠：超宇宙3》，确认2027年发售，为系列正统续作。本作预计于2027年登陆PlayStation 5、Xbox Series X|S及Steam平台。",
         "source": "3DM",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -9100,9 +9651,9 @@ const newsData = [
         "title": "中国音数协游戏工委：2026年一季度游戏市场收入971.72亿元",
         "summary": "2026年Q1中国游戏市场收入同比增长13.38%",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-04-20",
@@ -9559,7 +10110,7 @@ const newsData = [
         "title": "育碧《幽灵行动》正统续作消息曝光，计划2026年发售",
         "summary": "据爆料，育碧正秘密开发《幽灵行动》正统续作，计划2026年发售。该系列自2019年《断点》口碑销量双失利后陷入沉寂，此次正统续作受玩家期待。",
         "source": "IT之家",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -9635,7 +10186,7 @@ const newsData = [
         "title": "动作游戏《轮回之兽》定档8月4日，正式进军中国市场",
         "summary": "《轮回之兽》确认8月4日发售，登陆PS5、XSX和PC。官方正式入驻B站、抖音和小红书，明确布局中国市场，中文配音或将在未来加入。美国地区标准版定价60美元。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -9654,7 +10205,7 @@ const newsData = [
         "title": "《战锤40K：星际战士2》玩家数量突破1200万",
         "summary": "《战锤40K：星际战士2》宣布达成1200万玩家里程碑，发行商Focus Entertainment称\"超越最狂野的梦想\"。玩家数增长部分得益于游戏加入订阅服务，《星际战士3》目前已进入积极开发阶段。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "high",
@@ -9673,7 +10224,7 @@ const newsData = [
         "title": "《极限竞速地平线6》发售前Steam预购量据报已超50万份",
         "summary": "据报道，《极限竞速地平线6》（以东京为背景）在正式发售前Steam预购量已超50万，显示该系列在PC端的强劲吸引力。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -9692,7 +10243,7 @@ const newsData = [
         "title": "《地铁2039》正式公布，今年冬季发售",
         "summary": "Deep Silver/4A Games宣布《地铁2039》将于2026年冬季发售，登陆PS5、XSX|S及PC（Steam/Epic）。游戏开发历时7年，主角全程配音，融合探索、生存、战斗与潜行，设定于核战后第25年。游戏已受俄乌战争影...",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -10277,7 +10828,7 @@ const newsData = [
                 "url": "https://www.ithome.com/0/939/275.htm"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-04-15",
@@ -10294,7 +10845,7 @@ const newsData = [
         "title": "PS5 sales reached year highs as consumers raced to beat Sony’s price increases",
         "summary": "PlayStation 5硬件在美国的销量在涨价节点前达到年度高点，视频游戏硬件周支出同比几乎翻倍。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -10320,7 +10871,7 @@ const newsData = [
                 "url": "https://www.3dmgame.com/news/202604/3942052.html"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "high",
         "featured": true,
         "date": "2026-04-15",
@@ -10344,7 +10895,7 @@ const newsData = [
                 "url": "https://www.3dmgame.com/news/202604/3942020.html"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-04-15",
@@ -10385,7 +10936,7 @@ const newsData = [
         "title": "《星空》PS5版首周销量惨淡，仅售出14万份，有望登陆Switch 2",
         "summary": "《星空》PS5版首周销量约14万份，被认为是Xbox移植PS5最快的游戏，但对顶级3A而言表现不佳，玩家兴趣平平。与此同时，B社《星空》已在多个分级机构完成Switch 2评级，Switch 2版本上线几乎是板上钉钉，预计近期公布。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -10404,7 +10955,7 @@ const newsData = [
         "title": "《哈迪斯2（Hades 2）》正式登陆PS5与Xbox，同步推出第二弹更新",
         "summary": "好评肉鸽动作游戏《哈迪斯2》在Steam抢先体验阶段后，正式登陆主机平台。第二弹更新带来命运之书扩展内容、剧情结局更新、新对话及多项游戏改善。",
         "source": "3DM / GamingBolt",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -10454,7 +11005,7 @@ const newsData = [
                 "url": "https://www.eurogamer.net/wuchang-fallen-feathers-development-team-disbanded"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-04-15",
@@ -10478,7 +11029,7 @@ const newsData = [
                 "url": "https://www.3dmgame.com/news/202604/3942052.html"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "high",
         "featured": true,
         "date": "2026-04-15",
@@ -10502,7 +11053,7 @@ const newsData = [
                 "url": "https://www.3dmgame.com/news/202604/3942020.html"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-04-15",
@@ -10880,7 +11431,7 @@ const newsData = [
         "title": "Xbox新任CEO承认Game Pass价格过高，或将降价+体系重构，《使命召唤》也可能被移出",
         "summary": "微软游戏部门新任CEO阿莎·夏尔马（Asha Sharma）在内部备忘录中公开承认，Xbox Game Pass对玩家而言\"已经太贵\"。备忘录称现有模式并非最终方案，短期需提供更合理的性价比，长期将把Game Pass升级为更灵活的订阅体系。此前去年10月XGP终极版月费大涨50%至30美元，引发用户不满。还有传言称《使命召唤》可能被移出Game Pass独立计费，届时可推出低价基础套餐。。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -10899,7 +11450,7 @@ const newsData = [
         "title": "《地铁2039》正式公布，4月16日举行Xbox专场首发直播",
         "summary": "Deep Silver与4A Games正式官宣《地铁》系列第四部主线新作《地铁2039》，将于4月16日（莫斯科时间20:00，北京时间4月17日凌晨1点）在Xbox专场进行首次完整揭露，同时B站安排中文预热直播。从官方主视觉图看，本作场景回归冰封莫斯科。前作《地铁：离去》于2019年发售。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -10918,7 +11469,7 @@ const newsData = [
         "title": "《守望先锋》4月15日登陆Switch 2，稳定60fps",
         "summary": "暴雪官宣《守望先锋》将于4月15日登陆Switch 2，游戏性能相比Switch版大幅提升，画质更高、音效更好、帧率稳定60fps。同期开启第二赛季\"巨大顶峰\"，新增伤害英雄谢拉、活动匹配投票、地图ATLANTIC PENINSULA重制版等内容。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -10937,7 +11488,7 @@ const newsData = [
         "title": "《战神》系列新作传闻将在PlayStation State of Play发布",
         "summary": "爆料称索尼将在4月举行State of Play发布会，届时《战神》新正传可能公布。这意味着索尼仍将通过大型平台发布会作为独占内容的核心营销阵地，与Xbox的Xbox Showcase策略形成对比。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -10956,7 +11507,7 @@ const newsData = [
         "title": "Roblox升级版正式登陆PS5，加载速度提升30%",
         "summary": "Roblox专为PS5重新开发原生App，加载速度提升30%，支持DualSense手柄震动特性，加强PS5平台用户体验。PlayStation Blog专文推广，标志着PS平台向用户创作内容（UGC）生态进一步开放。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -10975,9 +11526,9 @@ const newsData = [
         "title": "泄露数据揭示《GTA Online》吸金能力：每周内购净入 850 万美元，PS5 平台贡献过半",
         "summary": "黑客组织ShinyHunters公开了Rockstar Games的泄露数据，披露了《GTA Online》的财务表现和用户数据，但信息准确性存疑。数据显示该游戏每周内购收入达850万美元，PS5平台贡献超半数收入，且用户占比最高。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-04-14",
@@ -10994,7 +11545,7 @@ const newsData = [
         "title": "Roblox升级版正式登陆PS5，加载速度提升30%",
         "summary": "Roblox专为PS5重新开发原生App，加载速度提升30%，支持DualSense手柄震动特性，加强PS5平台用户体验。PlayStation Blog专文推广，标志着PS平台向用户创作内容（UGC）生态进一步开放。",
         "source": "PlayStation Blog",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -11013,7 +11564,7 @@ const newsData = [
         "title": "《守望先锋》Switch 2版本上线，60帧全程流畅运行",
         "summary": "暴雪《守望先锋》（原守望先锋2）正式登陆Switch 2，支持掌机与底座模式60帧运行，随\"鹰隼王朝\"赛季2同步上线。���化了Switch 2的主机端竞技游戏阵容。",
         "source": "VGC",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -11032,7 +11583,7 @@ const newsData = [
         "title": "TIGA: PC and console continue to drive UK games development",
         "summary": "英国游戏产业正经历有记录以来最严重的衰退，PC和主机平台开发仍是行业支柱，但移动端开发比例下降；政...",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "policy",
         "importance": "low",
@@ -11391,7 +11942,7 @@ const newsData = [
         "title": "《神鬼寓言4》（Fable）内部延期，或推迟至12月以避开《GTA6》",
         "summary": "业内人士Jeff Grubb证实，微软《神鬼寓言4》已在内部延期，原因是开发团队担忧与同年11月发售的《GTA6》正面竞争。目前微软仍争取在2026年内（可能为12月）发售，但存在进一步推迟到2027年的可能性。对微软第一方游戏阵容压力显著增加。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -11410,7 +11961,7 @@ const newsData = [
         "title": "Roblox强制引入年龄分级机制，加强未成年保护",
         "summary": "Roblox将账户划分为Kids（关闭聊天）、Select（家长监督下适度社交）和标准（16岁后解锁）三级，对应不同内容与功能权限，旨在加强未成年保护合规。挑战在于如何对海量用户生成内容（UGC）进行分级审核。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -11536,7 +12087,7 @@ const newsData = [
         "title": "Epic Games正在开发以迪士尼角色为主角的类《Arc Raiders》射击游戏，今年内推出",
         "summary": "据爆料，Epic Games正秘密开发一款以迪士尼IP角色为主角、玩法类似《Arc Raiders》的提取类射击游戏，计划今年推出。Epic与迪士尼此前已有Epic Games股权投资合作，IP联动范围持续扩大。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -11555,7 +12106,7 @@ const newsData = [
         "title": "Bungie《马拉松》（Marathon）开发预算超2亿美元，或接近2.5亿",
         "summary": "据报道，索尼旗下Bungie开发的提取类射击游戏《马拉松》开发预算超过2亿美元，可能接近2.5亿美元（不含上线后维护费用）。该作是索尼和Bungie的关键押注，高预算之下玩法路线受到业界密切关注。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -11574,7 +12125,7 @@ const newsData = [
         "title": "《星空》PS5/PS5 Pro版频繁崩溃，玩家涌入退款潮",
         "summary": "《星空》PS5版在发售后暴露严重技术问题，Digital Foundry证实频繁死机，PS5 Pro甚至需要断电重启。Xbox版相对稳定。贝塞斯达暂未公开回应。玩家口碑快速恶化，退款申请大量出现，是Bethesda/Xbox旗下重点产品跨平台扩展的重大口碑危机。",
         "source": "ithome游戏",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -11593,7 +12144,7 @@ const newsData = [
         "title": "PS6定价预测：不会达到1000美元，预计在600–800美元区间",
         "summary": "据多方分析师及业内消息，PlayStation 6不会定价1000美元，预计落在600至800美元区间，以兼顾硬件成本与用户接受度。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -11612,7 +12163,7 @@ const newsData = [
         "title": "法国政府宣布全面放弃Windows，转向Linux，推进数字主权战略",
         "summary": "法国跨部门数字总局（DINUM）联合多部门宣布将全面停用Windows，改用基于Linux的政府工作站，计划2026年秋敲定整套\"主权解决方案\"（含杀毒、AI系统、数据库等）。此举出于对美国科技依赖的政治风险规避考量，对PC操作系统生态及微软在政府市场的份额有潜在示范效应。",
         "source": "3DM · 3DM",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "policy",
         "importance": "medium",
@@ -11684,9 +12235,9 @@ const newsData = [
         "title": "R星（Rockstar Games）遭黑客组织\"ShinyHunters\"数据勒索",
         "summary": "黑客通...",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-04-11",
@@ -11806,7 +12357,7 @@ const newsData = [
         "title": "Xbox成就系统大升级，PS5玩家呼吁索尼跟进",
         "summary": "微软宣布Xbox成就系统重构：新增视觉效果、支持隐藏游戏记录、高亮100%完成度游戏（特殊边框展示）。PS5玩家大量在社交媒体催促索尼改进奖杯系统，反映玩家对成就/收藏类系统的强烈需求",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -11825,7 +12376,7 @@ const newsData = [
         "title": "德国对游戏产业加大资助，Rockfish Games获800万欧元政府补贴",
         "summary": "《星际战甲》开发商Rockfish Games披露获德国政府800万欧元资助，德国已将游戏产业年度资助预算提升至1.25亿欧元，体现欧洲主要国家对游戏产业的战略扶持力度持续加码",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "policy",
         "importance": "low",
@@ -11851,7 +12402,7 @@ const newsData = [
                 "url": "https://www.3dmgame.com/news/202604/3941722.html"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-04-10",
@@ -11875,7 +12426,7 @@ const newsData = [
                 "url": "https://www.3dmgame.com/news/202604/3941722.html"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-04-10",
@@ -11916,7 +12467,7 @@ const newsData = [
         "title": "Amazon Luna全面变革：停止支持第三方游戏商店和订阅，将于6月10日生效",
         "summary": "Amazon宣布旗下云游戏平台Luna将于6月10日起停止支持EA、Ubisoft、GOG等第三方游戏商店购买及订阅，玩家通过这些渠道购买的游戏将无法在Luna上游玩（可在原平台继续使用），且不提供退款。Luna平台战略大幅收缩，向自营内容集中。",
         "source": "VGC · Eurogamer · GamingBolt",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -12154,7 +12705,7 @@ const newsData = [
         "title": "《MK 1》（真人快打1）全球销量突破800万份",
         "summary": "NetherRealm软重启之作《真人快打1》累计销售800万份，尽管口碑随时间走低且已无新内容，仍维持稳健销量",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "high",
@@ -12173,7 +12724,7 @@ const newsData = [
         "title": "索尼4月16日将举行State of Play，PS5第一方独占游戏缺席",
         "summary": "据爆料，索尼将于4月16日举行State of Play，重点展示育碧《刺客信条4：黑旗》重制版及索尼自研新IP《Saros》等第三方内容，《漫威金刚狼》等待夏季才有新消息。显示索尼当前资源重心倾向与第三方深度合作",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "high",
@@ -12261,9 +12812,9 @@ const newsData = [
         "title": "Take-Two裁撤AI团队",
         "summary": "据报道T2解散内部AI团队，前员工称原因为\"高层管理层优先级转移\"",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-04-08",
@@ -12280,7 +12831,7 @@ const newsData = [
         "title": "索尼收购AI与计算机视觉公司Cinemersive Labs",
         "summary": "这家英国公司将加入SIE视觉计算小组，支持\"游戏视觉计算前沿技术\"的发展",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "high",
@@ -12299,7 +12850,7 @@ const newsData = [
         "title": "Xbox Game Pass四月新增17款游戏，《哈迪斯2》《Replaced》领衔",
         "summary": "微软公布4月上半月新增阵容，共17款游戏加入订阅库，《哈迪斯2》和《Replaced》4月14日首发即加入，Premium订阅用户还可享《上古卷轴4：湮没重制版》《使命召唤：现代战争》等，4月15日起《给他爱5》等多款游戏离库",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -12342,7 +12893,7 @@ const newsData = [
         "title": "消息称育碧将于 4 月 16 日推出《刺客信条 4：黑旗》游戏重制版",
         "summary": "育碧将于4月16日推出《刺客信条4：黑旗》重制版，该作被视为育碧本财年的核心作品之一，与《幽灵行动》IP新作共同支撑公司业绩...",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -12361,7 +12912,7 @@ const newsData = [
         "title": "《007：初露锋芒》Switch 2版延期，PC/PS5/Xbox版维持5月27日",
         "summary": "IO Interactive宣布《007：初露锋芒》Switch 2版延期至夏季晚些时候，暗示Switch 2版本针对新硬件的优化工作量较大",
         "source": "IT之家 / VGC",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -12482,7 +13033,7 @@ const newsData = [
                 "url": "https://www.3dmgame.com/news/202604/3941434.html"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-04-07",
@@ -12499,7 +13050,7 @@ const newsData = [
         "title": "PlayStation宣布\"The Playerbase\"计划：将真实玩家扫描植入PS游戏",
         "summary": "索尼启动全新社区营销计划，通过摄影测量和动作捕捉将玩家形象植入PS第一方游戏，首批从《跑车浪漫旅7》开始，强化粉丝与平台的情感连接",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "medium",
@@ -12518,9 +13069,9 @@ const newsData = [
         "title": "AMD已启动芯片验证，PS6有望维持2027年发布",
         "summary": "消息源Kepler_L2透露AMD已启动PS6芯片验证，意味着该主机不太可能延期至2028年底后，预计仍维持2027年底或2028年初的发布窗口",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "medium",
         "featured": true,
         "date": "2026-04-07",
@@ -12537,9 +13088,9 @@ const newsData = [
         "title": "沙特资本投资卡普空6亿美元！持股6.04%成第四大股东",
         "summary": "沙特资本EGDC增持卡普空股...",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-04-07",
@@ -12556,9 +13107,9 @@ const newsData = [
         "title": "AMD已启动芯片验证，PS6有望维持2027年发布",
         "summary": "消息源Kepler_L2透露AMD已启动PS6芯片验证，意味着该主机不太可能延期至2028年底后，预计仍维持2027年底或2028年初的发布窗口",
         "source": "IT之家",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "medium",
         "featured": true,
         "date": "2026-04-07",
@@ -12575,9 +13126,9 @@ const newsData = [
         "title": "Netflix推出儿童独立游戏应用\"Netflix Playground\"",
         "summary": "Netflix宣布推出儿童专属独立游戏App，无广告无内购，4月28日全球上线，含《小猪佩奇》《芝麻街》等IP，支持离线游玩，旨在构建\"观看+互动\"无缝体验",
         "source": "IT之家",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "medium",
         "featured": true,
         "date": "2026-04-07",
@@ -12726,7 +13277,7 @@ const newsData = [
         "title": "索尼再度清理PlayStation商店，多款粗制滥造/AI生成劣质游戏遭下架",
         "summary": "涉及GoGame Console Publisher、VRCForge Studios等发行商，这是索尼持续提升平台内容质量治理行动的一部分，延续此前单一开发商上千款游戏被移除的清洁力度。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -12745,7 +13296,7 @@ const newsData = [
         "title": "索尼再度清理PlayStation商店，多款粗制滥造/AI生成劣质游戏遭下架",
         "summary": "涉及GoGame Console Publisher、VRCForge Studios等发行商，这是索尼持续提升平台内容质量治理行动的一部分，延续此前单一开发商上千款游戏被移除的清洁力度。",
         "source": "IT之家",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -12809,7 +13360,7 @@ const newsData = [
         "title": "索尼PlayStation Studios删除PC相关表述；与Nixxes官方简介调整形成双重信号",
         "summary": "索尼一方面更新各工作室页面删除PC平台描述，强调独占；另一方面让专职移植工作室Nixxes高调宣传PC能力——两则信号合并解读：单机大作保留独占价值，服务型GaaS游戏全力登PC拓收入。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -12828,7 +13379,7 @@ const newsData = [
         "title": "索尼已通知开发者：正为PS6及新款PlayStation掌机做准备；PS6开发套件更新再次释放提速信号",
         "summary": "消息称索尼已向开发者说明次世代过渡计划，强调跨设备适配与可扩展性，新掌机性能据称超过Xbox Series S；PS5开发套件更新也被解读为PS6研发加速信号。索尼同步缩减PS4支持。",
         "source": "IT之家 · GamingBolt",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -12847,7 +13398,7 @@ const newsData = [
         "title": "微软释放向下兼容信号：Xbox 360游戏现身xCloud后台，结合25周年及\"螺旋计划\"主机",
         "summary": "监测平台发现多款Xbox 360游戏代码更新，叠加GDC上Xbox高管强调向下兼容为重点，市场预期微软将于Xbox 25周年节点集中发力经典游戏复活计划，或涉及\"螺旋计划\"新主机。",
         "source": "IT之家",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -12866,7 +13417,7 @@ const newsData = [
         "title": "索尼CEO十时裕树：娱乐业贡献超六成收入，PlayStation是最核心资产",
         "summary": "索尼CEO表示，索尼电影、音乐和游戏等娱乐业贡献超六成收入，PlayStation是最核心资产。同时明确表态游戏业务的战略优先级，为近期PS平台策略大调整提供了高层背书。",
         "source": "IT之家",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -13031,7 +13582,7 @@ const newsData = [
         "title": "暴雪开发未公开3A开放世界射击游戏，首次改用虚幻引擎",
         "summary": "依据招聘信息，暴雪正开发一款3A开放世界射击游戏，打破自研引擎传统改用UE，外界猜测与《星际争霸》IP重启有关。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -13050,7 +13601,7 @@ const newsData = [
         "title": "《浣熊推币机/Raccoin》（硬币推机Roguelike）Steam首日销量突破10万",
         "summary": "小体量创意独立游戏首日10万销量，印证\"赌博机制+Roguelike\"这一细分玩法在PC平台的持续爆发力。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "high",
@@ -13069,9 +13620,9 @@ const newsData = [
         "title": "Indie Pass正式推出：独立游戏界的Game Pass，每月6.99美元含70款游戏",
         "summary": "Indie.io推出面向独立游戏的订阅服务，起步70款游戏，每月更新，旨在解决独立游戏可发现性难题，或对现有订阅生态构成补充竞争。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "medium",
         "featured": true,
         "date": "2026-04-03",
@@ -13088,7 +13639,7 @@ const newsData = [
         "title": "PlayStation Studios PC发行三年收入达3亿美元（传言）",
         "summary": "据索尼前员工在领英资料中披露，PlayStation Studio...",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -13194,7 +13745,7 @@ const newsData = [
         "title": "PUBG引入全新PvE合作模式\"Xeno Point\"，探索后\"吃鸡\"时代方向",
         "summary": "PUBG新增PvE协作模式，标志着\"大逃杀\"鼻祖开始探索新的玩法形态，寻求突破单一吃鸡模式的局限。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -13213,7 +13764,7 @@ const newsData = [
         "title": "Xbox宣布品牌25周年全球FanFest巡回活动，覆盖洛杉矶、伦敦、东京等六大城市",
         "summary": "微软宣布Xbox FanFest世界巡回活动，庆祝Xbox品牌成立25周年，活动将于洛杉矶、伦敦、墨西哥城、悉尼、东京、多伦多举行，未来将宣布更多城市。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "medium",
@@ -13232,7 +13783,7 @@ const newsData = [
         "title": "前任天堂美国销售主管预测Switch 2\"终将不得不涨价\"",
         "summary": "任天堂前销售主管表示，任天堂\"不可避免\"将跟随索尼、微软的步伐提高Switch 2定价，但同时肯定任天堂近期调整实体与数字版游戏价格策略的决定是正确的。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "high",
@@ -13251,9 +13802,9 @@ const newsData = [
         "title": "VR平台Rec Room宣布将于2026年6月关停",
         "summary": "Rec Room开发商表示\"始终未能找到可持续盈利的商业模式\"，宣布6月关停平台，是VR独立平台在商业化方面持续遭遇困境的最新案例。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "medium",
         "featured": true,
         "date": "2026-04-02",
@@ -13270,7 +13821,7 @@ const newsData = [
         "title": "前任天堂美国销售主管预测Switch 2\"终将不得不涨价\"",
         "summary": "任天堂前销售主管表示，任天堂\"不可避免\"将跟随索尼、微软的步伐提高Switch 2定价，但同时肯定任天堂近期调整实体与数字版游戏价格策略的决定是正确的。",
         "source": "VGC、GamingBolt",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "high",
@@ -13289,7 +13840,7 @@ const newsData = [
         "title": "Steam Deck无法运行带Enigma DRM的游戏，卡普空政策引发平台兼容争议",
         "summary": "卡普空在《生化危机》原版三部曲Steam版中加入Enigma DRM，导致Steam Deck完全无法运行，此举引发关于PC平台DRM政策影响生态的广泛讨论。",
         "source": "IT之家 / VGC",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -13308,9 +13859,9 @@ const newsData = [
         "title": "VR平台Rec Room宣布将于2026年6月关停",
         "summary": "Rec Room开发商表示\"始终未能找到可持续盈利的商业模式\"，宣布6月关停平台，是VR独立平台在商业化方面持续遭遇困境的最新案例。",
         "source": "GamesIndustry.biz",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "medium",
         "featured": true,
         "date": "2026-04-02",
@@ -13451,7 +14002,7 @@ const newsData = [
                 "url": "https://www.3dmgame.com/news/202604/3941026.html"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-04-01",
@@ -13492,9 +14043,9 @@ const newsData = [
         "title": "Stellar Blade开发商Shift Up收购生化危机之父三上真司新工作室UNBOUND",
         "summary": "韩国工作室Shift Up（《星刃》开发商）宣布收购三上真司创立的UNBOUND工作室，并将负责发行其未来所有游戏。三上真司表示：\"我从未遇到过在创作方向上与我如此高度契合的合作方。\"",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "high",
         "featured": true,
         "date": "2026-04-01",
@@ -13511,7 +14062,7 @@ const newsData = [
         "title": "《魔法门之英雄无敌：上古纪元》（Heroes of Might and Magic: Olden Era）4月30日进入抢先体验",
         "summary": "《魔法门之英雄无敌：上古纪元》（Heroes of Might and Magic: Olden Era）4月30日进入抢先体验",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -13530,7 +14081,7 @@ const newsData = [
         "title": "IGN Live 2026消费者展会6月6日回归洛杉矶，门票开售",
         "summary": "IGN线下消费者展会IGN Live 2026将于6月6日在洛杉矶举行，涵盖独家首发、预告及可试玩展区。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -13597,7 +14148,7 @@ const newsData = [
         "title": "《红色沙漠》全球累计销量突破400万份，口碑逆袭成2026年M站玩家好评第二",
         "summary": "Pearl Abyss开发的《红色沙漠》（Crimson Desert）自发售约两周后销量突破400万份，传闻收入超2亿美元（其中PS5版贡献近7500万美元）。在重大补丁修复技术漏洞和删AI素材后，Metacritic玩家评分达8.8分，位列2026年玩家好评榜第二。Steam周销量榜连冠。",
         "source": "IGN中国 / IT之家 / GamingBolt / Eurogamer",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "high",
@@ -13616,7 +14167,7 @@ const newsData = [
         "title": "Switch 2生态分析：任天堂Switch与Switch 2第三方生态2025年销量同比增长76%",
         "summary": "数据分析公司报告指出，任天堂Switch与Switch 2的第三方游戏生态系统销售额在2025年同比增长高达76%，印证Switch 2平台对第三方厂商的吸引力显著提升。",
         "source": "MyNintendoNews",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -13635,7 +14186,7 @@ const newsData = [
         "title": "Palworld（幻兽帕鲁）官宣约会模拟器《Palworld: More Than Just Pals》确实在开发中",
         "summary": "此前曾作为愚人节玩笑预告的约会模拟器，Pocket...",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -13654,9 +14205,9 @@ const newsData = [
         "title": "美国USPTO驳回任天堂\"召唤角色战斗\"专利，Palworld法律争议持续",
         "summary": "美国专利商标局（USPTO）以\"过于显而易见\"为由，驳回任天堂2023年申请、2025年获批的\"召唤角色令其战斗\"专利（即针对《Palworld》的核心专利之一），局长于2025年11月主动要求重新审查。该专利涉及任天堂与Pocketpair之间的《Palworld》侵权诉讼，判决可能对游戏专利维权产生行业性影响。",
         "source": "GamesIndustry / GamingBolt / VGC / IGN",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-04-01",
@@ -14027,7 +14578,7 @@ const newsData = [
                 "url": "https://www.3dmgame.com/news/202603/3940932.html"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-31",
@@ -14051,7 +14602,7 @@ const newsData = [
                 "url": "https://www.3dmgame.com/news/202603/3940988.html"
             }
         ],
-        "category": "technology",
+        "category": "hardware",
         "importance": "high",
         "featured": true,
         "date": "2026-03-31",
@@ -14075,7 +14626,7 @@ const newsData = [
                 "url": "https://www.3dmgame.com/news/202603/3940989.html"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-31",
@@ -14099,7 +14650,7 @@ const newsData = [
                 "url": "https://www.ithome.com/0/934/685.htm"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-31",
@@ -14123,7 +14674,7 @@ const newsData = [
                 "url": "https://gamingbolt.com/disney-might-want-to-acquire-epic-games-rumor"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-31",
@@ -14147,7 +14698,7 @@ const newsData = [
                 "url": "https://www.3dmgame.com/news/202603/3940989.html"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-31",
@@ -14171,7 +14722,7 @@ const newsData = [
                 "url": "https://www.3dmgame.com/news/202604/3941005.html"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-31",
@@ -14450,7 +15001,7 @@ const newsData = [
         "title": "Nintendo eShop新增Switch 2专属内容筛选功能",
         "summary": "任天堂在Nintendo eShop中新增\"Switch 2内容过滤器\"，用户可一键筛选Switch 2兼容及专属游戏，优化购买决策路径，为Switch 2内容生态建设铺路。",
         "source": "MyNintendoNews",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -14628,7 +15179,7 @@ const newsData = [
                 "url": "https://www.3dmgame.com/news/202603/3940818.html"
             }
         ],
-        "category": "technology",
+        "category": "hardware",
         "importance": "medium",
         "featured": true,
         "date": "2026-03-29",
@@ -14645,7 +15196,7 @@ const newsData = [
         "title": "腾讯《王者荣耀世界》PC端定档4月10日，3月30日开放昵称抢注",
         "summary": "腾讯《王者荣耀世界》PC版官方启动器定档4月10日上线，移动端将先以\"云游戏\"方式运营；3月30日10时开放昵称抢注；鸿蒙端技术测试招募同步启动。",
         "source": "IT之家",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -14711,7 +15262,7 @@ const newsData = [
         "title": "PS6物料成本约760美元，售价或维持699美元靠补贴",
         "summary": "据业内传闻，索尼PS6预估物料成本（BOM）约760美元，若以699美元定价则需每台补贴约60美元。结合PS5当前涨价动作，分析认为索尼整体利润结构正承受压力。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -14730,7 +15281,7 @@ const newsData = [
         "title": "《死亡搁浅2》PC版上线后销量突破200万套",
         "summary": "小岛制作《死亡搁浅2》PC版发布后推动总销量突破200万套，Steam平台售出42.5万套，占游戏总销量的21%，Steam平台上中国玩家占比高达50%",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "high",
@@ -14773,7 +15324,7 @@ const newsData = [
         "title": "索尼宣布PS5/PS5 Pro/PlayStation Portal涨价，\"全球经济压力\"致成本难以承受",
         "summary": "索尼宣布多个地区PS5标准版、PS5 Pro及PlayStation Portal价格上调（涨幅约100美元/100欧元不等），官方声明归因于\"全球经济持续压力\"。此举引发市场广泛关注，分析师同时指出Xbox Series和Switch 2可能跟进涨价。",
         "source": "IGN / VGC / GamingBolt",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "high",
@@ -14792,7 +15343,7 @@ const newsData = [
         "title": "PS6物料成本约760美元，售价或维持699美元靠补贴",
         "summary": "据业内传闻，索尼PS6预估物料成本（BOM）约760美元，若以699美元定价则需每台补贴约60美元。结合PS5当前涨价动作，分析认为索尼整体利润结构正承受压力。",
         "source": "GamingBolt",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -14880,7 +15431,7 @@ const newsData = [
         "title": "《冥府》（Hades 2）正式脱离抢先体验，4月登陆PS5与Xbox",
         "summary": "Supergiant Games宣布《Hades 2》于4月正式推出完整版，同步登陆PlayStation 5和Xbox系列主机，结束EA阶段；据悉完整内容量大幅超越前作。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -14930,7 +15481,7 @@ const newsData = [
                 "url": "https://www.gamesindustry.biz/german-games-market-rose-4-in-2025-to-94bn-driven-by-hardware-sales"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-27",
@@ -14947,9 +15498,9 @@ const newsData = [
         "title": "微软Project Helix解析：以PC为核心，消除独立开发者主机移植\"隐性税收\"",
         "summary": "GamesIndustry.biz深度评论文章分析微软Project Helix战略意义：通过将Xbox生态迁移至PC优先架构，抹平独立开发者登陆主机平台的额外移植成本，有望让小型开发团队与大型工作室在同一赛道公平竞争。这一策略将深刻影响Xbox独立游戏生态格局。",
         "source": "GamesIndustry.biz",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-27",
@@ -15069,7 +15620,7 @@ const newsData = [
         "title": "索尼5月将举办State of Play，Santa Monica新未公开项目有望现身，《战神》新作预告",
         "summary": "知名业内人士爆料，索尼正与开发商评估5月State of Play游戏阵容；爆料人shinobi602确认Cory Barlog主导的未公布《战神》新作与三部曲重制版为两款独立作品，公布时间窗口或在5月State of Play或6月夏日游戏节。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "medium",
@@ -15088,7 +15639,7 @@ const newsData = [
         "title": "PlayStation商店被证实存在\"动态定价\"机制，同一游戏不同用户折扣相差近一倍",
         "summary": "外媒证实PS商店的动态定价机制真实存在——《剑星》（星刃）折扣区间介于43%到70%，差异与账户注册时长及近期活跃度相关，目前仅限第一方游戏，索尼尚未公开回应。该机制对平台资源分配透明度及开发商利益构成潜在影响。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -15107,7 +15658,7 @@ const newsData = [
         "title": "任天堂宣布Switch 2美区实体版/数字版差异定价：数字版低10美元",
         "summary": "美国任天堂宣布Switch 2游戏定价新规：数字版比实体版低10美元，首款适用游戏为5月21日发售的《耀西与不可思议图鉴》（数字版$59.99 vs 实体版$69.99），与日版策略接轨，旨在降低Key卡物理成本压力。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "medium",
@@ -15126,7 +15677,7 @@ const newsData = [
         "title": "Epic宣布裁员超1000人，《堡垒之夜》活跃度下滑成主因",
         "summary": "Epic Games大规模裁员，CEO坦承与《Fortnite》玩家活跃度下滑直接相关。裁员后CEO以\"向社会输送人才\"为由辩解，遭业界群嘲。GDC报告显示，近一年被裁游戏从业者中48%仍未找到新工作，美国约1/3从业者在过去两年受到裁员影响。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "high",
@@ -15145,9 +15696,9 @@ const newsData = [
         "title": "3A游戏平均预算突破3亿美元，行业盈利危机加剧",
         "summary": "业内人士透露，当前3A大作平均开发预算已超3亿美元，如《GTA6》类项目成本更高。以70美元定价需卖出超400万份才能盈利，计入平台抽成后门槛或达600万份，对绝大多数作品都是严峻挑战。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "high",
         "featured": true,
         "date": "2026-03-26",
@@ -15164,7 +15715,7 @@ const newsData = [
         "title": "Rebellion（《狙击精英》工作室）公布全新IP《Alien Deathstorm》，定档2027年",
         "summary": "Rebellion在Xbox合作伙伴展示会上公布科幻恐怖动作FPS新IP《Alien Deathstorm》，预计2027年发售，以恐怖敌人和诡异环境为核心卖点。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -15183,7 +15734,7 @@ const newsData = [
         "title": "《Artificial Detective》公布：《Control》《死亡空间》系列主创打造机器人侦探游戏",
         "summary": "在Xbox合作伙伴展示会上亮相，由《Control》和《Dead Space》资深人员开发，玩家扮演调查人类失踪案的机器人侦探，预计2027年发售。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -15202,7 +15753,7 @@ const newsData = [
         "title": "《Serious Sam: Shatterverse》公布：《黎明杀机》开发商Behavior Interactive联手Devolver打造合作roguelite FPS",
         "summary": "《Serious Sam》品牌新作，由Behavior Interactive（《黎明杀机》开发商）与Devolver Digital联合推出，多人合作roguelite FPS玩法，今年内发售，登陆Xbox Series X/S、PS5和PC。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -15221,7 +15772,7 @@ const newsData = [
         "title": "《Hunter: The Reckoning: Deathwish》正式公布，夏季2027年发售",
         "summary": "《Hunter: The Reckoning: Deathwish》由《机械战警：流氓都市》开发商Teyon开发，此前已意外上传至Steam，正式公告在Xbox合作伙伴展示会发出。动作RPG设定于《吸血鬼：避世》同一黑暗宇宙，参考了《博德之门3》和美剧《邪恶力量》风格，2027年夏发售。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -15240,7 +15791,7 @@ const newsData = [
         "title": "Annapurna Interactive公布公路旅行冒险游戏《Forever Ago》",
         "summary": "德国独立工作室Third Shift首作，由《杀戮尖塔2》原声作曲家参与创作，定位\"有温度的公路旅行冒险\"，将登陆Xbox、PlayStation、Switch 2和PC。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -15259,7 +15810,7 @@ const newsData = [
         "title": "Housemarque新作《Saros》确认4月30日发售，PS5独占试玩报告公开",
         "summary": "索尼旗下Housemarque（《returnal》开发商）新作《Saros》正式定档4月30日，PlayStation Blog发布官方试玩报告，强调宇宙恐怖风格与rogue-lite射击机制结合，追求极致街机手感。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "high",
@@ -15285,7 +15836,7 @@ const newsData = [
                 "url": "https://www.gamesindustry.biz/meta-quest-usage-reaches-all-time-high-in-2025-despite-studi..."
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-26",
@@ -15302,7 +15853,7 @@ const newsData = [
         "title": "《红色沙漠》Steam口碑回暖，Pearl Abyss股价强势反弹",
         "summary": "此前《红色沙漠》发售后首周遭遇大量差评，开发商Pearl Abyss股价暴跌27.4%。但随着玩家评价逐步回暖，股价已完全收复失地，销量突破300万份。Steam周榜显示其登顶全球销量榜。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -15321,7 +15872,7 @@ const newsData = [
         "title": "《Hades 2》4月14日正式登陆Xbox Series X/S与PS5，首发加入Game Pass",
         "summary": "Supergiant Games旗下广受好评的《Hades 2》（Eurogamer五星评价）正式宣布4月14日登陆Xbox Series X/S和PS5，结束此前Switch 2主机独占阶段。同步加入Xbox Game Pass，支持Xbox Play Anywhere跨端畅玩。",
         "source": "VGC / Eurogamer / GamingBolt / IT之家",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -15340,7 +15891,7 @@ const newsData = [
         "title": "《鸣潮》（Wuthering Waves）确认7月登陆Xbox Series X/S",
         "summary": "库洛旗下开放世界动作RPG《鸣潮》宣布7月正式上线Xbox Series X/S平台，同步加入Xbox Game Pass。",
         "source": "IT之家 / GamingBolt",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -15359,7 +15910,7 @@ const newsData = [
         "title": "RGG Studio《Stranger Than Heaven���新细节：横跨5座日本城市、5个历史时代",
         "summary": "RGG Studio《Stranger Than Heaven���新细节：横跨5座日本城市、5个历史时代",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -15378,7 +15929,7 @@ const newsData = [
         "title": "Bungie《Marathon》发售首周销售数据：120万份，PC占比70%",
         "summary": "Bungie新作射击游戏《Marathon》发售后首周销量达120万份，其中PC（Steam）占70%约80万份，PS5与Xbox合计约40万份，PC渠道占主导。",
         "source": "GamesIndustry.biz",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -15397,7 +15948,7 @@ const newsData = [
         "title": "Steam 3月第4周周销榜：《红色沙漠》登顶全球，国区《使命召唤：现代战争》居首",
         "summary": "Steam最新一周销量榜，全球榜《红色沙漠》登顶，国区头名为《使命召唤：现代战争》，全球与国内玩家偏好差异显著。",
         "source": "机核 / IT之家",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -15416,9 +15967,9 @@ const newsData = [
         "title": "国家新闻出版署：2026年3月共130款国产网络游戏、3款进口游戏获批",
         "summary": "国家新闻出版署公布3月游戏版号审批结果，130款国产网游及3款进口游戏过审。过审数量与���期月度水平持平，市场供给端维持正常节奏。",
         "source": "IT之家 / 机核",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-26",
@@ -15435,7 +15986,7 @@ const newsData = [
         "title": "Slay the Spire 2 has already earned more than Hollow Knight: Silksong and Hades 2 on Steam, apparently",
         "summary": "《杀戮尖塔2》在Steam平台发售两周内表现惊人，预估销量达460万份，收入超9200万美元，超越《空洞骑士：丝之歌》和《哈迪斯2》的终身Steam收入总和。游戏由小型团队Mega Crit开发，团队规模约10人，开...",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -15797,9 +16348,9 @@ const newsData = [
         "title": "Square Enix获评2025年Metacritic排名第一发行商",
         "summary": "据VGC报道，Square Enix凭借9款\"优质游戏\"荣登2025年Metacritic发行商综合评分榜首，系首次登顶。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-25",
@@ -15816,9 +16367,9 @@ const newsData = [
         "title": "Valve编剧Erik Wolpaw透露Valve在探索AI工具，但暂未用于创意写作",
         "summary": "《半条命2》《传送门》编剧Erik Wolpaw表示，Valve部分团队成员正在\"摸索\"AI工具，但他本人不担忧AI取代创意写作，目前Valve整体对AI持观望态度。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-25",
@@ -15835,7 +16386,7 @@ const newsData = [
         "title": "《马拉松》（Marathon）发售约20天后媒体评分解禁，PC版Metacritic均分81，但用户仅6.4分；销量估计达120万份，仅19%来自PS5",
         "summary": "Bungie《马拉松》PC媒体评分均分81（GameSpot/GamesRadar+ 90分，但Screen Rant 70、TechRadar 60），用户口碑与媒体严重分化，仅6.4分。分析机构估算总销量约120万份，其中约80万（70%）为PC版，PS5仅占约19%，揭示索尼独占策略在PC渗透方面的成效。Bungie已针对偏远地区匹配延迟问题推送优化。",
         "source": "3DM · Games...",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -16077,7 +16628,7 @@ const newsData = [
                 "url": "https://www.gamesindustry.biz/tiga-uk-games-dev-sector-faces-most-severe-downturn-on-record"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-24",
@@ -16168,7 +16719,7 @@ const newsData = [
         "title": "模拟赛车游戏iRacing通过串流形式登陆苹果Vision Pro",
         "summary": "iRacing将于今年春季以串流方式支持Apple Vision Pro，利用visionOS注视点推流技术实时优化渲染，并支持MR技术同步实体方向盘，探索XR与赛车模拟融合场景",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -16194,7 +16745,7 @@ const newsData = [
                 "url": "https://www.ithome.com/0/931/648.htm"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-23",
@@ -16218,7 +16769,7 @@ const newsData = [
                 "url": "https://www.ithome.com/0/931/860.htm"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-23",
@@ -16242,7 +16793,7 @@ const newsData = [
                 "url": "https://gamingbolt.com/xbox-partner-preview-announced-for-march-26th-includes-in-depth-look-at-stranger-than-heaven"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-23",
@@ -16266,7 +16817,7 @@ const newsData = [
                 "url": "https://www.gamesindustry.biz/resident-evil-requiem-tops-us-february-charts-launch-sales-60-higher-than-village-us-monthly-charts"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-23",
@@ -16283,7 +16834,7 @@ const newsData = [
         "title": "模拟赛车游戏iRacing通过串流形式登陆苹果Vision Pro",
         "summary": "iRacing将于今年春季以串流方式支持Apple Vision Pro，利用visionOS注视点推流技术实时优化渲染，并支持MR技术同步实体方向盘，探索XR与赛车模拟融合场景",
         "source": "ithome",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -16309,7 +16860,7 @@ const newsData = [
                 "url": "https://www.videogameschronicle.com/news/nintendo-switch-is-more-popular-among-japanese-teens-than-disney-pokemon-and-nintendo-itself-survey-finds/"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-23",
@@ -16461,7 +17012,7 @@ const newsData = [
         "title": "索尼持续清理PS Store低质量AI生成游戏",
         "summary": "索尼主动下架发行商Nostra Games和CGI LAB共100多款AI生成游戏，这些作品画面粗糙、内容同质化；这是索尼明确以平台质量管控为由的大规模内容清理行动，进一步向高品质内容倾斜",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -16480,7 +17031,7 @@ const newsData = [
         "title": "Switch 2欧盟版本将因法规要求支持用户更换电池",
         "summary": "受欧盟消费者法规约束，任天堂将推出Switch 2欧洲特供版本，允许用户自行更换电池——这是对欧盟可维修性法规的主动适应",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -16499,7 +17050,7 @@ const newsData = [
         "title": "索尼持续清理PS Store低质量AI生成游戏",
         "summary": "索尼主动下架发行商Nostra Games和CGI LAB共100多款AI生成游戏，这些作品画面粗糙、内容同质化；这是索尼明确以平台质量管控为由的大规模内容清理行动，进一步向高品质内容倾斜",
         "source": "ithome",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -16518,7 +17069,7 @@ const newsData = [
         "title": "Switch 2欧盟版本将因法规要求支持用户更换电池",
         "summary": "受欧盟消费者法规约束，任天堂...",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -16636,7 +17187,7 @@ const newsData = [
         "title": "索尼确认AI帧生成技术最快2027年登陆PlayStation主机",
         "summary": "索尼PS5首席架构师Mark Cerny确认，通过与AMD的\"Project Amethyst\"合作研发了FSR Redstone帧生成技术，最快2027年上线PlayStation主机平台",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "high",
@@ -16655,7 +17206,7 @@ const newsData = [
         "title": "《红色沙漠》发售危机集中爆发：AI素材、封锁Intel显卡、120GB补丁",
         "summary": "发售后问题接连暴露：①被玩家发现游戏内壁画含AI生成内容（人体与马匹畸形融合），开发商承认用了\"实验性AI工具\"并忘记替换；②封锁Intel Arc显卡运行；③推送120GB超大补丁；④键鼠操控方案令玩家普遍反映无法接受",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -16674,7 +17225,7 @@ const newsData = [
         "title": "《红色沙漠》首发销量200万份，但股价暴跌30%、Steam褒贬不一",
         "summary": "Pearl Abyss《红色沙漠》发售首日全球销量突破200万份，但Steam好评率68%（\"褒贬不一\"），简体中文区为\"多半差评\"；M站均分78，IGN评6分；股价一度下跌30%；玩家主要集中批评操控设计反直觉、画面技术问题等",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "high",
@@ -16693,9 +17244,9 @@ const newsData = [
         "title": "Xbox两名高管相继离职",
         "summary": "微软Xbox企业副总裁Lori Wright（负责合作伙伴与营销）和Xbox游戏AI总经理Haiyan Zhang双双宣布离职，二人均服务公司超10年",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-21",
@@ -16712,7 +17263,7 @@ const newsData = [
         "title": "索尼战略转向：放弃PC端启动器，回归主机优先",
         "summary": "彭博社记者Jason Schreier透露，索尼已将跨平台策略调整为\"回归主机优先\"，大概率放弃推出PlayStation PC端启动器，并搁置多款PS5独占引入Steam的计��；与Steam占PC市场75%份额的竞争格局有关",
         "source": "ithome",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -16731,7 +17282,7 @@ const newsData = [
         "title": "索尼确认AI帧生成技术最快2027年登陆PlayStation主机",
         "summary": "索尼PS5首席架构师Mark Cerny确认，通过与AMD的\"Project Amethyst\"合作研发了FSR Redstone帧生成技术，最快2027年上线PlayStation主机平台",
         "source": "ithome",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "medium",
@@ -16750,9 +17301,9 @@ const newsData = [
         "title": "CD Projekt Red发布新IP《Hadar》重要开发进展",
         "summary": "CDPR宣布神秘新IP《Hadar》已完成基础概念建设，团队\"已建立全新IP的开发基础\"，这是继《赛博朋克2077》后CDPR首个全新IP",
         "source": "ithome / Eurogamer / gcores",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "medium",
         "featured": true,
         "date": "2026-03-21",
@@ -16769,9 +17320,9 @@ const newsData = [
         "title": "Xbox两名高管相继离职",
         "summary": "微软Xbox企业副总裁Lori Wright（负责合作伙伴与营销）和Xbox游戏AI总经理Haiyan Zhang双双宣布离职，二人均服务公司超10年",
         "source": "Eurogamer",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-21",
@@ -16795,7 +17346,7 @@ const newsData = [
                 "url": "https://www.ithome.com/0/931/363.htm"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-21",
@@ -16928,7 +17479,7 @@ const newsData = [
         "title": "《红色沙漠》玩家对AI美术、操控等问题零容忍，首日涌现大量退款请求",
         "summary": "玩家对游戏内AI生成内容、笨拙操控设计及技术问题的容忍度极低：AI美术素材被迅速识别并形成舆论爆炸；键鼠操控问题直接触发大量首日退款请求，反映玩家对主机/PC大型新游的品质预期持续提升",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -16954,7 +17505,7 @@ const newsData = [
                 "url": "https://www.ithome.com/0/931/029.htm"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-20",
@@ -16978,7 +17529,7 @@ const newsData = [
                 "url": "https://www.ithome.com/0/930/931.htm"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-20",
@@ -17002,7 +17553,7 @@ const newsData = [
                 "url": "https://www.ithome.com/0/930/812.htm"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-20",
@@ -17248,7 +17799,7 @@ const newsData = [
                 "url": "https://www.videogameschronicle.com/news/ubisoft-ends-game-development-at-tom-clancy-studio-red-storm-resulting-in-105-job-losses/ https://www.eurogamer.net/ubisoft-reportedly-shrinks-tom-clancy-studio-red-storm-entertainment-laying-off-105-staff https://gamingbolt.com/red-storm-entertainment-suffers-105-layoffs-turned-into-support-studio-rumor"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "high",
         "featured": true,
         "date": "2026-03-19",
@@ -17654,7 +18205,7 @@ const newsData = [
         "title": "《Exodus》发布首支实机演示，夏季将有更深度展示",
         "summary": "BioWare老兵团队Archetype Entertainment开发的科幻RPG《Exodus...",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -17680,7 +18231,7 @@ const newsData = [
                 "url": "https://www.ithome.com/0/930/464.htm"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "medium",
         "featured": true,
         "date": "2026-03-18",
@@ -17959,7 +18510,7 @@ const newsData = [
         "title": "沙特阿拉伯再购入约5% Capcom股份，合计持股超10%",
         "summary": "沙特阿拉伯主权财富基金（PIF）旗下EGDC投资机构再度收购约5% Capcom股份，结合2022年PIF已持有的5%，沙特在Capcom的合计持股已超过10%。沙特资本近年持续在全球游戏行业大规模布局，此次进一步强化对《生化危机》《街头霸王》等IP母公司的控制。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "market",
         "importance": "low",
@@ -17978,7 +18529,7 @@ const newsData = [
         "title": "《星空》确认4月7日登陆PS5，同步推出免费更新\"自由航线\"及付费DLC\"Terran Armada\"；Steam国区永降至209元",
         "summary": "B社正式官宣《星空》4月7日登陆PS5，支持DualSense并为PS5 Pro提供4K/30帧画质模式和60帧性能模式。同步推出免费大更新\"自由航线\"与售价10美元的\"Terran Armada\"DLC。Todd Howard表示游戏有\"长期计划\"。Steam国区价格同步永降至209元。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "high",
@@ -17997,7 +18548,7 @@ const newsData = [
         "title": "Switch 2系统更新：首次支持掌机模式运行Switch 1游戏以Docked模式画质（1080p）显示",
         "summary": "任天堂推送Switch 2系统更新，实现掌机模式下运行部分Switch 1向下兼容游戏时以Docked模式渲染（1080p画质），而非原生掌机720p，增强向下兼容游戏的画质表现。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -18016,9 +18567,9 @@ const newsData = [
         "title": "英伟达在GTC 2026展示DLSS 5技术，黄仁勋称其为\"图形领域的GPT时刻\"；引发开发者与玩家大规模争议",
         "summary": "英伟达CEO黄仁勋在GTC 2026主题演讲中展示DLSS 5，该技术利用AI对游戏画面进行\"光照与材质的照片级真实感重建\"，宣布秋季推出。然而技术演示引发大规模争议——玩家和开发者普遍批评DLSS 5将角色脸部\"网红化/滤镜化\"。英伟达黄仁勋反驳批评者\"完全错了\"；B社承诺在《星空》中DLSS 5效果完全由美术团队把控且为可选项。多家工作室发梗图跟进嘲讽。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-17",
@@ -18035,7 +18586,7 @@ const newsData = [
         "title": "《死亡搁浅2》PC版细节公布，3月19日发售；PlayStation Blog披露PC与PS5新功能",
         "summary": "小岛秀夫在PlayStation Blog详细介绍PC版新内容：新增\"走向荒野\"难度、真人过场动画、Boss战可重复游玩，解锁帧率、支持超宽屏及DualSense手柄；PS5版同步免费更新。此外PC版于3月19日发售前已遭BT泄露（113GB未加密文件）。",
         "source": "PlayStation Blog · VGC · IT之家",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -18054,7 +18605,7 @@ const newsData = [
         "title": "PlayStation Portal新增1080p高画质模式，本周推送更新",
         "summary": "索尼PS Remote Play串流设备PlayStation Portal本周将推送系统更新，新增1080p高码率串流的\"High Quality\"模式，提升远程游玩画质体验。",
         "source": "VGC",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -18368,7 +18919,7 @@ const newsData = [
                 "url": "https://www.ithome.com/0/929/439.htm"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-16",
@@ -18690,7 +19241,7 @@ const newsData = [
                 "url": "https://www.ithome.com/0/929/029.htm"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-14",
@@ -18714,7 +19265,7 @@ const newsData = [
                 "url": "https://mynintendonews.com/2026/03/13/us-nintendos-lawsuit-against-government-automatically-paused/"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-14",
@@ -18738,7 +19289,7 @@ const newsData = [
                 "url": "https://www.ithome.com/0/929/108.htm"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-14",
@@ -18973,7 +19524,7 @@ const newsData = [
         "title": "Newzoo报告：Roblox与Minecraft玩家与传统AAA游戏玩家几乎无重叠",
         "summary": "GDC期间，Newzoo咨询总监Ben Porter分享研究发现：Roblox与Minecraft玩家大量玩头部直播服务游戏（与Fortnite重合率55%/46%），但购买《怪物猎人：荒野》《刺客信条》《幽灵对马》等传统AAA游戏的可能性仅为平均玩家的0.4倍。这一低龄/免费玩家群体的增长，引发行业对AAA市场长期受众的深层焦虑。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -18992,7 +19543,7 @@ const newsData = [
         "title": "Newzoo报告：Roblox与Minecraft玩家与传统AAA游戏玩家几乎无重叠",
         "summary": "GDC期间，Newzoo咨询总监Ben Porter分享研究发现：Roblox与Minecraft玩家大量玩头部直播服务游戏（与Fortnite重合率55%/46%），但购买《怪物猎人：荒野》《刺客信条》《幽灵对马》等传统AAA游戏的可能性仅为平均玩家的0.4倍。这一低龄/免费玩家群体的增长，引发行业对AAA市场长期受众的深层焦虑。",
         "source": "GamesIndustry.biz",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -19135,7 +19686,7 @@ const newsData = [
         "title": "Valve says 5,863 titles earned over $100,000 on Steam in 2025",
         "summary": "Steam平台在2025年表现出显著增长，PC平台近期达到4200万峰值同时在线用户，游戏中同时在线用户数创下新纪录，达到1390万。过去五年间，Steam的并发用户数和游戏中用户数均翻倍。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -19161,7 +19712,7 @@ const newsData = [
                 "url": "https://www.eurogamer.net/valve-expresses-disappointment-over-new-york-state-loot-box-lawsuit"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-12",
@@ -19178,7 +19729,7 @@ const newsData = [
         "title": "《寂静岭2》重制版突破500万销量，Konami 宣布半价促销",
         "summary": "Konami 宣布《寂静岭2》重制版截至2026年1月31日累计销量突破500万份（统计口径含PC、PS5、Xbox Series X/S 数字购买、实体销售及订阅服务下载）。为庆祝这一里程碑，PlayStation Store 开启\"春季特卖\"：《寂静岭2》豪华版和《寂静岭F》豪华版均半价至$39.99，双作标准/豪华合包分别享受40%折扣，促销截止至3月25日。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "high",
@@ -19197,9 +19748,9 @@ const newsData = [
         "title": "2026年 BAFTA 游戏奖提名揭晓：《光与影：33号远征队》领跑12项",
         "summary": "2026年 BAFTA 游戏大奖提名出炉：《光与影：33号远征队》以12项提名领跑，囊括\"最佳游戏\"；其次为《Dispatch》（9项）、《Ghost of Yōtei》（8项）、《Death Stranding 2》（7项，但未进入\"最佳游戏\"决选）、《Indiana Jones and the Great Circle》（6项）。\"最佳游戏\"最终候选六强还包括 Arc Raiders 和 Blue Prince。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-12",
@@ -19216,7 +19767,7 @@ const newsData = [
         "title": "微软 GDC 演讲揭示：\"主机玩家/PC玩家/手游玩家\"的身份划分已日趋模糊",
         "summary": "微软 Xbox 次世代副总裁 Jason Ronald 在 GDC 2026 演讲中指出，\"玩家以主机/PC/手游定义自己的时代基本不复存在\"，PC 正成为 Xbox 生态日益重要的组成部分，此判断支撑了 Project Helix 跨平台兼容的战略逻辑。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -19235,7 +19786,7 @@ const newsData = [
         "title": "PS6、PS6 掌机与 Project Helix 均传仍按计划瞄准 2027 年假日季发售",
         "summary": "据业内知情人士 KeplerL2 发帖，索尼 PS6（含 PS6 掌机版本）与微软 Project Helix 目前均未受全球内存短缺影响，仍计划于2027年假日季发售。此前有分析师预测两家可能延期，但另有知情人士（YouTuber Moore's Law is Dead）也表示全球内存市场有望在2026年底显著好转、2027年底大幅改善，索尼不太可能将发售推迟至2029年。PS6 传闻规格：AMD Orion 芯片（280mm²，台积电3nm）、54个 RDNA 5 计算单元、8核 Zen 6c + 2核 Zen 6 低功耗核心、30GB GDDR7 内存，CPU 算力较 PS5 提升约20%。Project Helix 传闻规格：比 Xbox Series X 多30%计算单元且速度快65%，基于 RDNA 5，预计售价$999～$1200。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "medium",
@@ -19254,7 +19805,7 @@ const newsData = [
         "title": "【行业供给侧·新游动向】《Solasta 2》正式进入Steam抢先体验（3月12日），已积累50万愿望单",
         "summary": "法国开发商Tactical Adventures的D&D题材战术RPG《Solasta 2》于3月12日正式上线Steam抢先体验，已积累50万Steam愿望单。游戏采用虚幻引擎5，团队约40人（约为《博德之门3》开发商Larian的十分之一规模）。",
         "source": "Eurogamer",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -19273,7 +19824,7 @@ const newsData = [
         "title": "欧洲游戏评级机构 PEGI 宣布：含开箱系统游戏今夏起强制获评 PEGI 16",
         "summary": "PEGI（欧洲游戏评级机构）宣布自2026年6月起实施新评级规则，\"付费随机物品（开箱/loot box）\"将使游戏获评最低 PEGI 16，不得向15岁以下未成年人销售；NFT/区块链类游戏直接获评 PEGI 18；含不受限制的联机聊天功能的游戏自动获评 PEGI 18；有限时/限量购买选项的游戏最低 PEGI 12。新规仅适用于2026年6月后新提交的游戏，现有游戏不受影响。此举预计将对 EA Sports FC（此前评级 PEGI 3）等系列的未来作品评级产生直接冲击。",
         "source": "videogameschronicle.com / eurogamer.net",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "policy",
         "importance": "medium",
@@ -19299,7 +19850,7 @@ const newsData = [
                 "url": "https://www.ithome.com/0/928/299.htm"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-12",
@@ -19495,7 +20046,7 @@ const newsData = [
         "title": "任天堂《耀西与不可思议的图鉴》确认5月21日Switch 2发售",
         "summary": "任天堂马力欧日宣布横版动作新作，登陆Switch 2平台；同日任天堂还公布《超级马力欧兄弟惊奇 Switch 2版》详细单人模式细节。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "high",
@@ -19538,7 +20089,7 @@ const newsData = [
         "title": "【行业平台侧·硬件策略】微软正式确认次世代主机代号\"Project Helix\"，GDC 2026公布核心技术规格，开发者版本将于2027年发出",
         "summary": "微软在GDC 2026举行30分钟主题演讲，VP Jason Ronald确认次世代Xbox代号为Project Helix，将兼容Xbox主机游戏与PC游戏。技术亮点：①采用定制AMD SOC，与AMD联合设计下一代DirectX；②光线追踪性能较Xbox Series X/S提升\"一个数量级\"；③支持GPU驱动工作图（Work Graph），消除CPU瓶颈；④内置AMD FSR Next，支持神经渲染、ML多帧生成、新型光线再生技术；⑤支持深度纹理压缩（Neural Texture Compression + DirectStorage）。开发者版Alpha机将于2027年发出，消费者版预计更晚。同日，微软官方游戏开发账号发布Project Helix开发套件的黑白\"先睹为快\"照片。此外演讲还宣布\"Xbox Mode\"将于4月在Windows 11特定市场推出，带来类Xbox Ally的体验。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "high",
@@ -19557,7 +20108,7 @@ const newsData = [
         "title": "【行业需求侧·头部产品动向】宝可梦新作《Pokémon Pokopia》爆红，带动任天堂股价两日内飙升15%，实体版多地售罄",
         "summary": "《Pokémon Pokopia》上周发售后迅速成为现象级爆款。据Bloomberg报道，任天堂股价在发售后两日内上涨约1015%。Metacritic均分89（68篇媒体评测），用户评分8.5/10（726条）。分析师Atul Goyal称其为\"病毒式爆款\"，抵消了此前投资者对内存成本上涨的忧虑；东京证券分析师Hideki Yasu...",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -19607,7 +20158,7 @@ const newsData = [
                 "url": "https://www.gamesindustry.biz/google-unveils..."
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-11",
@@ -19624,9 +20175,9 @@ const newsData = [
         "title": "Google's Genie 3 world models start to break down after around a minute",
         "summary": "谷歌DeepMind在GDC大会上介绍了Genie 3生成式AI技术，该技术生成的世界模型因内存限制在大约一分钟后会出现不一致性。其目标并非取代传统游戏，而是探索AI创造新型游戏体验的潜力。同时，谷歌还展示了能玩任何游戏的SIMA 2 AI智能体。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-11",
@@ -19650,7 +20201,7 @@ const newsData = [
                 "url": "https://www.ign.com/articles/1080p-at-30fps-valve-steam-machines-verified-program"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-11",
@@ -19691,7 +20242,7 @@ const newsData = [
         "title": "《堡垒之夜》V-Bucks涨价：Epic以\"运营成本上涨\"为由削减充值比例",
         "summary": "Epic宣布本月晚些时候调整所有充值档位，价格不变但获得的V-Bucks数量减少。Epic表示\"运营成本大幅上涨\"，此举反映跨平台（主机+PC）头部F2P游戏商业化收紧趋势。",
         "source": "VGC · IT之家",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "high",
@@ -19710,7 +20261,7 @@ const newsData = [
         "title": "Steam 2025年数据传输量达100EB，同期在线峰值4200万",
         "summary": "V社年度报告显示Steam 2025年向全球用户传输约100EB数据（日均274PB），同期在线峰值4200万。平台规模持续扩张，但同步面临反竞争争议及开箱机制诉讼压力。",
         "source": "IT之家",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -19729,7 +20280,7 @@ const newsData = [
         "title": "Steam周销量排行榜:《杀戮尖塔2》登顶|2026年3月第2周",
         "summary": "V社公布了2026年3月最新一期Steam全球销量排行榜，排除免费游戏...",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -19748,9 +20299,9 @@ const newsData = [
         "title": "【行业供给侧·CP开发商动向】SEGA表示旗下近期游戏口碑提升，但尚未有效转化为销量增长",
         "summary": "SEGA在一次财报/采访表态中承认，公司近期发布的游戏获得了较好的媒体评分和口碑，但这一表现目前尚未转化为预期的销量提升，公司正在思考如何将高质量产品更有效地转化为商业成果。",
         "source": "VGC",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-11",
@@ -19898,7 +20449,7 @@ const newsData = [
                 "url": "https://www.ithome.com/0/927/450.htm"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "high",
         "featured": true,
         "date": "2026-03-10",
@@ -19946,7 +20497,7 @@ const newsData = [
                 "url": "https://www.ithome.com/0/927/404.htm"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "high",
         "featured": true,
         "date": "2026-03-10",
@@ -19963,7 +20514,7 @@ const newsData = [
         "title": "《生化危机：安魂曲》确认故事DLC开发中，同步推出小游戏与照片模式",
         "summary": "导演中西浩史正式确认剧情扩展包正在开发，预计5月上线；另增全新小游戏模式及拍照功能。多平台（主机+PC）均受益。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "high",
@@ -19982,7 +20533,7 @@ const newsData = [
         "title": "《怪物猎人物语3：命运之双龙》3月13日发售，IGN评分9分",
         "summary": "媒体前测一致认为本作在剧情、战斗和养成系统上均有显著提升，剧情基调更成熟，将登陆主机及PC各平台。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -20001,7 +20552,7 @@ const newsData = [
         "title": "SiN: Reloaded由Nightdive Studios宣布，2026年内发售（主机/PC）",
         "summary": "Nightdive（《毁灭公爵》《系统震荡》重制团队）宣布重制1998年经典FPS《SiN》。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -20020,9 +20571,9 @@ const newsData = [
         "title": "Unity《2026游戏开发报告》：78%开发者靠每日任务与排行榜留存玩家，休闲题材成新宠",
         "summary": "基于500万+开发者数据及300份多平台问卷，报告揭示全球游戏市场务实转型趋势：留存机制优先、休闲题材受青睐，覆盖PC、主机、XR等平台。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-10",
@@ -20039,7 +20590,7 @@ const newsData = [
         "title": "Steam塔防游戏节开启（持续至3月17日）",
         "summary": "Steam发起塔防专题活动，多款PC塔防游戏达史低折扣，体现平台以专题活动拉动垂类品类销售的推广策略。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -20058,7 +20609,7 @@ const newsData = [
         "title": "Valve/Steam遭英国PRS起诉：长期未授权游戏内音乐使用",
         "summary": "英国PRS for Music指控Valve自Steam创立以来从未获得游戏内音乐版权授权，已提起正式诉讼。为Valve近期第二起法律纠纷（另有CS2开箱集体诉讼），折射出PC游戏平台在欧洲面临日趋严格的合规监管压力。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "policy",
         "importance": "low",
@@ -20101,7 +20652,7 @@ const newsData = [
         "title": "PlayStation Plus 3月游戏目录泄露：含Madden NFL 26、Persona 5 Royal等",
         "summary": "VGC获悉3月PS Plus游戏目录（含Madden NFL 26、女神异闻录5皇家版等6款），另有《铁拳：黑暗复活》加入PS Plus经典目录，反映索尼持续丰富订阅库吸引用户留存。",
         "source": "VGC",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -20120,7 +20671,7 @@ const newsData = [
         "title": "Steam塔防游戏节开启（持续至3月17日）",
         "summary": "Steam发起塔防专题活动，多款PC塔防游戏达史低折扣，体现平台以专题活动拉动垂类品类销售的推广策略。",
         "source": "IT之家",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -20139,7 +20690,7 @@ const newsData = [
         "title": "Valve/Steam遭英国PRS起诉：长期未授权游戏内��乐使用",
         "summary": "英国PRS for Music指控Valve自Steam创立以来从未获得游戏内音乐版权授权，已提起正式诉讼。为Valve近期第二起法律纠纷（另有CS2开箱集体诉讼），折射出PC游戏平台在欧洲面临日趋严格的合规监管压力。",
         "source": "GamesIndustry · IT之家",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "policy",
         "importance": "low",
@@ -20310,7 +20861,7 @@ const newsData = [
                 "url": "https://www.gcores.com/articles/211648"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-09",
@@ -20334,7 +20885,7 @@ const newsData = [
                 "url": "https://www.videogameschronicle.com/news/amazon-hikes-pokopia-price-as-new-pokemon-game-seemingly-sells-out-everywhere/"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-09",
@@ -20375,7 +20926,7 @@ const newsData = [
         "title": "Xbox Project Helix could cost $999 to $1,200, report suggests",
         "summary": "Xbox的下一代游戏主机Project Helix预计售价在999美元至1200美元之间，据科技记者Moore’s ...",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -20513,7 +21064,7 @@ const newsData = [
                 "url": "https://www.gamedeveloper.com/business/nintendo-sues-us-government-over-trump-administration-tariffs"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-07",
@@ -20642,9 +21193,9 @@ const newsData = [
         "title": "The logic of platform exclusivity remains undefeated | Opinion",
         "summary": "文章阐述了多重观点",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-06",
@@ -20709,7 +21260,7 @@ const newsData = [
         "title": "国区玩家立���！《生化危机9》PC销量过半碾压主机",
         "summary": "Alinea Analytics数据表示，《生化危机...",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -20849,7 +21400,7 @@ const newsData = [
         "title": "索尼为何减缓第一方游戏登陆 PC 节奏？前暴雪总裁伊巴拉称 Steam Machine 是关键",
         "summary": "前暴雪总裁迈克·伊巴拉认为，Valve推动的Steam Machine生态和Xbox的战略调整是索尼减缓第一方游戏登陆PC平台的主要原因，索尼此举旨在保护其主机生态并削弱Steam Machine的竞争力。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -20899,7 +21450,7 @@ const newsData = [
                 "url": "https://www.gamesindustry.biz/google-resolves-dispute-with-epic-games-reduces-app-store-fees-to-20"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-05",
@@ -21066,7 +21617,7 @@ const newsData = [
                 "url": "https://www.3dmgame.com/news/202603/3938948.html"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "medium",
         "featured": true,
         "date": "2026-03-04",
@@ -21138,7 +21689,7 @@ const newsData = [
                 "url": "https://www.gamedeveloper.com/business/report-trump-administration-may-pressure-tencent-to-divest-from-us-studios"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-04",
@@ -21186,7 +21737,7 @@ const newsData = [
                 "url": "https://www.videogameschronicle.com/news/despite-the-lack-of-mass-layoffs-in-j..."
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-04",
@@ -21260,7 +21811,7 @@ const newsData = [
         "title": "Microsoft Gaming’s New CEO Says “Return to Xbox” Will Begin With the Console – Rumor",
         "summary": "传闻微软游戏新CEO Asha Sharma在公司全员会议上宣布将推动Xbox品牌复兴，重点从主机业务入手，并强调优秀游戏、玩家体验和未来游戏生态建设。新领导层计划通过协调团队合作和即将发布的游戏阵容重振Xbox市场地位。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -21286,7 +21837,7 @@ const newsData = [
                 "url": "https://www.gcores.com/articles/211391"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "medium",
         "featured": true,
         "date": "2026-03-03",
@@ -21310,7 +21861,7 @@ const newsData = [
                 "url": "https://gamingbolt.com/capcom-spotlight-announced-for-march-5th-to-feature-street-fighter-6-pragmata-and-more"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-03",
@@ -21382,7 +21933,7 @@ const newsData = [
                 "url": "https://..."
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-03",
@@ -21488,9 +22039,9 @@ const newsData = [
         "title": "Warner Bros. Discovery is \"rebuilding its video game pipeline\" after a \"significant\" 2025",
         "summary": "华纳兄弟在2025年财报中称其为\"重要\"的一年，2025 Q4收入为94亿美元，同比下降6%，2025财年总收入下降5%至373亿美元。但对其游戏业务提及甚少，仅表示正在\"重建\"其视频游戏业务线。公司整体收入下降，游戏部门收入在第四季度大幅下滑34%，全年工作室部门收入下降14%至31.8亿美元。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-03-02",
@@ -21531,7 +22082,7 @@ const newsData = [
         "title": "Entry level PCs costing less than $500 ‘will disappear by 2028’, research firm predicts",
         "summary": "研究机构Gartner预测，价格低于500美元的入门级个人电脑将在2028年前消失，主要原因是全球内存价格持续上涨导致硬件成本上升。这将导致PC和智能手机价格上涨，用户更倾向于延长现有设备使用周期，从而引发安全漏洞和管理老旧设备的挑战。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "hardware",
         "importance": "low",
@@ -21550,7 +22101,7 @@ const newsData = [
         "title": "Despite studio closures and project cancellations, PlayStation Studios is still hiring for new roles",
         "summary": "Despite studio closures and project cancellations, PlayStation Studios is still hiring for new roles",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
@@ -21787,7 +22338,7 @@ const newsData = [
                 "url": "https://www.gcores.com/articles/211247"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-02-28",
@@ -21859,7 +22410,7 @@ const newsData = [
                 "url": "https://www.gcores.com/articles/211247"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-02-28",
@@ -21948,7 +22499,7 @@ const newsData = [
                 "url": "https://www.gcores.com/articles/211189"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "high",
         "featured": true,
         "date": "2026-02-27",
@@ -22013,7 +22564,7 @@ const newsData = [
         "title": "《宝可梦：冠军》游戏 4 月登陆任天堂 Switch，手机版夏季上线",
         "summary": "《宝可梦：冠军》游戏将于4月登陆任天堂Switch平台，夏季上线手机版（Android/iOS），主打对战竞技，支持宝可梦Home跨平台传输，并将在2026年宝可梦世界锦标赛中...",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "medium",
@@ -22100,9 +22651,9 @@ const newsData = [
         "title": "亚马逊进一步精简游戏业务，放弃发行一开放世界赛车游戏",
         "summary": "亚马逊取消与Maverick Games合作的开放世界赛车游戏发行计划，进一步精简游戏业务，将资源集中于Luna云游戏平台和《古墓丽影》系列项目。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-02-26",
@@ -22119,9 +22670,9 @@ const newsData = [
         "title": "How recent laws impact game design, from in-game chat to notifications",
         "summary": "2026年电子游戏行业面临多项新法规的直接影响，涉及游戏设计中的诱导付费、用户界面、战利品箱、虚拟货币、玩家内容审核及AI生成内容标注等关键领域。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-02-26",
@@ -22162,9 +22713,9 @@ const newsData = [
         "title": "亚马逊进一步精简游戏业务，放弃发行一开放世界赛车游戏",
         "summary": "亚马逊取消与Maverick Games合作的开放世界赛车游戏发行计划，进一步精简游戏业务，将资源集中于Luna云游戏平台和《古墓丽影》系列项目。",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-02-26",
@@ -22212,7 +22763,7 @@ const newsData = [
                 "url": "https://www.gamedeveloper.com/marketing/uk-advertising-regulator-issues-enforcement-notice-targeting-loot-boxes"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-02-26",
@@ -22229,7 +22780,7 @@ const newsData = [
         "title": "《生化危机：安魂曲》预购量爆棚 登顶Steam付费周榜",
         "summary": "《生化危机：安魂曲》预购量表现强劲，成功登顶Steam付费周榜，超越上周榜首《喵喵的结合》，并将于2月27日正式发售...",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
         "category": "game",
         "importance": "low",
@@ -22255,7 +22806,7 @@ const newsData = [
                 "url": "https://www.ithome.com/0/923/506.htm"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-02-25",
@@ -22279,7 +22830,7 @@ const newsData = [
                 "url": "https://www.ithome.com/0/923/672.htm"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-02-25",
@@ -22296,9 +22847,9 @@ const newsData = [
         "title": "Mobile revenue remained flat across 2025, but PC gaming \"sees another record year\" | Sensor Tower State of Gaming 2026",
         "summary": "Sensor Tower发布的《2026年游戏行业状况报告》显示，2025年移动游戏收入...",
         "source": "腾讯文档策展",
-        "sourceUrl": "",
+        "sourceUrl": "#",
         "sourceUrls": [],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-02-25",
@@ -22349,7 +22900,7 @@ const newsData = [
                 "url": "https://www.videogameschronicle.com/news/pubg-publisher-krafton-creates-new-chief-ai-officer-executive-role-as-it-continues-its-ai-first-strategy/"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-02-24",
@@ -22397,7 +22948,7 @@ const newsData = [
                 "url": "https://www.ithome.com/0/923/359.htm"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-02-24",
@@ -22498,7 +23049,7 @@ const newsData = [
                 "url": "https://www.gamedeveloper.com/business/embark-studios-ceo-patrick-soderlund-named-executive-chairman-of-nexon"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-02-23",
@@ -22522,7 +23073,7 @@ const newsData = [
                 "url": "https://www.gamesindustry.biz/roblox-responds-to-la-county-lawsuit-that-alleges-it-is-failing-to-protect-children-from-predatory-behavior"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-02-23",
@@ -22546,7 +23097,7 @@ const newsData = [
                 "url": "https://www.eurogamer.net/valves-deadlock-nearly-as-popular-as-overwatch"
             }
         ],
-        "category": "industry",
+        "category": "policy",
         "importance": "low",
         "featured": true,
         "date": "2026-02-23",
@@ -22624,16535 +23175,6 @@ const newsData = [
         "date": "2026-02-22",
         "tags": [
             "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1235,
-        "title": "微软游戏部门新首席执行官 Asha Sharma 表态：绝不容忍“垃圾 AI”",
-        "summary": "微软游戏部门新任CEO Asha Sharma在接受《综艺》杂志采访时明确表示反对“垃圾AI”，强调优秀游戏故事必须由人类创作，同时承认AI是游戏未来的一部分。她接替了退休的菲尔·斯宾塞，此前曾担任微软CoreAI产品总裁。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/922/681.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/922/681.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-21",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1237,
-        "title": "Phil Spencer retiring from Xbox, will be replaced by CoreAI boss",
-        "summary": "微软游戏CEO菲尔·斯宾塞宣布退休，核心AI总裁阿莎·夏尔马将接任其职位，同时Xbox总裁莎拉·邦德也将离职。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-21",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 322,
-        "title": "英国法院要求V社必须就 Steam 平台 30% 抽成集体诉讼出庭应诉，原告称其“占玩家便宜”",
-        "summary": "英国法院裁定V社必须就Steam平台30%抽成集体诉讼出庭应诉，原告指控其抽成过高、操纵市场并占玩家便宜，诉讼金额达6.56亿英镑（约61.06亿元人民币）",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/922/653.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/922/653.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-02-21",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "negative",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 324,
-        "title": "FINAL FANTASY VII 1997 SALES REACH 15.5 MILLION WORLDWIDE",
-        "summary": "《最终幻想VII》（1997年版）全球销量突破1550万份，该游戏自1997年首发以来，通��多次重制和平台扩展持续积累销量，尤其...",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-21",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 318,
-        "title": "RPG 游戏《仁王 3》发售两周销量破百万，系列总销量突破千万大关",
-        "summary": "RPG 游戏《仁王 3》发售两周销量破百万，系列总销量突破千万大关",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/922/540.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/922/540.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-02-20",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 319,
-        "title": "收购 5 年后，索尼将关闭《恶魔之魂：重制版》开发商蓝点工作室",
-        "summary": "索尼互动娱乐将关闭位于得克萨斯州奥斯汀的Bluepoint Games（蓝点工作室），该工作室曾为PS5重制《恶魔之魂》等经典游戏，加入索尼仅5年。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/922/568.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/922/568.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-02-20",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "negative",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 320,
-        "title": "游戏《尼尔：自动人形》累计销量突破 1000 万份",
-        "summary": "《尼尔》系列官方今日宣布，游戏 NieR: Automata （《尼尔：自动人形》）九年间在全球市场的实体版与数字版累计销量突破 1000 万份。此前分别在 2018 年 3 月、2020 年 12 月、2023 年 4 月达成了第 1~3 个 250 万份销量",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/922/618.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/922/618.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-02-20",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 321,
-        "title": "《使命召唤：黑色行动 7》登顶美国 1 月游戏销量榜，《GTA5》《荒野大镖客：救赎 2》仍在榜单前十",
-        "summary": "据游戏媒体 Insider Gaming 报道，显示《使命召唤：黑色行动 7》成为 2026 年 1 月美国最畅销游戏，榜单前五名多为美国玩家钟爱的“车枪球”游戏，另附前20榜单。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/922/643.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/922/643.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-20",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 64,
-        "title": "《仁王3》发售两周销量破百万，创系列最快销售纪录",
-        "summary": "光荣特库摩与Team Ninja宣布，《仁王3》在发售两周内全球销量突破100万份，成为仁王系列销售速度最快的作品。仁王系列累计总销量已超过1000万份。",
-        "source": "EuroGamer",
-        "sourceUrl": "https://www.eurogamer.net/nioh-3-million-sales-fastest-selling",
-        "category": "game",
-        "importance": "medium",
-        "date": "2026-02-20",
-        "tags": [
-            "仁王3",
-            "Team Ninja",
-            "光荣特库摩",
-            "销量"
-        ],
-        "sentiment": "positive"
-    },
-    {
-        "id": 65,
-        "title": "微软完成动视暴雪整合：重组后Xbox Game Studios拥有33家工作室",
-        "summary": "微软宣布动视暴雪整合工作已全部完成。重组后的Xbox Game Studios旗下共拥有33家游戏工作室。",
-        "source": "Xbox Wire",
-        "sourceUrl": "https://news.xbox.com/en-us/",
-        "category": "policy",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-02-20",
-        "tags": [
-            "微软",
-            "动视暴雪",
-            "并购"
-        ],
-        "sentiment": "neutral"
-    },
-    {
-        "id": 1245,
-        "title": "上线即爆火 开发者宣布《喵喵的结合》销量突破100万份",
-        "summary": "《喵喵的结合》销量突破100万份，预计总收入达2500万美元，成为2026年Steam新游营收第二高的作品，仅次于《仁王3》。游戏于2月10日发售，游戏发售首日同时在线玩家数超越多款大作，开发者承诺将登陆主机平台并开发DLC。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202602/3938077.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202602/3938077.html"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-02-18",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1239,
-        "title": "ByteDance reportedly in \"advanced talks\" to sell Mobile Legends dev Moonton Technology to Savvy Games for over $6bn",
-        "summary": "字节跳动正与Savvy Games Group就出售沐瞳科技进行深入谈判，交易金额预计在60亿至70亿美元之间，可能在本季度末完成。此举标志着字节跳动大幅退出网络游戏领域。Savvy Games Group由沙特阿拉伯公共投资基金（PIF）拥有，已在多家游戏公司持有股份。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/bytedance-reportedly-in-advanced-talks-to-sell-mobile-legends-dev-moonton-technology-to-savvy-games-for-over-6bn",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/bytedance-reportedly-in-advanced-talks-to-sell-mobile-legends-dev-moonton-technology-to-savvy-games-for-over-6bn"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-16",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1216,
-        "title": "最高 FHD 60fps：英伟达兑现 GeForce NOW 云游戏登陆亚马逊 Fire TV 平台承诺",
-        "summary": "英伟达的GeForce NOW云游戏服务已正式登陆亚马逊Fire TV平台，初期支持三款Fire TV设备，提供FHD 60fps画面和立体声音频。同时，8款新游戏加入GFN平台。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/921/594.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/921/594.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-13",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1233,
-        "title": "硬盘救星：索尼专利探索让 100GB 游戏空间占用缩至 100MB",
-        "summary": "索尼获批一项名为《资产流式传输系统与方法》的新专利，通过将游戏的高保真资产通过网络实时流式传输，仅需下载100MB的“核心包”即可畅玩约100GB的大体量3A游戏，同时解决了云游戏的延迟问题。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/921/559.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/921/559.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-13",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1212,
-        "title": "WILDLIGHT LAYS OFF MAJORITY OF STAFF WEEKS AFTER HIGHGUARD LAUNCH [UPDATE]",
-        "summary": "Wildlight Entertainment在该工作室首款游戏《巅峰守卫/Highguard》发布仅几周后解雇了大部分员工，多名员工在LinkedIn上确认了裁员消息，工作室随后发布声明称将会保留部分核心团队成员继续支持游戏开发。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/wildlight-lays-off-majority-of-staff-weeks-after-highguard-launch/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/wildlight-lays-off-majority-of-staff-weeks-after-highguard-launch/"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-12",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1217,
-        "title": "Here’s everything announced during PlayStation’s State of Play presentation",
-        "summary": "索尼在最新的PlayStation State of Play发布会上宣布了30多款游戏，包括《战神》三部曲重制版，2D衍生作品《战神：斯巴达之子》等。此外，还公布了多款新游戏的预告片和发行日期，如《死亡搁浅2》PC版、《Kena: Bridge of Spirits》续作等。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.videogameschronicle.com/news/heres-everything-announced-during-playstations-state-of-play-presentation/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.videogameschronicle.com/news/heres-everything-announced-during-playstations-state-of-play-presentation/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-12",
-        "tags": [
-            "发布会"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1218,
-        "title": "《战神三部曲：重制版》官宣 奎爷原版配音回归",
-        "summary": "索尼圣莫尼卡工作室宣布重制《战神》原版三部曲（《战神1》《战神2》《战神3》），登陆PS5平台，发售日未定.《战神：斯巴达之子》已在PlayStation 5平台发售，标准版售价238港币，数字豪华版售价308港币。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202602/3937835.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202602/3937835.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-02-12",
-        "tags": [
-            "发布会"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1219,
-        "title": "《漫威斗魂》8月7日登陆PS5/PC发售 4V4格斗新游",
-        "summary": "《漫威斗魂》将于8月7日登陆PS5/PC平台，是一款4V4格斗新游，由索尼互娱与Arc System Works合作开发，采用全新的标签制格斗系统，旨在平衡新玩家的上手难度与竞技玩法的深度。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202602/3937853.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202602/3937853.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-02-12",
-        "tags": [
-            "发布会"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1220,
-        "title": "《合金装备：大师合集》Vol.2首曝预告 8月27日发售",
-        "summary": "《合金装备：大师合集》Vol.2将于8月27日发售，登陆PS5、Xbox Series X|S、Nintendo Switch、Nintendo Switch 2及PC（Steam）平台，收录《合金装备4：爱国者之枪》《合金装备：和平行者》《合金装备：幽灵通天塔》三款作品。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202602/3937850.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202602/3937850.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-02-12",
-        "tags": [
-            "发布会"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1221,
-        "title": "《控制：共鸣》实机预告公开 扭曲纽约异能之战",
-        "summary": "《控制：共鸣》是Remedy Entertainment开发的《控制》正统续作，预计2026年登陆PS5、Xbox Series X|S及PC平台。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202602/3937849.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202602/3937849.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-02-12",
-        "tags": [
-            "发布会"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1222,
-        "title": "《死亡搁浅2》PC版3月19日发售 Steam国区298元",
-        "summary": "《死亡搁浅2》PC版将于3月19日在Steam和Epic平台发售，国区标准版售价298元，豪华版338元，支持简体中文和中文配音。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202602/3937836.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202602/3937836.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-02-12",
-        "tags": [
-            "发布会"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1223,
-        "title": "定档4月30日！《Saros》公布发售日及全新实机",
-        "summary": "《Saros》是一款由Housemarque工作室开发的Rogue-lite新作，定于2026年4月30日发售，登陆PlayStation 5及PC平台。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202602/3937847.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202602/3937847.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-02-12",
-        "tags": [
-            "发布会"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1224,
-        "title": "GF新作《轮回之兽》定档8月4日！首发加入XGP",
-        "summary": "GF新作《轮回之兽》将于2026年8月4日发售，登陆PS5、Xbox Series及PC平台，首发加入XGP。游戏以末世日本为背景，讲述少女艾玛与小狗\"库\"的冒险故事，主打\"一人一狗\"动作RPG玩法。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202602/3937838.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202602/3937838.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-12",
-        "tags": [
-            "发布会"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1225,
-        "title": "2D动作游戏《恶魔城：贝尔蒙特的诅咒》公开",
-        "summary": "Konami公开了《恶魔城》系列新作《恶魔城：贝尔蒙特的诅咒》，这是一款由《死亡细胞》开发商Evil Empire和Motion Twin联合开发的探索型2D动作游戏，将于2026年登陆PC（Steam）、PS5、Xbox Series和Switch平台。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202602/3937855.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202602/3937855.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-02-12",
-        "tags": [
-            "发布会"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1226,
-        "title": "大雷冲脸！《死或生》系列30周年新作正式公布",
-        "summary": "光荣特库摩与Team NINJA宣布推出《死或生》系列30周年新作《死或生 新项目》，登陆PS5平台，其他平台信息待公布，具体发售日期未定。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202602/3937841.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202602/3937841.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-02-12",
-        "tags": [
-            "发布会"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1227,
-        "title": "《怪物猎人物语3：命运双龙》10分钟特别预告片发布！",
-        "summary": "卡普空发布了《怪物猎人物语3：命运双龙》的10分钟特别预告片，回顾系列历史并展望新作内容，游戏将于2026年3月13日登陆多平台，试玩版已开放下载。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202602/3937844.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202602/3937844.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-02-12",
-        "tags": [
-            "发布会"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1228,
-        "title": "《马拉松》2月27日开启服压测试 参与测试可获得正式版奖励",
-        "summary": "索尼互娱宣布Bungie工作室开发的PvPvE射击游戏《马拉松》将于2月27日~3月3日开启服务器压力测试，3月5日正式上线。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202602/3937842.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202602/3937842.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-12",
-        "tags": [
-            "发布会"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1229,
-        "title": "《寂静岭：小镇陷落》首发预告 新怪物首度现身",
-        "summary": "科乐美《寂静岭：小镇陷落》发布了首支正式预告片，展示了实机画面与剧情线索，预计2026年内发售。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202602/3937840.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202602/3937840.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-12",
-        "tags": [
-            "发布会"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1230,
-        "title": "AAA JOHN WICK GAME ANNOUNCED FOR PS5, XBOX, AND PC",
-        "summary": "Lionsgate和Saber Interactive宣布将推出基于《John Wick》系列的3A级游戏，登陆PS5、Xbox Series X/S和PC平台。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/aaa-john-wick-game-announced-for-ps5-xbox-and-pc/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/aaa-john-wick-game-announced-for-ps5-xbox-and-pc/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-12",
-        "tags": [
-            "发布会"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1231,
-        "title": "AMD Yes！CPU销量、营收双双创下历史新高",
-        "summary": "2025年第四季度，AMD在CPU市场的销量和营收均创下历史新高，EPYC和Ryzen两大产品线表现突出，市场份额和营收份额均实现显著增长。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-12",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1232,
-        "title": "《天国：拯救2》发售满一年 销量突破500万套",
-        "summary": "《天国：拯救2》累计销量突破500万套。游戏在Steam上获得“特别好评”评价，好评率高达91%。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202602/3937821.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202602/3937821.html"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-02-12",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1234,
-        "title": "ARC RAIDERS SELLS 14 MILLION UNITS, BOOSTS NEXON EARNINGS",
-        "summary": "Nexon宣布《Arc Raiders》自2025年10月30日上市以来已售出1400万份，成为公司商业上的重大突破，显著提升了其财务表现和全球扩张计划。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-12",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1203,
-        "title": "干碎《仁王3》！《黑神话：悟空》再度登顶Steam国区热销榜",
-        "summary": "《黑神话：悟空》由于促销原因，在Steam国区热销榜再度登顶，超越《仁王3》，并在全球热销榜中排名第二。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202602/3937670.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202602/3937670.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-11",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1204,
-        "title": "还是太好玩了！ 《仁王3》登顶Steam一周销量榜",
-        "summary": "还是太好玩了！ 《仁王3》登顶Steam一周销量榜",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202602/3937665.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202602/3937665.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-11",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1205,
-        "title": "8GB 显存显卡被指制约游戏画质进步，2030 年前难有突破",
-        "summary": "8GB显存显卡的普遍存在被认为是制约游戏画质进步的关键因素，全球显存短缺和价格上涨加剧了这一困境，这一影响将持续到2030年。可能导致游戏开发商可能被迫降低画面效果和减少创新技术的应用，从而引发游戏行业发展停滞。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/920/995.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/920/995.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-02-11",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1207,
-        "title": "Subnautica 2, Forza Horizon 6, and Resident Evil Requiem Reportedly Top Steam Wishlists",
-        "summary": "《深海迷航2》、《极限竞速：地平线6》和《生化危机9：安魂曲》是目前Steam平台上最受期待的三款游戏，分别以380万、260万和250万的愿望单数量位居前列。《极限竞速地平线6》已通过预售售出22万份，收入达1300万美元。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://gamingbolt.com/subnautica-2-forza-horizon-6-and-resident-evil-requiem-reportedly-top-steam-wishlists",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://gamingbolt.com/subnautica-2-forza-horizon-6-and-resident-evil-requiem-reportedly-top-steam-wishlists"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-11",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1208,
-        "title": "PRAGMATA SKETCHBOOK DEMO SURPASSES ONE MILLION DOWNLOADS, OFFERS EIGHT ENDINGS",
-        "summary": "Capcom宣布《识质存在/Pragmata Sketchbook》试玩版下载量突破100万次，该试玩版包含8种不同结局，游戏将于2026年4月24日登陆多平台。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvox...",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvox..."
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-11",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1209,
-        "title": "2026年第一季度内存涨幅已超90% 预计Q2将继续上涨",
-        "summary": "根据市场研究机构Counterpoint发布报告，2026年第一季度内存和闪存价格涨幅已超90%，预计第二季度将继续上涨15%至20%。价格上涨主要受人工智能需求拉动和供需失衡影响，PC和服务器市场均受波及。分析师建议OEM厂商调整采购策略或聚焦高端型号应对成本压力，同时指出当前高利润率可能为未来行业下行周期埋下隐患。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202602/3937623.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202602/3937623.html"
-            }
-        ],
-        "category": "technology",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-11",
-        "tags": [
-            "内存涨价"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1213,
-        "title": "WII, DS & SEGA CD CLASSIC GAMES ARE ALLEGEDLY COMING TO NINTENDO SWITCH ONLINE",
-        "summary": "据传闻，任天堂计划将Wii、DS和Sega CD的经典游戏加入Switch Online服务，可能在下一次Direct发布会中宣布。新Wii遥控器将无需传感器条，DS游戏则可能通过三种屏幕模式适配Switch平台。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/wii-ds-sega-cd-classic-games-coming-to-nintendo-switch-online/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/wii-ds-sega-cd-classic-games-coming-to-nintendo-switch-online/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-11",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1214,
-        "title": "MARVEL’S WOLVERINE SKIPS STATE OF PLAY, UPDATE COMING SPRING 2026",
-        "summary": "Insomniac Games确认《漫威金刚狼》不会出现在即将举行的PlayStation State of Play发布会上，新信息将于2026年春季公布。游戏定于2026年秋季全球发布，PlayStation 5独占，预计发售窗口为2026年9月。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/marvels-wolverine-skips-state-of-play-update-coming-spring-2026/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/marvels-wolverine-skips-state-of-play-update-coming-spring-2026/"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-11",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1215,
-        "title": "Mewgenics is a breakout hit on Steam: it sold 150,000 copies in six hours, and it's already made its development costs",
-        "summary": "《Mewgenics》在Steam上取得了巨大成功，六小时内售出15万份，登顶Steam畅销榜榜首，在Steam上的最高同时在线玩家数达到了65,962人。游戏由Edmund McMillen和Tyler Glaiel开发，是一款以猫为主题的战术Roguelike游戏。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.eurogamer.net/mewgenics-is-a-breakout-hit-on-steam-it-sold-150000-copies-in-six-hours-and-its-already-made-its-development-costs",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.eurogamer.net/mewgenics-is-a-breakout-hit-on-steam-it-sold-150000-copies-in-six-hours-and-its-already-made-its-development-costs"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-11",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1194,
-        "title": "Riot 拳头宣布缩减格斗游戏《2XKO》团队规模，距正式发布仅有三周",
-        "summary": "Riot Games宣布缩减《2XKO》开发团队规模，距游戏正式发布仅三周。公司解释核心玩家群体稳定但整体发展未达预期，将重组为更小规模团队进行关键改进，并为受影响员工提供内部转岗或离职补偿。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/920/673.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/920/673.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-02-10",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1197,
-        "title": "游戏科学拜个早年，《黑神话：钟馗》6分钟实机小短片",
-        "summary": "游戏科学拜个早年，《黑神话：钟馗》6分钟实机小短片",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.bilibili.com/video/BV11PcgzWEJp/?t=24.2&vd_source=3be2d8c185da67710375978341e0b8d2",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.bilibili.com/video/BV11PcgzWEJp/?t=24.2&vd_source=3be2d8c185da67710375978341e0b8d2"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-10",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1201,
-        "title": "《绝地求生》母公司Krafton发最强财报 年创收超20亿美元",
-        "summary": "Krafton公司发布最新财报，年营收突破3万亿韩元（约20.5亿美元），移动业务收入达1.7万亿韩元（约11亿美元），PC游戏收入为1.1万亿韩元（约7.51亿美元），主机游戏收入为428亿韩元（2900万美元）。公司2025年推出的新游戏《inZOI》发售7天销量突破100万份，《Mimesis》体验版发售后前50天内销量超过100万份。2026年计划推出《绝地求生：黑域撤离》以推动进一步增长。此外，Krafton宣布转型为AI优先公司，计划加大对人工智能的投入。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202602/3937572.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202602/3937572.html"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-10",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1202,
-        "title": "发售前三周！《生化危机9：安魂曲》全球愿望单突破500万",
-        "summary": "PS：11月23日公布愿望单300万",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202602/3937575.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202602/3937575.html"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-02-10",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1206,
-        "title": "2025 年日本家庭日常支出下降，游戏支出破纪录",
-        "summary": "2025年日本家庭日常支出因通胀压力下降，但游戏主机和软件支出均创历史新高，反映出消费者在经济压力下仍愿意为游戏消费买单。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-10",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1210,
-        "title": "Remedy revenues continue to rise in 2025, reaching €59.5m",
-        "summary": "Remedy Entertainment在2025年第四季度和全年财务表现强劲，Q4收入达1700万欧元（同比增长46.3%），全年收入5950万欧元（同比增长17%）。主要增长动力来自《Alan Wake 2》和《Control》的版税及销售，但全年运营亏损1490万欧元，主要受多人游戏《FBC: Firebreak》表现不佳影响。公司还宣布了新任CEO Jean-Charles Gaudechon将于2026年3月1日上任。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/remedy-revenues-continue-to-rise-for-2025-reaching-595m",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/remedy-revenues-continue-to-rise-for-2025-reaching-595m"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-10",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1211,
-        "title": "How the Employment Rights Act 2025 empowers unions and employees, and how the games business must prepare",
-        "summary": "2025年《就业权利法》（ERA）已正式成为英国法律，将对游戏行业等快速发展的行业产生深远影响。该法律将分阶段实施，主要改革包括简化工会组织流程、扩大罢工授权期限、保护参与罢工的员工权益等。游戏行业需提前准备，以应对工会活动增加的趋势。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/how-the-employment-rights-act-2025-empowers-unions-and-employees-and-how-the-games-business-must-prepare",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/how-the-employment-rights-act-2025-empowers-unions-and-employees-and-how-the-games-business-must-prepare"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-10",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1184,
-        "title": "GOG 游戏平台正式确认已启动第一方原生 Linux 支持开发",
-        "summary": "GOG游戏平台确认已启动开发第一方原生Linux支持，研究将Dreamlist梦想名单中仅支持主机平台的游戏移植到PC端。将提高游戏在GOG平台发布计划的透明度。并计划改进游戏发布审核流程等。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/920/362.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/920/362.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-02-09",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1193,
-        "title": "《仁王3》Steam在线峰值超8万 热度越来越高",
-        "summary": "《仁王3》在Steam平台表现强劲，在线峰值达88045人，远超同期作品《噬血代码2》，并成为光荣特库摩在PC平台热度最高的作品，英文版本目前评价也回升至“特别好评”。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202602/3937502.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202602/3937502.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-09",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1195,
-        "title": "State of Play returns this Thursday, February 12",
-        "summary": "索尼宣布新一期State of Play发布会将于2月13日举行，带来超过60分钟的游戏新闻、更新和公告，重点展示PS5的第三方和独立游戏以及PlayStation Studios的最新动态。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://blog.playstation.com/2026/02/09/state-of-play-returns-this-thursday-...",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://blog.playstation.com/2026/02/09/state-of-play-returns-this-thursday-..."
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-09",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1196,
-        "title": "SensorTower 报告：2026 年全球百强手游收入预计达 530 亿美元，超八成产品采用 5-7 种变现机制",
-        "summary": "SensorTower最新报告显示，2026年全球收入前100的手游预计总收入将达530亿美元，占全球手游总收入的58%。83%的头部产品采用5-7种变现机制，中重度手游以付费内购为主，混合休闲手游则更依赖广告变现。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/920/488.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/920/488.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-09",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1198,
-        "title": "DRAGON QUEST VII REIMAGINED BECOMES SECOND BIGGEST DRAGON QUEST LAUNCH ON STEAM",
-        "summary": "《勇者斗恶龙 7 重制版》成为Steam平台上《勇者斗恶龙》系列第二畅销的游戏，最高同时在线玩家数达到27,390人，仅次于《勇者斗恶龙3 HD-2D重制版》的45,357人。该游戏的成功标志着该系列在PC平台上的持续增长，并验证了史克威尔艾尼克斯重制策略的商业价值。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/dragon-quest-vii-reimagined-becomes-second-biggest-dragon-que...",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/dragon-quest-vii-reimagined-becomes-second-biggest-dragon-que..."
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-09",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1199,
-        "title": "Hearthstone isn't coming to console, Switch or Steam Deck just yet, but Blizzard is definitely thinking about it",
-        "summary": "暴雪确认《炉石传说》暂不登陆主机、Switch或Steam Deck平台，但正在积极考虑这一可能性，并强调需要确保游戏在这些平台上的用户体验达到高标准。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.eurogamer.net/why-hearthstone-isnt-on-console-switch-or-steam-deck-but-increasingly-likely-to-happen",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.eurogamer.net/why-hearthstone-isnt-on-console-switch-or-steam-deck-but-increasingly-likely-to-happen"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-09",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1200,
-        "title": "Blizzard reportedly partnering with Arc Raiders owner Nexon to revive StarCraft as a shooter",
-        "summary": "暴雪据传正与《Arc Raiders》的开发商Nexon合作，计划将《星际争霸》IP改编为一款射击游戏，该项目由Nexon组建的专门团队负责，并可能包含多人游戏元素。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.eurogamer.net/blizzard-reportedly-partnering-with-nexon-to-revive-starcraft",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.eurogamer.net/blizzard-reportedly-partnering-with-nexon-to-revive-starcraft"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-09",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1185,
-        "title": "开放世界 RPG 游戏《异环》官宣将推鸿蒙版，华为游戏中心开启预约",
-        "summary": "开放世界 RPG 游戏《异环》宣布推出鸿蒙版本，已在华为游戏中心开启预约。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-02-08",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1191,
-        "title": "韩国通过更严反盗版法 分享链接也可能坐牢",
-        "summary": "韩国国会通过更严厉的反网络盗版法案，提高刑事处罚力度并新增对分享盗版内容链接的刑事犯罪规定，最高刑期增至7年，罚款翻倍至6.8万美元，并引入惩罚性赔偿和快速屏蔽机制，预计六个月内生效。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202602/3937472.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202602/3937472.html"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-08",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1192,
-        "title": "卡普空王朝！《识质存在》力压《生化危机9》登顶Fami通期待榜首",
-        "summary": "卡普空全新科幻冒险游戏《识质存在》以620票登顶Famitsu最受期待游戏排行榜榜首，超越第二名《生化危机9：安魂曲》（525票），计划于4月24日登陆多平台。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202602/3937479.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202602/3937479.html"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-08",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1187,
-        "title": "NVIDIA WILL REPORTEDLY NOT LAUNCH NEW GPUS THIS YEAR, GEFORCE RTX 6000 SERIES EXPECTED TO ARRIVE IN 2028",
-        "summary": "据报道，NVIDIA今年不会推出新的GPU产品线，这是该公...",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-07",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1178,
-        "title": "英伟达 GeForce NOW 六周年：云游戏时长破 10 亿小时，本月 24 款大作连发庆祝",
-        "summary": "英伟达庆祝GeForce NOW云游戏服务上线六周年，宣布全球会员累计游戏时长突破10亿小时，并计划在2026年2月新增24款游戏，包括《三角洲行动》等多款知名IP新作和经典游戏。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/919/730.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/919/730.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-06",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1179,
-        "title": "任天堂2月伙伴直面会消息汇总：《生化危机：安魂曲》公布最新预告、多款B社游戏登录NS2",
-        "summary": "任天堂2月合作伙伴直面会公布了多款游戏的最新消息，其中主要包括《碧蓝幻想》、《最终幻想VII：重生》及B社《辐射4》和《上古卷轴4》等多款游戏迎来NS2版。同业也公布了《生化危机：安魂曲》最新预告片。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/210509",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/210509"
-            }
-        ],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-02-06",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1180,
-        "title": "Announcing Horizon Hunters Gathering, Guerrilla’s new co-op action game",
-        "summary": "索尼公布了《地平线：猎人集结》这款基于《地平线》IP的全新多人合作狩猎游戏，确认登陆PS5和PC平台，将于2月底展开封测，支持跨平台联机和进度同步。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://blog.playstation.com/2026/02/05/announcing-horizon-hunters-gathering-guerrillas-new-co-op-action-game/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://blog.playstation.com/2026/02/05/announcing-horizon-hunters-gathering-guerrillas-new-co-op-action-game/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-06",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1186,
-        "title": "Epic Games Store boss says it plans to be on the next Xbox console ‘on day one’",
-        "summary": "Epic Games Store负责人Steve Allison确认，计划在下一代Xbox主机发布首日上线，作为原生应用提供其PC游戏库访问。下一代Xbox可能是一款主机/PC混合设备，支持多个游戏商店。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.videogameschronicle.com/news/epic-games-store-boss-says-it-plans-to-be-on-the-next-xbox-console-on-day-one/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.videogameschronicle.com/news/epic-games-store-boss-says-it-plans-to-be-on-the-next-xbox-console-on-day-one/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-06",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1188,
-        "title": "Tightening immigration rules will impact the games industry in 2026",
-        "summary": "美国和英国将在2026年收紧移民政策，可能会对游戏行业产生较大影响。两国将加强工作签证审查标准、扩大社交媒体审查范围，并延长签证处理时间，这将影响游戏工作室的招聘、人员调动和长期规划。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/tightening-immigration-rules-will-impact-the-games-industry-in-2026",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/tightening-immigration-rules-will-impact-the-games-industry-in-2026"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-06",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1189,
-        "title": "Roblox reports significant growth for 2025, hitting $4.9bn in revenue",
-        "summary": "罗布乐思数据",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/roblox-reports-significant-growth-for-2025-hitting-49bn-in-revenue",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/roblox-reports-significant-growth-for-2025-hitting-49bn-in-revenue"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-06",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1168,
-        "title": "《最终幻想 7》重制版第三部游戏被曝取消 PS5 独占，首发登陆 PC",
-        "summary": "《最终幻想 7》重制版第三部游戏被曝取消 PS5 独占，首发登陆 PC",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/919/453.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/919/453.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-02-05",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "negative",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1172,
-        "title": "消息称《黑神话：悟空》将登陆任天堂 Switch 2",
-        "summary": "消息称《黑神话：悟空》将登陆任天堂 Switch 2",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/919/328.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/919/328.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-05",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1173,
-        "title": "均分86：《仁王3》媒体评分汇总",
-        "summary": "均分86：《仁王3》媒体评分汇总",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/210473",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/210473"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-05",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1174,
-        "title": "索尼最新财报数据公布，PS5的销量已达9220万台",
-        "summary": "索尼最新财报显示，截至2025年12月31日的三个月，净利润同比增长11%至3773亿日元，营业利润增长22%至5150亿日元。PS5销量本季度售出800万台，总销量已达9220万台。本季度软件销量为9720万台，其中一方游戏销量1320万",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/210481",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/210481"
-            }
-        ],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-02-05",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1181,
-        "title": "SQUARE ENIX REPORTS DECLINING SALES BUT SHARP PROFIT GROWTH IN NINE-MONTH FINANCIAL RESULTS",
-        "summary": "Square Enix Holdings公布截至2025年12月31日的九个月财务业绩，公司整体净销售额为为2155亿日元下降13.3%，营业利润为464亿日元增长39.0%，主要得益于产品线表现、成本控制和利润率提升。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "earnings",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-05",
-        "tags": [
-            "财报信息"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1182,
-        "title": "SONY ADDRESSES MEMORY SUPPLY CONDITIONS, RISING COSTS, AND POTENTIAL IMPACT ON PS5 HARDWAR",
-        "summary": "索尼在2025年第三季度财报电话会议上讨论了内存供应状况、成本上升对PS5硬件的影响，强调将优先发展软件和网络服务以应对挑战，并预计内存价格波动对长期业务影响有限。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-05",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1183,
-        "title": "SONY SAYS GHOST OF YŌTEI OUTPACED TSUSHIMA SALES",
-        "summary": "索尼确认《羊蹄山之魂》在上市后相同时间内销量优于前作《对马岛之魂》，其销量已突破330万份。同时也表达对于《马拉松》、《Saros》和《漫威金刚狼》等的期待。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.baidu.com/s?ie=UTF-8&wd=%E7%BE%8A%E8%B9%84%E5%B1%B1%E4%B9%8B%E9%AD%82&tn=98010089_dg&ch=32",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.baidu.com/s?ie=UTF-8&wd=%E7%BE%8A%E8%B9%84%E5%B1%B1%E4%B9%8B%E9%AD%82&tn=98010089_dg&ch=32"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-05",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1190,
-        "title": "MachineGames asking more staff to move to full-time office work",
-        "summary": "MachineGames（《夺宝奇兵：古老之圈》&《德军总部》开发商）正在逐步要求更多员工转为全职办公室工作，目前采用混合办公模式（每周3天办公室+2天居家），但已要求高级员工每周5天到岗，并计划推广至全员。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/machinegames-asking-more-staff-to-move-to-full-time-office-work",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/machinegames-asking-more-staff-to-move-to-full-time-office-work"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-05",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1162,
-        "title": "\"The launcher sucks, let's call it what it is,\" Epic Game Store boss says, promising a year of big improvements to speed, new \"forum-type\" social features, more",
-        "summary": "Epic Games Store副总裁Steven Allison承认其启动器性能不佳，承诺将在2026年进行重大改进，包括提升速度、新增社交功能及跨平台库支持，并计划在夏季推出优化后的版本。已于2025年11月启动架构重构工作，预计2026年5月或6月完成速度优化（官方新闻稿称“今年夏季”）",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.eurogamer.net/the-launcher-sucks-lets-call-it-what-it-is-epic-game-store-boss-says-promising-...",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.eurogamer.net/the-launcher-sucks-lets-call-it-what-it-is-epic-game-store-boss-says-promising-..."
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-04",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1163,
-        "title": "Fortnite \"still remains the biggest game in the world on many fronts\", Epic says, but its playtime dropped noticeably in 2025",
-        "summary": "Epic Games发布2025年回顾数据，显示《堡垒之夜》仍是全球最受欢迎的游戏之一，但玩家游戏时间明显下降。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-04",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1166,
-        "title": "CPU提供商AMD的CEO明言 Steam Machine已进入出厂准备期",
-        "summary": "AMD的CEO丽萨·苏确认Steam Machine已进入出厂准备期，预计今年上半年甚至第一季度上市。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-04",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1167,
-        "title": "还有谁在买？曝《给他爱5》全球销量突破2.25亿份",
-        "summary": "《给他爱5》全球销量突破2.25亿份，较上次报告的2.2亿份有所增长。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202602/3937136.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202602/3937136.html"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-02-04",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1169,
-        "title": "索尼 PSN 商店开启 2026 新春优惠促销，《黑神话：悟空》7.5 折后到手价 223.50 港币起等",
-        "summary": "索尼 PSN 商店开启 2026 新春优惠促销，《黑神话：悟空》7.5 折后到手价 223.50 港币起等",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/919/119.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/919/119.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-04",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1170,
-        "title": "Steam 新一周销量榜：《黎明杀机》登顶全球榜、《仁王 3》上榜",
-        "summary": "Steam最新一周销量榜公布，《黎明杀机》因推出全新DLC登顶全球榜单，《仁王3》排名第四。国区榜单中，《仁王3》位居第一，《极限竞速：地平线6》排名第二。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/919/183.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/919/183.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-04",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1171,
-        "title": "《战地 6》推动 EA 艺电 FY2026Q3 净预订额创下 30.46 亿美元新高",
-        "summary": "EA艺电2026财年第三季度净预订额达30.46亿美元，创历史新高，同比增长38%，主要得益于《战地6》的强劲表现，净收入19.01亿美元。《战地6》成为2025年最畅销射击游戏，《EA SPORTS FC》和《Apex英雄》净预订量均实现增长。2025日历年总净收入73.06亿美元，同比微降0.56%。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/919/222.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/919/222.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-04",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1175,
-        "title": "MICROSOFT’S 30% PROFIT TARGET FOR MANY XBOX STUDIOS REPORTEDLY LED TO THEIR GAMES ON PLAYSTATION",
-        "summary": "微软为Xbox游戏工作室设定30%的利润目标，导致部分工作室采取成本削减措施，并选择在PlayStation平台发行游戏以扩大销售。黑曜石娱乐CEO指出，游戏开发成本上升和销售压力加剧了行业裁员和项目取消现象。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/microsoft-30-profit-target-for-xbox-studios-led-to-games-on-playstation/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/microsoft-30-profit-target-for-xbox-studios-led-to-games-on-playstation/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-04",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1176,
-        "title": "Nintendo president says increasing memory costs won’t affect Switch 2 price for now, but if it continues it will re-evaluate",
-        "summary": "任天堂总裁古川顺太郎表示，内存价格上涨未显著影响2025年第三季度（10月至12月）的硬件盈利能力。预计第四季度也不会受到显著影响。但若持续上涨将重新评估定价，公司正与供应商合作确保长期稳定供应。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.videogameschronicle.com/news/nintendo-president-says-increasing-memory-costs-wont-affect-switch-2-price-for-now-but-if-it-continues-it-will-re-evaluate/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.videogameschronicle.com/news/nintendo-president-says-increasing-memory-costs-wont-affect-switch-2-price-for-now-but-if-it-continues-it-will-re-evaluate/"
-            }
-        ],
-        "category": "technology",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-04",
-        "tags": [
-            "内存涨价"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1177,
-        "title": "西班牙将禁止16岁以下青少年访问社交网络平台",
-        "summary": "西班牙计划禁止16岁以下青少年访问社交网络平台，要求平台实施年龄验证系统，并将相关措施纳入《网络环境未成年人保护法》草案。同时提议法律改革，使平台对违法行为承担法律责任。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202602/3937208.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202602/3937208.html"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-04",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1155,
-        "title": "Xbox 推出全新更新，将网易 UU 加速器集成到 Xbox PC App",
-        "summary": "微软宣布在Xbox PC App中集成网易UU加速器，旨在提升游戏流畅度、联机稳定性和下载速度，特别是在春节期间优化游戏体验。微软认识到节日期间游戏的稳定性和社交体验对玩家的重要性，希望通过此次升级带来更多轻松与愉快的娱乐体验。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/210392",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/210392"
-            }
-        ],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-02-03",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1156,
-        "title": "任天堂Switch总销量已达1.55亿台！十大最畅销第一方游戏曝光",
-        "summary": "任天堂财报显示，Switch总销量已达1.55亿台，超越NDS（1.54亿台）成为任天堂史上销量最高的硬件平台。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-03",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1157,
-        "title": "Epic开放发行商自行送游戏权限 已有两款可领取",
-        "summary": "Epic Games于1月30日更改商店政策，允许发行商自主进行限时免费赠送游戏活动。发行商darkgoose4已迅速响...",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-03",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1158,
-        "title": "机构：任天堂需将Switch 2零售价提高15%以抵消不断上涨的内存成本",
-        "summary": "《科创板日报》3日讯，今日任天堂公布第三季度财报，其营业利润为1552.1亿日元，不及预期。彭博行业研究表示，任天堂不得不将Switch 2的零售价提高15%，以抵消不断上涨的内存成本。他表示，一旦任天堂耗尽其内存库存和任何固定价格合同，将对Switch 2的利润率，以及对公司的盈利能力造成压力。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.cls.cn/detail/2278911",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.cls.cn/detail/2278911"
-            }
-        ],
-        "category": "technology",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-03",
-        "tags": [
-            "内存涨价"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1159,
-        "title": "微软揭晓 2 月首批 XGP 游戏阵容：《如龙 8 外传》《天国：拯救》领衔，国产游戏《星砂岛》2 月 12 日发售",
-        "summary": "微软公布了2月首批XGP游戏阵容，《如龙8外传》、《天国：拯救》、《麦登橄榄球 26》及《宣誓》等知名产品领衔，《苍翼：混沌效应 X》及《嗨嗨人生 2》首发即登陆 Game Pass Ultimate 和 PC Game Pass",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-02-03",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1160,
-        "title": "SE 经典游戏重制作《勇者斗恶龙 7 Reimagined》获 IGN 7 分：成功优化原作拖沓节奏，但难度被大幅削弱",
-        "summary": "《勇者斗恶龙 7 Reimagined》重制版将于2月6日发售，IGN给予7分评价，认为游戏成功优化了原作的拖沓节奏，但难度被大幅削弱。游戏在Metacritic平台PS5版均分83，Switch版84分。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/918/876.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/918/876.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-03",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1161,
-        "title": "NIOH 3 DEMO REACHES ONE MILLION DOWNLOADS",
-        "summary": "《仁王3》试玩版下载量已突破100万次，这一里程碑由光荣特库摩美国通过官方社交媒体账号公布。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/nioh-3-demo-reaches-one-million-downloads/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/nioh-3-demo-reaches-one-million-downloads/"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-03",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1164,
-        "title": "\"We're not going to topple Steam\" – Epic Games Store head Steve Allison heralds the path of co-existence",
-        "summary": "Epic Games Store负责人Steve Allison承认不会颠覆Steam的市场主导地位，但强调两者可以共存，并计划通过改善平台功能、扩大用户基础和吸引开发者来提升市场...",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-03",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1165,
-        "title": "Strauss Zelnick: \"Generative AI has zero part in what Rockstar Games is building\" with GTA 6",
-        "summary": "Take-Two Interactive CEO Strauss Zelnick明确表示生成式AI在《GTA 6》开发中不扮演任何角色，但承认AI工具在降低成本和提升效率方面的作用。同时，公司对《GTA 6》的发行日期保持信心，并上调了当前财年的财务预期。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.eurogamer.net/fortnite-still-biggest-game-in-the-world-but-playtime-dropped-in-2025",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.eurogamer.net/fortnite-still-biggest-game-in-the-world-but-playtime-dropped-in-2025"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-03",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1150,
-        "title": "《噬血代码2》M站玩家评分仅4.0分：画面退步 优化烂！",
-        "summary": "《噬血代码2》在M站玩家评分仅为4.0分，Steam评价“褒贬不一”，好评率53%。玩家对游戏的画面、优化和开放世界设计提出批评，但也有部分玩家赞赏其世界构建和战斗系统。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202602/3936994.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202602/3936994.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-02",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1151,
-        "title": "2月10日上线！ 《逃离鸭科夫》官宣与《塔科夫》联动",
-        "summary": "《逃离鸭科夫》与《逃离塔科夫》联动将于2月10日正式上线，双方已在社交媒体上发布联动海报和预告片。此次联动被玩家戏称为“儿子联动爹”，因为《逃离鸭科夫》参考了《逃离塔科夫》但发布时间更早。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202602/3936973.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202602/3936973.html"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-02-02",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1152,
-        "title": "Sonic Racing: CrossWorlds blasts past 1m copies sold, and Sega is expecting another million \"within this fiscal year\"",
-        "summary": "SEGA宣布《索尼克赛车：交叉世界》全球累计销量达到100万份，并计划在本财年内再销售100万份。尽管游戏获得了广泛好评（Metacritic评分超过80分，Steam评价为\"压倒性好评\"），但其销售表现未达内部预期。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mynintendonews.com/2026/02/02/sega-says-sonic-racing-crossworlds-failed-to-meet-sales-expectations/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mynintendonews.com/2026/02/02/sega-says-sonic-racing-crossworlds-failed-to-meet-sales-expectations/"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-02",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1153,
-        "title": "Indie critical darling Cairn climbs Steam charts, reaches 200k copies sold on PC and PS5 in first weekend",
-        "summary": "独立游戏《孤山独影/Cairn》首发三天在PC和PS5平台首周末销量突破20万份，并迅速攀升至Steam全球畅销榜第9位和心愿单活动第4位，同时在线玩家峰值近1.5万人。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.eurogamer.net/indie-climbing-sim-cairn-sells-200k-copies",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.eurogamer.net/indie-climbing-sim-cairn-sells-200k-copies"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-02",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1154,
-        "title": "IGN Fan Fest returns in February, featuring exclusive reveals for Lego Batman and 007 First Light",
-        "summary": "IGN Fan Fest将于2026年2月25日至26日举办为期两天的数字活动，展示包括《乐高蝙蝠侠：黑暗骑士的遗产》和《007：初露锋芒》在内的60款游戏的最新动态",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/ign-fan-fest-returns-in-february-featuring-exclusive-reveals-for-lego-batman-and-007-first-light",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/ign-fan-fest-returns-in-february-featuring-exclusive-reveals-for-lego-batman-and-007-first-light"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-02",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1142,
-        "title": "索尼确认《仁王 3》主机版 PS5 独占至少半年，2 月 6 日正式发售",
-        "summary": "索尼确认《仁王 3》将于2月6日发售，Steam版同步推出，PS5独占至少半年，体验版已上线且支持存档继承。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/918/282.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/918/282.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-02-01",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1148,
-        "title": "Game companies see share prices plummet following the launch of Google's very limited virtual world generator, Project Genie",
-        "summary": "谷歌推出名为“Genie 3项目”的AI虚拟世界生成工具后，Take-Two、CD Projekt、Unity和Roblox等游多家游戏公司股价出现8%-20%的下跌，但行业专家指出市场反应过度，因该技术目前仅能生成60秒的有限交互内容，远未达到替代传统游戏开发的程度。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.eurogamer.net/game-companies-see-share-prices-plummet-following-the-launch-of-googles-very-limited-virtual-world-generator-project-genie",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.eurogamer.net/game-companies-see-share-prices-plummet-following-the-launch-of-googles-very-limited-virtual-world-generator-project-genie"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-01",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1143,
-        "title": "SOME “HEAVY-HITTING XBOX FIRST-PARTY EXPERIENCES” ARE ALLEGEDLY HEADED TO STEAM IN THE COMING MONTHS",
-        "summary": "微软计划在未来几个月内将部分Xbox独占游戏引入Steam平台，其中可能包括《我的世界》。这一举措被视为微软应对核心玩家向Steam迁移的战略调整，同时下一代Xbox可能更接近PC形态。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/heavy-hitting-xbox-first-party-experiences-headed-to-steam/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/heavy-hitting-xbox-first-party-experiences-headed-to-steam/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-31",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1138,
-        "title": "《黑神话：悟空》累计销量破3000万份 国产单机骄傲",
-        "summary": "国游销量榜数据显示，国产3A大作《黑神话：悟空》累计销量突破3000万份，持续刷新国产买断制游戏历史纪录。2025年Steam平台售出约200万份，销售额约6亿人民币，2024年全平台总销量达2800万份。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-30",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1139,
-        "title": "《绝地潜兵2》销量超2000万 Xbox版首周销量近百万",
-        "summary": "Alinea Analytics调查显示，《绝地潜兵2》累计销量突破2000万套，全平台收入超7亿美元，其中Steam 1310万套；PS5 560万套；Xbox 160万套。Xbox版首周销量达92.6万套，超过PS5版首周销量71.9万套，但后续被PS5反超。上个月在Steam、PS5和Xbox平台共有360万月活跃用户。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3936853.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3936853.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-30",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1140,
-        "title": "踩靖国神社红线？宝可梦，道歉！",
-        "summary": "宝可梦官网发布消息，计划于1月31日在靖国神社举办“宝可梦卡牌儿童体验教室”活动引发争议，活动信息被迅速下架，但任天堂和宝可梦尚未给出解释或道歉。事件引发网友质疑，涉及审核问题、历史责任感和中国市场利益。宝可梦此前已有在靖国神社的相关活动记录，此次事件再次触碰历史红线，任天堂需明确回应中国玩家和网民的关切。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://baijiahao.baidu.com/s?id=1855658310273431388&wfr=spider&for=pc",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://baijiahao.baidu.com/s?id=1855658310273431388&wfr=spider&for=pc"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-30",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1141,
-        "title": "苹果CEO库克谈内存涨价：对第二财季影响更大",
-        "summary": "苹果2026财年第一季度财报显示总营收和净利润均创历史新高，iPhone业务收入增长显著；CEO库克指出内存芯片涨价对第二财季毛利率影响会增大，苹果正在评估长期应对方案，分析师认为苹果将通过服务业务弥补硬件利润损失并维持iPhone 18系列价格稳定。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://baijiahao.baidu.com/s?id=1855698875125692937&wfr=spider&for=pc",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://baijiahao.baidu.com/s?id=1855698875125692937&wfr=spider&for=pc"
-            }
-        ],
-        "category": "technology",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-30",
-        "tags": [
-            "内存涨价"
-        ],
-        "sentiment": "negative",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1144,
-        "title": "RUMORED PLAYSTATION PORTAL OLED MODEL IS ALLEGEDLY SET FOR RELEASE LATER THIS YEAR IN 2026",
-        "summary": "据传闻，PlayStation Portal的OLED版本将于2026年年内上市，配备120Hz刷新率OLED屏幕，并已通过内部人士KeplerL2在NeoGAF论坛的发言进一步证实。该设备近期新增云流媒体功能，支持数千款PS5游戏和PlayStation Plus游戏库内容。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/playstation-portal-oled-model-release-in-2026/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/playstation-portal-oled-model-release-in-2026/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-30",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1145,
-        "title": "GDC Says 33 Percent of Surveyed US-Based Game Industry Employees Have Been Laid Off in Last 2 Years",
-        "summary": "根据游戏开发者大会（GDC）最新发布的《游戏行业现状报告》，过去两年内美国游戏行业33%的受访员工遭遇裁员，全球其他地区28%的受访者在过去24个月内被裁员，17%在过去一年内失业。裁员原因包括公司重组（43%）、项目取消（32%）及管理层误判疫情后市场趋势。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://gamingbolt...",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://gamingbolt..."
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-30",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1146,
-        "title": "GameStop wants to conduct 'major acquisition' of a public company",
-        "summary": "GameStop CEO Ryan Cohen计划收购一家上市公司，目标是将其市值提升至1000亿美元，目前公司市值约为106.8亿美元。GameStop拥有约90亿美元的现金和流动性证券可用于收购，正在关注消费或零售行业的公司。GME股价在Cohen发表评论后上涨3.5%。同时，GameStop正在关闭大量门店，包括美国470家门店、新西兰38家EB Games门店，并退出多个欧洲国家市场。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/gamestop-wants-to-conduct-major-acquisition-of-a-public-company",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/gamestop-wants-to-conduct-major-acquisition-of-a-public-company"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-30",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1147,
-        "title": "Austrian Supreme Court rules that FIFA loot boxes are not gambling",
-        "summary": "奥地利最高法院裁定FIFA游戏中的抽奖机制（loot bo...",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-30",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1149,
-        "title": "Google rolls out prototype of Project Genie, an AI tool which generates playable worlds",
-        "summary": "Google发布了Project Genie的原型版本，这是一个AI工具，允许用户生成可玩的虚拟世界。用户可以通过输入提示或上传图像来创建世界和角色，并定义角色移动方式、视角等属性。该工具实时生成世界，但当前版本存在限制，如生成的世界可能不够真实、控制延迟以及每次探索仅限60秒。目前仅对美国Google AI Ultra订阅者开放，月费250美元。该工具的推出可能加剧关于生成式AI在游戏开发中使用的争议。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.videogameschronicle.com/news/google-rolls-out-prototype-of-project-genie-an-ai-tool-which-generates-playable-worlds/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.videogameschronicle.com/news/google-rolls-out-prototype-of-project-genie-an-ai-tool-which-generates-playable-worlds/"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-30",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1132,
-        "title": "MICROSOFT Q2 FY26 REVENUE HITS $81.3 BILLION, XBOX CONTENT AND SERVICES DOWN 5%",
-        "summary": "微软2026财年第二季度营收达813亿美元，同比增长17%。营业利润增长21%，达到383亿美元。微软云季度营收首次突破500亿美元，达515亿美元，同比增长26%。游戏营收整体下滑9%，Xbox内容及服务营收下降5%，游戏业务是微软唯一出现业绩下滑的主要业务板块。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/microsoft-q2-fy26-revenue-hits-81-3-billion-xbox-content-and-services-down-5/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/microsoft-q2-fy26-revenue-hits-81-3-billion-xbox-content-and-services-down-5/"
-            }
-        ],
-        "category": "earnings",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-29",
-        "tags": [
-            "财报信息"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1136,
-        "title": "Amazon Game Studios Head Christoph Hartmann is Leaving the Company",
-        "summary": "亚马逊游戏最新一轮裁员中，超过16,000名员工受到了影响，工作室负责人克里斯托夫·哈特曼也将离职。公司正将业务战略重心从PC和主机游戏开发转向云游戏服务Amazon Luna。同时，MMORPG游戏《美丽新世界：永恒》已停止开发，服务器将持续运行至2027年1月31日。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://gamingbolt.com/amazon-game-studios-head-christoph-hartmann-is-leaving-the-company",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://gamingbolt.com/amazon-game-studios-head-christoph-hartmann-is-leaving-the-company"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-29",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1137,
-        "title": "The number of developers interested in working on Xbox games is half that of PS5 or Switch.",
-        "summary": "在接受GDC调查的2300多名游戏开发者中，PC仍是最受欢迎的开发平台（80%），而PS5和Switch 2的开发者兴趣比例（40%和...",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-29",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1125,
-        "title": "沙盒游戏《Hytale》模组爆发：两周超千万下载量，成 CurseForge“增长速度最快的 Mod 社区之一”",
-        "summary": "《Hytale》沙盒游戏在模组平台CurseForge上表现强劲，上线两周模组下载量突破1000万次，成为该平台增长最快的模组社区之一，同时在线人数极高，预购收入已覆盖未来两年开发成本。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/917/044.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/917/044.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-28",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1126,
-        "title": "Steam 新一周游戏销量榜出炉：《极限竞速：地平线 6》全球第二、《GTA 5 增强版》回归榜单",
-        "summary": "Steam最新一周（2026年1月20日-1月27日）游戏销量榜公布，《ARC Raiders》蝉联冠军，《极限竞速：地平线6》位居全球第二，国区第一。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/917/038.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/917/038.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-28",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1133,
-        "title": "QA staff report layoffs at NetEase Games Montréal",
-        "summary": "网易游戏蒙特利尔分部发生裁员，主要影响质量保证部门的员工，多名前员工在LinkedIn上确认被裁，但公司尚未正式确认。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/qa-staff-report-layoffs-at-netease-games-montreal",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/qa-staff-report-layoffs-at-netease-games-montreal"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-28",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1134,
-        "title": "PlayStation is encouraging PS4 players to upgrade to PS5 as analyst predicts PS6 won't arrive until after 2028",
-        "summary": "索尼正针对PS4用户推送定向消息，鼓励他们升级至PS5。分析师预测PS6最早将在2028年后发布。索尼预计PS5的生命周期将比前几代主机更长，且当前游戏行业面临硬件成本上升等问题，可能导致下一代主机推迟发布。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.eurogamer.net/ps6-may-not-arrive-in-2028-analyst-predicts",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.eurogamer.net/ps6-may-not-arrive-in-2028-analyst-predicts"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-28",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1135,
-        "title": "《巅峰守卫》太惨了 发售两天在线玩家已流失90%",
-        "summary": "免费FPS游戏《巅峰守卫》在Steam首发后两天内在线玩家流失90%，从首发的近10万同时在线跌至24小时峰值19296人，当前在线仅8645人。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3936722.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3936722.html"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-01-28",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1118,
-        "title": "消息称 R 星为防剧透，《GTA 6》游戏首发将缺席实体版",
-        "summary": "《GTA 6》游戏首发可能取消实体版，优先发行数字版，实体光盘可能推迟数周或延至2027年初上市，此举旨在防止游戏提前泄露。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/916/672.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/916/672.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-27",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1122,
-        "title": "官方背书！《暗黑破坏神4》被确认为暴雪史上最畅销游戏",
-        "summary": "动视暴雪北欧地区传播总监劳伦·阿什林·希尔在领英个人资料中确认《暗黑破坏神4》为“暴雪有史以来最畅销的游戏”。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "industry",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-27",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1123,
-        "title": "叫好不叫座！ 《忍者龙剑传4》销量惨淡",
-        "summary": "光荣特库摩圣诞季新作总销量为165万份，其中《塞尔达无双：灾厄启示录》销量超过100万份，剩余销量来自《忍者龙剑传4》、《海贼无双4》次世代主机版和《莱莎的炼金工房》豪华合集版，《忍者龙剑传4》销量初步估计在30万到50万份之间。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3936609.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3936609.html"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-27",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1124,
-        "title": "《噬血代码2》Steam好评率53%褒贬不一：优化没眼看",
-        "summary": "《噬血代码2》在Steam平台的好评率为53%，评价褒贬不一。游戏优化问题严重，包括掉帧、画面和语音撕裂、光影bug等。Metacritic媒体均分为73分，IGN给出了6分的低分。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3936626.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3936626.html"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-27",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1127,
-        "title": "因 Steam 收取 30% 佣金，Valve 在英国面临 6.56 亿英镑反垄断诉讼",
-        "summary": "Valve公司因Steam平台向游戏发行商收取30%佣金，在英国面临6.56亿英镑的集体诉讼，伦敦竞争上诉法庭已裁定该案可继续审理。诉讼代表1400万英国用户，指控Valve通过限制条款阻碍竞争并抬高价格。类似诉讼在美国也正在进行中。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/916/960.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/916/960.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-27",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "negative",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1128,
-        "title": "微软 Xbox 云游戏网页端新界面开启测试，设计向主机系统靠拢",
-        "summary": "微软已开始测试Xbox云游戏网页端的新界面设计，该设计在视觉和操作体验上更接近主机系统，目前仅向Xbox预览体验用户开放，官方计划在未来几个月内向全体用户推送。外界猜测新设计可能应用于未来Xbox主机系统，期待新界面能同步引入PC端Xbox应用。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/916/952.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/916/952.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-27",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1129,
-        "title": "卡普空：《怪物猎人：荒野》全球累计销量突破 1100 万份",
-        "summary": "卡普空宣布《怪物猎人：荒野》全球累计销量突破1100万份，尽管近期销售表现不及预期，但仍达成新的里程碑。游戏在发售三天内销量突破800万份，一个月内超过1000万份，过去三个月仅售出30万份。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/916/918.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/916/918.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-27",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1130,
-        "title": "卡普空公布25-26财年第三季度财报：《怪物猎人 荒野》销量突破1100万份",
-        "summary": "卡普空公布了25-26财年第三季度财报，在该季度，销售额为1153.15亿日元，同比增长29.8%；营业利润为543.02亿日元，同比增长75.1%。《生化危机》系列销量现已突破1.83亿份、《怪物猎人》系列销量突破1.25亿份，其中去年发售的《怪物猎人 荒野》销量现已突破1100万份、《街头霸王》系列销量突破5800万份、《洛克人》系列销量突破4400万份、《鬼泣》系列销量突破3800万份。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "earnings",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-27",
-        "tags": [
-            "财报信息"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1131,
-        "title": "CLAIR OBSCUR: EXPEDITION 33 & METAPHOR: REFANTAZIO WILL ALLEGEDLY RECEIVE NINTENDO SWITCH 2 PORTS IN 2026",
-        "summary": "据称，《光与影：33号远征队》和《暗喻幻想：ReFantazio》将在2026年推出Switch 2版本，同时Square Enix也在考虑将《最终幻想16》移植到该平台。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mynintendonews.com/2026/01/27/natethehate-expedition-33-metaphor-refantazio-and-final-f...",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mynintendonews.com/2026/01/27/natethehate-expedition-33-metaphor-refantazio-and-final-f..."
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-27",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1112,
-        "title": "微软《极限竞速：地平线 6》首次提供跨平台存档功能，Xbox Series X 版支持性能 / 画质双游戏模式",
-        "summary": "微软《极限竞速：地平线 6》首次提供跨平台存档功能，，玩家可以在PC、Xbox Series X-S、PS5平台共享存档进度，同时Xbox Series X 版支持性能/画质双游戏模式",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/916/337.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/916/337.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-26",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1116,
-        "title": "PS5 Pro Constitutes 13 Percent of PS5 Sales in 2025, PlayStation Portal Has 7 Percent Attach Rate",
-        "summary": "2025年PS5在美国销量达2700万台，其中PS5 Pro占比13%（约350万台），PlayStation Portal串流掌机的配套使用率为7%（约200万台）。索尼正在为PS6开发便携式开发工具包，支持通过节能模式运行PS5游戏，但��未确认下一代主机的发布时间，分析师预测其上市时间可能比预期更晚。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://gamingbolt.com/ps5-pro-constitutes-13-percent-of-ps5-sales-in-2025-playstation-portal-has-7-percent-attach-rate",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://gamingbolt.com/ps5-pro-constitutes-13-percent-of-ps5-sales-in-2025-playstation-portal-has-7-percent-attach-rate"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-26",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1119,
-        "title": "2026开年177款版号：腾讯彩六国服过审，网易拉格朗日更名？",
-        "summary": "国家新闻出版署发布1月版号，本次共批准177款国产网络游戏及5款进口游戏，腾讯客户端《彩虹六号：攻势》、网易《妖妖棋》、三七互娱《斗罗大陆：启程》及巨人网络《月圆之夜：大师对弈》过审，《蛋仔派对》增报客户端版本，《无尽的拉格朗日》更名为《星际猎人》。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mp.weixin.qq.com/s/sadnj0SZ5EPVnTqgUjm17g",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mp.weixin.qq.com/s/sadnj0SZ5EPVnTqgUjm17g"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-26",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1120,
-        "title": "Highguard Gets “Overwhelmingly Negative” Steam Reviews, Peaks at Nearly 98,000 Concurrent Players",
-        "summary": "《巅峰守卫/Highguard》在Steam上获得了“差评如潮”评价，18%好评率，Steam上线后同时在线玩家峰值达97,249人。玩家主要批评游戏3v3模式被指不适合当前地图规模、音频问题、武器缺乏创意及优化问题，",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://gamingbolt.com/highguard-gets-overwhelmingly-negative-steam-reviews-peaks-at-nearly-98000-concurrent-players",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://gamingbolt.com/highguard-gets-overwhelmingly-negative-steam-reviews-peaks-at-nearly-98000-concurrent-players"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-26",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1121,
-        "title": "Ubisoft proposes to cut 18% of workforce at France headquarters as part of ‘major reset’ plan",
-        "summary": "育碧提议在法国总部裁员18%（约200个岗位），作为其“重大重组”计划的一部分。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.videogameschronicle.com/news/ubisoft-proposes-to-cut-18-of-workforce-at-france-headquarters-as-part-of-major-reset-plan/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.videogameschronicle.com/news/ubisoft-proposes-to-cut-18-of-workforce-at-france-headquarters-as-part-of-major-reset-plan/"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-26",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1113,
-        "title": "微软 Xbox 工作室负责人解释跨平台策略：确保尽可能多的玩家体验到旗下游戏",
-        "summary": "微软Xbox工作室负责人Craig Duncan解释了跨平台策略背后的理念，旨在让尽可能多的玩家体验到Xbox游戏。谈及部分游戏不同步发售原因，主要因为开发时间、团队规模和初期计划受现实条件限制。战略调整时，部分项目受原有框架限制，造成发布平台不一致的情况（如《极限竞速：地平线6》先登陆Xbox再推PS5版），未来在产品发布时间上希望与PS5保持一致。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/916/157.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/916/157.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-25",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1114,
-        "title": "美国 46 名国会议员致信 FTC，要求全面审查 550 亿美元 EA 收购案",
-        "summary": "美国46名国会议员联名致信联邦贸易委员会（FTC），要求对艺电（EA）550亿美元的私有化收购案进行全面审查，并敦促FTC调查交易对劳动力市场的影响，包括艺电当前的薪资定价权，交易完成后裁员的可能性等。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/916/230.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/916/230.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-25",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1115,
-        "title": "Remedy 确认《控制》系列游戏新作《Control Resonant》二季度末发售，登陆 Xbox、PS5、PC 等平台",
-        "summary": "Remedy工作室确认《控制》系列新作《Control Resonant》将于2026年第二季度末（5月-6月）发售，登陆Xbox Series X|S、PS5、PC（Steam/Epic）及macOS（Steam/App Store）平台。预计首年销量180万份，27年销量220万份。也披露前作《控制》累计销量500万。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/916/204.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/916/204.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-25",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1101,
-        "title": "《明日方舟：终末地》公测首日曝重大支付事故：付款和到账账户不一致，PayPal 充值方式已暂时关闭",
-        "summary": "《明日方舟：终末地》官方 X 账号公告，使用PayPal支付的部分玩家，订单和物品交付之间存在不一致问题，官方已禁用PayPal支付并全额退款受影响订单。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/915/733.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/915/733.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-23",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "negative",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1102,
-        "title": "任天堂 Switch 2 Lite 掌机曝光：无底座、固定手柄",
-        "summary": "前美国任天堂公关经理Kit Ellis和Krysta Yang预测任天堂将在未来几个月内推出平价版主机Switch 2 Lite，结合玩家在任天堂官网后台挖掘出名为“OSM”的新产品代码，引发关于新硬件是“Switch 2 Lite”还是“Switch 2 OLED”的激烈讨论。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-23",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1103,
-        "title": "耗时 6 年打造：宝可梦开发商新游戏《轮回之兽》今夏发行，登陆 PS5/Xbox",
-        "summary": "宝可梦开发商Game Freak耗时6年开发的全新动作RPG游戏《轮回之兽》将于今年夏季发售，登陆PS5、Xbox和PC平台，首日加入Xbox Game Pass。游戏设定在末世背景下，玩家将扮演主角艾玛与狗伙伴小酷，通过独特的战斗机制挑战强敌。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/915/630.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/915/630.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-23",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1104,
-        "title": "《极限竞速：地平线 6》游戏 5 月 19 日发行，首发 550 款汽车、城市规模为前作 5 倍",
-        "summary": "《极限竞速：地平线 6》将于2026年5月19日全球发行，高级版玩家可提前4天体验。游戏首次以日本为舞台，东京区域规模为前作5倍，包含550款首发车辆及全新玩法机制。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-23",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1105,
-        "title": "Xbox 第一方大作《神鬼寓言》重启版游戏首发登陆 PS5，今秋发行",
-        "summary": "《神鬼寓言》重启版将于2026年秋季在Xbox、PC（含Steam）及PS5平台同步发行，游戏由Playground Games开发，主打开放世界探索、道德抉择机制和创新的NPC互动系统。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/915/629.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/915/629.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-23",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1106,
-        "title": "《极限竞速：地平线6》定于5月19日发售：微软1月Xbox开发者直面会消息汇总",
-        "summary": "微软在2026年1月的Xbox开发者直面会上公布了四款重磅游戏新作，均将在发售首日加入Xbox Game Pass Ultimate，并支持跨平台游玩和存档同步。这些游戏包括《极限竞速：地平线6》、《轮回之兽》、《神鬼寓言》新作和《Kiln》。4款游戏仅《极速竞速：地平线6》首发不上PS平台。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/209973",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/209973"
-            }
-        ],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-01-23",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1117,
-        "title": "Ubisoft's restructure plan spooks the markets, and it's not hard to see why | Opinion",
-        "summary": "育碧公布重组计划后股价暴跌40%，市场对其能否通过拆分业务单元实现复苏持怀疑态度。重组将工作室分为五个“创意工作室”，但投资者担忧这实为资产分割以便进一步出售或缩减规模。公司核心管理层未变，且强制全员返岗办公的政策凸显了自上而下的控制模式未真正改变。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/ubisofts-restructure-plan-spooks-the-markets-and-its-not-hard-to-see-why-opinion",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/ubisofts-restructure-plan-spooks-the-markets-and-its-not-hard-to-see-why-opinion"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-23",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1095,
-        "title": "SE《最终幻想 7 重制版》登陆任天堂 Switch 2、微软 Xbox，《FF7 重生》预计年内跟进",
-        "summary": "《最终幻想 7 重制版 Intergrade》已在任天堂 Switch 2 和 Xbox 平台发售，SE 同时宣布《最终幻想 7 重生》将于 2026 年登陆相同平台",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/915/329.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/915/329.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-22",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1096,
-        "title": "育碧宣布重塑组织架构、运营模式和产品组合",
-        "summary": "育碧宣布启动重大重塑计划，将设立五大创意坊，以去中心化方式运作，并停止部分游戏项目以提升整体质量。成本削减目标为到2028年削减5亿欧元固定成本。短期财务展望显示2025-26财年净营业收入约为15亿欧元，非IFRS营业利润预计为-10亿欧元。其中涉及到5个创意工坊具体分工：",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "industry",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-01-22",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1097,
-        "title": "育碧宣布将取消后续六款作品的开发，包括《波斯王子：时之沙》重制版",
-        "summary": "育碧宣布大规模重组计划，取消六款游戏开发（包括《波斯王子：时之沙》重制版），延期七款游戏，关闭两家工作室，并将在其他工作室进行裁员。未来公司将专注于开放世界和在线服务型游戏。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/209877",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/209877"
-            }
-        ],
-        "category": "industry",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-22",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "negative",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1107,
-        "title": "网易《我的世界》中国版：部分网络游戏服务器将于 2026 年 2 月 6 日停服",
-        "summary": "网易《我的世界》中国版宣布部分网络游戏服务器将于2026年2月6日停服，原因是这些服务器缺乏后期维护和更新，无法达到品质要求。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/915/588.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/915/588.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-22",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1108,
-        "title": "UBISOFT STOCK HITS 15 YEAR LOW AFTER RESTRUCTURING",
-        "summary": "Ubisoft的股价跌至近15年来的最低点，单日跌幅达39%，过去五年累计下跌约95%。公司正在进行深度重组，包括取消六款游戏、推迟多个项目、关闭部分工作室，并与腾讯达成16亿欧元的投资协议以稳定财务状况。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/ubisoft-stock-hits-15-year-low-after-restructuring/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/ubisoft-stock-hits-15-year-low-after-restructuring/"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-22",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1109,
-        "title": "U.S. VIDEO GAME MARKET REACHES $60.7 BILLION IN 2025, LED BY BATTLEFIELD 6 AND SWITCH 2",
-        "summary": "2025年美国视频游戏市场总额达607亿美元，同比增长1.4%，较2024年略有恢复。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-22",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1110,
-        "title": "Battlefield outsold Call of Duty for the first time ever last year, as Black Ops 7 dropped to 5th place",
-        "summary": "Circana数据表明，《战地6》在2025年首次超越《使命召唤》成为美国市场销量最高的游戏，《黑色行动7》���名第五，创下该系列近20年最差成绩。《战地6》首发三天销量突破700万份，而《黑色行动7》销量较前作下降60%以上。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.videogameschronicle.com/news/battlefield-outsold-call-of-duty-for-the-first-time-ever-last-year-as-bl...",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.videogameschronicle.com/news/battlefield-outsold-call-of-duty-for-the-first-time-ever-last-year-as-bl..."
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-22",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1111,
-        "title": "铠侠称今年NAND闪存售罄 预计2027年趋势持续",
-        "summary": "铠侠存储器事业部执行董事表示，2026年NAND闪存产能已全部被客户预订，预计2027年供需紧张趋势将持续，部分合同价格同比上涨超30%。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3936351.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3936351.html"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-22",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1084,
-        "title": "Steam 现已支持为好友补齐捆绑包，对方已拥有的游戏自动减免",
-        "summary": "Steam游戏平台更新了“好友赠礼”功能，新增“捆绑包补齐”选项，允许玩家为好友赠送捆绑包时自动减免对方已拥有的游戏部分，并保留捆绑包折扣优惠。这一功能旨在帮助玩家更便捷地补全���友的游戏收藏，避免重复付费。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/915/031.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/915/031.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-21",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1085,
-        "title": "《愤怒的小鸟》将全面回归中国大陆：金山世游独家发行运营，全平台预约启动",
-        "summary": "《愤怒的小鸟》系列游戏将全面回归中国大陆市场，由金山世游独家发行运营，并启动全平台预约。此次回归将推出两款核心IP作品，包括升级版的《愤怒的小鸟：经典归来》和泡泡消除解谜游戏《愤怒的小鸟：梦幻爆破》，同时推出“捣蛋工坊”创作者计划。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/915/030.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/915/030.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-21",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1087,
-        "title": "《明日方舟：终末地》媒体评分现已解禁：Metacritic均分79分",
-        "summary": "《明日方舟：终末地》媒体评分已解禁，PC版Metacritic均分79分，共收录12家媒体评价。游戏因其美术、角色与场景构建获得好评，并尝试引入自动化建设玩法，但部分媒体认为其体验缓慢且乏味。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/209854",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/209854"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-21",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1093,
-        "title": "《巫师4》游戏预算约8亿美元 预计于2027年Q4发售",
-        "summary": "Noble Securities分析师Mateusz Chrzanowski发布新报告，《巫师4》开发和营销成本预计各为14亿波兰兹罗提，总计约7.76亿美元；有近500名开发人员参与开发工作，游戏预计于2027年第四季度发售。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3936193.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3936193.html"
-            }
-        ],
-        "category": "industry",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-01-21",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1094,
-        "title": "俄罗斯议员呼吁禁售《使命召唤》 耗百亿打造国产平替",
-        "summary": "俄罗斯议员提议禁止销售《使命召唤》系列游戏，并计划投入100亿卢布（约7.9亿元人民币）开发俄国国产3A级军事射击游戏作为替代。该计划由俄罗斯数字发展部支持，旨在回应游戏中对俄罗斯的负面描绘，并提供税收减免等优惠政策。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3936243.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3936243.html"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-21",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1098,
-        "title": "JANUARY XBOX UPDATE BRINGS ARM PC SUPPORT AND NEW FEATURES",
-        "summary": "微软1月份的Xbox系统更新带来了对ARM架构处理器的支持，Xbox PC应用程序现在支持基于ARM架构的Windows 11设备，玩家可以在兼容的ARM笔记本电脑和PC上本地下载和玩游戏，包括Xbox Game Pass订阅的游戏。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-21",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1099,
-        "title": "Netflix is prioritizing cloud gaming, but co-CEO admits \"we still have a lot of work to go do\"",
-        "summary": "网飞CEO宣布将在2026年优先发展云游戏业务，尽管目前仍处于早期阶段，但公司已看到云游戏在用户参与度和留存率方面的积极影响。同时正在收购华纳兄弟，以加强其游戏业务。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/netflix-is-prioritzing-cloud-gaming-but-co-ceo-admits-we-still-have-a-lot-of-work-to-go-do",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/netflix-is-prioritzing-cloud-gaming-but-co-ceo-admits-we-still-have-a-lot-of-work-to-go-do"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-21",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1100,
-        "title": "叫好不叫座 曝《天外世界2》全平台销量或不足百万",
-        "summary": "游戏行业顾问丹尼尔·卡米洛透露，《天外世界2》尽管获得普遍好评，但销量表现可能不佳，全平台销量或不足百万份，远低于前作同期约200万份的销售数据。游戏的高定价争议和Xbox Game Pass订阅服务的影响被认为是销量不佳的可能原因。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3936265.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3936265.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-21",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1079,
-        "title": "《失落星船：马拉松》将于3月6日发售，国区售价168元起",
-        "summary": "《失落星船：马拉松》将于3月6日发售，现已开启预购，国区普通版售价168元，豪华版248元，预购可获游戏内奖励及《命运2》联动奖励，游戏主打PvPvE生存撤离玩法。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/209793",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/209793"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-01-20",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1082,
-        "title": "预售即登顶！《FF7重制版》空降NS2 eShop周榜亚军",
-        "summary": "《最终幻想7 重制版 Intergrade》在预售阶段表现强势，空降欧洲区Nintendo Switch 2 eShop下载周榜亚军",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3936135.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3936135.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-20",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1083,
-        "title": "《刺客信条》系列销量破2.3亿 玩家更爱玩《黑旗》",
-        "summary": "《刺客信条》系列全球累计销量突破2.3亿份，成为育碧最畅销的游戏系列。其中，《刺客信条4：黑旗》吸引了3400万独立玩家，占比22%。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-20",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1086,
-        "title": "微软测试广告版 Xbox 云游戏：每次可免费玩 1 小时，每月最多 5 小时",
-        "summary": "微软正在测试一项广告支持的Xbox云游戏服务，允许用户每次免费游玩1小时，每月最多5小时。该服务将在未来几周内正式官宣并开启公开测试。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/914/865.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/914/865.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-20",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1088,
-        "title": "ARC Raiders Appears Unstoppable on Steam, Topping US Engagement Charts for 9th Straight Week",
-        "summary": "《ARC Raiders》在Steam平台上连续第九周位居美国玩家活跃度排行榜首位，销量超过1240万份，击败了《反恐精英2》、《战地6》等热门游戏。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://gamingbolt.com/arc-raiders-appears-unstoppable-on-pc-topping-us-engagement-charts-for-9th-straight-week",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://gamingbolt.com/arc-raiders-appears-unstoppable-on-pc-topping-us-engagement-charts-for-9th-straight-week"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-20",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1089,
-        "title": "《SEGA 新创造球会2026》预约注册人数突破200万",
-        "summary": "世嘉体育养成模拟经营游戏《SEGA 新创造球会2026》预约注册人数突破200万，将于1月22日上午11点全球上线PC(Steam)平台。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/209824",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/209824"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-20",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1090,
-        "title": "微软公布 XGP1 月末新增游戏阵容：《死亡搁浅 导剪版》《战锤 40K：星际战士 2》领衔",
-        "summary": "微软公布 XGP1 月末新增游戏阵容：《死亡搁浅 导剪版》《战锤 40K：星际战士 2》领衔",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/914/913.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/914/913.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-01-20",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1091,
-        "title": "人均64万元！内存巨头发放巨额年终奖：创历史纪录 部分员工能拿94万元",
-        "summary": "SK海力士向全体员工发放人均64万元人民币的年终奖，创公司历史纪录，部分员工可获94万元；三星电子半导体部门绩效奖金比例提升至年薪47%，存储市场预计将持续涨价。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3936178.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3936178.html"
-            }
-        ],
-        "category": "technology",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-20",
-        "tags": [
-            "内存涨价"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1092,
-        "title": "《马拉松》开启预购后 已成功跻身Steam畅销榜前十",
-        "summary": "《马拉松》在开启预购后迅速跻身Steam畅销榜前十，目前位列付费游戏销量第五。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3936185.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3936185.html"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-20",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1070,
-        "title": "Steam修订AI披露指南，开发端工具不再强制要求",
-        "summary": "Steam平台修订了AI披露指南，不再强制要求开发者披露开发端工具中的AI使用情况，仅需对游戏本体、商店页面或营销材料中的预生成AI内容以及游戏运行过程中实时生成的AI内容进行强制披露。2025年上半年，Steam平台已有近8000款游戏披露使用了生成式AI，远超2024年全年的约1000款。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/209739",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/209739"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-19",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1078,
-        "title": "微软欲推Xbox云游戏免费游玩模式 看广告换时长",
-        "summary": "微软计划为Xbox云游戏服务推出由广告支持的免费访问模式，允许用户通过观看广告获得单次限时的云游戏会话权限，旨在扩大云游戏用户覆盖范围，同时不影响现有订阅用户权益。该模式仍处于测试阶段，具体上线时间和广告形式尚未公布。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3936083.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3936083.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-19",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1080,
-        "title": "Marathon releases March 5, new Limited Edition DualSense controller revealed",
-        "summary": "《马拉松》推出了一款限量版DualSense控制器，设计灵感来自游戏世界，将于2026年3月5日上市。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://blog.playstation.com/2026/01/19/marathon-releases-march-5-new-limited-edition-dualsense-controller-revealed/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://blog.playstation.com/2026/01/19/marathon-releases-march-5-new-limited-edition-dualsense-controller-revealed/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-19",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1081,
-        "title": "Nintendo’s Japan dominance continues as Switch 2 fuels 40% market growth in 2025",
-        "summary": "Nintendo Switch 2在2025年销售了378万台，成为日本有史以来销售最快的游戏机，占据了当年家用游戏机销量的一半以上。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-19",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1073,
-        "title": "0 元购没人要？Epic 免费送反助游戏在 Steam 销量高出约 200%",
-        "summary": "独立射击游戏《Blood West》在Epic游戏商城限时免费领取期间，Steam平台销量比Epic高出约200%，开发商New Blood Interactive将Epic支付的买断版税全额用于支持后续DLC开发",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/914/029.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/914/029.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-17",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1074,
-        "title": "2025 年 11 款 Xbox 游戏登陆索尼 PS5，《极限竞速：地平线 5》独占六成销量",
-        "summary": "2025年，Xbox将11款第一方游戏引入PS5平台，其中《极限竞速：地平线5》表现最为突出，销量占11款游戏总销量的60%，达到510万份。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-17",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1075,
-        "title": "CD Projekt 旗下游戏最新销量曝光：《巫师 3》6000 万份稳居第一，《赛博朋克 2077》3500 万份",
-        "summary": "波兰记者 Michał Król 发文，波兰游戏的最新销量：",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-17",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1062,
-        "title": "V 社公布 Steam 平台 2026 年下半年特卖 / 游戏节时间表：秋促 10 月 2 日、冬促 12 月 18 日",
-        "summary": "春促3.20，夏促6.26，秋促10.2，冬促12.18；",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/913/745.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/913/745.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-01-16",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1063,
-        "title": "代号 OSM，任天堂 Switch 2 衍生游戏掌机曝光",
-        "summary": "Nintendo Account portal挖掘任天堂底层代码发现衍生游戏掌机代号OSM踪迹。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/913/724.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/913/724.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-16",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1064,
-        "title": "因公司战略调整，亚马逊大型多人在线游戏《美丽新世界：永恒》将于 2027 年 1 月关服",
-        "summary": "亚马逊宣布因战略调整，其大型多人在线游戏《美丽新世界：永恒》将于2027年1月31日正式关服，游戏将于2026年1月15日从数字商店下架，并停止推出新内容。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/913/640.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/913/640.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-16",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1065,
-        "title": "《死亡岛 2》Steam 迎 1 折史低：玩家暴涨 40 倍、创历史最高玩家同时在线纪录 18721 人",
-        "summary": "《死亡岛 2》在Steam平台冬促期间迎来1折史低，Steam国区由原价185.8元降至18.58元。该作原日均在线人数仅为 450 人，暴涨40倍达到18721人。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/913/637.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/913/637.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-16",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1069,
-        "title": "《检疫区：最后一站》全球销量突破30万，联动《黎明杀机》开启“跨宇宙”审查",
-        "summary": "《检疫区：最后一站》全球销量突破30万，联动《黎明杀机》开启“跨宇宙”审查",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3935947.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3935947.html"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-16",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1071,
-        "title": "米哈游：《原神》小米服务器转服服务 1 月 20 日关闭，玩家需尽快迁移数据",
-        "summary": "米哈游宣布《原神》小米服务器转服服务将于2026年1月20日关闭，玩家需在此之前将账号数据迁移至官方服务器（天空岛服），转服服务将于2026年1月20日00:00正式关闭。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/913/952.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/913/952.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-16",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "negative",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1072,
-        "title": "意大利反垄断机构盯上动视暴雪，重点关注《暗黑破坏神：不朽》《使命召唤手游》是否诱导内购",
-        "summary": "意大利反垄断机构AGCM对微软旗下动视暴雪展开调查，重点关注《暗黑破坏神：不朽》和《使命召唤手游》两款免费手游是否存在诱导内购的行为，涉及欺骗性UI设计、家长控制措施不足等问题。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/913/979.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/913/979.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-16",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1076,
-        "title": "Ace Combat 7: Skies Unknown Has Sold More Than 7 Million Copies Worldwide",
-        "summary": "《皇牌空战7：未知空域》全球销量突破700万份，万代南梦宫发布纪念壁纸庆祝游戏七周年。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://gamingbolt.com/ace-combat-7-skies-unknown-has-sold-more-than-7-million-copies-worldwide",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://gamingbolt.com/ace-combat-7-skies-unknown-has-sold-more-than-7-million-copies-worldwide"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-16",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1077,
-        "title": "Valve says Steam Machine will have \"fewer constraints\" than Steam Deck for game verification",
-        "summary": "Valve宣布Steam Machine在游戏验证方面将比Steam Deck面临更少的限制，开发者将拥有更多自由度。Steam Machine的验证标准与Steam Deck兼容，已通过后者验证的游戏将自动获得Steam Machine验证状态。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/valve-says-steam-machine-will-have-fewer-constraints-than-steam-deck-for-game-verification",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/valve-says-steam-machine-will-have-fewer-constraints-than-steam-deck-for-game-verification"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-16",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1053,
-        "title": "消息称索尼计划 2026Q1 向 PS5 Pro 游戏主机推送 AI 画质增强 PSSR 2.0",
-        "summary": "索尼计划在2026年第1季度向PlayStation 5 Pro游戏主机推送AI画质增强技术PSSR 2.0更新，该技术能提升游戏画面清晰度和流畅度，并有望实现4K分辨率+120 FPS的旗舰级输出目标。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/913/423.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/913/423.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-15",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1055,
-        "title": "KRAFTON宣布持续扩展PUBG IP，并将加速新作开发打造系列IP",
-        "summary": "KRAFTON在2026年战略中聚焦“大型系列IP”打造，通过强化自研投入、扩大发行规模和优化资源配置，计划将PUBG IP扩展为内容平台，同时将已验证的《inZOI》《迷魅狩猎》培育为战略级IP。公司还将探索AI技术在游戏及机器人领域的应用。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/209607",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/209607"
-            }
-        ],
-        "category": "industry",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-01-15",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1056,
-        "title": "任天堂、索尼互动娱乐和微软发布联合声明，旨在“保护玩家安全的游戏体验”",
-        "summary": "任天堂、索尼互动娱乐和微软发布联合声明，更新2020年文件，强调预防、合作和责任三大关键目标。预防方面，提供游戏控制工具以增强家长和玩家自定义体验；合作方面，与发行商、监管机构及非营利组织如TIGG和FOSI合作；责任方面，简化举报流程、加强处罚措施，并承诺以道德方式使用数据，共同致力于打造更安全的游戏环境。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/209597",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/209597"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-01-15",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1059,
-        "title": "《剑星》全球销量已超610万份 取得巨大成功！",
-        "summary": "Sensor Tower数据显示，韩国Shift Up开发的ARPG《剑星》在Steam和PS5平台上的销量已超610万份。该作在PS5上售出370万份，在Steam上售出240万份",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3935807.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3935807.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-15",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1060,
-        "title": "CDPR公布《巫师》系列总销量 《巫师3》占7成",
-        "summary": "CD Projekt Red（CDPR）在财报中公布了《巫师》系列的总销量数据，《巫师》系列三部曲总销量达到8500万份。《巫师》第一作销量为1000万份，《巫师2：国王刺客》销量为1500万份，《巫师3：狂猎》销量高达6000万份，占总销量的70%",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3935854.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3935854.html"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-01-15",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1061,
-        "title": "搜打撤热门新游《ARC Raiders》Steam版现已封锁国区",
-        "summary": "搜打撤热门新游《ARC Raiders》Steam版现已封锁国区",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3935857.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3935857.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-15",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1066,
-        "title": "索尼从 PS 商店下架逾千款“换皮游戏”，均来自同一开发商",
-        "summary": "索尼从 PlayStation 商店下架了开发商 ThiGames 的逾千款“换皮游戏”，这些游戏以简单玩法和易解锁奖杯为特点，此次下架疑似为索尼清理低质量游戏的整治行动的一部分。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/913/629.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/913/629.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-15",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "negative",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1067,
-        "title": "‘It’s such poor quality software’: GOG owner criticises Windows, says it will support Linux better in the future",
-        "summary": "GOG的新所有者批评Windo...",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-15",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1068,
-        "title": "Scopely's Monopoly Go is the fastest mobile game in history to hit $6bn revenue",
-        "summary": "Scopely的《Monopoly Go》成为史上最快达到60亿美元收入的移动游戏，仅用1275天完成这一里程碑，远超其他顶级游戏如《Monster Strike》和《王者荣耀》。该游戏自2023年发布以来，迅速成为全球收入最高的休闲游戏，并持续每月产生约2亿美元收入。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/scopelys-monopoly-go-is-the-fastest-mobile-game-in-history-to-hit-6bn-revenue",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/scopelys-monopoly-go-is-the-fastest-mobile-game-in-history-to-hit-6bn-revenue"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-15",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1042,
-        "title": "多人合作撤离冒险游戏《Arc Raiders》累计销量突破1240万份",
-        "summary": "多人合作撤离冒险游戏《Arc Raiders》累计销量突破1240万份",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/209568",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/209568"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-14",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1043,
-        "title": "Steam社区奖励全面改版，不再赠予点数",
-        "summary": "Steam社区奖励系统进行了全面改版，推出了12个全新奖励，不再赠予接收者点数，所有奖励统一消耗500 Steam点数，并新增了个人资料展柜功能来统计奖励的送出和接收情况。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/209540",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/209540"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-14",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1051,
-        "title": "GOG在思考如何从V社手中夺取PC游戏市场",
-        "summary": "GOG计划通过精选优质游戏和推广经典游戏来从Valve手中夺取PC游戏市场份额。GOG不打算在3A大作领域展开竞争，而是计划与小型开发商和发行商开展更多合作。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3935737.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3935737.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-14",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1052,
-        "title": "《双人成行》销量突破2700万 制作人称下一部将超越《双影奇境》",
-        "summary": "《双人成行》销量突破2700万份，其工作室首款作品《逃出生天》销量突破1200万份。制作人约瑟夫·法尔斯透露工作室正在开发新作，并自信新作将超越去年的《双影奇境》。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3935759.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3935759.html"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-14",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1054,
-        "title": "《极限竞速：地平线 6》发售日期提前泄露：5 月 19 日正式上线，高级版 5 月 15 日提前体验",
-        "summary": "《极限竞速：地平线 6》发售日期提前泄露：5 月 19 日正式上线，高级版 5 月 15 日提前体验",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/913/298.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/913/298.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-01-14",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1057,
-        "title": "Arc Raiders and Detroit: Become Human top sellers over the holiday period, say analysts",
-        "summary": "《Arc Raiders》和《底特律：化身为人》在2025年假日季成为最畅销游戏。《Arc Raiders》在Steam、PlayStation和Xbox平台12月销量超400万份，Steam平台12月21日至1月5日新增120万份，总销量突破1240万份；《底特律：化身为人》凭借史低折扣在Steam冬季促销期间售出99.3万份，总收入达1500万美元。同期《战地风云6》全平台销量超350万份，《光与影：33号远征队》因TGA获奖带动圣诞期间新增100万份销量。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/arc-raiders-and-detroit-become-human-top-sellers-over-the-holiday-period-say-analysts",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/arc-raiders-and-detroit-become-human-top-sellers-over-the-holiday-period-say-analysts"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-14",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1058,
-        "title": "Sales of Fallout games spike over Christmas following launch of new TV season",
-        "summary": "《辐射》系列游戏在亚马逊改编剧第二季首播后，圣诞节期间销量显著增长。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-14",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1032,
-        "title": "微软 Xbox Series S|X 增长乏力：近一半在上市头 18 个月售出",
-        "summary": "微软Mark Stanley指出Xbox Series S|X在上市后的18个月内，在全球40多个国家的销量超过1200万台。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-13",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1039,
-        "title": "美光回应关闭英睿达：不是抛弃消费者只是AI内存太赚钱！",
-        "summary": "美光科技副总裁克里斯托弗·摩尔回应关闭消费级品牌“英睿达”的争议，强调公司仍通过OEM模式服务消费市场，但需优先满足AI和数据中心领域的爆炸性需求。预计内存短缺将持续至2028年，新产能建设同步推进中。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3935685.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3935685.html"
-            }
-        ],
-        "category": "technology",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-13",
-        "tags": [
-            "内存涨价"
-        ],
-        "sentiment": "negative",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1040,
-        "title": "育碧对《全境封锁》旗下工作室发起裁员，55 名员工或失去工作",
-        "summary": "育碧对《全境封锁》旗下工作室发起裁员，55 名员工或失去工作",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/912/956.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/912/956.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-13",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "negative",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1041,
-        "title": "《逃离鸭科夫》发布联动预告，暗示将与《逃离塔科夫》联动",
-        "summary": "《逃离鸭科夫》发布联动预告，暗示将与《逃离塔科夫》联动",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/912/986.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/912/986.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-01-13",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1044,
-        "title": "NINTENDO STOCK SLIDES DESPITE STRONG SWITCH 2 PERFORMANCE",
-        "summary": "任天堂股价在过去五个月内下跌约33%，从2025年8月的峰值14,795日元跌至9,950日元，尽管Switch 2硬件表现强劲且公司上调了财务预测。投资者担忧主要集中在定价策略、软件发布速度放缓及西方市场硬件折扣等方面。Switch 2在上市前四个月全球销量达1036万台，创下任天堂最快销售纪录，但西方市场假日促销销量同比下降35%。公司预计2026财年硬件销量1900万台，软件4800万份，收入2.25万亿日元，营业利润3700亿日元，但利润率因制造成本上升承压。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/nintendo-stock-slides-despite-strong-switch-2-performance/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/nintendo-stock-slides-despite-strong-switch-2-performance/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-13",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1045,
-        "title": "Meta has closed several studios, including ‘Splosion Man studio Twisted Pixel and Asgard Wrath’s Sanzaru Games",
-        "summary": "Meta已关闭多家VR游戏工作室，包括Twisted Pixel和Sanzaru Games，这是其从元宇宙投资转向可穿戴设备战略的一部分。裁员涉及Reality Labs部门约10%的员工，受影响的开发者已公开确认失业。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.videogameschronicle.com/news/meta-has-closed-several-studios-including-splosion-man-studio-twisted-pixel-and-asgard-wraths-sanzaru-games/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.videogameschronicle.com/news/meta-has-closed-several-studios-including-splosion-man-studio-twisted-pixel-and-asgard-wraths-sanzaru-games/"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-13",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1046,
-        "title": "Sonic Racing CrossWorlds’ physical Switch 2 release won’t be a Game-Key Card, Sega confirms",
-        "summary": "世嘉确认《索尼克赛车：CrossWorlds》Switch 2实体版将于2026年3月26日发售，售价69.99美元/64.99英镑，游戏将以卡带形式发行，而非密钥卡",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.videogameschronicle.com/news/sonic-racing-crossworlds-physical-switch-2-release-wont-be-a-g...",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.videogameschronicle.com/news/sonic-racing-crossworlds-physical-switch-2-release-wont-be-a-g..."
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-13",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1047,
-        "title": "Rockstar launches official marketplace for mods",
-        "summary": "Rockstar Games推出了一个名为Cfx Marketplace的官方模组市场，旨在为玩家和服务器提供购买和分享模组的平台。该市场由Rockstar于2023年收购的Cfx.re团队开发，该团队此前负责开发《GTA 5》和《荒野大镖客2》的模组。市场提供免费和付费模组，部分捆绑包价格高达数百美元。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/rockstar-launches-official-marketplace-for-mods",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/rockstar-launches-official-marketplace-for-mods"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-13",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1048,
-        "title": "Aream & Co: M&A activity dropped to $500m in Q4 2025",
-        "summary": "2025年第四季度，游戏行业的并购活动规模降至5亿美元，同比下降89%，创下全年最低水平，交易数量同比增长34%，达到39笔，主要来自亚洲出版商。企业转向了规模较小的收购目标，导致交易数量增加但总额下降。私人投资增长29%至9亿美元，覆盖102笔交易。大型多元化游戏公司如索尼、Take-Two、任天堂和腾讯在2025年第三季度持有约1118亿美元可部署资本，亚洲移动游戏公司持有95亿美元。PC收入同比增长20%，主机收入增长13%，移动游戏内购达207亿美元",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/aream-co-ma-activity-dropped-to-500m-in-q4-2025",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/aream-co-ma-activity-dropped-to-500m-in-q4-2025"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-13",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1049,
-        "title": "我国50岁以上网民已突破3.51亿 最爱玩《开心消消乐》",
-        "summary": "QuestMobile 2025年银发人群洞察报告显示，我国50岁以上网民规模已达3.51亿，同比增长5.8%，月人均使用时长135小时、使用次数1345次，同比增长11.1%和6.5%。该群体在数字娱乐、移动社交、金融理财和技能学习方面需求旺盛，其中《开心消消乐》是最受欢迎的手机游戏。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://w...",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://w..."
-            }
-        ],
-        "category": "industry",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-13",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1050,
-        "title": "存储市场沉重一击！SK海力士也要退出消费级市场",
-        "summary": "据知名爆料人Jukan透露，SK海力士考虑退出消费级DRAM和NAND业务，可能效仿美光关停消费级品牌英睿达的做法。此举将影响戴尔等OEM厂商和第三方品牌，并可能使三星成为最大供应商，当前存储市场供需失衡预计持续至2028年。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3935720.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3935720.html"
-            }
-        ],
-        "category": "technology",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-13",
-        "tags": [
-            "内存涨价"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1022,
-        "title": "Steam 在线人数峰值突破 4200 万，平台用户规模再创新高",
-        "summary": "SteamDB 数据显示，Steam 在线玩家峰值数达到了 42,042,778",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/912/345.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/912/345.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-12",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1023,
-        "title": "实体游戏零售寒冬已至：经销商 GameStop 计划关闭旗下 400 家门店",
-        "summary": "实体游戏零售商GameStop计划关闭最多约400家门店，以应对实体游戏销售下滑和经营压力，涉及美国、加拿大和欧洲市场。数字化游戏购买方式迅速普及，玩家更倾向于通过Steam、Xbox Store和PlayStation Store等线上平台购买和下载游戏。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/912/342.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/912/342.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-12",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "negative",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1024,
-        "title": "Cygames宣布成立子公司“Cygames AI Studio”",
-        "summary": "Cygames宣布成立专注于AI技术开发的子公司“Cygames AI Studio”，旨在利用游戏开发经验构建创作者友好的AI工具和服务",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "industry",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-01-12",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1031,
-        "title": "只差官宣了？《使命召唤》启动器代码出现任天堂标识",
-        "summary": "《使命召唤》系列游戏的统一启动器“Call of Duty HQ”最新更新代码中出现了任天堂平台标识，进一步印证了该系列将登陆任天堂新一代主机的传闻。微软此前已与任天堂达成十年协议，承诺将《使命召唤》带给任天堂玩家，而即将推出的《黑色行动7》可能成为首款登陆任天堂新主机的系列作品。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3935615.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3935615.html"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-12",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1033,
-        "title": "任天堂古川俊太郎：内存涨价与关税成挑战，密切关注 Switch 2 利润率",
-        "summary": "任天堂社长古川俊太郎表示，内存价格上涨和关税问题是影响Switch 2利润率的主要挑战，公司正密切监控这些因素并采取应对措施，包括中长期零部件采购策略和价格调整。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-12",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "negative",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1034,
-        "title": "NINTENDO IS WORKING ON BOTH NEW IPS AND NEW ENTRIES IN POPULAR SERIES",
-        "summary": "任天堂总裁古川俊太郎在采访中透露，公司正在开发新IP和热门系列新作，同时强调Switch 2的硬件供应已基本稳定（日本仍短缺），并计划从2026年起大幅扩充软件阵容。此外，公司还提及了塞尔达电影和下一部超级马里奥电影的长期品牌曝光策略。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/nintendo-working-on-new-ips-and-new-entries-in-popular-series/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/nintendo-working-on-new-ips-and-new-entries-in-popular-series/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-12",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1035,
-        "title": "Following its cancellation by Riot, Hytale devs anticipate over a million players in Early Access alone",
-        "summary": "《Hytale》在被拳头取消后由原开发者重新接手，仅早期测试阶段吸引超过百万玩家，标准版售价19.99美元，游戏已通过预售筹集了足够未来两年开发的资金，将于2026年1月13日开启早期测试。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.eurogamer.net/hytale-launch-million-players",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.eurogamer.net/hytale-launch-million-players"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-12",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1036,
-        "title": "Paramount sues Warner Bros. Discovery for details of its deal with Netflix",
-        "summary": "派拉蒙起诉华纳兄弟探索公司（WBD），要求法院披露WBD与Netflix之间82.7亿美元收购协议的条款细节，并指控WBD拒绝提供足够信息以帮助股东评估派拉蒙的收购要约。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/paramount-sues-warner-bros-discovery-for-details-of-its-deal-with-netflix",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/paramount-sues-warner-bros-discovery-for-details-of-its-deal-with-netflix"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-12",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1037,
-        "title": "Warner Bros Games San Francisco reportedly hit with layoffs",
-        "summary": "据报道，华纳兄弟游戏公司旧金山分部在12月底进行了裁员，涉及多个职位和团队，包括设计总监Tony Perkins及其团队，裁员原因可能与某款游戏未能达到预期成功有关。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/warner-bros-games-san-francisco-reportedly-hit-with-layoffs",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/warner-bros-games-san-francisco-reportedly-hit-with-layoffs"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-12",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1038,
-        "title": "存储历史最高超级牛市！已彻底成卖方市场：价格还要再涨50%",
-        "summary": "据Counterpoint Research最新报告，2026年Q1还将再涨40%–50%，2026年Q2预计再上涨约20%。目前64GB RDIMM存储的价格已从2025年Q3的255美元大幅上涨至Q4的450美元，并预计在2026年3月进一步攀升至700美元。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3935648.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3935648.html"
-            }
-        ],
-        "category": "technology",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-12",
-        "tags": [
-            "内存涨价"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1025,
-        "title": "POKÉMON LEGENDS Z-A SWITCH 2 VERSION SURPASSES ONE MILLION SALES IN JAPAN",
-        "summary": "《宝可梦传说Z-A》Switch 2版本在日本零售销量突破100万份，成为该平台第二款达成此成就的游戏，仅次于《马里奥世界》。Switch 2版本截至2025年12月28日销量达1,004,154份，而原Switch版本同期销量为1,529,823份，双平台总销量超250万份。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/pokemon-legends-z-a-switch-2-version-surpasses-one-million-sales-in-japan/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/pokemon-legends-z-a-switch-2-version-surpasses-one-million-sales-in-japan/"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-11",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1030,
-        "title": "黑五爆火主机Nex Playground已经与NBA达成合作",
-        "summary": "Nex Playground是一款主打家庭向的游戏主机，近期公司宣布与NBA达成合作，计划2026年春季登陆英国市场并推出联机功能，同时将扩充体育游戏内容。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3935586.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3935586.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-11",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1026,
-        "title": "FABLE IS ALLEGEDLY RELEASING DAY ONE ON PS5, WHILE FORZA HORIZON 6 “JUST WASN’T READY” FOR LAUNCH",
-        "summary": "微软旗下Playground Games工作室的《神鬼寓言》新作据传将在PS5平台同步首发，而《极限竞速地平线6》因开发问题无法实现多平台同步发布，这被视为微软向第三方发行商转型的标志性事件。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/fable-releasing-day-one-on-ps5-forza-horizon-6-wasnt-ready/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/fable-releasing-day-one-on-ps5-forza-horizon-6-wasnt-ready/"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-10",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1027,
-        "title": "Forza Horizon 5 PS5 port tops 5 million sales, securing $300m in additional sales for Xbox",
-        "summary": "《极限竞速地平线5》PS5版本销量突破500万份，为Xbox带来额外3亿美元收入。分析师指出微软转向第三方平台的策略与其盈利目标一致。同时，微软宣布将于1月22日举办开发者直面会，重点展示《极限竞速地平线6》的游戏玩法和新特性。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.eurogamer.net/forza-horizon-5-ps5-port-tops-5-million-sales-securing-300m-in-additional-sales-for-xbox",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.eurogamer.net/forza-horizon-5-ps5-port-tops-5-million-sales-securing-300m-in-additional-sales-for-xbox"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-10",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1028,
-        "title": "DRAGON QUEST XI S SHIPS OVER 9 MILLION UNITS WORLDWIDE",
-        "summary": "Square Enix确认《勇者斗恶龙11》全球出货量突破900万份，成为该系列最畅销的单部作品，占系列总销量的近10%，系列的全球销量已经超过了9500万份。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/dragon-quest-xi-s-ships-over-9-million-units-worldwide/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/dragon-quest-xi-s-ships-over-9-million-units-worldwide/"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-10",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1029,
-        "title": "LARIAN STUDIOS IS UNABLE TO BRING BALDUR’S GATE 3 TO SWITCH 2 AMID SHAKY RELATIONSHIP WITH IP OWNER HASBRO",
-        "summary": "拉瑞安工作室表示《博德之门 3》未登陆任天堂 Switch/2 的原因在于决定权不在工作室手中，而是由威世智掌控。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/larian-baldurs-gate-3-switch-2-hasbro/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/larian-baldurs-gate-3-switch-2-hasbro/"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-10",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1015,
-        "title": "微软 Xbox 开发者直面会定档 1 月 23 日，《神鬼寓言》《极限竞速》将成重头戏",
-        "summary": "微软 Xbox 开发者直面会将于北京时间 1 月 23 日凌晨 2 时举行，重点展示《神鬼寓言》《极限竞速：地平线 6》和《轮回之兽》三款游戏最新内容。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/911/731.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/911/731.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-09",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1016,
-        "title": "《底特律 变人》销量突破1500万份",
-        "summary": "《底特律：变人》销量突破1500万份，成为Quantic Dream迄今为止最畅销的作品。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/209388",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/209388"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-09",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1021,
-        "title": "e宝还送游戏吗？EPIC六年内用户近翻倍收入仅增1.6%",
-        "summary": "Epic游戏商店在过去六年中用户数量增长173%，达到2.95亿，但第三方游戏收入仅增长1.6%，反映出免费游戏策略未能有效转化为消费增长。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3935470.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3935470.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-09",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1007,
-        "title": "华纳兄弟董事会再次拒绝派拉蒙千亿美元收购要约",
-        "summary": "华纳兄弟探索公司董事会再次拒绝了派拉蒙修改后的收购要约，认为其不符合公司及股东的最佳利益，条款包含巨额债务融资，带来了成交风险，且未达到与网飞达成的并购协议的标准。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/209343",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/209343"
-            }
-        ],
-        "category": "industry",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-08",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1012,
-        "title": "《黎明行者之血》愿望单数量现已超过100万",
-        "summary": "《黎明行者之血》愿望单数量突破100万，由《巫师3》前主创团队开发，采用开放世界设计和虚幻5引擎，预计2026年发售。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3935402.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3935402.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-08",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1013,
-        "title": "促销神力！ 《底特律：变人》两周售出近百万份",
-        "summary": "《底特律：变人》在Steam冬季促销期间因90%折扣力度，稳居Steam畅销榜前列，两周内销量达到99.3万份，同时在线玩家数创新高。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3935404.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3935404.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-08",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1014,
-        "title": "网易海洋RPG《遗忘之海》流浪号测试开启！实机预告发布",
-        "summary": "网易海洋RPG《遗忘之海》宣布将于2026年2月5日至12日开启名为“流浪号”的PC平台A轮封闭招募测试。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3935405.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3935405.html"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-01-08",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1017,
-        "title": "5v5俯视视角战术射击游戏《PUBG: BLINDSPOT》定于2月5日发售",
-        "summary": "绝地求生工作室打造的5v5俯视视角战术射击游戏《PUBG: BLINDSPOT》定于2月5日发售",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/209370",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/209370"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-01-08",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1018,
-        "title": "Nintendo Switch 2 Hits Sales Slump During Christmas Season in Western Markets",
-        "summary": "Nintendo Switch 2在2025年圣诞季期间在西方市场遭遇销售下滑，尽管全年销量表现良好。美国市场销量同比下降35%，英国下降16%，法国下降超过30%。Nintendo认为经济形势复杂和缺乏西方主流游戏是销售下滑的原因，但公司对整体销售表现满意，并已上调销售预期。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://gamingbolt.com/nintendo-switch-2-hits-sales-slump-during-christmas-season-in-western-markets",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://gamingbolt.com/nintendo-switch-2-hits-sales-slump-during-christmas-season-in-western-markets"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-08",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1019,
-        "title": "Xbox and Obsidian’s Avowed is coming to PS5 with new modes and content",
-        "summary": "微软旗下黑曜石工作室《宣誓》将于2026年2月17日登陆PlayStation 5平台，同时推出周年更新，包含新游戏模式、新种族、新武器类型和照片模式等内容。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.videogameschronicle.com/news/xbox-and-obsidians-avowed-is-coming-to-ps5-with-new-modes-and-content/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.videogameschronicle.com/news/xbox-and-obsidians-avowed-is-coming-to-ps5-with-new-modes-and-content/"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-08",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1020,
-        "title": "Discord reportedly makes confidential filing for IPO",
-        "summary": "Discord已向美国证券交易委员会提交了IPO申请，可能在未来几个月内公开上市。Discord拥有超过2亿月活跃用户，用户每月在平台上玩游戏的总时长达到19亿小时。此前微软曾试图以120亿美元收购Discord，但被拒绝。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/discord-reportedly-makes-confidential-filing-for-ipo",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/discord-reportedly-makes-confidential-filing-for-ipo"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-08",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1000,
-        "title": "联想官宣 6 月推 SteamOS 版 Legion Go 2 掌机：比 Win11 版更能释放 Z2 Extreme 芯片潜能",
-        "summary": "联想宣布将于2026年6月推出原生搭载SteamOS的Legion Go 2游戏掌机，售价1199美元，比Windows 11版贵100美元，主打“开箱即用”流畅游戏体验。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/911/073.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/911/073.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-07",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1008,
-        "title": "Steam 创下历史最佳 12 月业绩：上月营收超 16 亿美元",
-        "summary": "Steam在2025年12月创下历史最佳业绩，单月营收突破16亿美元，同比增长22.7%，全年Steam销售额逾160亿美元（约合1119.25亿元人民币）。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/911/221.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/911/221.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-07",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1009,
-        "title": "Next Xbox – Microsoft Reportedly Prepping “Major Updates” for Windows 11 Full Screen Experience",
-        "summary": "微软正为下一代Xbox准备Windows 11“全屏体验”的重大更新，同时保持对现有Xbox One和Xbox Series X/S游戏的向后兼容性。该设备可能定位高端市场，且可能与PlayStation 6一同延期至2027/2028年后发布。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://gamingbolt.com/next-xbox-microsoft-reportedly-prepping-major-updates-for-windows-11-full-screen-experience",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://gamingbolt.com/next-xbox-microsoft-reportedly-prepping-major-updates-for-windows-11-full-screen-experience"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-07",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1010,
-        "title": "Ubisoft has closed its Halifax studio and claims the decision is unrelated to recent unionization",
-        "summary": "育碧关闭了位于加拿大哈利法克斯的工作室，导致约70名员工失业，该工作室负责开发《刺客信条：叛变》。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.videogameschronicle.com/news/ubisoft-has-closed-its-halifax-studio-but-claims-decision-is-unrelated-to-recent-unionization/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.videogameschronicle.com/news/ubisoft-has-closed-its-halifax-studio-but-claims-decision-is-unrelated-to-recent-unionization/"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-07",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1011,
-        "title": "Roblox rolls out global age checks for any user wanting to use its chat feature",
-        "summary": "Roblox在全球范围内要求用户验证年龄后才能使用聊天功能，此前已在英国、澳大利亚、新西兰和荷兰实施。用户完成年龄验证后，将被分配到六个年龄组之一：7岁以下、9-12岁、13-15岁、15-17岁、18-20岁和21岁以上。默认情况下，用户只能与相邻年龄组的用户聊天。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/roblox-rolls-out-global-age-checks-for-any-user-wanting-to-use-its-chat-feature",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/roblox-rolls-out-global-age-checks-for-any-user-wanting-to-use-its-chat-feature"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-07",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 993,
-        "title": "宝可梦30周年庆典将于2月27日举行",
-        "summary": "宝可梦30周年庆典将于2月27日举行",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/209237",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/209237"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-06",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 994,
-        "title": "ARC Raiders Reportedly Crosses 12 Million Sales to Kick Off 2026",
-        "summary": "ARC Raiders在2026年初创下新纪录，据报道销量突破1200万份，收入超过3.5亿美元，并在1月4日达到320万日活跃用户。Steam平台销量占比最高，达到53.5%，PS5和Xbox分别占25.5%和21%。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://gamingbolt.com/arc-raiders-reportedly-crosses-12-million-sales-to-kick-off-2026",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://gamingbolt.com/arc-raiders-reportedly-crosses-12-million-sales-to-kick-off-2026"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-06",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 997,
-        "title": "《暗黑破坏神4》销量破1000万份 你买了这游戏吗？",
-        "summary": "据前《暗黑破坏神4》品牌营销项目经理Christopher Tai的领英资料显示，截止2024年，《暗黑破坏神4》销量已突破1000万份。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-06",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 998,
-        "title": "《最终幻想战略版》销量突破100万份！官方发文庆祝",
-        "summary": "截至2025年12月31日，《最终幻想战略版：伊瓦利斯编年史》的全球出货量与数字版销量合计已突破100万份。游戏于2025年9月30日发售，达到100万销量耗时3个月。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3935255.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3935255.html"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-06",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 999,
-        "title": "Exclusive: Intel Is Making Its Own Handheld Gaming PC Chips at CES 2026",
-        "summary": "英特尔在2026年CES展会上宣布推出专为手持游戏设备设计的Panther Lake芯片和Arc B390 iGPU，将与MSI、宏碁、微软、CPD、富士康和纬创等厂商合作，推出基于Arc B390的掌上游戏设备。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ign.com/articles/exclusive-intel-is-making-its-own-handheld-gaming-pc-chips-at-ces-2026",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ign.com/articles/exclusive-intel-is-making-its-own-handheld-gaming-pc-chips-at-ces-2026"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-06",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1001,
-        "title": "Sensor Tower：腾讯《王者荣耀》2025 全年收入超 20 亿美元，《三角洲行动》收入同比激增 29 倍累计突破 5 亿美元",
-        "summary": "Sensor Tower数据显示，2025年12月共有33家中国厂商进入全球手游发行商收入榜前100名，合计收入19.5亿美元，占TOP100总收入的34.6%。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "industry",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-06",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1002,
-        "title": "NVIDIA UNVEILS DLSS 4.5 WITH MAJOR AI RENDERING UPGRADES",
-        "summary": "NVIDIA在CES 2026上正式发布DLSS 4.5，这是其AI渲染技术的重大升级版本，引入了第二代Transformer模型、动态多帧生成技术和6X帧生成模式，显著提升了图像质量和性能表现。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/nvidia-unveils-dlss-4-5-with-major-ai-rendering-upgrades/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/nvidia-unveils-dlss-4-5-with-major-ai-rendering-upgrades/"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-06",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1003,
-        "title": "PLAYSTATION FILES PATENT FOR AN AI GHOST, A FEATURE THAT CLEARS GAMES USING LEARNING DATA",
-        "summary": "索尼互动娱乐公司申请了一项名为“AI Ghost”的专利，该系统利用人工智能技术通过分析游戏数据生成虚拟角色，通过动态演示或完成游戏操作，帮助玩家完成游戏任务。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/playstation-ai-ghost-clears-games-using-learning-data/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/playstation-ai-ghost-clears-games-using-learning-data/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-06",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1004,
-        "title": "Top Five Most-Played Games on PlayStation and Xbox in 2025 in the US Were the Same as in 2024",
-        "summary": "2025年美国主机游戏市场最受欢迎游戏排行榜显示，《堡垒之夜》《使命召唤》《侠盗猎车手5》《Roblox》和《我的世界》在Xbox和PlayStation平台上占据主导地位，排名与2024年几乎一致。《使命召唤：黑色行动7》虽受批评，但品牌影响力仍存。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-06",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1005,
-        "title": "Microsoft’s First Xbox Game Pass Announcement of 2026 Confirms Star Wars Outlaws, Resident Evil Village, and More for January",
-        "summary": "Microsoft’s First Xbox Game Pass Announcement of 2026 Confirms Star Wars Outlaws, Resident Evil Village, and More for January",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ign.com/articles/microsofts-first-xbox-game-pass-announcement-of-2026-confirms-star-wars-outlaws-resident-evil-village-and-more-for-january",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ign.com/articles/microsofts-first-xbox-game-pass-announcement-of-2026-confirms-star-wars-outlaws-resident-evil-village-and-more-for-january"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-06",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1006,
-        "title": "ERA: UK games revenue rose 7.4% to hit £5.4bn in 2025",
-        "summary": "2025年，英国的娱乐产业（包括游戏、音乐和视频领域）创造了133亿英镑的营收，这一数字同比增长了7.1%，其中英国消费者在视频游戏上",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-06",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 985,
-        "title": "Steam 在线人数峰值突破 4181 万大关，2026 新年假期特卖活动成主力推手",
-        "summary": "Steam近24小时用户在线峰值达到41,816,052（约4181万人），创下新纪录。去年3月Steam在线用户峰值突破4100万，去年10月突破4160万。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/910/419.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/910/419.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-05",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 986,
-        "title": "继日本之后 德国零售商也开始限购RTX 50系显卡",
-        "summary": "德国分销商无法出售RTX 5070Ti、5080和5090型号的显卡，导致取消现有订单及12月30日之后的所有订单。将价格更亲民的RTX 50系列显卡销量限制在每款5张，高端型号完全断货。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3935141.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3935141.html"
-            }
-        ],
-        "category": "technology",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-05",
-        "tags": [
-            "内存涨价"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 987,
-        "title": "英特尔被吊打！AMD在Steam平台硬件占比已近50％",
-        "summary": "AMD在Steam平台的CPU市场份额已攀升至44.42%，英特尔降至55.58%，AMD正迅速逼近其长期领先的竞争对手。AMD的崛起得益于更高的性价比和丰富的产品选择，尤其是搭载3D垂直缓存技术的锐龙X3D系列芯片在游戏领域表现卓越。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3935165.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3935165.html"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-05",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 988,
-        "title": "前R星技术总监再次强调《GTA》不会离开美国城市",
-        "summary": "前R星技术总监奥布·弗梅伊在采访中重申《GTA》系列未来仍将聚焦美国城市，认为开发周期过长和文化关联性使其难以拓展至全球其他地区。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3935152.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3935152.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-05",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 989,
-        "title": "《方舟：生存飞升》开发商官宣正积极开发Switch2版",
-        "summary": "《方舟：生存飞升》开发商Studio Wildcard确认正在为任天堂Switch2积极开发该游戏，利用虚幻引擎5.7的Nanite技术解决了性能瓶颈问题，并计划在现有平台也进行引擎升级。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3935182.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3935182.html"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-05",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 990,
-        "title": "《ARC Raiders》公开匹配机制:按玩家\"好战\"程度分区",
-        "summary": "《ARC Raiders》系统会基于玩家倾向于参与PvP还是专注于PvE，将其匹配至行为模式相近的对局。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3935185.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3935185.html"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-01-05",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 991,
-        "title": "《英雄联盟》全区临时停服维护 原因或为安全证书到期",
-        "summary": "《英雄联盟》全区因故障临时停服维护，现已恢复服务，具体原因可能与安全证书过期有关，但官方尚未正式确认。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202601/3935199.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202601/3935199.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-05",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 992,
-        "title": "动作肉鸽独游《梦之形》全球销量破100万份，游戏1.1版本更新获特别好评",
-        "summary": "《梦之形》全球累计销量突破100万份，首两周销量达50万份，4个月内实现百万销量。融合MOBA风格与肉鸽玩法，支持4人联机。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/209255",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/209255"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-05",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 995,
-        "title": "PS5 SAVE DATA JAILBREAK EXPLOIT MAY SUPPORT ADDITIONAL GAMES, FULL COMPATIBILITY LIST DETAILED",
-        "summary": "最近发现的PS5存档数据越狱漏洞可能支持更多游戏，完整兼容列表已公布。该漏洞最初通过《星球大战：复仇赛车手》利用，基于特定光盘版本（CUSA03474），仅适用于运行固件12.00的光驱版PS5主机。现在其他PS2游戏也可能作为替代入口点，并提供了潜在兼容游戏列表。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/ps5-save-data-jailbreak-exploit-compatibility-list/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/ps5-save-data-jailbreak-exploit-compatibility-list/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-05",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 996,
-        "title": "Sega co-founder and arcade founding father, David Rosen, dies age 95",
-        "summary": "David Rosen，世嘉（Sega）联合创始人及日本街机行业奠基人，于95岁高龄去世。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.videogameschronicle.com/news/sega-co-founder-and-arcade-founding-father-david-rosen-dies-age-95/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.videogameschronicle.com/news/sega-co-founder-and-arcade-founding-father-david-rosen-dies-age-95/"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-05",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 979,
-        "title": "《空洞骑士：丝之歌》荣获年度最佳：Steam大奖2025得主揭晓",
-        "summary": "steam年度最佳游戏奖：《空洞骑士：丝之歌》",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-04",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 980,
-        "title": "PS5硬件ROM密钥疑似泄露，《星球大战：复仇赛车》实体盘价格暴涨",
-        "summary": "PS5硬件ROM密钥疑似泄露，可能影响主机底层安全架构，且无法通过常规固件更新修复。目前发现《星球大战：复仇赛车》实体盘可能成为破解突破口，导致该游戏二手价格暴涨。此次事件被认为是PS5上市以来首次触及主机根本信任链的重大安全漏洞。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/209192",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/209192"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-01-04",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 981,
-        "title": "RESIDENT EVIL REQUIEM SURPASSES FOUR MILLION WISHLISTS AHEAD OF LAUNCH",
-        "summary": "卡普空正式确认，距离发售还有两个月，《生化危机：安魂曲》愿望清单数量已突破400万，游戏计划于2026年2月27日登陆多平台。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/resident-evil-requiem-surpasses-four-million-wishlists-ahead-of-launch/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/resident-evil-requiem-surpasses-four-million-wishlists-ahead-of-launch/"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-03",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 982,
-        "title": "ASUS CONFIRMS PRODUCT PRICE INCREASES STARTING JANUARY 5",
-        "summary": "华硕ASUS确认自2026年1月5日起对选定产品实施价格上调，具体调整将针对特定产品组合，预计包括消费级和游戏设备（如Republic of Gamers品牌产品）。主要受全球供应链持续波动，尤其是内存和存储等核心组件面临价格压力。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/asus-confirms-product-price-increases-starting-january-5/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/asus-confirms-product-price-increases-starting-january-5/"
-            }
-        ],
-        "category": "technology",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-03",
-        "tags": [
-            "内存涨价"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 983,
-        "title": "YOSHIP TEASES POSSIBLE SWITCH 2 VERSION OF FINAL FANTASY XIV",
-        "summary": "《最终幻想14》制作人吉田直树在新年祝福中暗示，可能会推出任天堂Switch 2版本，但未提供具体确认或时间表。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/yoship-teases-possible-switch-2-version-of-final-fantasy-xiv/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/yoship-teases-possible-switch-2-version-of-final-fantasy-xiv/"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-01-03",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 978,
-        "title": "免费格斗游戏《2XKO》2026年1月20日离开抢先体验",
-        "summary": "拳头游戏免费格斗游戏《2XKO》将于2026年1月20日离开抢先体验，正式登陆PC，Xbox Series和PS5平台。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3934918.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3934918.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-31",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 984,
-        "title": "NVIDIA & AMD WILL REPORTEDLY BRING SIGNIFICANT INCREASE TO GPU PRICES IN 2026, RTX 5090 FROM $2000 TO $5000",
-        "summary": "NVIDIA和AMD计划在2026年大幅提高GPU价格，其中NVIDIA的旗舰产品RTX 5090预计从2000美元涨至5000美元。涨价主要源于内存成本飙升，DDR5内存价格在几个月内上涨近四倍。这一趋势预计将影响消费级显卡及AI数据中心的高端GPU。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/nvidia-amd-significant-increase-gpu-prices-2026-rtx-5090/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/nvidia-amd-significant-increase-gpu-prices-2026-rtx-5090/"
-            }
-        ],
-        "category": "technology",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-31",
-        "tags": [
-            "内存涨价"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 967,
-        "title": "网易生存游戏《七日世界》明年支持玩家建立私服，热门服务器所有者可获收入分成",
-        "summary": "网易生存游戏《七日世界》宣布2026年启动“用户共创计划”，允许玩家建立私人服务器并从中获得收入分成，同时游戏将增设捐赠页面支持创作者。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/909/207.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/909/207.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-30",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 968,
-        "title": "腾讯《王者荣耀》新匹配算法正式服扩大测试范围，计划抢先服更新后于排位赛全面启用",
-        "summary": "腾讯《王者荣耀》新匹配算法正式服扩大测试范围，计划抢先服更新后于排位赛全面启用",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/909/185.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/909/185.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-30",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 969,
-        "title": "因内存价格飙涨，索尼 PS6、微软下一代 Xbox 恐推迟至 2028 年后发布",
-        "summary": "消息源 Tom Henderson 爆料，微软与索尼正重新评估下一代主机的发布计划，可能推迟原定于 2027~2028 年的上市窗口。现役主机如Xbox Series X|S和PlayStation 5可能因持续的供应限制和组件成本攀升而迎来价格上调。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/909/024.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/909/024.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-30",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "negative",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 970,
-        "title": "经典 ARPG 游戏，心动公司宣布将完成对《火炬之光》系列 IP 的收购",
-        "summary": "心动公司宣布将完成对《火炬之光》系列IP的收购，获得全球范围内的相关知识产权权益，并计划长期投入推动该系列品牌建设与内容创新。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/909/007.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/909/007.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-30",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 971,
-        "title": "《幻想生活ｉ 转圈圈的龙和偷取时间的少女》销量突破150万份",
-        "summary": "《幻想生活ｉ 转圈圈的龙和偷取时间的少女》销量突破150万份",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/209034",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/209034"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-30",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 973,
-        "title": "steam 2025榜单",
-        "summary": "steam 2025榜单",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://store.steampowered.com/charts/bestofyear/2025",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://store.steampowered.com/charts/bestofyear/2025"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-30",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 974,
-        "title": "《永劫无间》小米渠道版本手游将于 2026 年 3 月 2 日终止运营，玩家可找回资产",
-        "summary": "25年12月30日10时：关闭小米平台游戏下载入口",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-30",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 975,
-        "title": "沐瞳 Lighthouse 生活模拟经营游戏新作《代号：Lovania》公布，首曝 PV 同步释出",
-        "summary": "沐瞳 Lighthouse 生活模拟经营游戏新作《代号：Lovania》公布，首曝 PV 同步释出",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/909/284.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/909/284.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-30",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 976,
-        "title": "UK: Nintendo Switch 2 has now outsold Wii U, Dreamcast and PlayStation Vita",
-        "summary": "Nintendo Switch 2在英国市场销量已超过Wii U、SEGA Dreamcast和PlayStation Vita，这一成就发生在该主机发布仅6个月后。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mynintendonews.com/2025/12/30/uk-nintendo-switch-2-has-now-outsold-wii-u-dreamcast-and-playstation-vita/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mynintendonews.com/2025/12/30/uk-nintendo-switch-2-has-now-outsold-wii-u-dreamcast-and-playstation-vita/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-30",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 977,
-        "title": "Pokemon and Mario in top ten of highest grossing media franchises in history",
-        "summary": "宝可梦和马力欧位列全球最赚钱媒体IP前十名，其中Pokemon排名第一，Mario排名第六。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-30",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 960,
-        "title": "《寂静岭》游戏制作人冈本基：希望每年都推出一部《寂静岭》新作",
-        "summary": "《寂静岭》系列制作人冈本基表示，公司计划每年推出一款《寂静岭》游戏，以保持系列热度。但承认保持每年一作的节奏并不容易，但会努力实现这一目标。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-29",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 963,
-        "title": "15天破百万！《影之刃零》100万愿望单数量达成！",
-        "summary": "国产3A武侠动作游戏《影之刃零》在TGA 2025颁奖典礼上公布发售日期和开放愿望单功能后，15天内全平台愿望单数量突破100万，超过《仁王3》、《鬼武者：剑之道》等同类动作冒险游戏半年的积累量。海外预约占比超50%，主要来自美国、欧洲和巴西等地区。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/208992",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/208992"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-29",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 964,
-        "title": "SE计划在2027年底使用AI实现QA和调试工作自动化",
-        "summary": "SE计划在2027年底使用AI实现QA和调试工作自动化",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3934759.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3934759.html"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-29",
-        "tags": [
-            "业内资讯-AI"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 965,
-        "title": "Square Enix teases Dragon Quest and Nier surprises for 2026",
-        "summary": "Square Enix在2026年将为《勇者斗恶龙》和《尼尔》系列准备惊喜内容，以庆祝其40周年及9周年。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mynintendonews.com/2025/12/28/square-enix-teases-dragon-quest-and-nier-surprises-for-2026/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mynintendonews.com/2025/12/28/square-enix-teases-dragon-quest-and-nier-surprises-for-2026/"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-29",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 966,
-        "title": "‘It’s going into very good hands’: CD Projekt is selling GOG",
-        "summary": "CD Projekt已将其PC游戏商店GOG.com出售给联合创始人Michał Kiciński，交易金额为9070万波兰兹罗提（2520万美元）。GOG将继续保持其DRM-free的游戏分发理念，并与CD Projekt签署了分销协议，确保后者未来的游戏仍将在GOG平台发布。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-29",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 972,
-        "title": "NateTheHate: Nintendo Switch 2 dev kit availability “has largely been resolved”",
-        "summary": "Nintendo Switch 2开发套件（dev kit）供应问题已基本解决，意味着像《使命召唤》这样的游戏因开发套件延迟而无法更早发布的情况将得到改善。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mynintendonews.com/2025/12/29/natethehate-nintendo-switch-2-dev-kit-availability-has-largely-been-resolved/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mynintendonews.com/2025/12/29/natethehate-nintendo-switch-2-dev-kit-availability-has-largely-been-resolved/"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-29",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 958,
-        "title": "RAINBOW SIX SIEGE SERVERS HAVE BEEN HACKED, PLAYERS GIVEN BILLIONS IN CURRENCY",
-        "summary": "Ubisoft的《彩虹六号：围攻》服务器遭到黑客攻击，导致玩家账户被注入数十亿游戏货币和稀有道具，Ubisoft已关闭服务器并展开调查，承诺不会因玩家使用异常货币而封号，但将回滚所有未授权交易。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/rainbow-six-siege-servers-hacked-players-given-billions-in-currency/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/rainbow-six-siege-servers-hacked-players-given-billions-in-currency/"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-28",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 961,
-        "title": "迪士尼想“雨露均沾”，消息称更多《星球大战绝地》系列游戏将登陆 Switch 2",
-        "summary": "爆料人Nash Weedle透露，迪士尼正推动旗下《星球大战》系列游戏登陆任天堂Switch 2平台，包括《星球大战绝地：陨落的武士团》和《星球大战绝地：幸存者》的移植版本，近期公布的《旧共和国的命运》以及EA正在开发的《星球大战绝地》系列第三作也有可能登陆Switch 2",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/908/533.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/908/533.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-27",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 957,
-        "title": "2025年退坑率最高的十大游戏 前三都是国产",
-        "summary": "外媒HowLongToBeat发布了“2025年度回顾”，其中“退坑率（Highest Retirement）”最高的游戏榜单正式出炉，国产游戏退坑前3如下",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-26",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 959,
-        "title": "MARIO KART WORLD HITS 2.5 MILLION SALES IN JAPAN, SETS NEW FRANCHISE RECORD",
-        "summary": "《马里奥赛车世界》日本销量达250万份（仅用29周），创下系列最快销售纪录，成为日本2025年最畅销游戏，《马里奥赛车》系列累计销量突破2亿份。同时任天堂Switch 2主机全球销量已达957万份。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/mario-kart-world-hits-2-5-million-sales-in-japan-sets-new-franchise-record/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/mario-kart-world-hits-2-5-million-sales-in-japan-sets-new-franchise-record/"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-26",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 962,
-        "title": "卡普空确认《生化危机：安魂曲》不提供 VR 游戏模式，或因索尼 PS VR 2 用户数量不佳导致",
-        "summary": "卡普空确认《生化危机：安魂曲》将不提供VR模式，可能因索尼PS VR2用户数量不佳导致。此前多款《生化危机》系列作品支持VR模式，《生化危机 7》125万VR 玩家，《生化危机 4 重制版》24.4万VR 玩家",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/908/359.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/908/359.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-26",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 947,
-        "title": "开放世界生存游戏《NO LAW》Steam愿望单突破30万",
-        "summary": "TGA颁奖典礼亮相的开放世界生存游戏《NO LAW》Steam 愿望单数量突破35万，游戏采用虚幻引擎5打造，融合高...",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-25",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 948,
-        "title": "《弹丸论破》系列销量突破1000万套",
-        "summary": "《弹丸论破》系列全球销量突破1000万套，团队发文感谢玩家支持，并宣布新作《超级弹丸论破2x2》将于2026年发售。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/208852",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/208852"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-25",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 949,
-        "title": "游戏科学新设全资子公司，注册资本500万元",
-        "summary": "游戏科学新设全资子公司，注册资本500万元",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/208867",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/208867"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-25",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 950,
-        "title": "报告称 Steam 平台已恢复上线，北京时间今天凌晨宕机持续约 1 小时",
-        "summary": "报告称 Steam 平台已恢复上线，北京时间今天凌晨宕机持续约 1 小时",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/907/767.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/907/767.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-25",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 951,
-        "title": "《赛博朋克 2077》续作开发细节曝光：多人模式致工期超预期，初定 2030 年发售",
-        "summary": "《赛博朋克2077》续作开发因多人模式投入导致工期延长，目前有135名专职开发人员，发售日期初定2030年第四季度",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/907/766.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/907/766.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-25",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 952,
-        "title": "大的来了！国产《抵抗者》《仙剑四》重制版将发布实机预告",
-        "summary": "国产单机游戏《抵抗者》（抗战FPS，融合谍战解迷）和《仙剑奇侠传四》重制版将在B站发布实机预告，具体时间分别为12月26日和12月29日。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3934590.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3934590.html"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-25",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 953,
-        "title": "remedy调整发售策略 《控制》新作将同步首发Steam平台",
-        "summary": "Remedy工作室宣布调整发行策略，其新作《控制：Resonant》将于2026年在PC（Steam）、PS5和Xbox Series X/S平台同步首发，这是该工作室首次实现大型单人游戏的Steam同步发售，旨在扩大PC玩家覆盖并顺应行业\"拒绝平台独占\"趋势。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3934584.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3934584.html"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-25",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 954,
-        "title": "2025最后一批版号发布：腾讯「QQ农场」、乐元素《白银之城》，还有《代号：界》",
-        "summary": "主要有腾讯《QQ经典农场》，育碧《波斯王子：失落的王冠》，乐元素《白银之城》",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mp.weixin.qq.com/s/Q6v63oZ5c74T0EXq39kPEg",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mp.weixin.qq.com/s/Q6v63oZ5c74T0EXq39kPEg"
-            }
-        ],
-        "category": "industry",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-25",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 955,
-        "title": "索尼将持续推行在线服务游戏，明年发售第一方作品中只有两款单机",
-        "summary": "索尼将继续推行在线服务游戏战略，2026年PS5阵容中服务型游戏数量将首次超过单机游戏，确认推出的单机游戏只有《漫威金刚狼》和《Saros》。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/908/031.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/908/031.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-25",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 956,
-        "title": "内存价格狂飙：多家商店直接暂停PC订单！有钱也买不到",
-        "summary": "内存价格飙升导致多家日本PC商店暂停接受新订单，部分商店甚至宣布长期停止接单，现有订单交付时间延长，预订恢复后将上调价格。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3934608.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3934608.html"
-            }
-        ],
-        "category": "technology",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-25",
-        "tags": [
-            "内存涨价"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 939,
-        "title": "《恶魔轮盘》销量突破800万，主机版将于26年发售",
-        "summary": "心理恐怖游戏《恶魔轮盘》全球玩家数量突破800万，相比去年12月的400万实现翻番，主机版将于2026年正式推出。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/208848",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/208848"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-24",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 940,
-        "title": "Steam周销量排行榜:《ARC Raiders》夺冠|2025年12月第3周",
-        "summary": "《ARC Raiders》夺得榜首，Steam Deck位居第二",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/208846",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/208846"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-24",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 941,
-        "title": "《007 初露锋芒》延期至26年5月27日发售",
-        "summary": "IO Interactive 公告，《007初露锋芒》延期至2026年5月27日发售",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/208844",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/208844"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-24",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 946,
-        "title": "“国补”PS5难掩Playstation在日本的颓势 销量持续走低",
-        "summary": "尽管索尼在日本推出了价格更低的“国补”版PS5主机以刺激销售，新机型发售前两周销量较前几个月有明显增长，但最新报告显示PS5硬件总销量估计为18,912台，低于去年同期的21,574台。曾因技术限制在PS主机上独占的游戏，如《生化危机：安魂曲》等本土大作现均已登陆Switch 2平台，索尼失去了这一优势。PS5庞大的固定设备特性不太符合日本人的生活方式。PS5也缺乏能与《马里奥》《宝可梦》等文化影响力相匹敌的自有品牌。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3934489.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3934489.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-24",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 930,
-        "title": "EA 股东批准 550 亿美元出售公司，沙特公共投资基金牵头收购",
-        "summary": "艺电公司（EA）股东批准以550亿美元的价格将公司出售给沙特阿拉伯公共投资基金，交易价格为每股210美元",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/907/104.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/907/104.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-23",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 932,
-        "title": "派拉蒙加码竞购华纳兄弟，获甲骨文创始人巨额担保",
-        "summary": "派拉蒙在竞购华纳兄弟探索公司（WBD）的竞争中加码，获得甲骨文创始人Larry Ellison的提供价值404亿美元且不可撤销的个人担保，以支持总额1080亿美元的全现金收购要约。并提出更优厚的收购条件，与网飞展开激烈竞争。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/208811",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/208811"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-23",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 933,
-        "title": "PLAYSTATION STORE HOLIDAY SALE GOES LIVE WITH DISCOUNTS UP TO 75 PERCENT",
-        "summary": "索尼PlayStation商店的节日促销活动已正式启动，提供高达75%的折扣，涵盖数千款游戏，活动将持续至2025年1月21日。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/playstation-store-holiday-sale-goes-live-with-discounts-up-to-75-percent/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/playstation-store-holiday-sale-goes-live-with-discounts-up-to-75-percent/"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-23",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 934,
-        "title": "Ubisoft says it is working with Nintendo to improve Switch 2 VRR support",
-        "summary": "育碧宣布正与任天堂合作优化Switch 2的VRR（可变刷新率）技术支持，旨在提升游戏帧率稳定性，使《刺客信条：影》等游戏运行更流畅，并暗示相关优化算法未来可能更广泛应用。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mynintendonews.com/2025/12/22/ubisoft-says-it-is-working-with-nintendo-to-improve-switch-2-vrr-support/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mynintendonews.com/2025/12/22/ubisoft-says-it-is-working-with-nintendo-to-improve-switch-2-vrr-support/"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-23",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 942,
-        "title": "消息称首个 Switch 2 版《使命召唤》游戏接近完工，2026 年登场",
-        "summary": "首个Switch 2版《使命召唤》游戏接近完工，预计2026年发布。微软已签署协议将《使命召唤》系列带入任天堂平台，但开发进度导致发布时间定在2026年。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/907/229.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/907/229.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-23",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 943,
-        "title": "Steam 平台约 8% 的游戏使用了生成式 AI，创收 6.6 亿美元",
-        "summary": "Totally Human Media 统计Steam 平台上主动披露使用生成式人工智能（生成式 AI）的游戏数量，目前为 10258 款，占 Steam 所有游戏的 8%，这些游戏的总销售额约为6.6亿美元，其中45款游戏营收超百万美元，AI主要用于美术素材制作、配音生成等辅助性工作",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/907/243.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/907/243.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-23",
-        "tags": [
-            "业内资讯-AI"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 944,
-        "title": "XBOX SERIES 2025 SALES ALLEGEDLY NEAR ONE MILLION UNITS",
-        "summary": "据知名爆料人KeplerL2表示，2025年Xbox Series X和Xbox Series S游戏机的销量接近100万台，而VGChartz的估计为170万台，而2017年上市的初代任天堂Switch同期销量为340万台。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-23",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 945,
-        "title": "NCsoft makes majority investment in Singapore mobile publisher Indygo",
-        "summary": "韩国游戏巨头NCsoft以1.038亿美元收购新加坡移动游戏发行商Indygo Group 67%的股份，并全资收购其子公司越南休闲游戏开发商Lihuhu及休闲手游工作室Springcomes。此次投资是NCsoft进军休闲手游市场的战略举措，预计2025年收入将达280亿韩元（1.89亿美元），同比增长超一倍。公司还计划收购欧洲工作室...",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-23",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 909,
-        "title": "Epic将于1月实装文字聊天更新",
-        "summary": "Epic Games将于1月在Epic Games启动器及安卓端应用上线文字聊天功能，实现《堡垒之夜》、Epic游戏商城及iOS端移动应用间的聊天记录同步，并计划明年扩展至《火箭联盟》《糖豆人》及使用Epic在线服务的第三方游戏。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/208767",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/208767"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-22",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 910,
-        "title": "万代南梦宫出售旗下《海岛大亨6》开发商Limbic Entertainment",
-        "summary": "万代南梦宫出售旗下《海岛大亨6》开发商Limbic Entertainment",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/208764",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/208764"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-22",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 912,
-        "title": "为《上古卷轴 6》、《辐射 5》等游戏铺路，消息称微软正帮助 B 社改造 Creation 引擎",
-        "summary": "科技媒体 Windows Central透露，微软和Bethesda正在使用《星空》作为测试平台，验证Creation引擎的深层次改进，整合虚幻引擎的技术，为《上古卷轴6》和《辐射5》等未来游戏做准备。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/906/852.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/906/852.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-22",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 913,
-        "title": "人大常委会丨拟写入法律！网络游戏应以国家通用语言文字为基本用语用字",
-        "summary": "人大常委会丨拟写入法律！网络游戏应以国家通用语言文字为基本用语用字",
-        "source": "腾讯文档策展",
-        "sourceUrl": "http://www.xinhuanet.com/20251222/1d346f6d11d14798b1ac706fb45eb716/c.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "http://www.xinhuanet.com/20251222/1d346f6d11d14798b1ac706fb45eb716/c.html"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-22",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 914,
-        "title": "2025 年独立游戏崛起，占 Steam 全年营收 25%",
-        "summary": "2025年独立游戏在Steam平台表现突出，占据总营收（177 亿美元）的25%，贡献了45亿美元的收入。多款独立游戏如《光与影：33号远征队》《空洞骑士：丝之歌》等在商业和口碑上取得显著成功。具体收入：《Schedule I》（1.51 亿美元）、《R.E.P.O.》（1.47 亿美元）、《PEAK》（8700 万美元）、《空洞骑士：丝之歌》（7500 万美元）以及《逃离鸭科夫》（5300 万美元）。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/906/824.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/906/824.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-22",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 916,
-        "title": "《战地风云 6》美术素材被质疑使用了 AI，与开发商此前声明相悖",
-        "summary": "《战地风云 6》玩家在游戏商城界面和社区自制内容中发现了疑似AI生成的粗糙设计细节，如不合理的武器结构和缺失的手指。玩家质疑使用了AI技术，与开发商DICE此前承诺不使用AI的声明相悖。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/906/786.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/906/786.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-22",
-        "tags": [
-            "业内资讯-AI"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 928,
-        "title": "《八方旅人》系列全球销量达600万 官方发布贺图",
-        "summary": "《八方旅人》系列全球销量达600万 官方发布贺图",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3934352.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3934352.html"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-22",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 929,
-        "title": "赚麻了！26年游戏全球收入预计首破2000亿美元",
-        "summary": "市场研究机构Newzoo预计全球游戏产业收入将在2026年达到2082亿美元，主要由现象级游戏大作驱动，包括《GTA6》、《漫威金刚狼》和《生化危机：安魂曲》等。移动游戏仍占据最大市场份额，PC和主机游戏份额趋于接近。芯片短缺可能导致PC硬件成本上升，但强大的游戏阵容仍将支撑市场增长。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3934316.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3934316.html"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-22",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 931,
-        "title": "网易《蛋仔派对》小米渠道版手游 2026 年 2 月 23 日停运，开启角色资产找回服务",
-        "summary": "22日10时：关闭小米渠道下载入口；2026年2月23日15时：正式停止小米渠道运营；玩家可登录游戏进行资产找回，或在网易大神等平台搜索“蛋仔小米资产找回”获取攻略。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://party.163.com/update/20251222/35182_1272723.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://party.163.com/update/20251222/35182_1272723.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-22",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "negative",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 935,
-        "title": "GTA 6 delayed again, AI impacts hardware, and Half-Life 3: Analyst predictions for 2026 | Year in Review",
-        "summary": "Gamesindustry分析师预测：",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-22",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 936,
-        "title": "FIFA puts its name on Roblox title Super League Soccer",
-        "summary": "FIFA与Roblox游戏《Super League Soccer》达成合作，将其更名为《FIFA Super Soccer》，该游戏由Gamefam开发，平均月活跃用户达950万，每日游戏会话150万次，每次游戏平均时长为11分钟。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-22",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 911,
-        "title": "因使用生成式AI素材，IGA独立游戏大奖撤销《光与影：33号远征队》年度游戏殊荣",
-        "summary": "《光与影：33号远征队》因在首发版本中使用生成式AI素材，被IGA独立游戏大奖撤销年度游戏及最佳处女作两项大奖，相关奖项由《蓝途王子》和《Sorry We're Closed》递补获得。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/208747",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/208747"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-21",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 917,
-        "title": "分析称《战地风云 6》销量已突破 2000 万份，美国收入力压《使命召唤》",
-        "summary": "Alinea Analytics分析公司指出，《战地风云6》玩家总数已超过 2600 万人",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/906/644.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/906/644.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-21",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 918,
-        "title": "暴雪娱乐公布未来内容计划：每年推出 1-2 款重磅作品",
-        "summary": "暴雪总裁约翰娜・法里斯宣布未来将每年推出1-2款重磅数字产品，包括新游戏、续作或大型资料片，以保持玩家关注度并挖掘旗下标志性IP的潜力。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/906/637.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/906/637.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-21",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 920,
-        "title": "索尼新专利曝光：AI 实时审查游戏内容，让游戏适应所有年龄段玩家",
-        "summary": "索尼提交了一项AI实时审查游戏内容的专利，旨在不改变游戏核心设计的前提下，让游戏适应不同年龄段玩家。该系统可自动分析游戏音频与视频，根据用户偏好调整内容，支持多平台运行，包括竞争对手的游戏机平台。玩家可自行设定过滤参数，系统会在敏感内容出现前发出提醒，或在游戏过程中让用户决定移除或替换内容。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/906/491.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/906/491.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-20",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 898,
-        "title": "虚幻引擎 5.7 对比 5.4 性能测试：GPU 最高提升 25%、CPU 最高提升 35%",
-        "summary": "在英伟达 RTX 5080 显卡上测试，虚幻引擎5.7相比5.4版本在GPU性能上最高提升25%，CPU性能最高提升35%，同时降低了内存占用并改善了帧时间稳定性，视觉呈现也更加精细。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/906/239.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/906/239.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-19",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 899,
-        "title": "2025 年国内游戏市场收入 3507.89 亿元、用户规模 6.83 亿，均创历史新高",
-        "summary": "“2025 年度中国游戏产业年会”在上海举行，数据显示，2025 年国内游戏产业实际销售收入 3507.89 亿元，同比增长 7.68%；游戏用户规模 6.83 亿，同比增长 1.35%，并公布2025 游戏十强年度榜。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/906/303.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/906/303.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-19",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 900,
-        "title": "2025 游戏十强年度榜揭晓：网易游戏、《无尽冬日》、腾讯《三角洲行动》等入选",
-        "summary": "优秀游戏科技创新企业：网易游戏",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-19",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 901,
-        "title": "索尼 PS Blog 2025 年度游戏大奖揭晓：《羊蹄山之魂》夺得 9 项头牌",
-        "summary": "索尼 PS Blog 2025 年度游戏大奖揭晓：《羊蹄山之魂》夺得 9 项头牌",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/906/280.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/906/280.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-19",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 902,
-        "title": "拳头发现部分主板 BIOS 存在安全漏洞，玩家须更新才能玩《无畏契约》",
-        "summary": "拳头游戏发现华硕、技嘉、微星和华擎等品牌主板存在安全漏洞，可能导致《无畏契约》的反作弊系统失效。厂商已发布BIOS更新修复漏洞，玩家需更新BIOS并启用相关安全功能才能继续游戏。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/906/164.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/906/164.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-19",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 907,
-        "title": "Fami通周销榜：《马里奥赛车：世界》三连冠 累计销量近250万",
-        "summary": "Fami通公布了2025年12月8日至12月14日期间日本市场实体游戏软件与硬件的销量数据，《马里奥赛车：世界》连续三周位居软件销量榜首，累计销量250万份，Switch 2主机在硬件销量中占据主导地位。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3934182.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3934182.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-19",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 908,
-        "title": "存储成本飙升将冲击全球手机市场 明年均价或上涨6.9%",
-        "summary": "2026年全球智能手机出货量预计同比下滑2.1%，较2025年11月的旧预测下修2.6个百分点，市场将连续两年收缩。智能手机平均售价（ASP）预测从2025年9月的年增3.6%，上调至年增6.9%。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3934187.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3934187.html"
-            }
-        ],
-        "category": "technology",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-19",
-        "tags": [
-            "内存涨价"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 915,
-        "title": "发售多年仍有新玩家，山内一典称《GT 赛车 7》月活人数超 200 万",
-        "summary": "《GT 赛车 7》月活跃玩家数量突破200万且持续增长，系列销量突破1亿份，制作人表示游戏的长盛不衰归功于内容更新和社群关系发展。同时《GT 赛车》世界系列赛的单场赛事全球转播渠道触达观众已达约 800 万人次",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/906/815.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/906/815.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-19",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 921,
-        "title": "车里就能玩 PS5 大作，索尼本田合资车型 Afeela 1 官宣支持 Remote Play",
-        "summary": "索尼与本田合资公司索尼本田移动出行宣布，其首款量产车型Afeela 1将支持PlayStation Remote Play功能，乘客可在车内游玩PS4或PS5游戏，该车型计划于2026年在加利福尼亚地区交付。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/906/414.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/906/414.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-19",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 922,
-        "title": "R-TYPE DIMENSIONS III SWITCH 2 GETS FULL CARTRIDGE RELEASE",
-        "summary": "《R-Type Dimensions III》的任天堂Switch 2版本将以完整实体卡带形式在欧洲和美国发售，此前预期为下载码形式。但游戏零售版和特别版价格将上涨10欧元，提前预购特别版的玩家仍可以原价购买。游戏将于2026年5月29日发布，支持Switch 2、Switch、PS5和PC平台。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/r-type-dimensions-iii-switch-2-gets-full-cartridge-release/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/r-type-dimensions-iii-switch-2-gets-full-cartridge-release/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-19",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 923,
-        "title": "ININ Games says Nintendo now offering smaller Switch 2 cartridge sizes",
-        "summary": "任天堂确认将为Switch 2提供更小尺寸的游戏卡带，ININ Games宣布将为此调整《R-Type Dimensions III》的生产计划，改用完整实体卡带发售，但售价将上涨10欧元，早期预购用户可享受原价。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mynintendonews.com/2025/12/19/inin-games-says-nintendo-now-offering-smaller-switch-2-cartridge-sizes/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mynintendonews.com/2025/12/19/inin-games-says-nintendo-now-offering-smaller-switch-2-cartridge-sizes/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-19",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 924,
-        "title": "UK CONSOLE SALES DROP SHARPLY IN NOVEMBER ACROSS PLATFORMS [UPDATE]",
-        "summary": "2025年11月，英国游戏主机硬件销量出现显著下滑，这一趋势与美国市场类似。11月整体市场（黑色星期五前）主机总销量同比下降17%，其中任天堂Switch系列总销量同比增长41%，PlayStation 5销量同比下降29%，Xbox硬件销量同比下降51",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/uk-console-sales-drop-sharply-in-november-across-platforms/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/uk-console-sales-drop-sharply-in-november-across-platforms/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-19",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 925,
-        "title": "Arknights: Endfield Crosses 30 Million Pre-Registrations Over 1 Month Before Launch",
-        "summary": "《明日方舟：终末地》在上市前一个月内预注册用户突破3000万，将于2026年1月22日登陆PS5、iOS、Android及PC平台",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://gamingbolt.com/arknights-endfield-crosses-30-million-pre-registrations-over-1-month-before-l...",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://gamingbolt.com/arknights-endfield-crosses-30-million-pre-registrations-over-1-month-before-l..."
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-19",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 926,
-        "title": "Epic’s Tim Sweeney says Apple’s ‘dishonesty’ and ‘gross disrespect’ to Japan is the reason Fortnite isn’t coming to iOS there",
-        "summary": "Epic Games CEO Tim Sweeney指责苹果公司对日本政府的新法规采取不诚实和极度不尊重的态度，导致《Fortnite》无法按计划在2025年重返日本iOS平台。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.videogameschronicle.com/news/epics-tim-sweeney-says-apples-dishonesty-and-gross-disrespect-to-japan-is-the-reason-fortnite-isnt-coming-to-ios-there/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.videogameschronicle.com/news/epics-tim-sweeney-says-apples-dishonesty-and-gross-disrespect-to-japan-is-the-reason-fortnite-isnt-coming-to-ios-there/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-19",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 927,
-        "title": "Riot Games is remaking League of Legends in 2027, to \"lay the groundwork\" for the 16-year-old MOBA's next era",
-        "summary": "Riot Games宣布将在2027年对《英雄联盟》进行全面重制，旨在为这款已有16年历史的MOBA游戏开启下一个发展阶段",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.eurogamer.net/riot-games-is-remaking-league-of-legends-in-2027",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.eurogamer.net/riot-games-is-remaking-league-of-legends-in-2027"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-19",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 937,
-        "title": "Games industry layoff figures were down slightly in 2025 – but it was still horrendous | Year in Review",
-        "summary": "2025年游戏行业裁员情况回顾",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/games-industry-layoff-figures-were-down-slightly-in-2025-but-it-was-still-horrendous-year-in-review",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/games-industry-layoff-figures-were-down-slightly-in-2025-but-it-was-still-horrendous-year-in-review"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-19",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 938,
-        "title": "Meet Nex Playground, the AI-powered hit console set to sell over 1 million units by 2026",
-        "summary": "Nex Playground于2023年12月推出，2023年发货5000台，2024年销量达15万台（通过沃尔玛、塔吉特和百思买销售），2025年销量激增至63.5万台，累计销量接近80万台，预计到2026年上半年销量将突破100万台。主机售价249美元，硬件性能接近PS3水平，仅在美国和加拿大销售。公司计划2026年扩展至欧洲和部分亚洲市场，并采用订阅模式（Play Pass年费89美元）维持长期盈利。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/meet-nex-playground-the-ai-powered-hit-console-set-to-sell-over-1-million-units-by-2026",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/meet-nex-playground-the-ai-powered-hit-console-set-to-sell-over-1-million-units-by-2026"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-19",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 886,
-        "title": "游戏界“春晚”热度不减：TGA 2025 全球直播观看量破 1.71 亿次",
-        "summary": "TGA2025收视率同比增长11% 、全球超过1.71亿次的完整直播播放量、在X上的讨论量同比增长12%、Twitch 和 YouTube上的转播次数为 23,000 次（同比增长 50%），表明主播和内容创作者参与度大幅提升。但活动主持人Geoff Keighley在X平台发起的民意调查显示，大量观众对节目内容不满，最终给出\"D\"级低分评价。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/208616",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/208616"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-18",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 887,
-        "title": "发售不到三年，《霍格沃茨之遗》销量突破 4000 万份",
-        "summary": "华纳兄弟游戏公司宣布，《霍格沃茨之遗》在主机及 PC 平台的销量已达 4000 万份，跻身现代游戏史上最畅销、销量增速最快的游戏行列。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-18",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 888,
-        "title": "华纳兄弟董事会拒绝派拉蒙千亿美元收购要约，坚定推进网飞交易",
-        "summary": "华纳兄弟探索公司董事会正式拒绝派拉蒙1084亿美元的收购要约，选择维持与网飞达成的720亿美元交易协议，认为后者更符合公司利益。派拉蒙仍可能提出新报价",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/208610",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/208610"
-            }
-        ],
-        "category": "industry",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-18",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 889,
-        "title": "消息称任天堂将为 Switch 2 游戏掌机推出 16GB/32GB 容量实体卡带",
-        "summary": "任天堂计划为Switch 2游戏掌机推出16GB和32GB容量的实体卡带，以应对当前64GB卡带成本过高的问题。此举旨在为文件体积较小的游戏提供更经济的实体发行方案，但可能面临读取速度较慢和性能瓶颈的挑战。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/905/910.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/905/910.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-18",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 895,
-        "title": "手持PS6来了？曝索尼正强化PS5低功耗模式支持",
-        "summary": "索尼近期更新PS5软件开发工具包（SDK），重点强化节能模式支持，引发外界猜测其可能为未来PS6手持设备做准备。开发者透露，索尼对节能模式的重视程度甚至超过了对PS5 Pro额外性能的支持。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3934073.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3934073.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-18",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 903,
-        "title": "游戏工委报告：73.4% 超时用户用父母或长辈账号、信息规避防沉迷",
-        "summary": "《2025 中国游戏产业未成年人保护进展报告》显示，71%的未成年人游戏时长控制在3小时以内，比例连续4年基本稳定；但73.4%的超时用户通过使用父母或长辈账号及身份信息规避防沉迷限制，家庭监管存在漏洞。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/906/005.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/906/005.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-18",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 904,
-        "title": "索尼宣布将以4.57亿美元收购史努比以及《花生漫画》版权公司的41%股份",
-        "summary": "索尼宣布将以4.57亿美元收购史努比及《花生漫画》版权公司41%的股份，交易完成后将持有该公司80%的股份，使其成为索尼集团的合并子公司。此次增持股份将借助索尼集团的全球网络和集体智慧，进一步提升“花生漫画”品牌的价值。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/208667",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/208667"
-            }
-        ],
-        "category": "platform",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-18",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 905,
-        "title": "索尼与腾讯就《荒野起源》侵权案达成和解，游戏已从多平台下架",
-        "summary": "索尼与腾讯就《荒野起源》侵权案达成和解，游戏已从多平台下架，双方达成保密协议且案件被法院驳回。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/208639",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/208639"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-18",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "negative",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 906,
-        "title": "《SEGA 新创造球会2026》预约注册人数突破100万",
-        "summary": "《SEGA 新创造球会2026》预约注册人数突破100万",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/news",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/news"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-18",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 876,
-        "title": "《神界》游戏新作陷 AI 风波，官方承诺最终成品含 AI 量为零",
-        "summary": "拉瑞安工作室在开发《神界》新作时整合了生成式AI技术，引发玩家及前员工的强烈反对，担忧创作质量下降或引发裁员潮。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-17",
-        "tags": [
-            "业内资讯-AI"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 877,
-        "title": "拉瑞安新作《神界》确认沿用回合制玩法，开发周期将缩短",
-        "summary": "拉瑞安工作室确认《神界》将沿用回合制玩法，开发周期将缩短至3-4年，预计2029-2030年正式上线，可能先推出抢先体验版。其CEO表示该作将超越《博德之门3》，包含系列所有元素并提升至新高度。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/905/560.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/905/560.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-17",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 878,
-        "title": "发售两年后，《博德之门 3》全球销量已突破 2000 万份",
-        "summary": "发售两年后，《博德之门 3》全球销量已突破 2000 万份",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/905/547.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/905/547.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-17",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 879,
-        "title": "贝塞斯达：《上古卷轴 6》开发进展顺利，工作室多数人员已投入该项目",
-        "summary": "贝塞斯达：《上古卷轴 6》开发进展顺利，工作室多数人员已投入该项目",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/905/551.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/905/551.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-17",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 880,
-        "title": "你一年玩了多少款游戏？2025 Steam 年度回顾上线",
-        "summary": "你一年玩了多少款游戏？2025 Steam 年度回顾上线",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/905/578.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/905/578.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-17",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 890,
-        "title": "Steam 新一周游戏销量榜：《ARC Raiders》登顶、《光与影：33 号远征队》排名大幅上涨",
-        "summary": "Steam最新一周（2025年12月9日-12月16日）游戏销量榜公布，《ARC Raiders》登顶全球榜单，《光与影：33号远征队》因在TGA 2025中横扫9项大奖，全球及国区排名均大幅上涨。国区《暗黑破坏神IV》首发位列第一",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/905/766.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/905/766.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-17",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 891,
-        "title": "STEAM MACHINE STARTUP SCREEN & ANIMATION HAVE APPARENTLY BEEN LEAKED",
-        "summary": "Valve公司即将推出的硬件产品Steam Machine的启动界面及相关动画画面已被泄露，Twitter/X用户“SadlyItsBradley”分享了相关视频。视频显示启动界面设计风格与Steam Deck类似，采用极简标识过渡到Steam官方标志。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/steam-machine-startup-screen-animation-leaked/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/steam-machine-startup-screen-animation-leaked/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-17",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 892,
-        "title": "Hardware and software sales in the US last month just had the worst November since tracking began.",
-        "summary": "补充：",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-17",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 893,
-        "title": "Xbox U.S. Console Unit Sales Just Reached an All-Time November Low",
-        "summary": "2025年11月，Xbox在美国的硬件销量创下历史新低，销售额同比下降70%，是三大主机厂商中跌幅最大的。PS5同比下降40%，任天堂Switch系列同比下降10%。Xbox Series主机已上市五年且今年未推出新机型，加上多次涨价（平均单价上涨30%），导致销量持续下滑。美国经济疲软、高通胀和高失业率也影响了消费者购买意愿。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ign.com/articles/xbox-us-console-unit-sales-just-reached-an-all-time-november-low",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ign.com/articles/xbox-us-console-unit-sales-just-reached-an-all-time-november-low"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-17",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 894,
-        "title": "Steam Replay Reveals Only 14 Percent of Play Time This Year Were on Games Released in 2025",
-        "summary": "Steam发布的2025年回顾数据显示，玩家今年在Steam平台上的游戏时间中，仅有14%用于2025年发布的新游戏，44%的游戏时间用于1至7年前发布的游戏，40%用于8年前或更早发布的游戏。平均每位玩家今年仅玩了4款新游戏，获得11个成就，连续游玩天数中位数为6天。Valve预计将公布更多年度数据，包括畅销游戏榜单。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://gamingbolt.com/steam-replay-reveals-only-14-percent-of-play-time-this-year-were-on-games-released-in-2025",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://gamingbolt.com/steam-replay-reveals-only-14-percent-of-play-time-this-year-were-on-games-released-in-2025"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-17",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 896,
-        "title": "Unity reportedly introduces $250K+ \"minimum contribution\" for its biggest customers",
-        "summary": "Unity计划对其最大的企业级用户实施新的年度费用政策，要求根据游戏前一年的总收入支付25万至200万美元的“最低捐款额”，该费用将用于购买Unity订阅许可证和支持服务。这一政策是在2023年取消运行时费用后推出的，且与即将实施的5%价格上调无关。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/unity-reportedly-introduces-250k-minimum-contribution-for-its-biggest-customers",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/unity-reportedly-introduces-250k-minimum-contribution-for-its-biggest-customers"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-17",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 897,
-        "title": "Turn 10 确认《极限竞速：Motorsport》明年无新内容，全面转向《地平线 6》",
-        "summary": "Turn 10宣布《极限竞速：Motorsport》将在2026年停止内容更新，开发资源将全面转向《极限竞速：地平线6》。微软计划在明年1月的开发者直面会上公布《地平线6》，并可能为避开《GTA6》而提前至2026年上半年发售。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/905/761.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/905/761.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-17",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 919,
-        "title": "《头号追击》网易（官方版本）停运公告",
-        "summary": "17日10时：关闭全平台下载入口，26年2月26日10时：正式停止游戏运营",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://one.163.com/news/update/20251215/41925_1276597.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://one.163.com/news/update/20251215/41925_1276597.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-17",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "negative",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 859,
-        "title": "育碧收编《彩虹六号围攻》前主创团队，杀入 MOBA 游戏核心竞技圈",
-        "summary": "育碧宣布收购亚马逊MOBA新作《March of Giants》及其蒙特利尔开发团队，该团队由《彩虹六号：围攻》前创意总监Xavier Marquis和育碧多伦多工作室前总经理Alexandre Parizeau领衔，旨在通过创新玩法拓展MOBA市场。亚马逊保留Twitch营销支持，此次交易反映其游戏业务战略转向知名IP改编。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/905/300.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/905/300.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-16",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 860,
-        "title": "GOG 推出赞助人计划：玩家可选择每月支付 5 美元支持游戏商城运营",
-        "summary": "GOG商城推出了一项名为GOG Patrons的可选赞助计划，玩家每月支付5美元即可支持该平台的运营。该计划旨在应对GOG在修复经典PC游戏和维护无DRM版本方面面临的挑战。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/905/269.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/905/269.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-16",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 861,
-        "title": "次世代主机版《神界：原罪 2》游戏发行，原生适配 Switch 2、PS5 等主机",
-        "summary": "次世代主机版《神界：原罪 2》游戏发行，原生适配 Switch 2、PS5 等主机",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/905/258.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/905/258.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-16",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 862,
-        "title": "《空洞骑士：丝之歌》销量突破700万份，全新拓展内容预计2026年上线",
-        "summary": "《空洞骑士：丝之歌》销量突破700万份，全新拓展内容预计2026年上线",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/208502",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/208502"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-16",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 863,
-        "title": "Catch up on what’s new with Bungie’s sci-fi extraction shooter ahead of its March 2026 launch.",
-        "summary": "Bungie即将在2026年3月推出科幻撤离射击游戏《失落星船：马拉松》，游戏支持PVPvE玩法，提供单人模式和团队合作选项，并针对PS5进行了优化。将在PC、PlayStation 5和Xbox Series X|S平台上推出，售价为39.99美元/39.99欧元/34.99英镑。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://blog.playstation.com/2025/12/15/marathon-vidoc-highlights-the-extraction-shooters-dark-world-and-survival-challenge/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://blog.playstation.com/2025/12/15/marathon-vidoc-highlights-the-extraction-shooters-dark-world-and-survival-challenge/"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-16",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 866,
-        "title": "《逃离塔科夫》销量突破百万！玩家总游戏时长已超15000年",
-        "summary": "《逃离塔科夫》销量突破100万份，玩家总游戏时长达到1.35亿小时（约15000年），已有500支PMC小队完成终极挑战。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3933930.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3933930.html"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-16",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 871,
-        "title": "内存价格暴涨扛不住了，小米之后荣耀宣布平板即将涨价",
-        "summary": "由于内存价格上涨，小米和荣耀相继宣布平板产品即将涨价，涨幅在100-300元之间，且2026年部分中端新机可能取消1TB版本。行业预测2026年第一季度存储器价格将显著上涨，智能手机和笔电产业将面临价格调整和规格下调。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/905/516.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/905/516.htm"
-            }
-        ],
-        "category": "technology",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-16",
-        "tags": [
-            "内存涨价"
-        ],
-        "sentiment": "negative",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 873,
-        "title": "宏碁、华硕两企高管：PC 售价终要反映内存价格飙升已是各品牌共识",
-        "summary": "宏碁和华硕高管表示，PC售价将因内存价格飙升而上涨，这一趋势已成为行业共识。华硕将根据市场动态灵活调整产品价格，宏碁预计2026Q1和Q4价格将有差异，内存涨价对成本影响约2-3%，2026Q2将面临最大挑战。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/905/445.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/905/445.htm"
-            }
-        ],
-        "category": "technology",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-16",
-        "tags": [
-            "内存涨价"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 874,
-        "title": "Counterpoint：内存芯片短缺将导致明年全球智能手机出货量下滑 2.1%，平均售价上涨 6.9%",
-        "summary": "内存芯片短缺将导致2024年全球智能手机出货量下滑2.1%，平均售价上涨6.9%，与2023年预估3.3%的增幅形成明显反差。高端AI芯片需求挤压传统内存产能，中国品牌和中低端机型受影响最显著。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/905/351.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/905/351.htm"
-            }
-        ],
-        "category": "technology",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-16",
-        "tags": [
-            "内存涨价"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 881,
-        "title": "Tencent invests in ‘hyperreal’ bodycam shooter that became internet sensation",
-        "summary": "腾讯投资了法国独立工作室Drama Studios开发的“超现实”执法记录仪风格射击游戏《Unrecord》，该游戏因2023年发布的预告片在20小时内获得4000万次观看而成为网络现象级作品。游戏现已进入全面制作阶段，预计明年公布更多进展。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.videogameschronicle.com/news/tencent-invests-in-hyperreal-bodycam-shooter-that-became-internet-sensation/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.videogameschronicle.com/news/tencent-invests-in-hyperreal-bodycam-shooter-that-became-internet-sensation/"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-16",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 882,
-        "title": "Dead Island 3 is in development and targeting a 2028 release, financial docs reveal",
-        "summary": "Dambuster Studios正在开发《死亡岛3》，目标发布时间为2028年第一季度或第二季度。财务文件显示，游戏的部分内容已进入早期开发阶段，包括功能设计、角色设计、世界观设计和叙事构思。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.videogameschronicle.com/news/dead-island-3-is-in-development-and-targeting-a-2028-release-financial-docs-reveal/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.videogameschronicle.com/news/dead-island-3-is-in-development-and-targeting-a-2028-release-financial-docs-reveal/"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-16",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 883,
-        "title": "Supercell promotes Sara Bach to president amid restructure",
-        "summary": "芬兰移动游戏巨头Supercell在重组中晋升Sara Bach为总裁，并成立新的实时游戏部门，整合业务运营、营销与社区、人力资源及游戏技术团队。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/supercell-promotes-sara-bach-to-...",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/supercell-promotes-sara-bach-to-..."
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-16",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 884,
-        "title": "Rainbow Six Mobile - Official Global Release Date Trailer",
-        "summary": "《彩虹六号：移动版》将于2026年2月23日全球上线iOS和Android平台，是一款免费战术第一人称射击手游，核心玩法为5v5攻防对战模式。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ign.com/videos/rainbow-six-mobile-official-global-release-date-trailer",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ign.com/videos/rainbow-six-mobile-official-global-release-date-trailer"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-16",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 885,
-        "title": "NINTENDO WANTS MONOLITH SOFT TO HAVE A CENTRAL ROLE IN DEVELOPMENT OF THE NEXT LEGEND OF ZELDA GAME",
-        "summary": "任天堂计划让Monolith Soft（异度神剑开发商）在下一款《塞尔达传说》游戏的开发中承担核心角色，双方回顾了从《异度神剑》到《王国之泪》的合作历程，并强调了紧密沟通和横向协作的重要性。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/nintendo-wants-monolith-soft-to-play-central-role-in-dev-of-next-legend-of-zelda/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/nintendo-wants-monolith-soft-to-play-central-role-in-dev-of-next-legend-of-zelda/"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-16",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 849,
-        "title": "维持 70 美元定价，微软 Xbox 第一方游戏短期无涨价计划",
-        "summary": "Xbox 游戏工作室负责人马特・布迪表示微软目前没有任何价格调整计划，意味着短期内Xbox不会将第一方游戏价格上调至80美元，而维持70美元定价，并强调将专注于多元化盈利模式（如订阅服务、微交易、广告支持云游戏）而非依赖提高游戏售价。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/904/974.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/904/974.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-15",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "negative",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 856,
-        "title": "《堡垒之夜》宣布将与《死神 Bleach》进行联动，12月20日正式推出",
-        "summary": "《堡垒之夜》宣布将与《死神 Bleach》进行联动，12月20日正式推出",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/208449",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/208449"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-15",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 857,
-        "title": "《逃离鸭科夫》模组暗藏恶意代码，官方就处理方式致歉",
-        "summary": "《逃离鸭科夫》官方针对模组“Scav模式 1.8.0”暗藏恶意代码事件发布致歉公告。模组作者通过“黑名单”形式拉黑部分玩家，导致受影响用户无法正常启动游戏。疑似官方与模组作者私下沟通的截图被曝光，显示官方试图通过讨好和赠送周边的方式让作者自行解决问题，引发玩家不满。官方承认处理不当并封禁该模组，同时承诺完善MOD管理规范。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/208443",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/208443"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-15",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 858,
-        "title": "《燕云十六声》国际服玩家破1500万 太厉害了！",
-        "summary": "《燕云十六声》国际服玩家破1500万 太厉害了！",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3933878.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3933878.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-15",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 864,
-        "title": "Marathon’s Former Director’s Lawsuit Against Bungie, Sony Dismissed by Court for Wrong Jurisdiction",
-        "summary": "前《马拉松》游戏总监Christopher Barrett针对Bungie和索尼的诉讼因管辖权问题被法院驳回。Barrett于2024年12月提起诉讼，指控公司不当解雇并索赔2亿美元，但案件因提交至错误的法院类型（衡平法院）而被驳回。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://gamingbolt.com/marathons-former-directors-lawsuit-against-bungie-sony-dismissed-by-co...",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://gamingbolt.com/marathons-former-directors-lawsuit-against-bungie-sony-dismissed-by-co..."
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-15",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 865,
-        "title": "Apple wins small victory in appeal on Epic Games case",
-        "summary": "Apple在针对Epic Games案件的上诉中取得部分胜利，法院允许其对App Store外的开发者支付收取\"合理费用\"，但需反映实际安全与隐私成本；同时驳回了Apple关于27%外部支付费用和广告限制的提议。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/apple-wins-small-victory-in-appeal-on-epic-games-case",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/apple-wins-small-victory-in-appeal-on-epic-games-case"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-15",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 850,
-        "title": "网易《我的世界》基岩互通版官宣定档 12 月 23 日，支持端手游互通",
-        "summary": "网易《我的世界》基岩互通版官宣定档 12 月 23 日，支持端手游互通",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/904/916.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/904/916.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-14",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 851,
-        "title": "2025 年 Steam 新增超 1.9 万款游戏，近半数用户评测不足 10 条",
-        "summary": "2025年Steam平台新增游戏数量达19,112款，其中近半数（9,327款）的用户评测数不足10条，2,229款游戏未收到任何评测，非头部游戏面临严峻的\"发现难题\"，开发者需依赖第三方促销活动获取曝光机会",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/904/868.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/904/868.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-14",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 852,
-        "title": "挥刀斩寇：国产抗日游戏《斗虎》战斗实机首曝，主打“硬核割草”",
-        "summary": "国产抗日游戏《斗虎》战斗实机首曝，计划于2028年9月18日在Steam平台发行。游戏以1931年“九一八事变”后的东北为背景，玩家扮演抗日战士在极端环境下执行任务。游戏主打“硬核割草”玩法，结合潜行、近战、游击战术等机制，并强调环境互动与生存挑战。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/904/848.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/904/848.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-14",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 853,
-        "title": "Steam 贴心功能上线：买游戏时提醒低价捆绑包，帮玩家省钱",
-        "summary": "Steam平台新增功能，当在玩家购买游戏时，若存在更便宜的捆绑包或合集，会主动提醒玩家以帮助玩家节省开支。该功能仅在捆绑包价格低于单独购买游戏时触发提醒，且不适用于玩家已拥有部分作品的合集情况。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/904/828.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/904/828.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-14",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 867,
-        "title": "Switch 2内存成本最高可达41% 涨价的可能性很大",
-        "summary": "任天堂Switch 2因内存和闪存成本大幅上涨面临盈利压力，Switch 2采用的LPDDR5X内存模块价格在2025年第四季度上涨41%，256GB NAND闪存价格上涨约8%，直接推高整机制造成本。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3933812.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3933812.html"
-            }
-        ],
-        "category": "technology",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-14",
-        "tags": [
-            "内存涨价"
-        ],
-        "sentiment": "negative",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 872,
-        "title": "苹果 DRAM 长期订单协议即将到期：三星、SK 海力士被曝 2026 年 1 月起涨价，iPhone、MacBook 等产品线恐受冲击",
-        "summary": "苹果与三星电子、SK海力士签署的DRAM内存长期供货协议即将到期，两家韩国厂商计划自2026年1月起提高对苹果的芯片报价，可能导致iPhone、MacBook等产品线成本上升并引发终端涨价。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/904/871.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/904/871.htm"
-            }
-        ],
-        "category": "technology",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-14",
-        "tags": [
-            "内存涨价"
-        ],
-        "sentiment": "negative",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 854,
-        "title": "任天堂 Switch 2 游戏《卡比的驭天飞行者》没有 DLC，项目团队即将解散",
-        "summary": "《卡比的驭天飞行者》游戏制作人樱井政博在 X 上发文表示，游戏确认不会推出DLC，开发团队即将解散，但未来可能进行一次平衡调整。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/904/767.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/904/767.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-13",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 855,
-        "title": "暴跌 82%：数据称《使命召唤：黑色行动 7》首发 26 天仅卖 40.1 万份",
-        "summary": "游戏媒体 gamesindustry发布博文，称《使命召唤：黑色行动7》在Steam平台首发26天销量仅为40.1万份，较前作《黑色行动6》的230万份暴跌82.57%，同时竞争对手《战地6》的销售速度是其5.7倍。系列日活跃用户从2024年12月的3600万降至2025年11月的1800万，流失率达50%，且下滑趋势覆盖PC、PlayStation和Xbox全平台。Alinea Analytics 分析师 Rhys Elliott 认为，微软将首发游戏加入 Game Pass 的策略，直接“蚕食”了 Xbox 和 PC 端的传统全价游戏销量，造成约 3 亿美元的潜在销售损失",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/904/706.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/904/706.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-13",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "negative",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 868,
-        "title": "戴尔打响PC涨价第一枪 128GB内存上涨1657元",
-        "summary": "戴尔因DRAM芯片短缺和存储成本上升，宣布对多款产品实施大幅涨价，包括笔记本电脑、台式机和显示器等，涨幅从55美元至530美元不等，作为行业巨头，戴尔的涨价可能引发联想、宏碁等竞争对手跟进。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3933773.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3933773.html"
-            }
-        ],
-        "category": "technology",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-13",
-        "tags": [
-            "内存涨价"
-        ],
-        "sentiment": "negative",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 830,
-        "title": "South of Midnight announced for Switch 2",
-        "summary": "《午夜以南》这款由Compulsion Games开发、Xbox发行的动作冒险游戏，将在2026年春季登陆PlayStation 5和Nintendo Switch 2平台。该游戏此前在PC和Xbox平台发布时获得了极高评价。（微软一方游戏）",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mynintendonews.com/2025/12/12/south-of-midnight-announced-for-switch-2/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mynintendonews.com/2025/12/12/south-of-midnight-announced-for-switch-2/"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-12",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 831,
-        "title": "卡普空“小萝莉”游戏《Pragmata》官宣 2026 年 4 月 24 日发售，试玩 Demo 上线 Steam",
-        "summary": "卡普空科幻动作冒险游戏《Pragmata（虚实万象 ）》宣布将于2026年4月24日发售，登陆PS5、Xbox Series X|S、PC（Steam）和任天堂Switch 2平台，游戏为黑客科幻动作冒险游戏，支持中文语音。试玩Demo已上线Steam，后续将在其他平台推出。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/904/373.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/904/373.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-12",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 832,
-        "title": "星战新作《星球大战：旧共和国的命运》全球首曝：定位单人 RPG，基于虚幻 5 引擎打造",
-        "summary": "《星球大战：旧共和国的命运》在TGA 2025颁奖典礼上首次公开，《星球大战：旧共和国武士》的续作，基于虚幻5引擎打造，单人叙事动作角色扮演玩法。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-12",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 833,
-        "title": "拉瑞安《神界》正式公布：为工作室有史以来最大规模游戏",
-        "summary": "拉瑞安工作室在TGA 2025颁奖典礼上正式公布了新作《神界》，这是该工作室有史以来规模最大的游戏，设定在绿维珑世界，比《博德之门3》更具野心。游戏无需前作经验即可游玩。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/904/381.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/904/381.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-12",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 834,
-        "title": "《控制》系列游戏新作《Control Resonant》公开，2026 年推出",
-        "summary": "《控制》系列新作《Control Resonant》将于2026年推出，由Remedy与505 Games共同开发，登陆PC、PS5和Xbox Series X|S平台。前作在2019年发售，获得11项BAFTA游戏奖提名和20多个“年度游戏”奖项。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-12",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 835,
-        "title": "30 周年纪念全新作《古墓丽影：催化剂》公开，预定 2027 年发售",
-        "summary": "《古墓丽影》系列30周年纪念新作《古墓丽影：Catalyst》将于 2027 年登陆 Xbox Series X、PS5 与 PC。同时公布初代重制版《古墓丽影：亚特兰蒂斯遗产》将于2026年发售，采用虚幻引擎5打造，作品将在保留原作精神与氛围的基础上，引入扩展叙事及其他新内容，而非传统意义上的重制或高清复刻。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/904/401.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/904/401.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-12",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 836,
-        "title": "《森林 3》首支预告公开",
-        "summary": "《森林 3》首支预告片在TGA 2025颁奖典礼上公开",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-12",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 837,
-        "title": "暴雪《暗黑破坏神 4》游戏新资料片《憎恨之王》2026 年 4 月发行，圣骑士回归",
-        "summary": "暴雪娱乐宣布《暗黑破坏神 IV》新资料片《憎恨之王》将于2026年4月28日上线，登陆登陆Xbox、PS5、PC（Battle.net/Steam）全平台，经典职业圣骑士回归，新增神秘职业、全新区域斯科沃斯，剧情围绕魔神墨菲斯托展开，游戏系统全面升级。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/904/418.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/904/418.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-12",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 838,
-        "title": "《ARC Raiders》斩获 TGA 2025 最佳多人游戏奖",
-        "summary": "《ARC Raiders》斩获 TGA 2025 最佳多人游戏奖",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/904/425.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/904/425.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-12",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 839,
-        "title": "《全面战争：战锤 40K》游戏在 TGA 2025 公布",
-        "summary": "《全面战争：战锤 40K》游戏在TGA 2025年度游戏颁奖典礼上公布，结合了《全面战争》系列和《战锤40K》两大IP。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-12",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 840,
-        "title": "《明日方舟：终末地》官宣 2026 年 1 月 22 日全球公测，登陆 PC、主机及移动平台",
-        "summary": "《明日方舟：终末地》官宣 2026 年 1 月 22 日全球公测，计划登录 PS5 / PC / iOS / 安卓平台",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/904/440.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/904/440.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-12",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 841,
-        "title": "马东锡主演：名越工作室游戏新作《Gang of Dragon》公布",
-        "summary": "网易全资成立的名越工作室公布新作《Gang of Dragon》（龙帮），由韩国演员马东锡主演，类韩国题材《如龙》",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/904/392.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/904/392.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-12",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 842,
-        "title": "皇牌空战 30 周年新作《空战奇兵 8 希孚之翼》游戏公布",
-        "summary": "《皇牌空战》系列迎来30周年，新作《空战奇兵8 希孚之翼》在TGA 2025年度游戏颁奖典礼上公布，将于2026年登陆PS5、Xbox Series X|S和Steam平台。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-12",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 843,
-        "title": "卡普空官宣《洛克人：Dual Override》游戏，2027 年登陆 Switch 等平台",
-        "summary": "卡普空在2025年TGA颁奖典礼上宣布开发《洛克人：Dual Override》，这是《洛克人》系列的第12部新作，计划于2027年登陆多个平台，包括任天堂Switch、Switch 2、PlayStation 4、PlayStation 5、Xbox和PC（通过Steam），累计销量超过 4300 万套",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/904/459.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/904/459.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-12",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 844,
-        "title": "TGA 2025 压轴大作：《Apex 英雄》原班团队打造《巅峰守卫》游戏，首创“PvP 突袭”新玩法",
-        "summary": "TGA 2025压轴环节公布了由《Apex英雄》原班团队打造的新作《巅峰守卫》，这是一款融合传统射击与MOBA类推塔攻防元素PvP玩法的免费射击游戏，将于2026年1月26日登陆PC、Xbox Series X/S以及PlayStation...",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-12",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 845,
-        "title": "128 元起，暴雪《暗黑破坏神 4》国服正式上线",
-        "summary": "暴雪《暗黑破坏神4》国服正式上线，售价128元起，为全球最低价，后续版本将与全球同步更新。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/904/467.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/904/467.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-12",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 846,
-        "title": "TGA2025：《求生之路》作者新游《4:LOOP》还是4人合作",
-        "summary": "在TGA2025大会上，索尼互娱公布了由《求生之路》作者Mike Booth领导开发的新游戏《4:LOOP》，该游戏延续4人小队合作战斗玩法，玩家需利用特殊能力对抗外星敌人。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3933689.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3933689.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-12",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 847,
-        "title": "TGA 2025：《堕落之主2》新预告 美女角色亮相",
-        "summary": "《堕落之主2》宣布游戏将于2026年登陆PC（Epic）、PS5和XSX/S平台，黑暗奇幻动作角色扮演游戏，融合了类魂战斗和濒临崩坏的世界观。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3933713.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3933713.html"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-12",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 848,
-        "title": "TGA2025：3A科幻大作《Exodus》新预告",
-        "summary": "《Exodus》是一款3A级科幻第三人称动作角色扮演游戏，由Archetype Entertainment开发，该工作室由曾开发《质量效应》系列的BioWare前核心成员组成。预计2027年上线Steam，Epic，PS5，Xbox及暴雪战网",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3933691.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3933691.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-12",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 824,
-        "title": "Steam周销量排行榜:Steam Deck二连冠|2025年12月第1周",
-        "summary": "2025年12月第1周Steam全球销量排行榜公布，Steam Deck连续两周位居榜首，《ARC Raiders》紧随其后",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/208278",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/208278"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-11",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 825,
-        "title": "英国首相：R星打压工会事件“令人担忧”",
-        "summary": "英国首相基尔·斯塔默对R星解雇31名员工的事件表示“深感担忧”，政府将对此展开调查。事件起因于R星被指控打压工会，解雇参与工会活动的员工，而公司声称解雇原因是“严重不当行为”。独立工人工会已提起法律诉讼，超过200名员工联名谴责公司行为，事件在议会中被质询。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/208280",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/208280"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-11",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 812,
-        "title": "TGA神秘雕像或为拉瑞安《神界》系列预热",
-        "summary": "TGA前夕出现的神秘雕像可能与拉瑞安工作室的《神界》系列新作有关，证据包括雕像上的发光图案与新注册商标的图标高度相似，以及新商标设计延续了《神界》系列的美学风格但采用了现代化字体。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/208223",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/208223"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-10",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 813,
-        "title": "Call of Duty Will No Longer Do Back-to-back Releases of Modern Warfare or Black Ops Games",
-        "summary": "《使命召唤》团队发布公开信承认近期表现未达玩家预期，宣布将推出《黑色行动7》免费试玩活动，并承诺提供前所未有的赛季内容支持。同时，团队宣布未来将不再连续发布同主题续作，以确保每年提供独特体验。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ign.com/articles/call-of-duty-will-no-longer-do-back-to-back-releases-of-modern-warfare-or-black-ops-games",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ign.com/articles/call-of-duty-will-no-longer-do-back-to-back-releases-of-modern-warfare-or-black-ops-games"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-10",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 815,
-        "title": "VITURE 推出《赛博朋克 2077》联名款 Luma XR 眼镜，限量 10000 件",
-        "summary": "XR / AR 眼镜厂商 VITURE与《赛博朋克2077》联名推出限量版Luma Cyber XR眼镜，全球限量10000件，售价549美元，采用索尼Micro OLED显示面板，具备1200p分辨率、120Hz刷新率和1500nits亮度。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/903/784.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/903/784.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-10",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 816,
-        "title": "《赛博朋克 2077》官宣实体 TCG 卡牌游戏",
-        "summary": "《赛博朋克 2077》官方宣布将推出实体TCG集换式卡牌游戏，作为游戏上线五周年系列活动的一部分。该卡牌游戏由WeirdCo工作室合作开发，将包含游戏本体和《边缘行者》动画中的关键角色。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/903/778.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/903/778.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-10",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 822,
-        "title": "Netflix谈收购华纳游戏 对公司游戏业务无意太大调整",
-        "summary": "Netflix表示如果成功收购华纳兄弟，对其游戏业务不会进行大幅调整，但未表现出对游戏业务的强烈积极性，引发玩家对《霍格沃茨之遗》、《蝙蝠侠》等代表作未来发展的担忧。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3933532.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3933532.html"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-10",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 823,
-        "title": "世界首开先河！澳大利亚正式实施封禁未满16岁使用SNS",
-        "summary": "澳大利亚政府于12月10日正式实施全球首个国家层面的政策，封禁未满16岁未成年人使用社交网络服务（SNS），旨在应对未成年人网络沉迷问题。该政策引发业界质疑，主要涉及执行效果、替代措施及监管漏洞等问题。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3933538.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3933538.html"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-10",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 826,
-        "title": "PlayStation Plus Game Catalog for December: Assassin’s Creed Mirage, Wo Long: Fallen Dynasty, Skate Story and more",
-        "summary": "12月PlayStation Plus游戏目录新增多款游戏，包括《刺客信条：幻影》及《卧龙：苍天陨落》等，部分游戏将于12月16日上线",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://blog.playstation.com/2025/12/10/playstation-plus-game-catalog-for-december-assassins-creed-mirage-wo-long-fallen-dynasty-skate-story-and-more/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://blog.playstation.com/2025/12/10/playstation-plus-game-catalog-for-december-assassins-creed-mirage-wo-long-fallen-dynasty-skate-story-and-more/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-10",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 827,
-        "title": "Switch 2 面临内存成本飙升挑战，任天堂股价大跌",
-        "summary": "12月以来的八个交易日中，任天堂股价七个交易日下跌，周三一度下跌4.7%，跌至今年5月以来的最低水平，市值蒸发约140亿美元。任天堂Switch 2内存和闪存价格上涨不仅压缩了利润率，还可能抑制市场需求，外置存储卡的价格上涨也增加了玩家的实际成本。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/903/873.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/903/873.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-10",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 828,
-        "title": "Xbox has launched an Indie Selects Demo Fest, with 37 demos to download",
-        "summary": "Xbox推出了“独立游戏精选试玩活动”（Indie Selects Demo Fest），提供37款来自全球独立开发者的游戏试玩版本，所有试玩版均可免费下载至12月31日。这些试玩版主要面向Xbox主机，部分也支持PC和手持设备。Xbox提醒玩家，这些试玩版多为早期版本，可能与最终发布的游戏存在差异。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.videogameschronicle.com/news/xbox-has-launched-an-indie-selects...",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.videogameschronicle.com/news/xbox-has-launched-an-indie-selects..."
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-10",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 829,
-        "title": "Saudi Arabia to host Kingdom of Gaming conference in 2026",
-        "summary": "沙特阿拉伯将于2026年12月1日至3日在首都利雅得举办“游戏王国”会议，预计吸引2万名参与者、500家工作室、200位投资者和300家参展商，目标是推动当地创意经济发展并促成25项投资与出版协议。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/saudi-arabia-to-host-kingdom-of-gaming-conference-in-2026",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/saudi-arabia-to-host-kingdom-of-gaming-conference-in-2026"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-10",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 803,
-        "title": "还未结束!派拉蒙作价1080亿美元对抗网飞收购华纳兄弟报价",
-        "summary": "派拉蒙宣布以1080亿美元报价竞购华纳兄弟探索公司（WBD），对抗网飞此前830亿美元的收购提案，报价包含更多资产且每股溢价高达139%。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/208175",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/208175"
-            }
-        ],
-        "category": "industry",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-09",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 809,
-        "title": "卡普空2025财年年度报告:《生化》系列迎30年转折点",
-        "summary": "卡普空2025财年年度报告显示公司多项财务指标创历史新高，连续第七年实现利润增长。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-09",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 810,
-        "title": "又一款《星鸣特攻》？曝索尼新作将采用虚幻引擎5",
-        "summary": "索尼计划于2026年推出一款名为《Fairgames》的在线服务型游戏，采用虚幻引擎5开发，融合“撤离射击”与“大逃杀”元素。该项目由Haven Entertainment Studios负责",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3933414.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3933414.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-09",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 811,
-        "title": "Elder Scrolls V: Skyrim Anniversary Edition launches on Switch 2 today, free upgrade",
-        "summary": "《上古卷轴5：天际》周年纪念版于2025年12月9日在任天堂Switch 2平台发布，已拥有Switch原版的玩家可免费升级。该版本包含基础游戏和三个官方扩展包，并支持更高分辨率、性能优化、Joy-Con 2鼠标操作等新功能",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mynintendonews.com/2025/12/09/elder-scrolls-v-skyrim-anniversary-edition-launches-on-switch-2-today-free-upgrade/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mynintendonews.com/2025/12/09/elder-scrolls-v-skyrim-anniversary-edition-launches-on-switch-2-today-free-upgrade/"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-09",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 814,
-        "title": "2026 WILL BE A DEFINING YEAR FOR XBOX, AS MICROSOFT WILL CELEBRATE ITS 25TH ANNIVERSARY & SET ITS FUTURE",
-        "summary": "2026年是Xbox成立25周年，微软计划借此机会庆祝其历史成就，并确定Xbox生态系统的未来发展方向。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/2026-defining-year-for-xbox-celebrate-25th-anniversary-set-future/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/2026-defining-year-for-xbox-celebrate-25th-anniversary-set-future/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-09",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 817,
-        "title": "“最畅销游戏女主角”劳拉回归，新《古墓丽影》游戏 TGA 2025 首秀",
-        "summary": "《古墓丽影》新游戏将于2025年12月11日在TGA 2025颁奖典礼上首次亮相，标志着女主角劳拉的回归。游戏由水晶动力开发，采用虚幻引擎5，亚马逊游戏担任发行商。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/903/590.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/903/590.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-09",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 818,
-        "title": "首款鸿蒙全场景独家游戏《太吾绘卷》开启前瞻版招募",
-        "summary": "首款鸿蒙全场景独家游戏《太吾绘卷：天幕心帷》开启前瞻版招募，报名时间为2025年12月9日至12月20日，测试资格将在12月25日前通过报名预留联系方式发放。游戏深度适配华为Mate X7折叠屏旗舰，支持鸿蒙多端无缝流转，完全版预计2026年4月发售。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/903/549.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/903/549.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-09",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 819,
-        "title": "Capcom plans to grow Mega Man, Devil May Cry and Ace Attorney into ‘core IPs’ like Street Fighter and Resident Evil",
-        "summary": "卡普空计划将《洛克人》《鬼泣》和《逆转裁判》发展为与《生化危机》《怪物猎人》《街头霸王》同级别的“核心IP”，通过新作、重制版和移植版扩大用户基础并提升品牌影响力。公司目标是年销量1亿份游戏，营业利润年增长10%以上。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-09",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 820,
-        "title": "PlayStation 5 - Official 'Upcoming Games in 2026' Trailer",
-        "summary": "游戏包括《漫威金刚狼》、《生化危机9：安魂曲》、《光环：战役进化》、《Saros》、《漫威铁拳》、《007：初露锋芒》、《仁王3》、《沙丘：觉醒》、《鬼武者：剑之道》、《红色沙漠》、《黎明行者之血》、《虚实万象》",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ign.com/videos/playstation-5-official-upcoming-games-in-2026-trailer",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ign.com/videos/playstation-5-official-upcoming-games-in-2026-trailer"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-09",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 821,
-        "title": "Leon has been leaked in Resident Evil Requiem thanks to PlayStation Store",
-        "summary": "经典《生化危机》角色莱昂将在新作《生化危机：安魂曲》中登场，相关信息因PlayStation Store的PS5游戏页面泄露而提前曝光，泄露图片显示莱昂与格蕾丝同框。官方预计将在本周四的The Game Awards颁奖典礼上正式公布该角色并发布新预告片。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mynintendonews.com/2025/12/09/leon-has-been-leaked-in-resident-evil-requiem-thanks-to-playstation-store/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mynintendonews.com/2025/12/09/leon-has-been-leaked-in-resident-evil-requiem-thanks-to-playstation-store/"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-09",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 792,
-        "title": "Sensor Tower：11 月共 33 个中国厂商入围全球手游发行商收入榜 TOP100，合计吸金 19.5 亿美元",
-        "summary": "2025年11月，33家中国手游厂商进入全球收入榜TOP100，总收入达19.5亿美元，占TOP100总收入的35.8%。腾讯、点点互动和柠檬微趣分别位居全球发行商收入前三名。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-08",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 793,
-        "title": "黑五主机大战：索尼 PS5 稳坐头把交椅，微软 Xbox 在美国连前三都没进",
-        "summary": "索尼PS5在2025年“黑色星期五周”期间在美国和英国市场占据主导地位，",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-08",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 795,
-        "title": "《战地 6》首发破纪录后玩家数量锐减，发售两月流失八成",
-        "summary": "《战地 6》首发当日创下75万玩家同时在线的纪录，超越《使命召唤》系列，但两个月后玩家数量锐减80%，日均在线人数降至6.4万。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/903/221.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/903/221.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-08",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 802,
-        "title": "《鹅鸭杀》手游国服公测定档 2026 年 1 月 7 日，金山世游运营",
-        "summary": "《鹅鸭杀》手游国服公测定档于2026年1月7日，由金山世游运营，多人在线社交推理玩法，steam最高70万同时在线，",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/903/300.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/903/300.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-08",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 804,
-        "title": "Microsoft Flight Simulator 2024 Head Pitched PS5 Release During Development, Was Told “No”",
-        "summary": "《微软飞行模拟器2024》在开发初期曾计划登陆PS5平台，但被Xbox高层拒绝。后因索尼主动联系并表达兴趣，最终促成跨平台合作。游戏采用云技术优化存储需求，PS5版本由Asobo Studios与Climax Studios合作开发，目前VR支持仍在进行中。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://gamingbolt.com/microsoft-flight-simulator-2024-head-pitched-ps5-release-during-development-was-told-no",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://gamingbolt.com/microsoft-flight-simulator-2024-head-pitched-ps5-release-during-development-was-told-no"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-08",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 805,
-        "title": "Microsoft Flight Sim head says bringing it to PS5 was his idea, believes it started the ‘avalanche of Xbox titles coming to PS5’",
-        "summary": "微软飞行模拟器负责人Jorg Neumann表示将游戏移植到PS5是他的想法，并认为此举开启了Xbox游戏登陆PlayStation平台的浪潮。PS5版《微软飞行模拟器2024》今日发布，2026年将免费更新支持PS VR2。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.videogameschronicle.com/news/microsoft-flight-sim-head-says-bringing-it-to-ps5-was-his-idea-belie...",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.videogameschronicle.com/news/microsoft-flight-sim-head-says-bringing-it-to-ps5-was-his-idea-belie..."
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-08",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 806,
-        "title": "Bloomberg: Netflix considered buying EA, FOX and Disney before Warner Bros",
-        "summary": "Netflix曾考虑收购EA、福克斯和迪士尼，最终选择了华纳兄弟，若交易成功将影响娱乐行业。Netflix市值4070亿美元，是迪士尼（1897.8亿美元）的两倍多。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mynintendonews.com/2025/12/08/bloomberg-netflix-considered-buying-ea-fox-and-disney-before-warner-bros/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mynintendonews.com/2025/12/08/bloomberg-netflix-considered-buying-ea-fox-and-disney-before-warner-bros/"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-08",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 807,
-        "title": "Capcom wants to revitalise Ace Attorney, Devil May Cry, and Mega Man with new releases, remakes, and ports",
-        "summary": "Capcom计划通过新作、重制版和移植版来重振《逆转裁判》《鬼泣》《洛克人》三大经典游戏系列",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mynintendonews.com/2025/12/08/capcom-wants-revitalise-ace-attorney-devil-may-cry-and-mega-man-with-new-releases-remakes-and-ports/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mynintendonews.com/2025/12/08/capcom-wants-revitalise-ace-attorney-devil-may-cry-and-mega-man-with-new-releases-remakes-and-ports/"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-08",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 808,
-        "title": "《古墓丽影》全新作确认将于TGA上正式公布",
-        "summary": "《古墓丽影》全新作将在2025年TGA颁奖礼上正式公布，时间为北京时间12月12日上午8:30。该系列女主角劳拉·克劳馥已被吉尼斯世界纪录认证为史上最畅销电子游戏女主角。新作由水晶动力开发，使用虚幻引擎5，亚马逊游戏负责发行。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3933402.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3933402.html"
-            }
-        ],
-        "category": "industry",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-08",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 869,
-        "title": "PS6要配备30GB GDDR7内存？价格要暴涨了",
-        "summary": "索尼PS6计划于2027年秋季发售，配备30GB GDDR7内存，采用160位总线宽度和32Gbps传输速率，但DRAM价格上涨可能导致主机成本上升。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3933335.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3933335.html"
-            }
-        ],
-        "category": "technology",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-08",
-        "tags": [
-            "内存涨价"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 788,
-        "title": "定档TGA！《影之刃零》将于2025 TGA公布发售日期",
-        "summary": "灵游坊《影之刃零》确认参展2025年TGA，将在12月12日颁奖典礼上公布具体发售日期。游戏采用虚幻5引擎，国产3A武侠动作游戏官",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/208118",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/208118"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-07",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 789,
-        "title": "《艾尔登法环：黑夜君临》DLC“见弃空洞者”全球销量已突破200万份",
-        "summary": "《艾尔登法环：黑夜君临》DLC“见弃空洞者”全球销量突破200万份",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/208104",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/208104"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-07",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 794,
-        "title": "Xbox was outsold by a little-known Kinect-style console during Black Friday",
-        "summary": "Nex Playground是一款2023年推出的Android系统主机，配备类似微软Kinect的运动摄像头，主打家庭游戏，售价250美元但常打折至200美元以下，并在黑色星期五前一周短暂超越PS5销量。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.videogameschronicle.com/news/xbox-was-outsold-by-a-little-known-kinect-style-console-during-black-friday/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.videogameschronicle.com/news/xbox-was-outsold-by-a-little-known-kinect-style-console-during-black-friday/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-07",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 797,
-        "title": "《艾尔登法环》大获成功 系列销量接近5000万套",
-        "summary": "《艾尔登法环》系列销量接近5000万套，其中本体销量超过3000万，DLC“黄金树之影”销量1000万，《艾尔登法环：黑夜君临》本体销量超过500万，其追加DLC“见弃空洞者”上线三天销量突破200万。FromSoftware宣布2026年将推出新作《黄昏血族》。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3933293.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3933293.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-07",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 790,
-        "title": "网飞作价827亿美元收购华纳兄弟",
-        "summary": "网飞公司宣布以827亿美元收购华纳兄弟探索公司，交易将通过现金加股票的形式完成，预计在华纳兄弟探索公司完成Discovery Global分拆后于2026年第三季度完成。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/208091",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/208091"
-            }
-        ],
-        "category": "industry",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-06",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 791,
-        "title": "国产抗战题材FPS《烽火十四》首支预告片发布",
-        "summary": "国产抗战题材FPS游戏《烽火十四》发布首支预告片，游戏以线性关卡形式呈现中国抗战十四年的悲壮史诗，Steam 页面已开启",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/208079",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/208079"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-06",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 796,
-        "title": "《英雄联盟》衍生格斗游戏《2XKO》确认明年 1 月登陆 PS5、Xbox 平台",
-        "summary": "《英雄联盟》衍生格斗游戏《2XKO》将于2026年1月登陆PS5和Xbox Series X|S平台，目前已上架PS Store和Microsoft Store。由《英雄联盟》和《无畏契约》团队联合开发，支持单人操作双英雄或双人组队的免费2V2格斗游戏。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/902/939.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/902/939.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-06",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 798,
-        "title": "MICROSOFT IS SENDING OUT FREE XBOX GIFT CARDS TO SELECT USERS",
-        "summary": "微软正在向部分选定的Xbox用户免费发放价值10美元的Microsoft Store礼品卡，该促销活动仅针对特定账户开放，有效期至2025年12月31日。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/microsoft-sending-out-free-xbox-gift-cards/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/microsoft-sending-out-free-xbox-gift-cards/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-06",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 799,
-        "title": "PS5 Pro’s PSSR 2 is “Not Some 0.5 Upgrade,” Will Reduce GPU Processing Time – Rumour",
-        "summary": "PS5 Pro的PSSR 2技术将带来显著升级，通过优化算法减少GPU处理时间和内存使用，而非简单的0.5级改进。该技术将与FSR 3和FSR 4独立发展，并有望在2026年通过FSR 4兼容性为PS5 Pro带来进一步升级。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://gamingbolt.com/ps5-pros-pssr-2-upgrade-will-be-reduce-gpu-processing-time-not-some-0-5-upgrade-rumour",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://gamingbolt.com/ps5-pros-pssr-2-upgrade-will-be-reduce-gpu-processing-time-not-some-0-5-upgrade-rumour"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-06",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 801,
-        "title": "PS5 dominated Black Friday console sales in the UK, with PS5 Pro marking its best week since launch",
-        "summary": "PS5在2025年英国黑色星期五期间的销量占据主导地位，PS5 Pro创下了自发布以来的最佳销售周。标准版PS5和数字版分别降价21%和34%。《EA Sports FC 26》、《使命召唤：黑色行动7》和《战地6》占据销量及收入榜前3名。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.videogameschronicle.com/news/ps5-dominated-black-friday-console-sales-in-the-uk-with-ps5-pro-marking-its-best-sales-week-since-launch/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.videogameschronicle.com/news/ps5-dominated-black-friday-console-sales-in-the-uk-with-ps5-pro-marking-its-best-sales-week-since-launch/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-06",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 780,
-        "title": "网易回应《七日世界》涉嫌盗用《无人深空》素材：现已替换并进行内部调查",
-        "summary": "网易旗下游戏《七日世界》因付费家具涉嫌盗用《无人深空》素材引发争议，网易回应称已替换相关素材并启动内部调查。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/208047",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/208047"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-05",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 781,
-        "title": "《使命召唤：黑色行动7》与《使命召唤：战争地带》第1赛季现已上线",
-        "summary": "《使命召唤：黑色行动7》与《使命召唤：战争地带》第1赛季已正式上线，带来大量新内容，同时《战争地带》也进行了重大更新，整合了《黑色行动7》的移动方式和作战配置。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/208035",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/208035"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-05",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 782,
-        "title": "索尼与Bad Robot达成协议，开发及发行《求生之路》创始人Mike Booth旗下4人合作射击游戏",
-        "summary": "索尼与Bad Robot Games达成合作协议，将共同开发和发行由《求生之路》创始人Mike Booth领导的四人合作射击游戏，该游戏将登陆PS5和PC平台。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/208027",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/208027"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-05",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 783,
-        "title": "《全面战争：中世纪3》正式公开：《全面战争》25周年纪念发表会消息汇总",
-        "summary": "《全面战争》25周年纪念发表会公开了《全面战争：中世纪3》及《全面战争：战锤3》“终焉之主”扩展包等新动态，并透露12月11日会有一个未公开的神秘项目。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-05",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 784,
-        "title": "官方确认：Steam Machine 游戏主机硬件支持 HDMI 2.1，正解决软件限制",
-        "summary": "Valve确认Steam Machine游戏主机硬件支持HDMI 2.1，但受限于HDMI Forum禁止开源项目实现该标准的规定，目前软件层面仅支持HDMI 2.0。Valve通过技术手段突破限制，已实现4K 120Hz输出。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/902/639.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/902/639.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-05",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 800,
-        "title": "PS6 Handheld Will Run PS5 Games Thanks to Games Using Low-Power Mode Feature – Rumour",
-        "summary": "索尼正在通过PS5的低功耗模式功能为未来的PS6手持设备铺路，确保PS5游戏在该设备上的兼容性。PS6手持设备预计支持PS4和PS5游戏的向后兼容，并可能在2027年发布。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://gamingbolt.com/ps6-handheld-will-run-ps5-games-thanks-to-games-using-low-power-mode-feature-rumour",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://gamingbolt.com/ps6-handheld-will-run-ps5-games-thanks-to-games-using-low-power-mode-feature-rumour"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-05",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 870,
-        "title": "PC硬件涨价潮席卷全产业链：内存显卡CPU轮番提价",
-        "summary": "PC硬件市场正经历全产业链涨价潮，AI产业爆发导致存储厂商将产能转向高带宽内存(HBM)，消费级DDR和LPDDR内存供应收紧，内存、SSD、显卡和CPU价格轮番上涨，主要受AI产业爆发导致的产能重构影响，预计短缺将持续至2027年甚至更久，消费者装机成本显著增加，市场观望情绪浓厚。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3933225.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3933225.html"
-            }
-        ],
-        "category": "technology",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-05",
-        "tags": [
-            "内存涨价"
-        ],
-        "sentiment": "negative",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 768,
-        "title": "蚂蚁通用 AI 助手灵光闪应用升级，最快 30 秒“手搓”一个闪游戏",
-        "summary": "蚂蚁灵光助手上线6天下载量超过200万，最快 30 秒“手搓”一个闪游戏，支持用户更换角色图片、调整难度和规则等。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/902/365.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/902/365.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-04",
-        "tags": [
-            "业内资讯-AI"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 769,
-        "title": "《怪物猎人：荒野》游戏已解决初期难度过低问题，官方恳求老玩家回归",
-        "summary": "《怪物猎人：荒野》游戏已解决初期难度过低问题，官方恳求老玩家回归",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/902/360.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/902/360.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-04",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 770,
-        "title": "国产蒸汽朋克开放世界RPG《逆神者》公布首支预告片",
-        "summary": "帕斯亚投资过亿，国产蒸汽朋克开放世界RPG《逆神者》公布首支预告片，玩家将扮演“练气士”在东方文化与蒸汽朋克结合的幻想世界中展开冒险，该游戏入选索尼“中国之星计划”第三期，。将登陆 Steam / Xbox Series X|S / PS5 平台",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/207978",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/207978"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-04",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 773,
-        "title": "Microsoft Flight Simulator 2024 PS5 Review – The Sky’s the Limit",
-        "summary": "《微软飞行模拟2024》PS5版评分8分，尽管在控制器实现和主机优化方面存在不足，游戏仍通过其精细的飞行模拟和震撼的视觉效果提供了沉浸式体验。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://gamingbolt.com/microsoft-flight-simulator-2024-ps5-review-the-skys-the-limit",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://gamingbolt.com/microsoft-flight-simulator-2024-ps5-review-the-skys-the-limit"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-04",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 777,
-        "title": "《天下：万象》定档12月17日全平台上线！前瞻发布会海量干货抢先看！",
-        "summary": "网易《天下：万象》将于12月17日全平台上线，同时《天下贰·经典版》将开启不限号删档付费测试。游戏采用网易自研Messiah引擎，实现三端互通、画质升级、捏脸系统革新等多项改进。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://ol.3dmgame.com/news/202512/42335.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://ol.3dmgame.com/news/202512/42335.html"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-04",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 778,
-        "title": "新一期Fami通评分大作云集！《燕云十六声》仅获30分垫底",
-        "summary": "最新一期Fami通游戏评分公布，多款大作上榜，其中《星之卡比：飞天骑士》以36分位列榜首，《八方旅人0》34分，《使命召唤：黑色行动7》及《密特罗德究极4》32分，《燕云十六声》以30分垫底。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3933105.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3933105.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-04",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 779,
-        "title": "《ARC Raiders》成11月Steam最畅销游戏 达350万",
-        "summary": "根据Alinea Analytics数据，《ARC Raiders》成为2025年11月Steam最畅销游戏，销量达350万套，全平台累计销量770万套，Steam占比近半。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3933071.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3933071.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-04",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 785,
-        "title": "世嘉确认将在游戏开发中使用 AI 技术，但仅限“适当用例”",
-        "summary": "世嘉确认将在游戏开发中谨慎使用AI技术，主要用于提升开发效率，但会避免在创意领域引发争议的环节。日本超过半数的游戏公司已开始采用AI技术。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/902/539.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/902/539.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-04",
-        "tags": [
-            "业内资讯-AI"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 786,
-        "title": "《2025 年中国电子竞技产业报告》发布：直播收入占比超 80%，用户规模超 4.95 亿人",
-        "summary": "2025年中国电子竞技产业收入达293.31亿元，同比增长6.40%，用户规模超4.95亿人。直播收入占比80.81%，移动游戏占比58.6%，射击类游戏在各类榜单中占据主导地位。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/902/427.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/902/427.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-04",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 787,
-        "title": "Xbox Gaming Hardware Manufacturing to be Boosted With New Factories in Vietnam",
-        "summary": "微软计划通过富士康和立讯精密在越南新建工厂提升Xbox游戏硬件产能，富士康子公司佛山科技计划每年增产480万台Xbox设备，立讯精密则计划年增产450万台。此举可能涉及Xbox主机、ROG Xbox Ally/X手持游戏PC等设备的生产。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://gamingbolt.com/xbox-gaming-hardware-manufacturing-to-be-boosted-with-new-factories-in-vietnam",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://gamingbolt.com/xbox-gaming-hardware-manufacturing-to-be-boosted-with-new-factories-in-vietnam"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-04",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 759,
-        "title": "《密特罗德 究极4 穿越未知》媒体评分现已解禁：Metacritic均分81分",
-        "summary": "《密特罗德究极4穿越未知》媒体评分解禁，Metacritic均分81分，共收录73家媒体评价。IGN和Gamespot均给出8分，Eurogamer评分为60分，Giant Bomb则给出满分。评价普遍认为游戏在系列经典元素和创新尝试之间取得平衡，游戏的关卡解谜设计水平较佳，但部分设计略显过时或参差不齐，沙漠地图太空和NPC队友太吵成为主要扣分点。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/207920",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/207920"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-03",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 760,
-        "title": "154GB → 23GB：PC 版《绝地潜兵 2》移除优化 HDD 技术，游戏体积瘦身约 85%",
-        "summary": "PC版《绝地潜兵2》通过移除针对机械硬盘的优化技术，游戏体积从154GB大幅缩减至23GB，降幅达85.06%。该技术原用于缩短HDD加载时间，但实际效果有限，移除后加载时间仅增加几秒。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/902/042.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/902/042.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-03",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 761,
-        "title": "索尼诉《荒野起源》侵权《地平线》，腾讯同意暂停游戏所有宣传及公开测试",
-        "summary": "索尼起诉腾讯旗下游戏《荒野起源》涉嫌侵权《地平线》系列，双方已同意暂停游戏的所有市场推广及公开测试，并将关键听证会合并至2026年初举行。游戏不会早于 2027 年第四季度发售。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/902/006.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/902/006.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-03",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 763,
-        "title": "Video Game Release Dates: The Biggest Games of December 2025 and Beyond",
-        "summary": "新游pipeline",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ign.com/articles/video-game-release-dates-ps4-ps5-xbox-one-series-x-nintendo-switch",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ign.com/articles/video-game-release-dates-ps4-ps5-xbox-one-series-x-nintendo-switch"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-03",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 764,
-        "title": "Nintendo Switch 2 Consoles Score a Surprise $50 Price Cut, But It Won't Last Long",
-        "summary": "沃尔玛在剁手星期一促销期间首次对Nintendo Switch 2进行了降价，Switch 2 + Mario Kart World捆绑包降价幅度为50美元，相当于免费赠送游戏，但优惠仅限当天。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ign.com/articles/nintendo-switch-2-discount-walmart-cyber-monday-2025",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ign.com/articles/nintendo-switch-2-discount-walmart-cyber-monday-2025"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-03",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 771,
-        "title": "Steam周销量排行榜:Steam Deck登顶|2025年11月第4周",
-        "summary": "2025年11月第4周Steam全球销量排行榜公布，Steam Deck登顶榜首，《ARC Raiders》紧随其后",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/207919",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/207919"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-03",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 772,
-        "title": "Roblox banned in Russia, local media says",
-        "summary": "《Roblox》因包含LGBTQ在俄罗斯被禁用，俄罗斯法律将公开倡导LGBTQ权益定义为\"极端主义行为\"。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://techcrunch.com/2025/12/03/roblox-banned-in-russia-local-media-says/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://techcrunch.com/2025/12/03/roblox-banned-in-russia-local-media-says/"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-03",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 774,
-        "title": "Horses gets last-minute ban from Epic Games Store following Steam controversy, despite apparent earlier approval",
-        "summary": "叙事恐怖游戏《Horses》在Epic Games Store临近发售时突遭下架，此前该游戏已在Steam平台引发争议并被拒绝上架。开发商Santa Ragione表示Epic的禁令基于\"broad and demonstrably incorrect claims\"，并指出游戏已通过其他平台审核且获得PEGI 18/ESRB M分级。目前游戏仍可在GOG和Itch.io购买。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.eurogamer.net/horses-gets-eleventh-hour-ban-from-epic-games-store",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.eurogamer.net/horses-gets-eleventh-hour-ban-from-epic-games-store"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-03",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 775,
-        "title": "Clair Obscur: Expedition 33 is Xbox Game Pass's biggest third-party success in 2025",
-        "summary": "《光与影：33号远征队》总监Guillaume Broche表示，其游戏是今年Xbox Game Pass平台上规模最大的第三方游戏作品，游戏首三日销量突破100万份，一个月内销量达到330万份，近期全球销量超过500万份。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.eurogamer.net/clair-obscur-expedition-33-xbox-game-passs-biggest-third-party-success-2025",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.eurogamer.net/clair-obscur-expedition-33-xbox-game-passs-biggest-third-party-success-2025"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-03",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 776,
-        "title": "Pikmin Bloom has topped $100 million in lifetime player spend since launch",
-        "summary": "AR游戏《Pikmin Bloom》4年以来玩家累计消费额已突破1亿美元大关。2025年收入3480万。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.games...",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.games..."
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-03",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 748,
-        "title": "IO Interactive 工作室确认制作《杀手》系列新作，目前重心集中于《007：曙光》",
-        "summary": "IO Interactive工作室确认将继续开发《杀手》系列新作，但目前工作重心集中在《007：曙光》的开发上。《杀手》新作的具体消息预计将在明年公布合作模式后陆续放出，玩家可能需要等待较长时间才能看到《杀手4》的详细信息。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/901/860.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/901/860.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-12-02",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 749,
-        "title": "INSIDER REAFFIRMS EARLIER CLAIM REGARDING HALF-LIFE 3 ANNOUNCEMENT THIS YEAR & RELEASE IN SPRING 2026",
-        "summary": "游戏媒体Insider Gaming编辑Mike Straw爆料，《半衰期 3》有望在2025年底前正式官宣，并计划于2026年春季发行。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-02",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 752,
-        "title": "RED DEAD REDEMPTION PS5 & XBOX SERIES X|S VERSIONS WILL RUN AT PC ULTRA SETTING",
-        "summary": "Rockstar Games宣布《荒野大镖客：救赎》的PS5和Xbox Series X|S版本将采用PC版的Ultra画质预设，带来显著的画面提升。游戏将于2025年12月2日登陆多个平台，PS4玩家可免费升级至PS5版本并继承进度。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/red-dead-redemption-ps5-xbox-series-runs-at-pc-ultra-setting/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/red-dead-redemption-ps5-xbox-series-runs-at-pc-ultra-setting/"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-02",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 755,
-        "title": "BATTLEFIELD LABS REOPENS FOR TESTING AHEAD OF DECEMBER UPDATE",
-        "summary": "电子艺界（EA）将于20...",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-02",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 757,
-        "title": "成本1亿美元的3A游戏 要卖600万份才能回本！",
-        "summary": "EA前制作人布莱恩·沃克(Bryan Walker)接受外媒采访表示：一款成本1亿美元的3A游戏，至少需售出600万份才能收支平衡。主要因为平台30%分成及实体渠道更高比例抽成，叠加退款等附加成本（可能减少15%收入），导致回本门槛高企。行业转向通行证、内购、资料片及“服务型游戏”等新营收模式维持盈利。《赛博朋克2077》成本超4.4亿美元，《漫威蜘蛛侠2》成本超3亿美元，而2020年的《使命召唤17：黑色行动 冷战》则耗资7亿美元",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/...",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/..."
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-02",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 758,
-        "title": "环境即将迎来大变！ 《英雄联盟》WASD操作系统明日上线",
-        "summary": "《英雄联盟》将于12月3日（国服预计4号进行更新）发布新补丁，WASD操控功能将在除排位/普通征召模式中率先实装。此外还包含多项2026赛季玩法改动，包括野区节奏调整、新视野机制“精灵视界”等",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3932926.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3932926.html"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-02",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 762,
-        "title": "微软 Xbox 宣布《真人快打 1》《夺宝奇兵：古老之圈》将加入 Game Pass 订阅",
-        "summary": "《夺宝奇兵：古老之圈》加入Game Pass Premium；",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-02",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 765,
-        "title": "Rolling Stone lists their favourite games of 2025",
-        "summary": "Rolling Stone杂志发布了2025年度最喜爱的游戏榜单，其中任天堂的两款游戏《大金刚：班扎纳》和《马里奥赛车世界》分别位列第三和第十三位。《33号远征队》和《哈迪斯2》占据第一，第二位。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mynintendonews.com/2025/12/02/rolling-stone-lists-their-favourite-games-of-2025/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mynintendonews.com/2025/12/02/rolling-stone-lists-their-favourite-games-of-2025/"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-02",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 766,
-        "title": "Embark says moving from free-to-play made designing Arc Raiders \"drastically easier\"",
-        "summary": "Embark Studios表示，将《Arc Raiders》从免费游戏模式改为付费模式后，游戏设计变得“容易得多”，并成为母公司Nexon有史以来“最成功的全球发行作品”。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-02",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 767,
-        "title": "Valorant Mobile is China's biggest mobile launch of 2025 | News-in-Brief",
-        "summary": "腾讯宣布《无畏契约》移动版本在8月推出后，成为今年迄今为止中国市场上最成功的移动产品，上市首月的日活跃用户数创下新高。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/valorant-mobile-is-chinas-biggest-mobile-launch-of-2025-news-in-brief",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/valorant-mobile-is-chinas-biggest-mobile-launch-of-2025-news-in-brief"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-02",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 726,
-        "title": "《堡垒之夜》被指含 AI 生成劣质内容，玩家集体抵制",
-        "summary": "玩家在Reddit发帖指控《堡垒之夜》使用AI生成劣质内容（如九脚趾雪人海报），帖文获超3000点赞。玩家批评AI生成内容质量低劣、侵犯艺术家权益且对环境有害。此前Epic Games CEO斯威尼公开反对游戏商店标注“AI制作”标签。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/901/439.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/901/439.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-01",
-        "tags": [
-            "业内资讯-AI"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 740,
-        "title": "《燕云十六声》手游版海外版12月12日上线",
-        "summary": "《燕云十六声》手游海外版将于12月12日上线，支持iOS和Android平台，并与PS5和PC版本实现跨平台联机和进度共享。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3932847.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3932847.html"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-01",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 742,
-        "title": "反效果？《战地6》免费试玩开启后玩家数不升反降",
-        "summary": "《战地6》发售初期同时在线玩家峰值突破70万，但近期开启试玩后日均玩家数从几周前的40万降至约20万。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-01",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 743,
-        "title": "不同用户不同价格！ 索尼开启账户个性化定价测试",
-        "summary": "索尼正在欧洲50个国家与地区测试PS商店的个性化定价系统，同一款游戏或PS Plus会员服务对不同账户显示不同价格，部分用户可获得高达17%的折扣，但价格不会超过官方定价。参加测试的游戏厂商包括2K Games、Take-Two Interactive、Rebellion Developments、Focus Entertainment及Team17",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202512/3932859.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202512/3932859.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-01",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 744,
-        "title": "Pre-orders begin December 11, with launch starting from January 2026.",
-        "summary": "索尼互动娱乐与米哈游合作推出《原神》PS5限定手柄，采用独特配色和角色图案设计，售价668 港币/84.99 美元/84.99 欧元/74.99 英镑/12480日元",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-01",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 745,
-        "title": "郭炜炜据报辞任西山居CEO，仍继续担任西山居首席制作人",
-        "summary": "郭炜炜辞去西山居CEO职务，由金山软件CEO兼西山居董事长邹涛接任代理CEO，郭炜炜将继续担任首席制作人，专注于游戏研发工作。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/207846",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/207846"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-01",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 746,
-        "title": "2025年12月游戏推荐：开启年末最终篇章",
-        "summary": "《漫威宇宙入侵》12.1，《银河战士 Prime 4》&《歧路旅人0》12.4，搜打撤《LET IT DIE: INFERNO》12.4",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://bbs.a9vg.com/forum.php?mod=viewthread&tid=9058238&extra=page%3D1%26filter%3Dauthor%26orderby%3Ddateline",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://bbs.a9vg.com/forum.php?mod=viewthread&tid=9058238&extra=page%3D1%26filter%3Dauthor%26orderby%3Ddateline"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-01",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 747,
-        "title": "PlayStation双十二促销启动 《宇宙机器人》国行版预售开启",
-        "summary": "索尼互动娱乐宣布PlayStation双十二促销活动启动，《宇宙机器人》国行版开启预售，售价298元，12月12日正式上线。12月6日起，PS5及PS5 Pro主机、配件限时优惠，最低3399元。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://bbs.a9vg.com/forum.php?mod=viewthread&tid=9058264&extra=page%3D1%26filter%3Dauthor%26orderby%3Ddateline",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://bbs.a9vg.com/forum.php?mod=viewthread&tid=9058264&extra=page%3D1%26filter%3Dauthor%26orderby%3Ddateline"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-01",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 750,
-        "title": "育碧《波斯王子：时之沙》重制版发售窗口进一步缩小：消息称明年 1 月见",
-        "summary": "爆料人汤姆・亨德森在Insider Gaming播客中透露，《波斯王子：时之沙》将于2026年1月中旬发售，覆盖PC与主机平台。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-12-01",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 751,
-        "title": "网易《逆水寒》获国家级科技奖一等奖，AI + 游戏获国家学术认可",
-        "summary": "网易《逆水寒》与多所高校及科研机构合作的科研项目《基于强化学习的智能决策关键技术及应用》荣获中国图象图形学学会“科技进步奖”一等奖，标志着AI技术在游戏领域的应用获得国家级学术认可。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/901/618.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/901/618.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-01",
-        "tags": [
-            "业内资讯-AI"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 753,
-        "title": "Red Dead Redemption 1 on Xbox Series X/S, PS5, and Switch 2 – Everything You Need to Know",
-        "summary": "荒野大镖客 1 平台与性能升级",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-01",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 754,
-        "title": "NEW PS5 MODEL APPEARS TO HAVE REMOVED DISC DRIVE INTERNET CONNECTION REQUIREMENT, UPGRADED COOLING SYSTEM",
-        "summary": "新款PS5（CFI-2100/2116型号）取消了首次使用光盘驱动器时需联网的要求，并升级了冷却系统，采用PS5 Pro的散热技术以解决液态金属泄漏问题，同时SSD存储容量降至825GB，重量减轻156克。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/new-ps5-model-removes-disc-drive-internet-connection-upgraded-cooling-system/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/new-ps5-model-removes-disc-drive-internet-connection-upgraded-cooling-system/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-01",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 756,
-        "title": "GTA 6 Could Feature Bike Renting, According to Animator’s Demo Reel",
-        "summary": "前动画师Benjamin Chue的演示视频中展示了角色从名为LomBike的租赁站取车和还车的动画，这被认为是自行车租赁服务的直接证据。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-01",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 875,
-        "title": "内存价格飙升冲击 PC 硬件市场，消息称主板销量同比大跌 40% 至 50%",
-        "summary": "内存价格飙升导致PC硬件市场受到冲击，主板销量同比大幅下降40%至50%，主要原因是DDR5内存价格急剧上涨，消费者推迟升级或装机计划，进而影响了CPU等配套硬件的销售。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/901/516.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/901/516.htm"
-            }
-        ],
-        "category": "technology",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-12-01",
-        "tags": [
-            "内存涨价"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 725,
-        "title": "The Witcher 4, 5 and 6 Will Still Launch Within Six Years, CD Projekt RED Reaffirms",
-        "summary": "CD Projekt RED联合首席执行官Michał Nowakowski表示，团队已使用虚幻引擎5近四年，计划在6年内发布《巫师4》、《巫师5》和《巫师6》三部曲，其中《巫师4》最早将于2027年推出。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://gamingbolt.com/the-witcher-4-5-and-6-will-still-launch-within-six-years-cd-projekt-red-reaffirms",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://gamingbolt.com/the-witcher-4-5-and-6-will-still-launch-within-six-years-cd-projekt-red-reaffirms"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-30",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 727,
-        "title": "任天堂 Switch 2 最大游戏：SE《最终幻想 7 重制强化版》体积可达 99GB",
-        "summary": "《最终幻想 7 重制版 Intergrade》将于2026年1月22日登陆任天堂Switch 2及Xbox Series X|S平台，游戏容量最大为99GB，占用近四成Switch 2机体储存空间，成为Switch 2上已知体积最大的游戏，而实体版采用“钥匙卡”形式，无法放入标准64GB卡带。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/901/418.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/901/418.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-30",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 733,
-        "title": "UK: PS5 sales narrowly beating Switch 2 and is best-selling console of the year",
-        "summary": "根据The Game Business提供的最新销售数据，索尼PlayStation 5在英国市场的销量略高于任天堂Switch 2，成为2025年最畅销的游戏机，主要得益于黑色星期五期间的折扣促销活动。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mynintendonews.com/2025/11/30/uk-ps5-sales-narrowly-beating-switch-2-and-is-best-selling-console-of-the-year/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mynintendonews.com/2025/11/30/uk-ps5-sales-narrowly-beating-switch-2-and-is-best-selling-console-of-the-year/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-30",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 735,
-        "title": "Here's what's coming to Fortnite Chapter 7: Pacific Break",
-        "summary": "《堡垒之夜》第七章“太平洋裂隙”即将推出，包含新地图、新玩法、战斗通行证等内容，故事发生在“黄金海岸”。新地点包括战斗森林大道、沙滩地带、旺基兰德、机密峡谷等。新增“自复活装置”等",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.eurogamer.net/heres-whats-coming-to-fortnite-chapter-7-pacific-break",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.eurogamer.net/heres-whats-coming-to-fortnite-chapter-7-pacific-break"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-30",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 738,
-        "title": "Where Winds Meet Reaches 9 Million Players in Two Weeks",
-        "summary": "《燕云十六声》官宣两周玩家数量突破900万",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://gamingbolt.com/where-winds-meet-reaches-9-million-players-in-two-weeks",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://gamingbolt.com/where-winds-meet-reaches-9-million-players-in-two-weeks"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-30",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 739,
-        "title": "WHERE WINDS MEET COMPARISON HIGHLIGHTS PS5 PRO ADVANTAGES AND PC PERFORMANCE LEAD",
-        "summary": "《燕云十六声》图形性能对比测试显示，PS5 Pro在光线追踪方面有轻微优势，支持有限的光线追踪，但PC版本在纯性能表现上仍领先。当前PS5主机无法稳定维持60 FPS，而RTX 50系列显卡可轻松超过200 FPS。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://twistedvoxel.com/where-winds-meet-comparison-ps5-pro-pc/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://twistedvoxel.com/where-winds-meet-comparison-ps5-pro-pc/"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-30",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 741,
-        "title": "《寂静岭f》开发者表示成功离不开玩家热议的支持",
-        "summary": "《寂静岭f》在科乐美发售后取得了亮眼开局，Steam平台开局即获“特别好评”，仅四天销量突破百万份。开发者认为游戏的成功离不开玩家社区的支持，尤其是玩家在网上热议游戏相关的理论和传播梗图，这使其人气超过了《寂静岭2》重制版。开发者指出，玩家社区的热议氛围是游戏长期成功的关键，而《寂静岭f》凭借独特的故事设定与背景，与系列其他作品形成了差异化，获得了玩家的共鸣。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932823.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932823.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-30",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 724,
-        "title": "《阴阳师：百闻牌》发布运营内容停止更新公告",
-        "summary": "《阴阳师：百闻牌》运营团队宣布因运营策略调整，游戏将在2026年1月1日之后停止新内容的开发。游戏服务器仍将保持开启，玩家可正常登录游戏。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/207764",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/207764"
-            }
-        ],
-        "category": "industry",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-29",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 729,
-        "title": "消息称《极限竞速：地平线 6》为避让《GTA 6》游戏，将提档至 2026 上半年发行",
-        "summary": "《极限竞速：地平线 6》为避开《GTA 6》的档期，计划提前至2026年上半年发行，包括 Playground Games 在内的几乎所有 3A 游戏开发商都在试图避开这一时段",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/901/173.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/901/173.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-29",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 734,
-        "title": "Metroid Prime 4 and Assassin’s Creed Shadows Nintendo Switch 2 copies out in the wild",
-        "summary": "2025年12月初，任天堂Switch 2平台将迎来两款大作：《刺客信条：影》于12月2日登陆，《银河战士Prime 4：超越》于12月4日发售，当前实体版已被泄漏，玩家在游戏正式发售前浏览社交媒体需谨慎",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mynintendonews.com/2025/11/29/metroid-p...",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mynintendonews.com/2025/11/29/metroid-p..."
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-29",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 713,
-        "title": "育碧：任天堂 Switch 2 版《刺客信条：影》开启 DLSS 后可达 30 FPS",
-        "summary": "育碧宣布《刺客信条：影》将于12月2日登陆Nintendo Switch 2，支持DLSS技术，并提供跨平台进度同步功能。由于受到GPU限制，育碧针对 ARM 处理器进行了优化，并在部分场景缩减模拟数据以降低 GPU 负载。未来可能在底座模式下添加键鼠支持计划",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/900/876.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/900/876.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-28",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 720,
-        "title": "知名外包公司财报披露！Atlus连续两年为其最大客户",
-        "summary": "日本游戏开发外包公司Tose（东星软件）最新发布的财报显示，《女神异闻录》系列开发商Atlus连续第二年成为其最大客户，占总收入的22.3%，史克威尔艾尼克斯占比16.9%位列第二。近期参与的项目包括《勇者斗恶龙1&2 HD-2D重制版》",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932720.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932720.html"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-28",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 721,
-        "title": "曝索尼正在开发未公布MOBA游戏！或将登陆全平台",
-        "summary": "根据索尼互动娱乐最新发布的招聘信息显示，招聘职位为\"MOBA游戏测试分析师\"，要求具备《任天堂明星大乱斗》和《宝可梦大集结》等玩家对战游戏经验，并对快节奏PvP动作游戏有深入理解。同时指出该游戏将面向移动设备、PC和主机多平台发布。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932702.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932702.html"
-            }
-        ],
-        "category": "industry",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-28",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 722,
-        "title": "好吃爱吃！ 《逃离塔科夫》Steam发售10天卖出80万份 中国排销量榜第二",
-        "summary": "《逃离塔科夫》在Steam平台发售10天内售出80万份，中国销量占比16%排名第二，俄罗斯以19%占比位居榜首。游戏总收入达2890万美元，但评价褒贬不一，国区好评率仅10%。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932700.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932700.html"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-28",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 723,
-        "title": "锁区降价大成功！索尼日版PS5周销量暴涨六倍",
-        "summary": "据《Fami通》最新公布的硬件销量数据显示，索尼日版PS5上市仅两天内售出23,381台，系列主机当周总销量达到36,983台，实现了近六倍的增长。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932692.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932692.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-11-28",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 728,
-        "title": "上线仅 10 天，卡普空《生化危机：生存小队》手游全球下载量破 200 万",
-        "summary": "《生化危机：生存小队》手游上线10天全球下载量突破200万，开发方Aniplex和Joycity宣布发放游戏内奖励庆祝这一里程碑。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/901/131.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/901/131.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-28",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 730,
-        "title": "史上第一大众筹游戏《星际公民》13 年筹集金额突破 9 亿美元",
-        "summary": "《星际公民》13年间筹集金额突破9亿美元，单机版本《星际公民：42中队》计划于2026年发售。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/901/010.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/901/010.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-11-28",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 731,
-        "title": "手机秒变 AI 游戏指导，微软 Xbox Gaming Copilot（测试版）上线移动端",
-        "summary": "微软 Xbox Gaming Copilot（测试版）功能已在 Xbox 移动端应用上线，用户可通过手机等设备获得 AI 游戏助手支持，包括实时游戏指导、游戏库管理和新游戏推荐等功能。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/900/943.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/900/943.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-28",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 732,
-        "title": "Steam Machine could cost around $700, build analysis estimates",
-        "summary": "Linus Tech Tips通过组装相似配置的PC估算Steam Machine的生产成本：最低602美元，最高910美元。Ampere Analysis认为其成功将取决于定价策略，目标用户包括现有Steam玩家和对高价游戏PC犹豫的消费者。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.videogameschronicle.com/news/steam-machine-could-cost-around-700-build-analysis-estimates/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.videogameschronicle.com/news/steam-machine-could-cost-around-700-build-analysis-estimates/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-28",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 736,
-        "title": "Bungie admits that Destiny is struggling to attract new players",
-        "summary": "Bungie承认其科幻MMO游戏《命运》在吸引新玩家方面表现不佳，尽管核心玩家群体保持稳定，留存率高，但新玩家数量持续减少，并承认最近的扩展内容未能满足玩家期望。工作室已转向更关注现有玩家的需求，调整游戏设计方向，例如增加更多追求系统、新装备层级和挑战自定义选项，以提供更有意义的奖励而非简单的数值提升。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/bungie-admits-that-destiny-is-struggling-to-attract-new-players",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/bungie-admits-that-destiny-is-struggling-to-attract-new-players"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-28",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 737,
-        "title": "Valve accused of pulling LGBTQ+ game from Steam at request of Russian government",
-        "summary": "俄罗斯媒体审查机构Roskomnadzor要求Steam下架LGBTQ+游戏《Flick Solitaire》，相同要求同时也发送给苹果及谷歌，而苹果和谷歌则无视了相同请求。Steam是唯一服从要求的平台，并指责游戏开发商Flick Games违反协议中“遵守当地法律”条款。Flick Games创始人Ian Masters强调保护LGBTQ+内容是“基本人权”，批评Valve缺乏透明度。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https:/...",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https:/..."
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-28",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 701,
-        "title": "《赛博朋克2077》销量突破3500万份，超越《巫师3》同期表现",
-        "summary": "CD Projekt 第三季度销售收入达3.49亿波兰兹罗提，同比增长53%。本季度净利润为1.93亿兹罗提，同比大幅增长148%。《赛博朋克2077》 销量突破3500万份，超越《巫师3》同期表现，且这一数据不包括通过 PlayStation Plus 订阅服务获得的下载量。索尼订阅服务推动了“往日之影”扩展包的销售，有助于拓展用户群体。《巫师4》项目团队规模保持相对稳定，《赛博朋克2》的开发团队正在扩充，预计不早于2028年推出。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/207681",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/207681"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-11-27",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 703,
-        "title": "微软称 Xbox 云游戏总时长同比暴涨 45%",
-        "summary": "微软Xbox云游戏服务总时长同比增长45%，主机端增长45%，其他设备增长24%。新兴市场如印度、阿根廷和巴西是增长核心驱动力。微软认为云游戏普及原因主要是今年8月将云游戏服务从价格较高的 Xbox Game Pass Ultimate 订阅中解绑，降低了玩家体验云游戏的门槛，未来可能推出更多低成本方案。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/900/581.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/900/581.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-11-27",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 704,
-        "title": "《魔兽世界》12.0 资料片《至暗之夜》将于北京时间 2026 年 3 月 3 日 7:00 上线",
-        "summary": "《魔兽世界》12.0 资料片《至暗之夜》将于北京时间 2026 年 3 月 3 日 7:00 上线",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/900/552.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/900/552.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-27",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 705,
-        "title": "彭博社消息：字节跳动或将出售沐瞳科技，买家是沙特游戏巨头",
-        "summary": "字节跳动正与沙特Savvy Games深入谈判出售旗下游戏公司沐瞳科技，交易可能受字节跳动游戏业务调整和沙特PIF资金状况影响，但谈判结果仍不确定。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://news.sohu.com/a/958910299_204728",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://news.sohu.com/a/958910299_204728"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-27",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 706,
-        "title": "索尼注册液压力反馈手柄专利，或用于PS6及VR设备",
-        "summary": "索尼在国内注册了一项基于液压系统的力反馈手柄专利，该技术通过调控储液囊内流体的压力变化实现精确的触觉反馈，可能应用于PS6或VR设备控制器。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://bbs.a9vg.com/forum.php?mod=viewthread&tid=9057954&extra=page%3D1%26filter%3Dauthor%26orderby%3Ddateline",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://bbs.a9vg.com/forum.php?mod=viewthread&tid=9057954&extra=page%3D1%26filter%3Dauthor%26orderby%3Ddateline"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-27",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 709,
-        "title": "世嘉谈新作游戏销售不佳问题：“Atlus完全版商法”或成主要原因",
-        "summary": "世嘉在财报说明会上承认近年新作游戏销售不佳，主要原因包括用户对后续推出“完全版”的观望心理、游戏类型竞争及定价因素，以及营销层面未能充分传达游戏魅力的问题。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/207705",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/207705"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-27",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 710,
-        "title": "With just 17% of Sega's recent sales coming from new titles, the company suggests \"definitive editions\" could be putting players off Day One purchases",
-        "summary": "世嘉最近的销售中仅有17%来自新发行的游戏，该公司认为“终极版”产品可能会让玩家不愿在游戏发售首日就购买游戏。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/with-just-17-of-segas-recent-sales-coming-from-new-titles-the-company-suggests-definitive-editions-could-be-putting-players-off-day-one-purchases",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/with-just-17-of-segas-recent-sales-coming-from-new-titles-the-company-suggests-definitive-editions-could-be-putting-players-off-day-one-purchases"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-27",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 711,
-        "title": "2025年11月游戏审批版号公开 PS5《星砂岛》过审",
-        "summary": "《星砂岛》获得主机（PS5）版号",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "industry",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-27",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 712,
-        "title": "任天堂收购万代南梦宫新加坡工作室，曾开发《斯普拉遁》",
-        "summary": "任天堂宣布收购万代南梦宫新加坡工作室，并将其改名为「任天堂新加坡工作室」，计划分两阶段完成收购，首先于2026年4月1日收购80%股份，剩余20%将在子公司运营稳定后完成。此前该工作室曾经协助任天堂开发《斯普拉遁》系列作品。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/900/769.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/900/769.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-11-27",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 714,
-        "title": "《古墓丽影：终极版》Switch 2 版画质详解：为了 60 帧牺牲太多，部分场景不如 PS3 原版",
-        "summary": "《古墓丽影：终极版》Switch 2 版的画质表现令人失望，为了达到60帧的流畅度牺牲了大量原有特效，部分场景甚至不如PS3原版。在特效削减、阴影分辨率、植被密度等方面表现不佳，项目组未充分利用Switch 2的硬件性能。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/900/840.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/900/840.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-27",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 715,
-        "title": "虚幻 5 引擎制作：小说改编 MMORPG 游戏《诡秘之主》场景实机画面公布",
-        "summary": "快手虚幻5 MMO《诡秘之主》公布实机画面，展示了6大景点，并透露游戏将包含22条神之途径和220个职业，已官宣开启首测，具体时间待定。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-27",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 716,
-        "title": "动视暴雪招聘现端倪，暗示任天堂 Switch 系列掌机有望迎《使命召唤》游戏",
-        "summary": "据科技媒体 Twisted Voxel 报道，动视暴雪旗下的Sledgehammer Games工作室招聘信息显示，可能正在为任天堂Switch系列游戏机和移动端平台开发一款新的《使命召唤》作品，招聘要求中提及拥有Switch游戏开发经验可作为加分项。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/900/719.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/900/719.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-27",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 717,
-        "title": "调查显示：43% 的美国儿童今年圣诞节想要游戏内货币",
-        "summary": "ESA 开展调研显示，43%的美国儿童在今年圣诞节希望获得游戏内货币，60%的受访儿童计划在节日季购买游戏相关产品，其中49%涉及游戏内货币或微交易。实体游戏和游戏主机也受到欢迎，37%的儿童想要实体游戏，25%以上希望购买主机设备。33%的家长计划为子女购买游戏产品。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/900/703.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/900/703.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-27",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 718,
-        "title": "Epic 掌门人 Tim Sweeney：AI 将渗透整个游戏产业，商城标注无意义",
-        "summary": "Epic 掌门人 Tim Sweeney：AI 将渗透整个游戏产业，商城标注无意义",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/900/683.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/900/683.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-27",
-        "tags": [
-            "业内资讯-AI"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 719,
-        "title": "Paradox takes $37 million write-down after Vampire: The Masquerade - Bloodlines 2 misses targets",
-        "summary": "《吸血鬼：避世血族2》未能达到预期销售目标，Paradox因此计提了3700万美元的减值损失。该游戏在Steam平台上的销量为121,500份，相应净收入约为400万美元，公司表示仍会按计划为该游戏推出两部扩展内容。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/paradox-takes-37-million-write-down-after-vampire-the-masquerade-bloodlines-2-misses-targets",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/paradox-takes-37-million-write-down-after-vampire-the-masquerade-bloodlines-2-misses-targets"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-27",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 697,
-        "title": "马斯克旗下AI将挑战《英雄联盟》最强战队，遵守人类反应限制",
-        "summary": "马斯克旗下AI公司xAI计划在2026年让其开发的Grok 5挑战《英雄联盟》最强人类战队，该AI将严格遵守人类视觉和反应速度的限制，并具备通过阅读游戏说明自学游戏的能力。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/207542",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/207542"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-26",
-        "tags": [
-            "业内资讯-AI"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 698,
-        "title": "SHIFT UP新作《Project Spirits》交由Level Infinite全球发行",
-        "summary": "SHIFT UP新作《Project Spirits》将由腾讯旗下品牌Level Infinite负责全球发行，该游戏基于虚幻引擎5开发，支持主机、PC和手机跨平台游玩",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://bbs.a9vg.com/forum.php?mod=viewthread&tid=9057850&extra=page%3D1%26filter%3Dauthor%26orderby%3Ddateline",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://bbs.a9vg.com/forum.php?mod=viewthread&tid=9057850&extra=page%3D1%26filter%3Dauthor%26orderby%3Ddateline"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-26",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 699,
-        "title": "《赛博朋克 2》游戏新爆料：转向虚幻引擎 5 开发，将含多人在线模式",
-        "summary": "CD Projekt Red招聘29个新职位暗示，《赛博朋克 2》开发进度加速。招聘资料显示游戏将采用虚幻引擎5开发，并可能包含多人在线模式。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/900/265.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/900/265.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-26",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 702,
-        "title": "Embracer集团将Arc Games与Cryptic Studios售予Golden Arc",
-        "summary": "Embracer集团将旗下Arc Games和Cryptic Studios出售给Golden Arc公司，交易净现金收益为3000万美元，心动公司提供4000万美元融资支持。Embracer保留《遗迹》系列发行权和《秘境战盟》相关权益，后者将转至Coffee Stain Group。（Arc Games代表作品包括《星际迷航 Online》、《无冬之夜》及《火炬之光》）",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/207674",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/207674"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-26",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 707,
-        "title": "A comprehensive list of 2025 tech layoffs",
-        "summary": "2025年科技行业裁员潮持续，截至11月26日已有超过22,000名员工被裁，其中2月单月裁员达16,084人。企业普遍将裁员归因于AI自动化替代、业务重组或经济压力，涉及硬件、云计算、游戏、电动汽车等多个领域，覆盖Meta、亚马逊、微软、英特尔等企业。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://techcrunch.com/2025/11/26/tech-layoffs-2025-list/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://techcrunch.com/2025/11/26/tech-layoffs-2025-list/"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-26",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 708,
-        "title": "Steam beta client adds support for Switch 2 Pro controller & GameCube controller",
-        "summary": "Steam测试版客户端更新，新增对任天堂Switch 2 Pro手柄和GameCube手柄的支持，目前仅支持USB连接，未来可能加入蓝牙支持。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mynintendonews.com/2025/11/26/steam-beta-client-adds-support-for-switch-2-pro-controller-gamecube-controller/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mynintendonews.com/2025/11/26/steam-beta-client-adds-support-for-switch-2-pro-controller-gamecube-controller/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-26",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 679,
-        "title": "内存涨价势不可挡 Switch2专用存储卡或将一卡难求",
-        "summary": "内存价格上涨导致Switch2专用MicroSD Express存储卡面临货源紧缺和价格攀升，AI企业大量抢购各类存储产品，影响了普通MicroSD卡的生产",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932485.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932485.html"
-            }
-        ],
-        "category": "industry",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-11-25",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "negative",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 684,
-        "title": "Shift Up《剑星》成为 PC 上首发销量最高的 PlayStation 独占单机游戏",
-        "summary": "Shift Up开发的《剑星》成为PC平台上首发销量最高的PlayStation独占单机游戏，Steam最高同时在线玩家数达19.2万人,第二名是《对马岛之魂》（7.7 万人）",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/899/937.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/899/937.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-11-25",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 685,
-        "title": "Steam Machine: Everything we know about Valve's new console",
-        "summary": "Steam Machine所有已知内容",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.eurogamer.net/steam-machine-everything-we-know-about-valves-new-console",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.eurogamer.net/steam-machine-everything-we-know-about-valves-new-console"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-25",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 686,
-        "title": "2025年Steam大奖提名通道开启 等你票选年度最佳",
-        "summary": "2025年Steam大奖提名通道已开启，用户可参与11个奖项的投票，截止日期为12月1日。入围名单将于12月18日公布，最终获奖结果将于2026年1月3日揭晓。奖项设置包括年度游戏、Steam Deck最佳游戏等",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932477.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932477.html"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-25",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 687,
-        "title": "2025年10月全球收入最高游戏排名 《战地6》登顶",
-        "summary": "根据Newzoo数据，2025年10月，美国、英国、法国、意大利、德国和西班牙收入排名前20的游戏中，有11款是射击游戏。《战地6》及其免费大逃杀版本《禁区冲突》在收入榜上遥遥领先，《ARC Raiders》位列第七，《宝可梦传说ZA》是非多人游戏中表现最佳的作品，位列第15",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932463.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932463.html"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-25",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 688,
-        "title": "《英雄无敌：上古纪元》未售先火 试玩版已让玩家沉迷超200小时",
-        "summary": "《英雄无敌：上古纪元》试玩版部分玩家游戏时长已超过200小时，成为SteamDB历史上最受欢迎的策略游戏试玩版，同时在线玩家峰值达2.4万人，预计2026年上线",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932461.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932461.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-25",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 690,
-        "title": "550 亿美元收购 EA 后，消息称沙特公投基金面临资金短缺",
-        "summary": "沙特公共投资基金（PIF）因多个项目财务状况恶化面临资金短缺，可能暂停新投资支出。“新未来城”等多个项目进展不顺，导致资金紧张。PIF已启动业务重组并调整投资策略，未来可能更多配置于传统上市股票。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/900/225.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/900/225.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-11-25",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 691,
-        "title": "《ARC Raiders》全平台销量已接近700万份",
-        "summary": "据数据分析公司Alinea Analytics统计，Embark Studios最新推出的第三人称撤离射击游戏《ARC Raiders》连续第四周蝉联Steam周销量冠军，全平台销量已接近700万份，Steam平台上的日活跃用户平均为160万",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932457.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932457.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-25",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 694,
-        "title": "鸿蒙终端设备已突破2700万 日均增长超10万",
-        "summary": "华为新品发布会上余承东宣布，搭载HarmonyOS 5和HarmonyOS6的设备正式突破2700万，以日均超过10万增加。在今年10月22日官宣2300万",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932531.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932531.html"
-            }
-        ],
-        "category": "industry",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-11-25",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 695,
-        "title": "调查显示 Steam 用户更青睐低价独立游戏，畅销游戏中位数价格两年半下降 20%",
-        "summary": "Steam平台畅销游戏的价格中位数在过去两年半下降了20%，玩家更倾向于购买低价独立游戏，尤其是20美元以下的游戏，而60-70美元的3A大作因品牌号召力仍保持稳定销量。30-50美元价位的游戏需具备吸引力或品牌优势才能吸引玩家购买。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/900/137.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/900/137.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-25",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 696,
-        "title": "Steam 黑五促销活动上线：数千款游戏特价销售，多款大作迎史低",
-        "summary": "Steam“黑色星期五”活动现已上线，即日起至太平洋时间12月1日，多款游戏史低：《战地 6》：227 元，《对马岛之魂》：238.8 元",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/899/958.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/899/958.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-25",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 700,
-        "title": "One of Nintendo’s current initiatives is creating more kiosks to advertise games",
-        "summary": "任天堂计划增加游戏体验机的数量，作为推广游戏的主要方式之一。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mynintendonews.com/2025/11/25/one-of-nintendos-current-initiatives-is-creating-more-kiosks-to-advertise-games/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mynintendonews.com/2025/11/25/one-of-nintendos-current-initiatives-is-creating-more-kiosks-to-advertise-games/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-25",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 664,
-        "title": "育碧首次推出生成式AI游戏体验 “队友”项目启动封闭测试",
-        "summary": "育碧宣布启动生成式AI游戏体验项目“队友”的封闭测试，该项目通过AI驱动的NPC提升游戏的互动性和叙事深度，玩家可与具有实时响应能力和独特性格的AI伙伴互动。项目由Neo NPC团队开发，获法国国家级战略投资支持",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/207457",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/207457"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-24",
-        "tags": [
-            "游戏发行-AI"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 665,
-        "title": "腾讯13亿美元投资完成 育碧预告“全新运营模式”",
-        "summary": "随着腾讯13亿美元投资到位，育碧第二季度净预订额达4.908亿欧元，远超4.5亿欧元预期，同比增长39%。将成立Vantage Studios工作室，专注于运营《刺客信条》等三大核心IP，腾讯持有Vantage工作室26.32%经济权益，该工作室仍由育碧独家控制并合并报表。同时育碧严格控制招聘，截至2025年9月底，育碧全球员工数降至17,097人，过去12个月减少约1,500人。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-24",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 666,
-        "title": "网友质疑IGN：《燕云十六声》评分竟不如《星鸣特攻》",
-        "summary": "网友质疑《燕云十六声》IGN评分6分，《星鸣特攻》7分。《星鸣特攻》最高同时在线人数从未突破700，《燕云十六声》最高同时在线人数已达25.1万",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932401.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932401.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-24",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 667,
-        "title": "PlayStation在Steam平台收入超百亿！新作被经典旧作暴打",
-        "summary": "据Alinea Analytics报告，索尼PlayStation游戏在Steam平台总收入已超15亿美元，扣除平台分成后净收入约12亿美元，累计销量达4300万份。其中《绝地潜兵2》以1270万份销量位居榜首，远超其他作品。然而，近期登陆Steam的《战神：诸神黄昏》等新作销量较其前作出现显著下滑，显示PlayStation游戏在PC平台的新鲜感正在减弱，其依赖经典作品移植的策略面临挑战",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932399.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932399.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-24",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 673,
-        "title": "报告称 Valve 每位员工能创造近 5000 万美元收入，盈利能力远超谷歌、微软",
-        "summary": "研究公司 Alinea Analytics 的市场分析主管发帖称，仅Steam 平台今年营收预计162 亿美元。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/899/636.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/899/636.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-24",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 674,
-        "title": "顽皮狗史上规模最大、成本最高作品，爆料称《星际：异端先知》明年不会发布",
-        "summary": "顽皮狗《星际：异端先知》将跳过 TGA2025 游戏大奖，预计不会在明年发布。这部作品将会是该工作室迄今为止最具野心、规模最大、成本最高的游戏",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/899/658.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/899/658.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-24",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 682,
-        "title": "曝索尼正为 PS5 游戏机开发官方 PS3 模拟器，无需串流即可游玩",
-        "summary": "据悉，索尼Implicit Conversions工作室正在为PS5开发官方PS3模拟器，但目前该项目仅作为“后台项目”推进，主要开发资源仍集中在PS2模拟器上。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/899/804.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/899/804.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-24",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 683,
-        "title": "12 月 2 日发售，任天堂 Switch 2 版《刺客信条：影》容量约为 PC 版的一半",
-        "summary": "《刺客信条：影》Switch2 版将于12月2日上线，存储空间占用约为PC及PS5的60%，预计在视觉效果方面做出了一系列妥协",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/899/788.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/899/788.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-24",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 689,
-        "title": "Saudi Arabia's investment fund reported to be limiting new investments as cash runs low",
-        "summary": "沙特阿拉伯公共投资基金（PIF）因现金储备不足而限制新投资。PIF在多家游戏开发商及发行商中持有股份。这些公司包括卡普空、Nexon、Embracer Group、任天堂以及Take-Two",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/saudi-arabias-investment-fund-reported-to-be-limiting-new-investments-as-cash-runs-low",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/saudi-arabias-investment-fund-reported-to-be-limiting-new-investments-as-cash-runs-low"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-24",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 692,
-        "title": "《燕云十六声》PC Steam版在线峰值超25万",
-        "summary": "根据SteamDB数据，《燕云十六声》Steam版本同时在线用户数量已超过25万，85%好评",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932448.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932448.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-24",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 693,
-        "title": "《剑星》开发商Shift Up股权结构公开 腾讯持股34%",
-        "summary": "Shift Up目前拥有325名员工！各团队规模构成如下：",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "industry",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-24",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 660,
-        "title": "科乐美计划进一步在《寂静岭》系列作品上发力",
-        "summary": "科乐美财报显示：营收同比增长22.1%，达2248.39亿日元，营业利润增幅接近29%，《实况足球》全球下载量突破9亿次，《寂静岭f》上市头两天销量100万份，《合金装备》累计销量突破6510万份，《寂静岭》系列销量突破1300万份。科乐美正双线推进《寂静岭》IP价值：重制初代并开发新作《寂静岭：小镇陷落》，旨在全面激活该IP价值。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932364.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932364.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-23",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 661,
-        "title": "2025年10月硬件销量估测：Switch 2力压PS5登顶",
-        "summary": "根据VGChartz的估算，2025年10月，任天堂Switch 2以1373214台的销量成为全球最畅销主机，累计销量达1068万台。PlayStation 5以1310367台的估算销量位居第二，累计销量达8253万台。任天堂Switch 1排名第三，估算销量为275558台，累计销量达15234万台。Xbox Series X|S位列第四，销量149849台，累计销量3388万台",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932366.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932366.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-23",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 662,
-        "title": "《生化危机9：安魂曲》愿望单数量已超300万",
-        "summary": "《生化危机》官推宣布《生化危机9：安魂曲》愿望单数量已经超过了300万",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932374.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932374.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-23",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 663,
-        "title": "育碧大力称赞AI：影响堪比从2D转向3D游戏 每个团队都在使用AI",
-        "summary": "育碧CEO Guillemot表示，生成式人工智能已融入整个公司，生成式AI对游戏业的影响堪比从2D向3D的革命性转变",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932375.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932375.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-23",
-        "tags": [
-            "游戏发行-AI"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 671,
-        "title": "英国正用《使命召唤》提升士兵“战备能力”，还招玩家入伍",
-        "summary": "英国正用《使命召唤》提升士兵“战备能力”，还招玩家入伍",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/899/582.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/899/582.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-23",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 672,
-        "title": "《半衰期 3》无望，V社开发者确认 Steam Machine 不捆绑新游戏",
-        "summary": "Valve 公司的代表明确否认，Steam Machine 硬件不会预装 Valve 自研游戏",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/899/596.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/899/596.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-11-23",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 677,
-        "title": "Valve confirms Steam Machine will be priced ‘like a PC with the same level of performance",
-        "summary": "Valve确认其即将推出的Steam Machine定价将与性能相当的PC持平，不会像PlayStation和Xbox那样通过补贴降低价格。该设备外形为六英寸立方体，性能是Steam Deck的六倍以上，旨在让PC游戏能在电视上运行。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.videogameschronicle.com/news/valve-confirms-steam-machine-will-be-priced-like-a-pc-with-the-same-level-of-performance/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.videogameschronicle.com/news/valve-confirms-steam-machine-will-be-priced-like-a-pc-with-the-same-level-of-performance/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-23",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 681,
-        "title": "UK charts: Kirby Air Riders debuts at No.12",
-        "summary": "《星之卡比》新作已登上英国实体游戏排行榜第12位",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mynintendonews.com/2025/11/23/uk-charts-kirby-air-riders-debuts-at-no-12/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mynintendonews.com/2025/11/23/uk-charts-kirby-air-riders-debuts-at-no-12/"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-23",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 659,
-        "title": "《暗黑破坏神4》国服128元全球最低 12月12日上线",
-        "summary": "《暗黑破坏神4》国服基础版128元，全球最低价，12月12日正式开启，预计正式版与试玩版一致，可以打反和谐补丁。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932351.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932351.html"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-22",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 669,
-        "title": "消息称任天堂《星之卡比 Air Riders》有望成 Switch 2 平台首款第一方光追游戏",
-        "summary": "消息称任天堂《星之卡比 Air Riders》有望成 Switch 2 平台首款第一方光追游戏",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/899/421.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/899/421.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-22",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 670,
-        "title": "鹰角 3D 即时策略 RPG《明日方舟：终末地》上架 App Store：最低苹果 iPhone 11，预计 2026 年初发布",
-        "summary": "鹰角已经宣布《明日方舟：终末地》将于 11 月 28 日在 PC 及移动端开启「全面测试」，计划登录 PS5 / PC / iOS / 安卓平台，App Store显示预计于 2026年Q1首发",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/899/455.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/899/455.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-22",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 678,
-        "title": "They didn’t plan at all’: Xbox reportedly warning of yet another potential price increase",
-        "summary": "据报道，Xbox可能因全球DRAM芯片短缺和价格上涨而再次提高其游戏机售价，微软销售人员已警告称影响将很快到来。相比之下，索尼因提前采购了大量RAM库存，PlayStation受影响较小。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.videogameschronicle.com/news/they-didnt-plan-at-all-xbox-reportedly-warning-of-yet-another-potential-price-increase/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.videogameschronicle.com/news/they-didnt-plan-at-all-xbox-reportedly-warning-of-yet-another-potential-price-increase/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-22",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 680,
-        "title": "Call of Duty: Black Ops 7 stumbles in European launch, with sales 63% below Battlefield 6",
-        "summary": "《使命召唤：黑色行动7》在欧洲市场首发周销量较《战地6》下降63%",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.videogameschronicle.com/news/call-of-duty-black-ops-7-stumbles-in-european-launch-with-sales-63-below-battlefield-6/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.videogameschronicle.com/news/call-of-duty-black-ops-7-stumbles-in-european-launch-with-sales-63-below-battlefield-6/"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-22",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 640,
-        "title": "Chromebook 用户获英伟达 GFN Fast Pass 云游戏订阅：无广告，不排队",
-        "summary": "谷歌 Chromebook 联合英伟达 GeForce NOW 云游戏平台推出GeForce NOW Fast Pass云游戏订阅服务，该服务支持1080p 60fps画质，无广告且免排队，允许用户连接Steam、Epic等平台的游戏库，无需重复购买。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/899/046.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/899/046.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-21",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 641,
-        "title": "《光与影：33 号远征队》获金摇杆 2025 年度最佳游戏大奖，《GTA6》最受期待",
-        "summary": "年度最佳游戏、最佳叙事游戏、最佳视觉设计、最佳原声音乐、年度最佳工作室、年度 PC 游戏、最佳自发行独立游戏、年度主机游戏、最佳音频设计、最受期待游戏、最佳游戏预告",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/899/028.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/899/028.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-21",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 645,
-        "title": "Varsapura - 31分钟游戏实机演示Demo |HoYoverse",
-        "summary": "评论区预计名字为《雨之城》（原代号：pjsh），明年愚人节开测，开放世界+现代都市怪谈题材，有潜行，角色切换和地形互动",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.bilibili.com/video/BV19aCZBZEYf/?spm_id_from=888.80997.embed_other.whitelist&t=345.585839&bvid=BV19aCZBZEYf&vd_source=3be2d8c185da67710375978341e0b8d2",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.bilibili.com/video/BV19aCZBZEYf/?spm_id_from=888.80997.embed_other.whitelist&t=345.585839&bvid=BV19aCZBZEYf&vd_source=3be2d8c185da67710375978341e0b8d2"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-21",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 646,
-        "title": "战术合作射击新作《Rogue Point》大型公开测试今日开启",
-        "summary": "战术合作射击新作《Rogue Point》大型公开测试今日开启",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/207250",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/207250"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-21",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 647,
-        "title": "《吸血鬼幸存者》衍生新作公开：Xbox 11月第三方发布会消息汇总",
-        "summary": "第三人称射击游戏《阿玛塔斯》2026年发售，国产新作《动物朋克》及腾讯投资新游《湮灭之潮》https://www.gcores.com/articles/207245亮相",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/207244",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/207244"
-            }
-        ],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-21",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 649,
-        "title": "《街头霸王6》全球累计销量突破600万份",
-        "summary": "Capcom官宣《街头霸王6》全球累计销量突破600万份，系列总销量已达5800万份，仅次于公司《生化危机》《怪物猎人》IP",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://bbs.nga.cn/read.php?tid=45631451&forder_by=postdatedesc",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://bbs.nga.cn/read.php?tid=45631451&forder_by=postdatedesc"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-11-21",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 654,
-        "title": "英伟达 GeForce NOW 完成 RTX 5080 升级，云游戏带来 360FPS 极速电竞体验",
-        "summary": "英伟达云游戏平台 GeForce NOW 已全面完成服务器硬件升级，为用户提供 RTX 5080 级别的顶尖云端图形性能，可实现最高 5K 分辨率下 120 FPS 的流畅画面，或在 1080p 分辨率下达到 360 FPS 的电竞级帧率",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/899/129.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/899/129.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-21",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 655,
-        "title": "时隔 10 年：腾讯 PVE 射击游戏《逆战：未来》定档 2026 年 1 月，支持 PC 及移动平台",
-        "summary": "时隔 10 年：腾讯 PVE 射击游戏《逆战：未来》定档 2026 年 1 月，支持 PC 及移动平台",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/899/171.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/899/171.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-21",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 656,
-        "title": "史诗级互联！安卓实现对苹果airdrop隔空投递的兼容",
-        "summary": "谷歌让安卓Quick Share功能兼容苹果iPhone、iPad和Mac的隔空投送系统，实现跨平台/操作系统的便捷文件传输，此举未获得苹果公司的任何技术支持或官方授权",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932286.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932286.html"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-21",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 657,
-        "title": "给EA说中了！《战地6》真是美国2025年最畅销游戏",
-        "summary": "Circana机构公布美国十月游戏销售数据，《战地6》登顶，《NBA 2K26》和《FC 26》分列3，4名",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932255.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932255.html"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-21",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 668,
-        "title": "“搜打撤”新游，《PUBG：黑域撤离》12 月开启首次封闭测试",
-        "summary": "Krafton公司“搜打撤”新作《PUBG：黑域撤离》将于12月2日-15日、12月19日-22日开启首次封闭测试，覆盖北美、欧洲及亚洲地区PC平台，允许自由直播和录屏，玩家可通过Steam商店页搜索“PUBG: Black Budget”申请测试资格。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/899/278.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/899/278.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-21",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 675,
-        "title": "Infinity Nikki’s 2.0 Anniversary update launches Nov 26",
-        "summary": "《无限暖暖》2.0周年更新将于11月26日上线，这是该系列历史上规模最大的更新，包含全新开放世界、武器系统和探索机制，免费登陆PS4/PS5平台。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://blog.playstation.com/2025/11/21/infinity-nikkis-2-0-anniversary-update-launches-nov-26/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://blog.playstation.com/2025/11/21/infinity-nikkis-2-0-anniversary-update-launches-nov-26/"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-21",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 676,
-        "title": "Nioh 3 hands-on report",
-        "summary": "《仁王3》详细评测：",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-21",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 631,
-        "title": "Unity和Epic宣布将合作将Unity游戏引入《堡垒之夜》",
-        "summary": "Unity和Epic Games宣布将合作将Unity游戏引入《Fortnite》，开发者将能够在《Fortnite》中发布Unity游戏，并从《堡垒之夜》创作者经济中受益",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/207199",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/207199"
-            }
-        ],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-20",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 632,
-        "title": "Unity与Epic突然“牵手” 两大游戏引擎巨头宣布合作",
-        "summary": "Unity与Epic突然“牵手” 两大游戏引擎巨头宣布合作",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932172.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932172.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-20",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 633,
-        "title": "育碧将于11月21日公布财报数据并恢复股市交易",
-        "summary": "育碧将于11月21日公布财报数据并恢复股市交易",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/207201",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/207201"
-            }
-        ],
-        "category": "industry",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-20",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 642,
-        "title": "网易三季度营收同比增长 8.2%，《逆水寒》热度保持强劲增长",
-        "summary": "网易三季度营收同比增长 8.2%，《逆水寒》热度保持强劲增长",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-20",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 643,
-        "title": "R 星母公司 Take-Two CEO 泽尔尼克：未来游戏角色或将基于人工剧本进行 AI 训练",
-        "summary": "Take-Two 的 CEO 泽尔尼克表示，未来的游戏角色大概率会基于人工创作的剧本进行 AI 训练，而不是被限制在开发阶段预设好的对话范围内。Take-Two 正利用 AI 提高开发和营销的效率，但不会因此裁员",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/898/842.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/898/842.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-20",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 644,
-        "title": "Panic Button 工作室确认参与多款任天堂第一方 Switch 2 游戏移植工作",
-        "summary": "Panic Button 工作室确认参与多款任天堂第一方 Switch 2 游戏移植工作",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/898/864.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/898/864.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-11-20",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 648,
-        "title": "《泡姆泡姆》Nintendo Switch版本将于2025.12.04定档发售！",
-        "summary": "鹰角《泡姆泡姆》Nintendo Switch版本将于2025.12.04定档发售！",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/207216",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/207216"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-20",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 650,
-        "title": "Fami通日本软硬件销量11.10-11.16",
-        "summary": "桃太郎电铁2合集14.6w，COD黑七1.2w，龙珠电零1.9w",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://bbs.nga.cn/read.php?tid=45630116&forder_by=postdatedesc",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://bbs.nga.cn/read.php?tid=45630116&forder_by=postdatedesc"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-20",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 651,
-        "title": "Pokémon TCG Pocket wins Google Play's Best Game of the Year award",
-        "summary": "Google Play公布了2025年的最佳游戏榜单：",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-20",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 652,
-        "title": "Resident Evil Survival Unit tops 1 million downloads in 24 hours | News-in-Brief",
-        "summary": "海外移动游戏《生化危机：生存小队》11月17日首发，在24小时内下载量突破100万次",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/director-denies-using-ai-in-cinematic-marathon-teaser-trailer",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/director-denies-using-ai-in-cinematic-marathon-teaser-trailer"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-20",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 653,
-        "title": "Inazuma Eleven: Victory Road sales exceed 500,000 in first week of release",
-        "summary": "《闪电十一人：胜利之路》发售首周的销量超过50万份",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mynintendonews.com/2025/11/20/inazuma-eleven-victory-road-sales-exceed-500000-in-first-week-of-release/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mynintendonews.com/2025/11/20/inazuma-eleven-victory-road-sales-exceed-500000-in-first-week-of-release/"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-20",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 658,
-        "title": "US: Nintendo Switch 2 sold 328k units in October and is 3% ahead of PS4 sales pace",
-        "summary": "10月份美国地区最新电子游戏软硬件销售排行榜显示：任天堂Switch 2增加了32.8万台的销量。销量增速比原版任天堂Switch高出68%；同时，其销量较PlayStation 4高3%，成为最畅销的游戏机",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mynintendonews.com/2025/11/20/us-nintendo-switch-2-sold-328k-units-in-october-and-is-3-ahead-of-ps4-sales-pace/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mynintendonews.com/2025/11/20/us-nintendo-switch-2-sold-328k-units-in-october-and-is-3-ahead-of-ps4-sales-pace/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-20",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 611,
-        "title": "索尼将重拾日本市场 据报前任管理层对本土市场漠不关心",
-        "summary": "据TV Tokyo透露索尼新任社长西野英明认为PlayStation在本土市场持续衰退是重大危机，正在推动制定针对日本市场的措施",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932083.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932083.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-19",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 612,
-        "title": "2025年Steam新作在线排名 《怪物猎人：荒野》遥遥领先",
-        "summary": "《怪物猎人：荒野》，峰值138万人位居第一；《战地6》，74.7万人第二",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932066.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932066.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-19",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 616,
-        "title": "Roblox“最严”年龄核验措施上路：要想聊天，必须提交身份证件或扫脸验证",
-        "summary": "据外媒 Engadget 今日报道，Roblox 宣布启动强制年龄核验，所有用户今后必须提交身份证件或进行脸部扫描，否则无法继续使用聊天功能。该政策会率先在澳大利亚、新西兰和荷兰落地，并将在明年初推广到全球。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/898/443.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/898/443.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-19",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 624,
-        "title": "《龙之信条2》销量突破四百万份！官方感谢玩家支持",
-        "summary": "《龙之信条2》销量突破四百万份！官方感谢玩家支持",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932104.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932104.html"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-11-19",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 625,
-        "title": "IGN试玩Steam主机：可流畅运行《赛博朋克2077》等游戏",
-        "summary": "Steam Machine的定位是“Steam Deck用户的客厅升级产品”，多数游戏可在4K分辨率下结合FSR正常运行，但由于其本质仍是PC，对于部分虚幻5游戏，用户需要在画质与性能之间做出适当取舍。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932100.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932100.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-19",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 626,
-        "title": "Steam新一周销量榜：《纪元117》上榜《黑色行动7》超越《战地6》",
-        "summary": "《ARC Raiders》连续三周霸榜，育碧新作《纪元117：罗马和平》位列第二，《使命召唤：黑色行动7》超越《战地6》，分别位列第三第四名",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932106.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932106.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-19",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 627,
-        "title": "吸血鬼生存热度不减 《夜族崛起》销量突破600万",
-        "summary": "吸血鬼生存热度不减 《夜族崛起》销量突破600万",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932107.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932107.html"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-11-19",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 628,
-        "title": "曝索尼将加快独占游戏移植PC进度 PS6前还有产品推出",
-        "summary": "索尼多平台团队持续评估哪些游戏适合登陆Xbox和NS等其他平台，但当前团队重点是PlayStation 硬件用户的增长、PC 与掌机市场，以及下一代主机的准备工作， 在PS6 之前会有某个玩家会喜欢的新产品推出",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932113.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932113.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-11-19",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 629,
-        "title": "EA宣布不再推出《F1 26》，持续发力《F1 25》",
-        "summary": "EA 于日前宣布，将在2025年及2026年持续发力《F1 25》，不再推出《F1 26》，系列新作在2027年回归",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/207153",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/207153"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-19",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 630,
-        "title": "米哈游在各大平台开设“Varsapura”账号，引发诸多猜测",
-        "summary": "米哈游于日前在包括微信、微博以及哔哩哔哩在内的各大网站开设了名为“Varsapura”的账号，由于本账户在哔哩哔哩等平台设定的“生日”为11月21日，因此很可能会在当天进行揭晓。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/207185",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/207185"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-19",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 634,
-        "title": "《卡比的驭天飞行者》64家媒体均分78分",
-        "summary": "《卡比的驭天飞行者》64家媒体均分78分",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://bbs.nga.cn/read.php?tid=45622032&forder_by=postdatedesc",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://bbs.nga.cn/read.php?tid=45622032&forder_by=postdatedesc"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-19",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 635,
-        "title": "Final Fantasy VII Remake is going to be 2K resolution on Nintendo Switch 2",
-        "summary": "《最终幻想7重制版》将在任天堂Switch 2平台上以2K分辨率运行",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mynintendonews.com/2025/11/19/final-fantasy-vii-remake-is-going-to-be-2k-resolution-on-nintendo-switch-2/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mynintendonews.com/2025/11/19/final-fantasy-vii-remake-is-going-to-be-2k-resolution-on-nintendo-switch-2/"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-19",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 636,
-        "title": "Valve Proton 兼容层新增 AMD FSR 4 支持，为 Steam Machine 铺路",
-        "summary": "VKD3D-Proton 3.0 版本正式发布，为Linux/SteamOS系统带来了AMD FSR 4超分辨率技术和Anti-Lag抗延迟功能的支持，该技术不仅能用于最新的RDNA 4架构GPU，也能在RDNA 3乃至RDNA 2架构的显卡上运行，这一兼容性突破为Valve计划于2026年初推出的、搭载RDNA 3架构GPU的新一代Steam Machine游戏主机铺平了道路",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/898/581.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/898/581.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-19",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 637,
-        "title": "三个月达成三年销量目标！ 《超英派遣中心》玩家数突破200万",
-        "summary": "前Telltale Games员工组成的新工作室AdHoc宣布，其处女作《超英派遣中心》玩家数量数据突破200万。其同时在线玩家数峰值达22万人，长期占据PSN畅销榜榜首",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932169.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932169.html"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-11-19",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 638,
-        "title": "EA宣布《战地6》是今年最畅销的射击游戏",
-        "summary": "EA正式宣布《战地6》是“年度最畅销的射击游戏”。根据其他分析显示，销量可能已超过1000万份",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932159.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932159.html"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-19",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 639,
-        "title": "微软、英伟达和AI公司Anthropic宣布结盟",
-        "summary": "微软、英伟达与Anthropic结盟。Anthropic将在微软Azure上部署其Claude模型，并由英伟达提供算力支持。Anthropic承诺采购微软价值300亿美元的Azure计算资源，英伟达和微软将分别向Anthropic投资最高100亿和50亿美元。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932140.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932140.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-19",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 599,
-        "title": "TGA 2025 颁奖礼提名名单揭晓，六款游戏角逐年度大奖",
-        "summary": "6款游戏追逐年度游戏大奖：《光与影：33 号远征队》、《死亡搁浅 2：冥滩之上》、《咚奇刚：蕉力全开》、《哈迪斯 2》、《空洞骑士：丝之歌》、《天国：拯救 2》；《光与影：33 号远征队》以 12 个提名位列榜单榜首，也是TGA 历史上获得提名最多的游戏，《死亡搁浅2》和《羊蹄山之魂》也分别获得了8项提名",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/898/138.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/898/138.htm"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-18",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 603,
-        "title": "Epic游戏商城现已实装赠礼功能",
-        "summary": "Epic游戏商城现已实装赠礼功能",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/207115",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/207115"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-18",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 606,
-        "title": "T2 CEO：主机不会消亡 但游戏的未来是PC",
-        "summary": "Take-Two CEO Strauss Zelnick表示，游戏主机不会消亡，但游戏正在向PC转移，游戏行业正在从封闭系统转向更加开放的系统，目前主机和移动游戏在市场上的份额大致相当，但移动游戏的增长速度比主机游戏更快",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932001.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932001.html"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-18",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 607,
-        "title": "Xbox合作伙伴展示会定档11月21日！《湮灭之潮》等第三方大作亮相",
-        "summary": "Xbox合作伙伴展示会定档11月21日！《湮灭之潮》等第三方大作亮相",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3931991.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3931991.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-18",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 608,
-        "title": "调查显示英美日玩家偏爱单人游戏 中国更喜欢多人游戏",
-        "summary": "市场研究机构Ampere Analysis对22个市场的34,428名玩家展开调查，美国玩家中65%更喜爱单人游戏，日本63%，中国仅47%；16至24岁的玩家中，仅49%更喜欢单人游戏；25至34岁的玩家中，这一比例上升至56%；55至64岁的玩家中，则高达64%。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3931983.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3931983.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-18",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 609,
-        "title": "《燕云十六声》首日玩家总数已突破200万",
-        "summary": "《燕云十六声》首日玩家总数已突破200万",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3931916.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3931916.html"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-11-18",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 610,
-        "title": "世嘉年度游戏销量报告：《索尼克》系列达16亿部",
-        "summary": "世嘉年度游戏销量报告：《索尼克》系列达16亿部",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202311/3880807.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202311/3880807.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-18",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 613,
-        "title": "Xbox连续第11年无缘TGA年度最佳游戏提名",
-        "summary": "Xbox第一方游戏连续11年无缘游戏大奖（The Game Awards）年度最佳游戏（GOTY）提名，仅有5项其他奖项提名",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3932059.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3932059.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-18",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 614,
-        "title": "Cloudflare突发故障，欧美网站及游戏在线服务器受影响",
-        "summary": "自北京时间11月18日19时起，提供网站加速及安全保护服务的  Cloudflare 突发故障，包括 OpenAI 的 ChatGpt 及 Sora 、马斯克的社交平台 X （前称推特）以及国际服《英雄联盟》《无畏契约》等热门游戏乃至 Epic 游戏商城都遭遇了中断",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/207148",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/207148"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-18",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 615,
-        "title": "Steam Deck 现已正式支持熄屏低功耗下载模式",
-        "summary": "Steam Deck 现已正式支持熄屏低功耗下载模式",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/207118",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/207118"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-18",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 617,
-        "title": "《逃离塔科夫》游戏开发商就 1.0 版本致歉，承诺修复所有漏洞",
-        "summary": "《逃离塔科夫》游戏开发商就 1.0 版本致歉，承诺修复所有漏洞",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/898/406.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/898/406.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-18",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 618,
-        "title": "消息称 R 星正尝试将《GTA6》游戏移植至任天堂 Switch 2 平台，硬件挑战巨大",
-        "summary": "消息称 R 星正尝试将《GTA6》游戏移植至任天堂 Switch 2 平台，硬件挑战巨大",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/898/383.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/898/383.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-18",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 619,
-        "title": "微软 Xbox 总裁莎拉・邦德：XGP 非简单复制奈飞（Netflix）模式，下一代主机将带来强劲体验",
-        "summary": "微软 Xbox 总裁莎拉・邦德（Sarah Bond）接受《财富》杂志（Fortune Magazine）深度专访表示，硬件是Xbox 一切工作的绝对核心，正在全力研发下一代硬件，支持用户跨设备无缝携带其游戏库",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/898/349.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/898/349.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-18",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 620,
-        "title": "The new EU rules on cybersecurity: What game developers and publishers need to know",
-        "summary": "The NIS2 Directive and the Cyber Resilience Act are set to have a significant impact on the games industry",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/the-new-eu-rules-on-cybersecurity-what-game-developers-and-publishers-need-to-know",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/the-new-eu-rules-on-cybersecurity-what-game-developers-and-publishers-need-to-know"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-18",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 621,
-        "title": "Farming Simulator 25 surpasses four million copies sold | News-in-brief",
-        "summary": "《农场模拟25》的销量已超过四百万份",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/farming-simulator-25-surpasses-four-million-copies-sold-news-in-brief",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/farming-simulator-25-surpasses-four-million-copies-sold-news-in-brief"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-18",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 622,
-        "title": "UK charts: Mario Kart World holds steady at No.3",
-        "summary": "最新的英国实体游戏排行榜显示，《使命召唤：黑色行动7》登顶；《\tEA Sports FC 26》第2，其中PS5 69%, Xbox Series 9%, Switch 9%, Switch 2 7%；",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mynintendonews.com/2025/11/18/uk-charts-mario-kart-world-holds-steady-at-no-3/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mynintendonews.com/2025/11/18/uk-charts-mario-kart-world-holds-steady-at-no-3/"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-18",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 623,
-        "title": "EA is apparently working on The Sims 4 Remastered",
-        "summary": "据悉，EA正在开发《模拟人生4》的重制版，可能上线NS和NS2",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mynintendonews.com/2025/11/18/ea-is-apparently-working-on-the-sims-4-remastered/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mynintendonews.com/2025/11/18/ea-is-apparently-working-on-the-sims-4-remastered/"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-18",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 585,
-        "title": "字节 Seed 团队推出 Lumine 智能体：自主游玩《原神》等 3D 开放世界游戏",
-        "summary": "字节 Seed 团队推出 Lumine 智能体：自主游玩《原神》等 3D 开放世界游戏",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/897/892.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/897/892.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-17",
-        "tags": [
-            "游戏发行-AI"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 596,
-        "title": "25年美国游戏行业报告：平均年薪百万 LGBT人群称仍太少了！",
-        "summary": "美国游戏从业者的平均年薪达到14.2万美元，25%的从业者年薪介于12.5万至19.9万美元之间，23%集中在5万至9.9万美元区间，另有5%年收入低于1.5万美元",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3931939.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3931939.html"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-17",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 597,
-        "title": "第一方顶流 索尼《地平线》系列销量突破4000万大关",
-        "summary": "Guerrilla Games开发的《地平线》系列游戏全球累计销量已正式突破4000万套",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3931928.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3931928.html"
-            }
-        ],
-        "category": "industry",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-11-17",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 598,
-        "title": "Steam年收入破纪录！2025年未过完已狂揽162亿美元",
-        "summary": "Steam年收入破纪录！2025年未过完已狂揽162亿美元",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3931963.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3931963.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-17",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 600,
-        "title": "消息称 R 星旗下游戏首发不上 PC 是优化问题导致，如果硬上会遭遇《无主之地 4》般危机",
-        "summary": "消息称 R 星旗下游戏首发不上 PC 是优化问题导致，如果硬上会遭遇《无主之地 4》般危机",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/898/109.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/898/109.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-17",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 601,
-        "title": "系列最低分！《使命召唤：黑色行动 7》M 站用户评分仅 1.7 分",
-        "summary": "《使命召唤：黑色行动 7》首发遭遇严重挫折，发售后首个周末即在 Metacritic 平台收获“压倒性差评”（Overwhelming Dislike）评级，成为该系列史上用户评分最低、口碑最差的一部作品；在 Steam 平台，该游戏目前仅获得“褒贬不一”（Mixed）的用户评价，仅有 42% 的玩家给出了好评",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/898/079.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/898/079.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-17",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 602,
-        "title": "微软简化 Xbox 游戏发行流程，升级独立游戏发行商收入模式",
-        "summary": "据科技媒体 NoteBook Check 报道，微软现已取消 Xbox 游戏发行保密协议，并在最近更新了独立游戏发行商 / 开发者的收益模式，在 Xbox PC 商店发布游戏的发行商将可以获得 88% 的收益分成，高于 Steam 平台的 70% 初始分成比例",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/898/005.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/898/005.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-17",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 586,
-        "title": "育碧就《纪元 117：罗马和平》误用 AI 生成图片致歉，承诺将替换",
-        "summary": "育碧就《纪元 117：罗马和平》误用 AI 生成图片致歉，承诺将替换",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/897/866.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/897/866.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-16",
-        "tags": [
-            "游戏发行-AI"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 587,
-        "title": "《逃离塔科夫》Steam 差评如潮，玩家称根本进不去游戏",
-        "summary": "《逃离塔科夫》在 Steam 上所有语言评价均为“差评如潮”，好评率仅 30%。涌入玩家规模远超预期，导致服务器不堪重负、频繁宕机。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/897/859.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/897/859.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-16",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 588,
-        "title": "逆行业潮流：微软 Xbox 旗下黑曜石娱乐明确拒绝将生成式 AI 用于叙事创作",
-        "summary": "逆行业潮流：微软 Xbox 旗下黑曜石娱乐明确拒绝将生成式 AI 用于叙事创作",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/897/827.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/897/827.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-16",
-        "tags": [
-            "游戏发行-AI"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 589,
-        "title": "Valve 新主机 Steam Machine 亮相：RDNA 3 架构是亮点，8GB 显存成“硬伤”",
-        "summary": "Steam Machine 游戏主机配备 8GB GDDR6 显存，原生图形性能大约只能满足 1080p 分辨率下的流畅游戏需求。可能通过软硬件的深度整合与优化，专注于完善 SteamOS 生态系统，而非在硬件竞赛中与对手“硬碰硬”。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/897/788.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/897/788.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-16",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 590,
-        "title": "网易武侠游戏《燕云十六声》海外版登陆 Steam 等平台，获“多半好评”",
-        "summary": "网易武侠游戏《燕云十六声》海外版于 11 月 15 日登陆 Steam、PlayStation、Epic 平台，正式全球上线。PC Steam版锁大陆IP，首发在线峰值超过了16万人，当前共有6469篇评价，73%好评率“多半好评”",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/897/745.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/897/745.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-16",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 591,
-        "title": "消息称索尼重新评估 PC 端发行战略，恐缩减游戏移植业务",
-        "summary": "索尼可能正在重新评估其 PC 游戏战略，恐将缩减未来的 PC 游戏发行业务；他最新的说法与此前的言论完全相悖，形成了自我矛盾，这让外界对其爆料的可靠性产生了怀疑。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/897/740.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/897/740.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-16",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 592,
-        "title": "上线近 12 小时后，《使命召唤：黑色行动 7》Steam 玩家数远逊于《战地 6》",
-        "summary": "上线接近 12 小时后，《黑色行动 7》在 Steam 上的最高玩家人数大约为 77000 人，低于《战地 6》747440 人次的记录；",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-16",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 605,
-        "title": "Here’s a look at sales figures for some of Japan’s biggest gaming franchises",
-        "summary": "《马里奥》系列销量超9.5亿，《宝可梦》4.9亿",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mynintendonews.com/2025/11/15/heres-a-look-at-sales-figures-for-some-of-japans-biggest-gaming-franchises/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mynintendonews.com/2025/11/15/heres-a-look-at-sales-figures-for-some-of-japans-biggest-gaming-franchises/"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-16",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 593,
-        "title": "《使命召唤：黑色行动 7》被曝大量使用 AI 生图，动视官方“不否认”",
-        "summary": "《使命召唤：黑色行动 7》被曝大量使用 AI 生图，动视官方“不否认”",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/897/701.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/897/701.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-15",
-        "tags": [
-            "游戏发行-AI"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 594,
-        "title": "《堡垒之夜》下周登陆 PC 端微软 Xbox 商店，支持 Play Anywhere",
-        "summary": "《堡垒之夜》将正式登陆 PC 的 Xbox 商店，支持 Play Anywhere 功能，Xbox Game Pass Ultimate 会员还将享受免费的 Crew 福利，玩家在 Xbox 主机上所做的进度和购买，都会自动同步到其他设备上",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/897/664.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/897/664.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-15",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 595,
-        "title": "任天堂：无意阻止第三方 Switch 2 底座的使用",
-        "summary": "任天堂证实，其并无意图阻止第三方底座（docks）在 Nintendo Switch 2 主机上的使用",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/897/555.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/897/555.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-15",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 604,
-        "title": "IGN reveals their top Nintendo games of all-time",
-        "summary": "《塞尔达传说：王国之泪》和《塞尔达传说：旷野之息》分列前2名",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mynintendonews.com/2025/11/15/ign-reveals-their-top-nintendo-games-of-all-time/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mynintendonews.com/2025/11/15/ign-reveals-their-top-nintendo-games-of-all-time/"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-15",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 576,
-        "title": "超越《宝可梦Z-A》！《塞尔达无双：封印战纪》首周登顶Fami通销量榜",
-        "summary": "日本地区《塞尔达无双：封印战纪》以73,183份的销量成为当周最畅销新作",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-14",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 577,
-        "title": "暴雪前总裁：Steam主机对Xbox是好事 微软专心做游戏吧！",
-        "summary": "暴雪前总裁：Steam主机对Xbox是好事 微软专心做游戏吧！",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3931797.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3931797.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-14",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 578,
-        "title": "育碧宣布推迟发布最新财报 业界推测近期或有重要事情公布",
-        "summary": "育碧宣布将推迟发布2025-2026财年上半年财报，同时股票交易也已暂停",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3931778.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3931778.html"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-14",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "negative",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 579,
-        "title": "五年内最强！《使命召唤：黑色行动6》登顶美国PS5游戏销量榜首",
-        "summary": "《使命召唤：黑色行动6》已成为PS5平台在美国市场有史以来销售额最高的游戏作品，TOP10榜单中近三年发布的《使命召唤》系列作品占据三席",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3931772.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3931772.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-14",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 580,
-        "title": "包括移动端！ 《荒野大镖客：救赎》宣布12月2日登陆全平台",
-        "summary": "R星今日在社交媒体上宣布将于12月2日在PlayStation 5、Xbox Series、Switch 2以及通过网飞登陆的iOS和Android平台推出《荒野大镖客：救赎》。拥有PlayStation 4、Switch版本或Xbox One向后兼容数字版的用户可免费升级至新版本，可继承原有存档继续游戏",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3931770.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3931770.html"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-14",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 581,
-        "title": "B站 CEO 陈睿：《逃离鸭科夫》可能冲击“国产单机历史第二”，手游项目已启动",
-        "summary": "B站 CEO 陈睿：《逃离鸭科夫》可能冲击“国产单机历史第二”，手游项目已启动",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/897/366.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/897/366.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-14",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 571,
-        "title": "主机、VR和手柄：V社宣布三款全新Steam硬件",
-        "summary": "Steam Machine：游戏主机，性能是Steam Deck 6倍以上",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-13",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 574,
-        "title": "虚幻引擎5.7发布 纳米植被和惊艳动态阴影",
-        "summary": "虚幻引擎5.7发布 纳米植被和惊艳动态阴影",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3931692.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3931692.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-13",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 575,
-        "title": "《天国：拯救2》销量现已突破400万份",
-        "summary": "《天国：拯救2》销量现已突破400万份。游戏于今年2月4日发售，现已登陆PS5，Xbox Series以及PC平台",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/206874",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/206874"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-11-13",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 582,
-        "title": "V社确认目前并未开发任何第一方 VR 新作，终结多年传闻",
-        "summary": "V社确认目前并未开发任何第一方 VR 新作，终结多年传闻",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/897/300.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/897/300.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-11-13",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 583,
-        "title": "因反作弊系统不支持，Valve Steam Machine 暂无法运行多款热门游戏",
-        "summary": "Steam Machine 搭载基于 Linux 的 SteamOS 系统，现代多人游戏普遍强制要求内核级反作弊（kernel-level anti-cheat）系统，而此类系统对 Linux 的支持仍十分有限",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/897/292.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/897/292.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-13",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 584,
-        "title": "网易武侠游戏《燕云十六声》海外预约人数突破 1000 万",
-        "summary": "11 月 15 日，《燕云十六声》海外版将正式登陆 Steam、PlayStation、Epic 平台，全球预约人数已突破 1000 万，稳居 Steam 心愿单总榜 TOP30、活跃榜 TOP5，PS 版在全球超 20 个地区和市场进入预售榜 TOP5",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/897/171.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/897/171.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-11-13",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 566,
-        "title": "日本语专用！索尼公布全新数字版PS5主机",
-        "summary": "日语版PS5数字版主机含税价55000日元，较全语言版便宜17980日元，仅支持在日本注册的PSN账号，而且系统语言只能设置成日语",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3931581.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3931581.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-12",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 567,
-        "title": "《ARC Raiders》全平台销量已超400万套",
-        "summary": "全平台的销量超400万份，在线玩家人数突破了70万",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3931570.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3931570.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-12",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 568,
-        "title": "索尼 State of Play 汇总",
-        "summary": "索尼 State of Play 汇总",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/896/751.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/896/751.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-12",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 572,
-        "title": "Falcom24-25财年财报公布",
-        "summary": "销售额：26.12亿日元（较上期增长3.5%）",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-12",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 573,
-        "title": "不是官方的不能用！任天堂 Switch 2 系统更新封杀第三方底座",
-        "summary": "Switch 2 移除了对第三方底座的兼容，仅支持任天堂官方配件，非任天堂官方底座或 HDMI 适配器设备可能拒绝输出视频信号，甚至无法正常协商供电（已有最新进展，无意阻止第三方底座）",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/896/896.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/896/896.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-12",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 558,
-        "title": "PlayStation日本State of Play特别节目公告",
-        "summary": "PlayStation宣布State of Play日本特别节目于2025年11月11日举行，时长超40分钟，重点介绍日本和亚洲开发的游戏，包括系列作品和独立游戏",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.videogameschronicle.com/news/playstation-has-announced-a-state-of-play-japan-special-for-this-week/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.videogameschronicle.com/news/playstation-has-announced-a-state-of-play-japan-special-for-this-week/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-11",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 559,
-        "title": "索尼最新财报公开：PS5主机累计出货量突破8420万台",
-        "summary": "索尼最新财报公开：PS5主机累计出货量突破8420万台",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://bbs.nga.cn/read.php?tid=45559475",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://bbs.nga.cn/read.php?tid=45559475"
-            }
-        ],
-        "category": "platform",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-11-11",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 560,
-        "title": "任天堂公布全球销量数据",
-        "summary": "任天堂通过新闻稿公布历史销售数据，显示公司自1983年Famicom推出以来，全球游戏销量超60亿份，硬件销量超8.7亿台",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mynintendonews.com/2025/11/10/nintendo-announces-its-sold-over-6-billion-games-and-over-870-million-hardware-units-globally/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mynintendonews.com/2025/11/10/nintendo-announces-its-sold-over-6-billion-games-and-over-870-million-hardware-units-globally/"
-            }
-        ],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-11",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 561,
-        "title": "网易《Where Winds Meet》预注册破千万（燕云海外）",
-        "summary": "网易《Where Winds Meet》预注册破千万（燕云海外）",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.eurogamer.net/believe-it-or-not-upcoming-open-world-rpg-where-winds-meet-has-over-10-million-pre-registrations-heres-why-you-should-care",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.eurogamer.net/believe-it-or-not-upcoming-open-world-rpg-where-winds-meet-has-over-10-million-pre-registrations-heres-why-you-should-care"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-11",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 562,
-        "title": "索尼：《羊蹄山之魂》发售首月售出 330 万套",
-        "summary": "《羊蹄山之魂》在发售首月销量330 万套，与前作《对马岛之魂》相当",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/896/619.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/896/619.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-11",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 565,
-        "title": "PS6硬件性能不会有巨大提升 变革来自AI和光追",
-        "summary": "PS6硬件性能不会有巨大提升 变革来自AI和光追",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3931494.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3931494.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-11",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 554,
-        "title": "世嘉季度主要系列销量公布",
-        "summary": "世嘉公司发布2025年7月至9月季度财务报告，详细列出旗下主要游戏系列的销售数据。索尼克系列销量最高达147万套，女神异闻录系列为77万套，如龙系列及衍生作品为57万套，全面战争系列为86万套",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mynintendonews.com/2025/11/07/sega-reveals-major-series-sales-for-the-last-quarter/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mynintendonews.com/2025/11/07/sega-reveals-major-series-sales-for-the-last-quarter/"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-10",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 555,
-        "title": "Take-Two Q2财报超预期",
-        "summary": "Take-Two Interactive公布2025年第二季度财务业绩，净预订额19.6亿美元，超出预期，同比增长33%，为历史最佳季度",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/take-two-q2-net-bookings-vastly-exceed-expectations-to-196bn",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/take-two-q2-net-bookings-vastly-exceed-expectations-to-196bn"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-10",
-        "tags": [
-            "厂商信息"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 563,
-        "title": "微软详解 GDK 开发工具包，暗示下一代 Xbox 设备使 PC / 主机融合更紧密",
-        "summary": "微软详解 GDK 开发工具包，暗示下一代 Xbox 设备使 PC / 主机融合更紧密",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/896/444.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/896/444.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-10",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 564,
-        "title": "日本雅虎拍卖出手打击黄牛：禁止卖家高价售卖新游戏",
-        "summary": "日“雅虎拍卖”和“雅虎跳蚤市场”将禁止新发售的游戏软件在上市后一个月内以高于官方建议零售价的价格转售，主要涉及NS2",
-        "source": "腾讯文档策展",
-        "sourceUrl": "",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-10",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 556,
-        "title": "Arc Raiders销量达250万份",
-        "summary": "Arc Raiders可能已售出250万份，收入超过1亿美元，其中Steam平台贡献了69.2%的销量，PlayStation和Xbox分别占17.3%和13.5%，分析师强调游戏成功源于社区导向，而非单纯作为撤离射击游戏",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.eurogamer.net/arc-raiders-may-have-already-sold-25m-copies-according-to-industry-analyst",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.eurogamer.net/arc-raiders-may-have-already-sold-25m-copies-according-to-industry-analyst"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-09",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 557,
-        "title": "Dispatch游戏销量与玩家数增长",
-        "summary": "Dispatch作为一款分集叙事游戏，通过每周发布两集的方式，在Steam上玩家峰值达到13.1万，销量超过100万份",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.eurogamer.net/kapow-episodic-gaming-really-is-back-on-the-map-the-dispatch-success-story-continues",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.eurogamer.net/kapow-episodic-gaming-really-is-back-on-the-map-the-dispatch-success-story-continues"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-09",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 553,
-        "title": "发售不到一个月，B站《逃离鸭科夫》游戏销量突破 300 万份",
-        "summary": "发售不到一个月，B站《逃离鸭科夫》游戏销量突破 300 万份",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/895/881.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/895/881.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-11-08",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 570,
-        "title": "Capcom旗下作品销量数据更新：《怪物猎人：荒野》跌至第九",
-        "summary": "《怪物猎人：世界》2180万份",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://bbs.nga.cn/read.php?tid=45538100",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://bbs.nga.cn/read.php?tid=45538100"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-08",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 548,
-        "title": "亚马逊曾试图与Steam进行长期竞争 结果失败了",
-        "summary": "亚马逊宣布将进行新一轮裁员，并减少在大型3A游戏(包括MMORPG)领域的投入",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3931095.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3931095.html"
-            }
-        ],
-        "category": "industry",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-07",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 549,
-        "title": "R星宣布《GTA6》再次延期 定于2026年11月19日发售",
-        "summary": "R星宣布《GTA6》再次延期 定于2026年11月19日发售",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3931272.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3931272.html"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-07",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 550,
-        "title": "谷歌与Epic达成安卓开放协议",
-        "summary": "谷歌与Epic Games的协议解决了长期法律纠纷，允许第三方应用商店和支付系统在安卓平台全球范围内运行，谷歌Play商店的佣金从30%降至9%或20%",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/google-and-epic-strike-a-deal-that-could-open-up-android-to-third-party-stores",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/google-and-epic-strike-a-deal-that-could-open-up-android-to-third-party-stores"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-07",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 542,
-        "title": "任天堂表示：将通过收购工作室强化第一方游戏开发",
-        "summary": "任天堂表示：将通过收购工作室强化第一方游戏开发",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3931207.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3931207.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-11-06",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 543,
-        "title": "脱离PS5束缚！ PS Portal掌机重磅更新上线",
-        "summary": "脱离PS5束缚！ PS Portal掌机重磅更新上线",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3931202.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3931202.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-11-06",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 544,
-        "title": "摆脱家中的 PS5 主机，索尼 PS Portal 串流掌机新增云游戏功能",
-        "summary": "索尼宣布 PS Portal 串流掌机现已增加云游戏功能，无需连接 PS5 主机即可游玩部分游戏",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://finance.sina.com.cn/tech/digi/2025-11-05/doc-infwkprr6284190.shtml",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://finance.sina.com.cn/tech/digi/2025-11-05/doc-infwkprr6284190.shtml"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-06",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 545,
-        "title": "暴雪嘉年华正式回归！ 门票11月8日开启预售",
-        "summary": "暴雪嘉年华正式回归！ 门票11月8日开启预售",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3931215.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3931215.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-06",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 546,
-        "title": "谷歌、 Epic 提议和解，五年多的法律战有望宣告落幕",
-        "summary": "谷歌、 Epic 提议和解，五年多的法律战有望宣告落幕",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://m.ithome.com/mip/html/895024.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://m.ithome.com/mip/html/895024.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-06",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 547,
-        "title": "《使命召唤：黑色行动 7》领衔，微软 XGP 本月新增游戏公布",
-        "summary": "《使命召唤：黑色行动 7》加入Xbox Game Pass 游戏列表",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/894/925.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/894/925.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-06",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 551,
-        "title": "任天堂Switch 2升级用户占比高",
-        "summary": "任天堂通过财务报告分享Switch 2用户数据，84%的拥有者来自原版Switch，表明公司成功维持跨代用户关系",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://mynintendonews.com/2025/11/05/nintendo-says-84-percent-of-switch-2-owners-upgraded-from-original-switch/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://mynintendonews.com/2025/11/05/nintendo-says-84-percent-of-switch-2-owners-upgraded-from-original-switch/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-06",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 552,
-        "title": "Krafton Q3财报创纪录",
-        "summary": "Krafton发布2025年第三季度财报，收入达8706亿韩元，营业利润3488亿韩元，同比增长显著。PC平台收入增长29%",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/krafton-posts-record-high-cumulative-performance-in-q3-2025",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/krafton-posts-record-high-cumulative-performance-in-q3-2025"
-            }
-        ],
-        "category": "industry",
-        "importance": "high",
-        "featured": true,
-        "date": "2025-11-06",
-        "tags": [
-            "厂商信息"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 541,
-        "title": "终于能在手机上买NS游戏了！任天堂官方商城App上线",
-        "summary": "终于能在手机上买NS游戏了！任天堂官方商城App上线",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202511/3931171.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202511/3931171.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2025-11-05",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 569,
-        "title": "PlayStation Store: October 2025’s top downloads",
-        "summary": "PlayStation Store: October 2025’s top downloads",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://blog.playstation.com/2025/11/05/playstation-store-october-2025s-top-downloads/",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://blog.playstation.com/2025/11/05/playstation-store-october-2025s-top-downloads/"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-05",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 540,
-        "title": "《刺客信条：影》游戏被指销量疲软，PS5 平台 7 个月总销量不敌《羊蹄山之魂》3 周",
-        "summary": "《刺客信条：影》游戏被指销量疲软，PS5 平台 7 个月总销量不敌《羊蹄山之魂》3 周",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/894/868.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/894/868.htm"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2025-11-04",
-        "tags": [
-            "游戏发行"
         ],
         "sentiment": "neutral",
         "tdocMarking": "tdoc-verified",
