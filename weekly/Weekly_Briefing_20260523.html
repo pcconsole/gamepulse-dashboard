@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>端主行业周报 · W21</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4f6f9; --ink: #1e3a5f; --ink-2: #2c4a6e; --ink-dim: #4a5c6e; --ink-ghost: #7b8a99;
+    --red: #c85a4a; --red-bg: #f5e0db; --red-dim: #a0483b;
+    --gold: #8b6914; --gold-bg: #ede4cf;
+    --green: #3d6b57; --green-bg: #dde7e0;
+    --surface: #ffffff; --surface-2: #eef1f5;
+    --rule: #d5dce3; --rule-dim: #e5e9ee;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #c8ced6; font-family: 'Microsoft YaHei', '微软雅黑', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  .page { width: 430px; background: var(--bg); color: var(--ink); margin: 0 auto; overflow: hidden; }
+
+  .hero { background: linear-gradient(135deg, #1e3a5f 0%, #2c4a6e 100%); color: white; padding: 22px 20px 26px; position: relative; }
+  .hero::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background: linear-gradient(90deg, var(--red) 0%, var(--gold) 100%); }
+  .hero .brand { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.3em; color: #c85a4a; font-weight: 700; margin-bottom: 10px; }
+  .hero h1 { font-size: 30px; font-weight: 800; line-height: 1.15; }
+  .hero .sub { font-size: 13px; color: rgba(255,255,255,0.75); margin-top: 8px; line-height: 1.5; }
+  .hero .meta { display: flex; gap: 18px; margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.15); font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: rgba(255,255,255,0.7); letter-spacing: 0.1em; }
+  .hero .meta strong { color: white; font-weight: 700; }
+
+  .section { padding: 26px 20px 20px; }
+  .section + .section { border-top: 10px solid #e2e7ed; }
+  .sec-head { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid var(--ink); position: relative; }
+  .sec-head::after { content:''; position:absolute; left:0; bottom:-2px; width:50px; height:2px; background:var(--red); }
+  .sec-head .num { font-family:'IBM Plex Mono',monospace; font-size:32px; font-weight:800; color:var(--red); line-height:0.9; }
+  .sec-head .title { font-size:18px; font-weight:800; color:var(--ink); flex:1; line-height:1.3; }
+  .sec-head .title em { display:block; font-size:12px; font-weight:600; color:var(--red); font-style:normal; margin-top:3px; }
+
+  .lead { font-size:13px; color:var(--ink-dim); line-height:1.65; margin-bottom:16px; }
+  .lead strong { color:var(--ink); }
+
+  .ev-line { padding:7px 0; font-size:12.5px; line-height:1.55; color:var(--ink-dim); border-bottom:1px dashed rgba(0,0,0,0.06); }
+  .ev-line:last-child { border-bottom:0; }
+  .ev-line .ev-head { display:flex; align-items:center; gap:4px; margin-bottom:2px; }
+  .ev-line .ev-body { font-size:12px; line-height:1.55; }
+  .ev-line .ev-body strong { color:var(--ink); }
+  .ev-line .d { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-ghost); font-weight:700; }
+  .ev-line .tg { display:inline-block; font-size:9px; padding:2px 5px; border-radius:2px; font-weight:700; margin:0 2px; }
+  .tg-r { background:#fee2e2; color:#991b1b; }
+  .tg-g { background:#d1fae5; color:#065f46; }
+  .tg-b { background:#dbeafe; color:#1e40af; }
+  .tg-y { background:#fef3c7; color:#92400e; }
+
+  .insight { padding:16px 18px 12px; margin:14px 0; border-radius:6px; background:linear-gradient(135deg,#1e3a5f 0%,#2c4a6e 100%); color:#fff; }
+  .insight .il { font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.15em; color:rgba(255,184,150,0.8); font-weight:700; margin-bottom:8px; padding-bottom:6px; border-bottom:1px dashed rgba(255,255,255,0.15); }
+  .insight p { font-size:13px; line-height:1.75; margin-bottom:8px; color:rgba(255,255,255,0.88); }
+  .insight p:last-child { margin-bottom:0; }
+  .insight em { color:#ffb896; font-style:normal; font-weight:700; }
+  .insight strong { color:#fff; }
+
+  .cb { background:var(--surface); padding:12px 16px 10px 18px; margin:16px 0 10px; position:relative; border-left:5px solid var(--ink); border-top:2px solid var(--ink); box-shadow:0 2px 6px rgba(30,58,95,0.08); }
+  .cb .cb-tag { display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.15em; color:#fff; background:var(--red); font-weight:700; padding:3px 10px; margin-bottom:7px; border-radius:2px; }
+  .cb h4 { font-size:15px; font-weight:900; line-height:1.35; color:var(--ink); margin:0; }
+  .cb h4 em { color:var(--red); font-style:normal; }
+
+  .stbl { width:100%; font-size:12px; border-collapse:collapse; margin:10px 0; background:var(--surface); border-radius:6px; overflow:hidden; box-shadow:0 1px 3px rgba(30,58,95,0.05); }
+  .stbl th { text-align:left; padding:8px 8px; border-bottom:2px solid var(--ink); font-size:10px; font-weight:700; letter-spacing:0.06em; color:#fff; background:var(--ink); font-family:'IBM Plex Mono',monospace; }
+  .stbl td { padding:7px 8px; border-bottom:1px solid #eef0f4; line-height:1.45; }
+  .stbl tr:nth-child(even) td { background:#fafbfc; }
+  .stbl tr:last-child td { border-bottom:0; }
+  .stbl .num { text-align:right; font-family:'IBM Plex Mono',monospace; font-weight:700; white-space:nowrap; }
+  .stbl .hl-row td { background:var(--red-bg)!important; font-weight:600; }
+
+  .summary-box { background:#fff; border:2px solid var(--ink); padding:20px 18px 16px; margin:16px 0; position:relative; border-radius:0; }
+  .summary-box .sb-label { position:absolute; top:-12px; left:14px; background:var(--ink); color:#fff; padding:3px 10px; font-size:11px; font-weight:700; letter-spacing:0.1em; }
+  .summary-box p { font-size:13px; line-height:1.75; margin-bottom:10px; color:var(--ink); }
+  .summary-box p:last-child { margin-bottom:0; }
+  .summary-box strong { color:var(--ink); }
+  .summary-box em { color:var(--red); font-style:normal; font-weight:700; }
+
+  .trend { padding:14px 16px; margin:14px 0; border-radius:6px; border-left:3px solid var(--gold); background:var(--gold-bg); font-size:12px; line-height:1.65; color:var(--ink-dim); }
+  .trend .tl { font-family:'IBM Plex Mono',monospace; font-size:9px; font-weight:700; color:var(--gold); letter-spacing:0.12em; margin-bottom:4px; }
+  .trend strong { color:var(--ink); }
+
+  .verdict { padding:14px 16px; margin:12px 0; border-radius:6px; background:var(--surface-2); border:1px solid var(--rule); }
+  .verdict .v-title { font-size:10px; font-weight:700; letter-spacing:0.1em; color:var(--ink-ghost); margin-bottom:6px; font-family:'IBM Plex Mono',monospace; }
+  .verdict p { font-size:12px; line-height:1.6; margin-bottom:6px; color:var(--ink-dim); }
+  .verdict p:last-child { margin-bottom:0; }
+
+  .footer { padding:20px; text-align:center; border-top:4px solid var(--ink); }
+  .footer .logo { font-size:13px; font-weight:800; letter-spacing:0.2em; color:var(--ink-dim); margin-bottom:8px; }
+  .footer .src { font-size:9px; line-height:1.7; color:var(--ink-ghost); letter-spacing:0.04em; max-width:360px; margin:0 auto; }
+  .footer .src-date { font-size:10px; letter-spacing:0.12em; margin-top:6px; color:var(--red); font-weight:700; }
+</style>
+</head>
+<body>
+
+<!-- 导出工具栏 -->
+<div id="export-toolbar" style="position:fixed;top:10px;right:10px;z-index:9999;font-family:'Microsoft YaHei',sans-serif;user-select:none;">
+  <div style="display:flex;gap:6px;">
+    <button id="exp-main" style="background:#c85a4a;color:#fff;border:0;padding:6px 12px;border-radius:4px;font-size:11px;font-weight:700;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,0.2);letter-spacing:.05em;">📥 导出长图</button>
+    <button id="edit-toggle" style="background:#1e3a5f;color:#fff;border:0;padding:6px 12px;border-radius:4px;font-size:11px;font-weight:700;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,0.2);letter-spacing:.05em;">✏️ 编辑文字</button>
+  </div>
+  <div id="exp-panel" style="display:none;margin-top:6px;background:rgba(30,58,95,0.96);padding:8px;border-radius:4px;box-shadow:0 4px 12px rgba(0,0,0,0.25);">
+    <div style="display:flex;flex-direction:column;gap:4px;">
+      <button data-scale="2" class="exp-btn" style="background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.15);padding:6px 10px;border-radius:3px;font-size:10px;cursor:pointer;font-weight:600;">@2x · 860px</button>
+      <button data-scale="3" class="exp-btn" style="background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.15);padding:6px 10px;border-radius:3px;font-size:10px;cursor:pointer;font-weight:600;">@3x · 1290px</button>
+      <button data-scale="4" class="exp-btn" style="background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.15);padding:6px 10px;border-radius:3px;font-size:10px;cursor:pointer;font-weight:600;">@4x · 1720px</button>
+    </div>
+    <div id="exp-status" style="font-size:9px;color:#ffb896;margin-top:6px;letter-spacing:.03em;line-height:1.3;min-height:11px;"></div>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="brand">GAMEPULSE · WEEKLY</div>
+    <h1>端主行业动态周报 W21</h1>
+    <div class="sub">PC & Console Industry Weekly Briefing</div>
+    <div class="meta">
+      <span>DATE · <strong>2026.05.23</strong></span>
+      <span>COVERAGE · <strong>5.18 – 5.24</strong></span>
+    </div>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- PART 01 · 索尼战略转型                                           -->
+  <!-- ================================================================ -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="num">01</div>
+      <div class="title">索尼战略转型<em>第一方单机独占回归 + PS Plus涨价</em></div>
+    </div>
+
+    <!-- ① 发生了什么 -->
+    <div class="ev-line" style="background:var(--surface);border:1px solid var(--rule-dim);border-radius:5px;padding:10px 12px;margin-bottom:6px;"><div class="ev-head"><span class="d">5/19</span> <span class="tg tg-r">独占</span> <span style="font-size:11px;">⭐</span></div><div class="ev-body">PlayStation Studios CEO Hermen Hulst全员大会确认：<strong>叙事单人游戏停止登PC</strong>，回归PS独占（彭博Schreier报道）</div></div>
+    <div class="ev-line" style="background:var(--surface);border:1px solid var(--rule-dim);border-radius:5px;padding:10px 12px;margin-bottom:6px;"><div class="ev-head"><span class="d">5/20</span> <span class="tg tg-y">涨价</span></div><div class="ev-body">PS Plus新订户涨价生效：月费<strong>$9.99→$10.99</strong>（+10%），季度$24.99→$27.99（+12%）</div></div>
+    <div class="ev-line" style="background:var(--surface);border:1px solid var(--rule-dim);border-radius:5px;padding:10px 12px;margin-bottom:6px;"><div class="ev-head"><span class="d">5/21</span> <span class="tg tg-r">监管</span></div><div class="ev-body">索尼PSN商店动态定价（对不同用户展示不同价格）被指<strong>可能违反欧盟消费者保护法</strong>，透明度不足（Eurogamer/丹麦报告）</div></div>
+    <div class="ev-line" style="background:var(--surface);border:1px solid var(--rule-dim);border-radius:5px;padding:10px 12px;margin-bottom:6px;"><div class="ev-head"><span class="d">5/19</span> <span class="tg tg-b">对照</span></div><div class="ev-body">Xbox Player Voice投票<strong>"重启独占"6,716票高居第一</strong>——玩家端验证"独占=主机购买理由"</div></div>
+
+    <!-- ② 哪些游戏受影响 -->
+    <div style="display:flex;gap:12px;margin:14px 0 14px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:140px;background:rgba(255,75,75,0.08);border:1px solid rgba(255,75,75,0.25);border-radius:4px;padding:8px 10px;">
+        <div style="font-size:10px;font-weight:700;color:var(--red);margin-bottom:4px;">⛔ 不再上PC（叙事单人）</div>
+        <div style="font-size:11px;line-height:1.6;color:var(--ink);">
+          《Ghost of Yōtei》<br>《Marvel's Wolverine》<br>《Intergalactic》<br><span style="font-size:9px;color:var(--ink-ghost);">等，仅举例</span>
+        </div>
+      </div>
+      <div style="flex:1;min-width:140px;background:rgba(75,200,130,0.08);border:1px solid rgba(75,200,130,0.25);border-radius:4px;padding:8px 10px;">
+        <div style="font-size:10px;font-weight:700;color:#4bc882;margin-bottom:4px;">✅ 仍PC+PS5同发（多人/GaaS）</div>
+        <div style="font-size:11px;line-height:1.6;color:var(--ink);">
+          《Marathon》<br>《Helldivers 2》<br>《Fairgame$》<br><span style="font-size:9px;color:var(--ink-ghost);">等，仅举例</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 论据：PC移植历史表 -->
+    <div style="font-size:11px;color:var(--ink-dim);margin:10px 0 6px;font-weight:700;">索尼PC移植历史——窗口期从4年→压缩到7个月</div>
+    <table class="stbl">
+      <thead><tr><th>游戏</th><th>PS发售</th><th>PC上线</th><th>窗口</th><th>PC销量(Steam)</th></tr></thead>
+      <tbody>
+        <tr><td>《地平线：零之曙光》</td><td class="num">2017.2</td><td class="num">2020.8</td><td class="num">3.5年</td><td class="num">~490万</td></tr>
+        <tr><td>《战神》(2018)</td><td class="num">2018.4</td><td class="num">2022.1</td><td class="num">3.8年</td><td class="num">~280万</td></tr>
+        <tr><td>《蜘蛛侠 重制版》</td><td class="num">2018.9</td><td class="num">2022.8</td><td class="num">4年</td><td class="num">~270万</td></tr>
+        <tr><td>《往日不再》</td><td class="num">2019.4</td><td class="num">2021.5</td><td class="num">2年</td><td class="num">~340万</td></tr>
+        <tr><td>《对马岛之魂》</td><td class="num">2020.7</td><td class="num">2024.5</td><td class="num">3.8年</td><td class="num">首月80万</td></tr>
+        <tr><td>《美末 Part I》</td><td class="num">2022.9</td><td class="num">2023.3</td><td class="num"><strong>7个月</strong></td><td class="num">—</td></tr>
+        <tr><td>《战神：诸神黄昏》</td><td class="num">2022.11</td><td class="num">2024.9</td><td class="num">1.8年</td><td class="num">落后前作</td></tr>
+        <tr><td>《蜘蛛侠2》</td><td class="num">2023.10</td><td class="num">2025.1</td><td class="num">1.3年</td><td class="num">落后前作</td></tr>
+      </tbody>
+    </table>
+    <div style="font-size:10px;color:var(--ink-ghost);margin:4px 0 12px;padding:0 4px;">数据来源：Alinea Analytics · GameWorldObserver · SteamDB</div>
+
+    <!-- ③ 为什么现在反转 -->
+    <div class="summary-box">
+      <div class="sb-label">为什么现在反转？三大驱动力</div>
+      <p><strong>❶ PS6蓄水</strong>：PS5末期硬件加速衰退（Q4出货仅150万台），需重建"PS才能玩独占"认知，为PS6首发积蓄购买动机</p>
+      <p><strong>❷ PC移植边际递减</strong>：Bloomberg总结"PS5 games have not sold well on PC"。前PS PC规划经理Jerry Liu数据：3年PC净收入$3亿，占G&NS年营收$311亿仅<strong style="color:var(--red);">0.3-2.1%</strong>，却让玩家形成"等Steam就有"预期</p>
+      <p><strong>❸ Xbox反面教材</strong>：微软全面开放后Xbox硬件持续萎缩（FY26 Q3再-33%），索尼看到终点果断收紧</p>
+    </div>
+
+    <!-- ④ 战略本质 -->
+    <div style="font-size:11px;color:var(--ink-dim);margin:8px 0 6px;font-weight:700;">战略本质：独占 vs 开放——两条路线180°分歧</div>
+    <table class="stbl">
+      <thead><tr><th style="white-space:nowrap;">维度</th><th>索尼（收紧）</th><th>微软/Xbox（开放）</th></tr></thead>
+      <tbody>
+        <tr><td style="white-space:nowrap;">核心逻辑</td><td>独占内容 = 硬件购买理由 = 生态锁定</td><td>多平台触达 = 最大化用户基数 = 订阅变现</td></tr>
+        <tr><td style="white-space:nowrap;">商业模式</td><td>硬件装机量 → PS Store 30%抽成 + PS Plus</td><td>Game Pass订阅 → 月费×用户数</td></tr>
+        <tr><td style="white-space:nowrap;">2026表现</td><td><strong>G&NS营业利润+12%创纪录</strong></td><td style="color:var(--red);">Xbox硬件持续萎缩，GP仍未盈利</td></tr>
+      </tbody>
+    </table>
+
+    <div class="insight">
+      <div class="il">结论</div>
+      <p><strong>独占回归</strong>：确保PS是唯一能玩《战神》《地平线》《Wolverine》的平台 → 用户无处可去</p>
+      <p><strong>PS Plus涨价</strong>：独占锁定用户后价格敏感度下降 → 安全释放定价权。独占是涨价的<em>前置条件</em>，不是事后弥补。</p>
+      <p><strong>Xbox玩家投票</strong>：6,716票呼吁"重启独占"高居第一 → 索尼精准抓住心理：<em>独占不只是商业策略，是"平台身份感"的来源。</em></p>
+    </div>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- PART 02 · 财报速递                                               -->
+  <!-- ================================================================ -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="num">02</div>
+      <div class="title">财报速递<em>Take-Two · 育碧 · Square Enix</em></div>
+    </div>
+
+    <!-- Take-Two -->
+    <div class="cb">
+      <div class="cb-tag">TAKE-TWO · 5/21发布 · FY26 Q4（2026.1–3月）</div>
+      <h4>GTA6确认<em>11月19日</em>如期发售 · Q4净预订$15.8亿超预期</h4>
+    </div>
+
+    <table class="stbl">
+      <thead><tr><th>FY26 Q4</th><th>金额</th><th>备注</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Q4营收</strong></td><td class="num"><strong>$16.8亿</strong></td><td class="num">+6.3% YoY</td></tr>
+        <tr><td>Q4净预订</td><td class="num">$15.8亿</td><td class="num">超预期$15.7亿</td></tr>
+        <tr><td>FY27指引</td><td class="num">$80-82亿</td><td class="num" style="color:var(--red);">低于预期$91.1亿</td></tr>
+      </tbody>
+    </table>
+
+    <div class="trend">
+      <div class="tl">Take-Two洞察</div>
+      CEO Zelnick确认<strong>《GTA6》11月19日如期发售</strong>，打消市场延期疑虑。同步公布FY27-29三年29款游戏路线图（含3款全新IP：Ghost Story《犹大》、31st Union《ETHOS计划》等）。
+    </div>
+
+    <!-- 育碧 -->
+    <div class="cb">
+      <div class="cb-tag">UBISOFT · 5/20发布 · FY26全年（2025.4–2026.3）</div>
+      <h4>创纪录亏损<em>€13亿/$14.3亿</em> · 裁员1,200人</h4>
+    </div>
+
+    <table class="stbl">
+      <thead><tr><th>FY26</th><th>金额</th><th>YoY</th></tr></thead>
+      <tbody>
+        <tr><td><strong>运营亏损</strong></td><td class="num" style="color:var(--red);"><strong>€13亿/$14.3亿</strong></td><td class="num" style="color:var(--red);">创纪录</td></tr>
+        <tr><td>净预订</td><td class="num">€15.3亿/$16.8亿</td><td class="num" style="color:var(--red);">-17.4%</td></tr>
+        <tr><td>裁员</td><td class="num">~1,200人</td><td class="num">员工降至16,600</td></tr>
+        <tr><td>取消项目</td><td class="num">6款</td><td class="num">减值€6.5亿</td></tr>
+      </tbody>
+    </table>
+
+    <div class="trend">
+      <div class="tl">育碧洞察</div>
+      <strong>承诺2029年前推出《刺客信条》《孤岛惊魂》《幽灵行动》三大新作</strong>，近期作品M站均80+。但《幽灵行动》新作已推迟至2027年。
+    </div>
+
+    <!-- Square Enix -->
+    <div class="cb">
+      <div class="cb-tag">SQUARE ENIX · 5/16发布 · FY26全年（2025.4–2026.3）</div>
+      <h4>营业利润<em>+34.9%</em>（¥547亿/$3.6亿），"缩量提质"典型</h4>
+    </div>
+
+    <table class="stbl">
+      <thead><tr><th>FY26</th><th>金额</th><th>YoY</th></tr></thead>
+      <tbody>
+        <tr><td><strong>净销售额</strong></td><td class="num"><strong>¥(JPY)2,976亿/$19.5亿</strong></td><td class="num" style="color:var(--red);">-8.3%</td></tr>
+        <tr><td><strong>营业利润</strong></td><td class="num"><strong>¥(JPY)547亿/$3.6亿</strong></td><td class="num"><strong>+34.9%</strong></td></tr>
+        <tr><td>营业利润率</td><td class="num">18.4%</td><td class="num">+5.9pp</td></tr>
+        <tr><td>HD Game板块利润</td><td class="num">¥141亿</td><td class="num"><strong>翻4倍+</strong></td></tr>
+        <tr><td>MMO板块</td><td class="num">¥410亿</td><td class="num" style="color:var(--red);">-26%（FFXIV萎缩）</td></tr>
+      </tbody>
+    </table>
+
+    <div class="trend">
+      <div class="tl">SE洞察</div>
+      驱动增长：《FF Tactics: Ivalice Chronicles》《DQ I&II HD-2D 重制版》（推动DQ系列累计9,700万份）。FY27指引：营业利润-10.5%。
+    </div>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- PART 03 · 其他新闻                                               -->
+  <!-- ================================================================ -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="num">03</div>
+      <div class="title">其他新闻<em>FH6 · 深海迷航2 · Xbox人事</em></div>
+    </div>
+
+    <!-- FH6 -->
+    <div class="cb">
+      <div class="cb-tag">FORZA HORIZON 6 · 5/19正式发售</div>
+      <h4>发售首周<em>600万+玩家</em>（含Game Pass） · Xbox Steam史上最大首发</h4>
+    </div>
+
+    <table class="stbl">
+      <thead><tr><th>数据</th><th>FH6</th><th>对比</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Steam峰值</strong></td><td class="num"><strong>273,148人</strong></td><td>超Halo Infinite(272,148·F2P)</td></tr>
+        <tr><td>首日玩家</td><td class="num"><strong>370万+</strong></td><td>含100万新注册账号</td></tr>
+        <tr><td>首周玩家</td><td class="num"><strong>600万+</strong></td><td>含5/15高级版EA+Game Pass</td></tr>
+        <tr><td>M站/IGN</td><td class="num">92分/满分10</td><td>2026年度最高分</td></tr>
+        <tr><td>PS5版</td><td class="num">2026年底</td><td>Sharma短窗口独占策略</td></tr>
+      </tbody>
+    </table>
+
+    <!-- 深海迷航2 -->
+    <div class="cb">
+      <div class="cb-tag">SUBNAUTICA 2（深海迷航2） · 5/14抢先体验</div>
+      <h4>5天售出<em>400万份</em> · Steam峰值46.8万 · 12小时即破200万</h4>
+    </div>
+
+    <div style="background:var(--surface);border:1px solid var(--rule-dim);border-radius:5px;padding:10px 12px;margin-bottom:14px;font-size:12px;line-height:1.7;color:var(--ink-dim);">
+      Unknown Worlds续作以EA形式发售即爆——<strong>12小时200万份 → 5天400万+</strong>。Steam历史峰值<strong>467,582人</strong>（远超前作）。同步登陆Game Pass（Game Preview），实际玩家总数更高。预计EA阶段至少2年。
+    </div>
+
+    <!-- Xbox人事 -->
+    <div class="cb">
+      <div class="cb-tag">XBOX · 5/20 · 高层人事调整</div>
+      <h4>Sharma上任90天第二轮重组：从"愿景模糊"转向"战略清晰+执行收紧"</h4>
+    </div>
+
+    <div style="background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:14px 16px;margin:0 0 8px;font-size:11px;line-height:1.6;">
+      <div style="text-align:center;margin-bottom:10px;">
+        <div style="display:inline-block;background:var(--ink);color:#fff;padding:5px 14px;border-radius:4px;font-size:12px;font-weight:800;">Xbox CEO Asha Sharma</div>
+        <div style="color:var(--ink-ghost);font-size:10px;margin-top:4px;">"strengthening our foundation...position Xbox for the future"</div>
+      </div>
+      <div style="display:flex;justify-content:center;margin:4px 0 8px;"><div style="width:2px;height:14px;background:var(--rule);"></div></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;">
+        <div style="background:#f0faf3;border:1px solid #b7eb8f;border-radius:4px;padding:8px;text-align:center;">
+          <div style="font-weight:800;color:var(--green);font-size:9px;margin-bottom:4px;">新聘 · CSO</div>
+          <div style="font-size:10px;color:var(--ink);line-height:1.5;"><strong>Matthew Ball</strong><br><span style="color:var(--ink-ghost);">游戏产业分析师<br>前Amazon Studios</span></div>
+          <div style="margin-top:6px;font-size:9px;color:var(--ink-dim);border-top:1px dashed #b7eb8f;padding-top:4px;"><strong>补战略取舍</strong><br>哪条路优先、哪条放弃</div>
+        </div>
+        <div style="background:#f0faf3;border:1px solid #b7eb8f;border-radius:4px;padding:8px;text-align:center;">
+          <div style="font-weight:800;color:var(--green);font-size:9px;margin-bottom:4px;">新聘 · CTO</div>
+          <div style="font-size:10px;color:var(--ink);line-height:1.5;"><strong>Scott Van Vliet</strong><br><span style="color:var(--ink-ghost);">前Azure OpenAI<br>前MS Teams工程</span></div>
+          <div style="margin-top:6px;font-size:9px;color:var(--ink-dim);border-top:1px dashed #b7eb8f;padding-top:4px;"><strong>补技术底座</strong><br>云+AI落地Project Helix</div>
+        </div>
+        <div style="background:#eef1f5;border:1px solid var(--rule);border-radius:4px;padding:8px;text-align:center;">
+          <div style="font-weight:800;color:var(--ink-dim);font-size:9px;margin-bottom:4px;">晋升 · CVP</div>
+          <div style="font-size:10px;color:var(--ink);line-height:1.5;"><strong>Chris Schnakenberg</strong><br><span style="color:var(--ink-ghost);">来自Activision<br>负责第三方合作</span></div>
+          <div style="margin-top:6px;font-size:9px;color:var(--ink-dim);border-top:1px dashed var(--rule);padding-top:4px;"><strong>补第三方生态</strong><br>给伙伴稳定商业预期</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="trend">
+      <div class="tl">任命逻辑</div>
+      Xbox过去几年叙事拥挤（主机/GP/云/PC/跨端全都要），路线模糊导致玩家观望、开发者难下注。Sharma上任90天内两轮高层重组，核心诉求：<strong>从愿景转向执行</strong>。
+    </div>
+
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- FOOTER                                                           -->
+  <!-- ================================================================ -->
+  <div class="footer">
+    <div class="logo">GAMEPULSE · PC & CONSOLE</div>
+    <div class="src">
+      数据来源：Bloomberg · GamesIndustry.biz · GamingBolt · VGC · IT之家 · Eurogamer · Alinea Analytics · SteamDB · GameWorldObserver · Take-Two IR · 腾讯文档行业新闻库
+    </div>
+    <div class="src-date">2026.05.23 · W21 · DATA CUTOFF 05.23</div>
+  </div>
+
+</div>
+
+<!-- 导出脚本 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+(function(){
+  const toolbar = document.getElementById('export-toolbar');
+  const mainBtn = document.getElementById('exp-main');
+  const panel = document.getElementById('exp-panel');
+  const status = document.getElementById('exp-status');
+  let panelVisible = false;
+  mainBtn.addEventListener('click', () => { panelVisible = !panelVisible; panel.style.display = panelVisible ? 'block' : 'none'; });
+  document.addEventListener('click', (e) => { if (!toolbar.contains(e.target)) { panelVisible = false; panel.style.display = 'none'; } });
+  async function exportAt(scale) {
+    status.textContent = `正在生成 @${scale}x ...`;
+    toolbar.style.display = 'none';
+    const page = document.querySelector('.page');
+    try {
+      const canvas = await html2canvas(page, { scale, useCORS: true, backgroundColor: '#f4f6f9', width: 430, windowWidth: 430 });
+      toolbar.style.display = '';
+      const link = document.createElement('a');
+      link.download = `Weekly_Briefing_20260523_${scale}x.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+      status.textContent = `✅ @${scale}x 已下载 (${canvas.width}×${canvas.height})`;
+    } catch(e) { toolbar.style.display = ''; status.textContent = '❌ ' + e.message; }
+  }
+  const buttons = panel.querySelectorAll('.exp-btn');
+  buttons.forEach(btn => btn.addEventListener('click', (e) => { e.stopPropagation(); exportAt(parseInt(btn.dataset.scale, 10)); }));
+})();
+</script>
+
+<!-- 编辑文字功能 -->
+<style>
+  .editing-mode [contenteditable="true"] { outline: 1px dashed rgba(200,90,74,0.4); outline-offset: 2px; min-height: 1em; }
+  .editing-mode [contenteditable="true"]:focus { outline: 2px solid #c85a4a; background: rgba(200,90,74,0.03); }
+  #edit-save-bar { position:fixed; bottom:0; left:0; right:0; background:rgba(30,58,95,0.97); padding:10px 20px; display:flex; align-items:center; justify-content:center; gap:12px; z-index:10000; box-shadow:0 -2px 10px rgba(0,0,0,0.3); }
+  #edit-save-bar button { padding:8px 18px; border:0; border-radius:4px; font-size:12px; font-weight:700; cursor:pointer; letter-spacing:.03em; }
+  #edit-save-bar .save-btn { background:#4caf50; color:#fff; }
+  #edit-save-bar .cancel-btn { background:transparent; color:#fff; border:1px solid rgba(255,255,255,0.4); }
+</style>
+<script>
+(function(){
+  const editBtn = document.getElementById('edit-toggle');
+  const page = document.querySelector('.page');
+  const toolbar = document.getElementById('export-toolbar');
+  let isEditing = false;
+  let fileHandle = null;
+  const editableSelectors = 'h1, h2, h3, h4, p, .ev-body, .trend, .lead, td, .summary-box p, .insight p, .cb-tag, .sub, .hl-sub, .brand';
+  function enterEditMode() {
+    isEditing = true;
+    document.body.classList.add('editing-mode');
+    editBtn.style.background = '#4caf50';
+    editBtn.textContent = '🟢 编辑中';
+    page.querySelectorAll(editableSelectors).forEach(el => el.setAttribute('contenteditable', 'true'));
+    showSaveBar();
+  }
+  function exitEditMode() {
+    isEditing = false;
+    document.body.classList.remove('editing-mode');
+    editBtn.style.background = '#1e3a5f';
+    editBtn.textContent = '✏️ 编辑文字';
+    page.querySelectorAll('[contenteditable]').forEach(el => el.removeAttribute('contenteditable'));
+    const bar = document.getElementById('edit-save-bar'); if (bar) bar.remove();
+  }
+  function showSaveBar() {
+    if (document.getElementById('edit-save-bar')) return;
+    const bar = document.createElement('div'); bar.id = 'edit-save-bar';
+    bar.innerHTML = '<span style="font-size:10px;color:#ffb896;">编辑模式：直接点击文字修改</span><button class="save-btn" id="save-edit-btn">💾 保存修改</button><button class="cancel-btn" id="cancel-edit-btn">取消</button>';
+    document.body.appendChild(bar);
+    document.getElementById('save-edit-btn').addEventListener('click', saveFile);
+    document.getElementById('cancel-edit-btn').addEventListener('click', () => { if(confirm('放弃所有修改？')) exitEditMode(); });
+  }
+  async function saveFile() {
+    page.querySelectorAll('[contenteditable]').forEach(el => el.removeAttribute('contenteditable'));
+    document.body.classList.remove('editing-mode');
+    const bar = document.getElementById('edit-save-bar'); if (bar) bar.style.display = 'none';
+    toolbar.style.display = 'none';
+    const html = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+    toolbar.style.display = ''; if (bar) bar.style.display = '';
+    page.querySelectorAll(editableSelectors).forEach(el => el.setAttribute('contenteditable', 'true'));
+    document.body.classList.add('editing-mode');
+    try {
+      if ('showSaveFilePicker' in window) {
+        if (!fileHandle) fileHandle = await window.showSaveFilePicker({ suggestedName: 'Weekly_Briefing_20260523.html', types: [{ description: 'HTML', accept: { 'text/html': ['.html'] } }] });
+        const writable = await fileHandle.createWritable(); await writable.write(html); await writable.close(); return;
+      }
+    } catch (e) { if (e.name === 'AbortError') return; }
+    const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'Weekly_Briefing_20260523.html'; document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  }
+  editBtn.addEventListener('click', () => { if (isEditing) exitEditMode(); else enterEditMode(); });
+})();
+</script>
+
+</body>
+</html>

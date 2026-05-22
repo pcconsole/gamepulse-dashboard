@@ -2,6 +2,17 @@
 // 每周生成新周报时，在数组顶部追加一条
 window.WEEKLY_REPORTS = [
   {
+    week: 'W21',
+    date: '2026-05-23',
+    periodStart: '2026-05-18',
+    periodEnd: '2026-05-24',
+    title: '端主行业周报 W21：索尼独占回归·Take-Two确认GTA6定档·FH6首周600万',
+    summary: '索尼第一方叙事单人游戏停止登PC回归PS独占，PS Plus涨价10%，动态定价被指违欧盟法；Take-Two确认GTA6于11月19日如期发售；FH6首周600万玩家创Xbox Steam历史。',
+    file: 'weekly/Weekly_Briefing_20260523.html',
+    tags: ['索尼独占', 'GTA6', 'Take-Two', 'FH6', '育碧', 'Square Enix'],
+    highlight: true
+  },
+  {
     week: 'W20',
     date: '2026-05-16',
     periodStart: '2026-05-09',
@@ -10,7 +21,7 @@ window.WEEKLY_REPORTS = [
     summary: 'FH6 Steam 155GB未加密泄露引发盗版危机，PS5版延后发售——Sharma独占策略首次落地；Capcom营业利润9连纪录、Nexon营收+34%创新高（ARC Raiders 1600万份）。',
     file: 'weekly/Weekly_Briefing_20260516.html',
     tags: ['极限竞速6', 'Capcom', 'Nexon', 'ARC Raiders', '财报季'],
-    highlight: true
+    highlight: false
   },
   {
     week: 'W19',
