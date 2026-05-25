@@ -32680,5 +32680,5 @@ const storewatchMeta = {
     ps5Days: 102,
     xboxDays: 102,
     totalEntries: 3462,
-    vendorMatchRate: 9%
+    vendorMatchRate: '9%'
 };

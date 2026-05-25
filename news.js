@@ -1,13 +1,125 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-05-22T18:00:00Z
-// 更新者: news-agent (v5.2 HTTP API V2 1384行+web_search 14轮+新增13条+更新3条+90天清理)
+// 最后更新: 2026-05-25T18:00:00Z
+// 更新者: news-agent (v5.2 腾讯文档缓存+web_search 14轮+新增20条+更新2条+90天清理)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
 // ============================================
 const newsData = [
+    {
+        "id": 1543,
+        "title": "FH6首周490万销量+$3.25亿收入，Steam 280万/Xbox 210万，300万Game Pass玩家",
+        "summary": "据Alinea Analytics数据，Forza Horizon 6首周售出约490万份，总收入$3.25亿。其中Steam约280万份、Xbox商店约210万份（占比42%），另超300万Game Pass玩家游玩。分析师指出Game Pass蚕食了部分传统销量，但Xbox端收入仍占51%。PS5版预计2026年晚些时候推出。",
+        "source": "gHacks",
+        "sourceUrl": "https://www.ghacks.net/2026/05/24/forza-horizon-6-sells-4-9-million-copies-in-first-week-as-analyst-says-game-pass-cannibalized-revenue/",
+        "sourceUrls": [
+            {
+                "name": "gHacks",
+                "url": "https://www.ghacks.net/2026/05/24/forza-horizon-6-sells-4-9-million-copies-in-first-week-as-analyst-says-game-pass-cannibalized-revenue/"
+            },
+            {
+                "name": "GamesRadar",
+                "url": "https://www.gamesradar.com/games/forza-horizon/forza-horizon-6-sells-4-9-million-copies-despite-xbox-game-pass-cannibalizing-revenue-says-analyst/"
+            },
+            {
+                "name": "Gizchina",
+                "url": "https://www.gizchina.com/gaming/forza-horizon-6-hits-49-million-sales-and-325m-in-one-week"
+            },
+            {
+                "name": "TechPowerUp",
+                "url": "https://www.techpowerup.com/349301/forza-horizon-6-nears-5-million-sales-42-on-xbox"
+            }
+        ],
+        "category": "game",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-24",
+        "tags": [
+            "Forza Horizon 6",
+            "Steam",
+            "Xbox",
+            "Game Pass"
+        ],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "FH6首周$3.25亿收入是2026年迄今最大首发之一。Steam 280万vs Xbox 210万显示PC端已成为Xbox第一方重要收入来源，但Game Pass 300万+玩家说明订阅模式正在重塑收入结构。分析师指出Game Pass蚕食传统销量是行业结构性矛盾。PS5版尚未推出，最终全平台收入仍有巨大上行空间。",
+        "relatedNewsIds": [
+            295,
+            299
+        ]
+    },
+    {
+        "id": 1562,
+        "title": "Bloomberg: 任天堂Switch 2产量上调约20%至2000万台，超官方指引",
+        "summary": "Bloomberg报道任天堂要求供应商FY2027组装约2000万台Switch 2，比5月初公布的1650万销售指引高约20%。FY2026实际售出1986万台超预期。任天堂正积极应对持续强劲需求，但内存涨价仍是成本压力。",
+        "source": "Bloomberg/Techmeme",
+        "sourceUrl": "https://www.techmeme.com/260522/p4",
+        "sourceUrls": [
+            {
+                "name": "Techmeme/Bloomberg",
+                "url": "https://www.techmeme.com/260522/p4"
+            },
+            {
+                "name": "TechInAsia",
+                "url": "https://www.techinasia.com/news/nintendo-ramps-up-switch-2-production-as-demand-grows"
+            },
+            {
+                "name": "TweakTown",
+                "url": "https://www.tweaktown.com/news/36098/nintendo-to-produce-20-million-switch-2s-in-fy27-exceeding-sales-forecast-by-21.html"
+            }
+        ],
+        "category": "platform",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-22",
+        "tags": [
+            "Nintendo",
+            "Switch 2",
+            "产量",
+            "Bloomberg"
+        ],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "产量指引比销售指引高20%是典型保守预期管理。FY26实际1986万vs指引1500-1900万。2000万产量目标反映需求强劲，但内存涨价和元器件短缺仍是隐忧。FY27产量上调意味着任天堂对内容供给有信心。",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 1570,
+        "title": "《乐高蝙蝠侠：黑暗骑士之遗》5/22发售MC84-86，乐高系列评分最高",
+        "summary": "TT Games作品5月22日发售，PS5版MC84/Xbox版86/PC版83，成为评分最高乐高游戏。Rocksteady联合开发，融合阿卡姆战斗系统与开放世界哥谭。Switch 2版也将推出。",
+        "source": "GamesRadar",
+        "sourceUrl": "https://www.gamesradar.com/games/adventure/lego-batman-legacy-of-the-dark-knights-metacritic-score-makes-it-the-best-rated-lego-game-ever-knocking-the-skywalker-saga-off-its-perch-after-4-years/",
+        "sourceUrls": [
+            {
+                "name": "GamesRadar",
+                "url": "https://www.gamesradar.com/games/adventure/lego-batman-legacy-of-the-dark-knights-metacritic-score-makes-it-the-best-rated-lego-game-ever-knocking-the-skywalker-saga-off-its-perch-after-4-years/"
+            },
+            {
+                "name": "IT之家",
+                "url": "https://www.ithome.com/0/952/331.htm"
+            },
+            {
+                "name": "Metacritic",
+                "url": "https://www.metacritic.com/game/lego-batman-legacy-of-the-dark-knight/"
+            }
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-22",
+        "tags": [
+            "LEGO Batman",
+            "TT Games",
+            "Rocksteady",
+            "MC84"
+        ],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": []
+    },
     {
         "id": 1547,
         "title": "卡普空白金销量榜更新：RE Requiem 691万+MH Wilds半年仅增40万",
@@ -48,7 +160,7 @@ const newsData = [
     {
         "id": 1555,
         "title": "Bungie停更《命运2》6月9日最终更新+大规模裁员+《命运3》未获批准",
-        "summary": "Bungie宣布《命运2》将于6月9日发布最终更新'Monument of Triumph'后停止新内容开发，游戏仍可游玩。据Bloomberg记者Jason Schreier报道，Bungie随后将面临'大规模'裁员，且《命运3》目前未获绿灯批准。工作室将转向其他项目，包括已发布的Marathon和未公开新作。此前Bungie已于2026年1月裁减约50%员工。",
+        "summary": "Bungie宣布《命运2》将于6月9日发布最终更新‘Monument of Triumph‘后停止新内容开发，游戏仍可游玩。据Bloomberg记者Jason Schreier报道，Bungie随后将面临‘大规模‘裁员，且《命运3》目前未获绿灯批准。工作室将转向其他项目，包括已发布的Marathon和未公开新作。此前Bungie已于2026年1月裁减约50%员工。",
         "source": "Kotaku",
         "sourceUrl": "https://kotaku.com/destiny-2-final-update-bungie-layoffs-sony-marathon-2000698425",
         "sourceUrls": [
@@ -81,7 +193,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "Bungie停更命运2标志着live-service时代的标志性转折。索尼2022年以36亿美元收购Bungie后，命运2持续表现不及预期，已导致索尼大幅减值。'命运3未获批准'意味着该IP前景不明，而Marathon作为唯一在运营的新作将承担更大压力。大规模裁员继续2026年1月裁减50%员工的趋势，反映出索尼对Bungie整合的艰难和live-service模式的系统性风险。",
+        "analysis": "Bungie停更命运2标志着live-service时代的标志性转折。索尼2022年以36亿美元收购Bungie后，命运2持续表现不及预期，已导致索尼大幅减值。‘命运3未获批准‘意味着该IP前景不明，而Marathon作为唯一在运营的新作将承担更大压力。大规模裁员继续2026年1月裁减50%员工的趋势，反映出索尼对Bungie整合的艰难和live-service模式的系统性风险。",
         "relatedNewsIds": [
             538,
             300
@@ -165,7 +277,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "Take-Two FY2027指引$80-82亿意味着GTA6首年将贡献约$13-15亿增量（vs FY2026 $67.2亿），这是游戏行业史上最大的单年增长预期。CEO刻意重申11/19发售日'不是为了延迟'，旨在消除市场疑虑。Zynga贡献最强季度说明移动端仍是稳定基本盘。关注点：营销夏季启动、预购即将开放、$3.7B减值损失已消化。",
+        "analysis": "Take-Two FY2027指引$80-82亿意味着GTA6首年将贡献约$13-15亿增量（vs FY2026 $67.2亿），这是游戏行业史上最大的单年增长预期。CEO刻意重申11/19发售日‘不是为了延迟‘，旨在消除市场疑虑。Zynga贡献最强季度说明移动端仍是稳定基本盘。关注点：营销夏季启动、预购即将开放、$3.7B减值损失已消化。",
         "relatedNewsIds": [
             1540,
             1554
@@ -173,8 +285,8 @@ const newsData = [
     },
     {
         "id": 1552,
-        "title": "索尼注册'Break In'商标，疑Haven工作室Fairgames品牌重塑",
-        "summary": "索尼互动娱乐5月20日在美国和欧洲注册'Break In'商标，并注册多个社交媒体账号。业界普遍推测这是Haven Studios开发的合作抢劫游戏Fairgame$的品牌重塑。该游戏2023年公布后开发困难，Concord灾难性首发后Sony对live-service项目更为谨慎。6/2 State of Play可能正式公布。",
+        "title": "索尼注册‘Break In‘商标，疑Haven工作室Fairgames品牌重塑",
+        "summary": "索尼互动娱乐5月20日在美国和欧洲注册‘Break In‘商标，并注册多个社交媒体账号。业界普遍推测这是Haven Studios开发的合作抢劫游戏Fairgame$的品牌重塑。该游戏2023年公布后开发困难，Concord灾难性首发后Sony对live-service项目更为谨慎。6/2 State of Play可能正式公布。",
         "source": "VGC",
         "sourceUrl": "https://www.videogameschronicle.com/news/sony-trademarks-break-in-state-of-play-showcase/",
         "sourceUrls": [
@@ -215,7 +327,7 @@ const newsData = [
     {
         "id": 1551,
         "title": "索尼PS Store动态定价或违欧盟法，丹麦消费者组织已介入",
-        "summary": "索尼在PlayStation Store试行动态定价（对不同用户显示不同价格），据Eurogamer报道，丹麦消费者组织评估认为此举可能违反欧盟消费者保护法。此前3月索尼开始大规模测试时已引发玩家强烈反弹，质疑'这不是违法吗？'。欧盟正将动态定价纳入数字公平性审查。",
+        "summary": "索尼在PlayStation Store试行动态定价（对不同用户显示不同价格），据Eurogamer报道，丹麦消费者组织评估认为此举可能违反欧盟消费者保护法。此前3月索尼开始大规模测试时已引发玩家强烈反弹，质疑‘这不是违法吗？‘。欧盟正将动态定价纳入数字公平性审查。",
         "source": "Eurogamer",
         "sourceUrl": "https://www.eurogamer.net/playstation-dynamic-pricing-sony-transparency-eu-law",
         "sourceUrls": [
@@ -245,7 +357,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "动态定价在电商领域已不新鲜，但在数字游戏商店的应用尚无明确法律先例。若欧盟裁定违法，不仅Sony需赔偿和调整，Steam/Epic等平台也可能受波及。这是游戏行业从'一刀切定价'向'个性化定价'转型过程中面临的重大法律风险，可能重塑数字商品定价规则。",
+        "analysis": "动态定价在电商领域已不新鲜，但在数字游戏商店的应用尚无明确法律先例。若欧盟裁定违法，不仅Sony需赔偿和调整，Steam/Epic等平台也可能受波及。这是游戏行业从‘一刀切定价‘向‘个性化定价‘转型过程中面临的重大法律风险，可能重塑数字商品定价规则。",
         "relatedNewsIds": [
             305,
             307
@@ -399,8 +511,8 @@ const newsData = [
     },
     {
         "id": 1545,
-        "title": "《生灵重塑》(Reanimal)销量破百万，DLC'The Expanded World'确认",
-        "summary": "Tarsier Studios开发的恐怖冒险游戏《生灵重塑》(REANIMAL)销量突破100万份。发行商THQ Nordic/Embracer确认DLC'The Expanded World'将分三章发布，第一章预计2026年夏季推出。Tarsier此前放弃了《小小噩梦》IP，Reanimal成为其新原创IP的成功验证。",
+        "title": "《生灵重塑》(Reanimal)销量破百万，DLC‘The Expanded World‘确认",
+        "summary": "Tarsier Studios开发的恐怖冒险游戏《生灵重塑》(REANIMAL)销量突破100万份。发行商THQ Nordic/Embracer确认DLC‘The Expanded World‘将分三章发布，第一章预计2026年夏季推出。Tarsier此前放弃了《小小噩梦》IP，Reanimal成为其新原创IP的成功验证。",
         "source": "TwistedVoxel",
         "sourceUrl": "https://twistedvoxel.com/reanimal-surpasses-1-million-sales-as-embracer-confirms-dlc-expansion-plans/",
         "sourceUrls": [
@@ -461,44 +573,6 @@ const newsData = [
         "tdocMarking": "none",
         "analysis": "",
         "relatedNewsIds": []
-    },
-    {
-        "id": 1543,
-        "title": "FH6首周破600万玩家+Steam峰值17.8万创系列纪录，Xbox游戏Steam新高",
-        "summary": "Playground Games宣布《极限竞速：地平线6》发售首周突破600万玩家。Steam同时在线峰值达178,009人，是前作FH5的2倍以上，创下Xbox第一方游戏在Steam的历史最高纪录。5月15日Premium版抢先体验开始即打破系列纪录，正式版5/19上线后持续增长。Game Pass首日入库贡献大量玩家。",
-        "source": "GameSpot",
-        "sourceUrl": "https://www.gamespot.com/articles/forza-horizon-6-crushes-franchise-record-on-steam-despite-the-need-to-pay-extra/1100-6539998/",
-        "sourceUrls": [
-            {
-                "name": "GameSpot",
-                "url": "https://www.gamespot.com/articles/forza-horizon-6-crushes-franchise-record-on-steam-despite-the-need-to-pay-extra/1100-6539998/"
-            },
-            {
-                "name": "GamingProMax",
-                "url": "https://gamingpromax.com/forza-horizon-6-steam-player-count-record-early-access/"
-            },
-            {
-                "name": "nsaneforums",
-                "url": "https://nsaneforums.com/news/technology-news/forza-horizon-6-hits-a-massive-milestone-across-xbox-pc-and-game-pass-after-its-explosive-release-%E2%80%94-it-just-set-a-new-steam-peak-player-count-too-r35087/"
-            }
-        ],
-        "category": "game",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-05-21",
-        "tags": [
-            "Forza Horizon 6",
-            "Steam",
-            "Xbox",
-            "Game Pass"
-        ],
-        "sentiment": "positive",
-        "tdocMarking": "none",
-        "analysis": "FH6首周600万玩家+Steam 17.8万峰值标志着Xbox第一方在PC端的突破性进展。Steam峰值是FH5的2倍+，说明日本舞台和5年等待积累了巨大需求。Game Pass首日入库是600万玩家的关键推手，但也意味着传统销量占比降低。这是Xbox多平台+订阅策略的最强验证案例。",
-        "relatedNewsIds": [
-            295,
-            299
-        ]
     },
     {
         "id": 1542,
@@ -720,7 +794,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "FH6抢先体验$1.4亿+1.1M玩家是微软第一方游戏商业化的新标杆(What)。$120 Premium版销量超百万说明玩家愿意为'早玩72小时'支付溢价——这是微软'分层定价+抢先体验'策略的首次大规模验证(Why)。Steam 273K同时在线是赛车游戏历史新高，证明Xbox第一方跨PC发布不会削弱PC端热度；MC92是微软连续第三个年度MC90+大作，'质量驱动订阅'策略已成体系(So What)。FH6正式发售后Game Pass入库将带来第二波玩家潮，预计首周全平台玩家可超500万，有望成为2026年销量最高赛车游戏(What Next)。",
+        "analysis": "FH6抢先体验$1.4亿+1.1M玩家是微软第一方游戏商业化的新标杆(What)。$120 Premium版销量超百万说明玩家愿意为‘早玩72小时‘支付溢价——这是微软‘分层定价+抢先体验‘策略的首次大规模验证(Why)。Steam 273K同时在线是赛车游戏历史新高，证明Xbox第一方跨PC发布不会削弱PC端热度；MC92是微软连续第三个年度MC90+大作，‘质量驱动订阅‘策略已成体系(So What)。FH6正式发售后Game Pass入库将带来第二波玩家潮，预计首周全平台玩家可超500万，有望成为2026年销量最高赛车游戏(What Next)。",
         "relatedNewsIds": [
             296,
             274,
@@ -730,7 +804,7 @@ const newsData = [
     {
         "id": 267,
         "title": "《深海迷航2》EA 12小时破200万销量，65.1万同时在线创2026年EA纪录",
-        "summary": "Unknown Worlds开发的《深海迷航2》5月15日开启抢先体验，12小时售出200万份，5天内累计售出逾400万份。但EULA中“禁止VPN使用”和“$50最高损害赔偿”等条款引发玩家强烈反弹，Eurogamer称其“掠夺性极强”。Krafton与Unknown Worlds此前的法律纠纷已解决。游戏预计EA持续2-3年。",
+        "summary": "Unknown Worlds公布《深海迷航2》抢先体验首周售出超400万份，总收入约$1亿，成为2026年Steam最快销售游戏。首日12小时即破200万份，5天达400万，650万总玩家。但EULA中VPN禁令和$50损害赔偿上限引发玩家强烈反弹。官方已承诺修改争议条款。",
         "source": "IGN",
         "sourceUrl": "https://www.ign.com/articles/subnautica-2-is-already-making-waves-selling-2-million-copies-in-just-12-hours",
         "sourceUrls": [
@@ -768,7 +842,178 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "《深海迷航2》12小时200万销量+65.1万同时在线刷新了EA首发纪录(What)。初代96%好评积累的品牌忠诚度在5年间持续增值，500万愿望单转化率极高——这是独立游戏少见的'跨代品牌资产'效应(Why)。Krafton法律纠纷非但未影响销量，反而因媒体曝光度提升了玩家关注度，CEO被解雇后玩家反而更支持开发者(So What)。Game Pass同步入库未削弱Steam销量，说明多渠道分发是独立游戏最大化覆盖的最优策略。65万同时在线超过红色沙漠首发，海底探索品类需求远被低估，可能催生更多同类竞品(What Next)。",
+        "analysis": "《深海迷航2》12小时200万销量+65.1万同时在线刷新了EA首发纪录(What)。初代96%好评积累的品牌忠诚度在5年间持续增值，500万愿望单转化率极高——这是独立游戏少见的‘跨代品牌资产‘效应(Why)。Krafton法律纠纷非但未影响销量，反而因媒体曝光度提升了玩家关注度，CEO被解雇后玩家反而更支持开发者(So What)。Game Pass同步入库未削弱Steam销量，说明多渠道分发是独立游戏最大化覆盖的最优策略。65万同时在线超过红色沙漠首发，海底探索品类需求远被低估，可能催生更多同类竞品(What Next)。",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 1558,
+        "title": "Embracer一分为二：游戏开发业务剥离成立Fellowship Entertainment",
+        "summary": "Embracer Group宣布将拆分为两家独立上市公司。Fellowship Entertainment持《地铁》《亡命徒》《天国：拯救》《死亡岛》等IP；原Embracer保留《古墓丽影》《魔戒》等高价值IP。拆分预计2027年完成。此前已分拆Asmodee和Coffee Stain。Q4 FY26调整后盈利超预期。",
+        "source": "GamesIndustry",
+        "sourceUrl": "https://www.gamesindustry.biz/embracer-group-announces-plans-to-spin-off-fellowship-entertainment",
+        "sourceUrls": [
+            {
+                "name": "GamesIndustry",
+                "url": "https://www.gamesindustry.biz/embracer-group-announces-plans-to-spin-off-fellowship-entertainment"
+            },
+            {
+                "name": "Gematsu",
+                "url": "https://www.gematsu.com/2026/05/embracer-group-to-split-into-two-companies-fellowship-entertainment-and-embracer"
+            },
+            {
+                "name": "Eurogamer",
+                "url": "https://www.eurogamer.net/embracer-group-to-split-into-two-companies-fellowship-entertainment"
+            },
+            {
+                "name": "VGC",
+                "url": "https://www.videogameschronicle.com/news/embracer-splits-in-two-forming-new-fellowship-entertainment-company/"
+            }
+        ],
+        "category": "policy",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-20",
+        "tags": [
+            "Embracer",
+            "Fellowship Entertainment",
+            "分拆",
+            "古墓丽影",
+            "魔戒"
+        ],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "Embracer继续2023年以来瘦身重组——继Asmodee和Coffee Stain后，Fellowship Entertainment是第三波分拆。逻辑：Fellowship持游戏开发IP，原Embracer持高价值IP，为休眠IP引入外部合作和资产出售铺路。分拆后两家可独立融资，降低集团债务风险。",
+        "relatedNewsIds": [
+            538
+        ]
+    },
+    {
+        "id": 1560,
+        "title": "PS Plus新订户涨价约10%+港服静默涨价，与PC独占回归叠加强化生态护城河",
+        "summary": "PS Plus新订户5月20日起涨价：美区Essential月度$9.99→$10.99，季度$24.99→$27.99。港服静默涨价基本月度62→70港币。现有订户暂不受影响（土耳其印度除外）。索尼称因持续市场条件。",
+        "source": "VGC",
+        "sourceUrl": "https://www.videogameschronicle.com/news/playstation-plus-is-going-up-in-price-for-new-members/",
+        "sourceUrls": [
+            {
+                "name": "VGC",
+                "url": "https://www.videogameschronicle.com/news/playstation-plus-is-going-up-in-price-for-new-members/"
+            },
+            {
+                "name": "GamesIndustry",
+                "url": "https://www.gamesindustry.biz/sony-announces-playstation-plus-price-rises-due-to-ongoing-market-conditions"
+            },
+            {
+                "name": "GamingBolt",
+                "url": "https://gamingbolt.com/playstation-plus-essential-price-increase-starts-on-may-20th-for-new-subscribers"
+            }
+        ],
+        "category": "platform",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-20",
+        "tags": [
+            "Sony",
+            "PS Plus",
+            "涨价",
+            "订阅"
+        ],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": [
+            305
+        ]
+    },
+    {
+        "id": 1561,
+        "title": "State of Play 6月2日回归：Wolverine压轴60分钟+PS5新作公布",
+        "summary": "索尼确认State of Play 6月2日举办，时长超60分钟。开场展示Insomniac《漫威金刚狼》实机，定档9月15日PS5独占。同时将有PS5多款新作发布。是2026夏日游戏节序幕性事件。",
+        "source": "PlayStation Blog",
+        "sourceUrl": "https://blog.playstation.com/2026/05/20/state-of-play-returns-tuesday-june-2/",
+        "sourceUrls": [
+            {
+                "name": "PlayStation Blog",
+                "url": "https://blog.playstation.com/2026/05/20/state-of-play-returns-tuesday-june-2/"
+            },
+            {
+                "name": "PushSquare",
+                "url": "https://www.pushsquare.com/news/2026/05/state-of-play-confirmed-for-2nd-june-60plus-minutes-of-wolverine-and-ps5-games"
+            },
+            {
+                "name": "VGC",
+                "url": "https://www.videogameschronicle.com/news/sony-confirms-june-state-of-play-featuring-marvels-wolverine/"
+            }
+        ],
+        "category": "platform",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-20",
+        "tags": [
+            "Sony",
+            "State of Play",
+            "Wolverine",
+            "PS5"
+        ],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": [
+            315
+        ]
+    },
+    {
+        "id": 1575,
+        "title": "育碧承诺2029前推出《刺客信条》《孤岛惊魂》《幽灵行动》三大IP新作",
+        "summary": "育碧在财报中宣布近期MC均达80+，并计划2029年前针对三大核心IP推出品质超越既往的新作。但《幽灵行动》新作已推迟至2027年。公司FY27预计仍为低谷期。",
+        "source": "3DM",
+        "sourceUrl": "https://www.3dmgame.com/news/202605/3944526.html",
+        "sourceUrls": [
+            {
+                "name": "3DM",
+                "url": "https://www.3dmgame.com/news/202605/3944526.html"
+            }
+        ],
+        "category": "policy",
+        "importance": "low",
+        "featured": false,
+        "date": "2026-05-20",
+        "tags": [
+            "Ubisoft",
+            "刺客信条",
+            "孤岛惊魂",
+            "幽灵行动"
+        ],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": [
+            538
+        ]
+    },
+    {
+        "id": 1576,
+        "title": "Xbox高层人事调整：2项新聘+1项晋升，加强主机品牌领导力",
+        "summary": "Xbox引入2名新高管+1项内部晋升，加强主机品牌领导力，配合XBOX全大写品牌重塑和Player Voice平台。",
+        "source": "VGC",
+        "sourceUrl": "https://www.videogameschronicle.com/news/xbox-hires-leadership-team-strengthen-console-brand/",
+        "sourceUrls": [
+            {
+                "name": "VGC",
+                "url": "https://www.videogameschronicle.com/news/xbox-hires-leadership-team-strengthen-console-brand/"
+            }
+        ],
+        "category": "policy",
+        "importance": "low",
+        "featured": false,
+        "date": "2026-05-20",
+        "tags": [
+            "Xbox",
+            "人事",
+            "Asha Sharma"
+        ],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "",
         "relatedNewsIds": []
     },
     {
@@ -792,8 +1037,8 @@ const newsData = [
     },
     {
         "id": 1533,
-        "title": "Embracer宣布一分为二，拆分为独立的\"Fellowship Entertainment\"",
-        "summary": "Embracer Group宣布将拆分为两家独立上市公司，游戏开发业务将剥离成立\"Fellowship Entertainment\"，旗下包含《地铁》《亡命徒》《天国：拯救》《死亡岛》等IP；原Embracer将保留《古墓丽影》《魔戒》等IP。拆分预计明年完成，有望为众多\"休眠IP\"引入外部合作。",
+        "title": "Embracer宣布一分为二，拆分为独立的“Fellowship Entertainment“",
+        "summary": "Embracer Group宣布将拆分为两家独立上市公司，游戏开发业务将剥离成立“Fellowship Entertainment“，旗下包含《地铁》《亡命徒》《天国：拯救》《死亡岛》等IP；原Embracer将保留《古墓丽影》《魔戒》等IP。拆分预计明年完成，有望为众多“休眠IP“引入外部合作。",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -874,7 +1119,7 @@ const newsData = [
     {
         "id": 539,
         "title": "Xbox 高层人事调整：2 项新聘 + 1 项晋升",
-        "summary": "Xbox 在主机品牌侧引入 2 名新高管 + 1 项内部晋升，以加强\"主机品牌\"领导力，配合此前的\"全大写 XBOX 品牌重塑\"叙事。",
+        "summary": "Xbox 在主机品牌侧引入 2 名新高管 + 1 项内部晋升，以加强“主机品牌“领导力，配合此前的“全大写 XBOX 品牌重塑“叙事。",
         "source": "腾讯文档策展",
         "sourceUrl": "https://www.videogameschronicle.com/news/xbox-hires-leadership-team-strengthen-console-brand/",
         "sourceUrls": [
@@ -897,8 +1142,8 @@ const newsData = [
     },
     {
         "id": 315,
-        "title": "索尼确认State of Play 6月2日回归：60+分钟，Marvel's Wolverine实机首发",
-        "summary": "索尼正式宣布下一场State of Play将于6月2日举行，时长超过60分钟，是近年来规模最大的SoP之一。开场将为Marvel's Wolverine提供扩展实机演示，此外还将包含来自全球顶级工作室的更新、公告和实机揭示。此次SoP恰逢索尼'独占回归'战略后首场大型展示，市场预期将看到《战神》Faye衍生作等重磅新作。活动将在YouTube/Twitch同步直播。",
+        "title": "索尼确认State of Play 6月2日回归：60+分钟，Marvel‘s Wolverine实机首发",
+        "summary": "索尼正式宣布下一场State of Play将于6月2日举行，时长超过60分钟，是近年来规模最大的SoP之一。开场将为Marvel‘s Wolverine提供扩展实机演示，此外还将包含来自全球顶级工作室的更新、公告和实机揭示。此次SoP恰逢索尼‘独占回归‘战略后首场大型展示，市场预期将看到《战神》Faye衍生作等重磅新作。活动将在YouTube/Twitch同步直播。",
         "source": "PlayStation Blog",
         "sourceUrl": "https://blog.playstation.com/2026/05/20/state-of-play-returns-tuesday-june-2/",
         "sourceUrls": [
@@ -934,7 +1179,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "60+分钟State of Play是索尼2026年最大规模的单场展示(What)。选择6月2日而非SGF 6月5日同周，说明索尼有意在Summer Game Fest前'抢首发'——先让Wolverine实机出圈，再由SGF放大声量(Why)。结合索尼'独占回归'战略，这场SoP被视为PS6发布前最重要的独占阵容展示窗口——Wolverine+可能的战神新作将验证'PS独占价值'路线的商业可行性(So What)。若Wolverine实机表现超预期，将直接拉动PS5硬件销量和PS Plus订阅；反之则给'独占回归'策略蒙上阴影(What Next)。",
+        "analysis": "60+分钟State of Play是索尼2026年最大规模的单场展示(What)。选择6月2日而非SGF 6月5日同周，说明索尼有意在Summer Game Fest前‘抢首发‘——先让Wolverine实机出圈，再由SGF放大声量(Why)。结合索尼‘独占回归‘战略，这场SoP被视为PS6发布前最重要的独占阵容展示窗口——Wolverine+可能的战神新作将验证‘PS独占价值‘路线的商业可行性(So What)。若Wolverine实机表现超预期，将直接拉动PS5硬件销量和PS Plus订阅；反之则给‘独占回归‘策略蒙上阴影(What Next)。",
         "relatedNewsIds": [
             303,
             269
@@ -942,8 +1187,8 @@ const newsData = [
     },
     {
         "id": 316,
-        "title": "育碧FY26全年营收€1.4B暴跌21.8%，CEO称'公司史上最激进转型'",
-        "summary": "育碧公布FY2025-26全年财报：营收€1.4B（-21.8% YoY），净预订额€1.5B（-17.4% YoY），数字收入占比87%。Q4净预订€415M（-54% YoY），虽超预期（指引€390M）但与去年AC Shadows创纪录Q4相比大幅滑坡。CEO Yves Guillemot称这是'公司史上最果断的转型之年'，FY27指引：净预订高个位数下降+高个位数负运营利润率。重组+裁员持续进行中。",
+        "title": "育碧FY26全年营收€1.4B暴跌21.8%，CEO称‘公司史上最激进转型‘",
+        "summary": "育碧公布FY2025-26全年财报：营收€1.4B（-21.8% YoY），净预订额€1.5B（-17.4% YoY），数字收入占比87%。Q4净预订€415M（-54% YoY），虽超预期（指引€390M）但与去年AC Shadows创纪录Q4相比大幅滑坡。CEO Yves Guillemot称这是‘公司史上最果断的转型之年‘，FY27指引：净预订高个位数下降+高个位数负运营利润率。重组+裁员持续进行中。",
         "source": "GamesIndustry",
         "sourceUrl": "https://www.gamesindustry.biz/ubisofts-full-fy26-financials-report-shows-a-sharp-decline-in-revenue-and-net-bookings",
         "sourceUrls": [
@@ -981,15 +1226,227 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "育碧FY26营收暴跌21.8%是欧洲3A发行商中表现最差的财报之一(What)。FY25的AC Shadows创纪录Q4造成了极高基数效应，但FY26没有同量级新作补位——'年货3A'模式失灵是根本原因(Why)。CEO将此定义为'最激进转型'意味着育碧将从'大制作+高频发布'转向'精选IP+深度运营'，但这需要2-3年才能见效(So What)。FY27指引继续看跌说明转型尚未触底，腾讯增持+私有化传闻可能加速——育碧的独立发行商地位正面临历史性考验(What Next)。",
+        "analysis": "育碧FY26营收暴跌21.8%是欧洲3A发行商中表现最差的财报之一(What)。FY25的AC Shadows创纪录Q4造成了极高基数效应，但FY26没有同量级新作补位——‘年货3A‘模式失灵是根本原因(Why)。CEO将此定义为‘最激进转型‘意味着育碧将从‘大制作+高频发布‘转向‘精选IP+深度运营‘，但这需要2-3年才能见效(So What)。FY27指引继续看跌说明转型尚未触底，腾讯增持+私有化传闻可能加速——育碧的独立发行商地位正面临历史性考验(What Next)。",
         "relatedNewsIds": [
             310
         ]
     },
     {
+        "id": 1559,
+        "title": "索尼遭美国玩家集体诉讼：被指借关税对PS5双重获利",
+        "summary": "美国玩家对索尼发起集体诉讼，指控其借关税政策抬高PS主机售价并申请政府退款，构成双重获利。最高法院已裁定相关关税非法，但消费者已为涨价付费。亚马逊、任天堂也面临类似指控。PS5在2025年8月和2026年5月两次涨价。",
+        "source": "Kotaku",
+        "sourceUrl": "https://kotaku.com/sony-is-being-sued-for-allegedly-retaining-substantial-windfall-generated-by-illegal-tariffs-2000697029",
+        "sourceUrls": [
+            {
+                "name": "Kotaku",
+                "url": "https://kotaku.com/sony-is-being-sued-for-allegedly-retaining-substantial-windfall-generated-by-illegal-tariffs-2000697029"
+            },
+            {
+                "name": "GizmoChina",
+                "url": "https://www.gizmochina.com/2026/05/19/sony-faces-class-action-lawsuit-over-ps5-price-hikes-tied-to-tariffs/"
+            },
+            {
+                "name": "TwistedVoxel",
+                "url": "https://twistedvoxel.com/sony-sued-over-alleged-ps5-tariff-windfall-in-new-proposed-class-action/"
+            }
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-19",
+        "tags": [
+            "Sony",
+            "PS5",
+            "关税",
+            "集体诉讼",
+            "涨价"
+        ],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "关税双重获利诉讼是全球硬件涨价潮的法律回响。若原告胜诉将开创消费电子关税退赔先例。对索尼而言，PS5两次涨价+PS Plus涨价+PC独占回归，品牌信任度正被层层侵蚀。",
+        "relatedNewsIds": [
+            1551
+        ]
+    },
+    {
+        "id": 1563,
+        "title": "Xbox品牌全大写XBOX重塑+Player Voice反馈平台上线",
+        "summary": "新任Xbox CEO Asha Sharma发起粉丝投票后宣布品牌全改为大写@XBOX。同时上线XBOX Player Voice反馈平台，统一收集玩家反馈并追踪处理进度。这是Xbox品牌重塑后首项面向用户的具体举措，被视为夺回长期粉丝信任的关键动作。",
+        "source": "IGN",
+        "sourceUrl": "https://www.ign.com/articles/xbox-is-apparently-rebranding-to-xbox",
+        "sourceUrls": [
+            {
+                "name": "IGN",
+                "url": "https://www.ign.com/articles/xbox-is-apparently-rebranding-to-xbox"
+            },
+            {
+                "name": "Eurogamer",
+                "url": "https://www.eurogamer.net/xbox-rebrands-to-xbox-as-new-ceo-asha-sharma-lets-a-fan-poll-decide/"
+            },
+            {
+                "name": "VGC",
+                "url": "https://www.videogameschronicle.com/news/xbox-hires-leadership-team-strengthen-console-brand/"
+            }
+        ],
+        "category": "platform",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-19",
+        "tags": [
+            "Xbox",
+            "XBOX",
+            "Asha Sharma",
+            "品牌重塑"
+        ],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 1564,
+        "title": "Steam大规模调整商店标签：新增武侠/仙侠等17个，删除28个",
+        "summary": "Valve调整Steam商店标签：新增17个（含武侠、仙侠等中文圈关键标签）、删除28个（含众筹、剧情等），调整部分命名与合并规则。中文向品类正式承认，对国产/华语向中重度产品长期利好。",
+        "source": "IT之家",
+        "sourceUrl": "https://www.ithome.com/0/952/111.htm",
+        "sourceUrls": [
+            {
+                "name": "IT之家",
+                "url": "https://www.ithome.com/0/952/111.htm"
+            },
+            {
+                "name": "3DM",
+                "url": "https://www.3dmgame.com/news/202605/3944526.html"
+            },
+            {
+                "name": "虎嗅",
+                "url": "https://www.huxiu.com/article/4860024.html"
+            }
+        ],
+        "category": "platform",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-19",
+        "tags": [
+            "Steam",
+            "Valve",
+            "标签",
+            "武侠",
+            "仙侠"
+        ],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 1565,
+        "title": "《堡垒之夜》全球回归App Store，Epic宣告苹果税终结的开始",
+        "summary": "Epic CEO Tim Sweeney宣布Fortnite iOS版回归全球App Store（澳大利亚除外）。苹果此前向最高法院的陈述意味着全球监管机构将以此基准划定海外抽成比例。Sweeney称这是全球苹果税终结的开始。该诉讼始于2020年8月。",
+        "source": "Epic Games",
+        "sourceUrl": "https://www.epicgames.com/site/news/fortnite-is-back-on-the-app-store-around-the-world-as-the-final-battle-approaches",
+        "sourceUrls": [
+            {
+                "name": "Epic Games",
+                "url": "https://www.epicgames.com/site/news/fortnite-is-back-on-the-app-store-around-the-world-as-the-final-battle-approaches"
+            },
+            {
+                "name": "IGN",
+                "url": "https://www.ign.com/articles/fortnite-is-back-on-the-app-store-across-the-world"
+            },
+            {
+                "name": "MacRumors",
+                "url": "https://www.macrumors.com/2026/05/19/fortnite-returns-to-app-store-worldwide/"
+            }
+        ],
+        "category": "platform",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-19",
+        "tags": [
+            "Epic",
+            "Fortnite",
+            "Apple",
+            "App Store",
+            "平台抽成"
+        ],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 1572,
+        "title": "《Far Far West》三周破百万，发行方Fireshine明确拒绝与GenAI团队合作",
+        "summary": "科幻合作射击《Far Far West》4/28登陆Steam EA，3周内销量破100万。发行方Fireshine Games明确拒绝与使用生成式AI工具的开发团队合作（仅允许部分非生成式AI）。AAA/AA发行端开始就AI用工画红线。",
+        "source": "Eurogamer",
+        "sourceUrl": "https://www.eurogamer.net/far-far-west-sells-one-million-copies",
+        "sourceUrls": [
+            {
+                "name": "Eurogamer",
+                "url": "https://www.eurogamer.net/far-far-west-sells-one-million-copies"
+            },
+            {
+                "name": "GamesIndustry",
+                "url": "https://www.gamesindustry.biz/far-far-west-publisher-says-we-dont-work-with-partners-that-are-relying-on-generative-ai"
+            },
+            {
+                "name": "DualShockers",
+                "url": "https://www.dualshockers.com/far-far-west-developers-take-noble-stance-against-genai/"
+            }
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-19",
+        "tags": [
+            "Far Far West",
+            "Fireshine",
+            "AI",
+            "反AI",
+            "Steam EA"
+        ],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 1573,
+        "title": "《堕落之主2》终止Epic PC独占协议，将登陆Steam",
+        "summary": "CI Games宣布终止与Epic Games的《堕落之主2》PC版全球独家发行合同，本作将登陆Steam及其他PC平台。原计划2026年发售。信号：Epic第三方独占预算/吸引力进一步收缩。",
+        "source": "GameSpot",
+        "sourceUrl": "https://www.gamespot.com/articles/lords-of-the-fallen-2s-epic-exclusivity-deal-canceled/1100-6540050/",
+        "sourceUrls": [
+            {
+                "name": "GameSpot",
+                "url": "https://www.gamespot.com/articles/lords-of-the-fallen-2s-epic-exclusivity-deal-canceled/1100-6540050/"
+            },
+            {
+                "name": "Eurogamer",
+                "url": "https://www.eurogamer.net/lord-of-the-fallen-2-exits-epic-exclusivity"
+            }
+        ],
+        "category": "platform",
+        "importance": "low",
+        "featured": false,
+        "date": "2026-05-19",
+        "tags": [
+            "Lords of the Fallen 2",
+            "Epic",
+            "Steam",
+            "独占"
+        ],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": []
+    },
+    {
         "id": 1527,
-        "title": "微软上线\"XBOX Player Voice\"反馈平台，强化与玩家沟通",
-        "summary": "微软为加强与玩家社区的双向沟通，上线\"XBOX Player Voice\"新反馈平台，统一收集玩家反馈并追踪处理进度。这是Xbox品牌重塑（XBOX全大写）后第一项面向用户的具体举措，被分析人士视为\"夺回长期粉丝信任\"的关键动作。",
+        "title": "微软上线“XBOX Player Voice“反馈平台，强化与玩家沟通",
+        "summary": "微软为加强与玩家社区的双向沟通，上线“XBOX Player Voice“新反馈平台，统一收集玩家反馈并追踪处理进度。这是Xbox品牌重塑（XBOX全大写）后第一项面向用户的具体举措，被分析人士视为“夺回长期粉丝信任“的关键动作。",
         "source": "腾讯文档策展",
         "sourceUrl": "https://www.ithome.com/0/952/082.htm ；https://gamingbolt.com/xbox-bats-for-transparency-with-new-player-voice-feedback-system",
         "sourceUrls": [
@@ -1013,7 +1470,7 @@ const newsData = [
     {
         "id": 1528,
         "title": "《Far Far West》三周破百万：Fireshine Games 拒绝与 GenAI 团队合作",
-        "summary": "科幻奇幻合作射击《Far Far West》于 4/28 登陆 Steam EA，3周内销量破 100 万。发行方 Fireshine Games 明确表态拒绝与使用生成式 AI 工具的开发团队合作（仅允许部分非生成式 AI 工具）——AAA/AA 发行端开始就\"AI 用工\"画红线。",
+        "summary": "科幻奇幻合作射击《Far Far West》于 4/28 登陆 Steam EA，3周内销量破 100 万。发行方 Fireshine Games 明确表态拒绝与使用生成式 AI 工具的开发团队合作（仅允许部分非生成式 AI 工具）——AAA/AA 发行端开始就“AI 用工“画红线。",
         "source": "腾讯文档策展",
         "sourceUrl": "https://www.eurogamer.net/far-far-west-sells-one-million-copies",
         "sourceUrls": [
@@ -1036,8 +1493,8 @@ const newsData = [
     },
     {
         "id": 1529,
-        "title": "Xbox 玩家投票首位呼声：\"重启主机独占策略\"",
-        "summary": "微软 Xbox 玩家意见征集，\"重启独占\"高居榜首。玩家普遍认为失去独占游戏让 Xbox 失去竞争力、伤害品牌辨识度与主机销量。对照索尼同步收紧独占——市场需求侧给出明确信号：玩家仍把独占内容视为主机价值核心锚点。",
+        "title": "Xbox 玩家投票首位呼声：“重启主机独占策略“",
+        "summary": "微软 Xbox 玩家意见征集，“重启独占“高居榜首。玩家普遍认为失去独占游戏让 Xbox 失去竞争力、伤害品牌辨识度与主机销量。对照索尼同步收紧独占——市场需求侧给出明确信号：玩家仍把独占内容视为主机价值核心锚点。",
         "source": "腾讯文档策展",
         "sourceUrl": "https://www.ithome.com/0/952/453.htm",
         "sourceUrls": [
@@ -1061,7 +1518,7 @@ const newsData = [
     {
         "id": 1530,
         "title": "Steam 大幅调整商店标签集：新增 17 个、删除 28 个",
-        "summary": "Valve 调整 Steam 平台可用的商店标签集合：新增 17 个（含\"武侠\"\"仙侠\"等中文圈关键标签）、删除 28 个（含\"众筹\"\"剧情\"等）、并对部分命名与合并规则进行调整。优化游戏分类与搜索发现机制；中文向品类得到正式承认，对国产/华语向中重度产品长期利好。",
+        "summary": "Valve 调整 Steam 平台可用的商店标签集合：新增 17 个（含“武侠““仙侠“等中文圈关键标签）、删除 28 个（含“众筹““剧情“等）、并对部分命名与合并规则进行调整。优化游戏分类与搜索发现机制；中文向品类得到正式承认，对国产/华语向中重度产品长期利好。",
         "source": "腾讯文档策展",
         "sourceUrl": "https://www.ithome.com/0/952/111.htm",
         "sourceUrls": [
@@ -1132,8 +1589,8 @@ const newsData = [
     },
     {
         "id": 536,
-        "title": "任天堂股价单日涨 6.8%：受\"AI 疲劳\"避险情绪推动",
-        "summary": "任天堂股价单日上涨 6.8%，市场解读为投资者从 AI 主题股切换至\"非 AI、确定性强、内容驱动\"标的避险。资本市场对游戏内容股相对 AI 股的对冲价值上调——对游戏行业一级市场情绪有正向影响。",
+        "title": "任天堂股价单日涨 6.8%：受“AI 疲劳“避险情绪推动",
+        "summary": "任天堂股价单日上涨 6.8%，市场解读为投资者从 AI 主题股切换至“非 AI、确定性强、内容驱动“标的避险。资本市场对游戏内容股相对 AI 股的对冲价值上调——对游戏行业一级市场情绪有正向影响。",
         "source": "腾讯文档策展",
         "sourceUrl": "https://mynintendonews.com/2026/05/19/nintendos-stock-has-climbed-as-much-as-6-8-thanks-to-ai-fatigue/",
         "sourceUrls": [
@@ -1180,8 +1637,8 @@ const newsData = [
     },
     {
         "id": 305,
-        "title": "索尼遭美国玩家集体诉讼：被指借关税政策'双重获利'，PS5涨价退款疑云",
-        "summary": "美国PS5用户对索尼发起集体诉讼，指控其借关税政策'双重获利'：先以关税为由提高PS5售价，后在美国最高法院裁定相关关税非法后，索尼可能仍保留政府退税。IGN、AndroidHeadlines等多家媒体报道。亚马逊、任天堂等公司也面临类似指控。美国最高法院已于4月20日裁定相关关税非法，但消费者已为涨价买单。",
+        "title": "索尼遭美国玩家集体诉讼：被指借关税政策‘双重获利‘，PS5涨价退款疑云",
+        "summary": "美国PS5用户对索尼发起集体诉讼，指控其借关税政策‘双重获利‘：先以关税为由提高PS5售价，后在美国最高法院裁定相关关税非法后，索尼可能仍保留政府退税。IGN、AndroidHeadlines等多家媒体报道。亚马逊、任天堂等公司也面临类似指控。美国最高法院已于4月20日裁定相关关税非法，但消费者已为涨价买单。",
         "source": "IGN",
         "sourceUrl": "https://www.ign.com/articles/playstation-console-owners-launch-class-action-lawsuit-against-sony-over-tariff-refunds",
         "sourceUrls": [
@@ -1217,7 +1674,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "索尼'双重获利'诉讼暴露了关税驱动涨价的法律风险(What)。美国最高法院已裁定相关关税非法，但索尼已通过涨价将成本转嫁给消费者；若索尼再获得政府退税，则构成'两头吃'——这在法律和道德层面都站不住脚(Why)。亚马逊、任天堂面临类似诉讼说明这不是索尼独有问题，而是'关税涨价潮'的系统性法律后果(So What)。诉讼目前处于起诉阶段，距离实质性判决尚远；但若原告胜诉，可能迫使所有因关税涨价的硬件厂商退还差价，对行业利润率构成重大冲击(What Next)。",
+        "analysis": "索尼‘双重获利‘诉讼暴露了关税驱动涨价的法律风险(What)。美国最高法院已裁定相关关税非法，但索尼已通过涨价将成本转嫁给消费者；若索尼再获得政府退税，则构成‘两头吃‘——这在法律和道德层面都站不住脚(Why)。亚马逊、任天堂面临类似诉讼说明这不是索尼独有问题，而是‘关税涨价潮‘的系统性法律后果(So What)。诉讼目前处于起诉阶段，距离实质性判决尚远；但若原告胜诉，可能迫使所有因关税涨价的硬件厂商退还差价，对行业利润率构成重大冲击(What Next)。",
         "relatedNewsIds": [
             301,
             245
@@ -1225,8 +1682,8 @@ const newsData = [
     },
     {
         "id": 306,
-        "title": "《堡垒之夜》全球回归App Store，Epic宣布'苹果税终结的开始'",
-        "summary": "Epic Games CEO Tim Sweeney宣布《堡垒之夜》iOS版回归全球App Store（澳大利亚除外），结束长达6年的下架。Sweeney称苹果在美国最高法院的陈述意味着全球监管机构将以此为基准划定平台抽成比例，并称此为'苹果税终结的开始'。此前美国第九巡回法院已驳回Apple暂停执行请求，Epic诉苹果案App Store禁令生效。",
+        "title": "《堡垒之夜》全球回归App Store，Epic宣布‘苹果税终结的开始‘",
+        "summary": "Epic Games CEO Tim Sweeney宣布《堡垒之夜》iOS版回归全球App Store（澳大利亚除外），结束长达6年的下架。Sweeney称苹果在美国最高法院的陈述意味着全球监管机构将以此为基准划定平台抽成比例，并称此为‘苹果税终结的开始‘。此前美国第九巡回法院已驳回Apple暂停执行请求，Epic诉苹果案App Store禁令生效。",
         "source": "Epic Games",
         "sourceUrl": "https://www.epicgames.com/site/news/fortnite-is-back-on-the-app-store-around-the-world-as-the-final-battle-approaches",
         "sourceUrls": [
@@ -1263,7 +1720,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "Fortnite回归App Store是Epic与苹果6年法律战的里程碑式进展(What)。美国最高法院拒绝Apple暂停执行请求后，苹果被迫在全球（除澳大利亚）恢复Fortnite上架——这不仅是单一游戏的回归，更确立了'法院禁令优先于平台自主权'的判例(Why)。Sweeney将此定义为'苹果税终结的开始'虽带有营销色彩，但确有依据：苹果在最高法院的陈述承认全球监管机构将关注此案，这意味着30%抽成模式在全球面临系统性挑战(So What)。短期内其他被App Store下架的开发者将援引此案要求回归；中长期可能推动苹果在全球范围降低抽成比例，对整个移动游戏生态的利润分配产生深远影响(What Next)。",
+        "analysis": "Fortnite回归App Store是Epic与苹果6年法律战的里程碑式进展(What)。美国最高法院拒绝Apple暂停执行请求后，苹果被迫在全球（除澳大利亚）恢复Fortnite上架——这不仅是单一游戏的回归，更确立了‘法院禁令优先于平台自主权‘的判例(Why)。Sweeney将此定义为‘苹果税终结的开始‘虽带有营销色彩，但确有依据：苹果在最高法院的陈述承认全球监管机构将关注此案，这意味着30%抽成模式在全球面临系统性挑战(So What)。短期内其他被App Store下架的开发者将援引此案要求回归；中长期可能推动苹果在全球范围降低抽成比例，对整个移动游戏生态的利润分配产生深远影响(What Next)。",
         "relatedNewsIds": [
             189
         ]
@@ -1311,8 +1768,8 @@ const newsData = [
     },
     {
         "id": 312,
-        "title": "《Far Far West》三周破百万+发行商Fireshine拒绝GenAI合作：'核心创作绝不碰'",
-        "summary": "科幻奇幻合作射击《Far Far West》4/28登陆Steam EA，3周内销量破100万份，Steam好评率97%。发行方Fireshine Games明确表态拒绝与使用生成式AI工具的开发团队合作（仅允许部分非生成式AI工具），CEO直言'玩家不买账AI生成的艺术'。这是AA/AAA发行端首次就'AI用工'问题公开画红线。",
+        "title": "《Far Far West》三周破百万+发行商Fireshine拒绝GenAI合作：‘核心创作绝不碰‘",
+        "summary": "科幻奇幻合作射击《Far Far West》4/28登陆Steam EA，3周内销量破100万份，Steam好评率97%。发行方Fireshine Games明确表态拒绝与使用生成式AI工具的开发团队合作（仅允许部分非生成式AI工具），CEO直言‘玩家不买账AI生成的艺术‘。这是AA/AAA发行端首次就‘AI用工‘问题公开画红线。",
         "source": "Eurogamer",
         "sourceUrl": "https://www.eurogamer.net/far-far-west-sells-one-million-copies",
         "sourceUrls": [
@@ -1388,8 +1845,8 @@ const newsData = [
     },
     {
         "id": 314,
-        "title": "任天堂股价单日涨6.8%：受'AI疲劳'避险情绪推动，游戏内容股获对冲价值重估",
-        "summary": "任天堂股价单日上涨6.8%，市场解读为投资者从AI主题股切换至'非AI、确定性强、内容驱动'标的避险。资本市场对游戏内容股相对AI股的对冲价值上调，这对游戏行业一级市场情绪有正向影响。任天堂被视为'AI免疫'的少数大盘科技股之一。",
+        "title": "任天堂股价单日涨6.8%：受‘AI疲劳‘避险情绪推动，游戏内容股获对冲价值重估",
+        "summary": "任天堂股价单日上涨6.8%，市场解读为投资者从AI主题股切换至‘非AI、确定性强、内容驱动‘标的避险。资本市场对游戏内容股相对AI股的对冲价值上调，这对游戏行业一级市场情绪有正向影响。任天堂被视为‘AI免疫‘的少数大盘科技股之一。",
         "source": "MyNintendoNews",
         "sourceUrl": "https://mynintendonews.com/2026/05/19/nintendos-stock-has-climbed-as-much-as-6-8-thanks-to-ai-fatigu",
         "sourceUrls": [
@@ -1463,6 +1920,75 @@ const newsData = [
         ]
     },
     {
+        "id": 1557,
+        "title": "索尼重大战略转向：第一方叙事单人游戏停止PC移植，回归PS独占",
+        "summary": "PlayStation Studios CEO Hermen Hulst在员工大会上确认：未来索尼第一方叙事类单人游戏将停止移植PC，回归PS独占，多人/服务类游戏不受影响。《Ghost of Yotei》《漫威金刚狼》《Saros》将保持PS独占。这是索尼自2020年开启PC策略以来的重大反转，直接影响Steam上PS第一方阵容预期。",
+        "source": "VGC",
+        "sourceUrl": "https://www.videogameschronicle.com/news/playstation-boss-says-single-player-games-wont-come-to-pc-going-forward/",
+        "sourceUrls": [
+            {
+                "name": "VGC",
+                "url": "https://www.videogameschronicle.com/news/playstation-boss-says-single-player-games-wont-come-to-pc-going-forward/"
+            },
+            {
+                "name": "GamesIndustry",
+                "url": "https://www.gamesindustry.biz/sony-wont-be-bringing-any-more-single-player-games-to-pc-says-playstation-studios-boss"
+            },
+            {
+                "name": "Ars Technica",
+                "url": "https://arstechnica.com/gaming/2026/03/sony-wont-bring-any-more-single-player-playstation-games-to-pc/"
+            },
+            {
+                "name": "PushSquare",
+                "url": "https://www.pushsquare.com/news/2026/03/sony-returns-to-playstation-exclusivity-and-stops-single-player-pc-ports-new-report-says"
+            }
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-18",
+        "tags": [
+            "Sony",
+            "PlayStation",
+            "PC移植",
+            "独占策略"
+        ],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "索尼PC策略逆转是2026年行业最重大的平台战略调整之一。2020-2026年PC移植为索尼贡献数亿美元增量收入，但削弱了PS硬件独占价值——Spider-Man 2 PC版表现不及预期是关键转折。回归独占意味着索尼将PS5/PS6硬件销量重新置于收入多元化之上，对Steam PS阵容是利空，对PS生态护城河是利好。微软同期做多平台，两大平台策略进一步分化。",
+        "relatedNewsIds": [
+            315,
+            305
+        ]
+    },
+    {
+        "id": 1567,
+        "title": "肉鸽品类主导2026年Steam：总收入近5亿美元，《杀戮尖塔2》售出650万份",
+        "summary": "据Alinea Analytics数据，肉鸽品类成Steam年度最强品类，前5月总收入近5亿美元。《杀戮尖塔2》60天内近1亿玩家游玩超100小时，累计约650万份。DLC附加率全品类最高。品类驱动力来自高复玩性+低定价+社区驱动。",
+        "source": "Tech4Gamers",
+        "sourceUrl": "https://tech4gamers.com/roguelikes-steam-500m-2026/",
+        "sourceUrls": [
+            {
+                "name": "Tech4Gamers",
+                "url": "https://tech4gamers.com/roguelikes-steam-500m-2026/"
+            }
+        ],
+        "category": "market",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-18",
+        "tags": [
+            "Steam",
+            "肉鸽",
+            "杀戮尖塔2",
+            "Alinea Analytics"
+        ],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": []
+    },
+    {
         "id": 1525,
         "title": "肉鸽游戏主导2026年Steam平台，总收入近5亿美元；《杀戮尖塔2》售出650万份",
         "summary": "据Alinea Analytics数据，肉鸽品类已成Steam年度最强品类；《杀戮尖塔2》60天内近1亿玩家游玩超100小时；《喵喵的结合》售出180万份；肉鸽DLC附加率全品类最高",
@@ -1508,7 +2034,7 @@ const newsData = [
     {
         "id": 535,
         "title": "《乐高蝙蝠侠：黑暗骑士之遗》IGN 8 分，Rocksteady 联合开发",
-        "summary": "媒体评分解禁，5月22日正式发售（豪华版5月19日提前）。本作将经典蝙蝠侠电影桥段与《阿卡姆》系列战斗系统融合，构建大规模开放世界哥谭。核心信号：Rocksteady 自《自杀小队》失利后，被确认为本作联合开发商，工作室开始进入\"代工 + 复利老 IP\"模式。",
+        "summary": "媒体评分解禁，5月22日正式发售（豪华版5月19日提前）。本作将经典蝙蝠侠电影桥段与《阿卡姆》系列战斗系统融合，构建大规模开放世界哥谭。核心信号：Rocksteady 自《自杀小队》失利后，被确认为本作联合开发商，工作室开始进入“代工 + 复利老 IP“模式。",
         "source": "腾讯文档策展",
         "sourceUrl": "https://www.ithome.com/0/952/331.htm ; https://www.eurogamer.net/lego-batman-legacy-of-the-dark-knight-arkham-rocksteady ; https://www.videogameschronicle.com/news/arkham-dev-rocksteady-is-credited-as-co-developer-on-new-lego-batman/",
         "sourceUrls": [
@@ -1531,8 +2057,8 @@ const newsData = [
     },
     {
         "id": 307,
-        "title": "Steam大幅调整商店标签集：新增17个含'武侠''仙侠'，删除28个",
-        "summary": "Valve调整Steam平台商店标签集合：新增17个（含'武侠''仙侠''Bullet Heaven'等）、删除28个（含'众筹''剧情'等）、并对部分命名与合并规则进行调整。此次调整优化了游戏分类与搜索发现机制，中文向品类首次获得正式标签承认，对国产/华语向中重度产品长期利好。",
+        "title": "Steam大幅调整商店标签集：新增17个含‘武侠‘‘仙侠‘，删除28个",
+        "summary": "Valve调整Steam平台商店标签集合：新增17个（含‘武侠‘‘仙侠‘‘Bullet Heaven‘等）、删除28个（含‘众筹‘‘剧情‘等）、并对部分命名与合并规则进行调整。此次调整优化了游戏分类与搜索发现机制，中文向品类首次获得正式标签承认，对国产/华语向中重度产品长期利好。",
         "source": "IGN",
         "sourceUrl": "https://www.ign.com/articles/steam-adds-edits-and-removes-dozens-of-store-tags",
         "sourceUrls": [
@@ -1574,8 +2100,8 @@ const newsData = [
     },
     {
         "id": 308,
-        "title": "微软上线XBOX Player Voice反馈平台，玩家首位呼声：'重启独占策略'",
-        "summary": "微软为加强与玩家社区沟通，上线'XBOX Player Voice'新反馈平台。这是Xbox品牌重塑（XBOX全大写+Asha Sharma上任）后首项面向用户的具体举措。但上线后首位玩家呼声是'重启主机独占策略'——玩家普遍认为失去独占游戏让Xbox失去竞争力和品牌辨识度。IGN报道称此诉求与索尼同步收紧独占形成鲜明对照：市场需求侧给出明确信号，玩家仍把独占视为主机价值核心锚点。",
+        "title": "微软上线XBOX Player Voice反馈平台，玩家首位呼声：‘重启独占策略‘",
+        "summary": "微软为加强与玩家社区沟通，上线‘XBOX Player Voice‘新反馈平台。这是Xbox品牌重塑（XBOX全大写+Asha Sharma上任）后首项面向用户的具体举措。但上线后首位玩家呼声是‘重启主机独占策略‘——玩家普遍认为失去独占游戏让Xbox失去竞争力和品牌辨识度。IGN报道称此诉求与索尼同步收紧独占形成鲜明对照：市场需求侧给出明确信号，玩家仍把独占视为主机价值核心锚点。",
         "source": "Xbox Wire",
         "sourceUrl": "https://news.xbox.com/en-us/2026/05/18/introducing-xbox-player-voice/",
         "sourceUrls": [
@@ -1618,9 +2144,38 @@ const newsData = [
         ]
     },
     {
+        "id": 1571,
+        "title": "Capcom PC平台连续三年最高销量，社长预测PC将成全球第一大游戏平台",
+        "summary": "Capcom FY2025 PC销量3217万份远超主机2276万份，连续三年成公司最高销量平台。低价折扣策略被证明有效，社长辻本宪三预测PC将成为全球第一大游戏平台。",
+        "source": "IT之家",
+        "sourceUrl": "https://www.ithome.com/0/951/406.htm",
+        "sourceUrls": [
+            {
+                "name": "IT之家",
+                "url": "https://www.ithome.com/0/951/406.htm"
+            }
+        ],
+        "category": "market",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-17",
+        "tags": [
+            "Capcom",
+            "PC",
+            "销量",
+            "辻本宪三"
+        ],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": [
+            1547
+        ]
+    },
+    {
         "id": 1524,
         "title": "PC平台连续三年成卡普空最高销量平台；社长预测PC将成全球第一大游戏平台",
-        "summary": "Capcom 2025财年PC销量3217万份，远超主机的2276万份；低价折扣策略被证明有效，社长辻本宪三在采访中预测PC将成\"全球第一大游戏平台\"。",
+        "summary": "Capcom 2025财年PC销量3217万份，远超主机的2276万份；低价折扣策略被证明有效，社长辻本宪三在采访中预测PC将成“全球第一大游戏平台“。",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -1639,7 +2194,7 @@ const newsData = [
     {
         "id": 525,
         "title": "《极限竞速：地平线6》发售，收入突破1.4亿美元，Steam峰值17.8万人，M站92分",
-        "summary": "Playground Games赛车新作以日本为舞台，高级版预售吸引120万玩家；正式发售首日在高级版基础上Steam在线峰值17.8万，游戏获IGN满分、GamingBolt高度评价；被誉为\"开放世界竞速游戏新标杆\"",
+        "summary": "Playground Games赛车新作以日本为舞台，高级版预售吸引120万玩家；正式发售首日在高级版基础上Steam在线峰值17.8万，游戏获IGN满分、GamingBolt高度评价；被誉为“开放世界竞速游戏新标杆“",
         "source": "IT之家 / GamingBolt",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -1676,7 +2231,7 @@ const newsData = [
     },
     {
         "id": 527,
-        "title": "《GTA6》传将取消媒体评测版，改为封闭\"集中试玩\"评测活动",
+        "title": "《GTA6》传将取消媒体评测版，改为封闭“集中试玩“评测活动",
         "summary": "多源报道Rockstar为《GTA6》制定史上最严评测方案：不发放可下载评测版/激活码，受邀媒体集中至封闭、可监控的环境中限时试玩，���大限度防止任何提前泄露。继上一轮大规模剧情泄露后，R星与T2将销量与股价稳定置于评测开放度之上。",
         "source": "腾讯文档策展",
         "sourceUrl": "https://www.ithome.com/0/951/434.htm ；https://gamingbolt.com/gta-6-will-have-a-review-event-to-avoid-leaks-rumor",
@@ -1720,7 +2275,7 @@ const newsData = [
     {
         "id": 303,
         "title": "索尼重大战略转向：第一方叙事单人游戏停止登陆PC，回归PS独占",
-        "summary": "PlayStation Studios CEO Hermen Hulst在员工大会上确认：未来索尼第一方叙事类单人游戏（如《战神》《地平线》系列）将停止移植PC，回归PS独占。多人/服务类游戏不受影响。彭博Jason Schreier率先爆料，随后Polygon、TechRadar等多家媒体确认。受影响作品包括《Ghost of Yotei》和《Marvel's Wolverine》。这是索尼自2020年起推行PC策略以来的重大反转，将直接影响Steam端索尼游戏供给。",
+        "summary": "PlayStation Studios CEO Hermen Hulst在员工大会上确认：未来索尼第一方叙事类单人游戏（如《战神》《地平线》系列）将停止移植PC，回归PS独占。多人/服务类游戏不受影响。彭博Jason Schreier率先爆料，随后Polygon、TechRadar等多家媒体确认。受影响作品包括《Ghost of Yotei》和《Marvel‘s Wolverine》。这是索尼自2020年起推行PC策略以来的重大反转，将直接影响Steam端索尼游戏供给。",
         "source": "Polygon",
         "sourceUrl": "https://www.polygon.com/sony-playstation-exclusives-officially-ending-pc/",
         "sourceUrls": [
@@ -1757,7 +2312,7 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "索尼终止PC移植是2020年以来PlayStation策略的最大反转(What)。2020-2026年间PC移植为索尼贡献了可观增量收入，但Hulst判断独占内容回归对PS生态的长期价值超过短期PC收入——核心逻辑是：PS6将于2027年发售，需要强力独占阵容驱动主机销量(Why)。这对Steam玩家是明显利空，但对PS5/PS6用户是核心价值加码；同时与微软Xbox的多平台策略形成鲜明对比，两大平台走向截然相反的独占路线(So What)。预期索尼将在5月24日State of Play上正式宣布独占回归，配合《战神》Faye衍生作等重磅新作巩固'只有PS才能玩到'的品牌定位(What Next)。",
+        "analysis": "索尼终止PC移植是2020年以来PlayStation策略的最大反转(What)。2020-2026年间PC移植为索尼贡献了可观增量收入，但Hulst判断独占内容回归对PS生态的长期价值超过短期PC收入——核心逻辑是：PS6将于2027年发售，需要强力独占阵容驱动主机销量(Why)。这对Steam玩家是明显利空，但对PS5/PS6用户是核心价值加码；同时与微软Xbox的多平台策略形成鲜明对比，两大平台走向截然相反的独占路线(So What)。预期索尼将在5月24日State of Play上正式宣布独占回归，配合《战神》Faye衍生作等重磅新作巩固‘只有PS才能玩到‘的品牌定位(What Next)。",
         "relatedNewsIds": [
             269,
             240,
@@ -1767,7 +2322,7 @@ const newsData = [
     {
         "id": 304,
         "title": "PS Plus新订阅户涨价约10%：Essential月费$9.99涨至$10.99，5月20日生效",
-        "summary": "索尼宣布PS Plus Essential新订户从5月20日起涨价：美区月费$9.99→$10.99，季度$24.99→$27.99。年费暂不调整。英国及多地区同步跟进。现有订户在多数地区不受影响（土耳其和印度除外）。索尼归因于'持续的市场条件'。此次涨价与索尼'独占回归'策略叠加，被分析人士视为索尼从'规模扩张'转向'单客价值提升'的信号。",
+        "summary": "索尼宣布PS Plus Essential新订户从5月20日起涨价：美区月费$9.99→$10.99，季度$24.99→$27.99。年费暂不调整。英国及多地区同步跟进。现有订户在多数地区不受影响（土耳其和印度除外）。索尼归因于‘持续的市场条件‘。此次涨价与索尼‘独占回归‘策略叠加，被分析人士视为索尼从‘规模扩张‘转向‘单客价值提升‘的信号。",
         "source": "PushSquare",
         "sourceUrl": "https://www.pushsquare.com/news/2026/05/ps-plus-price-increase-announced-by-sony-for-new-members",
         "sourceUrls": [
@@ -1803,7 +2358,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "PS Plus涨价10%是索尼订阅服务自2023年分层改革后的首次提价(What)。与Xbox Game Pass频繁调整阵容不同，索尼选择直接提价——说明PS Plus的'刚需'属性（在线多人必需）让索尼对价格弹性有更高信心(Why)。涨价仅针对新订户是'温水煮青蛙'策略：避免现有用户流失的同时逐步提升ARPU。与独占回归策略叠加，索尼正在构建'更贵但更值'的PS生态(So What)。若PS Plus Essential月费突破$11心理关口，可能推动部分轻量用户转向年费方案或直接退出订阅，对PS在线活跃度有潜在影响(What Next)。",
+        "analysis": "PS Plus涨价10%是索尼订阅服务自2023年分层改革后的首次提价(What)。与Xbox Game Pass频繁调整阵容不同，索尼选择直接提价——说明PS Plus的‘刚需‘属性（在线多人必需）让索尼对价格弹性有更高信心(Why)。涨价仅针对新订户是‘温水煮青蛙‘策略：避免现有用户流失的同时逐步提升ARPU。与独占回归策略叠加，索尼正在构建‘更贵但更值‘的PS生态(So What)。若PS Plus Essential月费突破$11心理关口，可能推动部分轻量用户转向年费方案或直接退出订阅，对PS在线活跃度有潜在影响(What Next)。",
         "relatedNewsIds": [
             303,
             269
@@ -1854,6 +2409,126 @@ const newsData = [
         ]
     },
     {
+        "id": 1566,
+        "title": "任天堂解释Switch 2涨价原因：内存及元器件价格持续高企，影响延续至明年",
+        "summary": "任天堂总裁表示若维持原定价格硬件盈利能力将大幅受损，组件价格短期内不会回落，内存涨价影响料将延续至明年。这是日本Switch 2涨价1万日元的核心原因，也是全球主机涨价潮的驱动因素。",
+        "source": "Eurogamer",
+        "sourceUrl": "https://www.eurogamer.net/nintendo-explains-switch-2-price-increase-memory-costs",
+        "sourceUrls": [
+            {
+                "name": "Eurogamer",
+                "url": "https://www.eurogamer.net/nintendo-explains-switch-2-price-increase-memory-costs"
+            },
+            {
+                "name": "GamesIndustry",
+                "url": "https://www.gamesindustry.biz/nintendo-explains-switch-2-price-increase-components"
+            }
+        ],
+        "category": "hardware",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-16",
+        "tags": [
+            "Nintendo",
+            "Switch 2",
+            "涨价",
+            "内存",
+            "RAMageddon"
+        ],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "任天堂首次明确将Switch 2涨价归因于内存价格，验证RAMageddon对消费电子的传导效应。内存涨价延续至明年的预判意味着PS5/Xbox后续也可能继续涨价。硬件成本上升正在重塑主机定价逻辑。",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 1568,
+        "title": "Square Enix FY26营业利润+34.9%，FY27预计净销售额再降10.5%",
+        "summary": "SQEX FY26营业利润增34.9%至504亿日元，受DQ1&2 HD-2D和FF战略版驱动。但净销售额2976亿日元同比下降，MMO和移动端收入下滑。FY27预期继续承压，预计再降10.5%。DQ12和KH4将扩大多平台首发。",
+        "source": "GamesIndustry",
+        "sourceUrl": "https://www.gamesindustry.biz/square-enix-fy26-operating-income-surges-349-despite-net-sales-decline",
+        "sourceUrls": [
+            {
+                "name": "GamesIndustry",
+                "url": "https://www.gamesindustry.biz/square-enix-fy26-operating-income-surges-349-despite-net-sales-decline"
+            },
+            {
+                "name": "MassivelyOP",
+                "url": "https://massivelyop.com/2026/05/18/square-enix-financials-notes-a-decline-in-mmo-sales-offset-by-a-rise-in-income-thanks-to-remasters/"
+            }
+        ],
+        "category": "market",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-16",
+        "tags": [
+            "Square Enix",
+            "财报",
+            "勇者斗恶龙"
+        ],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 1569,
+        "title": "Nexon Q1净利润+118%至3.6亿美元创纪录，Arc Raiders累计1600万份",
+        "summary": "Nexon Q1净利润3.607亿美元创历史纪录。Arc Raiders Q1销量460万份累计1600万份。MapleStory持续贡献稳定收入。成为韩国游戏公司Q1表现最亮眼的一家。",
+        "source": "GamesIndustry",
+        "sourceUrl": "https://www.gamesindustry.biz/nexon-q1-net-profit-up-118-percent-to-record-3607-million",
+        "sourceUrls": [
+            {
+                "name": "GamesIndustry",
+                "url": "https://www.gamesindustry.biz/nexon-q1-net-profit-up-118-percent-to-record-3607-million"
+            }
+        ],
+        "category": "market",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-16",
+        "tags": [
+            "Nexon",
+            "Arc Raiders",
+            "财报",
+            "MapleStory"
+        ],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": []
+    },
+    {
+        "id": 1574,
+        "title": "PS5 Beta测试热度小组件，类SteamDB展示热门游戏活跃度",
+        "summary": "PS5最新Beta固件加入热度小组件，展示热门游戏的周活跃玩家数等指标。该功能将在PS主屏为热门作品提供二次曝光，相当于平台主动调整主屏推荐位算法。",
+        "source": "IT之家",
+        "sourceUrl": "https://www.ithome.com/0/951/228.htm",
+        "sourceUrls": [
+            {
+                "name": "IT之家",
+                "url": "https://www.ithome.com/0/951/228.htm"
+            },
+            {
+                "name": "3DM",
+                "url": "https://www.3dmgame.com/news/202605/3944318.html"
+            }
+        ],
+        "category": "platform",
+        "importance": "low",
+        "featured": false,
+        "date": "2026-05-16",
+        "tags": [
+            "Sony",
+            "PS5",
+            "Beta",
+            "热度小组件"
+        ],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "",
+        "relatedNewsIds": []
+    },
+    {
         "id": 1521,
         "title": "Square Enix FY26营业利润增长34.9%，但净销售额下降；FY27预计再降10.5%",
         "summary": "《勇者斗恶龙1&2 HD-2D重制版》等HD Game销售策略和成本优化推动利润增长；但全年营收不及预期；下财年预期继续承压",
@@ -1893,7 +2568,7 @@ const newsData = [
     },
     {
         "id": 1523,
-        "title": "米哈游刘伟：AI领域3年最多投入1000亿人民币，\"没成就当放个大烟花\"",
+        "title": "米哈游刘伟：AI领域3年最多投入1000亿人民币，“没成就当放个大烟花“",
         "summary": "米哈游总裁在公开场合透露极高AI投入决心；表达了对失败风险的坦然态度",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
@@ -1912,7 +2587,7 @@ const newsData = [
     },
     {
         "id": 530,
-        "title": "Xbox品牌正式更名为全大写\"XBOX\"；CEO Asha Sharma发起投票后宣布",
+        "title": "Xbox品牌正式更名为全大写“XBOX“；CEO Asha Sharma发起投票后宣布",
         "summary": "新任Xbox业务负责人Asha Sharma在X平台发起粉丝投票后，宣布官方账号全改为大写@XBOX；微软游戏账号已率先更名",
         "source": "IT之家 / Eurogamer / VGC / GamingBolt",
         "sourceUrl": "#",
@@ -1950,8 +2625,8 @@ const newsData = [
     },
     {
         "id": 532,
-        "title": "PS5 Beta测试\"热度小组件\"，类Steam DB展示热门游戏活跃度",
-        "summary": "PS5最新Beta固件中加入\"热度小组件\"，展示热门游戏的周活跃玩家数等指标，玩法上类似Steam DB公开数据。该功能将在PS主屏直接为热门作品提供���次曝光，相当于平台主动调整\"主屏推荐位算法\"，对头部产品的渠道流量分配将产生显著影响。",
+        "title": "PS5 Beta测试“热度小组件“，类Steam DB展示热门游戏活跃度",
+        "summary": "PS5最新Beta固件中加入“热度小组件“，展示热门游戏的周活跃玩家数等指标，玩法上类似Steam DB公开数据。该功能将在PS主屏直接为热门作品提供���次曝光，相当于平台主动调整“主屏推荐位算法“，对头部产品的渠道流量分配将产生显著影响。",
         "source": "腾讯文档策展",
         "sourceUrl": "https://www.ithome.com/0/951/228.htm",
         "sourceUrls": [
@@ -1974,7 +2649,7 @@ const newsData = [
     },
     {
         "id": 533,
-        "title": "索尼State of Play据报将于5月24日举行，或公布以\"菲\"为主角的《战神》衍生作",
+        "title": "索尼State of Play据报将于5月24日举行，或公布以“菲“为主角的《战神》衍生作",
         "summary": "爆料称新《战神》衍生作以奎托斯之妻Faye为主角，引入多神话体系；尚待官方确认",
         "source": "IT之家",
         "sourceUrl": "#",
@@ -2013,7 +2688,7 @@ const newsData = [
     {
         "id": 1518,
         "title": "亚马逊取消《指环王》MMO项目",
-        "summary": "亚马逊游戏部门负责人确认公司正在取消《指环王》MMO项目，但表示正在开发该IP的\"全新游戏体验\"。这是亚马逊继《新世界》之后再次调整其大型多人在线游戏战略",
+        "summary": "亚马逊游戏部门负责人确认公司正在取消《指环王》MMO项目，但表示正在开发该IP的“全新游戏体验“。这是亚马逊继《新世界》之后再次调整其大型多人在线游戏战略",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -2070,7 +2745,7 @@ const newsData = [
     {
         "id": 523,
         "title": "ARC Raiders销量突破1600万，半数活跃玩家游玩时长超百小时",
-        "summary": "发行商Nexon称ARC Raiders为\"公司历史上最成功的新品发布\"；开发商Embark宣布将由月更改为每年两次重大更新，10月将推出史上最大地图",
+        "summary": "发行商Nexon称ARC Raiders为“公司历史上最成功的新品发布“；开发商Embark宣布将由月更改为每年两次重大更新，10月将推出史上最大地图",
         "source": "GamingBolt",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -2127,7 +2802,7 @@ const newsData = [
     {
         "id": 296,
         "title": "《极限竞速：地平线6》PC版未加密文件泄露，微软威胁硬件永久封禁",
-        "summary": "《极限竞速：地平线6》PC版在发售前一周遭遇严重泄露：Steam预载文件未被加密，完整游戏数据流出并被破解。盗版用户已可提前游玩，多个YouTube视频流出实机画面。Playground Games迅速回应称'这不是预载问题'，并威胁对盗版用户实施全系列+硬件永久封禁。已有YouTuber因发布45分钟实机画面被硬件封禁。该事件引发关于PC游戏防盗版策略的广泛讨论。",
+        "summary": "《极限竞速：地平线6》PC版在发售前一周遭遇严重泄露：Steam预载文件未被加密，完整游戏数据流出并被破解。盗版用户已可提前游玩，多个YouTube视频流出实机画面。Playground Games迅速回应称‘这不是预载问题‘，并威胁对盗版用户实施全系列+硬件永久封禁。已有YouTuber因发布45分钟实机画面被硬件封禁。该事件引发关于PC游戏防盗版策略的广泛讨论。",
         "source": "IGN",
         "sourceUrl": "https://www.ign.com/articles/forza-horizon-6-suffers-disastrous-leak-as-steam-preload-files-are-made-available-without-encryption",
         "sourceUrls": [
@@ -2209,7 +2884,7 @@ const newsData = [
     {
         "id": 1520,
         "title": "PS6内存规格爆料",
-        "summary": "PS6内存规格成焦点，爆料出现分歧：Kepler称可能缩减至24GB以控制成本，而\"摩尔定律已死\"则坚称不会低于30GB，并认为索尼会延续PS5的定价策略。此外，爆料还提到PS6掌机或先于主机推出，配备24GB内存",
+        "summary": "PS6内存规格成焦点，爆料出现分歧：Kepler称可能缩减至24GB以控制成本，而“摩尔定律已死“则坚称不会低于30GB，并认为索尼会延续PS5的定价策略。此外，爆料还提到PS6掌机或先于主机推出，配备24GB内存",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -2238,25 +2913,6 @@ const newsData = [
         "date": "2026-05-14",
         "tags": [
             "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 521,
-        "title": "5月PS Plus新增游戏公布",
-        "summary": "索尼公布5月PS Plus会员免费游戏阵容，包括《荒野大镖客2》《星球大战：亡命之徒》等3A大作。这是索尼订阅服务的重要月度更新，为PS4和PS5玩家提供高质量的游戏体验",
-        "source": "3dmgame.com / blog.playstation.com / eurogamer.net",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "market",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-05-14",
-        "tags": [
-            "榜单信息"
         ],
         "sentiment": "neutral",
         "tdocMarking": "tdoc-verified",
@@ -2308,8 +2964,8 @@ const newsData = [
     },
     {
         "id": 280,
-        "title": "Xbox PC更新代码揭露\"Saluki\"项目：Game Pass或将正式进入中国市场",
-        "summary": "微软Xbox PC应用最新更新代码中发现代号\"Project Saluki\"（萨路基计划），描述为\"面向中国市场拓展Game Pass、Rewards和订阅档位\"。Windows Central报道该服务为中国市场定制，包含受限内容库和本地化订阅档位。此举呼应了Xbox CEO阿莎·夏尔马此前关于微软游戏\"无处不在\"的战略愿景，若落地将标志着Xbox生态首次正式进入中国游戏订阅市场。",
+        "title": "Xbox PC更新代码揭露“Saluki“项目：Game Pass或将正式进入中国市场",
+        "summary": "微软Xbox PC应用最新更新代码中发现代号“Project Saluki“（萨路基计划），描述为“面向中国市场拓展Game Pass、Rewards和订阅档位“。Windows Central报道该服务为中国市场定制，包含受限内容库和本地化订阅档位。此举呼应了Xbox CEO阿莎·夏尔马此前关于微软游戏“无处不在“的战略愿景，若落地将标志着Xbox生态首次正式进入中国游戏订阅市场。",
         "source": "Windows Central",
         "sourceUrl": "https://www.ali213.net/news/html/2026-5/1011367.html",
         "sourceUrls": [
@@ -2345,7 +3001,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "Project Saluki是微软将Game Pass带入中国市场的实质性行动(What)。中国是全球最大的游戏市场之一，但主机和PC订阅服务一直受制于内容审查和本地化门槛；Saluki的\"受限内容库\"说明微软已接受以合规换市场的路径，而非坚持\"全球统一库\"(Why)。若Game Pass入华成功，将打破腾讯/网易主导的中国游戏分发格局，为Steam/Epic等平台的中国竞争提供新参照系；对中国玩家而言，合法渠道的海外3A游戏库将是重要增量(So What)。关键变量：内容审查范围、定价策略（人民币定价）、与本地运营商合作模式——若Saluki仅提供少量合规游戏，则与现有国行Xbox生态差异不大，难以形成订阅吸引力(What Next)。",
+        "analysis": "Project Saluki是微软将Game Pass带入中国市场的实质性行动(What)。中国是全球最大的游戏市场之一，但主机和PC订阅服务一直受制于内容审查和本地化门槛；Saluki的“受限内容库“说明微软已接受以合规换市场的路径，而非坚持“全球统一库“(Why)。若Game Pass入华成功，将打破腾讯/网易主导的中国游戏分发格局，为Steam/Epic等平台的中国竞争提供新参照系；对中国玩家而言，合法渠道的海外3A游戏库将是重要增量(So What)。关键变量：内容审查范围、定价策略（人民币定价）、与本地运营商合作模式——若Saluki仅提供少量合规游戏，则与现有国行Xbox生态差异不大，难以形成订阅吸引力(What Next)。",
         "relatedNewsIds": [
             269,
             225,
@@ -2441,7 +3097,7 @@ const newsData = [
     {
         "id": 294,
         "title": "《乐高蝙蝠侠：黑暗骑士遗产》评测MC84，乐高系列史上最高评分，5/22全平台发售",
-        "summary": "TT Games《乐高蝙蝠侠：黑暗骑士遗产》评测解禁：Metacritic均分84，OpenCritic推荐率98%，成为乐高系列史上评分最高的游戏。IGN 8/10称其'实现了玩家等了11年的Arkham风格玩法'。此前Steam愿望单已突破95万。5月22日发售登陆PS5/Xbox/PC/Switch 2全平台，Deluxe版可提前3天游玩。MC84同时是2026年迄今评分最高的乐高/授权IP游戏。",
+        "summary": "TT Games《乐高蝙蝠侠：黑暗骑士遗产》评测解禁：Metacritic均分84，OpenCritic推荐率98%，成为乐高系列史上评分最高的游戏。IGN 8/10称其‘实现了玩家等了11年的Arkham风格玩法‘。此前Steam愿望单已突破95万。5月22日发售登陆PS5/Xbox/PC/Switch 2全平台，Deluxe版可提前3天游玩。MC84同时是2026年迄今评分最高的乐高/授权IP游戏。",
         "source": "TheGamer",
         "sourceUrl": "https://gamingbolt.com/lego-batman-legacy-of-the-dark-knight-has-950000-wishlists-on-steam-ahead-of-launch",
         "sourceUrls": [
@@ -2573,8 +3229,8 @@ const newsData = [
     },
     {
         "id": 517,
-        "title": "索尼就PlayStation Store 30%抽成作出回应，称维持1万名开发者支持体系是\"巨额投资\"",
-        "summary": "索尼正面临平台垄断集体诉讼，高管公开阐述30%佣金逻辑：PS5生态有1万名合作开发者，Sony设立5个专门支持团队，此支持体系需\"巨额投资\"。PS三方游戏副总裁强调索尼\"历来是最重视三方生态的平台\"",
+        "title": "索尼就PlayStation Store 30%抽成作出回应，称维持1万名开发者支持体系是“巨额投资“",
+        "summary": "索尼正面临平台垄断集体诉讼，高管公开阐述30%佣金逻辑：PS5生态有1万名合作开发者，Sony设立5个专门支持团队，此支持体系需“巨额投资“。PS三方游戏副总裁强调索尼“历来是最重视三方生态的平台“",
         "source": "3DM",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -2639,7 +3295,7 @@ const newsData = [
     {
         "id": 288,
         "title": "《寂静岭f》出货量破200万，《寂静岭2》重制版玩家突破600万",
-        "summary": "Konami宣布《寂静岭f》全球出货量超过200万份（截至4/22），《寂静岭2》重制版注册玩家突破600万（截至4/24）。《寂静岭》系列累计销量达1710万份。Konami的\"重制版+新作\"双轨策略成功激活了这一沉寂多年的恐怖IP，《寂静岭f》作为全新续作在不到一年内达到200万出货量，证明了该系列的市场潜力。",
+        "summary": "Konami宣布《寂静岭f》全球出货量超过200万份（截至4/22），《寂静岭2》重制版注册玩家突破600万（截至4/24）。《寂静岭》系列累计销量达1710万份。Konami的“重制版+新作“双轨策略成功激活了这一沉寂多年的恐怖IP，《寂静岭f》作为全新续作在不到一年内达到200万出货量，证明了该系列的市场潜力。",
         "source": "IGN",
         "sourceUrl": "https://www.ign.com/articles/silent-hill-2-remake-reaches-6-million-players-as-silent-hill-f-hits-new-sales-milestone",
         "sourceUrls": [
@@ -2676,15 +3332,15 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "《寂静岭f》200万+《寂静岭2重制版》600万玩家标志着Konami\"冷饭+新作\"战略在恐怖品类的全面成功(What)。《寂静岭》系列在小岛秀夫离开后沉寂多年，Konami以Bloober Team重制《寂静岭2》重建品牌信任，再以全新续作《寂静岭f》承接——这是经典IP复活的教科书级操作(Why)。200万出货量对新恐怖游戏而言是优秀成绩（对比《Returnal》约150万+），600万\"玩家\"（含PS Plus/二手）说明IP影响力远超直接销量(So What)。Konami恐怖IP矩阵正在形成——《寂静岭》+《合金装备》+《恶魔城》三线并行，若持续投入可能建立恐怖游戏品类的长期竞争优势(What Next)。",
+        "analysis": "《寂静岭f》200万+《寂静岭2重制版》600万玩家标志着Konami“冷饭+新作“战略在恐怖品类的全面成功(What)。《寂静岭》系列在小岛秀夫离开后沉寂多年，Konami以Bloober Team重制《寂静岭2》重建品牌信任，再以全新续作《寂静岭f》承接——这是经典IP复活的教科书级操作(Why)。200万出货量对新恐怖游戏而言是优秀成绩（对比《Returnal》约150万+），600万“玩家“（含PS Plus/二手）说明IP影响力远超直接销量(So What)。Konami恐怖IP矩阵正在形成——《寂静岭》+《合金装备》+《恶魔城》三线并行，若持续投入可能建立恐怖游戏品类的长期竞争优势(What Next)。",
         "relatedNewsIds": [
             275
         ]
     },
     {
         "id": 289,
-        "title": "索尼回应PS Store 30%抽成争议：维持万名开发者支持体系需\"巨额投资\"",
-        "summary": "索尼就PlayStation Store收取30%平台佣金争议正式回应，称维持1万名开发者支持体系需要\"巨额投资\"。此前英国$26亿集体诉讼指控索尼在2016-2026年间通过30%佣金推高数字游戏价格。索尼辩称该费用用于开发者工具、技术支持、QA测试和营销资源。Epic诉Apple案后，平台30%标准佣金在全球范围内面临越来越大的法律和舆论压力。",
+        "title": "索尼回应PS Store 30%抽成争议：维持万名开发者支持体系需“巨额投资“",
+        "summary": "索尼就PlayStation Store收取30%平台佣金争议正式回应，称维持1万名开发者支持体系需要“巨额投资“。此前英国$26亿集体诉讼指控索尼在2016-2026年间通过30%佣金推高数字游戏价格。索尼辩称该费用用于开发者工具、技术支持、QA测试和营销资源。Epic诉Apple案后，平台30%标准佣金在全球范围内面临越来越大的法律和舆论压力。",
         "source": "Insider Gaming",
         "sourceUrl": "https://insider-gaming.com/sony-says-supporting-ps5-devs-is-a-big-investment-amid-30-commission-fee-discussion/",
         "sourceUrls": [
@@ -2721,7 +3377,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "索尼为30%佣金辩护是平台方在反垄断压力下的标准表态(What)。Epic诉Apple案确立了\"平台可收佣金但不得限制替代支付\"的先例，英国$26亿集体诉讼正基于此逻辑——索尼的\"巨额投资\"辩护理由在法律上是否充分，取决于能否证明30%费率与实际服务成本成比例(Why)。对行业影响：若索尼败诉或被迫降低佣金，将产生连锁效应——Steam、Xbox、Nintendo eShop的30%标准都将面临挑战；微软此前已主动降低PC Game Pass分成比例至12%作为差异化竞争手段(So What)。短期内索尼不会主动降低佣金（诉讼尚在进行中），但开发者替代选择正在增多：Epic Store 12%分成+Steam新政策正在蚕食30%标准的合理性(What Next)。",
+        "analysis": "索尼为30%佣金辩护是平台方在反垄断压力下的标准表态(What)。Epic诉Apple案确立了“平台可收佣金但不得限制替代支付“的先例，英国$26亿集体诉讼正基于此逻辑——索尼的“巨额投资“辩护理由在法律上是否充分，取决于能否证明30%费率与实际服务成本成比例(Why)。对行业影响：若索尼败诉或被迫降低佣金，将产生连锁效应——Steam、Xbox、Nintendo eShop的30%标准都将面临挑战；微软此前已主动降低PC Game Pass分成比例至12%作为差异化竞争手段(So What)。短期内索尼不会主动降低佣金（诉讼尚在进行中），但开发者替代选择正在增多：Epic Store 12%分成+Steam新政策正在蚕食30%标准的合理性(What Next)。",
         "relatedNewsIds": [
             251
         ]
@@ -2849,8 +3505,8 @@ const newsData = [
     },
     {
         "id": 1506,
-        "title": "世嘉取消五年前公布的\"超级游戏\"项目，全面转向单机",
-        "summary": "世嘉在最新财报中悄然宣布取消开发五年的\"Super Game\"项目，原因是《Sonic Rumble Party》等GaaS游戏表现不佳以及2023年收购Rovio失利（计提逾2亿美元损失）。逾百名F2P开发者已转调单机全价项目，聚焦《疯狂出租车》等经典IP重制重启；未来将收缩GaaS布局，资源重新押注《索尼克》等核心单机IP",
+        "title": "世嘉取消五年前公布的“超级游戏“项目，全面转向单机",
+        "summary": "世嘉在最新财报中悄然宣布取消开发五年的“Super Game“项目，原因是《Sonic Rumble Party》等GaaS游戏表现不佳以及2023年收购Rovio失利（计提逾2亿美元损失）。逾百名F2P开发者已转调单机全价项目，聚焦《疯狂出租车》等经典IP重制重启；未来将收缩GaaS布局，资源重新押注《索尼克》等核心单机IP",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -2868,8 +3524,8 @@ const newsData = [
     },
     {
         "id": 1507,
-        "title": "铁拳之父原田胜弘离开万代南梦宫后，与SNK联合成立新工作室\"VS Studio\"",
-        "summary": "原田胜弘去年宣布离开万代南梦宫及其经营逾20年的铁拳团队，现与《拳皇》开发商SNK合作，在东京成立独立新工作室VS Studio，SNK将提供\"长期持续支持\"，但工作室保持独立并聚焦创意",
+        "title": "铁拳之父原田胜弘离开万代南梦宫后，与SNK联合成立新工作室“VS Studio“",
+        "summary": "原田胜弘去年宣布离开万代南梦宫及其经营逾20年的铁拳团队，现与《拳皇》开发商SNK合作，在东京成立独立新工作室VS Studio，SNK将提供“长期持续支持“，但工作室保持独立并聚焦创意",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -2943,66 +3599,9 @@ const newsData = [
         "relatedNewsIds": []
     },
     {
-        "id": 515,
-        "title": "《合金装备》系列销量达6610万",
-        "summary": "《合金装备》系列销量达6610万，《寂静岭》系列超1710万，《寂静岭f》和《合金装备:食蛇者》推动销售里程碑",
-        "source": "gamingbolt.com",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-05-12",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 518,
-        "title": "任天堂推出Switch 2任选游戏套装",
-        "summary": "Nintendo宣���6月起推出含《马力欧卡丁车》《大金刚》或《Pokopia》的Switch 2同捆套装，定价499.99美元，赶在涨价前推出。社长古川俊太郎同期表示本财年后半段还有未公开新作将陆续公开，强调Switch 2生命周期目标与Switch持平",
-        "source": "gamingbolt.com / videogameschronicle.com",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-05-12",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 519,
-        "title": "Steam新一周销量榜公布",
-        "summary": "《极限竞速：地平线6》预购冲上全球榜首",
-        "source": "eurogamer.net",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "market",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-05-12",
-        "tags": [
-            "榜单信息"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
         "id": 274,
         "title": "《极限竞速：地平线6》Steam预载文件泄露155GB：开发者威胁封禁盗版用户",
-        "summary": "《极限竞速：地平线6》Steam预载文件因未加密被公开泄露，容量达155GB，比正式发布（5月19日）提前9天。泄露文件已在盗版网站传播，部分玩家已提前游玩。Playground Games确认泄露事件，威胁对访问泄露构建的玩家实施封禁，并澄清泄露源于\"外部来源\"而非Steam预载系统本身的安全漏洞。IGN/Gamespot等主流媒体均报道此事件。",
+        "summary": "《极限竞速：地平线6》Steam预载文件因未加密被公开泄露，容量达155GB，比正式发布（5月19日）提前9天。泄露文件已在盗版网站传播，部分玩家已提前游玩。Playground Games确认泄露事件，威胁对访问泄露构建的玩家实施封禁，并澄清泄露源于“外部来源“而非Steam预载系统本身的安全漏洞。IGN/Gamespot等主流媒体均报道此事件。",
         "source": "17173",
         "sourceUrl": "https://news.17173.com/content/05112026/180645819.shtml",
         "sourceUrls": [
@@ -3034,7 +3633,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "《极限竞速：地平线6》155GB泄露是2026年第三起重大游戏泄露事件(What)。此前已有两起大型游戏泄露，但本次最严重——155GB完整可玩构建意味着盗版玩家可在官方发售前9天体验完整游戏，对Game Pass首日订阅数会造成负面影响(Why)。开发者声称\"外部来源\"意味着泄露可能非Steam平台漏洞，而是来自内部QA/测试环节——这暴露了大型游戏开发中素材管理的安全风险；2026年游戏泄露频发表明在Game Pass时代，\"提前游玩\"对商业价值的侵蚀比以往更严重(So What)。微软/Xbox应及时评估：泄露对Game Pass订阅价值的短期影响有限（已付费玩家仍会订阅），但可能削弱首发周销量的\"社会证明\"效应，进而影响 Playground Games 的续作预算分配(What Next)。",
+        "analysis": "《极限竞速：地平线6》155GB泄露是2026年第三起重大游戏泄露事件(What)。此前已有两起大型游戏泄露，但本次最严重——155GB完整可玩构建意味着盗版玩家可在官方发售前9天体验完整游戏，对Game Pass首日订阅数会造成负面影响(Why)。开发者声称“外部来源“意味着泄露可能非Steam平台漏洞，而是来自内部QA/测试环节——这暴露了大型游戏开发中素材管理的安全风险；2026年游戏泄露频发表明在Game Pass时代，“提前游玩“对商业价值的侵蚀比以往更严重(So What)。微软/Xbox应及时评估：泄露对Game Pass订阅价值的短期影响有限（已付费玩家仍会订阅），但可能削弱首发周销量的“社会证明“效应，进而影响 Playground Games 的续作预算分配(What Next)。",
         "relatedNewsIds": [
             249
         ]
@@ -3065,13 +3664,13 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "Konami\"冷饭\"战略成效显著——两大经典IP在重制版推动下持续创造价值(What)。《合金装备》和《寂静岭》都是小岛秀夫时代建立的品牌资产，小岛离开后Konami并未放弃，而是通过\"重制版+新作\"双轨策略持续经营；6610万和1710万证明了经典IP的长期品牌价值(Why)。对行业启示：重制版开发（尤其是对已有忠实粉丝基础的IP）风险低于全新IP开发，ROI周期更可预测；但Konami也需面对\"重制依赖症\"——若无全新成功IP，系列天花板将受限于老玩家群体(So What)。小岛秀夫与Konami的和解（《食蛇者》重制版获小岛祝福）可能是Konami重塑与核心玩家关系的转折点，未来或有更多小岛时代IP重制计划(What Next)。",
+        "analysis": "Konami“冷饭“战略成效显著——两大经典IP在重制版推动下持续创造价值(What)。《合金装备》和《寂静岭》都是小岛秀夫时代建立的品牌资产，小岛离开后Konami并未放弃，而是通过“重制版+新作“双轨策略持续经营；6610万和1710万证明了经典IP的长期品牌价值(Why)。对行业启示：重制版开发（尤其是对已有忠实粉丝基础的IP）风险低于全新IP开发，ROI周期更可预测；但Konami也需面对“重制依赖症“——若无全新成功IP，系列天花板将受限于老玩家群体(So What)。小岛秀夫与Konami的和解（《食蛇者》重制版获小岛祝福）可能是Konami重塑与核心玩家关系的转折点，未来或有更多小岛时代IP重制计划(What Next)。",
         "relatedNewsIds": []
     },
     {
         "id": 281,
-        "title": "世嘉正式取消五年前公布的\"超级游戏\"项目，全面收缩免费游戏转向单机",
-        "summary": "世嘉（Sega Sammy）正式宣布取消公布已五年的\"超级游戏\"（Super Game）项目，FY2026财年净亏损57亿日元（$3160万），主因是Rovio减值损失$2亿和Stakelogic减值。世嘉表示将降低GaaS（游戏即服务）在产品组合中的优先级，全面转向单机游戏开发。经典IP重制（疯狂出租车、Jet Set Radio）不受影响，将继续推进。",
+        "title": "世嘉正式取消五年前公布的“超级游戏“项目，全面收缩免费游戏转向单机",
+        "summary": "世嘉（Sega Sammy）正式宣布取消公布已五年的“超级游戏“（Super Game）项目，FY2026财年净亏损57亿日元（$3160万），主因是Rovio减值损失$2亿和Stakelogic减值。世嘉表示将降低GaaS（游戏即服务）在产品组合中的优先级，全面转向单机游戏开发。经典IP重制（疯狂出租车、Jet Set Radio）不受影响，将继续推进。",
         "source": "GamesIndustry.biz",
         "sourceUrl": "https://www.gamesindustry.biz/sega-reports-316m-net-loss-during-fy26-cancels-super-game-project-amid-strategic-pivot",
         "sourceUrls": [
@@ -3108,7 +3707,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "世嘉取消\"超级游戏\"是GaaS泡沫破灭的又一标志性事件(What)。五年前\"超级游戏\"被定义为世嘉的GaaS旗舰，投入巨大但始终无法产出可上线的产品；同期Rovio收购（$7.75亿）因《愤怒的小鸟》IP贬值导致$2亿减值——世嘉的GaaS转型全面失败(Why)。行业含义：继Anthem、Hyenas、Concord后，\"超级游戏\"是又一款被取消的GaaS旗舰项目，证明GaaS对传统主机游戏开发商的门槛极高，不是\"投入预算+大IP\"就能成功——索尼、Square Enix此前也收缩了GaaS投入(So What)。世嘉全面转向单机（经典IP重制+Persona系列）是务实选择，经典IP重制的风险和开发周期远低于GaaS，与世嘉当前管理能力匹配(What Next)。",
+        "analysis": "世嘉取消“超级游戏“是GaaS泡沫破灭的又一标志性事件(What)。五年前“超级游戏“被定义为世嘉的GaaS旗舰，投入巨大但始终无法产出可上线的产品；同期Rovio收购（$7.75亿）因《愤怒的小鸟》IP贬值导致$2亿减值——世嘉的GaaS转型全面失败(Why)。行业含义：继Anthem、Hyenas、Concord后，“超级游戏“是又一款被取消的GaaS旗舰项目，证明GaaS对传统主机游戏开发商的门槛极高，不是“投入预算+大IP“就能成功——索尼、Square Enix此前也收缩了GaaS投入(So What)。世嘉全面转向单机（经典IP重制+Persona系列）是务实选择，经典IP重制的风险和开发周期远低于GaaS，与世嘉当前管理能力匹配(What Next)。",
         "relatedNewsIds": [
             250
         ]
@@ -3116,7 +3715,7 @@ const newsData = [
     {
         "id": 282,
         "title": "《剑星2》将由Shift Up自主发行，终结与Sony独占合作，多平台发售在即",
-        "summary": "Shift Up在Q1财报中宣布《剑星2》将采用自主发行方式推出，不再由Sony担任发行商。前作《剑星》由Sony发行并作为PS5限时独占。Shift Up表示自主发行旨在\"最大化销售额并从首日触达全球广泛受众\"，意味着续作很可能同步登陆多平台。Shift Up同时收购了三上真司Unbound工作室股份，也将自主发行其新作。",
+        "summary": "Shift Up在Q1财报中宣布《剑星2》将采用自主发行方式推出，不再由Sony担任发行商。前作《剑星》由Sony发行并作为PS5限时独占。Shift Up表示自主发行旨在“最大化销售额并从首日触达全球广泛受众“，意味着续作很可能同步登陆多平台。Shift Up同时收购了三上真司Unbound工作室股份，也将自主发行其新作。",
         "source": "Automaton Media",
         "sourceUrl": "https://automaton-media.com/en/news/shift-up-plans-to-self-publish-stellar-blade-sequel-and-shinji-mikami-titles-update-on-mysterious-new-flagship-ip-due-within-2026/",
         "sourceUrls": [
@@ -3152,7 +3751,7 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "Shift Up放弃Sony发行选择自主发行，是韩国开发商从\"平台独占\"走向\"全球多平台\"的标志性转变(What)。前作《剑星》由Sony发行取得商业成功，但独占模式限制了PC/Xbox用户触达；Shift Up认为续作多平台同步发售的收入将超过Sony发行费+独占溢价的组合(Why)。对Sony影响：失去《剑星2》独占意味着PS5的韩系动作游戏护城河收窄——继《Stellar Blade》PC版、《尼尔》多平台后，Sony在韩日中端独占IP的吸引力正在被\"全球发行更赚钱\"的现实瓦解(So What)。Shift Up同时投资三上真司工作室，显示其战略是\"自主发行+投资外部IP\"双轨并行——若《剑星2》多平台成功，更多Sony限时独占开发商可能效仿(What Next)。",
+        "analysis": "Shift Up放弃Sony发行选择自主发行，是韩国开发商从“平台独占“走向“全球多平台“的标志性转变(What)。前作《剑星》由Sony发行取得商业成功，但独占模式限制了PC/Xbox用户触达；Shift Up认为续作多平台同步发售的收入将超过Sony发行费+独占溢价的组合(Why)。对Sony影响：失去《剑星2》独占意味着PS5的韩系动作游戏护城河收窄——继《Stellar Blade》PC版、《尼尔》多平台后，Sony在韩日中端独占IP的吸引力正在被“全球发行更赚钱“的现实瓦解(So What)。Shift Up同时投资三上真司工作室，显示其战略是“自主发行+投资外部IP“双轨并行——若《剑星2》多平台成功，更多Sony限时独占开发商可能效仿(What Next)。",
         "relatedNewsIds": [
             249
         ]
@@ -3204,8 +3803,8 @@ const newsData = [
     },
     {
         "id": 284,
-        "title": "原田胜弘离开万代南梦宫后与SNK联合成立\"VS Studio\"，格斗游戏格局生变",
-        "summary": "《铁拳》系列制作人原田胜弘（Katsuhiro Harada）在离开万代南梦宫4个月后，正式宣布与SNK联合成立新工作室\"VS Studio\"，总部位于东京。原田在万代任职31年，是《铁拳》系列的灵魂人物，其离职被行业视为格斗游戏领域的\"地震级\"变动。VS Studio尚未公布首款游戏，但原田+SNK的组合引发格斗游戏社区高度期待。",
+        "title": "原田胜弘离开万代南梦宫后与SNK联合成立“VS Studio“，格斗游戏格局生变",
+        "summary": "《铁拳》系列制作人原田胜弘（Katsuhiro Harada）在离开万代南梦宫4个月后，正式宣布与SNK联合成立新工作室“VS Studio“，总部位于东京。原田在万代任职31年，是《铁拳》系列的灵魂人物，其离职被行业视为格斗游戏领域的“地震级“变动。VS Studio尚未公布首款游戏，但原田+SNK的组合引发格斗游戏社区高度期待。",
         "source": "Nintendo Life",
         "sourceUrl": "https://www.nintendolife.com/news/2026/05/former-tekken-boss-establishes-new-studio-under-snk-corporation",
         "sourceUrls": [
@@ -3284,7 +3883,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "《红色沙漠》500万份+Q1营收$2.2亿是韩国游戏工业的历史性突破(What)。Pearl Abyss此前以《黑色沙漠》MMO为核心，长期陷入\"一款产品养公司\"的结构性风险；《红色沙漠》单作贡献80%Q1营收，证明韩国开发商有能力在主机/PC单机赛道与欧美日厂商正面竞争(Why)。PC/主机50/50的销售分布意味着《红色沙漠》成功打破了\"韩国游戏=PC/MMO\"的刻板印象，在主机市场获得了对等竞争力(So What)。《DokeV》加速开发+《红色沙漠》DLC是下一阶段关键——若能维持双产品线健康运转，Pearl Abyss将从\"单产品公司\"升级为\"多产品矩阵公司\"，估值逻辑将发生根本变化(What Next)。",
+        "analysis": "《红色沙漠》500万份+Q1营收$2.2亿是韩国游戏工业的历史性突破(What)。Pearl Abyss此前以《黑色沙漠》MMO为核心，长期陷入“一款产品养公司“的结构性风险；《红色沙漠》单作贡献80%Q1营收，证明韩国开发商有能力在主机/PC单机赛道与欧美日厂商正面竞争(Why)。PC/主机50/50的销售分布意味着《红色沙漠》成功打破了“韩国游戏=PC/MMO“的刻板印象，在主机市场获得了对等竞争力(So What)。《DokeV》加速开发+《红色沙漠》DLC是下一阶段关键——若能维持双产品线健康运转，Pearl Abyss将从“单产品公司“升级为“多产品矩阵公司“，估值逻辑将发生根本变化(What Next)。",
         "relatedNewsIds": [
             266
         ]
@@ -3292,7 +3891,7 @@ const newsData = [
     {
         "id": 1500,
         "title": "《杀戮尖塔2》因聘请女权顾问遭Steam大规模差评轰炸",
-        "summary": "近6万条近期评测中67%为差评，整体降至\"多半差评\"，评论区一度触发Steam熔断机制被关闭。开发商Mega Crit尚未公开回应。",
+        "summary": "近6万条近期评测中67%为差评，整体降至“多半差评“，评论区一度触发Steam熔断机制被关闭。开发商Mega Crit尚未公开回应。",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -3366,44 +3965,6 @@ const newsData = [
         "relatedNewsIds": []
     },
     {
-        "id": 511,
-        "title": "《杀戮尖塔2》因聘请女权顾问遭Steam大规模差评轰炸",
-        "summary": "近6万条近期评测中67%为差评，整体降至\"多半差评\"，评论区一度触发Steam熔断机制被关闭。开发商Mega Crit尚未公开回应。",
-        "source": "3DM / IGN中国",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-05-11",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 512,
-        "title": "Steam Machine四个配置版本泄露",
-        "summary": "泄露显示Steam Machine将在发布时提供四个不同配置版本，同时设置预订队列",
-        "source": "ign.com",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-05-11",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
         "id": 513,
         "title": "《深海迷航2》上线前达500万愿望单，5月14日抢先体验发售",
         "summary": "Unknown Worlds《深海迷航2》抢先体验版即将于5月14日发售，愿望单突破500万，官方宣布所有首周内购买玩家均可获赠Reaper Leviathan雕像蓝图。新实机预告同步发布。",
@@ -3424,7 +3985,7 @@ const newsData = [
     },
     {
         "id": 514,
-        "title": "任天堂将更名\"My Nintendo Store\"，月底全区同步生效",
+        "title": "任天堂将更名“My Nintendo Store“，月底全区同步生效",
         "summary": "任天堂宣布即将对My Nintendo Store进行品牌更名，改动将于本月底在全球所有地区同步执行，具体新名称未提前透露。",
         "source": "VGC",
         "sourceUrl": "#",
@@ -3444,7 +4005,7 @@ const newsData = [
     {
         "id": 266,
         "title": "《杀戮尖塔2》因女性权益顾问Sarkeesian署名遭遇第三波Steam差评轰炸",
-        "summary": "《杀戮尖塔2》因在制作人员名单中加入女权主义者Anita Sarkeesian的署名（游戏文化顾问），触发Steam第三波大规模差评轰炸。约6万条近期评测中67%为差评，整体降至\"多半差评\"，评论区一度触发熔断机制被关闭。这是该作三个月内第三次因社会争议遭遇差评：前两次分别是4月平衡性补丁和更早的\"觉醒\"补丁。开发商Mega Crit尚未公开回应。",
+        "summary": "《杀戮尖塔2》因在制作人员名单中加入女权主义者Anita Sarkeesian的署名（游戏文化顾问），触发Steam第三波大规模差评轰炸。约6万条近期评测中67%为差评，整体降至“多半差评“，评论区一度触发熔断机制被关闭。这是该作三个月内第三次因社会争议遭遇差评：前两次分别是4月平衡性补丁和更早的“觉醒“补丁。开发商Mega Crit尚未公开回应。",
         "source": "3DM",
         "sourceUrl": "https://www.3dmgame.com/news/202605/3943740.html",
         "sourceUrls": [
@@ -3480,7 +4041,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "《杀戮尖塔2》三个月内三次差评轰炸反映游戏社区极化加剧(What)。第三次锁定Sarkeesian——这位女权主义者是Gamergate时代的标志性人物，将其加入署名直接引爆了游戏社区最敏感的文化冲突(Why)。67%差评+Steam熔断机制说明即使《杀戮尖塔2》本体质量优秀（首发57万同时在线），Steam评分机制的开放性使其极易被组织性行动影响——这对独立游戏开发者是重要警示：任何文化立场表态都可能成为双刃剑(So What)。长期影响：Mega Crit选择\"沉默\"而非正面回应，说明开发者认为任何回应都会火上浇油；历史数据显示此类争议通常在2-4周后自然平息，除非有新的引爆点(What Next)。",
+        "analysis": "《杀戮尖塔2》三个月内三次差评轰炸反映游戏社区极化加剧(What)。第三次锁定Sarkeesian——这位女权主义者是Gamergate时代的标志性人物，将其加入署名直接引爆了游戏社区最敏感的文化冲突(Why)。67%差评+Steam熔断机制说明即使《杀戮尖塔2》本体质量优秀（首发57万同时在线），Steam评分机制的开放性使其极易被组织性行动影响——这对独立游戏开发者是重要警示：任何文化立场表态都可能成为双刃剑(So What)。长期影响：Mega Crit选择“沉默“而非正面回应，说明开发者认为任何回应都会火上浇油；历史数据显示此类争议通常在2-4周后自然平息，除非有新的引爆点(What Next)。",
         "relatedNewsIds": [
             242
         ]
@@ -3516,7 +4077,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "游科大规模扩张是《黑神话：悟空》商业成功后的自然溢出(What)。《悟空》3000万份销量+全球影响力让游科从\"小工作室\"跃升为\"中国第一3A开发商\"，扩张招聘是支撑《钟馗》开发体量的必要投入(Why)。周边多栋楼划归说明游科已从\"租用一个办公室\"的小团队演化为需要统一园区管理的中型公司，这对保持核心团队稳定和保密管理都有正面意义(So What)。对行业影响：《钟馗》作为《悟空》之后的第二款3A，若保持同等质量将巩固中国游戏工业的世界地位，并可能催生更多头部资本流入3A开发领域(What Next)。",
+        "analysis": "游科大规模扩张是《黑神话：悟空》商业成功后的自然溢出(What)。《悟空》3000万份销量+全球影响力让游科从“小工作室“跃升为“中国第一3A开发商“，扩张招聘是支撑《钟馗》开发体量的必要投入(Why)。周边多栋楼划归说明游科已从“租用一个办公室“的小团队演化为需要统一园区管理的中型公司，这对保持核心团队稳定和保密管理都有正面意义(So What)。对行业影响：《钟馗》作为《悟空》之后的第二款3A，若保持同等质量将巩固中国游戏工业的世界地位，并可能催生更多头部资本流入3A开发领域(What Next)。",
         "relatedNewsIds": []
     },
     {
@@ -3558,7 +4119,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "Discord Nitro+Game Pass整合是微软\"Xbox无处不在\"战略的社交层落地(What)。Discord拥有全球最大的游戏玩家社区（2026年月活超2亿），与Game Pass的整合意味着微软将触角伸向了Xbox主机之外的核心PC/移动游戏用户——这些用户此前可能从未考虑过Xbox生态(Why)。$13.99 Nitro用户可零成本获得Game Pass Starter，等于微软用订阅分成换Discord的品牌曝光和用户导流，成本比传统广告低得多(So What)。对行业影响：跨平台订阅整合趋势已成——未来1-2年内可能看到PS Plus与另一主流社交平台类似整合，主机战争将升级为\"生态系统战争\"(What Next)。",
+        "analysis": "Discord Nitro+Game Pass整合是微软“Xbox无处不在“战略的社交层落地(What)。Discord拥有全球最大的游戏玩家社区（2026年月活超2亿），与Game Pass的整合意味着微软将触角伸向了Xbox主机之外的核心PC/移动游戏用户——这些用户此前可能从未考虑过Xbox生态(Why)。$13.99 Nitro用户可零成本获得Game Pass Starter，等于微软用订阅分成换Discord的品牌曝光和用户导流，成本比传统广告低得多(So What)。对行业影响：跨平台订阅整合趋势已成——未来1-2年内可能看到PS Plus与另一主流社交平台类似整合，主机战争将升级为“生态系统战争“(What Next)。",
         "relatedNewsIds": [
             225,
             241
@@ -3611,7 +4172,7 @@ const newsData = [
     {
         "id": 287,
         "title": "Win11 Xbox模式实测确认：NVIDIA显卡提升显著高于AMD，多款游戏帧率改善",
-        "summary": "Windows 11五月更新正式面向所有PC推出Xbox模式（原\"Xbox全屏体验\"），实测数据显示该模式能在NVIDIA和AMD显卡平台上带来显著性能提升。测试表明NVIDIA显卡的增益幅度明显高于AMD，差异可能源于驱动优化程度不同。Xbox模式将PC切换为\"Xbox全屏专属体验\"，减少RAM占用并优化游戏流畅度，对CPU受限场景提升尤为明显。",
+        "summary": "Windows 11五月更新正式面向所有PC推出Xbox模式（原“Xbox全屏体验“），实测数据显示该模式能在NVIDIA和AMD显卡平台上带来显著性能提升。测试表明NVIDIA显卡的增益幅度明显高于AMD，差异可能源于驱动优化程度不同。Xbox模式将PC切换为“Xbox全屏专属体验“，减少RAM占用并优化游戏流畅度，对CPU受限场景提升尤为明显。",
         "source": "Windows Central",
         "sourceUrl": "https://www.windowscentral.com/microsoft/windows-11/windows-11s-may-2026-update-is-packed-with-11-powerful-features-you-cant-ignore",
         "sourceUrls": [
@@ -3687,7 +4248,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "PS6掌机Canis与主机同步发售是索尼硬件战略的重大转向(What)。索尼此前在掌机领域仅有过PS Vita（2011年），且因缺乏独占内容和网络服务最终败给3DS；此次Canis定位为PS6的'配套便携形态'而非独立产品，吸取了Vita教训——与Nintendo Switch 2的'同款游戏多形态'策略正面竞争(Why)。30%显存差距设计合理：分辨率降级不影响游戏功能完整性，避免了Xbox Series S的性能阉割争议；399-499美元定价若能实现，掌机将成为PS6生态的差异化竞争力，而非拖累利润的负担(So What)。2027年秋季与PS6主机同步意味着索尼将在2027年假期档同时迎战Nintendo Switch 2（中期）和Xbox Project Helix（若Helix同年），三主机同台竞技将是2013年以来最激烈的主机更新周期(What Next)。",
+        "analysis": "PS6掌机Canis与主机同步发售是索尼硬件战略的重大转向(What)。索尼此前在掌机领域仅有过PS Vita（2011年），且因缺乏独占内容和网络服务最终败给3DS；此次Canis定位为PS6的‘配套便携形态‘而非独立产品，吸取了Vita教训——与Nintendo Switch 2的‘同款游戏多形态‘策略正面竞争(Why)。30%显存差距设计合理：分辨率降级不影响游戏功能完整性，避免了Xbox Series S的性能阉割争议；399-499美元定价若能实现，掌机将成为PS6生态的差异化竞争力，而非拖累利润的负担(So What)。2027年秋季与PS6主机同步意味着索尼将在2027年假期档同时迎战Nintendo Switch 2（中期）和Xbox Project Helix（若Helix同年），三主机同台竞技将是2013年以来最激烈的主机更新周期(What Next)。",
         "relatedNewsIds": [
             264,
             263,
@@ -3715,8 +4276,8 @@ const newsData = [
     },
     {
         "id": 264,
-        "title": "微软Project Helix技术详情公开：光追性能\"数量级\"超越XSX，采用Zstandard压缩技术",
-        "summary": "微软在Xbox游戏开发者更新中披露Project Helix（Xbox下代主机）核心规格：光追性能\"数量级\"超越Series X，支持Path Tracing、ML超采样和多帧生成；同时大量利用Zstandard直接从SSD流式读取资产，采用最新神经纹理压缩技术。Zstandard由Facebook开发，是一种高效实时压缩算法，可显著减少游戏存储空间需求并加速加载。Project Helix预计2027年alpha版本，2028年全面上市。",
+        "title": "微软Project Helix技术详情公开：光追性能“数量级“超越XSX，采用Zstandard压缩技术",
+        "summary": "微软在Xbox游戏开发者更新中披露Project Helix（Xbox下代主机）核心规格：光追性能“数量级“超越Series X，支持Path Tracing、ML超采样和多帧生成；同时大量利用Zstandard直接从SSD流式读取资产，采用最新神经纹理压缩技术。Zstandard由Facebook开发，是一种高效实时压缩算法，可显著减少游戏存储空间需求并加速加载。Project Helix预计2027年alpha版本，2028年全面上市。",
         "source": "GamingBolt",
         "sourceUrl": "https://gamingbolt.com/project-helix-will-lean-heavily-into-zstandard-to-directly-stream-assets-from-the-ssd",
         "sourceUrls": [
@@ -3752,7 +4313,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "Project Helix光追\"数量级\"超越XSX+全面拥抱Zstandard是微软技术路线图的根本性升级(What)。\"数量级\"意味着10倍以上光追性能，意味着Helix将具备当前XSX完全无法实现的光照效果——这不仅是硬件迭代，更是Xbox在主机技术上首次具备与PC高端显卡正面对话的资本(Why)。Zstandard+DirectStorage组合直击当前主机最大的技术瓶颈：存储读取速度。GTA 6安装包接近200GB已暴露传统压缩技术极限；Zstandard配合神经纹理压缩可让开发者用更少存储空间实现更高画质，同时保持流畅加载(So What)。2027 alpha→2028 full launch的时间表意味着Helix将在PS6发布后1年再全面上市，微软策略是以技术代差换时间——用\"PS6发布后的次世代Plus体验\"吸引从PS转投Xbox的核心玩家(What Next)。",
+        "analysis": "Project Helix光追“数量级“超越XSX+全面拥抱Zstandard是微软技术路线图的根本性升级(What)。“数量级“意味着10倍以上光追性能，意味着Helix将具备当前XSX完全无法实现的光照效果——这不仅是硬件迭代，更是Xbox在主机技术上首次具备与PC高端显卡正面对话的资本(Why)。Zstandard+DirectStorage组合直击当前主机最大的技术瓶颈：存储读取速度。GTA 6安装包接近200GB已暴露传统压缩技术极限；Zstandard配合神经纹理压缩可让开发者用更少存储空间实现更高画质，同时保持流畅加载(So What)。2027 alpha→2028 full launch的时间表意味着Helix将在PS6发布后1年再全面上市，微软策略是以技术代差换时间——用“PS6发布后的次世代Plus体验“吸引从PS转投Xbox的核心玩家(What Next)。",
         "relatedNewsIds": [
             265,
             230,
@@ -3793,13 +4354,13 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "Unity营收+17%但净亏损扩大3.5倍，说明战略转型阵痛期仍在继续(What)。IronSource关闭和Supersonic剥离是Unity 2023年激进移动端扩张的清算——彼时Unity以全部换股方式溢价收购IronSource（估值140亿美元），如今减值2.79亿美元相当于承认那次收购的战略失误(Why)。营收增长+股价大涨说明华尔街将战略收缩解读为利好：Unity回归游戏引擎核心业务比\"平台化扩张\"更符合市场预期。AI工具Beta的推出是Unity在后Unity 6时代的差异化重点——AI辅助开发可降低UE5的竞争压力，留住对价格敏感的独立开发者(So What)。游戏引擎市场Unity（40%全球份额）与Epic UE5（60% AAA份额）的竞争将在AI工具链上决定下一波开发者选择(What Next)。",
+        "analysis": "Unity营收+17%但净亏损扩大3.5倍，说明战略转型阵痛期仍在继续(What)。IronSource关闭和Supersonic剥离是Unity 2023年激进移动端扩张的清算——彼时Unity以全部换股方式溢价收购IronSource（估值140亿美元），如今减值2.79亿美元相当于承认那次收购的战略失误(Why)。营收增长+股价大涨说明华尔街将战略收缩解读为利好：Unity回归游戏引擎核心业务比“平台化扩张“更符合市场预期。AI工具Beta的推出是Unity在后Unity 6时代的差异化重点——AI辅助开发可降低UE5的竞争压力，留住对价格敏感的独立开发者(So What)。游戏引擎市场Unity（40%全球份额）与Epic UE5（60% AAA份额）的竞争将在AI工具链上决定下一波开发者选择(What Next)。",
         "relatedNewsIds": []
     },
     {
         "id": 260,
         "title": "卡普空PRAGMATA 16天销量破200万份，Switch 2多平台策略推动新IP快速破圈",
-        "summary": "卡普空宣布，2026年4月17日发售的全新IP《PRAGMATA》（识质存在）16天累计销量突破200万份。2天破百万、16天破200万，卡普空以\"试玩版先行+Switch 2多平台同步\"策略推动新IP快速破圈。卡普空还宣布《生化危机：安魂曲》全球销量已达700万份，进一步巩固其2026年双爆款格局。PRAGMATA现已登陆PS5、Xbox Series X|S、Nintendo Switch 2和PC（Steam）全平台。",
+        "summary": "卡普空宣布，2026年4月17日发售的全新IP《PRAGMATA》（识质存在）16天累计销量突破200万份。2天破百万、16天破200万，卡普空以“试玩版先行+Switch 2多平台同步“策略推动新IP快速破圈。卡普空还宣布《生化危机：安魂曲》全球销量已达700万份，进一步巩固其2026年双爆款格局。PRAGMATA现已登陆PS5、Xbox Series X|S、Nintendo Switch 2和PC（Steam）全平台。",
         "source": "Capcom IR",
         "sourceUrl": "https://www.capcom.co.jp/ir/english/news/html/e260507.html",
         "sourceUrls": [
@@ -3835,7 +4396,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "PRAGMATA 16天200万份+2天100万的速度说明卡普空的新IP策略成功(What)。卡普空此前长期依赖《生化危机》《怪物猎人》《街霸》等成熟IP，新IP产出极少；PRAGMATA从科幻Hack+Slash类型切入，规避了与自身强势IP的竞争，同时借助Switch 2多平台同步首发最大化市场覆盖(Why)。试玩版先行是关键的营销创新：卡普空在正式发售前提供免费试玩，让玩家在购买决策前充分体验核心玩法，降低了新IP的\"陌生感门槛\"；16天转化率说明试玩→购买的漏斗效率极高(So What)。2026卡普空双爆款（PRAGMATA+RE安魂曲700万）意味着日本厂商在主机游戏市场的话语权持续强化，对比欧美厂商的研发效率劣势正在缩小(What Next)。",
+        "analysis": "PRAGMATA 16天200万份+2天100万的速度说明卡普空的新IP策略成功(What)。卡普空此前长期依赖《生化危机》《怪物猎人》《街霸》等成熟IP，新IP产出极少；PRAGMATA从科幻Hack+Slash类型切入，规避了与自身强势IP的竞争，同时借助Switch 2多平台同步首发最大化市场覆盖(Why)。试玩版先行是关键的营销创新：卡普空在正式发售前提供免费试玩，让玩家在购买决策前充分体验核心玩法，降低了新IP的“陌生感门槛“；16天转化率说明试玩→购买的漏斗效率极高(So What)。2026卡普空双爆款（PRAGMATA+RE安魂曲700万）意味着日本厂商在主机游戏市场的话语权持续强化，对比欧美厂商的研发效率劣势正在缩小(What Next)。",
         "relatedNewsIds": [
             247
         ]
@@ -3843,7 +4404,7 @@ const newsData = [
     {
         "id": 259,
         "title": "索尼支付7800万美元和解PlayStation Store诉讼，数字游戏垄断指控告一段落",
-        "summary": "加州联邦法官初步批准索尼PlayStation Store集体诉讼和解方案，索尼预计支付7800万美元（约合人民币5.7亿元），用于解决\"消除竞争并垄断市场\"的指控。该诉讼指控索尼通过限制第三方零售商销售PlayStation数字版游戏、设定最低价格等方式垄断数字游戏市场。符合条件的美国PlayStation用户可能获得积分补偿，但金额可能较小。索尼拒绝承认不当行为。",
+        "summary": "加州联邦法官初步批准索尼PlayStation Store集体诉讼和解方案，索尼预计支付7800万美元（约合人民币5.7亿元），用于解决“消除竞争并垄断市场“的指控。该诉讼指控索尼通过限制第三方零售商销售PlayStation数字版游戏、设定最低价格等方式垄断数字游戏市场。符合条件的美国PlayStation用户可能获得积分补偿，但金额可能较小。索尼拒绝承认不当行为。",
         "source": "Wired",
         "sourceUrl": "https://www.wired.com/story/what-to-know-about-sony-785-million-playstation-settlement/",
         "sourceUrls": [
@@ -3875,7 +4436,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "7800万美元和解是索尼PlayStation数字分发垄断争议的阶段性结束(What)。诉讼核心指控是索尼禁止第三方零售商（如Amazon、BestBuy）折扣销售PlayStation数字版游戏，并要求实体零售商维持最低价格——这限制了价格竞争、推高了数字游戏定价。$7.85M相对索尼PlayStation业务规模极小（约等于PS5单日全球营收），但和解后索尼将被迫允许零售商在数字游戏促销上拥有更多灵活度(Why)。对数字游戏定价的影响：和解后零售商可能获得更大的折扣权限，PSN数字游戏价格战可能加剧；同时PS5主机涨价+数字游戏可能降价形成组合策略，平衡索尼收入(So What)。Epic诉Apple第九巡回法院裁决与本案均为数字平台垄断案，但Sony和解金额远小于Apple案的潜在风险，反映出索尼选择\"快速和解\"以避免更高法律成本(What Next)。",
+        "analysis": "7800万美元和解是索尼PlayStation数字分发垄断争议的阶段性结束(What)。诉讼核心指控是索尼禁止第三方零售商（如Amazon、BestBuy）折扣销售PlayStation数字版游戏，并要求实体零售商维持最低价格——这限制了价格竞争、推高了数字游戏定价。$7.85M相对索尼PlayStation业务规模极小（约等于PS5单日全球营收），但和解后索尼将被迫允许零售商在数字游戏促销上拥有更多灵活度(Why)。对数字游戏定价的影响：和解后零售商可能获得更大的折扣权限，PSN数字游戏价格战可能加剧；同时PS5主机涨价+数字游戏可能降价形成组合策略，平衡索尼收入(So What)。Epic诉Apple第九巡回法院裁决与本案均为数字平台垄断案，但Sony和解金额远小于Apple案的潜在风险，反映出索尼选择“快速和解“以避免更高法律成本(What Next)。",
         "relatedNewsIds": [
             256
         ]
@@ -3883,7 +4444,7 @@ const newsData = [
     {
         "id": 1497,
         "title": "索尼官宣所有第一方工作室全面整合AI技术，与万代南梦宫联合探索生成式AI",
-        "summary": "索尼在FY2025 Q4财报中正式宣布PlayStation全部工作室正在整合AI，将与万代南梦宫合作推进生成式AI应用，用于QA加速、3D建模、动画生产等，CEO强调AI目标是\"放大\"而非\"取代\"人类创造力",
+        "summary": "索尼在FY2025 Q4财报中正式宣布PlayStation全部工作室正在整合AI，将与万代南梦宫合作推进生成式AI应用，用于QA加速、3D建模、动画生产等，CEO强调AI目标是“放大“而非“取代“人类创造力",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -3976,7 +4537,7 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "PS5累计9370万台，但Q4旺季腰斩是生命末期的危险信号(What)。9370万已超越PS4（1.17亿最终销量）在同周期的表现，但Q4旺季出货150万同比-37.5%说明玩家正在系统性\"持币等待\"PS6——历史数据显示主机换代前12-18个月销量会出现规律性下滑，PS5已提前进入这个阶段(Why)。数字游戏占比攀升是索尼喜忧参半的消息：喜的是数字版毛利率更高、用户黏性更强；忧的是硬件出货量下降意味着新用户获取在减少、存量用户正在从购买硬件转向纯粹的数字消费——这对PS6发售初期装机冲刺不利(So What)。索尼预计2027年假期档发售PS6，这意味着2026年PS5销量将持续下滑，主机生命周期末期的内容策略（向下兼容+老游戏重置）将比硬件销售更重要(What Next)。",
+        "analysis": "PS5累计9370万台，但Q4旺季腰斩是生命末期的危险信号(What)。9370万已超越PS4（1.17亿最终销量）在同周期的表现，但Q4旺季出货150万同比-37.5%说明玩家正在系统性“持币等待“PS6——历史数据显示主机换代前12-18个月销量会出现规律性下滑，PS5已提前进入这个阶段(Why)。数字游戏占比攀升是索尼喜忧参半的消息：喜的是数字版毛利率更高、用户黏性更强；忧的是硬件出货量下降意味着新用户获取在减少、存量用户正在从购买硬件转向纯粹的数字消费——这对PS6发售初期装机冲刺不利(So What)。索尼预计2027年假期档发售PS6，这意味着2026年PS5销量将持续下滑，主机生命周期末期的内容策略（向下兼容+老游戏重置）将比硬件销售更重要(What Next)。",
         "relatedNewsIds": [
             231,
             265,
@@ -3985,7 +4546,7 @@ const newsData = [
     },
     {
         "id": 261,
-        "title": "Valve硬件战略升级：从\"支线任务\"到\"全面雄心\"，Steam Machine定价与存储争议持续",
+        "title": "Valve硬件战略升级：从“支线任务“到“全面雄心“，Steam Machine定价与存储争议持续",
         "summary": "GamesIndustry.biz发表评论文章，分析Valve硬件业务从Steam Controller到Steam Machine的发展轨迹，指出Valve硬件已从早期的边缘实验项目发展为公司的核心战略方向。同时，由于内存短缺，Steam Machine定价传出暴涨传闻，Steam Deck也无法运行带Enigma DRM的游戏（如卡普空《生化危机》三部曲），引发平台兼容争议。分析师预测Steam Machine定价应在700美元以下才能有市场竞争力。",
         "source": "GamesIndustry.biz",
         "sourceUrl": "https://www.gamesindustry.biz/valve-is-pivoting-from-a-side-quest-to-a-full-blown-ambition-with-its-hardware",
@@ -4022,7 +4583,7 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "Valve硬件从\"支线任务\"到\"全面雄心\"标志着Steam生态从软件平台向软硬一体化扩张(What)。Valve历史上对硬件保持\"保守实验\"态度——Steam Controller（2015）、Steam Link（2015）、Valve Index（2019）都是针对性补足Steam生态短板的单点突破；2026年的Steam Machine是首次系统性\"平台级\"硬件布局，说明Valve判断PC游戏客厅化趋势已成熟(Why)。内存短缺和DRM争议是Valve硬件扩张的现实阻力：RAM涨价压缩硬件利润空间，Enigma DRM导致Steam Deck对部分主流游戏无法运行，说明Valve在软件生态的话语权尚未延伸到所有PC游戏(So What)。Steam Machine若成功，Valve将成为继Apple之后又一个\"软件定义硬件\"的生态构建者，对抗微软Xbox和索尼PS的客厅地位(What Next)。",
+        "analysis": "Valve硬件从“支线任务“到“全面雄心“标志着Steam生态从软件平台向软硬一体化扩张(What)。Valve历史上对硬件保持“保守实验“态度——Steam Controller（2015）、Steam Link（2015）、Valve Index（2019）都是针对性补足Steam生态短板的单点突破；2026年的Steam Machine是首次系统性“平台级“硬件布局，说明Valve判断PC游戏客厅化趋势已成熟(Why)。内存短缺和DRM争议是Valve硬件扩张的现实阻力：RAM涨价压缩硬件利润空间，Enigma DRM导致Steam Deck对部分主流游戏无法运行，说明Valve在软件生态的话语权尚未延伸到所有PC游戏(So What)。Steam Machine若成功，Valve将成为继Apple之后又一个“软件定义硬件“的生态构建者，对抗微软Xbox和索尼PS的客厅地位(What Next)。",
         "relatedNewsIds": [
             232
         ]
@@ -4129,7 +4690,7 @@ const newsData = [
     },
     {
         "id": 1498,
-        "title": "索尼称PS6发售时间与定价\"尚未决定\"，考虑改变商业模式",
+        "title": "索尼称PS6发售时间与定价“尚未决定“，考虑改变商业模式",
         "summary": "索尼总裁兼CEO Hiroki Totoki在财报说明会上表示，受内存成本上涨等因素影响，PS6上市时间及定价尚未确定，公司正探索包括调整商业模式在内的多种应对方案",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
@@ -4185,25 +4746,6 @@ const newsData = [
         "relatedNewsIds": []
     },
     {
-        "id": 504,
-        "title": "Unity推出AI工具套件",
-        "summary": "Unity AI Beta推出智能助手功能，帮助开发者更有效地使用平台工具，加速游戏开发",
-        "source": "gamesindustry.biz",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "policy",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-05-08",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
         "id": 505,
         "title": "PS5全球出货量突破9370万台！主机生态正“换挡” 玩家倾向购买数字版游戏",
         "summary": "PS5全球出货量突破9370万。",
@@ -4218,25 +4760,6 @@ const newsData = [
             "平台发行"
         ],
         "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 506,
-        "title": "索尼账面亏了7.65亿！曾斥资36亿美元收购Bungie",
-        "summary": "索尼2025财年游戏与网络服务部门营业收入同比增长12%，但因对2022年...",
-        "source": "腾讯文档策展",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-05-08",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
         "tdocMarking": "tdoc-verified",
         "analysis": "",
         "relatedNewsIds": []
@@ -4300,7 +4823,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "Switch 2涨价$50至$499.99是游戏主机生命周期内涨价的罕见案例(What)。AI数据中心对DRAM/HBM的狂热需求导致内存价格翻倍，任天堂从'暂无涨价计划'到正式确认仅3个月，说明成本压力已超出预期承受范围(Why)。这是三大主机首次集体涨价（PS5已涨/Xbox暗示），标志着游戏硬件从'规模降本'时代进入'成本转嫁'时代(So What)。9月1日生效给了玩家3个月窗口期以原价购买，预计Q2-Q3将出现'涨价前抢购潮'，短期提振销量但长期可能压制FY27装机预期（已下调16.9%）。$499的Switch 2将与PS5同价，'性价比掌机'定位面临挑战(What Next)。",
+        "analysis": "Switch 2涨价$50至$499.99是游戏主机生命周期内涨价的罕见案例(What)。AI数据中心对DRAM/HBM的狂热需求导致内存价格翻倍，任天堂从‘暂无涨价计划‘到正式确认仅3个月，说明成本压力已超出预期承受范围(Why)。这是三大主机首次集体涨价（PS5已涨/Xbox暗示），标志着游戏硬件从‘规模降本‘时代进入‘成本转嫁‘时代(So What)。9月1日生效给了玩家3个月窗口期以原价购买，预计Q2-Q3将出现‘涨价前抢购潮‘，短期提振销量但长期可能压制FY27装机预期（已下调16.9%）。$499的Switch 2将与PS5同价，‘性价比掌机‘定位面临挑战(What Next)。",
         "relatedNewsIds": [
             272,
             263,
@@ -4309,8 +4832,8 @@ const newsData = [
     },
     {
         "id": 270,
-        "title": "索尼PS6发售时间与定价\"尚未决定\"，Hiroki Totoki称正探索改变商业模式",
-        "summary": "索尼总裁兼CEO Hiroki Totoki在FY2025财报说明会上表示，受内存成本上涨等因素影响，PS6上市时间及定价尚未确定，公司正探索包括调整商业模式在内的多种应对方案。Totoki称\"我们正在非常谨慎地评估各种可能性\"，分析师预测PS6定价可能在$599-$799区间，发售窗口或在2027年假期档或2028年初。",
+        "title": "索尼PS6发售时间与定价“尚未决定“，Hiroki Totoki称正探索改变商业模式",
+        "summary": "索尼总裁兼CEO Hiroki Totoki在FY2025财报说明会上表示，受内存成本上涨等因素影响，PS6上市时间及定价尚未确定，公司正探索包括调整商业模式在内的多种应对方案。Totoki称“我们正在非常谨慎地评估各种可能性“，分析师预测PS6定价可能在$599-$799区间，发售窗口或在2027年假期档或2028年初。",
         "source": "VGC",
         "sourceUrl": "https://www.videogameschronicle.com/news/sony-ps6-price-release-date-undecided-hiroki-totoki/",
         "sourceUrls": [
@@ -4346,7 +4869,7 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "PS6定价\"尚未决定\"反映索尼正面临前所未有的主机定价困境(What)。PS5 2019年以$399/499发售后因内存涨价已涨至$449/499，PS6若采用与PS5类似的性能定位，成本压力将远大于上一代——$600-800的定价区间几乎不可避免(Why)。\"探索改变商业模式\"是关键信号：索尼可能从纯硬件销售转向类似iPhone的\"订阅制主机\"（硬件低价绑定长期服务费），或在PS6生命周期内更激进推数字版降低硬件补贴(So What)。对玩家的影响：若PS6定价超$600，Switch 2（$499）和可能的Steam Deck将形成更有吸引力的替代，主机性价比之争将在2027-2028年变得异常激烈(What Next)。",
+        "analysis": "PS6定价“尚未决定“反映索尼正面临前所未有的主机定价困境(What)。PS5 2019年以$399/499发售后因内存涨价已涨至$449/499，PS6若采用与PS5类似的性能定位，成本压力将远大于上一代——$600-800的定价区间几乎不可避免(Why)。“探索改变商业模式“是关键信号：索尼可能从纯硬件销售转向类似iPhone的“订阅制主机“（硬件低价绑定长期服务费），或在PS6生命周期内更激进推数字版降低硬件补贴(So What)。对玩家的影响：若PS6定价超$600，Switch 2（$499）和可能的Steam Deck将形成更有吸引力的替代，主机性价比之争将在2027-2028年变得异常激烈(What Next)。",
         "relatedNewsIds": [
             265,
             263,
@@ -4393,7 +4916,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "36亿美元收购→7.65亿美元减值，反映索尼历史上最失败的大型收购(What)。Bungie在2022年被索尼收购时估值36亿美元，核心资产是《命运2》的持续运营收入和\"AAA多平台即服务开发商\"的品牌溢价；如今减值五分之一以上，说明索尼承认该收购高估了Bungie的长期盈利能力(Why)。《命运2》用户流失和《马拉松》失败是双重打击——《命运2》曾是订阅服务的核心吸引点，《马拉松》作为索尼力推的PVEVE新作表现平庸，未能复制《光环》时代的IP号召力(So What)。教训：索尼的\"服务型游戏\"转型战略（Bungie+Jade Raymond+ZeniMax）整体未达预期，Bungie只是其中最典型的失败案例；未来索尼将更谨慎评估服务型游戏的收购估值(What Next)。",
+        "analysis": "36亿美元收购→7.65亿美元减值，反映索尼历史上最失败的大型收购(What)。Bungie在2022年被索尼收购时估值36亿美元，核心资产是《命运2》的持续运营收入和“AAA多平台即服务开发商“的品牌溢价；如今减值五分之一以上，说明索尼承认该收购高估了Bungie的长期盈利能力(Why)。《命运2》用户流失和《马拉松》失败是双重打击——《命运2》曾是订阅服务的核心吸引点，《马拉松》作为索尼力推的PVEVE新作表现平庸，未能复制《光环》时代的IP号召力(So What)。教训：索尼的“服务型游戏“转型战略（Bungie+Jade Raymond+ZeniMax）整体未达预期，Bungie只是其中最典型的失败案例；未来索尼将更谨慎评估服务型游戏的收购估值(What Next)。",
         "relatedNewsIds": [
             247,
             234
@@ -4438,7 +4961,7 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "Switch 2首年1986万台+涨价双重重磅，显示任天堂正从\"扩张期\"转向\"收割期\"(What)。1986万已超越初代Switch同周期表现，证明$449定价+Mario Kart World策略成功；但营业利润率从24.3%降至15.6%说明硬件成本（尤其是RAM）侵蚀了利润，涨价是弥补成本压力而非追求更高利润率(Why)。Switch全系涨价（9月1日生效）将测试玩家价格敏感度——此前NS2已在部分市场涨价一次，若玩家接受度低，可能对2027财年销量预测（已下调）造成压力；若接受度高，任天堂将在PS6发售前尽可能提高客单价(So What)。累计1.5592亿台距PS2(1.55亿台)仅差400万台，Switch全系超越PS2几乎成定局——这将使Switch成为游戏史上销量最高游戏主机(What Next)。",
+        "analysis": "Switch 2首年1986万台+涨价双重重磅，显示任天堂正从“扩张期“转向“收割期“(What)。1986万已超越初代Switch同周期表现，证明$449定价+Mario Kart World策略成功；但营业利润率从24.3%降至15.6%说明硬件成本（尤其是RAM）侵蚀了利润，涨价是弥补成本压力而非追求更高利润率(Why)。Switch全系涨价（9月1日生效）将测试玩家价格敏感度——此前NS2已在部分市场涨价一次，若玩家接受度低，可能对2027财年销量预测（已下调）造成压力；若接受度高，任天堂将在PS6发售前尽可能提高客单价(So What)。累计1.5592亿台距PS2(1.55亿台)仅差400万台，Switch全系超越PS2几乎成定局——这将使Switch成为游戏史上销量最高游戏主机(What Next)。",
         "relatedNewsIds": [
             233,
             247,
@@ -4448,7 +4971,7 @@ const newsData = [
     {
         "id": 1487,
         "title": "Supercell收购Metacore",
-        "summary": "Supercell收购Merge Mansion，将其加入其\"实时游戏产品组合\"。其游戏《Merge Mansion》于 2020 年发布，至今下载量已超过 6000 万次。",
+        "summary": "Supercell收购Merge Mansion，将其加入其“实时游戏产品组合“。其游戏《Merge Mansion》于 2020 年发布，至今下载量已超过 6000 万次。",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -4509,7 +5032,7 @@ const newsData = [
     },
     {
         "id": 1490,
-        "title": "微软次世代主机 Project Helix 技术详情公开：光追性能\"数量级\"超Xbox Series X",
+        "title": "微软次世代主机 Project Helix 技术详情公开：光追性能“数量级“超Xbox Series X",
         "summary": "微软在Xbox游戏开发者更新中披露Project Helix（Xbox下代主机）核心规格：光追性能数量级超越Series X，支持Path Tracing、ML超采样和多帧生成；同时大量利用Zstandard直接从SSD流式读取资产，采用最新神经纹理压缩技术",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
@@ -4558,49 +5081,6 @@ const newsData = [
         "date": "2026-05-07",
         "tags": [
             "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 498,
-        "title": "Supercell收购Metacore",
-        "summary": "Supercell收购Merge Mansion，将其加入其\"实时游戏产品组合\"。其游戏《Merge Mansion》于 2020 年发布，至今下载量已超过 6000 万次。",
-        "source": "gamesindustry.biz",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "policy",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-05-07",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 499,
-        "title": "Xbox推出新版开机动画及音效",
-        "summary": "微软 Xbox CEO 阿莎·夏尔马宣布 Xbox 主机将于 5 月 13 日上线新的开机音效和开机动画，此次更新是新版 Xbox 标志相关调整的延伸",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/947/021.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/947/021.htm"
-            }
-        ],
-        "category": "policy",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-05-07",
-        "tags": [
-            "业内资讯"
         ],
         "sentiment": "neutral",
         "tdocMarking": "tdoc-verified",
@@ -4672,7 +5152,7 @@ const newsData = [
     {
         "id": 317,
         "title": "《Mixtape》OC94登顶2026年OpenCritic最高评分，3小时叙事冒险引发定价争议",
-        "summary": "Beethoven & Dinosaur开发、Annapurna Interactive发行的《Mixtape》5月7日发售，OpenCritic均分94（推荐率98%），成为2026年迄今OpenCritic评分最高的游戏。但3小时流程+$20定价引发玩家两极分化：部分认为'精品短体验物有所值'，另一部分认为'性价比过低'。Game Pass同步入库缓和了定价争议。该作以90年代青春期叙事+互动迷你游戏+精选授权原声带著称。",
+        "summary": "Beethoven & Dinosaur开发、Annapurna Interactive发行的《Mixtape》5月7日发售，OpenCritic均分94（推荐率98%），成为2026年迄今OpenCritic评分最高的游戏。但3小时流程+$20定价引发玩家两极分化：部分认为‘精品短体验物有所值‘，另一部分认为‘性价比过低‘。Game Pass同步入库缓和了定价争议。该作以90年代青春期叙事+互动迷你游戏+精选授权原声带著称。",
         "source": "TheGamer",
         "sourceUrl": "https://www.thegamer.com/mixtape-highest-review-scores-2026/",
         "sourceUrls": [
@@ -4708,7 +5188,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "Mixtape OC94超越了FH6的MC91成为2026年最高评分游戏(OpenCritic口径)(What)。3小时流程+$20的定价争议本质是'游戏价值论'的碰撞：传统玩家按小时计价（$6.7/h偏高），但叙事体验派认为情感密度才是核心价值(Why)。Game Pass入库是Annapurna的明智选择——让定价争议在订阅制框架内消解，同时扩大曝光(So What)。Mixtape的成功可能推动更多'短精品'叙事游戏采用'首发Game Pass+独立定价'双轨策略，改变独立游戏首发模式(What Next)。",
+        "analysis": "Mixtape OC94超越了FH6的MC91成为2026年最高评分游戏(OpenCritic口径)(What)。3小时流程+$20的定价争议本质是‘游戏价值论‘的碰撞：传统玩家按小时计价（$6.7/h偏高），但叙事体验派认为情感密度才是核心价值(Why)。Game Pass入库是Annapurna的明智选择——让定价争议在订阅制框架内消解，同时扩大曝光(So What)。Mixtape的成功可能推动更多‘短精品‘叙事游戏采用‘首发Game Pass+独立定价‘双轨策略，改变独立游戏首发模式(What Next)。",
         "relatedNewsIds": [
             295,
             299
@@ -4717,7 +5197,7 @@ const newsData = [
     {
         "id": 273,
         "title": "卡普空《识质存在》(PRAGMATA)16天销量破200万份，力压《红色沙漠》登顶东南亚PS5下载榜",
-        "summary": "卡普空新IP《识质存在》（PRAGMATA）发售16天后累计销量突破200万份，此前曾创下2天破百万的最快纪录。同期东南亚PSN下载榜显示，《识质存在》力压《红色沙漠》《死亡岛2》等热门作品登顶PS5榜首，证明卡普空\"试玩版+多平台同步\"策略的有效性。游戏采用RE Engine引擎开发，支持Switch 2等多平台。",
+        "summary": "卡普空新IP《识质存在》（PRAGMATA）发售16天后累计销量突破200万份，此前曾创下2天破百万的最快纪录。同期东南亚PSN下载榜显示，《识质存在》力压《红色沙漠》《死亡岛2》等热门作品登顶PS5榜首，证明卡普空“试玩版+多平台同步“策略的有效性。游戏采用RE Engine引擎开发，支持Switch 2等多平台。",
         "source": "IT之家",
         "sourceUrl": "https://www.ithome.com/0/947/269.htm",
         "sourceUrls": [
@@ -4745,15 +5225,15 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "16天200万份验证了卡普空新IP策略的可行性(What)。《识质存在》是卡普空2026年主推的新IP，采用\"Demo先行+多平台同步\"策略——玩家可免费下载试玩版体验前两章，再决定是否购买完整版；这种模式降低了首发门槛，同时通过试玩口碑传播扩大受众(Why)。对行业参考：试玩版策略对\"高概念但未知市场接受度\"的新IP尤其有效，可视为对\"3A新IP投资风险\"的对冲工具；若《识质存在》全年销量能达到500万份，将成为卡普空\"非续作IP\"的里程碑(So What)。卡普空2026年凭借《生化危机9安魂曲》和《识质存在》双线发力，显示其已从\"炒冷饭大师\"转型为\"新IP孵化器\"(What Next)。",
+        "analysis": "16天200万份验证了卡普空新IP策略的可行性(What)。《识质存在》是卡普空2026年主推的新IP，采用“Demo先行+多平台同步“策略——玩家可免费下载试玩版体验前两章，再决定是否购买完整版；这种模式降低了首发门槛，同时通过试玩口碑传播扩大受众(Why)。对行业参考：试玩版策略对“高概念但未知市场接受度“的新IP尤其有效，可视为对“3A新IP投资风险“的对冲工具；若《识质存在》全年销量能达到500万份，将成为卡普空“非续作IP“的里程碑(So What)。卡普空2026年凭借《生化危机9安魂曲》和《识质存在》双线发力，显示其已从“炒冷饭大师“转型为“新IP孵化器“(What Next)。",
         "relatedNewsIds": [
             260
         ]
     },
     {
         "id": 276,
-        "title": "Griffin Gaming Partners推出1亿美元独立游戏基金\"Special Opportunities Fund\"",
-        "summary": "Griffin Gaming Partners宣布推出规模达1亿美元的独立游戏基金\"Special Opportunities Fund\"，采用收入分成模式而非传统股权模式。Hooded Horse CEO Tim Bender将领导该基金的投资决策。收入分成模式（Revenue Share）意味着投资者按游戏未来收入比例分成，而非要求固定股权回报，被视为更适合独立游戏高风险高回报特征的创新融资方式。",
+        "title": "Griffin Gaming Partners推出1亿美元独立游戏基金“Special Opportunities Fund“",
+        "summary": "Griffin Gaming Partners宣布推出规模达1亿美元的独立游戏基金“Special Opportunities Fund“，采用收入分成模式而非传统股权模式。Hooded Horse CEO Tim Bender将领导该基金的投资决策。收入分成模式（Revenue Share）意味着投资者按游戏未来收入比例分成，而非要求固定股权回报，被视为更适合独立游戏高风险高回报特征的创新融资方式。",
         "source": "GamesIndustry.biz",
         "sourceUrl": "https://www.gamesindustry.biz/griffin-gaming-partners-launches-100m-indie-game-fund",
         "sourceUrls": [
@@ -4776,7 +5256,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "1亿美元独立游戏基金+收入分成模式是资本对独立游戏风险结构的重新定价(What)。传统股权融资要求固定回报率和退出机制，对收入不稳定的独立游戏而言过于刚性；收入分成模式（Revenue Share）按游戏实际收入比例分成，对开发者更友好——若游戏失败则无固定债务，若成功则投资者获得更高长期回报(Why)。Tim Bender（Hooded Horse CEO）领导该基金是关键信号：Hooded Horse以发行独立游戏著称，其成功经验（Blind Swordsman、Rollerdrome等）将转化为投资判断标准——这意味着该基金不是纯财务投资，而是\"产业资本\"式的战略扶持(So What)。独立游戏融资从\"股权\"转向\"收入分成\"可能成为行业新趋势，将降低独立游戏开发者的融资门槛，促进更多创新实验(What Next)。",
+        "analysis": "1亿美元独立游戏基金+收入分成模式是资本对独立游戏风险结构的重新定价(What)。传统股权融资要求固定回报率和退出机制，对收入不稳定的独立游戏而言过于刚性；收入分成模式（Revenue Share）按游戏实际收入比例分成，对开发者更友好——若游戏失败则无固定债务，若成功则投资者获得更高长期回报(Why)。Tim Bender（Hooded Horse CEO）领导该基金是关键信号：Hooded Horse以发行独立游戏著称，其成功经验（Blind Swordsman、Rollerdrome等）将转化为投资判断标准——这意味着该基金不是纯财务投资，而是“产业资本“式的战略扶持(So What)。独立游戏融资从“股权“转向“收入分成“可能成为行业新趋势，将降低独立游戏开发者的融资门槛，促进更多创新实验(What Next)。",
         "relatedNewsIds": []
     },
     {
@@ -4825,7 +5305,7 @@ const newsData = [
     {
         "id": 1483,
         "title": "Xbox领导层变动，停止主机Copilot开发",
-        "summary": "新任CEO Asha Sharma承认\"Xbox需要更快行动\"，开始缩减移动端Copilot并停止主机端开发",
+        "summary": "新任CEO Asha Sharma承认“Xbox需要更快行动“，开始缩减移动端Copilot并停止主机端开发",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -4882,7 +5362,7 @@ const newsData = [
     {
         "id": 1486,
         "title": "Valve承诺补货Steam Controller",
-        "summary": "表示\"售罄速度超出预期\"，承诺将补货，\"讨厌不是每个想要的人都能买到\"",
+        "summary": "表示“售罄速度超出预期“，承诺将补货，“讨厌不是每个想要的人都能买到“",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -4901,7 +5381,7 @@ const newsData = [
     {
         "id": 494,
         "title": "PlayStation Store 2026年4月下载榜发布：机器人题材游戏领衔",
-        "summary": "索尼公布4月PS Store全球下载排行，\"机器人伙伴/队友\"主题游戏占据榜首，完整榜单详见PS Blog。",
+        "summary": "索尼公布4月PS Store全球下载排行，“机器人伙伴/队友“主题游戏占据榜首，完整榜单详见PS Blog。",
         "source": "PS Blog",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -4943,7 +5423,7 @@ const newsData = [
     },
     {
         "id": 496,
-        "title": "Take-Two承认Switch 2非\"主要平台\"，但《无主之地4》移植\"仍有可能\"",
+        "title": "Take-Two承认Switch 2非“主要平台“，但《无主之地4》移植“仍有可能“",
         "summary": "在财报会议上，Zelni...",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
@@ -4961,28 +5441,9 @@ const newsData = [
         "relatedNewsIds": []
     },
     {
-        "id": 497,
-        "title": "Valve承诺补货Steam Controller",
-        "summary": "表示\"售罄速度超出预期\"，承诺将补货，\"讨厌不是每个想要的人都能买到\"",
-        "source": "eurogamer.net / gamesindustry.biz",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-05-06",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
         "id": 298,
         "title": "任天堂突袭Star Fox Direct：Star Fox 64重制版6/25登陆Switch 2",
-        "summary": "任天堂5月6日突然举办Star Fox专题Direct（15分钟），公布全新Star Fox游戏——即Star Fox 64的'电影化重制版'，6月25日Switch 2独占发售。宫本茂亲自主持。重制版采用全面翻新的角色设计、关卡画面和过场动画，全程配音。数字版$49.99/实体版$59.99——这是任天堂第二款数字版低于实体版定价的Switch 2游戏（第一款为Yoshi and the Mysterious Book）。同日还公布Yoshi and the Mysterious Book将于5月21日发售。",
+        "summary": "任天堂5月6日突然举办Star Fox专题Direct（15分钟），公布全新Star Fox游戏——即Star Fox 64的‘电影化重制版‘，6月25日Switch 2独占发售。宫本茂亲自主持。重制版采用全面翻新的角色设计、关卡画面和过场动画，全程配音。数字版$49.99/实体版$59.99——这是任天堂第二款数字版低于实体版定价的Switch 2游戏（第一款为Yoshi and the Mysterious Book）。同日还公布Yoshi and the Mysterious Book将于5月21日发售。",
         "source": "Polygon",
         "sourceUrl": "https://www.polygon.com/star-fox-2026-game-nintendo-switch-2/",
         "sourceUrls": [
@@ -5018,7 +5479,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "Star Fox突袭Direct是任天堂'短平快'营销策略的最新案例(What)。15分钟专题Direct而非大型综合Direct，说明任天堂正学习苹果式'单品发布会'模式——聚焦单一IP制造社交媒体爆点，而非传统综合Direct的信息过载(Why)。数字版$49.99 vs 实体版$59.99的价差策略是任天堂推动数字消费的系统性布局：降低数字版门槛+提高实体版'收藏溢价'，引导玩家向更高毛利的数字渠道迁移(So What)。Star Fox 64重制而非全新原创意味着任天堂在经典IP复兴上选择'安全牌'——用怀旧情怀驱动销量，为后续全新Star Fox铺路(What Next)。",
+        "analysis": "Star Fox突袭Direct是任天堂‘短平快‘营销策略的最新案例(What)。15分钟专题Direct而非大型综合Direct，说明任天堂正学习苹果式‘单品发布会‘模式——聚焦单一IP制造社交媒体爆点，而非传统综合Direct的信息过载(Why)。数字版$49.99 vs 实体版$59.99的价差策略是任天堂推动数字消费的系统性布局：降低数字版门槛+提高实体版‘收藏溢价‘，引导玩家向更高毛利的数字渠道迁移(So What)。Star Fox 64重制而非全新原创意味着任天堂在经典IP复兴上选择‘安全牌‘——用怀旧情怀驱动销量，为后续全新Star Fox铺路(What Next)。",
         "relatedNewsIds": [
             272,
             265
@@ -5055,7 +5516,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "65万份首周销量说明回合制策略品类仍有坚实市场基础(What)。《英雄无敌》系列沉寂多年，上一部正统续作《英雄无敌7》2015年发布后口碑销量平平；本作以\"现代引擎+经典玩法\"重新包装，成功触达了怀旧玩家+新用户两个群体(Why)。Steam同时在线6万对策略游戏而言是相当健康的数字——策略游戏用户平均游玩时长高于动作游戏，6万同时在线意味着活跃玩家基数可能在30-50万之间，足以支撑持续的内容更新(So What)。对中国市场的重视是本作的重要策略——3DM等中文媒体报道是主要传播渠道，中文版发布（如有）可能进一步扩大销量(What Next)。",
+        "analysis": "65万份首周销量说明回合制策略品类仍有坚实市场基础(What)。《英雄无敌》系列沉寂多年，上一部正统续作《英雄无敌7》2015年发布后口碑销量平平；本作以“现代引擎+经典玩法“重新包装，成功触达了怀旧玩家+新用户两个群体(Why)。Steam同时在线6万对策略游戏而言是相当健康的数字——策略游戏用户平均游玩时长高于动作游戏，6万同时在线意味着活跃玩家基数可能在30-50万之间，足以支撑持续的内容更新(So What)。对中国市场的重视是本作的重要策略——3DM等中文媒体报道是主要传播渠道，中文版发布（如有）可能进一步扩大销量(What Next)。",
         "relatedNewsIds": []
     },
     {
@@ -5156,7 +5617,7 @@ const newsData = [
     {
         "id": 1472,
         "title": "索尼预计支付7800万美元PlayStation和解金",
-        "summary": "加州法官初步批准了一项集体诉讼和解方案，索尼预计将支付7800万美元用于解决PlayStation Store相关诉讼。该诉讼指控索尼\"消除竞争并垄断市场\"，导致数字游戏价格过高。根据和解方案，符合条���的美国PlayStation用户可能获得赔偿。",
+        "summary": "加州法官初步批准了一项集体诉讼和解方案，索尼预计将支付7800万美元用于解决PlayStation Store相关诉讼。该诉讼指控索尼“消除竞争并垄断市场“，导致数字游戏价格过高。根据和解方案，符合条���的美国PlayStation用户可能获得赔偿。",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -5231,8 +5692,8 @@ const newsData = [
     },
     {
         "id": 1479,
-        "title": "分析师：《GTA 6》首日销量需达2500万份才算\"成功\"，开发成本已超10亿美元",
-        "summary": "彭博社分析指出，《GTA 6》因开发预算超10亿美元，被设定的成功标准是首日销量2500万份；即便首日售出1000-1500万份，仍可能被视为\"灾难性\"表现。美银分析师建议售价应提至80美元甚至更高，以引领行业整体涨价。",
+        "title": "分析师：《GTA 6》首日销量需达2500万份才算“成功“，开发成本已超10亿美元",
+        "summary": "彭博社分析指出，《GTA 6》因开发预算超10亿美元，被设定的成功标准是首日销量2500万份；即便首日售出1000-1500万份，仍可能被视为“灾难性“表现。美银分析师建议售价应提至80美元甚至更高，以引领行业整体涨价。",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -5251,7 +5712,7 @@ const newsData = [
     {
         "id": 484,
         "title": "Xbox高层大换血：2位老将卸任，5位AI系高管空降",
-        "summary": "微软Xbox部门进行重大人事调整，负责人Asha Sharma宣布领导层重组。2位资深高管卸任，同时引入5位具有AI背景的高管加入团队。此次重组旨在\"更快推进\"（move faster）项目开发，反映出微软对Xbox业务深度整合AI技术的战略意图。",
+        "summary": "微软Xbox部门进行重大人事调整，负责人Asha Sharma宣布领导层重组。2位资深高管卸任，同时引入5位具有AI背景的高管加入团队。此次重组旨在“更快推进“（move faster）项目开发，反映出微软对Xbox业务深度整合AI技术的战略意图。",
         "source": "ithome.com / ign.com",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -5287,28 +5748,9 @@ const newsData = [
         "relatedNewsIds": []
     },
     {
-        "id": 486,
-        "title": "PlayStation Plus五月会免游戏上线",
-        "summary": "索尼公布了5月份PlayStation Plus会员免费游戏阵容。本月会免游戏包括：类魂动作RPG《明末：渊虚之羽》（Wuchang: Fallen Feathers）、体育游戏《EA Sports FC 26》等。",
-        "source": "ithome.com / eurogamer.net",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "policy",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-05-05",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
         "id": 487,
         "title": "游戏《控制》销量突破 600 万，续作《控制：共振》仍计划在年内发售",
-        "summary": "Remedy Entertainment宣布《控制》（Control）系列累计销量突破600万份，同时《控制：共振》仍计划在2026年内发售，并定位为\"必须首日购买\"（must-have day-one purchase）的作品。",
+        "summary": "Remedy Entertainment宣布《控制》（Control）系列累计销量突破600万份，同时《控制：共振》仍计划在2026年内发售，并定位为“必须首日购买“（must-have day-one purchase）的作品。",
         "source": "ithome.com / eurogamer.net / gamingbolt.com / gamingbolt.com",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -5325,47 +5767,9 @@ const newsData = [
         "relatedNewsIds": []
     },
     {
-        "id": 488,
-        "title": "索尼预计支付7800万美元PlayStation和解金",
-        "summary": "加州法官初步批准了一项集体诉讼和解方案，索尼预计将支付7800万美元用于解决PlayStation Store相关诉讼。该诉讼指控索尼\"消除竞争并垄断市场\"，导致数字游戏价格过高。根据和解方案，符合条件的美国PlayStation用户可能获得赔偿。",
-        "source": "gamesindustry.biz / eurogamer.net / ign.com",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "policy",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-05-05",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 490,
-        "title": "业内人士分析Steam Machine定价",
-        "summary": "业内分析师预测，Valve的Steam Machine游戏主机定价应在700美元以下才能具有市场竞争力。这一价格定位需要考虑与PS5、Xbox Series X的差异化竞争，同时保持PC游戏的开放性和可升级性。分析师指出，如果定价过高，Steam Machine将难以吸引主流玩家；如果定价过低，则可能影响硬件性能和用户体验。",
-        "source": "ithome.com",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-05-05",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
         "id": 491,
         "title": "Steam Machine价格因内存短缺暴涨（传闻）",
-        "summary": "Valve硬件工程师Steve Cardinali在接受采访时表示，Steam手柄可以顺利发布是因为\"没有内置内存\"。这一言论暗示Steam Machine主机因RAM短缺面临严重的供应链压力和成本上涨。全球AI产业对高性...",
+        "summary": "Valve硬件工程师Steve Cardinali在接受采访时表示，Steam手柄可以顺利发布是因为“没有内置内存“。这一言论暗示Steam Machine主机因RAM短缺面临严重的供应链压力和成本上涨。全球AI产业对高性...",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -5421,7 +5825,7 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "Supercell全资收购Metacore是腾讯系休闲游戏扩张的关键落子(What)。Supercell 2025收入-4%说明其核心IP(Clash of Clans/Brawl Stars)增长见顶，需要新赛道续命；Merge Mansion作为'合并类'头部产品，恰好填补Supercell在女性向休闲赛道的空白(Why)。7亿美元估值对单一产品工作室偏高，但Supercell需要Merge Mansion的DAU和LTV模型来学习'长线运营+混合变现'——这正是Supercell相对Zynga/King的短板(So What)。腾讯通过Supercell+Metacore的'芬兰双雄'布局，在全球休闲游戏市场的份额将进一步扩大，与King(动视暴雪/微软)和Zynga(Take-Two)形成三足鼎立(What Next)。",
+        "analysis": "Supercell全资收购Metacore是腾讯系休闲游戏扩张的关键落子(What)。Supercell 2025收入-4%说明其核心IP(Clash of Clans/Brawl Stars)增长见顶，需要新赛道续命；Merge Mansion作为‘合并类‘头部产品，恰好填补Supercell在女性向休闲赛道的空白(Why)。7亿美元估值对单一产品工作室偏高，但Supercell需要Merge Mansion的DAU和LTV模型来学习‘长线运营+混合变现‘——这正是Supercell相对Zynga/King的短板(So What)。腾讯通过Supercell+Metacore的‘芬兰双雄‘布局，在全球休闲游戏市场的份额将进一步扩大，与King(动视暴雪/微软)和Zynga(Take-Two)形成三足鼎立(What Next)。",
         "relatedNewsIds": [
             276
         ]
@@ -5448,27 +5852,8 @@ const newsData = [
     {
         "id": 1473,
         "title": "Valve硬件从支线任务升级为全面雄心",
-        "summary": "GamesIndustry.biz发表观点文章分析Valve硬件业务的发展轨迹。文章指出，Valve的硬件业务已从早期的边缘实验项目（\"支线任务\"side quest）发展成为公司的核心战略方向（\"全面雄心\"full-blown ambition）。从Steam Controller到Steam Deck，再到传闻中的Steam Machine，Valve正在构建完整的硬件生态系统。这一转变标志着Valve不再满足于只做数字发行平台，而是要成为软硬件一体化的游戏科技公司。",
+        "summary": "GamesIndustry.biz发表观点文章分析Valve硬件业务的发展轨迹。文章指出，Valve的硬件业务已从早期的边缘实验项目（“支线任务“side quest）发展成为公司的核心战略方向（“全面雄心“full-blown ambition）。从Steam Controller到Steam Deck，再到传闻中的Steam Machine，Valve正在构建完整的硬件生态系统。这一转变标志着Valve不再满足于只做数字发行平台，而是要成为软硬件一体化的游戏科技公司。",
         "source": "腾讯文档策展",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-05-04",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 489,
-        "title": "Valve硬件从支线任务升级为全面雄心",
-        "summary": "GamesIndustry.biz发表观点文章分析Valve硬件业务的发展轨迹。文章指出，Valve的硬件业务已从早期的边缘实验项目（\"支线任务\"side quest）发展成为公司的核心战略方向（\"全面雄心\"full-blown ambition）。从Steam Controller到Steam Deck，再到传闻中的Steam Machine，Valve正在构建完整的硬件生态系统。这一转变标志着Valve不再满足于只做数字发行平台，而是要成为软硬件一体化的游戏科技公司。",
-        "source": "gamesindustry.biz",
         "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
@@ -5522,7 +5907,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "前巫师3总监Konrad Tomaszkiewicz携Rebel Wolves首作正式定档9月3日——这是今年最受期待的'3A新锐'vs'老牌IP'正面对决之一(What)。$70标准定价(未跟随$100超3A定价传闻)说明万代南梦宫和Rebel Wolves对首作销量的谨慎预期：开放世界ARPG竞争激烈(《宣誓》《龙腾世纪》等)，品牌认知度不如一线IP，贸然定$80-100可能适得其反(Why)。同日《神鬼寓言》同档期是巧合还是协调值得关注——若两款游戏口碑都不错，将共同做大'秋季ARPG档期'；若一方评价崩盘则可能拖累整个品类(So What)。对行业影响：独立工作室+成熟发行的'联合开发'模式成为中型游戏的标准路径，Rebel Wolves 70-100人规模在当前行业整合期是'敏捷开发'的代表性样本(What Next)。",
+        "analysis": "前巫师3总监Konrad Tomaszkiewicz携Rebel Wolves首作正式定档9月3日——这是今年最受期待的‘3A新锐‘vs‘老牌IP‘正面对决之一(What)。$70标准定价(未跟随$100超3A定价传闻)说明万代南梦宫和Rebel Wolves对首作销量的谨慎预期：开放世界ARPG竞争激烈(《宣誓》《龙腾世纪》等)，品牌认知度不如一线IP，贸然定$80-100可能适得其反(Why)。同日《神鬼寓言》同档期是巧合还是协调值得关注——若两款游戏口碑都不错，将共同做大‘秋季ARPG档期‘；若一方评价崩盘则可能拖累整个品类(So What)。对行业影响：独立工作室+成熟发行的‘联合开发‘模式成为中型游戏的标准路径，Rebel Wolves 70-100人规模在当前行业整合期是‘敏捷开发‘的代表性样本(What Next)。",
         "relatedNewsIds": [
             248
         ]
@@ -5586,8 +5971,8 @@ const newsData = [
     },
     {
         "id": 492,
-        "title": "Xbox将于5月7日举办\"游戏开发更新\"直播，深入介绍Project Helix",
-        "summary": "微软宣布将于5月7日举办首次Xbox Game Dev Update直播，重点展示Project Helix新主机，由Chris Charla和Jason Ronald主持，介绍其\"代表Xbox未来的方向\"。",
+        "title": "Xbox将于5月7日举办“游戏开发更新“直播，深入介绍Project Helix",
+        "summary": "微软宣布将于5月7日举办首次Xbox Game Dev Update直播，重点展示Project Helix新主机，由Chris Charla和Jason Ronald主持，介绍其“代表Xbox未来的方向“。",
         "source": "GamingBolt",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -5680,7 +6065,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "Krafton Q1营收+57%创纪录是PUBG IP商业化的里程碑(What)。PUBG IP单季破万亿韩元说明大逃杀品类的长尾价值远超市场预期——8年后的PUBG仍能持续增长，关键在于PvE模式(Blindspot)成功拓展了'非竞技玩家'群体，1/3参与率证明品类融合策略有效(Why)。印度市场持续增长是Krafton区别于其他韩国厂商的核心壁垒——BGMI(印度版)在20亿人口市场仍有巨大渗透空间(So What)。但CEO解雇Unknown Worlds创始人的法律风波对品牌声誉造成负面影响，深海迷航2首发200万份的爆发反而让Krafton显得'搬起石头砸自己的脚'。Krafton需在PUBG IP持续运营和新IP孵化之间找到平衡(What Next)。",
+        "analysis": "Krafton Q1营收+57%创纪录是PUBG IP商业化的里程碑(What)。PUBG IP单季破万亿韩元说明大逃杀品类的长尾价值远超市场预期——8年后的PUBG仍能持续增长，关键在于PvE模式(Blindspot)成功拓展了‘非竞技玩家‘群体，1/3参与率证明品类融合策略有效(Why)。印度市场持续增长是Krafton区别于其他韩国厂商的核心壁垒——BGMI(印度版)在20亿人口市场仍有巨大渗透空间(So What)。但CEO解雇Unknown Worlds创始人的法律风波对品牌声誉造成负面影响，深海迷航2首发200万份的爆发反而让Krafton显得‘搬起石头砸自己的脚‘。Krafton需在PUBG IP持续运营和新IP孵化之间找到平衡(What Next)。",
         "relatedNewsIds": [
             267
         ]
@@ -5725,7 +6110,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "英特尔CPU涨价预警标志着AI需求引发的硬件成本上涨从上游存储芯片蔓延至处理器层面——'RAMageddon'正在升级为全面的'半导体通胀'(What)。AI推理 workloads 的 CPU 需求增速已超过训练(train)，因为推理需要大量通用计算而非专用加速器，这对x86 CPU需求形成持续拉动(Why)。对PC游戏玩家的传导链：CPU涨价→中端游戏PC整机成本↑→玩家推迟升级周期→Steam硬件调查中低端占比可能上升→独立游戏和低配置优化更重要(So What)。预计2026下半年NVIDIA/AMD新GPU发布时可能因芯片代工成本上涨而定价更高，形成'GPU+CPU+RAM三重涨价'的极端情景(What Next)。",
+        "analysis": "英特尔CPU涨价预警标志着AI需求引发的硬件成本上涨从上游存储芯片蔓延至处理器层面——‘RAMageddon‘正在升级为全面的‘半导体通胀‘(What)。AI推理 workloads 的 CPU 需求增速已超过训练(train)，因为推理需要大量通用计算而非专用加速器，这对x86 CPU需求形成持续拉动(Why)。对PC游戏玩家的传导链：CPU涨价→中端游戏PC整机成本↑→玩家推迟升级周期→Steam硬件调查中低端占比可能上升→独立游戏和低配置优化更重要(So What)。预计2026下半年NVIDIA/AMD新GPU发布时可能因芯片代工成本上涨而定价更高，形成‘GPU+CPU+RAM三重涨价‘的极端情景(What Next)。",
         "relatedNewsIds": [
             222,
             229,
@@ -5736,7 +6121,7 @@ const newsData = [
     {
         "id": 245,
         "title": "索尼PS5在东南亚和韩国大幅涨价：韩国数字版最高涨43%，5月1日生效",
-        "summary": "索尼宣布PS5、PS5 Pro及PS Portal在东南亚和韩国地区涨价，5月1日起生效。韩国PS5数字版涨幅高达43%(至858,000韩元)，为全球PS5涨价幅度之最。标准版、Pro版和PS Portal在新加坡、马来西亚、泰国、印尼、菲律宾、越南等东南亚国家同步上调。索尼归因于'全球经济环境的持续压力'(continued pressures in the global economic landscape)。这是PS5生命周期内继美国/欧洲/日本后的第四波区域涨价。",
+        "summary": "索尼宣布PS5、PS5 Pro及PS Portal在东南亚和韩国地区涨价，5月1日起生效。韩国PS5数字版涨幅高达43%(至858,000韩元)，为全球PS5涨价幅度之最。标准版、Pro版和PS Portal在新加坡、马来西亚、泰国、印尼、菲律宾、越南等东南亚国家同步上调。索尼归因于‘全球经济环境的持续压力‘(continued pressures in the global economic landscape)。这是PS5生命周期内继美国/欧洲/日本后的第四波区域涨价。",
         "source": "PlayStation Blog",
         "sourceUrl": "https://blog.playstation.com/2026/03/27/20260327-ps/",
         "sourceUrls": [
@@ -5815,7 +6200,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "Xbox CEO亲口承认内存危机影响Helix是次世代主机定价不确定性的最高级别信号(What)。AI数据中心对HBM3E/DDR5的需求吞噬了产能,SK海力士Q1利润率77%意味着存储厂商无动力向消费级倾斜产能——主机作为价格敏感型消费电子在采购优先级中排在AI之后(Why)。Helix此前$1200-1500预估已是主机史上最贵,内存涨价可能推至$1500-1800区间,与高端游戏PC正面竞争;索尼PS6同样面临BOM $760+的压力——2027年次世代主机可能全面进入'千美元时代',从根本上改变主机vs PC的竞争格局(So What)。预计2026下半年内存价格走势将决定Helix最终定价,微软可能被迫在硬件规格(内存容量/带宽)和售价之间做出痛苦取舍(What Next)。",
+        "analysis": "Xbox CEO亲口承认内存危机影响Helix是次世代主机定价不确定性的最高级别信号(What)。AI数据中心对HBM3E/DDR5的需求吞噬了产能,SK海力士Q1利润率77%意味着存储厂商无动力向消费级倾斜产能——主机作为价格敏感型消费电子在采购优先级中排在AI之后(Why)。Helix此前$1200-1500预估已是主机史上最贵,内存涨价可能推至$1500-1800区间,与高端游戏PC正面竞争;索尼PS6同样面临BOM $760+的压力——2027年次世代主机可能全面进入‘千美元时代‘,从根本上改变主机vs PC的竞争格局(So What)。预计2026下半年内存价格走势将决定Helix最终定价,微软可能被迫在硬件规格(内存容量/带宽)和售价之间做出痛苦取舍(What Next)。",
         "relatedNewsIds": [
             222,
             224,
@@ -5826,7 +6211,7 @@ const newsData = [
     {
         "id": 243,
         "title": "D加密时代终结：DenuvOwO首次实现所有Denuvo非VR游戏全破",
-        "summary": "2026年4月26日，CrackWatch/游民星空等确认：市面上所有使用Denuvo(D加密)保护的非VR PC游戏已全部被破解或绕过，未破解游戏清单首次清零。破解组DenuvOwO和voices38采用Hypervisor绕过技术+传统破解双管齐下，密集破解了《黑神话：悟空》《Pragmata》《刺客信条：英灵殿》等大作。TheGamer/TechSpot/VGTimes等将此称为'D加密时代终结'。仅剩部分VR游戏和2026年未发售新作仍受保护。",
+        "summary": "2026年4月26日，CrackWatch/游民星空等确认：市面上所有使用Denuvo(D加密)保护的非VR PC游戏已全部被破解或绕过，未破解游戏清单首次清零。破解组DenuvOwO和voices38采用Hypervisor绕过技术+传统破解双管齐下，密集破解了《黑神话：悟空》《Pragmata》《刺客信条：英灵殿》等大作。TheGamer/TechSpot/VGTimes等将此称为‘D加密时代终结‘。仅剩部分VR游戏和2026年未发售新作仍受保护。",
         "source": "TheGamer",
         "sourceUrl": "https://www.thegamer.com/there-are-no-more-remaining-uncracked-denuvo-games/",
         "sourceUrls": [
@@ -5863,7 +6248,7 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "Denuvo非VR游戏全破清零是PC游戏DRM领域的分水岭事件(What)。Denuvo自2014年推出以来一直是PC游戏防盗版的行业标准，主要价值在于保护发售窗口期(首周/首月)销售——全部被破解意味着这一'时间窗口保护'逻辑被彻底瓦解(Why)。短期看：发行商可能加速撤除Denuvo(降低性能损耗获取好评)+转向服务端验证/在线服务模式；EA/Ubisoft等依赖Denuvo的大厂需要重新评估PC防盗版策略；对独立开发者影响较小(本就不用Denuvo)(So What)。Irdeto(Denuvo母公司)可能推出下一代DRM技术应对，但Hypervisor级别的绕过手段意味着技术军备竞赛已进入新阶段(What Next)。",
+        "analysis": "Denuvo非VR游戏全破清零是PC游戏DRM领域的分水岭事件(What)。Denuvo自2014年推出以来一直是PC游戏防盗版的行业标准，主要价值在于保护发售窗口期(首周/首月)销售——全部被破解意味着这一‘时间窗口保护‘逻辑被彻底瓦解(Why)。短期看：发行商可能加速撤除Denuvo(降低性能损耗获取好评)+转向服务端验证/在线服务模式；EA/Ubisoft等依赖Denuvo的大厂需要重新评估PC防盗版策略；对独立开发者影响较小(本就不用Denuvo)(So What)。Irdeto(Denuvo母公司)可能推出下一代DRM技术应对，但Hypervisor级别的绕过手段意味着技术军备竞赛已进入新阶段(What Next)。",
         "relatedNewsIds": [
             228
         ]
@@ -5871,7 +6256,7 @@ const newsData = [
     {
         "id": 242,
         "title": "Valve Steam Controller 5月4日发售$99、IGN 9分；Steam Deck 2确认全力开发中",
-        "summary": "Valve 4月27日正式公布Steam Controller售价$99并定档5月4日发售。IGN授予9分'编辑选择奖'称其为'PC手柄新标杆'——采用隧道磁阻传感器摇杆(零漂移)、触觉反馈触控板、可替换摇杆帽。发售地区覆盖北美/欧洲/日韩/港台。同日Valve确认Steam Deck 2正全力开发中，瞄准重大升级但上市日期未定。Steam Controller将先于Steam Machine发售(后者因RAM供应危机延期)。",
+        "summary": "Valve 4月27日正式公布Steam Controller售价$99并定档5月4日发售。IGN授予9分‘编辑选择奖‘称其为‘PC手柄新标杆‘——采用隧道磁阻传感器摇杆(零漂移)、触觉反馈触控板、可替换摇杆帽。发售地区覆盖北美/欧洲/日韩/港台。同日Valve确认Steam Deck 2正全力开发中，瞄准重大升级但上市日期未定。Steam Controller将先于Steam Machine发售(后者因RAM供应危机延期)。",
         "source": "IGN",
         "sourceUrl": "https://nordic.ign.com/steam-controller/106850/valve-confirms-steam-controller-price-and-release-date-promises-more-news-on-steam-machine-soon",
         "sourceUrls": [
@@ -5906,7 +6291,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "Steam Controller $99+IGN 9分标志着Valve硬件路线图正式落地第一子(What)。Valve原计划2026年初Controller/Machine/Frame三件套同发，但RAM涨价迫使Machine延期，Controller率先发售是'拆包策略'——用低成本外设测试市场+积累SteamOS手柄生态(Why)。$99定价精准卡位DualSense($70)/Xbox($60)与SCUF($200+)之间的空白带；Steam Deck 2'全力开发中'但无日期=最早2027年，意味着Valve硬件生态短期仍以Deck 1+Controller为核心(So What)。Steam Machine若年底前发售将与PS6/Helix 2027假期档形成三方角力，Controller的市场表现将决定Valve对Machine定价和上市节奏的信心(What Next)。",
+        "analysis": "Steam Controller $99+IGN 9分标志着Valve硬件路线图正式落地第一子(What)。Valve原计划2026年初Controller/Machine/Frame三件套同发，但RAM涨价迫使Machine延期，Controller率先发售是‘拆包策略‘——用低成本外设测试市场+积累SteamOS手柄生态(Why)。$99定价精准卡位DualSense($70)/Xbox($60)与SCUF($200+)之间的空白带；Steam Deck 2‘全力开发中‘但无日期=最早2027年，意味着Valve硬件生态短期仍以Deck 1+Controller为核心(So What)。Steam Machine若年底前发售将与PS6/Helix 2027假期档形成三方角力，Controller的市场表现将决定Valve对Machine定价和上市节奏的信心(What Next)。",
         "relatedNewsIds": [
             232,
             224,
@@ -5945,7 +6330,7 @@ const newsData = [
     {
         "id": 1462,
         "title": "Starbreeze打算借助Roblox 成功经验开发第二款游戏",
-        "summary": "旗下新游《Notoriety: A Payday Experience》在 Roblox 上已突破4亿次访问，玩家好评率92%，Starbreeze 将借此模式开发第二款 Roblox 游戏，验证\"用户生成内容\"商业路径。",
+        "summary": "旗下新游《Notoriety: A Payday Experience》在 Roblox 上已突破4亿次访问，玩家好评率92%，Starbreeze 将借此模式开发第二款 Roblox 游戏，验证“用户生成内容“商业路径。",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -5983,7 +6368,7 @@ const newsData = [
     {
         "id": 1465,
         "title": "Take-Two CEO谈《GTA 6》定价策略",
-        "summary": "针对100美元传闻，CEO表示目标是\"收取远低于游戏实际价值的价格\"，称定价将取决于消费者愿意支付多少",
+        "summary": "针对100美元传闻，CEO表示目标是“收取远低于游戏实际价值的价格“，称定价将取决于消费者愿意支付多少",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -6002,7 +6387,7 @@ const newsData = [
     {
         "id": 480,
         "title": "《贪婪之秋》开发商 Spiders 宣告倒闭",
-        "summary": "母公司 Nacon 申请破产后未能为 Spiders 工作室找到买家，Spiders 确认\"已不复存在\"。《贪婪之秋2：垂死世界》的 DLC 仍会继续。Nacon 旗下此前已有4家子公司申请破产。",
+        "summary": "母公司 Nacon 申请破产后未能为 Spiders 工作室找到买家，Spiders 确认“已不复存在“。《贪婪之秋2：垂死世界》的 DLC 仍会继续。Nacon 旗下此前已有4家子公司申请破产。",
         "source": "GIB / Eurogamer / VGC / GamingBolt / IGN中国",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -6095,13 +6480,13 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "东映成立游戏部门标志着日本动漫巨头系统性进入游戏发行的最新案例，与万代南梦宫、光荣特库摩等已建立游戏业务的日企形成对照(What)。选择'原创IP'而非直接套用龙珠/海贼王是重要战略选择——日本动漫IP改编游戏口碑两极分化(Bandai Namco《龙珠》尚可，但其他多款IP改编游戏表现惨淡)，原创可避免粉丝期待落差并建立独立品牌(Why)。对游戏行业的意义：动漫公司进入游戏发行将加剧PC/Console独立游戏竞争，但东映75年积累的世界观和美术资产若用于原创叙事游戏，有差异化潜力(So What)。首批游戏定档Steam=选择PC作为低成本试水市场，而非直接押注主机(What Next)。",
+        "analysis": "东映成立游戏部门标志着日本动漫巨头系统性进入游戏发行的最新案例，与万代南梦宫、光荣特库摩等已建立游戏业务的日企形成对照(What)。选择‘原创IP‘而非直接套用龙珠/海贼王是重要战略选择——日本动漫IP改编游戏口碑两极分化(Bandai Namco《龙珠》尚可，但其他多款IP改编游戏表现惨淡)，原创可避免粉丝期待落差并建立独立品牌(Why)。对游戏行业的意义：动漫公司进入游戏发行将加剧PC/Console独立游戏竞争，但东映75年积累的世界观和美术资产若用于原创叙事游戏，有差异化潜力(So What)。首批游戏定档Steam=选择PC作为低成本试水市场，而非直接押注主机(What Next)。",
         "relatedNewsIds": []
     },
     {
         "id": 257,
-        "title": "Take-Two CEO回应GTA 6定价传闻：目标是收取'远低于游戏实际价值'的价格",
-        "summary": "Take-Two Interactive CEO Strauss Zelnick在IIcon大会上回应了GTA 6售价$100的传闻，表示公司的定价目标是'收取远低于游戏实际价值的价格'，称'消费者的支付意愿是定价的关键'。Zelnick重申GTA 6将于11月19日发售，但拒绝透露最终售价。多家分析师此前预测PS5/Xbox版定价可能在$80-100区间，远超现行3A游戏$70标准价。",
+        "title": "Take-Two CEO回应GTA 6定价传闻：目标是收取‘远低于游戏实际价值‘的价格",
+        "summary": "Take-Two Interactive CEO Strauss Zelnick在IIcon大会上回应了GTA 6售价$100的传闻，表示公司的定价目标是‘收取远低于游戏实际价值的价格‘，称‘消费者的支付意愿是定价的关键‘。Zelnick重申GTA 6将于11月19日发售，但拒绝透露最终售价。多家分析师此前预测PS5/Xbox版定价可能在$80-100区间，远超现行3A游戏$70标准价。",
         "source": "EuroGamer",
         "sourceUrl": "https://www.eurogamer.net/take-two-ceo-on-gta-6-price-why-it-may-not-hit-100",
         "sourceUrls": [
@@ -6137,13 +6522,13 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "Zelnick'远低于实际价值'的表态是典型的CEO话术——既安抚投资人'我们不会冒丢失用户的风险漫天要价'，又回避了具体数字(What)。GTA 6定价是2026年游戏行业最重要的商业决策之一：$70→$80意味着行业渐进式涨价，$100则可能开创'超3A定价'新时代并倒逼竞争对手跟随(Why)。从Rockstar视角：GTA 6研发成本据报道超$10亿(史上最高)，Zelnick的'价值'论述暗示Take-Two将用'消费者剩余'策略——让玩家感觉'捡了便宜'同时实现最高总收益，而非简单提价(So What)。RDO/GTA Online每年贡献数十亿收入使Take-Two有底气押注单机GTA 6的终极内容量；$80-90是最可能区间，$100若实现将是行业定价的分水岭(What Next)。",
+        "analysis": "Zelnick‘远低于实际价值‘的表态是典型的CEO话术——既安抚投资人‘我们不会冒丢失用户的风险漫天要价‘，又回避了具体数字(What)。GTA 6定价是2026年游戏行业最重要的商业决策之一：$70→$80意味着行业渐进式涨价，$100则可能开创‘超3A定价‘新时代并倒逼竞争对手跟随(Why)。从Rockstar视角：GTA 6研发成本据报道超$10亿(史上最高)，Zelnick的‘价值‘论述暗示Take-Two将用‘消费者剩余‘策略——让玩家感觉‘捡了便宜‘同时实现最高总收益，而非简单提价(So What)。RDO/GTA Online每年贡献数十亿收入使Take-Two有底气押注单机GTA 6的终极内容量；$80-90是最可能区间，$100若实现将是行业定价的分水岭(What Next)。",
         "relatedNewsIds": []
     },
     {
         "id": 256,
         "title": "索尼正式澄清PS5 DRM政策：购买后仅需一次联网验证确认许可证，非每月检查",
-        "summary": "索尼就PS4/PS5数字版权管理相关争议发布官方声明，明确澄清：玩家购买数字游戏后仅需进行一次在线验证确认许可证，之后无需再进行联网校验即可正常游玩。该机制主要用于防止用户退款后离线继续使用无合法许可的游戏。索尼表示媒体报道的'30天检查'系对客服答复的误读，已着手更正相关表述。IGN等多家媒体已收到索尼确认声明。",
+        "summary": "索尼就PS4/PS5数字版权管理相关争议发布官方声明，明确澄清：玩家购买数字游戏后仅需进行一次在线验证确认许可证，之后无需再进行联网校验即可正常游玩。该机制主要用于防止用户退款后离线继续使用无合法许可的游戏。索尼表示媒体报道的‘30天检查‘系对客服答复的误读，已着手更正相关表述。IGN等多家媒体已收到索尼确认声明。",
         "source": "IGN",
         "sourceUrl": "https://www.ign.com/articles/sony-clarifies-ps5-drm-policy-license-check",
         "sourceUrls": [
@@ -6179,7 +6564,7 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "索尼从'30天检查'到'一次验证'的政策澄清是危机公关的典型成功案例——在用户强烈反弹后48小时内主动纠正误读(What)。本质上是索尼客服在解释新机制时表述不够清晰，而非有意推行更严格的DRM；但用户的担忧折射出数字游戏所有权的根本矛盾：玩家花钱买的是'许可证'而非游戏本身，一旦平台倒闭或封号，许可证随时可被撤销(Why)。对行业影响：Epic诉苹果案持续推进，第三方支付链接开放可能引发主机平台用户'跨平台购买'的意识觉醒，玩家对数字所有权的关注度将持续上升(So What)。索尼此次快速澄清是明智之举，若形成'索尼不让离线玩'的公众认知，对PS5生命周期末期的装机增量将是致命打击(What Next)。",
+        "analysis": "索尼从‘30天检查‘到‘一次验证‘的政策澄清是危机公关的典型成功案例——在用户强烈反弹后48小时内主动纠正误读(What)。本质上是索尼客服在解释新机制时表述不够清晰，而非有意推行更严格的DRM；但用户的担忧折射出数字游戏所有权的根本矛盾：玩家花钱买的是‘许可证‘而非游戏本身，一旦平台倒闭或封号，许可证随时可被撤销(Why)。对行业影响：Epic诉苹果案持续推进，第三方支付链接开放可能引发主机平台用户‘跨平台购买‘的意识觉醒，玩家对数字所有权的关注度将持续上升(So What)。索尼此次快速澄清是明智之举，若形成‘索尼不让离线玩‘的公众认知，对PS5生命周期末期的装机增量将是致命打击(What Next)。",
         "relatedNewsIds": [
             255
         ]
@@ -6187,7 +6572,7 @@ const newsData = [
     {
         "id": 255,
         "title": "美国第九巡回法院驳回Apple暂停执行请求：Epic诉苹果案App Store禁令生效",
-        "summary": "苹果公司试图推迟执行'禁止收取第三方支付手续费'判决的申请再次被法院驳回。4月28日，美国第九巡回上诉法院推翻了此前批准苹果延期执行的裁定，将案件发回下级法院确定允许的佣金费率。苹果表示将向最高法院上诉，但目前外部支付链接必须保持畅通。Epic Games在2020年起诉苹果垄断，2024年地区法院裁决苹果不得阻止开发者引导用户使用外部支付渠道。",
+        "summary": "苹果公司试图推迟执行‘禁止收取第三方支付手续费‘判决的申请再次被法院驳回。4月28日，美国第九巡回上诉法院推翻了此前批准苹果延期执行的裁定，将案件发回下级法院确定允许的佣金费率。苹果表示将向最高法院上诉，但目前外部支付链接必须保持畅通。Epic Games在2020年起诉苹果垄断，2024年地区法院裁决苹果不得阻止开发者引导用户使用外部支付渠道。",
         "source": "TechCrunch",
         "sourceUrl": "https://techcrunch.com/2026/04/29/apple-epic-games-app-store-fees-pause-changes-supreme-court/",
         "sourceUrls": [
@@ -6223,7 +6608,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "第九巡回法院驳回Apple暂停执行是Epic诉苹果5年拉锯战的重大进展——App Store'围墙花园'的法律护城河出现实质性裂缝(What)。苹果将向最高法院上诉，预计最高法院接受审理概率约40-50%(历史数据显示最高法院对反垄断案件态度保守)，但即便上诉，外部支付链接在等待期间仍须保持开放(Why)。对游戏发行渠道的影响：手游端Epic已证明绕过App Store支付可为开发者节省15-30%费用；PC/Console端虽然App Store不是主要战场，但此判例为欧盟DMA框架下的'侧载'合规提供判例支撑(So What)。若最高法院最终支持Epic，苹果可能面临数十亿美元的退款压力，并被迫开放iOS第三方支付——这将是2010年以来最重大的数字平台监管变革(What Next)。",
+        "analysis": "第九巡回法院驳回Apple暂停执行是Epic诉苹果5年拉锯战的重大进展——App Store‘围墙花园‘的法律护城河出现实质性裂缝(What)。苹果将向最高法院上诉，预计最高法院接受审理概率约40-50%(历史数据显示最高法院对反垄断案件态度保守)，但即便上诉，外部支付链接在等待期间仍须保持开放(Why)。对游戏发行渠道的影响：手游端Epic已证明绕过App Store支付可为开发者节省15-30%费用；PC/Console端虽然App Store不是主要战场，但此判例为欧盟DMA框架下的‘侧载‘合规提供判例支撑(So What)。若最高法院最终支持Epic，苹果可能面临数十亿美元的退款压力，并被迫开放iOS第三方支付——这将是2010年以来最重大的数字平台监管变革(What Next)。",
         "relatedNewsIds": []
     },
     {
@@ -6257,13 +6642,13 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "154款版号延续了2025年下半年以来审批提速的趋势——月均150+款版号已基本成为新常态，标志着中国游戏监管进入'常态化审批+质量并重'阶段(What)。网易雷火《遗忘之海》获PS5版号是本期最大亮点——这意味着中国开发商正系统性推进主机游戏开发，PS5作为日系主机在中国中高端玩家中的渗透率提升得到监管侧认可(Why)。累计同比+22.49%在2025年恢复性增长基础上继续提速，反映监管层对游戏产业作为文化消费出口的积极态度(So What)。但版号'量增'不代表质量放松——实际数据显示获批游戏平均研发投入和质量要求在提高，中小游戏公司获取版号难度反而增加(What Next)。",
+        "analysis": "154款版号延续了2025年下半年以来审批提速的趋势——月均150+款版号已基本成为新常态，标志着中国游戏监管进入‘常态化审批+质量并重‘阶段(What)。网易雷火《遗忘之海》获PS5版号是本期最大亮点——这意味着中国开发商正系统性推进主机游戏开发，PS5作为日系主机在中国中高端玩家中的渗透率提升得到监管侧认可(Why)。累计同比+22.49%在2025年恢复性增长基础上继续提速，反映监管层对游戏产业作为文化消费出口的积极态度(So What)。但版号‘量增‘不代表质量放松——实际数据显示获批游戏平均研发投入和质量要求在提高，中小游戏公司获取版号难度反而增加(What Next)。",
         "relatedNewsIds": []
     },
     {
         "id": 253,
         "title": "Starbreeze借助Roblox成功经验开发第二款游戏：《Notoriety》累计访问量破4亿",
-        "summary": "Starbreeze旗下新游《Notoriety: A Payday Experience》在Roblox平台累计访问量已突破4亿次，玩家好评率92%。Starbreeze借此Roblox验证'用户生成内容'商业路径的可行性后，正式宣布将基于此经验开发第二款独立游戏。Starbreeze曾因《Payday》系列闻名，但2023年曾进入破产程序，目前正通过轻资产模式重建。",
+        "summary": "Starbreeze旗下新游《Notoriety: A Payday Experience》在Roblox平台累计访问量已突破4亿次，玩家好评率92%。Starbreeze借此Roblox验证‘用户生成内容‘商业路径的可行性后，正式宣布将基于此经验开发第二款独立游戏。Starbreeze曾因《Payday》系列闻名，但2023年曾进入破产程序，目前正通过轻资产模式重建。",
         "source": "GIB",
         "sourceUrl": "https://www.gamesindustry.biz/starbreeze-to-make-second-game-following-roblox-success",
         "sourceUrls": [
@@ -6291,13 +6676,13 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "Starbreeze在破产后选择Roblox作为'轻资产验证场'是极具洞察的战略——Roblox的UGC生态允许用极低成本测试IP可行性和玩家付费意愿，4亿访问+92%好评证明了Payday IP在年轻用户中的号召力(What)。对游戏行业的启示：传统'3A投入→市场验证'模式风险极高，而Roblox/《我的世界》等UGC平台提供了中间路径——'小步快跑+用户验证+迭代放大'(Why)。Starbreeze的第二款游戏若借鉴Roblox数据(如玩家最喜欢的玩法机制、付费节点)将比传统市场调研更精准(So What)。对于其他中小型开发商，Starbreeze案例证明了'先Roblox验证再PC/Console移植'的可行路径——这可能是未来独立游戏发行的标准范式之一(What Next)。",
+        "analysis": "Starbreeze在破产后选择Roblox作为‘轻资产验证场‘是极具洞察的战略——Roblox的UGC生态允许用极低成本测试IP可行性和玩家付费意愿，4亿访问+92%好评证明了Payday IP在年轻用户中的号召力(What)。对游戏行业的启示：传统‘3A投入→市场验证‘模式风险极高，而Roblox/《我的世界》等UGC平台提供了中间路径——‘小步快跑+用户验证+迭代放大‘(Why)。Starbreeze的第二款游戏若借鉴Roblox数据(如玩家最喜欢的玩法机制、付费节点)将比传统市场调研更精准(So What)。对于其他中小型开发商，Starbreeze案例证明了‘先Roblox验证再PC/Console移植‘的可行路径——这可能是未来独立游戏发行的标准范式之一(What Next)。",
         "relatedNewsIds": []
     },
     {
         "id": 252,
-        "title": "微软计划两年内追平SteamOS游戏性能，内部代号'Windows K2'改革项目曝光",
-        "summary": "微软内部正推进名为'Windows K2'的系统改革项目，核心目标是两年内在游戏性能上追平Valve的SteamOS。微软官方声明首次公开承认SteamOS已成为行业性能标杆，并将其列为Windows游戏部门的核心赶超目标。消息源称K2将重写Windows 11核心渲染管线，专注降低输入延迟和改善电源管理，2027年底前完成。",
+        "title": "微软计划两年内追平SteamOS游戏性能，内部代号‘Windows K2‘改革项目曝光",
+        "summary": "微软内部正推进名为‘Windows K2‘的系统改革项目，核心目标是两年内在游戏性能上追平Valve的SteamOS。微软官方声明首次公开承认SteamOS已成为行业性能标杆，并将其列为Windows游戏部门的核心赶超目标。消息源称K2将重写Windows 11核心渲染管线，专注降低输入延迟和改善电源管理，2027年底前完成。",
         "source": "3DMGame",
         "sourceUrl": "https://www.3dmgame.com/news/202604/3942596.html",
         "sourceUrls": [
@@ -6325,7 +6710,7 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "微软官方承认SteamOS是性能标杆并设立'两年追平'目标——这是Windows与SteamOS竞争史上微软首次放下身段，标志着PC游戏平台权力格局正在重构(What)。SteamOS的结构性优势在于Valve控制全栈(内核+图形驱动+游戏层+商店)，可针对每款游戏做定向优化；Windows作为通用操作系统需兼顾兼容性导致性能损耗。K2本质上是微软试图'用通用OS打赢专用OS'的攻坚战(Why)。若K2成功：Windows游戏体验提升→Xbox PC Game Pass吸引力↑→Xbox生态在PC端扩张→对Steam形成真正竞争压力。若失败：Steam Deck+Steam Machine生态加速渗透，Xbox PC端用户进一步流失(So What)。K2与Project Helix硬件战略需协同——Helix若想与PS6竞争，必须同时解决Windows性能短板，否则'最强性能主机'承诺无法兑现(What Next)。",
+        "analysis": "微软官方承认SteamOS是性能标杆并设立‘两年追平‘目标——这是Windows与SteamOS竞争史上微软首次放下身段，标志着PC游戏平台权力格局正在重构(What)。SteamOS的结构性优势在于Valve控制全栈(内核+图形驱动+游戏层+商店)，可针对每款游戏做定向优化；Windows作为通用操作系统需兼顾兼容性导致性能损耗。K2本质上是微软试图‘用通用OS打赢专用OS‘的攻坚战(Why)。若K2成功：Windows游戏体验提升→Xbox PC Game Pass吸引力↑→Xbox生态在PC端扩张→对Steam形成真正竞争压力。若失败：Steam Deck+Steam Machine生态加速渗透，Xbox PC端用户进一步流失(So What)。K2与Project Helix硬件战略需协同——Helix若想与PS6竞争，必须同时解决Windows性能短板，否则‘最强性能主机‘承诺无法兑现(What Next)。",
         "relatedNewsIds": [
             251,
             232,
@@ -6376,7 +6761,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "Xbox连续第二个季度硬件跌幅超30%是微软游戏业务结构性困境的集中体现——PS5生命周期末期的供应萎缩+Switch 2持续蚕食+无强势第一方新作三重叠加效应(What)。但积极信号是内容与服务仅下滑5%，说明Game Pass订阅收入提供了部分缓冲；Asha Sharma上任后'大幅改革'表态意味着Xbox战略将从'硬件优先'转向'服务优先'(Why)。对Game Pass影响：硬件玩家流失→Game Pass潜在用户基数↓；若Game Pass订阅增长无法对冲硬件跌幅，Xbox将加速从主机厂商向'游戏服务公司'转型(So What)。Helix主机和Windows K2项目是Asha Sharma'改革'的两张底牌——前者恢复硬件竞争力，后者提升Windows游戏体验以扩大PC端Game Pass渗透(What Next)。",
+        "analysis": "Xbox连续第二个季度硬件跌幅超30%是微软游戏业务结构性困境的集中体现——PS5生命周期末期的供应萎缩+Switch 2持续蚕食+无强势第一方新作三重叠加效应(What)。但积极信号是内容与服务仅下滑5%，说明Game Pass订阅收入提供了部分缓冲；Asha Sharma上任后‘大幅改革‘表态意味着Xbox战略将从‘硬件优先‘转向‘服务优先‘(Why)。对Game Pass影响：硬件玩家流失→Game Pass潜在用户基数↓；若Game Pass订阅增长无法对冲硬件跌幅，Xbox将加速从主机厂商向‘游戏服务公司‘转型(So What)。Helix主机和Windows K2项目是Asha Sharma‘改革‘的两张底牌——前者恢复硬件竞争力，后者提升Windows游戏体验以扩大PC端Game Pass渗透(What Next)。",
         "relatedNewsIds": [
             252,
             230,
@@ -6422,13 +6807,13 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "Spiders倒闭是Nacon破产连锁反应的第一个多米诺骨牌——Nacon旗下已有5家工作室申请破产，标志着法国中小发行商的系统性危机(What)。Spiders的核心问题在于其'中世纪RPG'定位受众较窄，《钢铁崛起》(埃菲尔铁塔机器人)更因题材过于冷门商业失败；Nacon在资金充裕时期收购大量工作室但缺乏IP运营能力，最终在市场下行周期中不堪重负(Why)。对行业影响：中小开发商被大厂'收购然后抛弃'的模式风险加剧；GreedFall 2的DLC能否完成取决于Nacon资产处置进展，忠实玩家面临'游戏未完成就工作室关门'的困境(So What)。Embracer、Nacon等欧洲发行商的'买买买然后整合'战略已被证明在行业下行期极度脆弱，其他中小发行商应引以为戒(What Next)。",
+        "analysis": "Spiders倒闭是Nacon破产连锁反应的第一个多米诺骨牌——Nacon旗下已有5家工作室申请破产，标志着法国中小发行商的系统性危机(What)。Spiders的核心问题在于其‘中世纪RPG‘定位受众较窄，《钢铁崛起》(埃菲尔铁塔机器人)更因题材过于冷门商业失败；Nacon在资金充裕时期收购大量工作室但缺乏IP运营能力，最终在市场下行周期中不堪重负(Why)。对行业影响：中小开发商被大厂‘收购然后抛弃‘的模式风险加剧；GreedFall 2的DLC能否完成取决于Nacon资产处置进展，忠实玩家面临‘游戏未完成就工作室关门‘的困境(So What)。Embracer、Nacon等欧洲发行商的‘买买买然后整合‘战略已被证明在行业下行期极度脆弱，其他中小发行商应引以为戒(What Next)。",
         "relatedNewsIds": []
     },
     {
         "id": 249,
         "title": "Steam东方游戏文化周开启：《明末：渊虚之羽》等国产游戏集体史低促销",
-        "summary": "Steam平台东方游戏文化周促销活动已于近日开启，多款国产游戏参与打折。《明末：渊虚之羽》(An Autumn's Departure)等作品达到历史最低价格。Steam东方游戏文化周是Valve支持中国/东亚独立游戏生态的系列活动之一，参与游戏涵盖动作冒险、角色扮演、策略模拟等多个品类。",
+        "summary": "Steam平台东方游戏文化周促销活动已于近日开启，多款国产游戏参与打折。《明末：渊虚之羽》(An Autumn‘s Departure)等作品达到历史最低价格。Steam东方游戏文化周是Valve支持中国/东亚独立游戏生态的系列活动之一，参与游戏涵盖动作冒险、角色扮演、策略模拟等多个品类。",
         "source": "3DMGame",
         "sourceUrl": "https://www.3dmgame.com/news/202604/3942596.html",
         "sourceUrls": [
@@ -6452,13 +6837,13 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "Steam东方游戏文化周是Valve系统性扶持中国/东亚独立游戏生态的体现——与'游戏节''开放世界节''FPS节'等同类活动构成完整的细分品类扶持矩阵(What)。Valve策略：通过定期特卖活动为独立游戏提供'可预期的流量窗口'，帮助开发者规划现金流；对中国开发者而言，参与Steam全球化特卖是在Steam俄区低价策略下维持收入的重要手段(Why)。《明末：渊虚之羽》等明末历史题材游戏参与促销，反映国产独立游戏在叙事深度和题材差异化上的持续进步(So What)。Valve未来可能将东方游戏文化周升级为'Steam东方节'(类似亚洲版Summer Sale)，进一步扩大东亚游戏在Steam的可见度(What Next)。",
+        "analysis": "Steam东方游戏文化周是Valve系统性扶持中国/东亚独立游戏生态的体现——与‘游戏节‘‘开放世界节‘‘FPS节‘等同类活动构成完整的细分品类扶持矩阵(What)。Valve策略：通过定期特卖活动为独立游戏提供‘可预期的流量窗口‘，帮助开发者规划现金流；对中国开发者而言，参与Steam全球化特卖是在Steam俄区低价策略下维持收入的重要手段(Why)。《明末：渊虚之羽》等明末历史题材游戏参与促销，反映国产独立游戏在叙事深度和题材差异化上的持续进步(So What)。Valve未来可能将东方游戏文化周升级为‘Steam东方节‘(类似亚洲版Summer Sale)，进一步扩大东亚游戏在Steam的可见度(What Next)。",
         "relatedNewsIds": []
     },
     {
         "id": 248,
         "title": "《EA Sports UFC 6》6月19日发售，登陆PS5/Xbox Series平台起售价$69.99",
-        "summary": "EA宣布《EA Sports UFC 6》将登陆PlayStation 5和Xbox Series X/S平台，并于6月19日正式发售，标准版起售价$69.99。封面运动员为Alex Pereira(标准版)和Max Holloway(终极版)，游戏口号为'Powered by Fighters'。新版本预计带来全新格斗机制扩展和早期访问特权。",
+        "summary": "EA宣布《EA Sports UFC 6》将登陆PlayStation 5和Xbox Series X/S平台，并于6月19日正式发售，标准版起售价$69.99。封面运动员为Alex Pereira(标准版)和Max Holloway(终极版)，游戏口号为‘Powered by Fighters‘。新版本预计带来全新格斗机制扩展和早期访问特权。",
         "source": "IGN中国",
         "sourceUrl": "https://www.ign.com.cn/gamegame/59722/ea-sports-ufc-6-6-yue-19-ri-fa-shou",
         "sourceUrls": [
@@ -6490,7 +6875,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "UFC 6选择6月19日发售，正值NBA Finals结束+暑期档开启的体育游戏黄金窗口——EA有意错开与GTA 6(11月)的正面碰撞(What)。$69.99定价继续执行EA的3A体育游戏涨价策略，与FIFA系列改名为EA Sports FC后的定价策略一致；UFC作为EA Sports旗下第三大IP(Madden/UFC/FC)，年货模式确保稳定现金流但创新有限(Why)。Alex Pereira封面值得注意：作为现役UFC双量级冠军(P5P+轻重量级)，其流量价值超越体育游戏传统覆盖群体，可能吸引大量'非体育游戏核心玩家'尝试(So What)。6月~9月是游戏淡季(无Holiday档期大作)，UFC 6和The Blood of Dawnwalker(9月3日)填补了暑期档的3A空白(What Next)。",
+        "analysis": "UFC 6选择6月19日发售，正值NBA Finals结束+暑期档开启的体育游戏黄金窗口——EA有意错开与GTA 6(11月)的正面碰撞(What)。$69.99定价继续执行EA的3A体育游戏涨价策略，与FIFA系列改名为EA Sports FC后的定价策略一致；UFC作为EA Sports旗下第三大IP(Madden/UFC/FC)，年货模式确保稳定现金流但创新有限(Why)。Alex Pereira封面值得注意：作为现役UFC双量级冠军(P5P+轻重量级)，其流量价值超越体育游戏传统覆盖群体，可能吸引大量‘非体育游戏核心玩家‘尝试(So What)。6月~9月是游戏淡季(无Holiday档期大作)，UFC 6和The Blood of Dawnwalker(9月3日)填补了暑期档的3A空白(What Next)。",
         "relatedNewsIds": [
             247
         ]
@@ -6529,7 +6914,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "星际争霸从RTS转向TPS是暴雪对经典IP大众化变现的一次豪赌(What)。星际争霸作为硬核RTS IP，用户规模天花板明显——转型TPS是暴雪试图通过更主流的游戏品类触达更广泛的玩家群体；写实风格+类似星际战士2的画面定位，说明暴雪押注于'3A级射击体验'(Why)。风险：老粉可能抵制IP类型转变(星际争霸=硬核RTS的认知根深蒂固)；暴雪近年口碑受损(守望先锋2/暗黑4早期负面)，新游可能面临玩家信任危机。机会：TPS+星际争霸宇宙+暴雪品质背书，如果成功可对标《战争框架》的IP延伸模式(So What)。暴雪嘉年华2026(9月)将是关键节点，届时可观察玩家社区反应和更多游戏细节(What Next)。",
+        "analysis": "星际争霸从RTS转向TPS是暴雪对经典IP大众化变现的一次豪赌(What)。星际争霸作为硬核RTS IP，用户规模天花板明显——转型TPS是暴雪试图通过更主流的游戏品类触达更广泛的玩家群体；写实风格+类似星际战士2的画面定位，说明暴雪押注于‘3A级射击体验‘(Why)。风险：老粉可能抵制IP类型转变(星际争霸=硬核RTS的认知根深蒂固)；暴雪近年口碑受损(守望先锋2/暗黑4早期负面)，新游可能面临玩家信任危机。机会：TPS+星际争霸宇宙+暴雪品质背书，如果成功可对标《战争框架》的IP延伸模式(So What)。暴雪嘉年华2026(9月)将是关键节点，届时可观察玩家社区反应和更多游戏细节(What Next)。",
         "relatedNewsIds": []
     },
     {
@@ -6562,7 +6947,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "Asha Sharma成为Xbox首位女性CEO是微软游戏领导层的重要信号(What)。她此前负责印度消费者业务的经验可能带来Xbox在新兴市场(印度/东南亚/拉美)的新策略；外界解读'继续收购工作室'暗示微软已完成整合动视暴雪后的消化期，准备重启扩张节奏(Why)。对Xbox生态的影响：Game Pass降价+CoD退出首发≠放弃主机，而是转向'生态整合优先'——Sharma可能在Q3-Q4发布新的Xbox硬件规划(What Next)。关注暴雪嘉年华(9月)是否会有Xbox相关重大公告。",
+        "analysis": "Asha Sharma成为Xbox首位女性CEO是微软游戏领导层的重要信号(What)。她此前负责印度消费者业务的经验可能带来Xbox在新兴市场(印度/东南亚/拉美)的新策略；外界解读‘继续收购工作室‘暗示微软已完成整合动视暴雪后的消化期，准备重启扩张节奏(Why)。对Xbox生态的影响：Game Pass降价+CoD退出首发≠放弃主机，而是转向‘生态整合优先‘——Sharma可能在Q3-Q4发布新的Xbox硬件规划(What Next)。关注暴雪嘉年华(9月)是否会有Xbox相关重大公告。",
         "relatedNewsIds": [
             241,
             244,
@@ -6648,7 +7033,7 @@ const newsData = [
     {
         "id": 479,
         "title": "PlayStation 为 PS4/PS5 数字游戏新增 30 天 DRM 联网验证，引发强烈抵制",
-        "summary": "所有新购数字版游戏设置30天计时器，超期不联网则无法运行；GameStop 推出\"NO LIMITS\"广告并推出阶梯折扣（购6+件享30%折扣），以此揽客",
+        "summary": "所有新购数字版游戏设置30天计时器，超期不联网则无法运行；GameStop 推出“NO LIMITS“广告并推出阶梯折扣（购6+件享30%折扣），以此揽客",
         "source": "VGC | 3DM",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -6667,7 +7052,7 @@ const newsData = [
     {
         "id": 279,
         "title": "英伟达发布RTX 5070笔记本GPU 12GB版本：缓解显存供应压力",
-        "summary": "英伟达正式发布GeForce RTX 5070笔记本电脑GPU的12GB显存版本（此前仅有8GB），将与其他版本同步销售。英伟达表示GeForce RTX显卡市场需求持续旺盛，显存供应整体紧张，采用24Gb(3GB) GDDR7显存的新版本旨在\"最大限度缓解显存供应压力\"。RTX 50系列基于Blackwell架构，支持DLSS 4多帧生成技术。",
+        "summary": "英伟达正式发布GeForce RTX 5070笔记本电脑GPU的12GB显存版本（此前仅有8GB），将与其他版本同步销售。英伟达表示GeForce RTX显卡市场需求持续旺盛，显存供应整体紧张，采用24Gb(3GB) GDDR7显存的新版本旨在“最大限度缓解显存供应压力“。RTX 50系列基于Blackwell架构，支持DLSS 4多帧生成技术。",
         "source": "IT之家",
         "sourceUrl": "https://www.ithome.com/0/944/694.htm",
         "sourceUrls": [
@@ -6691,15 +7076,15 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "RTX 5070 12GB版本是英伟达缓解显存供应瓶颈的务实之举(What)。显存短缺是2025-2026年GPU市场的核心矛盾，24Gb GDDR7的量产优先保障了高端型号（5090/5080），中端型号（5070）被迫使用8GB显存的\"残血版\"；12GB版本的推出填补了中端市场的显存容量需求(Why)。对游戏本市场的意义：12GB显存意味着可以更好支持4K光追和DLSS 4多帧生成，对《黑神话》等新一代3A游戏的高分辨率需求更加友好——这是英伟达在AMD RDNA4竞争压力下的主动产品规格优化(So What)。显存供应紧张预计将在2026年下半年随新产能释放逐步缓解，届时RTX 5070全系供应将恢复正常，对618等促销节点的GPU装机需求有积极影响(What Next)。",
+        "analysis": "RTX 5070 12GB版本是英伟达缓解显存供应瓶颈的务实之举(What)。显存短缺是2025-2026年GPU市场的核心矛盾，24Gb GDDR7的量产优先保障了高端型号（5090/5080），中端型号（5070）被迫使用8GB显存的“残血版“；12GB版本的推出填补了中端市场的显存容量需求(Why)。对游戏本市场的意义：12GB显存意味着可以更好支持4K光追和DLSS 4多帧生成，对《黑神话》等新一代3A游戏的高分辨率需求更加友好——这是英伟达在AMD RDNA4竞争压力下的主动产品规格优化(So What)。显存供应紧张预计将在2026年下半年随新产能释放逐步缓解，届时RTX 5070全系供应将恢复正常，对618等促销节点的GPU装机需求有积极影响(What Next)。",
         "relatedNewsIds": [
             245
         ]
     },
     {
         "id": 232,
-        "title": "Valve官宣Steam Controller 5月4日发售$99、IGN 9分'PC手柄新标杆'；确认Steam Deck 2全力开发中",
-        "summary": "Valve 4月27日正式公布Steam Controller售价$99并定档5月4日发售，评测同步解禁。IGN授予9分'编辑选择奖'称其为'PC手柄新标杆'——采用隧道磁阻传感器摇杆(零漂移)、触觉反馈触控板、可替换摇杆帽。发售地区覆盖北美/欧洲/日韩/港台。同日Valve程序员Pierre-Loup Griffais接受IGN采访确认Steam Deck 2'正全力开发中'，瞄准重大升级但上市日期未定。Steam Controller将先于Steam Machine发售(后者因RAM供应危机延期)。",
+        "title": "Valve官宣Steam Controller 5月4日发售$99、IGN 9分‘PC手柄新标杆‘；确认Steam Deck 2全力开发中",
+        "summary": "Valve 4月27日正式公布Steam Controller售价$99并定档5月4日发售，评测同步解禁。IGN授予9分‘编辑选择奖‘称其为‘PC手柄新标杆‘——采用隧道磁阻传感器摇杆(零漂移)、触觉反馈触控板、可替换摇杆帽。发售地区覆盖北美/欧洲/日韩/港台。同日Valve程序员Pierre-Loup Griffais接受IGN采访确认Steam Deck 2‘正全力开发中‘，瞄准重大升级但上市日期未定。Steam Controller将先于Steam Machine发售(后者因RAM供应危机延期)。",
         "source": "IGN",
         "sourceUrl": "https://nordic.ign.com/steam-controller/106850/valve-confirms-steam-controller-price-and-release-date-promises-more-news-on-steam-machine-soon",
         "sourceUrls": [
@@ -6738,7 +7123,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "Steam Controller $99+IGN 9分标志着Valve硬件路线图正式落地第一子(What)。Valve原计划2026年初Controller/Machine/Frame三件套同发，但RAM涨价迫使Machine延期，Controller率先发售是'拆包策略'——用低成本外设测试市场+积累SteamOS手柄生态(Why)。$99定价精准卡位DualSense($70)/Xbox($60)与SCUF($200+)之间的空白带；Steam Deck 2'全力开发中'但无日期=最早2027年，意味着Valve硬件生态短期仍以Deck 1+Controller为核心(So What)。Steam Machine若年底前发售将与PS6/Helix 2027假期档形成三方角力，Controller的市场表现将决定Valve对Machine定价和上市节奏的信心(What Next)。",
+        "analysis": "Steam Controller $99+IGN 9分标志着Valve硬件路线图正式落地第一子(What)。Valve原计划2026年初Controller/Machine/Frame三件套同发，但RAM涨价迫使Machine延期，Controller率先发售是‘拆包策略‘——用低成本外设测试市场+积累SteamOS手柄生态(Why)。$99定价精准卡位DualSense($70)/Xbox($60)与SCUF($200+)之间的空白带；Steam Deck 2‘全力开发中‘但无日期=最早2027年，意味着Valve硬件生态短期仍以Deck 1+Controller为核心(So What)。Steam Machine若年底前发售将与PS6/Helix 2027假期档形成三方角力，Controller的市场表现将决定Valve对Machine定价和上市节奏的信心(What Next)。",
         "relatedNewsIds": [
             198,
             224,
@@ -6748,7 +7133,7 @@ const newsData = [
     {
         "id": 231,
         "title": "PS5东南亚和韩国大幅涨价：韩国数字版涨43%，5月1日生效",
-        "summary": "索尼4月27日通过PlayStation Blog宣布PS5、PS5 Pro及PS Portal在东南亚和韩国地区涨价，5月1日起生效。韩国PS5数字版涨幅高达43%(至858,000韩元)，为全球PS5涨价幅度之最。标准版、Pro版和PS Portal在新加坡、马来西亚、泰国、印尼等东南亚国家同步上调。索尼归因于'全球经济环境的持续压力'。这是PS5生命周期内继美国/欧洲/日本后的第四波区域涨价，Kotaku称其为'前所未有的PS5涨价潮'(unprecedented)。",
+        "summary": "索尼4月27日通过PlayStation Blog宣布PS5、PS5 Pro及PS Portal在东南亚和韩国地区涨价，5月1日起生效。韩国PS5数字版涨幅高达43%(至858,000韩元)，为全球PS5涨价幅度之最。标准版、Pro版和PS Portal在新加坡、马来西亚、泰国、印尼等东南亚国家同步上调。索尼归因于‘全球经济环境的持续压力‘。这是PS5生命周期内继美国/欧洲/日本后的第四波区域涨价，Kotaku称其为‘前所未有的PS5涨价潮‘(unprecedented)。",
         "source": "PlayStation Blog",
         "sourceUrl": "https://blog.playstation.com/2026/03/27/20260327-ps/",
         "sourceUrls": [
@@ -6798,7 +7183,7 @@ const newsData = [
     {
         "id": 230,
         "title": "Xbox CEO夏尔马警告：内存短缺将直接影响Project Helix定价和供应",
-        "summary": "微软Xbox CEO Asha Sharma接受Game File采访时确认，持续的全球内存短缺将对下一代Xbox主机Project Helix的定价和产品可用性产生直接影响。Sharma表示'内存成本是我们在规划Helix时必须认真面对的因素'。多家媒体(GameSpot/GamesIndustry.biz/GameRant)分析认为，AI数据中心对HBM/DDR5的天量需求是根本原因，Helix最终售价可能从此前预估的$1200-1500进一步上升。这是微软首次由CEO层级公开承认内存危机对次世代主机的影响。",
+        "summary": "微软Xbox CEO Asha Sharma接受Game File采访时确认，持续的全球内存短缺将对下一代Xbox主机Project Helix的定价和产品可用性产生直接影响。Sharma表示‘内存成本是我们在规划Helix时必须认真面对的因素‘。多家媒体(GameSpot/GamesIndustry.biz/GameRant)分析认为，AI数据中心对HBM/DDR5的天量需求是根本原因，Helix最终售价可能从此前预估的$1200-1500进一步上升。这是微软首次由CEO层级公开承认内存危机对次世代主机的影响。",
         "source": "Game File",
         "sourceUrl": "https://gamerant.com/xbox-project-helix-price-availability-memory-shortage-ceo-comment/",
         "sourceUrls": [
@@ -6838,7 +7223,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "Xbox CEO亲口承认内存危机影响Helix是次世代主机定价不确定性的最高级别信号(What)。AI数据中心对HBM3E/DDR5的需求吞噬了产能,SK海力士Q1利润率77%意味着存储厂商无动力向消费级倾斜产能——主机作为价格敏感型消费电子在采购优先级中排在AI之后(Why)。Helix此前$1200-1500预估已是主机史上最贵,内存涨价可能推至$1500-1800区间,与高端游戏PC正面竞争;索尼PS6同样面临BOM $760+的压力——2027年次世代主机可能全面进入'千美元时代',从根本上改变主机vs PC的竞争格局(So What)。预计2026下半年内存价格走势将决定Helix最终定价,微软可能被迫在硬件规格(内存容量/带宽)和售价之间做出痛苦取舍(What Next)。",
+        "analysis": "Xbox CEO亲口承认内存危机影响Helix是次世代主机定价不确定性的最高级别信号(What)。AI数据中心对HBM3E/DDR5的需求吞噬了产能,SK海力士Q1利润率77%意味着存储厂商无动力向消费级倾斜产能——主机作为价格敏感型消费电子在采购优先级中排在AI之后(Why)。Helix此前$1200-1500预估已是主机史上最贵,内存涨价可能推至$1500-1800区间,与高端游戏PC正面竞争;索尼PS6同样面临BOM $760+的压力——2027年次世代主机可能全面进入‘千美元时代‘,从根本上改变主机vs PC的竞争格局(So What)。预计2026下半年内存价格走势将决定Helix最终定价,微软可能被迫在硬件规格(内存容量/带宽)和售价之间做出痛苦取舍(What Next)。",
         "relatedNewsIds": [
             222,
             224,
@@ -6885,7 +7270,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "英特尔CPU涨价预警标志着AI需求引发的硬件成本上涨从上游存储芯片蔓延至处理器层面——'RAMageddon'正在升级为全面的'半导体通胀'(What)。此前只有DRAM/NAND涨价,现在CPU加入意味着PC装机的三大核心组件(CPU+内存+存储)全线上涨,全年累计16-17%的CPU涨幅将使中端游戏PC($800-1200)预算被严重挤压(Why)。对游戏行业的传导链：PC装机成本↑→玩家推迟升级→Steam硬件调查中低端配置占比↑→开发者需兼顾更多低配PC→游戏画面优化压力↑(So What)。预计2026 Holiday季PC硬件价格仍将高位运行,NVIDIA/AMD新GPU(5070/9070)可能因芯片成本上涨而定价更高(What Next)。",
+        "analysis": "英特尔CPU涨价预警标志着AI需求引发的硬件成本上涨从上游存储芯片蔓延至处理器层面——‘RAMageddon‘正在升级为全面的‘半导体通胀‘(What)。此前只有DRAM/NAND涨价,现在CPU加入意味着PC装机的三大核心组件(CPU+内存+存储)全线上涨,全年累计16-17%的CPU涨幅将使中端游戏PC($800-1200)预算被严重挤压(Why)。对游戏行业的传导链：PC装机成本↑→玩家推迟升级→Steam硬件调查中低端配置占比↑→开发者需兼顾更多低配PC→游戏画面优化压力↑(So What)。预计2026 Holiday季PC硬件价格仍将高位运行,NVIDIA/AMD新GPU(5070/9070)可能因芯片成本上涨而定价更高(What Next)。",
         "relatedNewsIds": [
             222,
             230,
@@ -6895,7 +7280,7 @@ const newsData = [
     {
         "id": 228,
         "title": "D加密时代终结：破解组DenuvOwO首次实现所有Denuvo游戏全破,非VR游戏清零",
-        "summary": "2026年4月26日,CrackWatch/游民星空等确认：市面上所有使用Denuvo(D加密)保护的非VR PC游戏已全部被破解或绕过,未破解游戏清单首次清零。破解组DenuvOwO和voices38是主要推动者,采用Hypervisor绕过技术+传统破解双管齐下。4月密集破解了《黑神话：悟空》《Pragmata》《刺客信条：英灵殿》等大作。TheGamer/TechSpot/VGTimes等将此称为'D加密时代终结'。仅剩部分VR游戏和2026年未发售新作仍受保护。",
+        "summary": "2026年4月26日,CrackWatch/游民星空等确认：市面上所有使用Denuvo(D加密)保护的非VR PC游戏已全部被破解或绕过,未破解游戏清单首次清零。破解组DenuvOwO和voices38是主要推动者,采用Hypervisor绕过技术+传统破解双管齐下。4月密集破解了《黑神话：悟空》《Pragmata》《刺客信条：英灵殿》等大作。TheGamer/TechSpot/VGTimes等将此称为‘D加密时代终结‘。仅剩部分VR游戏和2026年未发售新作仍受保护。",
         "source": "TheGamer",
         "sourceUrl": "https://www.thegamer.com/there-are-no-more-remaining-uncracked-denuvo-games/",
         "sourceUrls": [
@@ -6931,7 +7316,7 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "Denuvo非VR游戏全破清零是PC游戏DRM领域的分水岭事件(What)。Denuvo自2014年推出以来一直是PC游戏防盗版的行业标准,主要价值在于保护发售窗口期(首周/首月)销售——全部被破解意味着这一'时间窗口保护'逻辑被彻底瓦解(Why)。短期看：发行商可能加速撤除Denuvo(降低性能损耗获取好评)+转向服务端验证/在线服务模式；EA/Ubisoft等依赖Denuvo的大厂需要重新评估PC防盗版策略；对独立开发者影响较小(本就不用Denuvo)(So What)。Irdeto(Denuvo母公司)可能推出下一代DRM技术应对,但Hypervisor级别的绕过手段意味着技术军备竞赛已进入新阶段(What Next)。",
+        "analysis": "Denuvo非VR游戏全破清零是PC游戏DRM领域的分水岭事件(What)。Denuvo自2014年推出以来一直是PC游戏防盗版的行业标准,主要价值在于保护发售窗口期(首周/首月)销售——全部被破解意味着这一‘时间窗口保护‘逻辑被彻底瓦解(Why)。短期看：发行商可能加速撤除Denuvo(降低性能损耗获取好评)+转向服务端验证/在线服务模式；EA/Ubisoft等依赖Denuvo的大厂需要重新评估PC防盗版策略；对独立开发者影响较小(本就不用Denuvo)(So What)。Irdeto(Denuvo母公司)可能推出下一代DRM技术应对,但Hypervisor级别的绕过手段意味着技术军备竞赛已进入新阶段(What Next)。",
         "relatedNewsIds": []
     },
     {
@@ -6973,13 +7358,13 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "3200万元全资收购国产魂系IP是海外发行商深度布局中国原创IP的典型案例(What)。灵泽科技核心团队解散+制作人离职意味着原工作室已无力持续运营IP,505 Games作为全球发行方选择'买断IP→自建团队开发续作'的路线,本质是将'发行关系'升级为'IP所有者'(Why)。对中国游戏产业的启示：中小团队即使产品成功(百万销量),若核心人才流失仍面临IP流失风险——505 Games以约400万欧元获得了一个已验证的百万级IP,收购价格相对产品收入(据悉超3000万欧元)十分划算(So What)。",
+        "analysis": "3200万元全资收购国产魂系IP是海外发行商深度布局中国原创IP的典型案例(What)。灵泽科技核心团队解散+制作人离职意味着原工作室已无力持续运营IP,505 Games作为全球发行方选择‘买断IP→自建团队开发续作‘的路线,本质是将‘发行关系‘升级为‘IP所有者‘(Why)。对中国游戏产业的启示：中小团队即使产品成功(百万销量),若核心人才流失仍面临IP流失风险——505 Games以约400万欧元获得了一个已验证的百万级IP,收购价格相对产品收入(据悉超3000万欧元)十分划算(So What)。",
         "relatedNewsIds": []
     },
     {
         "id": 226,
         "title": "《暗黑破坏神4：憎恨之躯》资料片4月28日全球发售,新增圣骑士和术士双职业+技能树2.0",
-        "summary": "暴雪《暗黑破坏神4》第二部大型资料片《憎恨之躯》(Lord of Hatred)于4月28日正式全球发售,登陆PS5/PS4/Xbox Series/Xbox One/PC全平台。资料片新增圣骑士(Paladin)和术士(Warlock)两个可玩职业,开放全新区域Skovos群岛,推出技能树2.0覆盖全部8个职业,完结'憎恨时代'主线剧情。评测普遍积极,IGN/GameSpot称其为'暗黑4至今最好的资料片'。此前印尼评级机构泄露Switch评级暗示可能登陆Switch 2。",
+        "summary": "暴雪《暗黑破坏神4》第二部大型资料片《憎恨之躯》(Lord of Hatred)于4月28日正式全球发售,登陆PS5/PS4/Xbox Series/Xbox One/PC全平台。资料片新增圣骑士(Paladin)和术士(Warlock)两个可玩职业,开放全新区域Skovos群岛,推出技能树2.0覆盖全部8个职业,完结‘憎恨时代‘主线剧情。评测普遍积极,IGN/GameSpot称其为‘暗黑4至今最好的资料片‘。此前印尼评级机构泄露Switch评级暗示可能登陆Switch 2。",
         "source": "Blizzard官方",
         "sourceUrl": "https://diablo4.blizzard.com/en-us/lord-of-hatred/",
         "sourceUrls": [
@@ -7022,7 +7407,7 @@ const newsData = [
     {
         "id": 240,
         "title": "暗黑破坏神4：憎恨之躯DLC 4月28日发售，圣骑士职业+全面技能树重制",
-        "summary": "暴雪《暗黑破坏神4》第三部大型资料片'憎恨之躯'(Lord of Hatred)于4月28日正式发售，带来全新圣骑士职业和大幅更新的技能树系统。这是暗黑4自2023年发售以来最大规模的扩展内容，暴雪称其为'远比船难之躯(Vessel of Hatred)更重大的更新'。资料片以恐惧之王墨菲斯托为主题，在古代斯科沃斯地区展开新战役。新增终局玩法、装备改动和职业平衡调整同步上线。",
+        "summary": "暴雪《暗黑破坏神4》第三部大型资料片‘憎恨之躯‘(Lord of Hatred)于4月28日正式发售，带来全新圣骑士职业和大幅更新的技能树系统。这是暗黑4自2023年发售以来最大规模的扩展内容，暴雪称其为‘远比船难之躯(Vessel of Hatred)更重大的更新‘。资料片以恐惧之王墨菲斯托为主题，在古代斯科沃斯地区展开新战役。新增终局玩法、装备改动和职业平衡调整同步上线。",
         "source": "Blizzard",
         "sourceUrl": "https://diablo4.blizzard.com/en-us/lord-of-hatred/",
         "sourceUrls": [
@@ -7054,7 +7439,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "憎恨之躯DLC是暗黑4自2023年发售以来内容深度和规模最大的一次扩展(What)。暴雪在船难之躯的成功基础上加大投入——新增圣骑士职业填补了暗黑系列经典Build的空白，技能树重制意味着Build多样性大幅提升，对核心粉留存和拉新都有显著作用(Why)。暗黑4生命周期管理策略：从Vessel of Hatred到Lord of Hatred的快速迭代+每年至少一部大型DLC的节奏，说明暴雪将暗黑4视为'服务型游戏长线运营'而非传统'买断+资料片'模式(So What)。暗黑4DLC对4月PC游戏市场有显著拉动，预计将成为Steam月度销量榜常客至5月(What Next)。",
+        "analysis": "憎恨之躯DLC是暗黑4自2023年发售以来内容深度和规模最大的一次扩展(What)。暴雪在船难之躯的成功基础上加大投入——新增圣骑士职业填补了暗黑系列经典Build的空白，技能树重制意味着Build多样性大幅提升，对核心粉留存和拉新都有显著作用(Why)。暗黑4生命周期管理策略：从Vessel of Hatred到Lord of Hatred的快速迭代+每年至少一部大型DLC的节奏，说明暴雪将暗黑4视为‘服务型游戏长线运营‘而非传统‘买断+资料片‘模式(So What)。暗黑4DLC对4月PC游戏市场有显著拉动，预计将成为Steam月度销量榜常客至5月(What Next)。",
         "relatedNewsIds": []
     },
     {
@@ -7092,7 +7477,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "Q1 2026 $1000亿游戏并购规模标志着行业整合进入新高峰(What)。手游/电竞资产受追捧反映了'IP+即时服务'模式的主导地位——热门手游IP可快速变现+跨媒体衍生(影视/动漫/电竞)；腾讯系(直接或通过Savvy)主导多笔大交易说明中国资本仍在全球游戏并购中举足轻重(Why)。$1000亿中部分交易可能反映估值泡沫(Savvy 60亿收购Moonton溢价较高)；但并购整合趋势短期内不可逆，中型独立工作室将成为主要收购目标(So What)。预计Q2-Q3并购节奏可能因宏观经济不确定性而放缓，但电竞/AI游戏/云游戏细分赛道仍将是热门标的(What Next)。",
+        "analysis": "Q1 2026 $1000亿游戏并购规模标志着行业整合进入新高峰(What)。手游/电竞资产受追捧反映了‘IP+即时服务‘模式的主导地位——热门手游IP可快速变现+跨媒体衍生(影视/动漫/电竞)；腾讯系(直接或通过Savvy)主导多笔大交易说明中国资本仍在全球游戏并购中举足轻重(Why)。$1000亿中部分交易可能反映估值泡沫(Savvy 60亿收购Moonton溢价较高)；但并购整合趋势短期内不可逆，中型独立工作室将成为主要收购目标(So What)。预计Q2-Q3并购节奏可能因宏观经济不确定性而放缓，但电竞/AI游戏/云游戏细分赛道仍将是热门标的(What Next)。",
         "relatedNewsIds": [
             227,
             223
@@ -7133,7 +7518,7 @@ const newsData = [
     {
         "id": 235,
         "title": "Stop Killing Games运动获欧洲议会重要推进：欧盟或立法永久保护玩家停服后数字权益",
-        "summary": "欧洲玩家权益倡导运动'Stop Killing Games'在欧洲议会听证中取得重要进展，多位议员明确表态支持立法保护，认为该问题关乎'数亿欧洲公民'利益。该运动由法国玩家Francois Doye发起，旨在推动欧盟立法要求游戏发行商在停服后提供离线模式或退款选项。Eurogamer称这可能是游戏行业'最重大的监管变化之一'。",
+        "summary": "欧洲玩家权益倡导运动‘Stop Killing Games‘在欧洲议会听证中取得重要进展，多位议员明确表态支持立法保护，认为该问题关乎‘数亿欧洲公民‘利益。该运动由法国玩家Francois Doye发起，旨在推动欧盟立法要求游戏发行商在停服后提供离线模式或退款选项。Eurogamer称这可能是游戏行业‘最重大的监管变化之一‘。",
         "source": "Eurogamer",
         "sourceUrl": "https://www.eurogamer.com/stop-killing-games-eu-law-could-protect-digital-purchases",
         "sourceUrls": [
@@ -7160,7 +7545,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "Stop Killing Games进入欧盟立法程序是玩家权益保护运动的里程碑(What)。此前玩家对停服游戏的数字购买一直无法律保障，'买的是服务不是游戏'是发行商的法律盾牌；欧盟一旦立法将为全球树立标杆，其他地区可能跟进(Why)。对游戏行业的影响：发行商需在产品生命周期规划中预留离线模式开发成本；对于小型独立开发商，'停服后必须退款'可能使其更谨慎地评估长线运营游戏的可行性；大型发行商可能加速从'买断'向'订阅+服务'转型以规避义务(So What)。预计立法周期可能需要12-24个月，关注2026年欧盟数字市场法(DMA)修订是否纳入相关条款(What Next)。",
+        "analysis": "Stop Killing Games进入欧盟立法程序是玩家权益保护运动的里程碑(What)。此前玩家对停服游戏的数字购买一直无法律保障，‘买的是服务不是游戏‘是发行商的法律盾牌；欧盟一旦立法将为全球树立标杆，其他地区可能跟进(Why)。对游戏行业的影响：发行商需在产品生命周期规划中预留离线模式开发成本；对于小型独立开发商，‘停服后必须退款‘可能使其更谨慎地评估长线运营游戏的可行性；大型发行商可能加速从‘买断‘向‘订阅+服务‘转型以规避义务(So What)。预计立法周期可能需要12-24个月，关注2026年欧盟数字市场法(DMA)修订是否纳入相关条款(What Next)。",
         "relatedNewsIds": []
     },
     {
@@ -7241,8 +7626,8 @@ const newsData = [
     },
     {
         "id": 476,
-        "title": "微软XGP\"入门版\"曝光",
-        "summary": "微软XGP\"入门版\"曝光：含《群星》《星露谷物语》等50多款游戏但限制在线联机，每月仅10小时...",
+        "title": "微软XGP“入门版“曝光",
+        "summary": "微软XGP“入门版“曝光：含《群星》《星露谷物语》等50多款游戏但限制在线联机，每月仅10小时...",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -7254,25 +7639,6 @@ const newsData = [
             "平台发行"
         ],
         "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 477,
-        "title": "索尼PS5在东南亚和韩国大幅涨价，韩国数字版最高涨43%",
-        "summary": "索尼宣布PS5、PS5 Pro及PS Portal在东南亚、韩国地区涨价，5月1日起生效，韩国数字版涨幅高达43%，引发玩家强烈不满。此前PS5全球多地已历经涨价。",
-        "source": "3DM / VGC / GamingBolt",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-04-27",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "negative",
         "tdocMarking": "tdoc-verified",
         "analysis": "",
         "relatedNewsIds": []
@@ -7339,7 +7705,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "FF14登陆Switch 2是SE多平台化+任天堂扩展核心玩家阵营的双赢(What)。FF14月活2400万+持续订阅收入是SE最稳定的现金牛，Switch 2登陆意味着任天堂首次拥有MMO级别的持续性服务型产品(Why)。对Switch 2意义重大：证明其算力足以运行大型在线游戏,拓宽从'单机休闲'到'在线服务'的用户画像(So What)。",
+        "analysis": "FF14登陆Switch 2是SE多平台化+任天堂扩展核心玩家阵营的双赢(What)。FF14月活2400万+持续订阅收入是SE最稳定的现金牛，Switch 2登陆意味着任天堂首次拥有MMO级别的持续性服务型产品(Why)。对Switch 2意义重大：证明其算力足以运行大型在线游戏,拓宽从‘单机休闲‘到‘在线服务‘的用户画像(So What)。",
         "relatedNewsIds": [
             200,
             152
@@ -7406,7 +7772,7 @@ const newsData = [
     {
         "id": 1453,
         "title": "微软Xbox新掌舵人阿莎·夏尔马正式上任，暗示将继续收购工作室",
-        "summary": "微软Xbox新掌舵人阿莎·夏尔马暗示未来或将继续收购游戏工作室。CEO表示Xbox是\"对公司未来至关重要的受众和品类\"",
+        "summary": "微软Xbox新掌舵人阿莎·夏尔马暗示未来或将继续收购游戏工作室。CEO表示Xbox是“对公司未来至关重要的受众和品类“",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -7442,27 +7808,8 @@ const newsData = [
         "relatedNewsIds": []
     },
     {
-        "id": 474,
-        "title": "微软Xbox新掌舵人阿莎·夏尔马正式上任，暗示将继续收购工作室",
-        "summary": "微软Xbox新掌舵人阿莎·夏尔马暗示未来或将继续收购游戏工作室。CEO表示Xbox是\"对公司未来至关重要的受众和品类\"",
-        "source": "ithome.com / videogameschronicle.com",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-04-26",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
         "title": "Xbox Game Pass降价重构：移除CoD首日入库+推出Starter Edition+Discord Nitro捆绑",
-        "summary": "微软4月21日宣布Xbox Game Pass全面降价（Ultimate降至$14.99/月、PC降至$9.99/月），同时确认未来《使命召唤》新作将不再首日入库Game Pass。GamesIndustry.biz援引Newzoo数据显示CoD在Game Pass中'严重蚕食销售'而未有效驱动订阅增长，是微软做出此决定的数据依据。同步曝光的Game Pass Starter Edition（约50+游戏含Stardew Valley/Fallout 4、每月10小时云游戏）将与Discord Nitro捆绑提供，标志着Xbox从'大而全'转向'分层精准投放'的订阅策略。新CEO Asha Sharma表示Game Pass'对太多玩家来说太贵了'。",
+        "summary": "微软4月21日宣布Xbox Game Pass全面降价（Ultimate降至$14.99/月、PC降至$9.99/月），同时确认未来《使命召唤》新作将不再首日入库Game Pass。GamesIndustry.biz援引Newzoo数据显示CoD在Game Pass中‘严重蚕食销售‘而未有效驱动订阅增长，是微软做出此决定的数据依据。同步曝光的Game Pass Starter Edition（约50+游戏含Stardew Valley/Fallout 4、每月10小时云游戏）将与Discord Nitro捆绑提供，标志着Xbox从‘大而全‘转向‘分层精准投放‘的订阅策略。新CEO Asha Sharma表示Game Pass‘对太多玩家来说太贵了‘。",
         "source": "GamesIndustry.biz",
         "sourceUrl": "https://www.gamesindustry.biz/why-xbox-took-call-of-duty-out-of-game-pass",
         "sourceUrls": [
@@ -7507,7 +7854,7 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "Xbox Game Pass降价+CoD退出首日入库+Starter Edition三连发是Asha Sharma上任后最大战略转向(What)。Newzoo数据证实CoD首日入库蚕食$40+/份的零售全价购买而订阅转化率低于预期，$750亿收购动视的Game Pass拉新逻辑被数据证伪(Why)。短期Xbox将损失一批'只为CoD订阅Game Pass'的用户，但零售全价销售回升+降价覆盖更广用户群+Starter Edition通过Discord获取PC/移动端年轻用户形成三级漏斗；对行业意味着'订阅=一切首日入库'的叙事终结，EA Play/Ubisoft+可能效仿(So What)。预计2026 Holiday季CoD将以$70全价+Game Pass延迟6-12月入库的混合模式发售，Starter Edition可能Q3正式上线(What Next)。",
+        "analysis": "Xbox Game Pass降价+CoD退出首日入库+Starter Edition三连发是Asha Sharma上任后最大战略转向(What)。Newzoo数据证实CoD首日入库蚕食$40+/份的零售全价购买而订阅转化率低于预期，$750亿收购动视的Game Pass拉新逻辑被数据证伪(Why)。短期Xbox将损失一批‘只为CoD订阅Game Pass‘的用户，但零售全价销售回升+降价覆盖更广用户群+Starter Edition通过Discord获取PC/移动端年轻用户形成三级漏斗；对行业意味着‘订阅=一切首日入库‘的叙事终结，EA Play/Ubisoft+可能效仿(So What)。预计2026 Holiday季CoD将以$70全价+Game Pass延迟6-12月入库的混合模式发售，Starter Edition可能Q3正式上线(What Next)。",
         "relatedNewsIds": [
             200,
             189,
@@ -7619,8 +7966,8 @@ const newsData = [
     },
     {
         "id": 224,
-        "title": "Xbox品牌重塑：'Microsoft Gaming'更名回归'Xbox'，Asha Sharma公布四大优先战略+Project Helix性能领先",
-        "summary": "Xbox新CEO Asha Sharma与CCO Matt Booty于4月24日发布内部备忘录《We Are Xbox》，宣布终结'Microsoft Gaming'品牌名称、全面回归'Xbox'身份认同。四大优先战略：①重新评估独占策略(重点第一方IP)②Project Helix次世代主机将'性能领先'、兼容PC游戏、与AMD合作预计2027年推出③继续考虑收购工作室④Game Pass重新定位为分层精准投放。此前暴雪动画部门已协助Playground Games开发Fable重启版，体现跨团队协作新模式。Xbox品牌回归是对Phil Spencer时代'Microsoft Gaming'大伞化策略的根本修正。",
+        "title": "Xbox品牌重塑：‘Microsoft Gaming‘更名回归‘Xbox‘，Asha Sharma公布四大优先战略+Project Helix性能领先",
+        "summary": "Xbox新CEO Asha Sharma与CCO Matt Booty于4月24日发布内部备忘录《We Are Xbox》，宣布终结‘Microsoft Gaming‘品牌名称、全面回归‘Xbox‘身份认同。四大优先战略：①重新评估独占策略(重点第一方IP)②Project Helix次世代主机将‘性能领先‘、兼容PC游戏、与AMD合作预计2027年推出③继续考虑收购工作室④Game Pass重新定位为分层精准投放。此前暴雪动画部门已协助Playground Games开发Fable重启版，体现跨团队协作新模式。Xbox品牌回归是对Phil Spencer时代‘Microsoft Gaming‘大伞化策略的根本修正。",
         "source": "GameSpot",
         "sourceUrl": "https://www.gamespot.com/articles/microsoft-gaming-is-dead-to-be-replaced-by-return-to-xbox-branding-report/1100-6539586/",
         "sourceUrls": [
@@ -7660,7 +8007,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "终结'Microsoft Gaming'回归'Xbox'是Asha Sharma对Spencer时代品牌稀释的纠偏(What)。Spencer推动的'Microsoft Gaming'大伞化旨在统一Xbox/Bethesda/Activision，但导致Xbox硬件品牌认知弱化+核心玩家流失+内部组织边界模糊(Why)。回归Xbox品牌+公布Helix性能领先+重新评估独占=向核心玩家发出'Xbox is back'信号；Project Helix兼容PC游戏+AMD合作暗示x86架构延续，对开发者降低移植成本；'继续考虑收购'意味着微软仍有$100B+现金储备可能出手中型工作室(So What)。Helix 2027年测试版若能超越PS5 Pro性能，将是Xbox自2013年Xbox One以来首次在硬件代际争夺中占据主动(What Next)。",
+        "analysis": "终结‘Microsoft Gaming‘回归‘Xbox‘是Asha Sharma对Spencer时代品牌稀释的纠偏(What)。Spencer推动的‘Microsoft Gaming‘大伞化旨在统一Xbox/Bethesda/Activision，但导致Xbox硬件品牌认知弱化+核心玩家流失+内部组织边界模糊(Why)。回归Xbox品牌+公布Helix性能领先+重新评估独占=向核心玩家发出‘Xbox is back‘信号；Project Helix兼容PC游戏+AMD合作暗示x86架构延续，对开发者降低移植成本；‘继续考虑收购‘意味着微软仍有$100B+现金储备可能出手中型工作室(So What)。Helix 2027年测试版若能超越PS5 Pro性能，将是Xbox自2013年Xbox One以来首次在硬件代际争夺中占据主动(What Next)。",
         "relatedNewsIds": [
             200,
             189,
@@ -7713,7 +8060,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "SK海力士Q1利润率77%标志着存储芯片超级周期进入狂热阶段(What)。AI训练/推理服务器对HBM3E的天量需求吸走了产能，倒逼消费级DRAM/NAND同步涨价——游戏主机/PC作为消费电子，在存储芯片采购中处于AI数据中心之后的第二优先级(Why)。对游戏行业三重冲击：①Valve Steam Machine因8GB显存不足+RAM成本上升定价两难②PS6 BOM中存储成本占比可能从PS5的~15%上升至20%+③PC DIY市场DDR5内存涨价挤压中端玩家预算。SK海力士利润率超NVIDIA意味着'卖铲子的比挖金的更赚钱'——上游利润向存储集中(So What)。三星、美光Q2财报预计延续超级周期，H2消费级DRAM仍看涨10-15%(What Next)。",
+        "analysis": "SK海力士Q1利润率77%标志着存储芯片超级周期进入狂热阶段(What)。AI训练/推理服务器对HBM3E的天量需求吸走了产能，倒逼消费级DRAM/NAND同步涨价——游戏主机/PC作为消费电子，在存储芯片采购中处于AI数据中心之后的第二优先级(Why)。对游戏行业三重冲击：①Valve Steam Machine因8GB显存不足+RAM成本上升定价两难②PS6 BOM中存储成本占比可能从PS5的~15%上升至20%+③PC DIY市场DDR5内存涨价挤压中端玩家预算。SK海力士利润率超NVIDIA意味着‘卖铲子的比挖金的更赚钱‘——上游利润向存储集中(So What)。三星、美光Q2财报预计延续超级周期，H2消费级DRAM仍看涨10-15%(What Next)。",
         "relatedNewsIds": [
             209,
             201,
@@ -7768,7 +8115,7 @@ const newsData = [
     {
         "id": 217,
         "title": "《极限竞速：地平线5》PS5版销量突破500万份，验证Xbox多平台策略商业合理性",
-        "summary": "移植商Virtuos官网确认《Forza Horizon 5》PS5版销量突破500万份，Metacritic评分92分，成为2025年PS5平台最畅销游戏之一。这一数据直接支撑了Xbox多平台策略的商业合理性——一款3年前的Xbox/PC独占通过PS5移植实现了显著增量收入。与此形成对比的是《星空》PS5版首周仅14万份(行1169数据)，表明'品牌力+口碑'是决定多平台移植成功的关键而非所有Xbox游戏都能复制FH5的成绩。FH6将于5月19日首发PC和Xbox，PS5版延期发布。",
+        "summary": "移植商Virtuos官网确认《Forza Horizon 5》PS5版销量突破500万份，Metacritic评分92分，成为2025年PS5平台最畅销游戏之一。这一数据直接支撑了Xbox多平台策略的商业合理性——一款3年前的Xbox/PC独占通过PS5移植实现了显著增量收入。与此形成对比的是《星空》PS5版首周仅14万份(行1169数据)，表明‘品牌力+口碑‘是决定多平台移植成功的关键而非所有Xbox游戏都能复制FH5的成绩。FH6将于5月19日首发PC和Xbox，PS5版延期发布。",
         "source": "VGC",
         "sourceUrl": "https://www.videogameschronicle.com/",
         "sourceUrls": [
@@ -7843,51 +8190,13 @@ const newsData = [
     },
     {
         "id": 468,
-        "title": "泄露：Xbox将推出新订阅层级\"Game Pass Starter Edition\"，捆绑Discord Nitro销售，包含50+款游戏和每月10小时云游戏",
-        "summary": "Discord客户端数据挖掘显示，Xbox正在筹备名为\"Game Pass Starter Edition\"的全新订阅层，将与Discord Nitro会员捆绑提供，包含50+款游戏（如Stardew Valley、Fallout 4等）和每月10小时云游戏时间。这是Xbox在Game Pass降价后进一步下沉拉新的重要信号，也是与Discord深度合作的具体落地。",
+        "title": "泄露：Xbox将推出新订阅层级“Game Pass Starter Edition“，捆绑Discord Nitro销售，包含50+款游戏和每月10小时云游戏",
+        "summary": "Discord客户端数据挖掘显示，Xbox正在筹备名为“Game Pass Starter Edition“的全新订阅层，将与Discord Nitro会员捆绑提供，包含50+款游戏（如Stardew Valley、Fallout 4等）和每月10小时云游戏时间。这是Xbox在Game Pass降价后进一步下沉拉新的重要信号，也是与Discord深度合作的具体落地。",
         "source": "VGC / Eurogamer",
         "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "medium",
-        "featured": true,
-        "date": "2026-04-24",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 470,
-        "title": "华纳兄弟股东以压倒多数通过派拉蒙1110亿美元收购案",
-        "summary": "WB股东批准派拉蒙收购，仍待美国司法部和欧盟审批，此前Netflix亦参与竞购",
-        "source": "GamesIndustry.biz",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "policy",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-04-24",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 472,
-        "title": "前PlayStation负责人吉田秀树：不认为PS游戏同步PC发行是好主意",
-        "summary": "吉田在主题演讲中表示反对AAA级PS游戏同日发行PC版，但未确认索尼将放弃PC版发行",
-        "source": "Eurogamer",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "low",
         "featured": true,
         "date": "2026-04-24",
         "tags": [
@@ -7995,8 +8304,8 @@ const newsData = [
     },
     {
         "id": 469,
-        "title": "Xbox新CEO Asha Sharma宣布\"Microsoft Gaming\"品牌更名回归\"Xbox\"，公布四大优先战略；次世代主机Project Helix将\"性能领先\"，兼容PC游戏",
-        "summary": "Xbox CEO Asha Sharma与首席内容官Matt Booty联署内部信并公开发布，宣布：①\"Microsoft Gaming\"品牌全面回归\"Xbox\"命名；②四大战略优先级：硬件（Project Helix性能领先、兼容PC游戏）、内容（扩充IP矩阵、深耕中国及新兴市场）、体验（优化搜索发现、社交、个性化）、服务（强化Game Pass可持续性）；③将重新评估独占游戏、窗口化发行和AI应用策略，现阶段未做定论；④新核心KPI确定为\"日活跃玩家数\"（DAU），而非订阅或销量。这是Xbox 2026年最重大的战略重构宣言，影响整个主机渠道格局。",
+        "title": "Xbox新CEO Asha Sharma宣布“Microsoft Gaming“品牌更名回归“Xbox“，公布四大优先战略；次世代主机Project Helix将“性能领先“，兼容PC游戏",
+        "summary": "Xbox CEO Asha Sharma与首席内容官Matt Booty联署内部信并公开发布，宣布：①“Microsoft Gaming“品牌全面回归“Xbox“命名；②四大战略优先级：硬件（Project Helix性能领先、兼容PC游戏）、内容（扩充IP矩阵、深耕中国及新兴市场）、体验（优化搜索发现、社交、个性化）、服务（强化Game Pass可持续性）；③将重新评估独占游戏、窗口化发行和AI应用策略，现阶段未做定论；④新核心KPI确定为“日活跃玩家数“（DAU），而非订阅或销量。这是Xbox 2026年最重大的战略重构宣言，影响整个主机渠道格局。",
         "source": "3DMGame / 3DMGame独占策略 / VGC / GamingBolt",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -8006,25 +8315,6 @@ const newsData = [
         "date": "2026-04-23",
         "tags": [
             "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 471,
-        "title": "德国游戏行业从业人数连续第二年下降，降幅3%",
-        "summary": "2026年德国游戏公司数量增至956家，但从业人数持续收缩，反映欧洲市场结构性调整",
-        "source": "GamesIndustry.biz",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "policy",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-04-23",
-        "tags": [
-            "业内资讯"
         ],
         "sentiment": "neutral",
         "tdocMarking": "tdoc-verified",
@@ -8077,7 +8367,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "ID@Xbox Spring Showcase是Xbox在硬件转型+裁员传闻敏感节点的关键内容侧发声(What)。微软需在Project Helix定位高端($1200+)+传15%裁员+CoD退出首日入库三重负面叙事下，通过独立游戏+Game Pass生态重塑'内容丰富度'标签；选择与IGN深度绑定而非自家单独办会，体现微软主动扩大触达面降低ID@Xbox的认知门槛(Why)。对Game Pass用户形成短期留存抓手（首日入库独立作为订阅价值锚点）；对ID@Xbox开发者是近半年最大曝光窗口（减轻GDC 2026后独立发行可见度断崖的压力）；对竞争格局是'PS5独占大作+Nintendo 1P+Xbox独立/订阅'的三极化强化(So What)。预计Summer Game Fest(6月)微软将发布Fable/Forza Horizon 6/Helix更多实机，ID@Xbox节奏可能改为季度showcase常态化(What Next)。",
+        "analysis": "ID@Xbox Spring Showcase是Xbox在硬件转型+裁员传闻敏感节点的关键内容侧发声(What)。微软需在Project Helix定位高端($1200+)+传15%裁员+CoD退出首日入库三重负面叙事下，通过独立游戏+Game Pass生态重塑‘内容丰富度‘标签；选择与IGN深度绑定而非自家单独办会，体现微软主动扩大触达面降低ID@Xbox的认知门槛(Why)。对Game Pass用户形成短期留存抓手（首日入库独立作为订阅价值锚点）；对ID@Xbox开发者是近半年最大曝光窗口（减轻GDC 2026后独立发行可见度断崖的压力）；对竞争格局是‘PS5独占大作+Nintendo 1P+Xbox独立/订阅‘的三极化强化(So What)。预计Summer Game Fest(6月)微软将发布Fable/Forza Horizon 6/Helix更多实机，ID@Xbox节奏可能改为季度showcase常态化(What Next)。",
         "relatedNewsIds": [
             201,
             200,
@@ -8089,7 +8379,7 @@ const newsData = [
     {
         "id": 215,
         "title": "育碧《刺客信条：黑旗Resynced》正式公布，定档2026年7月9日发售",
-        "summary": "育碧4月23日举办全球发布会，正式公布《Assassin's Creed Black Flag Resynced》——2013年经典海盗题材作品的完整重制版，将于2026年7月9日登陆PC、PS5、Xbox Series X|S及Steam。Resynced采用Anvil新引擎重建画面、新增光线追踪，强化潜行系统，扩充加勒比海盗黄金时代剧情章节。育碧将其定位为Edward Kenway的'加勒比海盗传奇重生'，而非简单HD补丁。该项目此前已传闻数月，现为育碧继《刺客信条：影》及《幽灵行动》续作曝光之后的又一重磅动作。",
+        "summary": "育碧4月23日举办全球发布会，正式公布《Assassin‘s Creed Black Flag Resynced》——2013年经典海盗题材作品的完整重制版，将于2026年7月9日登陆PC、PS5、Xbox Series X|S及Steam。Resynced采用Anvil新引擎重建画面、新增光线追踪，强化潜行系统，扩充加勒比海盗黄金时代剧情章节。育碧将其定位为Edward Kenway的‘加勒比海盗传奇重生‘，而非简单HD补丁。该项目此前已传闻数月，现为育碧继《刺客信条：影》及《幽灵行动》续作曝光之后的又一重磅动作。",
         "source": "Ubisoft",
         "sourceUrl": "https://www.ubisoft.com/en-us/game/assassins-creed/black-flag-resynced",
         "sourceUrls": [
@@ -8129,7 +8419,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "黑旗Resynced是育碧IP复兴战略的关键棋子(What)。育碧过去两年经历股价腰斩+ACS收入不及预期+育碧创始人家族减持危机，急需通过低风险高回报的经典IP重制回血；选择黑旗（AC系列公认口碑TOP3作品+海盗题材全球通吃）而非更新的作品，体现'经典+光追+高端版本'的稳健商业逻辑(Why)。7/9档期避开了GTA 6(11/19)和Fable秋季，抢占暑期档；同时填补育碧2026下半年的空白期，为2027年AC Hexe和《幽灵行动》续作铺垫；对PC/主机玩家形成7月最大话题营销节点；对育碧股价和FY27预期构成重要正向催化(So What)。若销量超500万份（参考旧版1500万+重制版惯例），将帮助育碧证明'IP重制组合拳'模式可行，推动后续红楼梦/波斯王子重制加速(What Next)。",
+        "analysis": "黑旗Resynced是育碧IP复兴战略的关键棋子(What)。育碧过去两年经历股价腰斩+ACS收入不及预期+育碧创始人家族减持危机，急需通过低风险高回报的经典IP重制回血；选择黑旗（AC系列公认口碑TOP3作品+海盗题材全球通吃）而非更新的作品，体现‘经典+光追+高端版本‘的稳健商业逻辑(Why)。7/9档期避开了GTA 6(11/19)和Fable秋季，抢占暑期档；同时填补育碧2026下半年的空白期，为2027年AC Hexe和《幽灵行动》续作铺垫；对PC/主机玩家形成7月最大话题营销节点；对育碧股价和FY27预期构成重要正向催化(So What)。若销量超500万份（参考旧版1500万+重制版惯例），将帮助育碧证明‘IP重制组合拳‘模式可行，推动后续红楼梦/波斯王子重制加速(What Next)。",
         "relatedNewsIds": [
             200,
             186,
@@ -8140,7 +8430,7 @@ const newsData = [
     {
         "id": 1438,
         "title": "Xbox副总裁明确：Project Helix为第一方主机，不退出硬件市场",
-        "summary": "Xbox设备与生态副总裁Jason Ronald在X平台声明，Project Helix将以第一方主机形式推出，搭载AMD混合SoC\"Magnus\"，支持Xbox与PC双平台游戏。第三方授权主机仅为补充。",
+        "summary": "Xbox设备与生态副总裁Jason Ronald在X平台声明，Project Helix将以第一方主机形式推出，搭载AMD混合SoC“Magnus“，支持Xbox与PC双平台游戏。第三方授权主机仅为补充。",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -8178,7 +8468,7 @@ const newsData = [
     {
         "id": 1441,
         "title": "任天堂遭玩家起诉关税退款问题",
-        "summary": "玩家指控任天堂在Switch 2预购中重复收取关税费用，\"除非受到限制，任天堂将两次收回相同的关税付款\"。由于特朗普政府广泛的关税政策，任天堂提高了部分Switch 2配件的价格。",
+        "summary": "玩家指控任天堂在Switch 2预购中重复收取关税费用，“除非受到限制，任天堂将两次收回相同的关税付款“。由于特朗普政府广泛的关税政策，任天堂提高了部分Switch 2配件的价格。",
         "source": "腾讯文档策展",
         "sourceUrl": "https://www.gamesindustry.biz/gamers-sue-nintendo-over-tariff-refundshttps://www.videogameschronicle.com/news/nintendo-sued-by-players-who-say-they-should-get-any-tariff-refunds-received-by-the-us-government/https://www.3dmgame.com/news/202604/3942643.html",
         "sourceUrls": [
@@ -8201,8 +8491,8 @@ const newsData = [
     },
     {
         "id": 1442,
-        "title": "分析师：Xbox Game Pass降价是\"不可避免的转变\"",
-        "summary": "分析师认为Xbox Game Pass降价将在2026年推动订阅增长；取消《使命召唤》首日上线\"并不意味着Game Pass首日游戏发布的终结\"，业界对该作收入影响看法不一。分析师表示，在《使命召唤》首发加入Game Pass未能带来订阅量大幅增长后，微软选择降价是意料之中的举措。",
+        "title": "分析师：Xbox Game Pass降价是“不可避免的转变“",
+        "summary": "分析师认为Xbox Game Pass降价将在2026年推动订阅增长；取消《使命召唤》首日上线“并不意味着Game Pass首日游戏发布的终结“，业界对该作收入影响看法不一。分析师表示，在《使命召唤》首发加入Game Pass未能带来订阅量大幅增长后，微软选择降价是意料之中的举措。",
         "source": "腾讯文档策展",
         "sourceUrl": "https://www.gamesindustry.biz/not-surprising-at-all-analysts-see-xbox-game-pass-price-cut-as-inevitable-shift-that-will-drive-subscription-growth-in-2026https://www.videogameschronicle.com/news/analysts-say-xbox-game-pass-price-drop-is-unsurprising-after-cod-failed-to-significantly-increase-subscriptions/",
         "sourceUrls": [
@@ -8225,8 +8515,8 @@ const newsData = [
     },
     {
         "id": 1443,
-        "title": "Xbox次世代主机Project Helix传言：AMD GPU为\"零定制\"，性能比肩2-3万元PC，目标售价约$1200",
-        "summary": "爆料人Moore's Law Is Dead称该机性能媲美$2000-$3000级PC；另有消息称AMD GPU未经微软任何定制，属Xbox系列首例，标志硬件策略转型",
+        "title": "Xbox次世代主机Project Helix传言：AMD GPU为“零定制“，性能比肩2-3万元PC，目标售价约$1200",
+        "summary": "爆料人Moore‘s Law Is Dead称该机性能媲美$2000-$3000级PC；另有消息称AMD GPU未经微软任何定制，属Xbox系列首例，标志硬件策略转型",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -8362,7 +8652,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "3月美国游戏硬件+69%至$5亿是Switch 2发售以来最强月度表现(What)。Switch 2上市10个月累计销量超初代Switch同期12%，锁定'美国史上第二快销主机'(仅次于Wii)，证明$449定价+Mario Kart World首发策略成功(Why)。对行业意味着主机市场仍有强劲需求——硬件涨价周期中Switch 2逆势增长说明内容驱动>价格敏感；PS5同比+3%说明涨价后销量趋稳而非崩盘(So What)。4月有Pragmata/Diablo IV Lord of Hatred等大作集中发售，预计Q2软件支出将维持双位数增长(What Next)。",
+        "analysis": "3月美国游戏硬件+69%至$5亿是Switch 2发售以来最强月度表现(What)。Switch 2上市10个月累计销量超初代Switch同期12%，锁定‘美国史上第二快销主机‘(仅次于Wii)，证明$449定价+Mario Kart World首发策略成功(Why)。对行业意味着主机市场仍有强劲需求——硬件涨价周期中Switch 2逆势增长说明内容驱动>价格敏感；PS5同比+3%说明涨价后销量趋稳而非崩盘(So What)。4月有Pragmata/Diablo IV Lord of Hatred等大作集中发售，预计Q2软件支出将维持双位数增长(What Next)。",
         "relatedNewsIds": [
             175,
             209,
@@ -8424,7 +8714,7 @@ const newsData = [
     {
         "id": 213,
         "title": "消息称微软Xbox部门计划裁员15%，公告或于5月6日/6月5日发布",
-        "summary": "匿名职场论坛Blind上一位自称动视暴雪员工4月22日发帖称，微软游戏部门正准备新一轮裁员，影响规模约15%，内部消息指公告日期为'5/6'（5月6日或6月5日）。新任游戏CEO Asha Sharma上任仅数月即推动裁员，动视、暴雪、ZeniMax、Xbox Game Studios等全线预计受影响。彭博社Jason Schreier此前已多次爆料Xbox 2026将继续裁员。该规模若属实将是微软收购动视暴雪以来最大规模裁员，远超2025年1900人规模。裁员叠加Helix硬件转型+Game Pass降价+CoD退出首日入库，反映微软游戏业务盈利压力剧增，向'高毛利订阅+高端硬件'商业模式硬转向。",
+        "summary": "匿名职场论坛Blind上一位自称动视暴雪员工4月22日发帖称，微软游戏部门正准备新一轮裁员，影响规模约15%，内部消息指公告日期为‘5/6‘（5月6日或6月5日）。新任游戏CEO Asha Sharma上任仅数月即推动裁员，动视、暴雪、ZeniMax、Xbox Game Studios等全线预计受影响。彭博社Jason Schreier此前已多次爆料Xbox 2026将继续裁员。该规模若属实将是微软收购动视暴雪以来最大规模裁员，远超2025年1900人规模。裁员叠加Helix硬件转型+Game Pass降价+CoD退出首日入库，反映微软游戏业务盈利压力剧增，向‘高毛利订阅+高端硬件‘商业模式硬转向。",
         "source": "IT之家",
         "sourceUrl": "https://www.ithome.com/0/941/905.htm",
         "sourceUrls": [
@@ -8467,7 +8757,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "Xbox 15%裁员传闻是微软游戏业务结构性重整的最强信号(What)。微软以687亿美元收购动视暴雪后，游戏业务面临规模化盈利压力——2024财年动视暴雪贡献59亿美元营收但净利率低于预期；Asha Sharma接任CEO后的首要任务是提升每股盈利(EPS)，15%裁员可节省约10亿美元年度成本，支撑Game Pass降价策略的盈利弹性(Why)。对行业的冲击三层：①工作室层：动视/暴雪/Zenimax等被收购工作室首当其冲，对《使命召唤》《魔兽世界》等长青IP的更新节奏产生压力；②订阅策略层：裁员+降价=微软承认Game Pass生态投入产出比不佳，转向'高毛利付费墙'；③行业层：继2024-2025'裁员潮'后的第四轮大裁员，对开发者就业信心再次打击(So What)。若公告属实，预计Xbox发行节奏将进一步依赖第三方Game Pass交易+AI辅助开发，第一方3A数量可能减半；Helix主机发售(2027)可能与裁员结构重叠，形成'小而精'硬件路线(What Next)。",
+        "analysis": "Xbox 15%裁员传闻是微软游戏业务结构性重整的最强信号(What)。微软以687亿美元收购动视暴雪后，游戏业务面临规模化盈利压力——2024财年动视暴雪贡献59亿美元营收但净利率低于预期；Asha Sharma接任CEO后的首要任务是提升每股盈利(EPS)，15%裁员可节省约10亿美元年度成本，支撑Game Pass降价策略的盈利弹性(Why)。对行业的冲击三层：①工作室层：动视/暴雪/Zenimax等被收购工作室首当其冲，对《使命召唤》《魔兽世界》等长青IP的更新节奏产生压力；②订阅策略层：裁员+降价=微软承认Game Pass生态投入产出比不佳，转向‘高毛利付费墙‘；③行业层：继2024-2025‘裁员潮‘后的第四轮大裁员，对开发者就业信心再次打击(So What)。若公告属实，预计Xbox发行节奏将进一步依赖第三方Game Pass交易+AI辅助开发，第一方3A数量可能减半；Helix主机发售(2027)可能与裁员结构重叠，形成‘小而精‘硬件路线(What Next)。",
         "relatedNewsIds": [
             201,
             206,
@@ -8521,7 +8811,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "美国硬件销售+69%是Switch 2上市10个月里程碑数据(What)。任天堂以创纪录的发售节奏（12%超初代Switch）+强劲首发阵容（马里奥赛车/Zelda EoW Remaster等）实现北美市场迅速铺货；对照PS5 3%增长和Xbox市场份额持续萎缩，Switch 2是当前硬件周期的绝对赢家(Why)。硬件基数扩大意味着2026-2027年Switch 2软件销量将迎来爆发期——第三方厂商（卡普空/光荣/万代南梦宫）已明确加大Switch 2投入，对PS5独占策略形成压力；53亿美元月消费规模为近两年最高，对整体游戏产业是强烈利好信号(So What)。PS6（2027假期）和Xbox Project Helix（同期）都将面对Switch 2装机量3000万+的优势位置竞争；硬件周期的'单极格局'可能持续到2027下半年(What Next)。",
+        "analysis": "美国硬件销售+69%是Switch 2上市10个月里程碑数据(What)。任天堂以创纪录的发售节奏（12%超初代Switch）+强劲首发阵容（马里奥赛车/Zelda EoW Remaster等）实现北美市场迅速铺货；对照PS5 3%增长和Xbox市场份额持续萎缩，Switch 2是当前硬件周期的绝对赢家(Why)。硬件基数扩大意味着2026-2027年Switch 2软件销量将迎来爆发期——第三方厂商（卡普空/光荣/万代南梦宫）已明确加大Switch 2投入，对PS5独占策略形成压力；53亿美元月消费规模为近两年最高，对整体游戏产业是强烈利好信号(So What)。PS6（2027假期）和Xbox Project Helix（同期）都将面对Switch 2装机量3000万+的优势位置竞争；硬件周期的‘单极格局‘可能持续到2027下半年(What Next)。",
         "relatedNewsIds": [
             193,
             194,
@@ -8584,7 +8874,7 @@ const newsData = [
     {
         "id": 206,
         "title": "Xbox Project Helix主机细节：AMD GPU零定制、性能对标2-3千美元PC，售价或达1200美元",
-        "summary": "爆料人Moore's Law Is Dead（MLID）发布Project Helix深度分析：这款次世代Xbox主机性能将媲美2000-3000美元级游戏PC，AMD GPU方案未经微软任何定制，属Xbox系列首例，标志硬件策略从'专属定制'向'标准化PC架构'的重大转型。根据零件成本分析，主机零售起价约1200美元，若微软不补贴硬件甚至可达1500美元。结合此前GTC 2026透露的6倍光栅化性能+20倍光线追踪能力，Project Helix定位为'PC形态的Xbox主机'。TechPowerUp、Wccftech等硬件媒体进行了详细转载和分析。",
+        "summary": "爆料人Moore‘s Law Is Dead（MLID）发布Project Helix深度分析：这款次世代Xbox主机性能将媲美2000-3000美元级游戏PC，AMD GPU方案未经微软任何定制，属Xbox系列首例，标志硬件策略从‘专属定制‘向‘标准化PC架构‘的重大转型。根据零件成本分析，主机零售起价约1200美元，若微软不补贴硬件甚至可达1500美元。结合此前GTC 2026透露的6倍光栅化性能+20倍光线追踪能力，Project Helix定位为‘PC形态的Xbox主机‘。TechPowerUp、Wccftech等硬件媒体进行了详细转载和分析。",
         "source": "TechPowerUp",
         "sourceUrl": "https://www.techpowerup.com/348444/leaker-calls-xbox-helix-console-equivalent-to-usd-2-3-000-gaming-pc",
         "sourceUrls": [
@@ -8627,7 +8917,7 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "$1200-1500美元售价+零GPU定制是Xbox硬件战略根本性转变(What)。过去三代Xbox均采用定制AMD APU追求能效比和独占优化，但定制芯片开发周期长+内存涨价+云游戏增长使得'定制模式'经济性下滑；Helix选择纯PC架构+高端定位，本质是将Xbox重新定位为'预装Xbox生态的游戏PC'而非传统家用机(Why)。影响三层：①玩家层：1200美元+年订阅让Xbox从PS5的替代品变成PC的替代品，目标用户显著缩小；②开发者层：无定制+标准DirectX意味着跨平台移植成本降低，但失去独占优化优势；③行业层：Sony PS6若坚持传统定制路线将成为'最后的传统主机'，Xbox此举可能永久分裂两大生态(So What)。配合Game Pass降价+CoD退出首日入库，微软硬件策略彻底转向'高端订阅生态' → 预期2027年发售后Xbox硬件销量将创新低，但订阅收入和Cloud用户可能大幅增长(What Next)。",
+        "analysis": "$1200-1500美元售价+零GPU定制是Xbox硬件战略根本性转变(What)。过去三代Xbox均采用定制AMD APU追求能效比和独占优化，但定制芯片开发周期长+内存涨价+云游戏增长使得‘定制模式‘经济性下滑；Helix选择纯PC架构+高端定位，本质是将Xbox重新定位为‘预装Xbox生态的游戏PC‘而非传统家用机(Why)。影响三层：①玩家层：1200美元+年订阅让Xbox从PS5的替代品变成PC的替代品，目标用户显著缩小；②开发者层：无定制+标准DirectX意味着跨平台移植成本降低，但失去独占优化优势；③行业层：Sony PS6若坚持传统定制路线将成为‘最后的传统主机‘，Xbox此举可能永久分裂两大生态(So What)。配合Game Pass降价+CoD退出首日入库，微软硬件策略彻底转向‘高端订阅生态‘ → 预期2027年发售后Xbox硬件销量将创新低，但订阅收入和Cloud用户可能大幅增长(What Next)。",
         "relatedNewsIds": [
             200,
             201,
@@ -8739,8 +9029,8 @@ const newsData = [
     },
     {
         "id": 203,
-        "title": "任天堂遭美国玩家集体起诉，因Switch 2关税退款'双重收取'问题",
-        "summary": "两名美国玩家4月21日在西雅图地区法院对任天堂美国分公司提起集体诉讼，指控任天堂在Switch 2预购和硬件销售中'双重收取'关税费用——特朗普政府关税政策下，任天堂已提高部分Switch 2配件售价；而在美国最高法院2月裁定关税违宪后，任天堂正从政府获得关税退款，但拒绝将退款部分返还给已支付加价的消费者。原告主张任天堂的做法构成不正当得利。任天堂此前为应对关税，延后Switch 2在美预售日期、提高配件价格。该案被广泛视为游戏行业首例关税退款集体诉讼，或影响其他厂商的定价策略。",
+        "title": "任天堂遭美国玩家集体起诉，因Switch 2关税退款‘双重收取‘问题",
+        "summary": "两名美国玩家4月21日在西雅图地区法院对任天堂美国分公司提起集体诉讼，指控任天堂在Switch 2预购和硬件销售中‘双重收取‘关税费用——特朗普政府关税政策下，任天堂已提高部分Switch 2配件售价；而在美国最高法院2月裁定关税违宪后，任天堂正从政府获得关税退款，但拒绝将退款部分返还给已支付加价的消费者。原告主张任天堂的做法构成不正当得利。任天堂此前为应对关税，延后Switch 2在美预售日期、提高配件价格。该案被广泛视为游戏行业首例关税退款集体诉讼，或影响其他厂商的定价策略。",
         "source": "Ars Technica",
         "sourceUrl": "https://arstechnica.com/tech-policy/2026/04/lawsuit-nintendo-is-getting-tariff-refunds-its-customers-should-get-them-instead/",
         "sourceUrls": [
@@ -8790,8 +9080,8 @@ const newsData = [
     },
     {
         "id": 202,
-        "title": "微软考虑推出Xbox Game Pass'自选套餐'订阅选项",
-        "summary": "Windows Central报道，微软游戏业务负责人Asha Sharma近期告诉员工Game Pass将变得'更加灵活'，长期计划包含推出'自选套餐（Pick Your Own Plan）'选项——允许订阅者根据个人偏好组合游戏类型、在线服务、云游戏、EA Play等模块，形成个性化订阅。该想法目前处于内部讨论阶段，无具体发布时间。此方向与4月21日Game Pass降价+CoD退出首日入库调整一脉相承，旨在降低订阅门槛、减少流失率。若落地，Game Pass将从'All-in-One统一套餐'转变为'模块化自选菜单'，接近Netflix和Spotify家庭套餐模式。",
+        "title": "微软考虑推出Xbox Game Pass‘自选套餐‘订阅选项",
+        "summary": "Windows Central报道，微软游戏业务负责人Asha Sharma近期告诉员工Game Pass将变得‘更加灵活‘，长期计划包含推出‘自选套餐（Pick Your Own Plan）‘选项——允许订阅者根据个人偏好组合游戏类型、在线服务、云游戏、EA Play等模块，形成个性化订阅。该想法目前处于内部讨论阶段，无具体发布时间。此方向与4月21日Game Pass降价+CoD退出首日入库调整一脉相承，旨在降低订阅门槛、减少流失率。若落地，Game Pass将从‘All-in-One统一套餐‘转变为‘模块化自选菜单‘，接近Netflix和Spotify家庭套餐模式。",
         "source": "GameSpot",
         "sourceUrl": "https://www.gamespot.com/articles/xbox-game-pass-pick-your-own-plan-being-considered-report/1100-6539544/",
         "sourceUrls": [
@@ -8843,7 +9133,7 @@ const newsData = [
     {
         "id": 200,
         "title": "Xbox副总裁明确Project Helix为第一方主机，微软不退出硬件市场",
-        "summary": "Xbox游戏设备与生态副总裁Jason Ronald 4月21日在X平台发文，明确回应Project Helix定位疑虑——'Project Helix将作为第一方Xbox主机发售'，并强调微软仍致力于构建和销售自有硬件。声明搭载AMD混合SoC代号'Magnus'，支持Xbox与PC双平台游戏，预计2027假期档发布。第三方授权主机（如Xbox ROG Ally X）仅为补充而非替代。此前因GPU放弃定制传闻引发'微软退出硬件'猜测，Ronald的回应终结了这一传言。",
+        "summary": "Xbox游戏设备与生态副总裁Jason Ronald 4月21日在X平台发文，明确回应Project Helix定位疑虑——‘Project Helix将作为第一方Xbox主机发售‘，并强调微软仍致力于构建和销售自有硬件。声明搭载AMD混合SoC代号‘Magnus‘，支持Xbox与PC双平台游戏，预计2027假期档发布。第三方授权主机（如Xbox ROG Ally X）仅为补充而非替代。此前因GPU放弃定制传闻引发‘微软退出硬件‘猜测，Ronald的回应终结了这一传言。",
         "source": "Kotaku",
         "sourceUrl": "https://kotaku.com/xbox-project-helix-pc-asus-msi-console-jason-ronald-2000689329",
         "sourceUrls": [
@@ -8886,7 +9176,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "Jason Ronald亲自澄清Helix为第一方主机，是微软对'退出硬件'担忧的及时止损(What)。前一日GPU放弃定制+RAM涨价+掌机合作等传闻叠加，市场开始质疑Xbox硬件战略空心化，Ronald作为设备副总裁亲自发声，强调第一方身份+明确AMD Magnus SoC，传递微软硬件承诺不动摇的信号(Why)。此举对Xbox开发合作伙伴（ID@Xbox/育碧/EA等）和渠道商是定心丸，避免'观望延期新作开发'的连锁反应；对PS6是重要信号——2027假期档将形成PS6对Helix的正面竞争(So What)。但标准化架构+第一方身份组合较为罕见，Helix可能成为'PC形态的主机'——硬件销售收入不再是核心KPI，Game Pass+Cloud收入才是(What Next)。",
+        "analysis": "Jason Ronald亲自澄清Helix为第一方主机，是微软对‘退出硬件‘担忧的及时止损(What)。前一日GPU放弃定制+RAM涨价+掌机合作等传闻叠加，市场开始质疑Xbox硬件战略空心化，Ronald作为设备副总裁亲自发声，强调第一方身份+明确AMD Magnus SoC，传递微软硬件承诺不动摇的信号(Why)。此举对Xbox开发合作伙伴（ID@Xbox/育碧/EA等）和渠道商是定心丸，避免‘观望延期新作开发‘的连锁反应；对PS6是重要信号——2027假期档将形成PS6对Helix的正面竞争(So What)。但标准化架构+第一方身份组合较为罕见，Helix可能成为‘PC形态的主机‘——硬件销售收入不再是核心KPI，Game Pass+Cloud收入才是(What Next)。",
         "relatedNewsIds": [
             196,
             201,
@@ -8956,7 +9246,7 @@ const newsData = [
     {
         "id": 241,
         "title": "Xbox Game Pass大降价：Ultimate从$29.99降至$22.99，使命召唤不再首发入库",
-        "summary": "微软Xbox Game Pass迎来重大调整：Game Pass Ultimate从$29.99/月降至$22.99/月，PC Game Pass从$16.49降至$13.99/月。同时宣布《使命召唤》新作将不再在首发日加入Game Pass，改为约一年后入库。微软归因于此前涨价引发的'大量负面反馈'(lots of negative feedback)。分析师指出此举可能标志着Xbox从硬件平台向内容订阅服务的战略转型进一步深化。",
+        "summary": "微软Xbox Game Pass迎来重大调整：Game Pass Ultimate从$29.99/月降至$22.99/月，PC Game Pass从$16.49降至$13.99/月。同时宣布《使命召唤》新作将不再在首发日加入Game Pass，改为约一年后入库。微软归因于此前涨价引发的‘大量负面反馈‘(lots of negative feedback)。分析师指出此举可能标志着Xbox从硬件平台向内容订阅服务的战略转型进一步深化。",
         "source": "Xbox Wire",
         "sourceUrl": "https://news.xbox.com/en-us/2026/04/21/xbox-game-pass-update/",
         "sourceUrls": [
@@ -8992,7 +9282,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "Game Pass降价+CoD退出首发是Xbox新领导层的首个重大战略信号(What)。Asha Sharma上任后第一把火指向CoD——这是微软以$690亿收购动视暴雪的核心资产，却选择不再用它驱动订阅增长，说明新管理层认为CoD首发入库对XGP的边际收益已递减，边际成本(放弃$70/份全价销售)已超过边际收益(Why)。降价$7/月意味着年化流失约$84/用户的直接订阅收入，需靠更多订阅用户+XGP生态内购来弥补；CoD延迟一年入库可能驱动订阅续费率提升而非降低——玩家为了首发CoD可能更倾向订阅而非购买(So What)。微软从'硬件平台'向'内容订阅'的转型已不可逆，Xbox品牌更名只是时间问题(What Next)。",
+        "analysis": "Game Pass降价+CoD退出首发是Xbox新领导层的首个重大战略信号(What)。Asha Sharma上任后第一把火指向CoD——这是微软以$690亿收购动视暴雪的核心资产，却选择不再用它驱动订阅增长，说明新管理层认为CoD首发入库对XGP的边际收益已递减，边际成本(放弃$70/份全价销售)已超过边际收益(Why)。降价$7/月意味着年化流失约$84/用户的直接订阅收入，需靠更多订阅用户+XGP生态内购来弥补；CoD延迟一年入库可能驱动订阅续费率提升而非降低——玩家为了首发CoD可能更倾向订阅而非购买(So What)。微软从‘硬件平台‘向‘内容订阅‘的转型已不可逆，Xbox品牌更名只是时间问题(What Next)。",
         "relatedNewsIds": [
             216,
             225,
@@ -9026,7 +9316,7 @@ const newsData = [
     {
         "id": 1433,
         "title": "索尼PS5玩家突然收到年龄验证通知",
-        "summary": "英国和爱尔兰PS5玩家需完成年龄验证才能使用语音及文字聊天功能，提供面部扫描、证件验证和手机号验证三种方式。索尼宣布此项要求，旨在确保\"为玩家和家庭提供安全、适合年龄的体验，同时尊重他们的隐私\"。",
+        "summary": "英国和爱尔兰PS5玩家需完成年龄验证才能使用语音及文字聊天功能，提供面部扫描、证件验证和手机号验证三种方式。索尼宣布此项要求，旨在确保“为玩家和家庭提供安全、适合年龄的体验，同时尊重他们的隐私“。",
         "source": "腾讯文档策展",
         "sourceUrl": "https://www.ithome.com/0/941/449.htmhttps://www.3dmgame.com/news/202604/3942443.htmlhttps://gamingbolt.com/playstation-will-require-age-verification-for-online-voice-chat-and-messages",
         "sourceUrls": [
@@ -9120,57 +9410,9 @@ const newsData = [
         "relatedNewsIds": []
     },
     {
-        "id": 462,
-        "title": "索尼PS5玩家突然收到年龄验证通知",
-        "summary": "英国和爱尔兰PS5玩家需完成年龄验证才能使用语音及文字聊天功能，提供面部扫描、证件验证和手机号验证三种方式。索尼宣布此项要求，旨在确保\"为玩家和家庭提供安全、适合年龄的体验，同时尊重他们的隐私\"。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/941/449.htmhttps://www.3dmgame.com/news/202604/3942443.htmlhttps://gamingbolt.com/playstation-will-require-age-verification-for-online-voice-chat-and-messages",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/941/449.htmhttps://www.3dmgame.com/news/202604/3942443.htmlhttps://gamingbolt.com/playstation-will-require-age-verification-for-online-voice-chat-and-messages"
-            }
-        ],
-        "category": "policy",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-04-21",
-        "tags": [
-            "政府政策"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 464,
-        "title": "东映成立游戏发行品牌Toei Games",
-        "summary": "《龙珠》《数码宝贝》制作公司东映宣布成立Toei Games，专注从零打造全新IP，首批游戏登陆Steam。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/941/632.htmhttps://www.eurogamer.net/dragon-ball-and-digimon-anime-producer-toei-creates-toei-games-publisherhttps://www.gamesindustry.biz/toei-company-launches-publishing-label-toei-games",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/941/632.htmhttps://www.eurogamer.net/dragon-ball-and-digimon-anime-producer-toei-creates-toei-games-publisherhttps://www.gamesindustry.biz/toei-company-launches-publishing-label-toei-games"
-            }
-        ],
-        "category": "policy",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-04-21",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
         "id": 201,
         "title": "微软大幅下调Game Pass价格，《使命召唤》新作退出首日入库",
-        "summary": "微软4月21日宣布对Xbox Game Pass订阅服务进行重大调整：旗舰级Game Pass Ultimate月费从29.99美元降至22.99美元（降幅约23%），PC Game Pass从16.49美元下调至13.99美元，即日起生效。同时确认《使命召唤》系列新作不再在发售首日加入订阅服务，改为发售约一年后（假期档）进入Ultimate和PC Game Pass。新任游戏业务负责人Asha Sharma表示'订阅价格对太多玩家来说已变得过于昂贵'。当前订阅中的作品不受影响。这是动视暴雪并购后Game Pass定价模式的首次重大调整。",
+        "summary": "微软4月21日宣布对Xbox Game Pass订阅服务进行重大调整：旗舰级Game Pass Ultimate月费从29.99美元降至22.99美元（降幅约23%），PC Game Pass从16.49美元下调至13.99美元，即日起生效。同时确认《使命召唤》系列新作不再在发售首日加入订阅服务，改为发售约一年后（假期档）进入Ultimate和PC Game Pass。新任游戏业务负责人Asha Sharma表示‘订阅价格对太多玩家来说已变得过于昂贵‘。当前订阅中的作品不受影响。这是动视暴雪并购后Game Pass定价模式的首次重大调整。",
         "source": "Xbox Wire",
         "sourceUrl": "https://news.xbox.com/en-us/2026/04/21/xbox-game-pass-update/",
         "sourceUrls": [
@@ -9218,7 +9460,7 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "Game Pass降价+CoD退出首日入库是Xbox订阅战略的180度转向(What)。过去五年微软以Game Pass为核心构建'全订阅'生态，但Ultimate从9.99美元涨至29.99美元+CoD首日入库导致订阅价值被稀释，用户增长停滞——新CEO Asha Sharma直言'对太多玩家过于昂贵'(Why)。短期内价格下调刺激新订阅+降低流失率，但CoD一年独占窗口期恢复意味着多数核心玩家仍会单独购买游戏，对发行收入是利好；长期看，Game Pass从'日一入库All-in-One'退回'精选订阅+窗口期发行'的混合模式，本质承认全订阅在3A时代经济学不成立(So What)。此举将改变整个行业订阅策略——PS Plus/EA Play可能跟进重新强调'性价比'而非'独占日一'。Project Helix硬件放弃定制+Game Pass降价合并形成'低硬件门槛+低订阅门槛'的用户获取新战略(What Next)。",
+        "analysis": "Game Pass降价+CoD退出首日入库是Xbox订阅战略的180度转向(What)。过去五年微软以Game Pass为核心构建‘全订阅‘生态，但Ultimate从9.99美元涨至29.99美元+CoD首日入库导致订阅价值被稀释，用户增长停滞——新CEO Asha Sharma直言‘对太多玩家过于昂贵‘(Why)。短期内价格下调刺激新订阅+降低流失率，但CoD一年独占窗口期恢复意味着多数核心玩家仍会单独购买游戏，对发行收入是利好；长期看，Game Pass从‘日一入库All-in-One‘退回‘精选订阅+窗口期发行‘的混合模式，本质承认全订阅在3A时代经济学不成立(So What)。此举将改变整个行业订阅策略——PS Plus/EA Play可能跟进重新强调‘性价比‘而非‘独占日一‘。Project Helix硬件放弃定制+Game Pass降价合并形成‘低硬件门槛+低订阅门槛‘的用户获取新战略(What Next)。",
         "relatedNewsIds": [
             196,
             147,
@@ -9230,7 +9472,7 @@ const newsData = [
     {
         "id": 198,
         "title": "Valve Steam Controller开箱视频曝光，或先于Steam Machine发售",
-        "summary": "消息源Brad Lynch 4月21日在X爆料，Valve在官方后台上传了名为'steam_controller_unboxing_2026'的开箱视频条目，结合此前SteamDB配对流程软件就绪+进口记录中'无线PC控制器'货物批次，行业普遍判断Steam Controller即将发售。Valve原计划2026年初同步发售Steam Controller/Steam Machine/Steam Frame三款硬件，但受存储与DRAM价格上涨影响，Steam Machine发售窗口已从2026年初推迟至年底前。Steam Controller或率先单独上市以维持硬件路线图节奏。",
+        "summary": "消息源Brad Lynch 4月21日在X爆料，Valve在官方后台上传了名为‘steam_controller_unboxing_2026‘的开箱视频条目，结合此前SteamDB配对流程软件就绪+进口记录中‘无线PC控制器‘货物批次，行业普遍判断Steam Controller即将发售。Valve原计划2026年初同步发售Steam Controller/Steam Machine/Steam Frame三款硬件，但受存储与DRAM价格上涨影响，Steam Machine发售窗口已从2026年初推迟至年底前。Steam Controller或率先单独上市以维持硬件路线图节奏。",
         "source": "IT之家",
         "sourceUrl": "https://www.ithome.com/0/941/536.htm",
         "sourceUrls": [
@@ -9273,7 +9515,7 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "Steam Controller抢先发售是DRAM涨价下的硬件路线图'拆包策略'(What)。Valve原计划2026年Q1三款硬件'全家桶'组合登场对标Xbox Helix+PS6，但2026年DDR5/HBM价格同比涨幅60-130%导致Steam Machine BOM成本暴增，单独降规格或推迟整机发售是必然选择(Why)。短期看，Steam Controller单独上市可以测试市场反应+积累SteamOS手柄生态，对玩家是分期获得Valve硬件的次优选；对Sony/Xbox的冲击暂时减弱（Steam Machine推迟至年底），但Valve仍能以软件生态（SteamOS 3.6）保持影响力(So What)。Steam Machine推迟到2026年底意味着它将与PS6/Helix的2027假期档形成连续竞争压力，Valve需要重新评估定价——若DRAM价格稳定则维持原价，否则跟随PS6 Lite/Xbox Helix涨价同步调整(What Next)。",
+        "analysis": "Steam Controller抢先发售是DRAM涨价下的硬件路线图‘拆包策略‘(What)。Valve原计划2026年Q1三款硬件‘全家桶‘组合登场对标Xbox Helix+PS6，但2026年DDR5/HBM价格同比涨幅60-130%导致Steam Machine BOM成本暴增，单独降规格或推迟整机发售是必然选择(Why)。短期看，Steam Controller单独上市可以测试市场反应+积累SteamOS手柄生态，对玩家是分期获得Valve硬件的次优选；对Sony/Xbox的冲击暂时减弱（Steam Machine推迟至年底），但Valve仍能以软件生态（SteamOS 3.6）保持影响力(So What)。Steam Machine推迟到2026年底意味着它将与PS6/Helix的2027假期档形成连续竞争压力，Valve需要重新评估定价——若DRAM价格稳定则维持原价，否则跟随PS6 Lite/Xbox Helix涨价同步调整(What Next)。",
         "relatedNewsIds": [
             175,
             147
@@ -9326,7 +9568,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "东映成立Toei Games是日本动漫巨头对游戏产业的战略重估(What)。过去几十年东映通过授权模式让万代南梦宫/Cygames等厂商开发龙珠/海贼王改编游戏，但近年来游戏IP收入超过动画本体（《海贼王》游戏年收入约占整体IP收入35%），东映转向自研意味着动漫公司将重新定位游戏业务为核心资产而非授权衍生(Why)。首批选择原创IP而非复用动漫IP意图明显——既保留现有授权收入（万代南梦宝的龙珠合作不会终止），又通过原创IP培育自有开发能力与用户资产(So What)。对索尼/万代南梦宫是中性偏负——日本老牌IP方开始纷纷下场（SE早已自发、东映现在、小学馆/集英社可能跟进），传统'IP方→发行商'产业链被重构。Steam作为首选平台印证PC市场对日系游戏的吸引力（详见COD/怪物猎人/FF7等均以PC为首发或同步平台之一）(What Next)。",
+        "analysis": "东映成立Toei Games是日本动漫巨头对游戏产业的战略重估(What)。过去几十年东映通过授权模式让万代南梦宫/Cygames等厂商开发龙珠/海贼王改编游戏，但近年来游戏IP收入超过动画本体（《海贼王》游戏年收入约占整体IP收入35%），东映转向自研意味着动漫公司将重新定位游戏业务为核心资产而非授权衍生(Why)。首批选择原创IP而非复用动漫IP意图明显——既保留现有授权收入（万代南梦宝的龙珠合作不会终止），又通过原创IP培育自有开发能力与用户资产(So What)。对索尼/万代南梦宫是中性偏负——日本老牌IP方开始纷纷下场（SE早已自发、东映现在、小学馆/集英社可能跟进），传统‘IP方→发行商‘产业链被重构。Steam作为首选平台印证PC市场对日系游戏的吸引力（详见COD/怪物猎人/FF7等均以PC为首发或同步平台之一）(What Next)。",
         "relatedNewsIds": [
             164,
             119
@@ -9378,7 +9620,7 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "Xbox放弃GPU定制是微软'主机即PC'战略的硬件级落地(What)。过去20年主机差异化的核心优势在于定制硬件带来的专属体验(如PS5的SSD I/O架构)，放弃定制意味着微软选择通过Game Pass+Cloud+跨平台生态取代硬件壁垒(Why)。短期看，标准化架构降低开发者适配成本+加速游戏上市，但也意味着Helix将直面Steam Machine/Steam Frame等PC方案的竞争；长期看，Xbox硬件销售收入进一步下滑，订阅+服务成为核心盈利模式(So What)。对比PS6坚持AMD Orion定制+RDNA5 54CU的高端路线，微软将以低差异化+高生态覆盖应战，BlizzCon 2026或E3时间点是Helix具体规格公布关键窗口(What Next)。",
+        "analysis": "Xbox放弃GPU定制是微软‘主机即PC‘战略的硬件级落地(What)。过去20年主机差异化的核心优势在于定制硬件带来的专属体验(如PS5的SSD I/O架构)，放弃定制意味着微软选择通过Game Pass+Cloud+跨平台生态取代硬件壁垒(Why)。短期看，标准化架构降低开发者适配成本+加速游戏上市，但也意味着Helix将直面Steam Machine/Steam Frame等PC方案的竞争；长期看，Xbox硬件销售收入进一步下滑，订阅+服务成为核心盈利模式(So What)。对比PS6坚持AMD Orion定制+RDNA5 54CU的高端路线，微软将以低差异化+高生态覆盖应战，BlizzCon 2026或E3时间点是Helix具体规格公布关键窗口(What Next)。",
         "relatedNewsIds": [
             179,
             147,
@@ -9389,7 +9631,7 @@ const newsData = [
     {
         "id": 195,
         "title": "索尼PS5英国爱尔兰启用年龄验证，语音与聊天功能6月起强制",
-        "summary": "索尼宣布自2026年6月起，英国和爱尔兰PS5玩家必须完成年龄验证才能使用语音聊天和消息功能，以遵守当地在线安全法规。验证提供三种方式：面部扫描(AI分析年龄)、身份证件验证、手机号关联验证。索尼表示此举旨在'为玩家和家庭提供安全、适合年龄的体验，同时尊重他们的隐私'。此前已有英国主控台玩家收到PS5仪表盘通知。Metro评论指出这是英国Online Safety Act实施后，主机厂商首次实质性落地合规要求，XBox等平台或跟进。",
+        "summary": "索尼宣布自2026年6月起，英国和爱尔兰PS5玩家必须完成年龄验证才能使用语音聊天和消息功能，以遵守当地在线安全法规。验证提供三种方式：面部扫描(AI分析年龄)、身份证件验证、手机号关联验证。索尼表示此举旨在‘为玩家和家庭提供安全、适合年龄的体验，同时尊重他们的隐私‘。此前已有英国主控台玩家收到PS5仪表盘通知。Metro评论指出这是英国Online Safety Act实施后，主机厂商首次实质性落地合规要求，XBox等平台或跟进。",
         "source": "PushSquare",
         "sourceUrl": "https://www.pushsquare.com/news/2026/04/ps5-age-verification-coming-to-uk-and-ireland-needed-for-messages-and-voice-chat",
         "sourceUrls": [
@@ -9433,7 +9675,7 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "PS5英国爱尔兰年龄验证是平台合规时代的标志性事件(What)。英国Online Safety Act 2023要求在线服务保护未成年人，主机厂商过去通过家长控制等软性措施应对，但监管压力下必须升级为强制身份核验(Why)。对玩家而言，面部扫描/证件验证引发隐私争议，尤其未成年玩家门槛显著提高；对索尼而言，验证基础设施建设成本增加+转化率下降的双重压力(So What)。该举措大概率会扩散到Xbox/Nintendo等平台，以及德国/法国等欧盟其他市场。长期看，年龄验证或与欧盟DMA/Stop Killing Games等法规叠加，催生游戏行业的'合规即成本'常态，中小发行商合规负担将高于大厂(What Next)。",
+        "analysis": "PS5英国爱尔兰年龄验证是平台合规时代的标志性事件(What)。英国Online Safety Act 2023要求在线服务保护未成年人，主机厂商过去通过家长控制等软性措施应对，但监管压力下必须升级为强制身份核验(Why)。对玩家而言，面部扫描/证件验证引发隐私争议，尤其未成年玩家门槛显著提高；对索尼而言，验证基础设施建设成本增加+转化率下降的双重压力(So What)。该举措大概率会扩散到Xbox/Nintendo等平台，以及德国/法国等欧盟其他市场。长期看，年龄验证或与欧盟DMA/Stop Killing Games等法规叠加，催生游戏行业的‘合规即成本‘常态，中小发行商合规负担将高于大厂(What Next)。",
         "relatedNewsIds": [
             178,
             146,
@@ -9486,7 +9728,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "中国Q1 971.72亿+13.38%超市场预期，核心亮点是客户端游戏+39.38%的爆发式增长(What)。长期被移动游戏压制的PC端因《逆战》《明日方舟》等新品及老IP焕新实现复苏，反映玩家消费力向'重度+长期'游戏回流的趋势(Why)。对PC/Console全行业的战略含义：(1) 中国PC市场消费能力已从边缘转向全球第二大可单独支撑3A项目的市场(仅次于美国)；(2) Steam中国区、PS中国直营、Xbox云游戏等渠道的长期投入获得数据背书；(3) 国产3A(如《黑神话：悟空》续作/《明末：渊虚之羽》等)有望获得更强商业回收基础(So What)。手游增速放缓至6.28%的另一面是产品老化+监管收紧，出海39.2%份额表明中国厂商全球竞争力强；Q2即将发布的具体公司财报(腾讯/网易等)将验证这一增长分布(What Next)。",
+        "analysis": "中国Q1 971.72亿+13.38%超市场预期，核心亮点是客户端游戏+39.38%的爆发式增长(What)。长期被移动游戏压制的PC端因《逆战》《明日方舟》等新品及老IP焕新实现复苏，反映玩家消费力向‘重度+长期‘游戏回流的趋势(Why)。对PC/Console全行业的战略含义：(1) 中国PC市场消费能力已从边缘转向全球第二大可单独支撑3A项目的市场(仅次于美国)；(2) Steam中国区、PS中国直营、Xbox云游戏等渠道的长期投入获得数据背书；(3) 国产3A(如《黑神话：悟空》续作/《明末：渊虚之羽》等)有望获得更强商业回收基础(So What)。手游增速放缓至6.28%的另一面是产品老化+监管收紧，出海39.2%份额表明中国厂商全球竞争力强；Q2即将发布的具体公司财报(腾讯/网易等)将验证这一增长分布(What Next)。",
         "relatedNewsIds": [
             111,
             119,
@@ -9539,7 +9781,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "ID@Xbox展示会是微软独立游戏生态的关键营销抓手——过去一年流失到PS Indies/Steam Next Fest的注意力需要重新夺回(What/Why)。结合6月7日Xbox Games Showcase+Gears Direct+FanFest，微软构建了'独立(4月)→综合(6月)→财报季(10月)'的季度营销矩阵，以维持Game Pass订阅价值(So What)。对于独立开发者而言，获得ID@Xbox展示位意味着Game Pass首日入库的可能性+千万级潜在曝光，合作吸引力持续强化(What Next)。",
+        "analysis": "ID@Xbox展示会是微软独立游戏生态的关键营销抓手——过去一年流失到PS Indies/Steam Next Fest的注意力需要重新夺回(What/Why)。结合6月7日Xbox Games Showcase+Gears Direct+FanFest，微软构建了‘独立(4月)→综合(6月)→财报季(10月)‘的季度营销矩阵，以维持Game Pass订阅价值(So What)。对于独立开发者而言，获得ID@Xbox展示位意味着Game Pass首日入库的可能性+千万级潜在曝光，合作吸引力持续强化(What Next)。",
         "relatedNewsIds": [
             180,
             147,
@@ -9642,25 +9884,6 @@ const newsData = [
             "游戏发行"
         ],
         "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 463,
-        "title": "中国音数协游戏工委：2026年一季度游戏市场收入971.72亿元",
-        "summary": "2026年Q1中国游戏市场收入同比增长13.38%",
-        "source": "腾讯文档策展",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "policy",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-04-20",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
         "tdocMarking": "tdoc-verified",
         "analysis": "",
         "relatedNewsIds": []
@@ -9821,7 +10044,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "迪士尼裁员波及漫威视觉开发部是IP运营成本结构改革的连锁反应(What)。迪士尼2024年以来连续三轮裁员，旨在应对流媒体亏损+内容成本压力；2026年漫威在电影/剧集/游戏多线并进时反而削减美术团队，反映管理层对'降本增效'的硬性要求(Why)。对游戏业务的影响：Insomniac《漫威金刚狼》定档存疑下，视觉资产继承+协作机制或受冲击；此前《漫威复仇者联盟》的失败教训也提示漫威游戏IP商业化能力边界(So What)。同时，《漫威争锋》已通过免费+多平台抢占市场，漫威在游戏领域的未来可能转向'独家合作'而非自研(What Next)。",
+        "analysis": "迪士尼裁员波及漫威视觉开发部是IP运营成本结构改革的连锁反应(What)。迪士尼2024年以来连续三轮裁员，旨在应对流媒体亏损+内容成本压力；2026年漫威在电影/剧集/游戏多线并进时反而削减美术团队，反映管理层对‘降本增效‘的硬性要求(Why)。对游戏业务的影响：Insomniac《漫威金刚狼》定档存疑下，视觉资产继承+协作机制或受冲击；此前《漫威复仇者联盟》的失败教训也提示漫威游戏IP商业化能力边界(So What)。同时，《漫威争锋》已通过免费+多平台抢占市场，漫威在游戏领域的未来可能转向‘独家合作‘而非自研(What Next)。",
         "relatedNewsIds": [
             175,
             130,
@@ -9870,7 +10093,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "水晶动力50%预算削减延续了Embracer过去两年的'财务过载→激进收缩'周期(What)。2022年从Square Enix接手水晶动力+多起收购导致Embracer 2023负债高企，2024起启动4轮裁员+剥离Saber/Piranha Bytes等工作室仍未根本改善(Why)。对古墓丽影IP的影响：Legacy of Atlantis和Catalyst大概率降级为中等规模项目+延期发售，亚马逊MGM合作的电影/剧集或先于游戏上线(So What)。行业趋势印证：3A成本天花板触顶(单作$2亿+)导致中型发行商难以持续投入，未来老牌IP可能通过小规模Remake/Remaster/电影联动变现，而非依赖正统续作(What Next)。",
+        "analysis": "水晶动力50%预算削减延续了Embracer过去两年的‘财务过载→激进收缩‘周期(What)。2022年从Square Enix接手水晶动力+多起收购导致Embracer 2023负债高企，2024起启动4轮裁员+剥离Saber/Piranha Bytes等工作室仍未根本改善(Why)。对古墓丽影IP的影响：Legacy of Atlantis和Catalyst大概率降级为中等规模项目+延期发售，亚马逊MGM合作的电影/剧集或先于游戏上线(So What)。行业趋势印证：3A成本天花板触顶(单作$2亿+)导致中型发行商难以持续投入，未来老牌IP可能通过小规模Remake/Remaster/电影联动变现，而非依赖正统续作(What Next)。",
         "relatedNewsIds": [
             191,
             175,
@@ -9880,7 +10103,7 @@ const newsData = [
     {
         "id": 189,
         "title": "育碧秘密开发《幽灵行动》正统续作，瞄准2026年秋季发售",
-        "summary": "据Insider Gaming/IGN/Wccftech等多方爆料，育碧正秘密开发《幽灵行动》(Tom Clancy's Ghost Recon)正统新作，代号'Ovr'，计划2026年秋季发售。该作将在近期进入内部Alpha测试阶段。系列自2019年《幽灵行动：断点》口碑销量双失利后陷入5年沉寂，此次正统续作据爆料将更偏向军事模拟(Mil-Sim)风格，回归系列战术射击传统。此举是育碧《刺客信条：黑旗 Resynced》7月发售后的下一关键项目，承担填补2026下半年发行断档的作用。Far Cry系列据报道则深陷开发困境。",
+        "summary": "据Insider Gaming/IGN/Wccftech等多方爆料，育碧正秘密开发《幽灵行动》(Tom Clancy‘s Ghost Recon)正统新作，代号‘Ovr‘，计划2026年秋季发售。该作将在近期进入内部Alpha测试阶段。系列自2019年《幽灵行动：断点》口碑销量双失利后陷入5年沉寂，此次正统续作据爆料将更偏向军事模拟(Mil-Sim)风格，回归系列战术射击传统。此举是育碧《刺客信条：黑旗 Resynced》7月发售后的下一关键项目，承担填补2026下半年发行断档的作用。Far Cry系列据报道则深陷开发困境。",
         "source": "Insider Gaming",
         "sourceUrl": "https://insider-gaming.com/",
         "sourceUrls": [
@@ -9923,7 +10146,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "Ghost Recon正统续作是育碧IP战略回归的关键信号——《Breakpoint》口碑失败后5年蛰伏换来重新定位(What)。这与Far Cry系列深陷开发困境+《刺客信条：影》后排期单薄形成对比，说明育碧正在依靠'代际续作+老IP重启'组合维持收入(Why)。对战术射击品类的含义：Ready or Not/Gray Zone Warfare等新锐Mil-Sim的成功表明玩家需求复苏，Ghost Recon回归硬核风格是正确战略方向(So What)。若秋季发售顺利+口碑回升，将与黑旗Resynced(7月)、刺客信条Codename Hexe等共同撑起育碧2026-27年财报。但5年开发周期+项目重启历史表明育碧Alpha到发售的延期风险仍不可忽视(What Next)。",
+        "analysis": "Ghost Recon正统续作是育碧IP战略回归的关键信号——《Breakpoint》口碑失败后5年蛰伏换来重新定位(What)。这与Far Cry系列深陷开发困境+《刺客信条：影》后排期单薄形成对比，说明育碧正在依靠‘代际续作+老IP重启‘组合维持收入(Why)。对战术射击品类的含义：Ready or Not/Gray Zone Warfare等新锐Mil-Sim的成功表明玩家需求复苏，Ghost Recon回归硬核风格是正确战略方向(So What)。若秋季发售顺利+口碑回升，将与黑旗Resynced(7月)、刺客信条Codename Hexe等共同撑起育碧2026-27年财报。但5年开发周期+项目重启历史表明育碧Alpha到发售的延期风险仍不可忽视(What Next)。",
         "relatedNewsIds": [
             185,
             138,
@@ -9977,7 +10200,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "Diablo 4登陆Switch 2是微软Xbox第一方游戏多平台化战略的又一落地节点(What)。动视暴雪被微软收购后，《使命召唤》登陆PS5+《Hades 2》登陆Game Pass+《Oblivion Remastered》等案例已验证微软'Xbox第一方内容最大化覆盖'的新战略(Why)。Switch 2硬件销量突破1500万台+用户群倾向长期内容消费，为暴雪提供了增量市场；对任天堂而言，完善3A内容阵容+强化平台竞争力；对玩家而言，Switch 2的ARPG选择从Elden Ring等少数作品扩大到Diablo 4等暴雪大作(So What)。后续观察BlizzCon 2026是否正式公布，以及Overwatch/魔兽/炉石等其他暴雪IP的跟进节奏(What Next)。",
+        "analysis": "Diablo 4登陆Switch 2是微软Xbox第一方游戏多平台化战略的又一落地节点(What)。动视暴雪被微软收购后，《使命召唤》登陆PS5+《Hades 2》登陆Game Pass+《Oblivion Remastered》等案例已验证微软‘Xbox第一方内容最大化覆盖‘的新战略(Why)。Switch 2硬件销量突破1500万台+用户群倾向长期内容消费，为暴雪提供了增量市场；对任天堂而言，完善3A内容阵容+强化平台竞争力；对玩家而言，Switch 2的ARPG选择从Elden Ring等少数作品扩大到Diablo 4等暴雪大作(So What)。后续观察BlizzCon 2026是否正式公布，以及Overwatch/魔兽/炉石等其他暴雪IP的跟进节奏(What Next)。",
         "relatedNewsIds": [
             180,
             147,
@@ -10174,7 +10397,7 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "Triton/Duet暗示微软在Game Pass分层上继续精细化运营：Triton锁死第一方与订阅价值绑定，Duet可能开启与Netflix的跨服务捆绑(What/Why)。引入云游戏限时机制是对服务器成本压力的直接回应——Xbox Cloud Gaming免费时长消耗远超预期(So What)。这与3月CEO Asha Sharma承认'Game Pass太贵'的表态一致，Xbox正在重构订阅价值体系：高价值第一方锁定核心用户，云服务限时控制成本，Netflix捆绑打开新渠道(What Next)。",
+        "analysis": "Triton/Duet暗示微软在Game Pass分层上继续精细化运营：Triton锁死第一方与订阅价值绑定，Duet可能开启与Netflix的跨服务捆绑(What/Why)。引入云游戏限时机制是对服务器成本压力的直接回应——Xbox Cloud Gaming免费时长消耗远超预期(So What)。这与3月CEO Asha Sharma承认‘Game Pass太贵‘的表态一致，Xbox正在重构订阅价值体系：高价值第一方锁定核心用户，云服务限时控制成本，Netflix捆绑打开新渠道(What Next)。",
         "relatedNewsIds": [
             168,
             128,
@@ -10203,7 +10426,7 @@ const newsData = [
     {
         "id": 1427,
         "title": "《战锤40K：星际战士2》玩家数量突破1200万",
-        "summary": "《战锤40K：星际战士2》宣布达成1200万玩家里程碑，发行商Focus Entertainment称\"超越最狂野的梦想\"。玩家数增长部分得益于游戏加入订阅服务，《星际战士3》目前已进入积极开发阶段。",
+        "summary": "《战锤40K：星际战士2》宣布达成1200万玩家里程碑，发行商Focus Entertainment称“超越最狂野的梦想“。玩家数增长部分得益于游戏加入订阅服务，《星际战士3》目前已进入积极开发阶段。",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -10260,7 +10483,7 @@ const newsData = [
     {
         "id": 211,
         "title": "《极限竞速：地平线6》Steam预售破51万份，预估总营收$3000万+",
-        "summary": "据数据分析机构Alinea Analytics 4月16日报告，《Forza Horizon 6》在Steam平台的预售量已突破51.1万份，距离5月19日正式发售还有一个多月。按各版本均价估算，发售前Steam预售营收已达约3000万美元。作为微软首个多平台发售的Forza Horizon正传（此前仅限Xbox+PC Game Pass），FH6选择Steam发售被视为微软'第一方多平台化'的关键里程碑。FH6开启PC游戏2026年第一轮硬件升级需求——NVIDIA和AMD均发布适配Driver。该作在Steam愿望单进入前30，体现PC玩家对Xbox第一方3A的积压需求。",
+        "summary": "据数据分析机构Alinea Analytics 4月16日报告，《Forza Horizon 6》在Steam平台的预售量已突破51.1万份，距离5月19日正式发售还有一个多月。按各版本均价估算，发售前Steam预售营收已达约3000万美元。作为微软首个多平台发售的Forza Horizon正传（此前仅限Xbox+PC Game Pass），FH6选择Steam发售被视为微软‘第一方多平台化‘的关键里程碑。FH6开启PC游戏2026年第一轮硬件升级需求——NVIDIA和AMD均发布适配Driver。该作在Steam愿望单进入前30，体现PC玩家对Xbox第一方3A的积压需求。",
         "source": "Alinea Analytics",
         "sourceUrl": "https://www.notebookcheck.net/Forza-Horizon-6-pre-sales-hit-500K-on-Steam-generating-nearly-30M-ahead-of-launch.1276880.0.html",
         "sourceUrls": [
@@ -10306,8 +10529,8 @@ const newsData = [
     },
     {
         "id": 210,
-        "title": "欧盟议会听证会：'Stop Killing Games'获压倒性支持，数字权益立法加速",
-        "summary": "4月16日欧洲议会举行'Stop Killing Games'(SKG)听证会，运动创始人Ross Scott与组织者Moritz Katzner向议员阐述玩家数字权益诉求，PC Gamer报道听证会'绝对不可思议'——'没有一位议员不给予积极回应'。SKG欧洲公民倡议(ECI)已于2026年2月正式递交，欧盟委员会需在2026年7月27日前做出正式回应。该倡议要求厂商在停服后保留玩家已购数字产品的基本游玩权(offline单机模式/私服工具/代码开源)，直接针对育碧《飙酷车神》等停服事件。4月听证会的压倒性支持意味着立法化进程已进入快车道，可能成为欧盟继《数字市场法》后对游戏行业的又一重大监管。",
+        "title": "欧盟议会听证会：‘Stop Killing Games‘获压倒性支持，数字权益立法加速",
+        "summary": "4月16日欧洲议会举行‘Stop Killing Games‘(SKG)听证会，运动创始人Ross Scott与组织者Moritz Katzner向议员阐述玩家数字权益诉求，PC Gamer报道听证会‘绝对不可思议‘——‘没有一位议员不给予积极回应‘。SKG欧洲公民倡议(ECI)已于2026年2月正式递交，欧盟委员会需在2026年7月27日前做出正式回应。该倡议要求厂商在停服后保留玩家已购数字产品的基本游玩权(offline单机模式/私服工具/代码开源)，直接针对育碧《飙酷车神》等停服事件。4月听证会的压倒性支持意味着立法化进程已进入快车道，可能成为欧盟继《数字市场法》后对游戏行业的又一重大监管。",
         "source": "PC Gamer",
         "sourceUrl": "https://www.pcgamer.com/gaming-industry/stop-killing-games-delivers-absolutely-incredible-hearing-in-european-parliament-there-was-no-parliament-member-that-wasnt-responding-positively/",
         "sourceUrls": [
@@ -10412,7 +10635,7 @@ const newsData = [
     {
         "id": 185,
         "title": "《刺客信条：黑旗 Resynced》定档7月9日，Ubisoft重制经典海盗篇",
-        "summary": "Ubisoft《刺客信条：黑旗 Resynced》(Assassin's Creed: Black Flag Resynced)据泄露的发行计划将于2026年7月9日发售。该作为2013年原版的重制版，改用新引擎升级画面、战斗和航海系统，正式公布发布会原定本周但推迟一周。Ubisoft上周已发布首张概念图。作为系列海盗主题最受欢迎作品，Resynced被视为Ubisoft在Assassin's Creed Shadows后的下一关键商业项目。",
+        "summary": "Ubisoft《刺客信条：黑旗 Resynced》(Assassin‘s Creed: Black Flag Resynced)据泄露的发行计划将于2026年7月9日发售。该作为2013年原版的重制版，改用新引擎升级画面、战斗和航海系统，正式公布发布会原定本周但推迟一周。Ubisoft上周已发布首张概念图。作为系列海盗主题最受欢迎作品，Resynced被视为Ubisoft在Assassin‘s Creed Shadows后的下一关键商业项目。",
         "source": "IGN",
         "sourceUrl": "https://www.ign.com/articles/assassins-creed-black-flag-remake-reportedly-set-for-july-release",
         "sourceUrls": [
@@ -10506,7 +10729,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "FH6 Steam预购50万+领先上代FH5同期水平，验证微软PC优先战略的直接商业收益(What)。微软PC转向促使Forza系列完整登陆Steam，同时首日入库Game Pass，形成'PC销售+订阅+主机'三重变现(Why)。对比Xbox第一方其他游戏(如Starfield PS5仅14万)，Forza品牌在PC端的强势说明赛车品类与PC玩家极度契合(So What)。5月19日正式上市后若突破200万单，将是微软第一方PC成功案例，进一步推动其他游戏全平台策略(What Next)。",
+        "analysis": "FH6 Steam预购50万+领先上代FH5同期水平，验证微软PC优先战略的直接商业收益(What)。微软PC转向促使Forza系列完整登陆Steam，同时首日入库Game Pass，形成‘PC销售+订阅+主机‘三重变现(Why)。对比Xbox第一方其他游戏(如Starfield PS5仅14万)，Forza品牌在PC端的强势说明赛车品类与PC玩家极度契合(So What)。5月19日正式上市后若突破200万单，将是微软第一方PC成功案例，进一步推动其他游戏全平台策略(What Next)。",
         "relatedNewsIds": [
             143,
             174
@@ -10565,8 +10788,8 @@ const newsData = [
     },
     {
         "id": 178,
-        "title": "'Stop Killing Games'欧盟议会听证获压倒性支持，或推进数字商品保护立法",
-        "summary": "欧洲公民倡议'Stop Killing Games'(SKG)4月16日在欧洲议会举行公开听证，活动发起人Ross Scott和组织者Moritz Katzner陈述案件。该倡议累计收集129万欧盟公民签名，要求立法禁止发行商在停服后永久性关闭已售游戏。多位议员明确表态支持，无人持反对立场。若立法推进，将重塑游戏发行商的服务生命周期策略、数字商品法律定义及DRM模式，影响范围远超游戏行业。",
+        "title": "‘Stop Killing Games‘欧盟议会听证获压倒性支持，或推进数字商品保护立法",
+        "summary": "欧洲公民倡议‘Stop Killing Games‘(SKG)4月16日在欧洲议会举行公开听证，活动发起人Ross Scott和组织者Moritz Katzner陈述案件。该倡议累计收集129万欧盟公民签名，要求立法禁止发行商在停服后永久性关闭已售游戏。多位议员明确表态支持，无人持反对立场。若立法推进，将重塑游戏发行商的服务生命周期策略、数字商品法律定义及DRM模式，影响范围远超游戏行业。",
         "source": "Eurogamer",
         "sourceUrl": "https://www.eurogamer.net/stop-killing-games-european-parliament",
         "sourceUrls": [
@@ -10609,7 +10832,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "SKG获欧盟议会压倒性支持标志着'数字商品属于消费者资产'理念进入立法视野(What)。背后是The Crew停服、Concord关停等多起事件引发欧洲玩家集体诉求，Ubisoft等厂商被推上舆论风口(Why)。若立法，对GaaS游戏模式(Destiny/COD/Apex)产生深远影响：厂商需提供停服后的本地运行/源码保护/迁移方案，大幅推高运营成本(So What)。预计EU下一步或通过《数字市场法》修订案或专项立法，最早2027年生效；美国、中国等市场可能跟进；游戏发行合同和用户条款将迎来行业性重构(What Next)。",
+        "analysis": "SKG获欧盟议会压倒性支持标志着‘数字商品属于消费者资产‘理念进入立法视野(What)。背后是The Crew停服、Concord关停等多起事件引发欧洲玩家集体诉求，Ubisoft等厂商被推上舆论风口(Why)。若立法，对GaaS游戏模式(Destiny/COD/Apex)产生深远影响：厂商需提供停服后的本地运行/源码保护/迁移方案，大幅推高运营成本(So What)。预计EU下一步或通过《数字市场法》修订案或专项立法，最早2027年生效；美国、中国等市场可能跟进；游戏发行合同和用户条款将迎来行业性重构(What Next)。",
         "relatedNewsIds": []
     },
     {
@@ -10686,7 +10909,7 @@ const newsData = [
     {
         "id": 457,
         "title": "Xbox CCO details unified approach for next-gen Project Helix console",
-        "summary": "Xbox首席运营官马特·布蒂在官方播客中透露了下一代游戏机\"Project Helix\"的开发细节，强调硬件团队与第一方工作室的早期协作，并提及暴雪动画部门协助Playground Games开发《Fable》重启版等跨团队合作案例。该项目将与AMD合作，预计2027年推出测试版，目标是实现高性能和以玩家为核心的体验。",
+        "summary": "Xbox首席运营官马特·布蒂在官方播客中透露了下一代游戏机“Project Helix“的开发细节，强调硬件团队与第一方工作室的早期协作，并提及暴雪动画部门协助Playground Games开发《Fable》重启版等跨团队合作案例。该项目将与AMD合作，预计2027年推出测试版，目标是实现高性能和以玩家为核心的体验。",
         "source": "腾讯文档策展",
         "sourceUrl": "https://www.gamesindustry.biz/xbox-cco-details-unified-approach-for-next-gen-project-helix-console",
         "sourceUrls": [
@@ -10708,33 +10931,9 @@ const newsData = [
         "relatedNewsIds": []
     },
     {
-        "id": 458,
-        "title": "传PS6首发兼容PS4和PS5游戏 掌机性能已超PS5",
-        "summary": "传闻索尼PS6和PS6掌机（代号Canis）将具备向下兼容功能，支持PS4和PS5游戏，首发即有数千款游戏可玩。PS6掌机性能预计超越PS5，可能推出廉价版主机。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202604/3942174.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202604/3942174.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-04-16",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
         "id": 179,
-        "title": "PS6及掌机'Canis'泄露文件：全面向下兼容PS4/PS5，RDNA5统一架构",
-        "summary": "硬件爆料人士公布多年前Sony内部文件，显示PlayStation 6主机及同代掌机(代号Canis)将全面支持PS4和PS5游戏向下兼容，通过RDNA5架构实现统一生态。泄露还暗示PS6掌机性能已超过PS5水平。由于AI驱动的内存短缺及关税影响，PS6可能以更高价格推迟发布。这是Sony首次通过内部文件被爆料详细兼容性规划，暗示Sony将以'全家族兼容'应对微软下一代Project Helix竞争。",
+        "title": "PS6及掌机‘Canis‘泄露文件：全面向下兼容PS4/PS5，RDNA5统一架构",
+        "summary": "硬件爆料人士公布多年前Sony内部文件，显示PlayStation 6主机及同代掌机(代号Canis)将全面支持PS4和PS5游戏向下兼容，通过RDNA5架构实现统一生态。泄露还暗示PS6掌机性能已超过PS5水平。由于AI驱动的内存短缺及关税影响，PS6可能以更高价格推迟发布。这是Sony首次通过内部文件被爆料详细兼容性规划，暗示Sony将以‘全家族兼容‘应对微软下一代Project Helix竞争。",
         "source": "Wccftech",
         "sourceUrl": "https://wccftech.com/ps6-backward-compatible-ps4-ps5-leak/",
         "sourceUrls": [
@@ -10785,7 +10984,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "PS6全面向下兼容PS4/PS5是Sony生态战略的关键调整(What)。Sony过去在PS3/PS4代际未能完整继承前代游戏库的教训，以及PS5上PS4向下兼容的成功经验，驱动这一决策(Why)。对消费者而言，几百款PS4/PS5游戏资产价值保留，降低代际切换阻力，提升PS6购买意愿(So What)。与微软Project Helix的'统一架构+三屏协同'形成直接对比，PS6掌机的加入意味着Sony首次涉足掌机，进一步挤压Switch 2+Steam Deck市场空间；同时AI内存短缺+关税可能推高PS6起售价至$599+(What Next)。",
+        "analysis": "PS6全面向下兼容PS4/PS5是Sony生态战略的关键调整(What)。Sony过去在PS3/PS4代际未能完整继承前代游戏库的教训，以及PS5上PS4向下兼容的成功经验，驱动这一决策(Why)。对消费者而言，几百款PS4/PS5游戏资产价值保留，降低代际切换阻力，提升PS6购买意愿(So What)。与微软Project Helix的‘统一架构+三屏协同‘形成直接对比，PS6掌机的加入意味着Sony首次涉足掌机，进一步挤压Switch 2+Steam Deck市场空间；同时AI内存短缺+关税可能推高PS6起售价至$599+(What Next)。",
         "relatedNewsIds": [
             129,
             147,
@@ -11018,81 +11217,9 @@ const newsData = [
         "relatedNewsIds": []
     },
     {
-        "id": 453,
-        "title": "漫威游戏部门大规模裁员",
-        "summary": "漫威游戏部门启动大规模裁员，复联资深美术团队几乎全员被裁。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202604/3942052.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202604/3942052.html"
-            }
-        ],
-        "category": "policy",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-04-15",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "negative",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 454,
-        "title": "Embracer Group削减水晶动力50%预算",
-        "summary": "《古墓丽影》开发商母公司宣布削减水晶动力工作室50%的预算，影响新作开发。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202604/3942020.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202604/3942020.html"
-            }
-        ],
-        "category": "policy",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-04-15",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 455,
-        "title": "《暗黑破坏神4》将登陆Switch 2",
-        "summary": "ESRB评级页面显示《暗黑破坏神4》将通过云游戏形式登陆任天堂Switch 2。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202604/3942009.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202604/3942009.html"
-            }
-        ],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-04-15",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
         "id": 177,
         "title": "Newzoo报告：2025年PC游戏56%收入流向Top20之外，3A主导地位削弱",
-        "summary": "Newzoo发布2026 PC & Console Gaming Report，关键数据显示2025年PC游戏Top20之外的长尾游戏收入份额从2022年的48%升至56%，游玩时长占比从33%升至45%。3A游戏统治力显著削弱，独立游戏、中型IP通过Steam EA、订阅服务获得更多商业空间。该报告印证了当前PC市场向'多元长尾+少数超级大作'的双极分化演变趋势。",
+        "summary": "Newzoo发布2026 PC & Console Gaming Report，关键数据显示2025年PC游戏Top20之外的长尾游戏收入份额从2022年的48%升至56%，游玩时长占比从33%升至45%。3A游戏统治力显著削弱，独立游戏、中型IP通过Steam EA、订阅服务获得更多商业空间。该报告印证了当前PC市场向‘多元长尾+少数超级大作‘的双极分化演变趋势。",
         "source": "Newzoo",
         "sourceUrl": "https://www.gamesindustry.biz/newzoo-more-than-half-of-pc-revenue-comes-from-games-outside-the-top-20",
         "sourceUrls": [
@@ -11142,7 +11269,7 @@ const newsData = [
     {
         "id": 181,
         "title": "《星空》PS5首周仅售14万份，微软多平台策略或受质疑",
-        "summary": "据Alinea Analytics估算，Bethesda《星空》(Starfield)在4月7日登陆PS5后首周仅售出约14万份，创造770万美元收入。这一数据远低于微软第一方游戏在PS5的历史表现(如Forza Horizon 5跨平台效果)，也低于Xbox版本首周数据(约200万份+Game Pass玩家)。该销量被多位分析师称为'温水'反应，引发对微软将第一方游戏'晚于Xbox发售'的PS5策略的质疑。",
+        "summary": "据Alinea Analytics估算，Bethesda《星空》(Starfield)在4月7日登陆PS5后首周仅售出约14万份，创造770万美元收入。这一数据远低于微软第一方游戏在PS5的历史表现(如Forza Horizon 5跨平台效果)，也低于Xbox版本首周数据(约200万份+Game Pass玩家)。该销量被多位分析师称为‘温水‘反应，引发对微软将第一方游戏‘晚于Xbox发售‘的PS5策略的质疑。",
         "source": "Alinea Analytics",
         "sourceUrl": "https://www.eurogamer.net/starfield-ps5-port-sales-estimates-first-week",
         "sourceUrls": [
@@ -11429,7 +11556,7 @@ const newsData = [
     {
         "id": 1413,
         "title": "Xbox新任CEO承认Game Pass价格过高，或将降价+体系重构，《使命召唤》也可能被移出",
-        "summary": "微软游戏部门新任CEO阿莎·夏尔马（Asha Sharma）在内部备忘录中公开承认，Xbox Game Pass对玩家而言\"已经太贵\"。备忘录称现有模式并非最终方案，短期需提供更合理的性价比，长期将把Game Pass升级为更灵活的订阅体系。此前去年10月XGP终极版月费大涨50%至30美元，引发用户不满。还有传言称《使命召唤》可能被移出Game Pass独立计费，届时可推出低价基础套餐。。",
+        "summary": "微软游戏部门新任CEO阿莎·夏尔马（Asha Sharma）在内部备忘录中公开承认，Xbox Game Pass对玩家而言“已经太贵“。备忘录称现有模式并非最终方案，短期需提供更合理的性价比，长期将把Game Pass升级为更灵活的订阅体系。此前去年10月XGP终极版月费大涨50%至30美元，引发用户不满。还有传言称《使命召唤》可能被移出Game Pass独立计费，届时可推出低价基础套餐。。",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -11467,7 +11594,7 @@ const newsData = [
     {
         "id": 1416,
         "title": "《守望先锋》4月15日登陆Switch 2，稳定60fps",
-        "summary": "暴雪官宣《守望先锋》将于4月15日登陆Switch 2，游戏性能相比Switch版大幅提升，画质更高、音效更好、帧率稳定60fps。同期开启第二赛季\"巨大顶峰\"，新增伤害英雄谢拉、活动匹配投票、地图ATLANTIC PENINSULA重制版等内容。",
+        "summary": "暴雪官宣《守望先锋》将于4月15日登陆Switch 2，游戏性能相比Switch版大幅提升，画质更高、音效更好、帧率稳定60fps。同期开启第二赛季“巨大顶峰“，新增伤害英雄谢拉、活动匹配投票、地图ATLANTIC PENINSULA重制版等内容。",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -11541,28 +11668,9 @@ const newsData = [
         "relatedNewsIds": []
     },
     {
-        "id": 448,
-        "title": "Roblox升级版正式登陆PS5，加载速度提升30%",
-        "summary": "Roblox专为PS5重新开发原生App，加载速度提升30%，支持DualSense手柄震动特性，加强PS5平台用户体验。PlayStation Blog专文推广，标志着PS平台向用户创作内容（UGC）生态进一步开放。",
-        "source": "PlayStation Blog",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-04-14",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
         "id": 449,
         "title": "《守望先锋》Switch 2版本上线，60帧全程流畅运行",
-        "summary": "暴雪《守望先锋》（原守望先锋2）正式登陆Switch 2，支持掌机与底座模式60帧运行，随\"鹰隼王朝\"赛季2同步上线。���化了Switch 2的主机端竞技游戏阵容。",
+        "summary": "暴雪《守望先锋》（原守望先锋2）正式登陆Switch 2，支持掌机与底座模式60帧运行，随“鹰隼王朝“赛季2同步上线。���化了Switch 2的主机端竞技游戏阵容。",
         "source": "VGC",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -11599,8 +11707,8 @@ const newsData = [
     },
     {
         "id": 171,
-        "title": "Xbox内部正进行'非常重大讨论'考虑回归独占策略",
-        "summary": "Windows Central执行编辑Jez Corden在XB2播客中透露，Xbox Game Studios内部正围绕独占策略展开'非常非常非常重大的讨论'，评估是否停止将第一方游戏移植至其他平台(如Switch)。此消息与Xbox CEO Asha Sharma近期叫停广告、重塑品牌形象等举措一脉相承。值得注意的是，暗黑4刚通过印尼评级获准登陆Switch 2，显示策略转向尚未定论。",
+        "title": "Xbox内部正进行‘非常重大讨论‘考虑回归独占策略",
+        "summary": "Windows Central执行编辑Jez Corden在XB2播客中透露，Xbox Game Studios内部正围绕独占策略展开‘非常非常非常重大的讨论‘，评估是否停止将第一方游戏移植至其他平台(如Switch)。此消息与Xbox CEO Asha Sharma近期叫停广告、重塑品牌形象等举措一脉相承。值得注意的是，暗黑4刚通过印尼评级获准登陆Switch 2，显示策略转向尚未定论。",
         "source": "Windows Central",
         "sourceUrl": "https://www.purexbox.com/news/2026/04/xbox-is-having-very-big-discussions-about-exclusivity-says-reporter",
         "sourceUrls": [
@@ -11642,7 +11750,7 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "Asha Sharma上任Xbox CEO后推动品牌重塑(叫停广告/Project Helix)，独占讨论是其'重振硬件信心'战略的核心环节(What/Why)。若Xbox真回归独占，将逆转微软近两年'全平台'策略，对Switch 2和PS5的第三方生态产生连锁影响(So What)。但暗黑4仍在推进Switch 2移植说明短期内不会一刀切，更可能采取'核心IP独占+长尾跨平台'分层策略(What Next)。",
+        "analysis": "Asha Sharma上任Xbox CEO后推动品牌重塑(叫停广告/Project Helix)，独占讨论是其‘重振硬件信心‘战略的核心环节(What/Why)。若Xbox真回归独占，将逆转微软近两年‘全平台‘策略，对Switch 2和PS5的第三方生态产生连锁影响(So What)。但暗黑4仍在推进Switch 2移植说明短期内不会一刀切，更可能采取‘核心IP独占+长尾跨平台‘分层策略(What Next)。",
         "relatedNewsIds": [
             164,
             136,
@@ -11652,7 +11760,7 @@ const newsData = [
     {
         "id": 170,
         "title": "《神鬼寓言》(Fable)新作官方重申秋季发售，否认因GTA6延期传闻",
-        "summary": "此前Jeff Grubb等业内人士报道称微软旗下《神鬼寓言》新作曾内部讨论避开《GTA6》10月档期可能推迟至2027年。Playground Games官方迅速回应，在社交媒体重申'期待秋季在奥尔比恩欢迎大家'，确认仍将于2026年秋季发售。微软旗下《光环：战斗进化》《战争机器：E日》也将于年内推出。此事件凸显GTA6对整个3A游戏发售日历的巨大影响力。",
+        "summary": "此前Jeff Grubb等业内人士报道称微软旗下《神鬼寓言》新作曾内部讨论避开《GTA6》10月档期可能推迟至2027年。Playground Games官方迅速回应，在社交媒体重申‘期待秋季在奥尔比恩欢迎大家‘，确认仍将于2026年秋季发售。微软旗下《光环：战斗进化》《战争机器：E日》也将于年内推出。此事件凸显GTA6对整个3A游戏发售日历的巨大影响力。",
         "source": "IGN",
         "sourceUrl": "https://www.ign.com/articles/fable-social-media-account-reiterates-fall-2026-release-window-amid-rumors-of-an-internal-delay-to-avoid-gta-6",
         "sourceUrls": [
@@ -11702,7 +11810,7 @@ const newsData = [
     {
         "id": 169,
         "title": "《哈迪斯2》正式登陆PS5和Xbox，同步加入Game Pass首日入库",
-        "summary": "Supergiant Games的好评肉鸽动作游戏《哈迪斯2》(Hades II)在PC/Switch经历近两年抢先体验后，4月14日正式登陆PS5和Xbox Series X|S，并同步加入Xbox Game Pass。主机版伴随大型更新'命运之书'扩展内容，包含新剧情结局、新对话和多项改善。Digital Foundry确认PS5版60fps稳定运行。这是Supergiant首款同步登陆全主机平台的作品。",
+        "summary": "Supergiant Games的好评肉鸽动作游戏《哈迪斯2》(Hades II)在PC/Switch经历近两年抢先体验后，4月14日正式登陆PS5和Xbox Series X|S，并同步加入Xbox Game Pass。主机版伴随大型更新‘命运之书‘扩展内容，包含新剧情结局、新对话和多项改善。Digital Foundry确认PS5版60fps稳定运行。这是Supergiant首款同步登陆全主机平台的作品。",
         "source": "Supergiant Games",
         "sourceUrl": "https://www.supergiantgames.com/blog/hades-ii-coming-to-xbox-playstation-april-14/",
         "sourceUrls": [
@@ -11748,7 +11856,7 @@ const newsData = [
     {
         "id": 168,
         "title": "Roblox引入年龄分级账户系统，Kids/Select/标准三级强化未成年保护",
-        "summary": "Roblox宣布6月起推出全新年龄分级账户体系：5-8岁用户自动分配'Roblox Kids'账户(默认关闭聊天/仅展示策展内容)，9-15岁为'Roblox Select'(家长监督下适度社交)，16岁后解锁标准账户。此举是在面临多起未成年保护诉讼后的重大合规改革，对UGC平台内容审核机制产生行业示范效应。",
+        "summary": "Roblox宣布6月起推出全新年龄分级账户体系：5-8岁用户自动分配‘Roblox Kids‘账户(默认关闭聊天/仅展示策展内容)，9-15岁为‘Roblox Select‘(家长监督下适度社交)，16岁后解锁标准账户。此举是在面临多起未成年保护诉讼后的重大合规改革，对UGC平台内容审核机制产生行业示范效应。",
         "source": "Roblox官方",
         "sourceUrl": "https://about.roblox.com/newsroom/2026/04/introducing-roblox-kids-and-select-accounts",
         "sourceUrls": [
@@ -11786,7 +11894,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "Roblox此举是应对美国多州儿童保护诉讼的直接回应(What)。作为全球最大UGC游戏平台(日活7000万+)，其面临的监管压力迫使其从'开放平台'向'分级管控'转型(Why)。此举将提升平台合规性但可能影响低龄用户活跃度和创作者生态(So What)。预计Epic/Steam等平台也将跟进类似的年龄分级机制，行业合规门槛整体上移(What Next)。",
+        "analysis": "Roblox此举是应对美国多州儿童保护诉讼的直接回应(What)。作为全球最大UGC游戏平台(日活7000万+)，其面临的监管压力迫使其从‘开放平台‘向‘分级管控‘转型(Why)。此举将提升平台合规性但可能影响低龄用户活跃度和创作者生态(So What)。预计Epic/Steam等平台也将跟进类似的年龄分级机制，行业合规门槛整体上移(What Next)。",
         "relatedNewsIds": [
             146
         ]
@@ -11794,7 +11902,7 @@ const newsData = [
     {
         "id": 167,
         "title": "《识质存在》(Pragmata)评测解禁获MC86/OC87分，Steam预购冲入全球前五",
-        "summary": "卡普空科幻动作游戏《识质存在》(Pragmata)媒体评测解禁，OpenCritic均分87分('Mighty'评级)，Metacritic 86分，获主流媒体积极评价。'实时骇入'战斗机制和双主角互动设计获重点赞誉。评测公布后Steam全球付费游戏榜迅速冲至第五(仅次于《红色沙漠》)，超越《杀戮尖塔2》和《极限竞速6》预购。Digital Foundry盛赞PC版光追效果'接近预渲染CG级'。正式发售4/17(PS5/Xbox/PC)，4/24登陆Switch 2。",
+        "summary": "卡普空科幻动作游戏《识质存在》(Pragmata)媒体评测解禁，OpenCritic均分87分(‘Mighty‘评级)，Metacritic 86分，获主流媒体积极评价。‘实时骇入‘战斗机制和双主角互动设计获重点赞誉。评测公布后Steam全球付费游戏榜迅速冲至第五(仅次于《红色沙漠》)，超越《杀戮尖塔2》和《极限竞速6》预购。Digital Foundry盛赞PC版光追效果‘接近预渲染CG级‘。正式发售4/17(PS5/Xbox/PC)，4/24登陆Switch 2。",
         "source": "Metacritic",
         "sourceUrl": "https://www.metacritic.com/game/pragmata/",
         "sourceUrls": [
@@ -11882,8 +11990,8 @@ const newsData = [
     },
     {
         "id": 164,
-        "title": "Xbox新CEO承认Game Pass'太贵'，暗示降价重构+COD可能被移出",
-        "summary": "微软游戏新任CEO Asha Sharma在被The Verge获取的内部备忘录中公开承认Xbox Game Pass'对玩家已经太贵'，承诺短期内提供'更好的性价比'，长期将把Game Pass升级为'更灵活的订阅体系'。此前2025年10月XGP终极版月费大涨50%至$30引发用户不满。另有传言称《使命召唤》可能从Game Pass中独立计费——若属实将是Xbox订阅策略的根本性转向。",
+        "title": "Xbox新CEO承认Game Pass‘太贵‘，暗示降价重构+COD可能被移出",
+        "summary": "微软游戏新任CEO Asha Sharma在被The Verge获取的内部备忘录中公开承认Xbox Game Pass‘对玩家已经太贵‘，承诺短期内提供‘更好的性价比‘，长期将把Game Pass升级为‘更灵活的订阅体系‘。此前2025年10月XGP终极版月费大涨50%至$30引发用户不满。另有传言称《使命召唤》可能从Game Pass中独立计费——若属实将是Xbox订阅策略的根本性转向。",
         "source": "The Verge",
         "sourceUrl": "https://www.purexbox.com/news/2026/04/xbox-boss-declares-game-pass-is-too-expensive-and-needs-a-better-value-equation",
         "sourceUrls": [
@@ -11930,7 +12038,7 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "Sharma公开承认XGP'太贵'标志着微软订阅策略的重大转折信号(What)。2025年10月终极版涨至$30后用户增长放缓，叠加COD入库的高昂内容成本与实际转化率不匹配(Why)。若COD独立计费+推出低价基础套餐，将重塑Xbox的商业模型——从'大而全'回归'精而准'(So What)。预计2026年下半年将看到XGP新定价方案出台，这将直接影响第三方发行商的入库谈判筹码(What Next)。",
+        "analysis": "Sharma公开承认XGP‘太贵‘标志着微软订阅策略的重大转折信号(What)。2025年10月终极版涨至$30后用户增长放缓，叠加COD入库的高昂内容成本与实际转化率不匹配(Why)。若COD独立计费+推出低价基础套餐，将重塑Xbox的商业模型——从‘大而全‘回归‘精而准‘(So What)。预计2026年下半年将看到XGP新定价方案出台，这将直接影响第三方发行商的入库谈判筹码(What Next)。",
         "relatedNewsIds": [
             158,
             142,
@@ -11978,7 +12086,7 @@ const newsData = [
     {
         "id": 166,
         "title": "《地铁2039》正式公布，4月16日Xbox First Look首发直播揭幕",
-        "summary": "4A Games和Deep Silver正式官宣《地铁》系列第四部主线新作《地铁2039》(Metro 2039)，将于4/16通过Xbox First Look直播进行全球首次完整揭露。从官方主视觉图看本作场景回归冰封莫斯科。据TweakTown报道，本作灵感部分来自乌俄冲突，设定在前作《地铁：离去》4年后。Xbox Wire官方确认该作为'世界首映'级别展示。",
+        "summary": "4A Games和Deep Silver正式官宣《地铁》系列第四部主线新作《地铁2039》(Metro 2039)，将于4/16通过Xbox First Look直播进行全球首次完整揭露。从官方主视觉图看本作场景回归冰封莫斯科。据TweakTown报道，本作灵感部分来自乌俄冲突，设定在前作《地铁：离去》4年后。Xbox Wire官方确认该作为‘世界首映‘级别展示。",
         "source": "Xbox Wire",
         "sourceUrl": "https://news.xbox.com/en-us/2026/04/13/metro-2039-xbox-first-look-how-to-watch/",
         "sourceUrls": [
@@ -12075,7 +12183,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "Fable延期凸显GTA6对整个行业的'引力场效应'——即使是微软第一方旗舰也不得不主动避让。这对微软2026年阵容打击显著：Xbox今年已缺少重量级独占，Fable是为数不多的期待之一。若推至12月甚至2027年，Xbox在GTA6上市前后将面临严重的内容空窗。更深层看，GTA6已成为行业'黑洞级产品'，迫使整个产业调整发售节奏，这在游戏史上极为罕见。",
+        "analysis": "Fable延期凸显GTA6对整个行业的‘引力场效应‘——即使是微软第一方旗舰也不得不主动避让。这对微软2026年阵容打击显著：Xbox今年已缺少重量级独占，Fable是为数不多的期待之一。若推至12月甚至2027年，Xbox在GTA6上市前后将面临严重的内容空窗。更深层看，GTA6已成为行业‘黑洞级产品‘，迫使整个产业调整发售节奏，这在游戏史上极为罕见。",
         "relatedNewsIds": [
             163,
             120,
@@ -12161,7 +12269,7 @@ const newsData = [
     {
         "id": 445,
         "title": "法国政府宣布全面放弃Windows，转向Linux，推进数字主权战略",
-        "summary": "法国跨部门数字总局（DINUM）联合多部门宣布将全面停用Windows，改用基于Linux的政府工作站，计划2026年秋敲定整套\"主权解决方案\"（含杀毒、AI系统、数据库等）。此举出于对美国科技依赖的政治风险规避考量，对PC操作系统生态及微软在政府市场的份额有潜在示范效应。",
+        "summary": "法国跨部门数字总局（DINUM）联合多部门宣布将全面停用Windows，改用基于Linux的政府工作站，计划2026年秋敲定整套“主权解决方案“（含杀毒、AI系统、数据库等）。此举出于对美国科技依赖的政治风险规避考量，对PC操作系统生态及微软在政府市场的份额有潜在示范效应。",
         "source": "3DM · 3DM",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -12223,7 +12331,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "COD退出Game Pass首日入库若属实，将是微软订阅策略的重大转折点。此前微软以COD入库为XGP最大卖点，但BO6/BO7数据显示：Game Pass虽带来用户增长但严重蚕食$70全价销售收入，微软游戏收入Q4同比下滑9%。这标志着'一切首日入库'模式的经济不可持续性正被验证。对行业而言，最大的订阅服务开始为头部IP设置付费墙，意味着'订阅取代买断'的叙事遭遇现实检验。",
+        "analysis": "COD退出Game Pass首日入库若属实，将是微软订阅策略的重大转折点。此前微软以COD入库为XGP最大卖点，但BO6/BO7数据显示：Game Pass虽带来用户增长但严重蚕食$70全价销售收入，微软游戏收入Q4同比下滑9%。这标志着‘一切首日入库‘模式的经济不可持续性正被验证。对行业而言，最大的订阅服务开始为头部IP设置付费墙，意味着‘订阅取代买断‘的叙事遭遇现实检验。",
         "relatedNewsIds": [
             155,
             142,
@@ -12232,7 +12340,7 @@ const newsData = [
     },
     {
         "id": 442,
-        "title": "R星（Rockstar Games）遭黑客组织\"ShinyHunters\"数据勒索",
+        "title": "R星（Rockstar Games）遭黑客组织“ShinyHunters“数据勒索",
         "summary": "黑客通...",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
@@ -12303,7 +12411,7 @@ const newsData = [
     {
         "id": 158,
         "title": "PS6定价预测：BOM成本$743但终端售价预计$600-800区间，不会达到$1000",
-        "summary": "科技博主Moore's Law is Dead在最新视频中对PS6进行了详细物料成本(BOM)分析：PS6家用主机APU价格$110.50、电路板$48、总制造成本约$743；PS6掌机因需配备显示屏和电池总成本$493.69；低功耗PS6S型号约$404.38。GamingBolt/Digital Foundry/Push Square/游戏星空等多家媒体确认分析认为PS6终端定价将在$600-800区间，不会达到此前传闻的$1000。索尼面临在硬件成本与用户接受度之间的艰难平衡。",
+        "summary": "科技博主Moore‘s Law is Dead在最新视频中对PS6进行了详细物料成本(BOM)分析：PS6家用主机APU价格$110.50、电路板$48、总制造成本约$743；PS6掌机因需配备显示屏和电池总成本$493.69；低功耗PS6S型号约$404.38。GamingBolt/Digital Foundry/Push Square/游戏星空等多家媒体确认分析认为PS6终端定价将在$600-800区间，不会达到此前传闻的$1000。索尼面临在硬件成本与用户接受度之间的艰难平衡。",
         "source": "GamingBolt",
         "sourceUrl": "https://gamingbolt.com/ps6-wont-cost-1000-will-likely-cost-between-600-and-800-rumor",
         "sourceUrls": [
@@ -12415,30 +12523,6 @@ const newsData = [
         "relatedNewsIds": []
     },
     {
-        "id": 439,
-        "title": "8GB显卡春天来了！Intel新技术显存占用暴降18倍",
-        "summary": "ntel近日介绍了Texture Set Neural Compression（TSNC）技术，通过神经网络压缩游戏纹理和材质数据，显著降低显存占用和游戏下载体积。该技术与NVIDIA的NTC方案类似，但实现方式和硬件支持有所不同。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202604/3941722.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202604/3941722.html"
-            }
-        ],
-        "category": "policy",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-04-10",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
         "id": 440,
         "title": "《宝可梦Pokopia》日本销量五连冠！Switch 2累计突破500万台",
         "summary": "《宝可梦Pokopia》（Switch 2平台）本周售出45,484份，累计销量达867,171份，连续第五周蝉联销量冠军。Switch 2售出59,543台，累计销量突破500万台。",
@@ -12484,7 +12568,7 @@ const newsData = [
     {
         "id": 161,
         "title": "Marathon开发预算曝光：超$2亿甚至接近$2.5亿，Bungie押注索尼关键GaaS产品",
-        "summary": "据Forbes记者Paul Tassi报道，索尼旗下Bungie开发的提取类射击游戏《Marathon》开发预算超过2亿美元，可能接近2.5亿美元(不含上线后维护费用)。IGN/Push Square/Eurogamer/TheGamer/Game Rant等多家权威媒体确认。Marathon于3月5日发售后玩家数量大幅下滑但目前尚未面临'Concord式关停'风险。该作是索尼和Bungie在GaaS(服务型游戏)领域的最大押注，高预算之下的商业表现将决定索尼GaaS战略的未来走向。",
+        "summary": "据Forbes记者Paul Tassi报道，索尼旗下Bungie开发的提取类射击游戏《Marathon》开发预算超过2亿美元，可能接近2.5亿美元(不含上线后维护费用)。IGN/Push Square/Eurogamer/TheGamer/Game Rant等多家权威媒体确认。Marathon于3月5日发售后玩家数量大幅下滑但目前尚未面临‘Concord式关停‘风险。该作是索尼和Bungie在GaaS(服务型游戏)领域的最大押注，高预算之下的商业表现将决定索尼GaaS战略的未来走向。",
         "source": "IGN",
         "sourceUrl": "https://www.ign.com/articles/marathon-reportedly-had-a-budget-of-over-200-million-and-while-the-pressure-is-on-bungie-to-gain-more-players-it-is-not-facing-an-imminent-concord-style-shutdown",
         "sourceUrls": [
@@ -12523,7 +12607,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "Marathon $2-2.5亿的开发成本揭示了3A GaaS游戏的成本困境：继Concord(传闻$4亿)惨败后，Marathon成为索尼GaaS战略成败的关键试金石。玩家流失严重但尚未被关停，说明索尼吸取了Concord教训、愿意给予更长的运营窗口。然而$2.5亿的回本压力巨大，需要持续运营多年才可能盈利。这进一步证明'大预算GaaS'模式风险极高，行业可能重新评估服务型游戏的投资回报预期。",
+        "analysis": "Marathon $2-2.5亿的开发成本揭示了3A GaaS游戏的成本困境：继Concord(传闻$4亿)惨败后，Marathon成为索尼GaaS战略成败的关键试金石。玩家流失严重但尚未被关停，说明索尼吸取了Concord教训、愿意给予更长的运营窗口。然而$2.5亿的回本压力巨大，需要持续运营多年才可能盈利。这进一步证明‘大预算GaaS‘模式风险极高，行业可能重新评估服务型游戏的投资回报预期。",
         "relatedNewsIds": [
             117,
             153,
@@ -12613,7 +12697,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "Switch 2日本500万台里程碑意义重大：一是验证了任天堂在日本市场的绝对统治力(PS5同期约300万台)；二是Pokopia五连冠证明宝可梦IP在新平台上的拉动力依然强劲。500万台意味着日本市场硬件渗透期基本完成首波，后续第三方支持将加速涌入。对索尼而言，PS5在日本的存在感持续被压缩，'日本=任天堂'的格局短期难以撼动。",
+        "analysis": "Switch 2日本500万台里程碑意义重大：一是验证了任天堂在日本市场的绝对统治力(PS5同期约300万台)；二是Pokopia五连冠证明宝可梦IP在新平台上的拉动力依然强劲。500万台意味着日本市场硬件渗透期基本完成首波，后续第三方支持将加速涌入。对索尼而言，PS5在日本的存在感持续被压缩，‘日本=任天堂‘的格局短期难以撼动。",
         "relatedNewsIds": [
             152,
             112,
@@ -12666,7 +12750,7 @@ const newsData = [
     {
         "id": 153,
         "title": "Konami《eFootball》全平台累计下载突破10亿次，限时复刻PES大师联赛",
-        "summary": "Konami宣布旗下免费足球游戏《eFootball》(前《实况足球》)全平台累计下载量突破10亿次里程碑。为庆祝这一成就，游戏推出限时'大师联赛Sprint'活动，加入PES经典球员，致敬系列历史。10亿次下载使《eFootball》成为有史以来下载量最高的足球游戏之一，反映F2P模式在体育品类中的巨大用户获取能力，也印证了Konami从买断制向F2P转型的商业策略成效。",
+        "summary": "Konami宣布旗下免费足球游戏《eFootball》(前《实况足球》)全平台累计下载量突破10亿次里程碑。为庆祝这一成就，游戏推出限时‘大师联赛Sprint‘活动，加入PES经典球员，致敬系列历史。10亿次下载使《eFootball》成为有史以来下载量最高的足球游戏之一，反映F2P模式在体育品类中的巨大用户获取能力，也印证了Konami从买断制向F2P转型的商业策略成效。",
         "source": "VGC",
         "sourceUrl": "https://www.videogameschronicle.com/news/efootball-celebrates-1-billion-downloads/",
         "sourceUrls": [
@@ -12800,7 +12884,7 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "索尼4月State of Play聚焦第三方而非第一方独占，反映当前PS5产品策略的转变：在《漫威金刚狼》等大作尚未就绪的空窗期，通过第三方合作(育碧黑旗重制、Saros等)维持平台热度。这与Xbox的Game Pass首日入库策略形成差异化竞争——索尼更注重'优质独占/限时独占'的内容价值。对开发者而言，在索尼State of Play获得展示位相当于获得数千万级曝光，第三方合作窗口价值提升。",
+        "analysis": "索尼4月State of Play聚焦第三方而非第一方独占，反映当前PS5产品策略的转变：在《漫威金刚狼》等大作尚未就绪的空窗期，通过第三方合作(育碧黑旗重制、Saros等)维持平台热度。这与Xbox的Game Pass首日入库策略形成差异化竞争——索尼更注重‘优质独占/限时独占‘的内容价值。对开发者而言，在索尼State of Play获得展示位相当于获得数千万级曝光，第三方合作窗口价值提升。",
         "relatedNewsIds": [
             151,
             121,
@@ -12810,7 +12894,7 @@ const newsData = [
     {
         "id": 1400,
         "title": "Take-Two裁撤AI团队",
-        "summary": "据报道T2解散内部AI团队，前员工称原因为\"高层管理层优先级转移\"",
+        "summary": "据报道T2解散内部AI团队，前员工称原因为“高层管理层优先级转移“",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -12829,7 +12913,7 @@ const newsData = [
     {
         "id": 1401,
         "title": "索尼收购AI与计算机视觉公司Cinemersive Labs",
-        "summary": "这家英国公司将加入SIE视觉计算小组，支持\"游戏视觉计算前沿技术\"的发展",
+        "summary": "这家英国公司将加入SIE视觉计算小组，支持“游戏视觉计算前沿技术“的发展",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -12929,7 +13013,7 @@ const newsData = [
     {
         "id": 155,
         "title": "Xbox成就系统迎来多年来最大升级：视觉改造+100%完成度高亮+隐藏游戏等新功能",
-        "summary": "微软4月8日通过Xbox Wire官方宣布，Xbox成就系统将进行自诞生以来最大规模的改版升级，已面向Xbox Insiders开放测试。主要新功能包括：全新视觉效果和动画设计、支持高亮展示100%完成度游戏(特殊边框)、允许隐藏不想展示的游戏记录、以及个性化成就展示面板。GameSpot/Windows Central/TrueAchievements等多家媒体确认这是'粉丝多年来最期待的更新'。PS5玩家社区同时掀起呼吁索尼改进奖杯系统的热潮。",
+        "summary": "微软4月8日通过Xbox Wire官方宣布，Xbox成就系统将进行自诞生以来最大规模的改版升级，已面向Xbox Insiders开放测试。主要新功能包括：全新视觉效果和动画设计、支持高亮展示100%完成度游戏(特殊边框)、允许隐藏不想展示的游戏记录、以及个性化成就展示面板。GameSpot/Windows Central/TrueAchievements等多家媒体确认这是‘粉丝多年来最期待的更新‘。PS5玩家社区同时掀起呼吁索尼改进奖杯系统的热潮。",
         "source": "Xbox Wire",
         "sourceUrl": "https://news.xbox.com/en-us/2026/04/08/xbox-insiders-may-2026-console-features/",
         "sourceUrls": [
@@ -12975,8 +13059,8 @@ const newsData = [
     },
     {
         "id": 152,
-        "title": "宝可梦冠军4/8发售首日遭玩家批评：性能问题+图鉴删减+缺失功能引发'Beta测试'质疑",
-        "summary": "任天堂免费对战竞技新作《宝可梦冠军》(Pokemon Champions)于4月8日正式登陆Switch/Switch 2，但发售首日即遭到玩家广泛批评。主要问题包括：Switch原版帧率不稳定和画面模糊、宝可梦图鉴大幅删减(仅收录部分宝可梦)、VGC官方竞技赛制的多项功能缺失(如队伍租借、观战模式)、以及多处Bug。IGN报道玩家称其'像Beta测试'，Eurogamer指出'性能限制和游戏设计选择让粉丝失望'。作为宝可梦IP的官方竞技对战新作，混合口碑可能影响其作为VGC官方游戏的定位和Switch 2平台的初期表现。",
+        "title": "宝可梦冠军4/8发售首日遭玩家批评：性能问题+图鉴删减+缺失功能引发‘Beta测试‘质疑",
+        "summary": "任天堂免费对战竞技新作《宝可梦冠军》(Pokemon Champions)于4月8日正式登陆Switch/Switch 2，但发售首日即遭到玩家广泛批评。主要问题包括：Switch原版帧率不稳定和画面模糊、宝可梦图鉴大幅删减(仅收录部分宝可梦)、VGC官方竞技赛制的多项功能缺失(如队伍租借、观战模式)、以及多处Bug。IGN报道玩家称其‘像Beta测试‘，Eurogamer指出‘性能限制和游戏设计选择让粉丝失望‘。作为宝可梦IP的官方竞技对战新作，混合口碑可能影响其作为VGC官方游戏的定位和Switch 2平台的初期表现。",
         "source": "IGN",
         "sourceUrl": "https://www.ign.com/articles/this-really-feels-like-a-beta-test-fans-criticize-free-to-play-pokmon-champions-with-complaints-over-missing-features-switch-2-performance-issues-and-its-limited-roster",
         "sourceUrls": [
@@ -13047,7 +13131,7 @@ const newsData = [
     },
     {
         "id": 1403,
-        "title": "PlayStation宣布\"The Playerbase\"计划：将真实玩家扫描植入PS游戏",
+        "title": "PlayStation宣布“The Playerbase“计划：将真实玩家扫描植入PS游戏",
         "summary": "索尼启动全新社区营销计划，通过摄影测量和动作捕捉将玩家形象植入PS第一方游戏，首批从《跑车浪漫旅7》开始，强化粉丝与平台的情感连接",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
@@ -13084,47 +13168,9 @@ const newsData = [
         "relatedNewsIds": []
     },
     {
-        "id": 432,
-        "title": "沙特资本投资卡普空6亿美元！持股6.04%成第四大股东",
-        "summary": "沙特资本EGDC增持卡普空股...",
-        "source": "腾讯文档策展",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "policy",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-04-07",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 433,
-        "title": "AMD已启动芯片验证，PS6有望维持2027年发布",
-        "summary": "消息源Kepler_L2透露AMD已启动PS6芯片验证，意味着该主机不太可能延期至2028年底后，预计仍维持2027年底或2028年初的发布窗口",
-        "source": "IT之家",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "policy",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-04-07",
-        "tags": [
-            "行业需求"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
         "id": 434,
-        "title": "Netflix推出儿童独立游戏应用\"Netflix Playground\"",
-        "summary": "Netflix宣布推出儿童专属独立游戏App，无广告无内购，4月28日全球上线，含《小猪佩奇》《芝麻街》等IP，支持离线游玩，旨在构建\"观看+互动\"无缝体验",
+        "title": "Netflix推出儿童独立游戏应用“Netflix Playground“",
+        "summary": "Netflix宣布推出儿童专属独立游戏App，无广告无内购，4月28日全球上线，含《小猪佩奇》《芝麻街》等IP，支持离线游玩，旨在构建“观看+互动“无缝体验",
         "source": "IT之家",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -13167,7 +13213,7 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "AMD启动PS6芯片验证是PS6研发进度的积极信号(What)。芯片验证是半导体量产前的关键里程碑，验证通过后距离正式量产通常还需12-18个月；若AMD已在2026年4月启动验证，则PS6在2027年假期档（11-12月）发布的可能性较高，与历史数据（七年代际间隔）吻合(Why)。对行业意味着PS6+Switch 2（2025年6月发布）+ Xbox Project Helix（2028年）将在2027-2028年形成三主机密集发布的\"超级换代期\"，对开发商资源分配和玩家升级决策都将产生重大影响(So What)。索尼尚未官宣PS6发布日期，芯片验证消息有助于缓解市场对\"PS6延期\"的担忧，但定价不确定性仍是最大未知数(What Next)。",
+        "analysis": "AMD启动PS6芯片验证是PS6研发进度的积极信号(What)。芯片验证是半导体量产前的关键里程碑，验证通过后距离正式量产通常还需12-18个月；若AMD已在2026年4月启动验证，则PS6在2027年假期档（11-12月）发布的可能性较高，与历史数据（七年代际间隔）吻合(Why)。对行业意味着PS6+Switch 2（2025年6月发布）+ Xbox Project Helix（2028年）将在2027-2028年形成三主机密集发布的“超级换代期“，对开发商资源分配和玩家升级决策都将产生重大影响(So What)。索尼尚未官宣PS6发布日期，芯片验证消息有助于缓解市场对“PS6延期“的担忧，但定价不确定性仍是最大未知数(What Next)。",
         "relatedNewsIds": [
             270,
             265,
@@ -13176,8 +13222,8 @@ const newsData = [
     },
     {
         "id": 151,
-        "title": "Starfield PS5正式发售+Free Lanes大更新+Terran Armada DLC上线：VICE评'Bethesda近年最佳RPG'",
-        "summary": "4月7日，Bethesda《星空》(Starfield)正式登陆PlayStation 5，结束2年半Xbox/PC独占期，同步上线号称'发售以来最大规模'的免费更新'Free Lanes'和全新付费故事DLC'Terran Armada'。Free Lanes更新全面革新太空旅行系统、增加新任务链和生活质量改进，Terran Armada则引入全新机器人军团派系和新剧情。PS5版支持DualSense触觉反馈和自适应扳机。VICE在评测中称其为'Bethesda近年最佳RPG'，认为Free Lanes更新解决了原版核心痛点。首日PS5表现超出预期，标志着微软多平台战略的重要里程碑。",
+        "title": "Starfield PS5正式发售+Free Lanes大更新+Terran Armada DLC上线：VICE评‘Bethesda近年最佳RPG‘",
+        "summary": "4月7日，Bethesda《星空》(Starfield)正式登陆PlayStation 5，结束2年半Xbox/PC独占期，同步上线号称‘发售以来最大规模‘的免费更新‘Free Lanes‘和全新付费故事DLC‘Terran Armada‘。Free Lanes更新全面革新太空旅行系统、增加新任务链和生活质量改进，Terran Armada则引入全新机器人军团派系和新剧情。PS5版支持DualSense触觉反馈和自适应扳机。VICE在评测中称其为‘Bethesda近年最佳RPG‘，认为Free Lanes更新解决了原版核心痛点。首日PS5表现超出预期，标志着微软多平台战略的重要里程碑。",
         "source": "Bethesda",
         "sourceUrl": "https://bethesda.net/en/game/starfield/article/7IxZSKYwYm1oDr57rXDx4C/starfield-free-lanes-terran-armada",
         "sourceUrls": [
@@ -13218,7 +13264,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "Starfield PS5发售+Free Lanes大更新标志着微软多平台战略从'宣布'进入'兑现'阶段。VICE给出高度评价证明Free Lanes确实解决了原版太空旅行割裂的核心痛点。对微软而言，首方大作全平台化能否转化为Game Pass订阅增长是关键指标。对索尼而言，获得完整版Starfield(含DualSense支持)验证了PS5庞大装机量的谈判优势。Terran Armada DLC的付费表现将测试Starfield在PS5用户中的商业潜力。",
+        "analysis": "Starfield PS5发售+Free Lanes大更新标志着微软多平台战略从‘宣布‘进入‘兑现‘阶段。VICE给出高度评价证明Free Lanes确实解决了原版太空旅行割裂的核心痛点。对微软而言，首方大作全平台化能否转化为Game Pass订阅增长是关键指标。对索尼而言，获得完整版Starfield(含DualSense支持)验证了PS5庞大装机量的谈判优势。Terran Armada DLC的付费表现将测试Starfield在PS5用户中的商业潜力。",
         "relatedNewsIds": [
             135,
             137,
@@ -13269,7 +13315,7 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "沙特EGDC一个月内两次加仓卡普空(5%→6%)，投资达$6.7亿，是中东主权资本系统性布局全球游戏资产的又一标志性动作。结合PIF子公司Savvy Games持有任天堂8.6%和Nexon股份，沙特已成为日本游戏产业最大的外部战略投资者之一。这对卡普空短期股价构成利好，但也引发行业对'主权资本是否影响内容自主权'的讨论。卡普空凭借《生化危机安魂曲》和《怪物猎人荒野》强劲表现，已成为日本游戏最优质资产标的。",
+        "analysis": "沙特EGDC一个月内两次加仓卡普空(5%→6%)，投资达$6.7亿，是中东主权资本系统性布局全球游戏资产的又一标志性动作。结合PIF子公司Savvy Games持有任天堂8.6%和Nexon股份，沙特已成为日本游戏产业最大的外部战略投资者之一。这对卡普空短期股价构成利好，但也引发行业对‘主权资本是否影响内容自主权‘的讨论。卡普空凭借《生化危机安魂曲》和《怪物猎人荒野》强劲表现，已成为日本游戏最优质资产标的。",
         "relatedNewsIds": []
     },
     {
@@ -13287,25 +13333,6 @@ const newsData = [
             "平台发行"
         ],
         "sentiment": "negative",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 429,
-        "title": "索尼再度清理PlayStation商店，多款粗制滥造/AI生成劣质游戏遭下架",
-        "summary": "涉及GoGame Console Publisher、VRCForge Studios等发行商，这是索尼持续提升平台内容质量治理行动的一部分，延续此前单一开发商上千款游戏被移除的清洁力度。",
-        "source": "IT之家",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-04-06",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
         "tdocMarking": "tdoc-verified",
         "analysis": "",
         "relatedNewsIds": []
@@ -13353,7 +13380,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "杀戮尖塔2单月530万份+$1.08亿收入超越红色沙漠登顶Steam 3月榜首，创下品类纪录。这标志着Roguelike品类从小众走向主流的里程碑——57.4万同时在线峰值是前作的10倍以上，说明Steam平台的长尾效应和社区口碑对续作的放大效应极为显著。$1.08亿单月收入验证了'小团队+优质IP续作'的商业模式可复制性，对独立开发者生态是极大鼓舞。"
+        "analysis": "杀戮尖塔2单月530万份+$1.08亿收入超越红色沙漠登顶Steam 3月榜首，创下品类纪录。这标志着Roguelike品类从小众走向主流的里程碑——57.4万同时在线峰值是前作的10倍以上，说明Steam平台的长尾效应和社区口碑对续作的放大效应极为显著。$1.08亿单月收入验证了‘小团队+优质IP续作‘的商业模式可复制性，对独立开发者生态是极大鼓舞。"
     },
     {
         "id": 1396,
@@ -13395,8 +13422,8 @@ const newsData = [
     },
     {
         "id": 428,
-        "title": "微软释放向下兼容信号：Xbox 360游戏现身xCloud后台，结合25周年及\"螺旋计划\"主机",
-        "summary": "监测平台发现多款Xbox 360游戏代码更新，叠加GDC上Xbox高管强调向下兼容为重点，市场预期微软将于Xbox 25周年节点集中发力经典游戏复活计划，或涉及\"螺旋计划\"新主机。",
+        "title": "微软释放向下兼容信号：Xbox 360游戏现身xCloud后台，结合25周年及“螺旋计划“主机",
+        "summary": "监测平台发现多款Xbox 360游戏代码更新，叠加GDC上Xbox高管强调向下兼容为重点，市场预期微软将于Xbox 25周年节点集中发力经典游戏复活计划，或涉及“螺旋计划“新主机。",
         "source": "IT之家",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -13433,8 +13460,8 @@ const newsData = [
     },
     {
         "id": 148,
-        "title": "Lenovo Legion Go 2涨价近50%：RAM短缺'RAMageddon'冲击波蔓延至掌机硬件市场",
-        "summary": "Lenovo在未发布官方声明的情况下悄然大幅上调掌上游戏PC Legion Go 2的美国零售价：基础款(AMD Ryzen Z2/16GB)从$1,099涨至$1,499(涨幅约36%)，顶配款从$1,349涨至$1,999(涨幅约48%)。The Verge将此称为'RAMageddon'(RAM末日)——全球DRAM/DDR5内存短缺和价格飙升正在冲击整个游戏硬件产业链。这是继PS5全球涨价$50-$150、Switch 2面临涨价压力后，又一款主流游戏硬件产品大幅提价，印证了行业级硬件成本危机正在从主机蔓延至掌机和PC领域。",
+        "title": "Lenovo Legion Go 2涨价近50%：RAM短缺‘RAMageddon‘冲击波蔓延至掌机硬件市场",
+        "summary": "Lenovo在未发布官方声明的情况下悄然大幅上调掌上游戏PC Legion Go 2的美国零售价：基础款(AMD Ryzen Z2/16GB)从$1,099涨至$1,499(涨幅约36%)，顶配款从$1,349涨至$1,999(涨幅约48%)。The Verge将此称为‘RAMageddon‘(RAM末日)——全球DRAM/DDR5内存短缺和价格飙升正在冲击整个游戏硬件产业链。这是继PS5全球涨价$50-$150、Switch 2面临涨价压力后，又一款主流游戏硬件产品大幅提价，印证了行业级硬件成本危机正在从主机蔓延至掌机和PC领域。",
         "source": "The Verge",
         "sourceUrl": "https://www.theverge.com/games/906752/lenovo-legion-go-2-suddenly-costs-650-more-as-ramageddon-lays-waste-to-gaming-hardware",
         "sourceUrls": [
@@ -13471,7 +13498,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "Legion Go 2涨价近50%是'RAMageddon'(RAM末日)对游戏硬件市场的最直接冲击。全球DDR5/DRAM短缺导致内存价格飙升，已从上游芯片层面传导至终端消费产品。结合PS5涨价$50-$150、Switch 2面临涨价压力、Xbox也暗示调价，整个游戏硬件产业正进入成本上升周期。对消费者的直接影响：2026年购买任何游戏硬件都将比2025年更贵，可能抑制换代需求。对厂商而言，涨价与销量的博弈将成为本年度最大挑战。",
+        "analysis": "Legion Go 2涨价近50%是‘RAMageddon‘(RAM末日)对游戏硬件市场的最直接冲击。全球DDR5/DRAM短缺导致内存价格飙升，已从上游芯片层面传导至终端消费产品。结合PS5涨价$50-$150、Switch 2面临涨价压力、Xbox也暗示调价，整个游戏硬件产业正进入成本上升周期。对消费者的直接影响：2026年购买任何游戏硬件都将比2025年更贵，可能抑制换代需求。对厂商而言，涨价与销量的博弈将成为本年度最大挑战。",
         "relatedNewsIds": [
             147,
             121,
@@ -13481,8 +13508,8 @@ const newsData = [
     },
     {
         "id": 145,
-        "title": "PlayStation Studios PC发行三年收入$3亿：前员工披露数据引发'PC战略是否成功'争论",
-        "summary": "据索尼前PC规划与洞察经理Jerry Liu在LinkedIn个人资料中披露，PlayStation Studios PC部门在2021-2023年三年间累计创造约3亿美元净收入(从$0起步)。该数据被多家媒体引用后引发行业争论：支持者认为$3亿纯增量收入验证了'主机先发→PC跟进'双平台战略的商业价值；批评者则指出，三年$3亿相对于PS4/PS5每年$150亿+的软件收入占比极低(约0.7%)，质疑PC移植的投入产出比。结合近期索尼放弃独立PC启动器、Marathon销量不及预期等信号，PC战略走向引发关注。",
+        "title": "PlayStation Studios PC发行三年收入$3亿：前员工披露数据引发‘PC战略是否成功‘争论",
+        "summary": "据索尼前PC规划与洞察经理Jerry Liu在LinkedIn个人资料中披露，PlayStation Studios PC部门在2021-2023年三年间累计创造约3亿美元净收入(从$0起步)。该数据被多家媒体引用后引发行业争论：支持者认为$3亿纯增量收入验证了‘主机先发→PC跟进‘双平台战略的商业价值；批评者则指出，三年$3亿相对于PS4/PS5每年$150亿+的软件收入占比极低(约0.7%)，质疑PC移植的投入产出比。结合近期索尼放弃独立PC启动器、Marathon销量不及预期等信号，PC战略走向引发关注。",
         "source": "GamesRadar",
         "sourceUrl": "https://www.gamesradar.com/platforms/playstation/it-took-3-years-for-playstation-to-earn-usd300-million-in-pc-sales-according-to-former-manager-which-makes-the-platform-less-than-half-as-lucrative-as-the-ps4-and-ps5/",
         "sourceUrls": [
@@ -13522,7 +13549,7 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "PS Studios PC三年$3亿收入数据的曝光成为行业风向标：一方面证明'独占→PC移植'模式确实能创造增量营收(从零到3亿)；另一方面相对PS生态年收入$150亿+的占比仅0.7%，加上Marathon销量不及预期和索尼放弃PC启动器等信号，暗示索尼可能在重新评估PC投入力度。这对Steam平台生态和PC用户期望管理都有深远影响——如果索尼收缩PC战略，Steam上的3A主机移植供给可能减少。",
+        "analysis": "PS Studios PC三年$3亿收入数据的曝光成为行业风向标：一方面证明‘独占→PC移植‘模式确实能创造增量营收(从零到3亿)；另一方面相对PS生态年收入$150亿+的占比仅0.7%，加上Marathon销量不及预期和索尼放弃PC启动器等信号，暗示索尼可能在重新评估PC投入力度。这对Steam平台生态和PC用户期望管理都有深远影响——如果索尼收缩PC战略，Steam上的3A主机移植供给可能减少。",
         "relatedNewsIds": [
             117,
             97,
@@ -13599,7 +13626,7 @@ const newsData = [
     {
         "id": 1394,
         "title": "《浣熊推币机/Raccoin》（硬币推机Roguelike）Steam首日销量突破10万",
-        "summary": "小体量创意独立游戏首日10万销量，印证\"赌博机制+Roguelike\"这一细分玩法在PC平台的持续爆发力。",
+        "summary": "小体量创意独立游戏首日10万销量，印证“赌博机制+Roguelike“这一细分玩法在PC平台的持续爆发力。",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -13655,8 +13682,8 @@ const newsData = [
     },
     {
         "id": 147,
-        "title": "Switch 2涨价'不可避免'：前任天堂销售主管称关税+RAM+成本三重压力下硬件提价只是时间问题",
-        "summary": "前任天堂美国销售主管在接受GamesRadar采访时表示，Switch 2涨价'不可避免'(inevitable)。他指出，面对美国关税政策、全球RAM价格上涨和通胀等多重外部压力，任天堂可能暂时维持发售价，但中长期提价几乎确定。此前索尼已宣布PS5全球涨价$50-$150，微软也暗示Xbox硬件价格调整，任天堂是最后一个尚未调价的主机厂商。分析师认为涨价幅度可能在$20-$50之间。",
+        "title": "Switch 2涨价‘不可避免‘：前任天堂销售主管称关税+RAM+成本三重压力下硬件提价只是时间问题",
+        "summary": "前任天堂美国销售主管在接受GamesRadar采访时表示，Switch 2涨价‘不可避免‘(inevitable)。他指出，面对美国关税政策、全球RAM价格上涨和通胀等多重外部压力，任天堂可能暂时维持发售价，但中长期提价几乎确定。此前索尼已宣布PS5全球涨价$50-$150，微软也暗示Xbox硬件价格调整，任天堂是最后一个尚未调价的主机厂商。分析师认为涨价幅度可能在$20-$50之间。",
         "source": "GamesRadar",
         "sourceUrl": "https://www.gamesradar.com/platforms/nintendo-switch-2/switch-2-prices-will-go-up-says-ex-nintendo-sales-lead-its-inevitable/",
         "sourceUrls": [
@@ -13687,7 +13714,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "继索尼PS5全球涨价后，前任天堂销售主管直言Switch 2涨价'不可避免'，标志着游戏硬件全面进入涨价周期。三大主机厂商(索尼已涨/微软暗示/任天堂'不可避免')均面临关税+RAM+通胀三重成本压力。这将压缩2026-2027年硬件装机量预期，间接影响软件销售基数。对开发者而言，用户获取成本上升可能加速'精品化+订阅制'转型。",
+        "analysis": "继索尼PS5全球涨价后，前任天堂销售主管直言Switch 2涨价‘不可避免‘，标志着游戏硬件全面进入涨价周期。三大主机厂商(索尼已涨/微软暗示/任天堂‘不可避免‘)均面临关税+RAM+通胀三重成本压力。这将压缩2026-2027年硬件装机量预期，间接影响软件销售基数。对开发者而言，用户获取成本上升可能加速‘精品化+订阅制‘转型。",
         "relatedNewsIds": [
             121,
             132,
@@ -13696,8 +13723,8 @@ const newsData = [
     },
     {
         "id": 135,
-        "title": "Starfield 4月7日正式登陆PS5：Bethesda最大规模免费更新'Free Lanes'同步上线",
-        "summary": "Bethesda确认《星空》(Starfield)将于4月7日登陆PlayStation 5，结束Xbox/PC独占2年半。PS5版将同步上线'Free Lanes'大更新——号称发售以来最大规模的免费内容更新，全面革新太空旅行系统。此举标志着微软首方大作多平台战略的进一步推进，也意味着Bethesda最具争议的独占期正式结束。",
+        "title": "Starfield 4月7日正式登陆PS5：Bethesda最大规模免费更新‘Free Lanes‘同步上线",
+        "summary": "Bethesda确认《星空》(Starfield)将于4月7日登陆PlayStation 5，结束Xbox/PC独占2年半。PS5版将同步上线‘Free Lanes‘大更新——号称发售以来最大规模的免费内容更新，全面革新太空旅行系统。此举标志着微软首方大作多平台战略的进一步推进，也意味着Bethesda最具争议的独占期正式结束。",
         "source": "PlayStation Blog",
         "sourceUrl": "https://blog.playstation.com/2026/03/17/starfield-is-coming-to-playstation-5-on-april-7/",
         "sourceUrls": [
@@ -13733,7 +13760,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "Starfield登陆PS5是微软多平台战略的标志性事件——曾经被视为Xbox最大独占的Bethesda RPG终于全平台化。Free Lanes大更新随PS5版同步发布是聪明的策略，让PS5玩家获得'最佳版本'体验。结合Xbox品牌重塑和Project Helix，微软正在从'独占内容'转向'最佳体验平台'的竞争策略。对索尼来说，获得Starfield也证明了PS5庞大装机量的谈判筹码。",
+        "analysis": "Starfield登陆PS5是微软多平台战略的标志性事件——曾经被视为Xbox最大独占的Bethesda RPG终于全平台化。Free Lanes大更新随PS5版同步发布是聪明的策略，让PS5玩家获得‘最佳版本‘体验。结合Xbox品牌重塑和Project Helix，微软正在从‘独占内容‘转向‘最佳体验平台‘的竞争策略。对索尼来说，获得Starfield也证明了PS5庞大装机量的谈判筹码。",
         "relatedNewsIds": [
             137,
             109,
@@ -13742,8 +13769,8 @@ const newsData = [
     },
     {
         "id": 1389,
-        "title": "PUBG引入全新PvE合作模式\"Xeno Point\"，探索后\"吃鸡\"时代方向",
-        "summary": "PUBG新增PvE协作模式，标志着\"大逃杀\"鼻祖开始探索新的玩法形态，寻求突破单一吃鸡模式的局限。",
+        "title": "PUBG引入全新PvE合作模式“Xeno Point“，探索后“吃鸡“时代方向",
+        "summary": "PUBG新增PvE协作模式，标志着“大逃杀“鼻祖开始探索新的玩法形态，寻求突破单一吃鸡模式的局限。",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -13780,8 +13807,8 @@ const newsData = [
     },
     {
         "id": 1392,
-        "title": "前任天堂美国销售主管预测Switch 2\"终将不得不涨价\"",
-        "summary": "任天堂前销售主管表示，任天堂\"不可避免\"将跟随索尼、微软的步伐提高Switch 2定价，但同时肯定任天堂近期调整实体与数字版游戏价格策略的决定是正确的。",
+        "title": "前任天堂美国销售主管预测Switch 2“终将不得不涨价“",
+        "summary": "任天堂前销售主管表示，任天堂“不可避免“将跟随索尼、微软的步伐提高Switch 2定价，但同时肯定任天堂近期调整实体与数字版游戏价格策略的决定是正确的。",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -13800,7 +13827,7 @@ const newsData = [
     {
         "id": 1398,
         "title": "VR平台Rec Room宣布将于2026年6月关停",
-        "summary": "Rec Room开发商表示\"始终未能找到可持续盈利的商业模式\"，宣布6月关停平台，是VR独立平台在商业化方面持续遭遇困境的最新案例。",
+        "summary": "Rec Room开发商表示“始终未能找到可持续盈利的商业模式“，宣布6月关停平台，是VR独立平台在商业化方面持续遭遇困境的最新案例。",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -13812,25 +13839,6 @@ const newsData = [
             "业内资讯"
         ],
         "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 423,
-        "title": "前任天堂美国销售主管预测Switch 2\"终将不得不涨价\"",
-        "summary": "任天堂前销售主管表示，任天堂\"不可避免\"将跟随索尼、微软的步伐提高Switch 2定价，但同时肯定任天堂近期调整实体与数字版游戏价格策略的决定是正确的。",
-        "source": "VGC、GamingBolt",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-04-02",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "negative",
         "tdocMarking": "tdoc-verified",
         "analysis": "",
         "relatedNewsIds": []
@@ -13855,28 +13863,9 @@ const newsData = [
         "relatedNewsIds": []
     },
     {
-        "id": 430,
-        "title": "VR平台Rec Room宣布将于2026年6月关停",
-        "summary": "Rec Room开发商表示\"始终未能找到可持续盈利的商业模式\"，宣布6月关停平台，是VR独立平台在商业化方面持续遭遇困境的最新案例。",
-        "source": "GamesIndustry.biz",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "policy",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-04-02",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
         "id": 149,
-        "title": "美国专利局驳回任天堂'召唤角色战斗'专利：Palworld法律争端迎来重大转折",
-        "summary": "美国专利商标局(USPTO)在非终局裁定中驳回了任天堂2023年申请、2025年获批的'在游戏中召唤副角色令其参与战斗'专利的全部26项权利要求，理由为'过于显而易见'(obvious)。该专利是任天堂起诉Pocketpair《幻兽帕鲁》(Palworld)侵权的核心依据之一。USPTO局长于2025年11月主动要求重新审查。这一裁定虽非终局（任天堂可上诉），但显著削弱了任天堂在Palworld案中的法律立场，且可能对整个游戏行业的玩法机制专利维权产生深远影响。",
+        "title": "美国专利局驳回任天堂‘召唤角色战斗‘专利：Palworld法律争端迎来重大转折",
+        "summary": "美国专利商标局(USPTO)在非终局裁定中驳回了任天堂2023年申请、2025年获批的‘在游戏中召唤副角色令其参与战斗‘专利的全部26项权利要求，理由为‘过于显而易见‘(obvious)。该专利是任天堂起诉Pocketpair《幻兽帕鲁》(Palworld)侵权的核心依据之一。USPTO局长于2025年11月主动要求重新审查。这一裁定虽非终局（任天堂可上诉），但显著削弱了任天堂在Palworld案中的法律立场，且可能对整个游戏行业的玩法机制专利维权产生深远影响。",
         "source": "GamesIndustry",
         "sourceUrl": "https://www.gamesindustry.biz/us-patent-office-rejects-nintendos-summon-subcharacter-and-let-it-fight-patent",
         "sourceUrls": [
@@ -13916,7 +13905,7 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "USPTO驳回'召唤角色战斗'专利的全部26项权利要求，是游戏行业知识产权保护领域的里程碑事件。核心争议在于：游戏玩法机制能否被专利保护？如果'召唤角色战斗'被认定为'显而易见'，那么类似的核心玩法循环（如卡牌召唤、伙伴系统）专利都可能面临同样挑战。虽然这是非终局裁定（任天堂可修改权利要求后重新申请），但已向行业发出信号：宽泛的玩法机制专利越来越难获得美国法律保护。",
+        "analysis": "USPTO驳回‘召唤角色战斗‘专利的全部26项权利要求，是游戏行业知识产权保护领域的里程碑事件。核心争议在于：游戏玩法机制能否被专利保护？如果‘召唤角色战斗‘被认定为‘显而易见‘，那么类似的核心玩法循环（如卡牌召唤、伙伴系统）专利都可能面临同样挑战。虽然这是非终局裁定（任天堂可修改权利要求后重新申请），但已向行业发出信号：宽泛的玩法机制专利越来越难获得美国法律保护。",
         "relatedNewsIds": []
     },
     {
@@ -13959,7 +13948,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "索尼在关闭部分工作室的同时持续收购AI技术公司，说明PlayStation战略正从'内容创作型工作室'向'技术平台化'转型。Cinemersive的2D转3D技术可能应用于PS VR2内容生产或下一代PS6的渲染管线。结合此前确认的AI帧生成技术(Project Amethyst)，索尼正在构建完整的AI视觉技术栈，为PS6时代的差异化体验做技术储备。",
+        "analysis": "索尼在关闭部分工作室的同时持续收购AI技术公司，说明PlayStation战略正从‘内容创作型工作室‘向‘技术平台化‘转型。Cinemersive的2D转3D技术可能应用于PS VR2内容生产或下一代PS6的渲染管线。结合此前确认的AI帧生成技术(Project Amethyst)，索尼正在构建完整的AI视觉技术栈，为PS6时代的差异化体验做技术储备。",
         "relatedNewsIds": [
             114,
             87,
@@ -14041,7 +14030,7 @@ const newsData = [
     {
         "id": 1387,
         "title": "Stellar Blade开发商Shift Up收购生化危机之父三上真司新工作室UNBOUND",
-        "summary": "韩国工作室Shift Up（《星刃》开发商）宣布收购三上真司创立的UNBOUND工作室，并将负责发行其未来所有游戏。三上真司表示：\"我从未遇到过在创作方向上与我如此高度契合的合作方。\"",
+        "summary": "韩国工作室Shift Up（《星刃》开发商）宣布收购三上真司创立的UNBOUND工作室，并将负责发行其未来所有游戏。三上真司表示：“我从未遇到过在创作方向上与我如此高度契合的合作方。“",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -14202,8 +14191,8 @@ const newsData = [
     },
     {
         "id": 425,
-        "title": "美国USPTO驳回任天堂\"召唤角色战斗\"专利，Palworld法律争议持续",
-        "summary": "美国专利商标局（USPTO）以\"过于显而易见\"为由，驳回任天堂2023年申请、2025年获批的\"召唤角色令其战斗\"专利（即针对《Palworld》的核心专利之一），局长于2025年11月主动要求重新审查。该专利涉及任天堂与Pocketpair之间的《Palworld》侵权诉讼，判决可能对游戏专利维权产生行业性影响。",
+        "title": "美国USPTO驳回任天堂“召唤角色战斗“专利，Palworld法律争议持续",
+        "summary": "美国专利商标局（USPTO）以“过于显而易见“为由，驳回任天堂2023年申请、2025年获批的“召唤角色令其战斗“专利（即针对《Palworld》的核心专利之一），局长于2025年11月主动要求重新审查。该专利涉及任天堂与Pocketpair之间的《Palworld》侵权诉讼，判决可能对游戏专利维权产生行业性影响。",
         "source": "GamesIndustry / GamingBolt / VGC / IGN",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -14342,7 +14331,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "Switch 2第三方销量+76%是任天堂生态史上最强的第三方拉动信号。$23亿年收入中增量$10亿直接来自Switch 2发售效应，证明Switch 2成功打破了'任天堂平台第三方卖不动'的历史魔咒。单位销量降2.5%但ASP涨81%，说明Switch 2玩家愿意为高定价3A付费。Warner Bros.领跑暗示霍格沃茨遗产等IP在Switch 2上的表现远超预期。",
+        "analysis": "Switch 2第三方销量+76%是任天堂生态史上最强的第三方拉动信号。$23亿年收入中增量$10亿直接来自Switch 2发售效应，证明Switch 2成功打破了‘任天堂平台第三方卖不动‘的历史魔咒。单位销量降2.5%但ASP涨81%，说明Switch 2玩家愿意为高定价3A付费。Warner Bros.领跑暗示霍格沃茨遗产等IP在Switch 2上的表现远超预期。",
         "relatedNewsIds": [
             107,
             108,
@@ -14352,7 +14341,7 @@ const newsData = [
     {
         "id": 134,
         "title": "Shift Up收购生化危机之父三上真司新工作室UNBOUND：强化全球PC/Console布局",
-        "summary": "韩国开发商Shift Up（《星刃Stellar Blade》开发商）宣布全资收购日本工作室UNBOUND，该工作室由《生化危机》系列缔造者三上真司于2022年创立。Shift Up将负责发行UNBOUND所有未来游戏。三上真司表示'从未遇到过在创作方向上如此高度契合的合作方'。收购旨在强化Shift Up的全球PC和Console游戏开发与发行能力。",
+        "summary": "韩国开发商Shift Up（《星刃Stellar Blade》开发商）宣布全资收购日本工作室UNBOUND，该工作室由《生化危机》系列缔造者三上真司于2022年创立。Shift Up将负责发行UNBOUND所有未来游戏。三上真司表示‘从未遇到过在创作方向上如此高度契合的合作方‘。收购旨在强化Shift Up的全球PC和Console游戏开发与发行能力。",
         "source": "GamesIndustry",
         "sourceUrl": "https://www.gamesindustry.biz/stellar-blade-developer-shift-up-acquires-shinji-mikamis-new-studio",
         "sourceUrls": [
@@ -14448,8 +14437,8 @@ const newsData = [
     },
     {
         "id": 125,
-        "title": "《红色沙漠》口碑大逆转：Steam升至'特别好评'，M站玩家评分8.7，销量冲击500万",
-        "summary": "Pearl Abyss《红色沙漠》发售后媒体评分较低，但经大型1.01.00补丁修复键位、游戏性痛点后，Steam评价逆转至'特别好评'，M站玩家评分从7.7升至8.7，Steam峰值同时在线超26.2万人。CEO在股东会上透露销量接近500万，目标年底前宣布里程碑数据。此前AI素材争议引发的负面情绪已大幅消退。",
+        "title": "《红色沙漠》口碑大逆转：Steam升至‘特别好评‘，M站玩家评分8.7，销量冲击500万",
+        "summary": "Pearl Abyss《红色沙漠》发售后媒体评分较低，但经大型1.01.00补丁修复键位、游戏性痛点后，Steam评价逆转至‘特别好评‘，M站玩家评分从7.7升至8.7，Steam峰值同时在线超26.2万人。CEO在股东会上透露销量接近500万，目标年底前宣布里程碑数据。此前AI素材争议引发的负面情绪已大幅消退。",
         "source": "腾讯文档",
         "sourceUrl": "https://docs.qq.com/sheet/LMLdoimBsILX",
         "category": "game",
@@ -14500,7 +14489,7 @@ const newsData = [
     {
         "id": 123,
         "title": "宝可梦Pokopia助力Switch 2英国销量翻倍：缺货仍挡不住",
-        "summary": "任天堂《宝可梦Pokopia》发售后大幅拉动Switch 2在英国的硬件销量，即使面临持续缺货，Switch 2英国周销量仍实现翻倍增长。这证明了宝可梦IP作为'系统卖方'（system seller）的强大号召力，也说明Switch 2当前的需求远超供给。",
+        "summary": "任天堂《宝可梦Pokopia》发售后大幅拉动Switch 2在英国的硬件销量，即使面临持续缺货，Switch 2英国周销量仍实现翻倍增长。这证明了宝可梦IP作为‘系统卖方‘（system seller）的强大号召力，也说明Switch 2当前的需求远超供给。",
         "source": "腾讯文档",
         "sourceUrl": "https://docs.qq.com/sheet/LMLdoimBsILX",
         "category": "platform",
@@ -14525,7 +14514,7 @@ const newsData = [
     {
         "id": 122,
         "title": "腾讯国行Switch今起逐步停运，用户专属回馈计划结束",
-        "summary": "腾讯代理的国行Nintendo Switch今日起逐步停运相关服务，用户专属'回馈计划'正式结束。此前腾讯于2019年12月引进Switch国行版，历时6年多。停运标志着腾讯与任天堂在国行Switch上的合作正式画上句号，未来合作重心可能转向Switch 2。",
+        "summary": "腾讯代理的国行Nintendo Switch今日起逐步停运相关服务，用户专属‘回馈计划‘正式结束。此前腾讯于2019年12月引进Switch国行版，历时6年多。停运标志着腾讯与任天堂在国行Switch上的合作正式画上句号，未来合作重心可能转向Switch 2。",
         "source": "腾讯文档",
         "sourceUrl": "https://docs.qq.com/sheet/LMLdoimBsILX",
         "category": "platform",
@@ -14665,7 +14654,7 @@ const newsData = [
     {
         "id": 1386,
         "title": "Disney Might Want to Acquire Epic Games – Rumor",
-        "summary": "迪士尼可能收购Epic Games的讨论正在业内发酵，这一潜在收购被视为两家公司联手挑战Roblox市场主导地位的最佳机会。科技记者Alex Heath透露迪士尼高层对此存在分歧，而Epic创始人Tim Sweeney的绝对控制权及公司近期法律纠纷可能成为交易障碍。尽管双方尚未公开表态，但IP深度整合的想象空间（如\"堡垒之夜主题公园\"）和迪士尼与OpenAI合作破裂的背景，使该收购具有战略意义。",
+        "summary": "迪士尼可能收购Epic Games的讨论正在业内发酵，这一潜在收购被视为两家公司联手挑战Roblox市场主导地位的最佳机会。科技记者Alex Heath透露迪士尼高层对此存在分歧，而Epic创始人Tim Sweeney的绝对控制权及公司近期法律纠纷可能成为交易障碍。尽管双方尚未公开表态，但IP深度整合的想象空间（如“堡垒之夜主题公园“）和迪士尼与OpenAI合作破裂的背景，使该收购具有战略意义。",
         "source": "腾讯文档策展",
         "sourceUrl": "https://gamingbolt.com/disney-might-want-to-acquire-epic-games-rumor",
         "sourceUrls": [
@@ -14680,30 +14669,6 @@ const newsData = [
         "date": "2026-03-31",
         "tags": [
             "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 415,
-        "title": "1纳米争夺战打响 三星计划2030年量产1纳米工艺",
-        "summary": "三星晶圆代工业务在2026年迎来转折点，2nm制程节点开发和客户订单谈判进展顺利，良品率提升至60%。据TrendForce报道，三星公司计划2030年前完成1nm制程开发并量产，同时深耕2nm制程扩展细分工艺阵容。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202603/3940989.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202603/3940989.html"
-            }
-        ],
-        "category": "policy",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-03-31",
-        "tags": [
-            "行业需求"
         ],
         "sentiment": "neutral",
         "tdocMarking": "tdoc-verified",
@@ -14737,7 +14702,7 @@ const newsData = [
     {
         "id": 150,
         "title": "Eidos-Montreal裁员124人+总监离职：Embracer旗下《杀出重围》工作室19年老将David Anfossi出走",
-        "summary": "Embracer集团旗下蒙特利尔工作室Eidos-Montreal宣布裁员124人，同时在工作室工作近19年的总负责人David Anfossi也正式离职。Eidos-Montreal以《杀出重围》系列和《漫威银河护卫队》闻名。官方表示裁员是'项目需求变化和跨制作/支持团队影响'的结果。这是Embracer自2023年Saudi Savvy Games投资失败以来持续重组的最新动作，也是2026年游戏行业裁员潮的又一例证。",
+        "summary": "Embracer集团旗下蒙特利尔工作室Eidos-Montreal宣布裁员124人，同时在工作室工作近19年的总负责人David Anfossi也正式离职。Eidos-Montreal以《杀出重围》系列和《漫威银河护卫队》闻名。官方表示裁员是‘项目需求变化和跨制作/支持团队影响‘的结果。这是Embracer自2023年Saudi Savvy Games投资失败以来持续重组的最新动作，也是2026年游戏行业裁员潮的又一例证。",
         "source": "GamesIndustry",
         "sourceUrl": "https://www.gamesindustry.biz/eidos-montreal-announces-124-job-cuts-studio-head-david-anfossi-departs-after-19-years-at-developer",
         "sourceUrls": [
@@ -14784,8 +14749,8 @@ const newsData = [
     },
     {
         "id": 143,
-        "title": "VR社交平台Rec Room宣布6月关停：曾估值$35亿、1.5亿用户，终因'未找到可持续盈利模式'",
-        "summary": "VR社交游戏平台Rec Room开发商于3月31日宣布，平台将于2026年6月1日正式关停。Rec Room运营十年间曾达到1.5亿注册用户，2021年获得1亿美元融资估值高达35亿美元。关停声明中直言'始终未能找到可持续盈利的商业模式'，运营成本持续超过营收。此前公司在2026年初已进行大规模裁员。这是VR独立平台在商业化方面持续遭遇困境的最新案例，反映出VR社交赛道面临的根本性商业模式挑战。",
+        "title": "VR社交平台Rec Room宣布6月关停：曾估值$35亿、1.5亿用户，终因‘未找到可持续盈利模式‘",
+        "summary": "VR社交游戏平台Rec Room开发商于3月31日宣布，平台将于2026年6月1日正式关停。Rec Room运营十年间曾达到1.5亿注册用户，2021年获得1亿美元融资估值高达35亿美元。关停声明中直言‘始终未能找到可持续盈利的商业模式‘，运营成本持续超过营收。此前公司在2026年初已进行大规模裁员。这是VR独立平台在商业化方面持续遭遇困境的最新案例，反映出VR社交赛道面临的根本性商业模式挑战。",
         "source": "GamesIndustry",
         "sourceUrl": "https://www.gamesindustry.biz/vr-platform-rec-room-to-shut-down-in-june-2026",
         "sourceUrls": [
@@ -14869,7 +14834,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "三大主机集体涨价将是主机行业30年来首次，标志着硬件成本压力已成为系统性风险。对比PC市场GPU持续降价的趋势，主机的价格优势正在被侵蚀。如果Switch 2从$449涨至$499+，将直接冲击其'性价比掌机'的定位。",
+        "analysis": "三大主机集体涨价将是主机行业30年来首次，标志着硬件成本压力已成为系统性风险。对比PC市场GPU持续降价的趋势，主机的价格优势正在被侵蚀。如果Switch 2从$449涨至$499+，将直接冲击其‘性价比掌机‘的定位。",
         "relatedNewsIds": [
             121,
             130,
@@ -14878,7 +14843,7 @@ const newsData = [
     },
     {
         "id": 1375,
-        "title": "\"It didn't feel like Xbox\" - Microsoft confirms new Xbox boss scrapped controversial This is an Xbox ad campaign as part of brand \"reset\"",
+        "title": "“It didn‘t feel like Xbox“ - Microsoft confirms new Xbox boss scrapped controversial This is an Xbox ad campaign as part of brand “reset“",
         "summary": "微软确认终止“This is an Xbox”广告宣传活动，该活动因淡化Xbox硬件引发争议，新任游戏业务负责人Asha Sharma决定进行品牌重塑，并承诺回归游戏主机传统。同时，微软透露了下一代Xbox主机“Project Helix”的初步信息，该主机设计用于玩Xbox主机和PC游戏，提供高性能和以玩家为先的体验。",
         "source": "腾讯文档策展",
         "sourceUrl": "https://www.eurogamer.net/microsoft-confirms-new-xbox-boss-scrapped-controversial-ad-campaign",
@@ -14902,7 +14867,7 @@ const newsData = [
     },
     {
         "id": 1376,
-        "title": "Krafton shutters free-to-play PUBG spin-off after two months, in line with policy of using Early Access to \"quickly validate a game’s potential\"",
+        "title": "Krafton shutters free-to-play PUBG spin-off after two months, in line with policy of using Early Access to “quickly validate a game’s potential“",
         "summary": "Krafton关闭了仅运营两个月的免费PC游戏《PUBG Blindspot》，尽管《PUBG》系列为公司带来了创纪录的营收，但该决定符合其通过抢先体验快速验证游戏潜力的策略。游戏初期玩家峰值达3,251人，但近期降至几百人，团队认为无法持续提供预期体验。公司将继续开发其他项目，并扩展PUBG IP生态系统。",
         "source": "腾讯文档策展",
         "sourceUrl": "https://www.gamesindustry.biz/krafton-shutters-free-to-play-pubg-spin-off-after-two-months-in-line-with-policy-of-using-early-access-to-quickly-validate-a-games-potential",
@@ -14975,7 +14940,7 @@ const newsData = [
     {
         "id": 414,
         "title": "PS5, PS5 Pro’s Price Hikes Might Lead to PS6 Costing 50 Percent More, Say Analysts",
-        "summary": "索尼近期宣布上调PS5、PS5 Pro及PlayStation Portal的售价，Kantan Games咨询公司CEO Serkan Toto预测PS6至少有一个型号定价999美元，纽约大学游戏专业教授兼行业研究员van Dreunen补充称\"1000美元主机将成为常态\"，游戏消费将转向奢侈品定位，下一代主机起售价或比现款高50%。",
+        "summary": "索尼近期宣布上调PS5、PS5 Pro及PlayStation Portal的售价，Kantan Games咨询公司CEO Serkan Toto预测PS6至少有一个型号定价999美元，纽约大学游戏专业教授兼行业研究员van Dreunen补充称“1000美元主机将成为常态“，游戏消费将转向奢侈品定位，下一代主机起售价或比现款高50%。",
         "source": "腾讯文档策展",
         "sourceUrl": "https://gamingbolt.com/ps5-ps5-pros-price-hikes-might-lead-to-ps6-costing-50-percent-m...",
         "sourceUrls": [
@@ -14999,7 +14964,7 @@ const newsData = [
     {
         "id": 421,
         "title": "Nintendo eShop新增Switch 2专属内容筛选功能",
-        "summary": "任天堂在Nintendo eShop中新增\"Switch 2内容过滤器\"，用户可一键筛选Switch 2兼容及专属游戏，优化购买决策路径，为Switch 2内容生态建设铺路。",
+        "summary": "任天堂在Nintendo eShop中新增“Switch 2内容过滤器“，用户可一键筛选Switch 2兼容及专属游戏，优化购买决策路径，为Switch 2内容生态建设铺路。",
         "source": "MyNintendoNews",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -15017,8 +14982,8 @@ const newsData = [
     },
     {
         "id": 139,
-        "title": "Krafton关闭免费PUBG衍生作Blindspot：仅运营2个月，验证'快速试错'策略",
-        "summary": "Krafton宣布关闭仅运营两个月的免费PC游戏《PUBG Blindspot》。尽管PUBG系列为公司带来创纪录营收，但该衍生作初期玩家峰值仅3251人，近期降至几百人。Krafton表示此决定符合其通过抢先体验'快速验证游戏潜力'的策略，团队认为无法持续提供预期体验。公司将继续开发其他项目并扩展PUBG IP生态。",
+        "title": "Krafton关闭免费PUBG衍生作Blindspot：仅运营2个月，验证‘快速试错‘策略",
+        "summary": "Krafton宣布关闭仅运营两个月的免费PC游戏《PUBG Blindspot》。尽管PUBG系列为公司带来创纪录营收，但该衍生作初期玩家峰值仅3251人，近期降至几百人。Krafton表示此决定符合其通过抢先体验‘快速验证游戏潜力‘的策略，团队认为无法持续提供预期体验。公司将继续开发其他项目并扩展PUBG IP生态。",
         "source": "GamesIndustry",
         "sourceUrl": "https://www.gamesindustry.biz/krafton-shutters-free-to-play-pubg-spin-off-after-two-months",
         "sourceUrls": [
@@ -15049,8 +15014,8 @@ const newsData = [
     },
     {
         "id": 137,
-        "title": "Xbox品牌重塑：新CEO叫停争议'This is an Xbox'广告，透露下一代主机Project Helix",
-        "summary": "微软确认新任Xbox游戏业务负责人Asha Sharma主导了一次品牌'重塑'(reset)——叫停此前因淡化Xbox硬件引发争议的'This is an Xbox'广告宣传活动。Sharma表示该广告'感觉不像Xbox'，承诺回归游戏主机传统。同时微软透露了下一代Xbox主机'Project Helix'的初步信息，定位为高性能、以玩家为先的PC+主机融合体验。",
+        "title": "Xbox品牌重塑：新CEO叫停争议‘This is an Xbox‘广告，透露下一代主机Project Helix",
+        "summary": "微软确认新任Xbox游戏业务负责人Asha Sharma主导了一次品牌‘重塑‘(reset)——叫停此前因淡化Xbox硬件引发争议的‘This is an Xbox‘广告宣传活动。Sharma表示该广告‘感觉不像Xbox‘，承诺回归游戏主机传统。同时微软透露了下一代Xbox主机‘Project Helix‘的初步信息，定位为高性能、以玩家为先的PC+主机融合体验。",
         "source": "EuroGamer",
         "sourceUrl": "https://www.eurogamer.net/microsoft-confirms-new-xbox-boss-scrapped-controversial-ad-campaign",
         "sourceUrls": [
@@ -15085,7 +15050,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "Xbox品牌重塑是Asha Sharma上任后最明确的战略信号——从'万物皆Xbox'回归硬件主机传统。叫停争议广告说明微软内部已认识到过度多平台策略伤害了Xbox品牌认知。Project Helix定位PC+主机融合，暗示下一代Xbox可能模糊主机与PC的边界。对比索尼PS6走高成本路线，微软可能以差异化定位抢占中端市场。",
+        "analysis": "Xbox品牌重塑是Asha Sharma上任后最明确的战略信号——从‘万物皆Xbox‘回归硬件主机传统。叫停争议广告说明微软内部已认识到过度多平台策略伤害了Xbox品牌认知。Project Helix定位PC+主机融合，暗示下一代Xbox可能模糊主机与PC的边界。对比索尼PS6走高成本路线，微软可能以差异化定位抢占中端市场。",
         "relatedNewsIds": [
             109,
             99,
@@ -15120,8 +15085,8 @@ const newsData = [
     },
     {
         "id": 128,
-        "title": "微软XGP新层级'Triton'曝光：仅含第一方游戏，订阅模式或迎重大调整",
-        "summary": "据泄露信息，微软正在测试Xbox Game Pass新层级'Triton'，该层级仅包含微软第一方工作室游戏，价格可能低于当前标准版。此举暗示微软可能重新调整订阅服务的分层策略——当前Game Pass因包含大量第三方游戏而成本高企。Triton层级若推出，将为预算有限但青睐微软独占游戏的玩家提供更低价入口。",
+        "title": "微软XGP新层级‘Triton‘曝光：仅含第一方游戏，订阅模式或迎重大调整",
+        "summary": "据泄露信息，微软正在测试Xbox Game Pass新层级‘Triton‘，该层级仅包含微软第一方工作室游戏，价格可能低于当前标准版。此举暗示微软可能重新调整订阅服务的分层策略——当前Game Pass因包含大量第三方游戏而成本高企。Triton层级若推出，将为预算有限但青睐微软独占游戏的玩家提供更低价入口。",
         "source": "腾讯文档",
         "sourceUrl": "https://docs.qq.com/sheet/LMLdoimBsILX",
         "category": "platform",
@@ -15137,7 +15102,7 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "XGP新层级Triton暗示微软对Game Pass成本结构的反思：第三方游戏授权费过高导致服务整体亏损。仅含第一方的低价层级是对Netflix式'全包模式'的修正。对比索尼PS Plus三层结构，微软也在向更灵活的订阅分层靠拢。",
+        "analysis": "XGP新层级Triton暗示微软对Game Pass成本结构的反思：第三方游戏授权费过高导致服务整体亏损。仅含第一方的低价层级是对Netflix式‘全包模式‘的修正。对比索尼PS Plus三层结构，微软也在向更灵活的订阅分层靠拢。",
         "relatedNewsIds": [
             120,
             109
@@ -15194,7 +15159,7 @@ const newsData = [
     {
         "id": 408,
         "title": "腾讯《王者荣耀世界》PC端定档4月10日，3月30日开放昵称抢注",
-        "summary": "腾讯《王者荣耀世界》PC版官方启动器定档4月10日上线，移动端将先以\"云游戏\"方式运营；3月30日10时开放昵称抢注；鸿蒙端技术测试招募同步启动。",
+        "summary": "腾讯《王者荣耀世界》PC版官方启动器定档4月10日上线，移动端将先以“云游戏“方式运营；3月30日10时开放昵称抢注；鸿蒙端技术测试招募同步启动。",
         "source": "IT之家",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -15321,8 +15286,8 @@ const newsData = [
     },
     {
         "id": 409,
-        "title": "索尼宣布PS5/PS5 Pro/PlayStation Portal涨价，\"全球经济压力\"致成本难以承受",
-        "summary": "索尼宣布多个地区PS5标准版、PS5 Pro及PlayStation Portal价格上调（涨幅约100美元/100欧元不等），官方声明归因于\"全球经济持续压力\"。此举引发市场广泛关注，分析师同时指出Xbox Series和Switch 2可能跟进涨价。",
+        "title": "索尼宣布PS5/PS5 Pro/PlayStation Portal涨价，“全球经济压力“致成本难以承受",
+        "summary": "索尼宣布多个地区PS5标准版、PS5 Pro及PlayStation Portal价格上调（涨幅约100美元/100欧元不等），官方声明归因于“全球经济持续压力“。此举引发市场广泛关注，分析师同时指出Xbox Series和Switch 2可能跟进涨价。",
         "source": "IGN / VGC / GamingBolt",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -15334,25 +15299,6 @@ const newsData = [
             "平台发行"
         ],
         "sentiment": "negative",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 410,
-        "title": "PS6物料成本约760美元，售价或维持699美元靠补贴",
-        "summary": "据业内传闻，索尼PS6预估物料成本（BOM）约760美元，若以699美元定价则需每台补贴约60美元。结合PS5当前涨价动作，分析认为索尼整体利润结构正承受压力。",
-        "source": "GamingBolt",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-03-28",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
         "tdocMarking": "tdoc-verified",
         "analysis": "",
         "relatedNewsIds": []
@@ -15420,7 +15366,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "Newzoo这份报告的核心结论'PC将在2028年超越主机收入'是一个历史性拐点信号。PC增长CAGR 6.6% vs 主机4.4%的差距将随时间加速扩大。驱动因素包括：1)独立游戏爆款频出（杀戮尖塔2等）抬高了$30以下区间贡献；2)Game Pass等订阅服务蚕食主机买断收入；3)东亚市场（中日韩）天然倾向PC。$30-$50成为甜蜜点意味着AA级产品的商业空间正在扩大，这对中等规模开发商是重大利好。",
+        "analysis": "Newzoo这份报告的核心结论‘PC将在2028年超越主机收入‘是一个历史性拐点信号。PC增长CAGR 6.6% vs 主机4.4%的差距将随时间加速扩大。驱动因素包括：1)独立游戏爆款频出（杀戮尖塔2等）抬高了$30以下区间贡献；2)Game Pass等订阅服务蚕食主机买断收入；3)东亚市场（中日韩）天然倾向PC。$30-$50成为甜蜜点意味着AA级产品的商业空间正在扩大，这对中等规模开发商是重大利好。",
         "relatedNewsIds": [
             66,
             108
@@ -15448,7 +15394,7 @@ const newsData = [
     {
         "id": 1370,
         "title": "任天堂2026年发行计划遭大规模提前泄露，营销策略受冲击",
-        "summary": "知名爆料人Nate the Hate（VGC确认）披露任天堂2026年IP计划：夏季推《星际火狐》新作，下半年推《塞尔达传说：时之笛》重制版（塞尔达系列40周年），3D马力欧新作延至2027年。前任天堂营销高管表示公司\"绝对震怒\"——任天堂高度依赖\"惊喜感\"的营销模式受到严重冲击，且\"似乎找不到解决办法\"。",
+        "summary": "知名爆料人Nate the Hate（VGC确认）披露任天堂2026年IP计划：夏季推《星际火狐》新作，下半年推《塞尔达传说：时之笛》重制版（塞尔达系列40周年），3D马力欧新作延至2027年。前任天堂营销高管表示公司“绝对震怒“——任天堂高度依赖“惊喜感“的营销模式受到严重冲击，且“似乎找不到解决办法“。",
         "source": "腾讯文档策展",
         "sourceUrl": "https://www.ithome.com/0/933/517.htm; https://www.ithome.com/0/933/807.htm) / VGC",
         "sourceUrls": [
@@ -15495,7 +15441,7 @@ const newsData = [
     },
     {
         "id": 405,
-        "title": "微软Project Helix解析：以PC为核心，消除独立开发者主机移植\"隐性税收\"",
+        "title": "微软Project Helix解析：以PC为核心，消除独立开发者主机移植“隐性税收“",
         "summary": "GamesIndustry.biz深度评论文章分析微软Project Helix战略意义：通过将Xbox生态迁移至PC优先架构，抹平独立开发者登陆主机平台的额外移植成本，有望让小型开发团队与大型工作室在同一赛道公平竞争。这一策略将深刻影响Xbox独立游戏生态格局。",
         "source": "GamesIndustry.biz",
         "sourceUrl": "#",
@@ -15515,7 +15461,7 @@ const newsData = [
     {
         "id": 121,
         "title": "索尼宣布PS5全系全球涨价：4月2日起生效，美区标准版涨$100至$649.99",
-        "summary": "索尼互动娱乐于3月27日正式宣布，从2026年4月2日起对PS5全系产品实施全球涨价。美区：PS5标准版从$549.99涨至$649.99（+$100），数字版从$499.99涨至$599.99（+$100），PS5 Pro从$749.99涨至$899.99（+$150），PS Portal从$199.99涨至$249.99（+$50）；英区：标准版涨至£569.99（+£90），Pro涨至£789.99（+£90）；欧区：标准版涨至€649.99（+€100），Pro涨至€899.99（+€100）；日区：标准版涨至¥97,980（+¥18,000），Pro涨至¥137,980（+¥18,000）。SIE副总裁Isabelle Tomatis将涨价归因于'全球经济环境的持续压力'，行业分析指向AI数据中心建设热潮引发的RAM芯片短缺推高了硬件成本。这是PS5生命周期内第三次涨价。",
+        "summary": "索尼互动娱乐于3月27日正式宣布，从2026年4月2日起对PS5全系产品实施全球涨价。美区：PS5标准版从$549.99涨至$649.99（+$100），数字版从$499.99涨至$599.99（+$100），PS5 Pro从$749.99涨至$899.99（+$150），PS Portal从$199.99涨至$249.99（+$50）；英区：标准版涨至£569.99（+£90），Pro涨至£789.99（+£90）；欧区：标准版涨至€649.99（+€100），Pro涨至€899.99（+€100）；日区：标准版涨至¥97,980（+¥18,000），Pro涨至¥137,980（+¥18,000）。SIE副总裁Isabelle Tomatis将涨价归因于‘全球经济环境的持续压力‘，行业分析指向AI数据中心建设热潮引发的RAM芯片短缺推高了硬件成本。这是PS5生命周期内第三次涨价。",
         "source": "GamesIndustry",
         "sourceUrl": "https://www.gamesindustry.biz/sony-announces-global-price-rises-for-ps5-consoles-from-april-2-2026",
         "sourceUrls": [
@@ -15547,7 +15493,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "PS5生命周期内第三次涨价是史无前例的，直接原因是AI数据中心对HBM/DDR5内存的疯狂需求推高了DRAM价格。PS5 Pro美区售价逼近$900意味着主机正在失去相对PC的价格优势——$900已可以组装一台不错的游戏PC。索尼CFO此前暗示'至少到2026年底内存供应有保障'，但最终仍涨价，说明成本压力已超出预期。任天堂Switch 2若跟进涨价将重塑整个主机市场定价格局。这可能加速玩家向PC和云游戏迁移的长期趋势。",
+        "analysis": "PS5生命周期内第三次涨价是史无前例的，直接原因是AI数据中心对HBM/DDR5内存的疯狂需求推高了DRAM价格。PS5 Pro美区售价逼近$900意味着主机正在失去相对PC的价格优势——$900已可以组装一台不错的游戏PC。索尼CFO此前暗示‘至少到2026年底内存供应有保障‘，但最终仍涨价，说明成本压力已超出预期。任天堂Switch 2若跟进涨价将重塑整个主机市场定价格局。这可能加速玩家向PC和云游戏迁移的长期趋势。",
         "relatedNewsIds": [
             108,
             99,
@@ -15557,7 +15503,7 @@ const newsData = [
     {
         "id": 116,
         "title": "德国游戏市场2025年增长4%至94亿欧元：Switch 2推动硬件销售增长26%，软件销售下滑",
-        "summary": "据德国游戏产业协会Game发布的年度报告（基于YouGov和Sensor Tower数据），2025年德国游戏市场总收入增长4%至94亿欧元。硬件是增长主引擎：硬件总收入增长12%至34亿欧元，其中游戏主机收入增长26%至10亿欧元（主要受Switch 2发售推动），游戏PC销售增长7%至6.51亿欧元（ROG Xbox Ally推动），PC配件增长13%至14亿欧元。但软件端呈下滑趋势：整体游戏销售微跌1%至50亿欧元，电脑和视频游戏子市场跌幅显著达13%至8.07亿欧元。在线游戏服务收入增长7%首次突破10亿欧元（较2019年翻倍），反映玩家消费习惯从'购买新游戏'向'服务型消费'转变。",
+        "summary": "据德国游戏产业协会Game发布的年度报告（基于YouGov和Sensor Tower数据），2025年德国游戏市场总收入增长4%至94亿欧元。硬件是增长主引擎：硬件总收入增长12%至34亿欧元，其中游戏主机收入增长26%至10亿欧元（主要受Switch 2发售推动），游戏PC销售增长7%至6.51亿欧元（ROG Xbox Ally推动），PC配件增长13%至14亿欧元。但软件端呈下滑趋势：整体游戏销售微跌1%至50亿欧元，电脑和视频游戏子市场跌幅显著达13%至8.07亿欧元。在线游戏服务收入增长7%首次突破10亿欧元（较2019年翻倍），反映玩家消费习惯从‘购买新游戏‘向‘服务型消费‘转变。",
         "source": "GamesIndustry",
         "sourceUrl": "https://www.gamesindustry.biz/german-games-market-rose-4-in-2025-to-94bn-driven-by-hardware-sales",
         "sourceUrls": [
@@ -15636,7 +15582,7 @@ const newsData = [
     },
     {
         "id": 1355,
-        "title": "PlayStation商店被证实存在\"动态定价\"机制，同一游戏不同用户折扣相差近一倍",
+        "title": "PlayStation商店被证实存在“动态定价“机制，同一游戏不同用户折扣相差近一倍",
         "summary": "外媒证实PS商店的动态定价机制真实存在——《剑星》（星刃）折扣区间介于43%到70%，差异与账户注册时长及近期活跃度相关，目前仅限第一方游戏，索尼尚未公开回应。该机制对平台资源分配透明度及开发商利益构成潜在影响。",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
@@ -15675,7 +15621,7 @@ const newsData = [
     {
         "id": 1358,
         "title": "Epic宣布裁员超1000人，《堡垒之夜》活跃度下滑成主因",
-        "summary": "Epic Games大规模裁员，CEO坦承与《Fortnite》玩家活跃度下滑直接相关。裁员后CEO以\"向社会输送人才\"为由辩解，遭业界群嘲。GDC报告显示，近一年被裁游戏从业者中48%仍未找到新工作，美国约1/3从业者在过去两年受到裁员影响。",
+        "summary": "Epic Games大规模裁员，CEO坦承与《Fortnite》玩家活跃度下滑直接相关。裁员后CEO以“向社会输送人才“为由辩解，遭业界群嘲。GDC报告显示，近一年被裁游戏从业者中48%仍未找到新工作，美国约1/3从业者在过去两年受到裁员影响。",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -15789,7 +15735,7 @@ const newsData = [
     {
         "id": 1364,
         "title": "Annapurna Interactive公布公路旅行冒险游戏《Forever Ago》",
-        "summary": "德国独立工作室Third Shift首作，由《杀戮尖塔2》原声作曲家参与创作，定位\"有温度的公路旅行冒险\"，将登陆Xbox、PlayStation、Switch 2和PC。",
+        "summary": "德国独立工作室Third Shift首作，由《杀戮尖塔2》原声作曲家参与创作，定位“有温度的公路旅行冒险“，将登陆Xbox、PlayStation、Switch 2和PC。",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -15826,7 +15772,7 @@ const newsData = [
     },
     {
         "id": 1366,
-        "title": "Meta Quest usage reaches \"all-time high\" in 2025 despite studio closures and layoffs",
+        "title": "Meta Quest usage reaches “all-time high“ in 2025 despite studio closures and layoffs",
         "summary": "Meta Quest在2025年达到历史最高使用量，超过100款游戏创造了超过100万美元的总收入。应用内购买收入增长超过10%，订阅收入也实现了两位数增长。Meta Horizon+订阅服务拥有超过100万订阅用户，并向开发者支付了近2000万美元。Meta继续大力投资VR领域，尽管面临竞争，仍是全球最大的VR投资者。",
         "source": "腾讯文档策展",
         "sourceUrl": "https://www.gamesindustry.biz/meta-quest-usage-reaches-all-time-high-in-2025-despite-studi...",
@@ -16003,7 +15949,7 @@ const newsData = [
     {
         "id": 120,
         "title": "Xbox Partner Preview 3月26日发布会：近20款游戏公布，Hades 2/鸣潮登陆Xbox",
-        "summary": "微软于3月26日举办了30分钟的Xbox Partner Preview发布会，公布了近20款第三方游戏消息。重点公布包括：①Hades 2将于4月14日登陆Xbox/Game Pass；②如龙工作室Ryu Ga Gotoku的全新IP《Stranger Than Heaven》横跨五个时代和城市，5月6日有专场展示；③STALKER 2首个DLC'Cost of Hope'夏季推出；④鸣潮（Wuthering Waves）7月登陆Xbox/Game Pass；⑤Super Meat Boy 3D于3月31日发售；⑥The Expanse: Osiris Reborn（Owlcat）4月22日开启公测；⑦全新IP Artificial Detective（机器侦探）2027年发售。发布会还公布了Grave Seasons、Alien Deathstorm、Hunter: The Reckoning等多款新作。",
+        "summary": "微软于3月26日举办了30分钟的Xbox Partner Preview发布会，公布了近20款第三方游戏消息。重点公布包括：①Hades 2将于4月14日登陆Xbox/Game Pass；②如龙工作室Ryu Ga Gotoku的全新IP《Stranger Than Heaven》横跨五个时代和城市，5月6日有专场展示；③STALKER 2首个DLC‘Cost of Hope‘夏季推出；④鸣潮（Wuthering Waves）7月登陆Xbox/Game Pass；⑤Super Meat Boy 3D于3月31日发售；⑥The Expanse: Osiris Reborn（Owlcat）4月22日开启公测；⑦全新IP Artificial Detective（机器侦探）2027年发售。发布会还公布了Grave Seasons、Alien Deathstorm、Hunter: The Reckoning等多款新作。",
         "source": "EuroGamer",
         "sourceUrl": "https://www.eurogamer.net/xbox-partner-preview-showcase-march-2026-heres-everything-announced",
         "sourceUrls": [
@@ -16039,7 +15985,7 @@ const newsData = [
         ],
         "sentiment": "positive",
         "tdocMarking": "none",
-        "analysis": "Xbox Partner Preview展示了微软'平台即服务'战略的持续深化：Hades 2和鸣潮首日进Game Pass进一步强化了订阅服务的吸引力。如龙工作室全新IP Stranger Than Heaven横跨五个时代的设计野心值得关注，这是RGG在如龙系列外的首次独立尝试。鸣潮7月登陆Xbox说明中国F2P动作RPG正加速进入主机生态。",
+        "analysis": "Xbox Partner Preview展示了微软‘平台即服务‘战略的持续深化：Hades 2和鸣潮首日进Game Pass进一步强化了订阅服务的吸引力。如龙工作室全新IP Stranger Than Heaven横跨五个时代的设计野心值得关注，这是RGG在如龙系列外的首次独立尝试。鸣潮7月登陆Xbox说明中国F2P动作RPG正加速进入主机生态。",
         "relatedNewsIds": [
             109
         ]
@@ -16103,7 +16049,7 @@ const newsData = [
     {
         "id": 95,
         "title": "Capcom明确反对AI美术用于游戏制作，与CDPR形成行业反AI联盟",
-        "summary": "据MCP腾讯文档Tier 0数据，Capcom高层在近期采访中明确表态反对使用AI生成美术资产用于游戏制作，强调Capcom将坚持人工创作的品质标准。这一立场与CD Projekt RED此前公开的反AI美术声明形成呼应，两家以高品质3A游戏著称的开发商正形成行业性的\"反AI美术联盟\"。此声明发布时恰逢《红色沙漠》AI美术争议引发行业震动，Capcom的表态被视为对玩家关切的积极回应，也为行业在AI使用边界问题上树立了标杆。",
+        "summary": "据MCP腾讯文档Tier 0数据，Capcom高层在近期采访中明确表态反对使用AI生成美术资产用于游戏制作，强调Capcom将坚持人工创作的品质标准。这一立场与CD Projekt RED此前公开的反AI美术声明形成呼应，两家以高品质3A游戏著称的开发商正形成行业性的“反AI美术联盟“。此声明发布时恰逢《红色沙漠》AI美术争议引发行业震动，Capcom的表态被视为对玩家关切的积极回应，也为行业在AI使用边界问题上树立了标杆。",
         "source": "VGC",
         "sourceUrl": "https://www.videogameschronicle.com/",
         "sourceUrls": [
@@ -16346,7 +16292,7 @@ const newsData = [
     {
         "id": 1354,
         "title": "Square Enix获评2025年Metacritic排名第一发行商",
-        "summary": "据VGC报道，Square Enix凭借9款\"优质游戏\"荣登2025年Metacritic发行商综合评分榜首，系首次登顶。",
+        "summary": "据VGC报道，Square Enix凭借9款“优质游戏“荣登2025年Metacritic发行商综合评分榜首，系首次登顶。",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -16365,7 +16311,7 @@ const newsData = [
     {
         "id": 1356,
         "title": "Valve编剧Erik Wolpaw透露Valve在探索AI工具，但暂未用于创意写作",
-        "summary": "《半条命2》《传送门》编剧Erik Wolpaw表示，Valve部分团队成员正在\"摸索\"AI工具，但他本人不担忧AI取代创意写作，目前Valve整体对AI持观望态度。",
+        "summary": "《半条命2》《传送门》编剧Erik Wolpaw表示，Valve部分团队成员正在“摸索“AI工具，但他本人不担忧AI取代创意写作，目前Valve整体对AI持观望态度。",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -16403,7 +16349,7 @@ const newsData = [
     {
         "id": 117,
         "title": "分析师估算Bungie《Marathon》销量约120万份，以索尼第一方大作标准看表现不及预期",
-        "summary": "据Alinea Analytics估算数据，Bungie开发的提取射击游戏《Marathon》自3月初发售以来累计销量约120万份，其中约70%（约84万份）来自Steam平台，PS5和Xbox占比相对较低。以索尼第一方大作的投入标准来看，这一表现可能未达预期——业内估算索尼和Bungie在该项目上的累计投入约2亿美元。Bungie随后回应外界关于项目前景的质疑，声明'我们做好了长期运营的准备'，暗示不会轻易放弃该项目。Marathon是Bungie在索尼收购后首个从零开始的全新项目，其表现将直接影响外界对索尼750亿美元Bungie收购案ROI的评估。",
+        "summary": "据Alinea Analytics估算数据，Bungie开发的提取射击游戏《Marathon》自3月初发售以来累计销量约120万份，其中约70%（约84万份）来自Steam平台，PS5和Xbox占比相对较低。以索尼第一方大作的投入标准来看，这一表现可能未达预期——业内估算索尼和Bungie在该项目上的累计投入约2亿美元。Bungie随后回应外界关于项目前景的质疑，声明‘我们做好了长期运营的准备‘，暗示不会轻易放弃该项目。Marathon是Bungie在索尼收购后首个从零开始的全新项目，其表现将直接影响外界对索尼750亿美元Bungie收购案ROI的评估。",
         "source": "GamesIndustry",
         "sourceUrl": "https://thisweekinvideogames.com/news/marathon-has-sold-1-2-million-copies-per-alinea-estimates/",
         "sourceUrls": [
@@ -16434,7 +16380,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "Marathon的120万份销量对比索尼+Bungie约2亿美元的投入来看ROI堪忧。70%销量来自Steam而非PS5更值得关注——作为索尼第一方大作，主平台占比不到30%说明PS5独占引流效果有限。对比同类型《Arc Raiders》（400万+）和《The Finals》（数百万DAU），Marathon的市场表现确实处于下风。Bungie声称'长期运营'但参与度持续下滑的趋势需要重大内容更新来扭转。这对索尼750亿美元Bungie收购案的叙事构成压力。",
+        "analysis": "Marathon的120万份销量对比索尼+Bungie约2亿美元的投入来看ROI堪忧。70%销量来自Steam而非PS5更值得关注——作为索尼第一方大作，主平台占比不到30%说明PS5独占引流效果有限。对比同类型《Arc Raiders》（400万+）和《The Finals》（数百万DAU），Marathon的市场表现确实处于下风。Bungie声称‘长期运营‘但参与度持续下滑的趋势需要重大内容更新来扭转。这对索尼750亿美元Bungie收购案的叙事构成压力。",
         "relatedNewsIds": [
             99,
             106
@@ -16511,7 +16457,7 @@ const newsData = [
     {
         "id": 107,
         "title": "任天堂削减Switch 2本季度产量33%：从600万台降至400万台，因美国假期销量未达预期",
-        "summary": "据GodisaGeek等多家媒体报道，任天堂计划将2026年第一季度Switch 2产量从原定600万台削减至400万台，降幅达33%，较低产出水平预计持续至4月。主要原因是美国等多个地区假期销售未达预期——Switch 2在美国首个假期季度售出约230万台，较初代Switch同期的282万台下降约18%。日本则是唯一出现严重缺货的市场（售出243万台 vs 初代177万台）。任天堂内部正讨论6月份大量铺货的策略是否'透支了后期需求'。尽管如此，Switch 2截至2025年12月底已累计售出1737万台，远超初代同期，仍保持财年1900万台预期目标。任天堂社长表示目前没有因全球内存危机涨价的计划。",
+        "summary": "据GodisaGeek等多家媒体报道，任天堂计划将2026年第一季度Switch 2产量从原定600万台削减至400万台，降幅达33%，较低产出水平预计持续至4月。主要原因是美国等多个地区假期销售未达预期——Switch 2在美国首个假期季度售出约230万台，较初代Switch同期的282万台下降约18%。日本则是唯一出现严重缺货的市场（售出243万台 vs 初代177万台）。任天堂内部正讨论6月份大量铺货的策略是否‘透支了后期需求‘。尽管如此，Switch 2截至2025年12月底已累计售出1737万台，远超初代同期，仍保持财年1900万台预期目标。任天堂社长表示目前没有因全球内存危机涨价的计划。",
         "source": "GodisaGeek",
         "sourceUrl": "https://godisageek.com/2026/03/nintendo-cuts-switch-2-production-holiday-sales/",
         "sourceUrls": [
@@ -16537,7 +16483,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "产量削减33%是一个值得警惕的信号，说明Switch 2在美国市场的首个假期表现不及预期。与初代Switch同期相比下降18%，可能反映出：1)定价策略偏高（美区$449.99 vs 初代$299.99）；2)首发阵容吸引力不足；3)内存涨价导致的供应链压力。但任天堂讨论'6月铺货透支后期需求'的说法暗示这可能是主动库存管理而非需求崩塌。累计1737万台的成绩仍远超初代同期，财年目标仍在轨道上。",
+        "analysis": "产量削减33%是一个值得警惕的信号，说明Switch 2在美国市场的首个假期表现不及预期。与初代Switch同期相比下降18%，可能反映出：1)定价策略偏高（美区$449.99 vs 初代$299.99）；2)首发阵容吸引力不足；3)内存涨价导致的供应链压力。但任天堂讨论‘6月铺货透支后期需求‘的说法暗示这可能是主动库存管理而非需求崩塌。累计1737万台的成绩仍远超初代同期，财年目标仍在轨道上。",
         "relatedNewsIds": [
             108,
             87,
@@ -16618,7 +16564,7 @@ const newsData = [
     },
     {
         "id": 398,
-        "title": "TIGA: UK games dev sector faces \"most severe downturn on record\"",
+        "title": "TIGA: UK games dev sector faces “most severe downturn on record“",
         "summary": "英国游戏开发行业正经历“有记录以来最严重的衰退”，就业率同比下降4.5%。2024年5月至2025年9月期间，491家公司削减了3,655个全职岗位，而513家增长中的工作室新增2,751个职位。总从业人数从28,516人降至27,347人，自由职业者人数增至4,245人。新工作室成立数量连续第三年下降超30%，创15年新低。TIGA呼吁政府提高视频游戏支出信贷率以提振行业。",
         "source": "腾讯文档策展",
         "sourceUrl": "https://www.gamesindustry.biz/tiga-uk-games-dev-sector-faces-most-severe-downturn-on-record",
@@ -16643,7 +16589,7 @@ const newsData = [
     {
         "id": 113,
         "title": "GameStop公布FY2025 Q4及全年财报：收入持续下滑，继续押注比特币和数字资产战略",
-        "summary": "GameStop于3月24日发布截至2026年1月31日的2025财年第四季度及全年财务业绩。虽然具体数字因SEC页面限制未获完整抓取，但综合多方报道，GameStop线下零售业务收入继续同比下滑，实体游戏销售持续萎缩。公司继续执行CEO Ryan Cohen主导的'比特币储备'战略，将部分公司现金投入加密货币资产。这一非传统策略在华尔街引发分歧，看多者认为是对冲法币贬值的远见之举，看空者质疑一家游戏零售商大举投资比特币的合理性。GameStop的转型方向从'电商化游戏零售'转向'数字资产+收藏品平台'。",
+        "summary": "GameStop于3月24日发布截至2026年1月31日的2025财年第四季度及全年财务业绩。虽然具体数字因SEC页面限制未获完整抓取，但综合多方报道，GameStop线下零售业务收入继续同比下滑，实体游戏销售持续萎缩。公司继续执行CEO Ryan Cohen主导的‘比特币储备‘战略，将部分公司现金投入加密货币资产。这一非传统策略在华尔街引发分歧，看多者认为是对冲法币贬值的远见之举，看空者质疑一家游戏零售商大举投资比特币的合理性。GameStop的转型方向从‘电商化游戏零售‘转向‘数字资产+收藏品平台‘。",
         "source": "GameStop IR",
         "sourceUrl": "https://investor.gamestop.com/news-releases/news-details/2026/GameStop-Reports-Fourth-Quarter-and-Fiscal-Year-2025-Results/default.aspx",
         "sourceUrls": [
@@ -16669,7 +16615,7 @@ const newsData = [
     {
         "id": 110,
         "title": "Epic Games裁员超1000人削减5亿美元成本：Fortnite参与度2025年起持续下滑",
-        "summary": "Epic Games CEO Tim Sweeney于2026年3月24日在公司官方博客发布备忘录，宣布裁员超过1000名员工，并计划通过缩减合同工、营销支出和冻结招聘等措施实现超5亿美元成本削减。Sweeney指出裁员的核心原因是Fortnite用户参与度自2025年起持续下滑，导致公司'支出显著高于收入'。此前Epic刚于上周宣布提高V-Bucks虚拟货币价格以应对运营成本上升。被裁员工将获得4个月遣散费（工龄长者更多），美国员工还将获得6个月医疗保健续保。Sweeney强调此次裁员并非因AI取代了开发人员，而是收入端的结构性下滑。这是Epic继2023年裁员830人后的第二次大规模裁员，也是2026年游戏行业迄今最大规模的单次裁员事件。",
+        "summary": "Epic Games CEO Tim Sweeney于2026年3月24日在公司官方博客发布备忘录，宣布裁员超过1000名员工，并计划通过缩减合同工、营销支出和冻结招聘等措施实现超5亿美元成本削减。Sweeney指出裁员的核心原因是Fortnite用户参与度自2025年起持续下滑，导致公司‘支出显著高于收入‘。此前Epic刚于上周宣布提高V-Bucks虚拟货币价格以应对运营成本上升。被裁员工将获得4个月遣散费（工龄长者更多），美国员工还将获得6个月医疗保健续保。Sweeney强调此次裁员并非因AI取代了开发人员，而是收入端的结构性下滑。这是Epic继2023年裁员830人后的第二次大规模裁员，也是2026年游戏行业迄今最大规模的单次裁员事件。",
         "source": "GamesIndustry",
         "sourceUrl": "https://techcrunch.com/2026/03/24/epic-games-cuts-1000-jobs-says-fortnite-engagement-is-down/",
         "sourceUrls": [
@@ -16830,25 +16776,6 @@ const newsData = [
         "relatedNewsIds": []
     },
     {
-        "id": 391,
-        "title": "模拟赛车游戏iRacing通过串流形式登陆苹果Vision Pro",
-        "summary": "iRacing将于今年春季以串流方式支持Apple Vision Pro，利用visionOS注视点推流技术实时优化渲染，并支持MR技术同步实体方向盘，探索XR与赛车模拟融合场景",
-        "source": "ithome",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-03-23",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
         "id": 396,
         "title": "Nintendo Switch is more popular among Japanese teens than Disney, Pokémon and Nintendo itself, survey finds",
         "summary": "任天堂Switch在日本青少年中受欢迎程度排名第二，仅次于YouTube，超过了迪士尼和宝可梦等品牌。任天堂品牌整体在日本仍更受欢迎，在20岁以下人群中Switch更受青睐。调查显示明显的代际差异，年轻群体偏好数字娱乐品牌（YouTube、Switch、宝可梦），而年长群体更倾向于传统制造业品牌（三得利、松下、索尼）。",
@@ -16899,7 +16826,7 @@ const newsData = [
     {
         "id": 118,
         "title": "《红色沙漠》AI生成素材争议：Pearl Abyss道歉并启动全面资产审计",
-        "summary": "Pearl Abyss开发的高期待开放世界动作游戏《红色沙漠》（Crimson Desert）发售后被玩家发现游戏中包含AI生成的2D视觉素材，引发广泛争议。3月22日Pearl Abyss在X平台发布声明承认使用了'实验性AI生成技术'创建部分2D视觉道具，原本计划在最终版本中替换但未执行。开发商表示'我们应该明确披露我们对AI的使用'，并宣布启动对所有游戏内资产的'全面审计'，承诺移除所有AI生成的占位内容。值得注意的是，Pearl Abyss发售时未在Steam商店页面使用Valve的生成式AI披露标签。此事件再次引发游戏行业关于AI辅助开发透明度的讨论。",
+        "summary": "Pearl Abyss开发的高期待开放世界动作游戏《红色沙漠》（Crimson Desert）发售后被玩家发现游戏中包含AI生成的2D视觉素材，引发广泛争议。3月22日Pearl Abyss在X平台发布声明承认使用了‘实验性AI生成技术‘创建部分2D视觉道具，原本计划在最终版本中替换但未执行。开发商表示‘我们应该明确披露我们对AI的使用‘，并宣布启动对所有游戏内资产的‘全面审计‘，承诺移除所有AI生成的占位内容。值得注意的是，Pearl Abyss发售时未在Steam商店页面使用Valve的生成式AI披露标签。此事件再次引发游戏行业关于AI辅助开发透明度的讨论。",
         "source": "GameDeveloper",
         "sourceUrl": "http://www.gamedeveloper.com/production/whoops-pearl-abyss-forgot-to-mention-it-used-generative-ai-to-create-crimson-desert",
         "sourceUrls": [
@@ -16934,7 +16861,7 @@ const newsData = [
         ],
         "sentiment": "negative",
         "tdocMarking": "none",
-        "analysis": "红色沙漠的AI素材争议是继育碧《纪元117》和COD BO7之后，又一款3A大作因AI生成内容引发信任危机的案例。关键问题不在于是否使用AI，而在于缺乏透明披露——未使用Steam的AI披露标签直接违反了行业正在形成的规范共识。Pearl Abyss启动'全面资产审计'的代价远高于事先披露，这为所有开发商敲响警钟：AI辅助开发的透明度将成为未来玩家信任的关键维度。"
+        "analysis": "红色沙漠的AI素材争议是继育碧《纪元117》和COD BO7之后，又一款3A大作因AI生成内容引发信任危机的案例。关键问题不在于是否使用AI，而在于缺乏透明披露——未使用Steam的AI披露标签直接违反了行业正在形成的规范共识。Pearl Abyss启动‘全面资产审计‘的代价远高于事先披露，这为所有开发商敲响警钟：AI辅助开发的透明度将成为未来玩家信任的关键维度。"
     },
     {
         "id": 103,
@@ -17046,44 +16973,6 @@ const newsData = [
         "relatedNewsIds": []
     },
     {
-        "id": 387,
-        "title": "索尼持续清理PS Store低质量AI生成游戏",
-        "summary": "索尼主动下架发行商Nostra Games和CGI LAB共100多款AI生成游戏，这些作品画面粗糙、内容同质化；这是索尼明确以平台质量管控为由的大规模内容清理行动，进一步向高品质内容倾斜",
-        "source": "ithome",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-03-22",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 390,
-        "title": "Switch 2欧盟版本将因法规要求支持用户更换电池",
-        "summary": "受欧盟消费者法规约束，任天堂...",
-        "source": "腾讯文档策展",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-03-22",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
         "id": 97,
         "title": "Switch 2欧盟版本将因新法规要求支持用户自行更换电池",
         "summary": "据TechSpot、PC Gamer、Hypebeast等多家媒体报道，Nintendo Switch 2的欧盟销售版本将因欧盟新修订的《电池与废电池法规》（EU 2023/1542）要求，必须支持用户自行更换电池。该法规要求从2027年起所有便携式消费电子产品需设计为用户可更换电池。任天堂选择提前在Switch 2中遵循这一规定，欧盟版Switch 2将配备可拆卸电池仓设计。这一法规合规要求可能影响Switch 2的工业设计、防水性和生产成本，同时也为第三方配件市场带来新机会。",
@@ -17154,7 +17043,7 @@ const newsData = [
     {
         "id": 90,
         "title": "DRAM内存涨价潮加剧：DDR5价格翻倍，游戏PC与显卡成本面临上涨压力",
-        "summary": "据Tom's Hardware和IEEE Spectrum报道，全球DRAM内存价格持续飙升，DDR5内存模组价格已较年初翻倍。AI数据中心对HBM（高带宽内存）的巨大需求挤压了消费级DRAM产能，导致PC游戏硬件面临成本上涨压力。分析师预计NVIDIA和AMD可能在2026年下半年上调游戏显卡价格，游戏PC整机价格预计涨幅10-20%。这一趋势与此前报道的Switch 2涨价压力、Steam Machine供应链困难形成共振，全球游戏硬件生态正面临罕见的系统性成本冲击。",
+        "summary": "据Tom‘s Hardware和IEEE Spectrum报道，全球DRAM内存价格持续飙升，DDR5内存模组价格已较年初翻倍。AI数据中心对HBM（高带宽内存）的巨大需求挤压了消费级DRAM产能，导致PC游戏硬件面临成本上涨压力。分析师预计NVIDIA和AMD可能在2026年下半年上调游戏显卡价格，游戏PC整机价格预计涨幅10-20%。这一趋势与此前报道的Switch 2涨价压力、Steam Machine供应链困难形成共振，全球游戏硬件生态正面临罕见的系统性成本冲击。",
         "source": "VGC",
         "sourceUrl": "https://www.videogameschronicle.com/",
         "sourceUrls": [
@@ -17185,7 +17074,7 @@ const newsData = [
     {
         "id": 1337,
         "title": "索尼确认AI帧生成技术最快2027年登陆PlayStation主机",
-        "summary": "索尼PS5首席架构师Mark Cerny确认，通过与AMD的\"Project Amethyst\"合作研发了FSR Redstone帧生成技术，最快2027年上线PlayStation主机平台",
+        "summary": "索尼PS5首席架构师Mark Cerny确认，通过与AMD的“Project Amethyst“合作研发了FSR Redstone帧生成技术，最快2027年上线PlayStation主机平台",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -17204,7 +17093,7 @@ const newsData = [
     {
         "id": 1340,
         "title": "《红色沙漠》发售危机集中爆发：AI素材、封锁Intel显卡、120GB补丁",
-        "summary": "发售后问题接连暴露：①被玩家发现游戏内壁画含AI生成内容（人体与马匹畸形融合），开发商承认用了\"实验性AI工具\"并忘记替换；②封锁Intel Arc显卡运行；③推送120GB超大补丁；④键鼠操控方案令玩家普遍反映无法接受",
+        "summary": "发售后问题接连暴露：①被玩家发现游戏内壁画含AI生成内容（人体与马匹畸形融合），开发商承认用了“实验性AI工具“并忘记替换；②封锁Intel Arc显卡运行；③推送120GB超大补丁；④键鼠操控方案令玩家普遍反映无法接受",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -17223,7 +17112,7 @@ const newsData = [
     {
         "id": 1341,
         "title": "《红色沙漠》首发销量200万份，但股价暴跌30%、Steam褒贬不一",
-        "summary": "Pearl Abyss《红色沙漠》发售首日全球销量突破200万份，但Steam好评率68%（\"褒贬不一\"），简体中文区为\"多半差评\"；M站均分78，IGN评6分；股价一度下跌30%；玩家主要集中批评操控设计反直觉、画面技术问题等",
+        "summary": "Pearl Abyss《红色沙漠》发售首日全球销量突破200万份，但Steam好评率68%（“褒贬不一“），简体中文区为“多半差评“；M站均分78，IGN评6分；股价一度下跌30%；玩家主要集中批评操控设计反直觉、画面技术问题等",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -17261,31 +17150,12 @@ const newsData = [
     {
         "id": 388,
         "title": "索尼战略转向：放弃PC端启动器，回归主机优先",
-        "summary": "彭博社记者Jason Schreier透露，索尼已将跨平台策略调整为\"回归主机优先\"，大概率放弃推出PlayStation PC端启动器，并搁置多款PS5独占引入Steam的计��；与Steam占PC市场75%份额的竞争格局有关",
+        "summary": "彭博社记者Jason Schreier透露，索尼已将跨平台策略调整为“回归主机优先“，大概率放弃推出PlayStation PC端启动器，并搁置多款PS5独占引入Steam的计��；与Steam占PC市场75%份额的竞争格局有关",
         "source": "ithome",
         "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
         "importance": "low",
-        "featured": true,
-        "date": "2026-03-21",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 389,
-        "title": "索尼确认AI帧生成技术最快2027年登陆PlayStation主机",
-        "summary": "索尼PS5首席架构师Mark Cerny确认，通过与AMD的\"Project Amethyst\"合作研发了FSR Redstone帧生成技术，最快2027年上线PlayStation主机平台",
-        "source": "ithome",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "medium",
         "featured": true,
         "date": "2026-03-21",
         "tags": [
@@ -17299,31 +17169,12 @@ const newsData = [
     {
         "id": 392,
         "title": "CD Projekt Red发布新IP《Hadar》重要开发进展",
-        "summary": "CDPR宣布神秘新IP《Hadar》已完成基础概念建设，团队\"已建立全新IP的开发基础\"，这是继《赛博朋克2077》后CDPR首个全新IP",
+        "summary": "CDPR宣布神秘新IP《Hadar》已完成基础概念建设，团队“已建立全新IP的开发基础“，这是继《赛博朋克2077》后CDPR首个全新IP",
         "source": "ithome / Eurogamer / gcores",
         "sourceUrl": "#",
         "sourceUrls": [],
         "category": "policy",
         "importance": "medium",
-        "featured": true,
-        "date": "2026-03-21",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 394,
-        "title": "Xbox两名高管相继离职",
-        "summary": "微软Xbox企业副总裁Lori Wright（负责合作伙伴与营销）和Xbox游戏AI总经理Haiyan Zhang双双宣布离职，二人均服务公司超10年",
-        "source": "Eurogamer",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "policy",
-        "importance": "low",
         "featured": true,
         "date": "2026-03-21",
         "tags": [
@@ -17361,7 +17212,7 @@ const newsData = [
     {
         "id": 104,
         "title": "PSN全球大规模宕机：超1.3万用户受影响，索尼约2小时后恢复服务",
-        "summary": "PlayStation Network于2026年3月21日美东时间下午4:59左右发生全球大规模宕机，影响PS5和PS4平台所有联网服务，包括在线游戏、社交功能、云串流、奖杯系统和锦标赛功能。Downdetector记录超过13,000起用户报告。索尼于当晚10:40左右恢复主要服务，但部分用户仍持续遇到好友列表显示错误等问题，日本地区在官方宣称恢复后仍出现新的投诉高峰。值得注意的是，索尼已宣布计划在2026年9月前停用\"PlayStation Network\"和\"PSN\"品牌名称。此次宕机是PSN近期最严重的服务中断事件之一。",
+        "summary": "PlayStation Network于2026年3月21日美东时间下午4:59左右发生全球大规模宕机，影响PS5和PS4平台所有联网服务，包括在线游戏、社交功能、云串流、奖杯系统和锦标赛功能。Downdetector记录超过13,000起用户报告。索尼于当晚10:40左右恢复主要服务，但部分用户仍持续遇到好友列表显示错误等问题，日本地区在官方宣称恢复后仍出现新的投诉高峰。值得注意的是，索尼已宣布计划在2026年9月前停用“PlayStation Network“和“PSN“品牌名称。此次宕机是PSN近期最严重的服务中断事件之一。",
         "source": "VGC",
         "sourceUrl": "https://www.videogameschronicle.com/",
         "sourceUrls": [
@@ -17395,7 +17246,7 @@ const newsData = [
     {
         "id": 99,
         "title": "索尼战略深化：放弃PC端启动器计划，全力回归主机优先战略",
-        "summary": "据Bloomberg Jason Schreier、PushSquare、NotebookCheck等媒体报道，索尼互动娱乐已正式放弃此前传闻中的PC端独立启动器开发计划，决定全力回归主机优先战略。这一决定与此前彭博社曝出的'PS5单机大作不再移植PC'路线形成战略闭环——索尼不仅不打算把独占大作搬上PC，连PC端的平台基础设施投资也一并撤回。分析认为此举将进一步强化PS5/PS6的平台黏性，但也可能引发PC玩家社区的不满。",
+        "summary": "据Bloomberg Jason Schreier、PushSquare、NotebookCheck等媒体报道，索尼互动娱乐已正式放弃此前传闻中的PC端独立启动器开发计划，决定全力回归主机优先战略。这一决定与此前彭博社曝出的‘PS5单机大作不再移植PC‘路线形成战略闭环——索尼不仅不打算把独占大作搬上PC，连PC端的平台基础设施投资也一并撤回。分析认为此举将进一步强化PS5/PS6的平台黏性，但也可能引发PC玩家社区的不满。",
         "source": "GamesIndustry",
         "sourceUrl": "https://www.gamesindustry.biz/",
         "sourceUrls": [
@@ -17599,7 +17450,7 @@ const newsData = [
         ],
         "sentiment": "neutral",
         "tdocMarking": "none",
-        "analysis": "PS5连续两个月力压Switch 2是一个关键信号：五年老机型凭借成熟游戏库和降价策略仍具竞争韧性。但Switch 2在日本市场供不应求的表现说明任天堂的核心受众忠诚度依然极高。这种'老机型 vs 新主机'的格局竞争将在2026年上半年持续，3月Switch 2已反超说明初期波动属于正常周期。生化危机安魂曲登顶软件榜进一步验证了3A恐怖IP的跨平台号召力。",
+        "analysis": "PS5连续两个月力压Switch 2是一个关键信号：五年老机型凭借成熟游戏库和降价策略仍具竞争韧性。但Switch 2在日本市场供不应求的表现说明任天堂的核心受众忠诚度依然极高。这种‘老机型 vs 新主机‘的格局竞争将在2026年上半年持续，3月Switch 2已反超说明初期波动属于正常周期。生化危机安魂曲登顶软件榜进一步验证了3A恐怖IP的跨平台号召力。",
         "relatedNewsIds": [
             107,
             87
@@ -17607,8 +17458,8 @@ const newsData = [
     },
     {
         "id": 98,
-        "title": "CDPR披露全新IP\"Hadar\"项目进展，巫师4开发团队规模达499人",
-        "summary": "据游民星空、Insider Gaming、Rock Paper Shotgun等媒体报道，CD Projekt RED在最新投资者更新中披露了多项重要开发进展。其一，全新原创科幻IP项目\"Hadar\"（代号）正在积极推进中，这是CDPR继巫师和赛博朋克之后的第三大IP。其二，《巫师4》（The Witcher IV）开发团队已扩充至499人，较2024年团队403人增长24%，显示项目已进入全面生产阶段。CDPR目前在华沙和波兹南两大工作室同步推进多个项目，显示出强劲的多IP并行研发能力。",
+        "title": "CDPR披露全新IP“Hadar“项目进展，巫师4开发团队规模达499人",
+        "summary": "据游民星空、Insider Gaming、Rock Paper Shotgun等媒体报道，CD Projekt RED在最新投资者更新中披露了多项重要开发进展。其一，全新原创科幻IP项目“Hadar“（代号）正在积极推进中，这是CDPR继巫师和赛博朋克之后的第三大IP。其二，《巫师4》（The Witcher IV）开发团队已扩充至499人，较2024年团队403人增长24%，显示项目已进入全面生产阶段。CDPR目前在华沙和波兹南两大工作室同步推进多个项目，显示出强劲的多IP并行研发能力。",
         "source": "VGC",
         "sourceUrl": "https://www.videogameschronicle.com/",
         "sourceUrls": [
@@ -17670,8 +17521,8 @@ const newsData = [
     },
     {
         "id": 82,
-        "title": "SEGA计划2027年3月前发布4款\"主力IP\"新游，意欲重回3A主流",
-        "summary": "SEGA透露计划在2027年3月底前（FY2026内）发布4款来自旗下\"主力IP\"的大型新游。结合SEGA现有IP矩阵，候选作品可能包括《如龙》《索尼克》《女神异闻录》《全面战争》等系列的全新作品。此举表明SEGA正在积极扩大其PC/Console游戏产品线，加速从传统街机/手游公司向3A多平台发行商转型。",
+        "title": "SEGA计划2027年3月前发布4款“主力IP“新游，意欲重回3A主流",
+        "summary": "SEGA透露计划在2027年3月底前（FY2026内）发布4款来自旗下“主力IP“的大型新游。结合SEGA现有IP矩阵，候选作品可能包括《如龙》《索尼克》《女神异闻录》《全面战争》等系列的全新作品。此举表明SEGA正在积极扩大其PC/Console游戏产品线，加速从传统街机/手游公司向3A多平台发行商转型。",
         "source": "VGC",
         "sourceUrl": "https://www.videogameschronicle.com/",
         "sourceUrls": [
@@ -17699,8 +17550,8 @@ const newsData = [
     },
     {
         "id": 83,
-        "title": "GamesIndustry.biz发起\"AI周\"专题：深度剖析AI对游戏行业的商业冲击",
-        "summary": "全球最大游戏行业媒体GamesIndustry.biz本周推出\"AI Week\"专题，以一系列深度报道、访谈和分析文章全面探讨AI技术对游戏产业的商业影响。专题涵盖AI在开发流程中的实际应用案例、对就业市场的冲击、版权与法律争议，以及开发者对AI工具的态度调查。这是GDC 2026\"AI热\"之后行业首次系统性的商业视角分析。",
+        "title": "GamesIndustry.biz发起“AI周“专题：深度剖析AI对游戏行业的商业冲击",
+        "summary": "全球最大游戏行业媒体GamesIndustry.biz本周推出“AI Week“专题，以一系列深度报道、访谈和分析文章全面探讨AI技术对游戏产业的商业影响。专题涵盖AI在开发流程中的实际应用案例、对就业市场的冲击、版权与法律争议，以及开发者对AI工具的态度调查。这是GDC 2026“AI热“之后行业首次系统性的商业视角分析。",
         "source": "GamesIndustry",
         "sourceUrl": "https://www.gamesindustry.biz/",
         "category": "market",
@@ -17741,7 +17592,7 @@ const newsData = [
     },
     {
         "id": 1325,
-        "title": "《红色沙漠》评分解禁：MC均分78分，IGN给出6分\"临时评价\"，口碑低于预期",
+        "title": "《红色沙漠》评分解禁：MC均分78分，IGN给出6分“临时评价“，口碑低于预期",
         "summary": "Pearl Abyss开放世界动作RPG《红色沙漠》媒体评分正式解禁。Metacritic PC版91家媒体均分78分，明显低于玩家预期。IGN因游戏过长、Bug较多给出6分临时评价（完整评测待发），IGN中国打出8分。其他主要评分：Eurogamer 6分、VG247 6分、GameSpot 7分、GamesRadar 8分、Forbes 9.5分。Steam已开启预载，需123GB空间，必须SSD运行。Pearl Abyss在Xbox平台方面引发关注——上市前迟迟未展示Xbox版实机画面。",
         "source": "腾讯文档策展",
         "sourceUrl": "https://www.3dmgame.com/news/202603/3940046.html https://www.ithome.com/0/930/451.htm https://www.eurogamer.net/crimson-desert-review https://gamingbolt.com/crimson-desert-pc-review-virtues-last-reward https://gamingbolt.com/crimson-desert-pc-graphics-analysis-an-ambitious-open-world-tech-showcase",
@@ -17766,7 +17617,7 @@ const newsData = [
     {
         "id": 1330,
         "title": "育碧《地产大亨：星球大战正邪交锋》6月11日发售",
-        "summary": "育碧宣布这款\"大富翁\"类型游戏将于6月11日登陆PS5、Xbox Series、Switch和PC平台，支持2v2和3v3竞技模式，玩家可选择英雄或反派角色运用独特能力争夺银河系掌控权。更多详情预计在4月29日\"原力日\"揭晓。",
+        "summary": "育碧宣布这款“大富翁“类型游戏将于6月11日登陆PS5、Xbox Series、Switch和PC平台，支持2v2和3v3竞技模式，玩家可选择英雄或反派角色运用独特能力争夺银河系掌控权。更多详情预计在4月29日“原力日“揭晓。",
         "source": "腾讯文档策展",
         "sourceUrl": "https://www.ithome.com/0/930/842.htm",
         "sourceUrls": [
@@ -17885,8 +17736,8 @@ const newsData = [
     },
     {
         "id": 384,
-        "title": "索尼确认将于2026年9月前全面弃用\"PlayStation Network / PSN\"品牌",
-        "summary": "据Insider Gaming报道，索尼已向开发者发送内部邮件，宣布将于2026年9月前逐步在所有平台资产中淘汰\"PlayStation Network\"及缩写\"PSN\"品牌标识，相关好友系统、多人游戏、奖杯等核心功能不受影响。此举被解读为索尼数字服务品牌全面升级重塑的信号。",
+        "title": "索尼确认将于2026年9月前全面弃用“PlayStation Network / PSN“品牌",
+        "summary": "据Insider Gaming报道，索尼已向开发者发送内部邮件，宣布将于2026年9月前逐步在所有平台资产中淘汰“PlayStation Network“及缩写“PSN“品牌标识，相关好友系统、多人游戏、奖杯等核心功能不受影响。此举被解读为索尼数字服务品牌全面升级重塑的信号。",
         "source": "腾讯文档策展",
         "sourceUrl": "https://www.ithome.com/0/930/446.htm https://www.3dmgame.com/news/202603/3940047.html",
         "sourceUrls": [
@@ -17925,30 +17776,6 @@ const newsData = [
         "date": "2026-03-19",
         "tags": [
             "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 386,
-        "title": "ESRB宣布不会效仿欧洲的PEGI将付费随机物品等元素纳入游戏年龄评级标准",
-        "summary": "ESRB宣布不会效仿欧洲的PEGI将付费随机物品等元素纳入游戏年龄评级标准。PEGI将从6月起实施新的年龄评级标准，新增四个类别，这是其历史上最大的变化之一。可能导致部分游戏如《EA Sports FC》和《Pokémon Pokopia》的评级上调。PEGI表示将对持续更新的在线服务游戏重新评估，但处理已发行游戏的评级变更更为复杂。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.eurogamer.net/esrb-pegi-age-rating-changes",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.eurogamer.net/esrb-pegi-age-rating-changes"
-            }
-        ],
-        "category": "policy",
-        "importance": "medium",
-        "featured": true,
-        "date": "2026-03-19",
-        "tags": [
-            "政府政策"
         ],
         "sentiment": "neutral",
         "tdocMarking": "tdoc-verified",
@@ -18083,7 +17910,7 @@ const newsData = [
     {
         "id": 67,
         "title": "《死亡搁浅2：冥滩之上》PC版3月19日正式发售，Steam首日表现火爆",
-        "summary": "小岛秀夫新作《死亡搁浅2：冥滩之上》PC版于2026年3月19日全球解锁，由Nixxes Software负责移植，登陆Steam和Epic Games Store。PC版标准版售价¥298，新增\"走向荒野\"难度、真人过场动画、Boss战重复游玩功能，支持超宽屏、DLSS 5和DualSense。游戏安装包约98.2GB。发售前113GB未加密文件遭BT泄露，但未影响首日销售热度。PS5版同步推送免费内容更新。Steam评价为'特别好评'。",
+        "summary": "小岛秀夫新作《死亡搁浅2：冥滩之上》PC版于2026年3月19日全球解锁，由Nixxes Software负责移植，登陆Steam和Epic Games Store。PC版标准版售价¥298，新增“走向荒野“难度、真人过场动画、Boss战重复游玩功能，支持超宽屏、DLSS 5和DualSense。游戏安装包约98.2GB。发售前113GB未加密文件遭BT泄露，但未影响首日销售热度。PS5版同步推送免费内容更新。Steam评价为‘特别好评‘。",
         "source": "PlayStation Blog",
         "sourceUrl": "https://blog.playstation.com/2026/03/17/death-stranding-2-new-pc-ps5-features-detailed-live-march-19/",
         "sourceUrls": [
@@ -18150,7 +17977,7 @@ const newsData = [
     {
         "id": 70,
         "title": "Valve重申Steam Machine和Steam Frame将于2026年发售，此前博客引发延期疑虑",
-        "summary": "Valve在\"Steam Year in Review 2025\"博客中使用了\"hope to ship in 2026\"措辞，引发Steam Machine和Steam Frame可能延期的担忧。此前Valve提及全球内存短缺和供应链问题可能影响硬件出货。Valve随后编辑博客移除不确定性表述，重申两款硬件将在2026年按计划发售。Steam Machine此前在GDC 2026已公布1080p/30fps认证标准。",
+        "summary": "Valve在“Steam Year in Review 2025“博客中使用了“hope to ship in 2026“措辞，引发Steam Machine和Steam Frame可能延期的担忧。此前Valve提及全球内存短缺和供应链问题可能影响硬件出货。Valve随后编辑博客移除不确定性表述，重申两款硬件将在2026年按计划发售。Steam Machine此前在GDC 2026已公布1080p/30fps认证标准。",
         "source": "VGC",
         "sourceUrl": "https://www.videogameschronicle.com/news/valve-insists-it-will-release-steam-machine-and-steam-frame-in-2026-after-blog-said-it-hoped-to/",
         "sourceUrls": [
@@ -18221,8 +18048,8 @@ const newsData = [
     },
     {
         "id": 1328,
-        "title": "英特尔Arc显卡推出\"预编译着色器\"功能，首发支持《黑神话：悟空》等13款游戏，加载速度提升3倍",
-        "summary": "英特尔为Arc系列显卡（含独显与核显）推出\"预编译着色器\"技术，旨在解决PC游戏首次启动卡顿和漫长加载问题，测试显示平均加载速度提升3倍。首发支持《黑神话：悟空》在内的13款游戏。",
+        "title": "英特尔Arc显卡推出“预编译着色器“功能，首发支持《黑神话：悟空》等13款游戏，加载速度提升3倍",
+        "summary": "英特尔为Arc系列显卡（含独显与核显）推出“预编译着色器“技术，旨在解决PC游戏首次启动卡顿和漫长加载问题，测试显示平均加载速度提升3倍。首发支持《黑神话：悟空》在内的13款游戏。",
         "source": "腾讯文档策展",
         "sourceUrl": "https://www.ithome.com/0/930/464.htm",
         "sourceUrls": [
@@ -18444,8 +18271,8 @@ const newsData = [
     },
     {
         "id": 2,
-        "title": "Take-Two CEO明确反对AI主导游戏创作：\"想靠AI做出GTA6级爆款简直可笑\"",
-        "summary": "Take-Two/Rockstar母公司CEO Strauss Zelnick在多场采访中强调，生成式AI（包括Google Project Genie等）无法替代人类创意制作顶级IP，AI无法做到\"按键生成爆款并推向全球市场\"。他同时指出AI可提升办公室效率，但无法取代创意团队。这一表态在GDC 2026 AI讨论热潮中具有标志性意义。",
+        "title": "Take-Two CEO明确反对AI主导游戏创作：“想靠AI做出GTA6级爆款简直可笑“",
+        "summary": "Take-Two/Rockstar母公司CEO Strauss Zelnick在多场采访中强调，生成式AI（包括Google Project Genie等）无法替代人类创意制作顶级IP，AI无法做到“按键生成爆款并推向全球市场“。他同时指出AI可提升办公室效率，但无法取代创意团队。这一表态在GDC 2026 AI讨论热潮中具有标志性意义。",
         "source": "VGC",
         "sourceUrl": "https://www.videogameschronicle.com/news/take-two-ceo-says-its-laughable-to-say-ai-like-google-project-genie-can-create-hit-games-at-the-press-of-a-button/",
         "sourceUrls": [
@@ -18476,8 +18303,8 @@ const newsData = [
     },
     {
         "id": 3,
-        "title": "《上古卷轴6》引擎升级至Creation Engine 3，Todd Howard：\"距发售仍很遥远\"",
-        "summary": "Bethesda游戏总监Todd Howard接受采访披露《上古卷轴6》已采用最新Creation Engine 3，开发稳定性大幅提升。他坦言后悔2018年过早公布，再次确认游戏距发售\"非常遥远\"，建议玩家\"假装我们没有宣布过\"。",
+        "title": "《上古卷轴6》引擎升级至Creation Engine 3，Todd Howard：“距发售仍很遥远“",
+        "summary": "Bethesda游戏总监Todd Howard接受采访披露《上古卷轴6》已采用最新Creation Engine 3，开发稳定性大幅提升。他坦言后悔2018年过早公布，再次确认游戏距发售“非常遥远“，建议玩家“假装我们没有宣布过“。",
         "source": "EuroGamer",
         "sourceUrl": "https://www.ithome.com/0/930/053.htm",
         "sourceUrls": [
@@ -18526,8 +18353,8 @@ const newsData = [
     },
     {
         "id": 1321,
-        "title": "《星空》确认4月7日登陆PS5，同步推出免费更新\"自由航线\"及付费DLC\"Terran Armada\"；Steam国区永降至209元",
-        "summary": "B社正式官宣《星空》4月7日登陆PS5，支持DualSense并为PS5 Pro提供4K/30帧画质模式和60帧性能模式。同步推出免费大更新\"自由航线\"与售价10美元的\"Terran Armada\"DLC。Todd Howard表示游戏有\"长期计划\"。Steam国区价格同步永降至209元。",
+        "title": "《星空》确认4月7日登陆PS5，同步推出免费更新“自由航线“及付费DLC“Terran Armada“；Steam国区永降至209元",
+        "summary": "B社正式官宣《星空》4月7日登陆PS5，支持DualSense并为PS5 Pro提供4K/30帧画质模式和60帧性能模式。同步推出免费大更新“自由航线“与售价10美元的“Terran Armada“DLC。Todd Howard表示游戏有“长期计划“。Steam国区价格同步永降至209元。",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -18564,8 +18391,8 @@ const newsData = [
     },
     {
         "id": 1323,
-        "title": "英伟达在GTC 2026展示DLSS 5技术，黄仁勋称其为\"图形领域的GPT时刻\"；引发开发者与玩家大规模争议",
-        "summary": "英伟达CEO黄仁勋在GTC 2026主题演讲中展示DLSS 5，该技术利用AI对游戏画面进行\"光照与材质的照片级真实感重建\"，宣布秋季推出。然而技术演示引发大规模争议——玩家和开发者普遍批评DLSS 5将角色脸部\"网红化/滤镜化\"。英伟达黄仁勋反驳批评者\"完全错了\"；B社承诺在《星空》中DLSS 5效果完全由美术团队把控且为可选项。多家工作室发梗图跟进嘲讽。",
+        "title": "英伟达在GTC 2026展示DLSS 5技术，黄仁勋称其为“图形领域的GPT时刻“；引发开发者与玩家大规模争议",
+        "summary": "英伟达CEO黄仁勋在GTC 2026主题演讲中展示DLSS 5，该技术利用AI对游戏画面进行“光照与材质的照片级真实感重建“，宣布秋季推出。然而技术演示引发大规模争议——玩家和开发者普遍批评DLSS 5将角色脸部“网红化/滤镜化“。英伟达黄仁勋反驳批评者“完全错了“；B社承诺在《星空》中DLSS 5效果完全由美术团队把控且为可选项。多家工作室发梗图跟进嘲讽。",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -18584,7 +18411,7 @@ const newsData = [
     {
         "id": 381,
         "title": "《死亡搁浅2》PC版细节公布，3月19日发售；PlayStation Blog披露PC与PS5新功能",
-        "summary": "小岛秀夫在PlayStation Blog详细介绍PC版新内容：新增\"走向荒野\"难度、真人过场动画、Boss战可重复游玩，解锁帧率、支持超宽屏及DualSense手柄；PS5版同步免费更新。此外PC版于3月19日发售前已遭BT泄露（113GB未加密文件）。",
+        "summary": "小岛秀夫在PlayStation Blog详细介绍PC版新内容：新增“走向荒野“难度、真人过场动画、Boss战可重复游玩，解锁帧率、支持超宽屏及DualSense手柄；PS5版同步免费更新。此外PC版于3月19日发售前已遭BT泄露（113GB未加密文件）。",
         "source": "PlayStation Blog · VGC · IT之家",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -18603,7 +18430,7 @@ const newsData = [
     {
         "id": 382,
         "title": "PlayStation Portal新增1080p高画质模式，本周推送更新",
-        "summary": "索尼PS Remote Play串流设备PlayStation Portal本周将推送系统更新，新增1080p高码率串流的\"High Quality\"模式，提升远程游玩画质体验。",
+        "summary": "索尼PS Remote Play串流设备PlayStation Portal本周将推送系统更新，新增1080p高码率串流的“High Quality“模式，提升远程游玩画质体验。",
         "source": "VGC",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -18622,7 +18449,7 @@ const newsData = [
     {
         "id": 85,
         "title": "《巫师4》披露大量开发情报：战斗更流畅、引入前沿技术",
-        "summary": "CD Projekt RED在官方播客\"AnsweRED\"中罕见披露《巫师4》（The Witcher IV）大量开发信息。团队透露战斗系统将比前作更加流畅丝滑，并引入多项前沿技术。此外CDPR确认《赛博朋克2077》不再开发新DLC，Switch 2版《赛博朋克2077》移植已进行\"远超7周\"的开发。《巫师4》预计将成为CDPR继《赛博朋克2077》之后最重要的项目。",
+        "summary": "CD Projekt RED在官方播客“AnsweRED“中罕见披露《巫师4》（The Witcher IV）大量开发信息。团队透露战斗系统将比前作更加流畅丝滑，并引入多项前沿技术。此外CDPR确认《赛博朋克2077》不再开发新DLC，Switch 2版《赛博朋克2077》移植已进行“远超7周“的开发。《巫师4》预计将成为CDPR继《赛博朋克2077》之后最重要的项目。",
         "source": "VGC",
         "sourceUrl": "https://www.videogameschronicle.com/",
         "sourceUrls": [
@@ -18650,7 +18477,7 @@ const newsData = [
     {
         "id": 75,
         "title": "Fortnite玩家抗议V-Bucks定价调整，威胁跳过下赛季Battle Pass",
-        "summary": "Epic Games宣布调整Fortnite虚拟货币V-Bucks的定价方案后，大量玩家在社交媒体上表达不满，部分玩家声称将跳过下赛季Battle Pass并取消订阅。此前Fortnite已宣布4月16日免费开放\"Save the World\"模式以提振玩家活跃度。IGN报道称这一定价争议可能进一步影响Fortnite的玩家留存率。",
+        "summary": "Epic Games宣布调整Fortnite虚拟货币V-Bucks的定价方案后，大量玩家在社交媒体上表达不满，部分玩家声称将跳过下赛季Battle Pass并取消订阅。此前Fortnite已宣布4月16日免费开放“Save the World“模式以提振玩家活跃度。IGN报道称这一定价争议可能进一步影响Fortnite的玩家留存率。",
         "source": "IGN",
         "sourceUrl": "https://pc.ign.com/",
         "sourceUrls": [
@@ -18724,8 +18551,8 @@ const newsData = [
     },
     {
         "id": 4,
-        "title": "NVIDIA在GTC 2026展示DLSS 5，黄仁勋称\"图形领域GPT时刻\"引发巨大争议",
-        "summary": "NVIDIA CEO黄仁勋在GTC 2026主题演讲中展示DLSS 5，该技术利用AI对游戏画面进行\"光照与材质的照片级真实感重建\"，宣布秋季推出。Digital Foundry盛赞\"见过最震撼的演示\"，但技术演示引发大规模争议——玩家和开发者普遍批评DLSS 5将角色脸部\"网红化/滤镜化\"。3月21日黄仁勋再度回应批评者称\"你们完全错了\"，表示玩家误解了技术目标。同日NVIDIA公布首批DLSS 5支持游戏名单，包括《刺客信条：影》《生化危机：安魂曲》等多款大作。争议持续发酵中。",
+        "title": "NVIDIA在GTC 2026展示DLSS 5，黄仁勋称“图形领域GPT时刻“引发巨大争议",
+        "summary": "NVIDIA CEO黄仁勋在GTC 2026主题演讲中展示DLSS 5，该技术利用AI对游戏画面进行“光照与材质的照片级真实感重建“，宣布秋季推出。Digital Foundry盛赞“见过最震撼的演示“，但技术演示引发大规模争议——玩家和开发者普遍批评DLSS 5将角色脸部“网红化/滤镜化“。3月21日黄仁勋再度回应批评者称“你们完全错了“，表示玩家误解了技术目标。同日NVIDIA公布首批DLSS 5支持游戏名单，包括《刺客信条：影》《生化危机：安魂曲》等多款大作。争议持续发酵中。",
         "source": "VGC",
         "sourceUrl": "https://www.ithome.com/0/929/681.htm",
         "sourceUrls": [
@@ -18759,7 +18586,7 @@ const newsData = [
     {
         "id": 5,
         "title": "《星空》确认4月7日登陆PS5，同步推出免费更新和DLC；Steam国区永降至209元",
-        "summary": "Bethesda正式官宣《星空》4月7日登陆PS5，支持DualSense并为PS5 Pro提供4K/30帧画质模式和60帧性能模式。同步推出免费大更新\"自由航线\"与售价10美元的\"Terran Armada\" DLC。Todd Howard表示游戏有\"长期计划\"。Steam国区价格同步永降至209元。",
+        "summary": "Bethesda正式官宣《星空》4月7日登陆PS5，支持DualSense并为PS5 Pro提供4K/30帧画质模式和60帧性能模式。同步推出免费大更新“自由航线“与售价10美元的“Terran Armada“ DLC。Todd Howard表示游戏有“长期计划“。Steam国区价格同步永降至209元。",
         "source": "VGC",
         "sourceUrl": "https://www.ithome.com/0/930/051.htm",
         "sourceUrls": [
@@ -18852,7 +18679,7 @@ const newsData = [
     {
         "id": 9,
         "title": "PlayStation Portal新增1080p高画质串流模式",
-        "summary": "索尼PS Remote Play串流设备PlayStation Portal本周推送系统更新，新增1080p高码率串流的\"High Quality\"模式，提升远程游玩画质体验。",
+        "summary": "索尼PS Remote Play串流设备PlayStation Portal本周推送系统更新，新增1080p高码率串流的“High Quality“模式，提升远程游玩画质体验。",
         "source": "VGC",
         "sourceUrl": "https://www.videogameschronicle.com/news/playstation-portal-is-getting-a-new-1080p-high-quality-mode-this-week/",
         "category": "platform",
@@ -18957,8 +18784,8 @@ const newsData = [
     },
     {
         "id": 86,
-        "title": "索尼PS6或因AI芯片短缺推迟至2028-2029年，\"25年行业最严重供需失衡\"",
-        "summary": "GamesIndustry.biz报道，业内人士警告AI驱动的芯片需求激增正导致消费电子行业严重的内存芯片短缺。知情人士称索尼可能因此将PS6发布时间从原计划的2027年推迟至2028甚至2029年。报道援引行业专家称'这是我25年从业经历中最严重的供需失衡'。此消息与此前PS6按计划2027年假日季发售的传闻形成冲突，需持续关注后续官方确认。",
+        "title": "索尼PS6或因AI芯片短缺推迟至2028-2029年，“25年行业最严重供需失衡“",
+        "summary": "GamesIndustry.biz报道，业内人士警告AI驱动的芯片需求激增正导致消费电子行业严重的内存芯片短缺。知情人士称索尼可能因此将PS6发布时间从原计划的2027年推迟至2028甚至2029年。报道援引行业专家称‘这是我25年从业经历中最严重的供需失衡‘。此消息与此前PS6按计划2027年假日季发售的传闻形成冲突，需持续关注后续官方确认。",
         "source": "GamesIndustry",
         "sourceUrl": "https://www.gamesindustry.biz/resources/directory/company/sony",
         "sourceUrls": [
@@ -19150,7 +18977,7 @@ const newsData = [
     {
         "id": 79,
         "title": "2026春季游戏平台新变局：微软Project Helix、索尼回归独占、Valve硬件认证三线并进",
-        "summary": "GameRes深度分析指出，2026年春季PC与主机游戏市场迎来三大变局：微软在GDC 2026公布Project Helix下一代Xbox，定位\"客厅PC\"可同时运行Xbox与PC游戏；索尼通过彭博社释放\"PS5单机大作不再移植PC\"信号回归独占；Valve在GDC官宣Steam Machine和Steam Frame的内容认证计划。三方策略分化前所未有，将深刻重塑未来的平台竞争格局。",
+        "summary": "GameRes深度分析指出，2026年春季PC与主机游戏市场迎来三大变局：微软在GDC 2026公布Project Helix下一代Xbox，定位“客厅PC“可同时运行Xbox与PC游戏；索尼通过彭博社释放“PS5单机大作不再移植PC“信号回归独占；Valve在GDC官宣Steam Machine和Steam Frame的内容认证计划。三方策略分化前所未有，将深刻重塑未来的平台竞争格局。",
         "source": "GameRes",
         "sourceUrl": "https://www.gameres.com/916991.html",
         "category": "market",
@@ -19393,7 +19220,7 @@ const newsData = [
     {
         "id": 22,
         "title": "《杀戮尖塔2》首周销量破300万份，好评率95%",
-        "summary": "《杀戮尖塔2》自3月6日Steam抢先体验以来销量突破300万份，玩家爬塔次数超2500万次。游戏新增大量内容并引入\"替代章节\"机制，支持最多4人在线合作，Steam国区定价88元，好评率达95%。这一成绩刷新了独立卡牌Roguelike品类的销售纪录。",
+        "summary": "《杀戮尖塔2》自3月6日Steam抢先体验以来销量突破300万份，玩家爬塔次数超2500万次。游戏新增大量内容并引入“替代章节“机制，支持最多4人在线合作，Steam国区定价88元，好评率达95%。这一成绩刷新了独立卡牌Roguelike品类的销售纪录。",
         "source": "SteamDB",
         "sourceUrl": "https://www.ithome.com/0/929/058.htm",
         "sourceUrls": [
@@ -19457,7 +19284,7 @@ const newsData = [
     {
         "id": 25,
         "title": "《和平精英》亮相GDC 2026展示AI+游戏前沿成果",
-        "summary": "腾讯光子工作室群携《和平精英》在GDC 2026大会上展示了\"大模型+AI Bot\"架构，分享了AI在游戏中的前沿应用成果。策划副总监薛冰的演讲获得全球科技和游戏行业的高度肯定，展示了中国游戏厂商在AI应用领域的领先地位。",
+        "summary": "腾讯光子工作室群携《和平精英》在GDC 2026大会上展示了“大模型+AI Bot“架构，分享了AI在游戏中的前沿应用成果。策划副总监薛冰的演讲获得全球科技和游戏行业的高度肯定，展示了中国游戏厂商在AI应用领域的领先地位。",
         "source": "GamesIndustry",
         "sourceUrl": "https://www.gamesindustry.biz/",
         "category": "market",
@@ -19539,25 +19366,6 @@ const newsData = [
         "relatedNewsIds": []
     },
     {
-        "id": 380,
-        "title": "Newzoo报告：Roblox与Minecraft玩家与传统AAA游戏玩家几乎无重叠",
-        "summary": "GDC期间，Newzoo咨询总监Ben Porter分享研究发现：Roblox与Minecraft玩家大量玩头部直播服务游戏（与Fortnite重合率55%/46%），但购买《怪物猎人：荒野》《刺客信条》《幽灵对马》等传统AAA游戏的可能性仅为平均玩家的0.4倍。这一低龄/免费玩家群体的增长，引发行业对AAA市场长期受众的深层焦虑。",
-        "source": "GamesIndustry.biz",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "game",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-03-13",
-        "tags": [
-            "游戏发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
         "id": 26,
         "title": "CD Projekt Red确认不再为《赛博朋克2077》开发新DLC",
         "summary": "CD Projekt Red确认不再为《赛博朋克2077》开发新的DLC或扩展内容，未来工作重心将转向该系列新作（代号Project Orion）。《赛博朋克2077》截至目前累计销量已超3000万份。",
@@ -19577,7 +19385,7 @@ const newsData = [
     {
         "id": 27,
         "title": "微软公布下一代Xbox主机Project Helix，alpha版预计2027年",
-        "summary": "微软在GDC 2026期间首次公开下一代Xbox主机代号\"Project Helix\"的详细信息。Xbox次世代副总裁Jason Ronald透露该主机将采用AMD下一代超分辨率、帧生成、光线追踪技术，alpha版本预计2027年提供给游戏开发者。Ronald还指出\"玩家以主机/PC/手游定义自己的时代已不复存在\"，支撑了Helix跨平台兼容的战略逻辑。",
+        "summary": "微软在GDC 2026期间首次公开下一代Xbox主机代号“Project Helix“的详细信息。Xbox次世代副总裁Jason Ronald透露该主机将采用AMD下一代超分辨率、帧生成、光线追踪技术，alpha版本预计2027年提供给游戏开发者。Ronald还指出“玩家以主机/PC/手游定义自己的时代已不复存在“，支撑了Helix跨平台兼容的战略逻辑。",
         "source": "VGC",
         "sourceUrl": "https://www.videogameschronicle.com/news/microsoft-reveals-next-gen-console-details-and-promises-an-order-of-magnitude-increase-in-power/",
         "sourceUrls": [
@@ -19634,7 +19442,7 @@ const newsData = [
     {
         "id": 29,
         "title": "GDC 2026 GDCA颁奖：《折言》获玩家选择奖，日本独立游戏创历史",
-        "summary": "在3月13日于旧金山举办的GDC 2026 GDCA颁奖典礼上，日本互动视觉小说《折言》荣获\"玩家选择奖\"，成为首个在GDCA获奖的日本独立游戏作品，创造历史。游戏累计销量已突破10万份，同时获得英国BAFTA提名。",
+        "summary": "在3月13日于旧金山举办的GDC 2026 GDCA颁奖典礼上，日本互动视觉小说《折言》荣获“玩家选择奖“，成为首个在GDCA获奖的日本独立游戏作品，创造历史。游戏累计销量已突破10万份，同时获得英国BAFTA提名。",
         "source": "GameDeveloper",
         "sourceUrl": "https://gdconf.com/news",
         "category": "market",
@@ -19650,8 +19458,8 @@ const newsData = [
     },
     {
         "id": 30,
-        "title": "《无主之地4》首个故事DLC\"Mad Ellie\"3月26日上线",
-        "summary": "2K和Gearbox Software宣布《无主之地4》首个故事包DLC\"Mad Ellie and the Vault of the Damned\"将于3月26日发售，登陆PS5和Xbox Series X/S。无主之地4自发售以来获广泛好评，本次DLC是后续内容计划的首弹。",
+        "title": "《无主之地4》首个故事DLC“Mad Ellie“3月26日上线",
+        "summary": "2K和Gearbox Software宣布《无主之地4》首个故事包DLC“Mad Ellie and the Vault of the Damned“将于3月26日发售，登陆PS5和Xbox Series X/S。无主之地4自发售以来获广泛好评，本次DLC是后续内容计划的首弹。",
         "source": "3DM",
         "sourceUrl": "https://www.3dmgame.com/",
         "category": "game",
@@ -19702,7 +19510,7 @@ const newsData = [
     },
     {
         "id": 1304,
-        "title": "Valve argues loot boxes \"widely used, not just in video games but in the tangible world\" as it expresses 'disappointment' over New York state lawsuit",
+        "title": "Valve argues loot boxes “widely used, not just in video games but in the tangible world“ as it expresses ‘disappointment‘ over New York state lawsuit",
         "summary": "Google宣布了其“Living Games”概念的下一阶段，将自主AI代理作为支持云游戏开发的核心组件，通过整合Gemini 3 Pro、Flash、Gemini Enterprise和Vertex AI等服务，为开发者提供自动化工具，同时保护创意知识产权。",
         "source": "腾讯文档策展",
         "sourceUrl": "https://www.eurogamer.net/valve-expresses-disappointment-over-new-york-state-loot-box-lawsuit",
@@ -19727,7 +19535,7 @@ const newsData = [
     {
         "id": 1309,
         "title": "《寂静岭2》重制版突破500万销量，Konami 宣布半价促销",
-        "summary": "Konami 宣布《寂静岭2》重制版截至2026年1月31日累计销量突破500万份（统计口径含PC、PS5、Xbox Series X/S 数字购买、实体销售及订阅服务下载）。为庆祝这一里程碑，PlayStation Store 开启\"春季特卖\"：《寂静岭2》豪华版和《寂静岭F》豪华版均半价至$39.99，双作标准/豪华合包分别享受40%折扣，促销截止至3月25日。",
+        "summary": "Konami 宣布《寂静岭2》重制版截至2026年1月31日累计销量突破500万份（统计口径含PC、PS5、Xbox Series X/S 数字购买、实体销售及订阅服务下载）。为庆祝这一里程碑，PlayStation Store 开启“春季特卖“：《寂静岭2》豪华版和《寂静岭F》豪华版均半价至$39.99，双作标准/豪华合包分别享受40%折扣，促销截止至3月25日。",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -19746,7 +19554,7 @@ const newsData = [
     {
         "id": 1310,
         "title": "2026年 BAFTA 游戏奖提名揭晓：《光与影：33号远征队》领跑12项",
-        "summary": "2026年 BAFTA 游戏大奖提名出炉：《光与影：33号远征队》以12项提名领跑，囊括\"最佳游戏\"；其次为《Dispatch》（9项）、《Ghost of Yōtei》（8项）、《Death Stranding 2》（7项，但未进入\"最佳游戏\"决选）、《Indiana Jones and the Great Circle》（6项）。\"最佳游戏\"最终候选六强还包括 Arc Raiders 和 Blue Prince。",
+        "summary": "2026年 BAFTA 游戏大奖提名出炉：《光与影：33号远征队》以12项提名领跑，囊括“最佳游戏“；其次为《Dispatch》（9项）、《Ghost of Yōtei》（8项）、《Death Stranding 2》（7项，但未进入“最佳游戏“决选）、《Indiana Jones and the Great Circle》（6项）。“最佳游戏“最终候选六强还包括 Arc Raiders 和 Blue Prince。",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -19764,8 +19572,8 @@ const newsData = [
     },
     {
         "id": 1311,
-        "title": "微软 GDC 演讲揭示：\"主机玩家/PC玩家/手游玩家\"的身份划分已日趋模糊",
-        "summary": "微软 Xbox 次世代副总裁 Jason Ronald 在 GDC 2026 演讲中指出，\"玩家以主机/PC/手游定义自己的时代基本不复存在\"，PC 正成为 Xbox 生态日益重要的组成部分，此判断支撑了 Project Helix 跨平台兼容的战略逻辑。",
+        "title": "微软 GDC 演讲揭示：“主机玩家/PC玩家/手游玩家“的身份划分已日趋模糊",
+        "summary": "微软 Xbox 次世代副总裁 Jason Ronald 在 GDC 2026 演讲中指出，“玩家以主机/PC/手游定义自己的时代基本不复存在“，PC 正成为 Xbox 生态日益重要的组成部分，此判断支撑了 Project Helix 跨平台兼容的战略逻辑。",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -19784,7 +19592,7 @@ const newsData = [
     {
         "id": 1312,
         "title": "PS6、PS6 掌机与 Project Helix 均传仍按计划瞄准 2027 年假日季发售",
-        "summary": "据业内知情人士 KeplerL2 发帖，索尼 PS6（含 PS6 掌机版本）与微软 Project Helix 目前均未受全球内存短缺影响，仍计划于2027年假日季发售。此前有分析师预测两家可能延期，但另有知情人士（YouTuber Moore's Law is Dead）也表示全球内存市场有望在2026年底显著好转、2027年底大幅改善，索尼不太可能将发售推迟至2029年。PS6 传闻规格：AMD Orion 芯片（280mm²，台积电3nm）、54个 RDNA 5 计算单元、8核 Zen 6c + 2核 Zen 6 低功耗核心、30GB GDDR7 内存，CPU 算力较 PS5 提升约20%。Project Helix 传闻规格：比 Xbox Series X 多30%计算单元且速度快65%，基于 RDNA 5，预计售价$999～$1200。",
+        "summary": "据业内知情人士 KeplerL2 发帖，索尼 PS6（含 PS6 掌机版本）与微软 Project Helix 目前均未受全球内存短缺影响，仍计划于2027年假日季发售。此前有分析师预测两家可能延期，但另有知情人士（YouTuber Moore‘s Law is Dead）也表示全球内存市场有望在2026年底显著好转、2027年底大幅改善，索尼不太可能将发售推迟至2029年。PS6 传闻规格：AMD Orion 芯片（280mm²，台积电3nm）、54个 RDNA 5 计算单元、8核 Zen 6c + 2核 Zen 6 低功耗核心、30GB GDDR7 内存，CPU 算力较 PS5 提升约20%。Project Helix 传闻规格：比 Xbox Series X 多30%计算单元且速度快65%，基于 RDNA 5，预计售价$999～$1200。",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -19822,7 +19630,7 @@ const newsData = [
     {
         "id": 373,
         "title": "欧洲游戏评级机构 PEGI 宣布：含开箱系统游戏今夏起强制获评 PEGI 16",
-        "summary": "PEGI（欧洲游戏评级机构）宣布自2026年6月起实施新评级规则，\"付费随机物品（开箱/loot box）\"将使游戏获评最低 PEGI 16，不得向15岁以下未成年人销售；NFT/区块链类游戏直接获评 PEGI 18；含不受限制的联机聊天功能的游戏自动获评 PEGI 18；有限时/限量购买选项的游戏最低 PEGI 12。新规仅适用于2026年6月后新提交的游戏，现有游戏不受影响。此举预计将对 EA Sports FC（此前评级 PEGI 3）等系列的未来作品评级产生直接冲击。",
+        "summary": "PEGI（欧洲游戏评级机构）宣布自2026年6月起实施新评级规则，“付费随机物品（开箱/loot box）“将使游戏获评最低 PEGI 16，不得向15岁以下未成年人销售；NFT/区块链类游戏直接获评 PEGI 18；含不受限制的联机聊天功能的游戏自动获评 PEGI 18；有限时/限量购买选项的游戏最低 PEGI 12。新规仅适用于2026年6月后新提交的游戏，现有游戏不受影响。此举预计将对 EA Sports FC（此前评级 PEGI 3）等系列的未来作品评级产生直接冲击。",
         "source": "videogameschronicle.com / eurogamer.net",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -19943,7 +19751,7 @@ const newsData = [
     {
         "id": 34,
         "title": "PEGI宣布含开箱游戏今夏起强制评级PEGI 16，NFT游戏直接PEGI 18",
-        "summary": "欧洲游戏评级机构PEGI宣布自2026年6月起实施新评级规则：\"付费随机物品（开箱/loot box）\"将使游戏获评最低PEGI 16，不得向15岁以下未成年人销售；NFT/区块链类游戏直接获评PEGI 18；含不受限制联机聊天的游戏自动获评PEGI 18。新规仅适用于6月后新提交游戏。此举预计将对EA Sports FC等系列的未来作品评级产生直接冲击。",
+        "summary": "欧洲游戏评级机构PEGI宣布自2026年6月起实施新评级规则：“付费随机物品（开箱/loot box）“将使游戏获评最低PEGI 16，不得向15岁以下未成年人销售；NFT/区块链类游戏直接获评PEGI 18；含不受限制联机聊天的游戏自动获评PEGI 18。新规仅适用于6月后新提交游戏。此举预计将对EA Sports FC等系列的未来作品评级产生直接冲击。",
         "source": "VGC",
         "sourceUrl": "https://www.videogameschronicle.com/news/all-games-with-loot-boxes-in-them-will-be-rated-minimum-pegi-16-starting-this-summer/",
         "sourceUrls": [
@@ -19973,7 +19781,7 @@ const newsData = [
     {
         "id": 35,
         "title": "2026年BAFTA游戏奖提名揭晓：《光与影：33号远征队》12项领跑",
-        "summary": "2026年BAFTA游戏大奖提名出炉：《光与影：33号远征队》以12项提名领跑，囊括\"最佳游戏\"；其次为《Dispatch》（9项）、《Ghost of Yōtei》（8项）、《Death Stranding 2》（7项，但未进入最佳游戏决选）。最终候选六强还包括Arc Raiders和Blue Prince。",
+        "summary": "2026年BAFTA游戏大奖提名出炉：《光与影：33号远征队》以12项提名领跑，囊括“最佳游戏“；其次为《Dispatch》（9项）、《Ghost of Yōtei》（8项）、《Death Stranding 2》（7项，但未进入最佳游戏决选）。最终候选六强还包括Arc Raiders和Blue Prince。",
         "source": "VGC",
         "sourceUrl": "https://www.videogameschronicle.com/news/bafta-games-awards-2026-nominations-clair-obscur-leads-with-12-death-stranding-2-misses-out-on-best-game-nom/",
         "category": "market",
@@ -20007,8 +19815,8 @@ const newsData = [
     },
     {
         "id": 37,
-        "title": "《堡垒之夜》原创模式\"拯救世界\"将于4月16日免费开放",
-        "summary": "Epic Games宣布《Fortnite》早年付费合作模式\"Save the World\"将于2026年4月16日向全平台（包括Switch 2）免费开放，此举被解读为Fortnite玩家参与度下滑背景下Epic的应急举措，同期还调整了V-Bucks虚拟货币定价。",
+        "title": "《堡垒之夜》原创模式“拯救世界“将于4月16日免费开放",
+        "summary": "Epic Games宣布《Fortnite》早年付费合作模式“Save the World“将于2026年4月16日向全平台（包括Switch 2）免费开放，此举被解读为Fortnite玩家参与度下滑背景下Epic的应急举措，同期还调整了V-Bucks虚拟货币定价。",
         "source": "EuroGamer",
         "sourceUrl": "https://www.eurogamer.net/fortnite-save-the-world-mode-goes-free-to-play-april-2026",
         "category": "game",
@@ -20026,7 +19834,7 @@ const newsData = [
     {
         "id": 38,
         "title": "谷歌升级PC版Play Games：一次购买，PC/安卓双端畅玩",
-        "summary": "谷歌在GDC 2026上宣布升级Win10/Win11版本Google Play Games，引入更多付费游戏并推出\"跨端购买\"功能，旨在解决当前游戏库以免费游戏为主、难以吸引核心玩家的问题。",
+        "summary": "谷歌在GDC 2026上宣布升级Win10/Win11版本Google Play Games，引入更多付费游戏并推出“跨端购买“功能，旨在解决当前游戏库以免费游戏为主、难以吸引核心玩家的问题。",
         "source": "游戏之家",
         "sourceUrl": "https://www.ithome.com/0/928/299.htm",
         "category": "platform",
@@ -20086,8 +19894,8 @@ const newsData = [
     },
     {
         "id": 1300,
-        "title": "【行业平台侧·硬件策略】微软正式确认次世代主机代号\"Project Helix\"，GDC 2026公布核心技术规格，开发者版本将于2027年发出",
-        "summary": "微软在GDC 2026举行30分钟主题演讲，VP Jason Ronald确认次世代Xbox代号为Project Helix，将兼容Xbox主机游戏与PC游戏。技术亮点：①采用定制AMD SOC，与AMD联合设计下一代DirectX；②光线追踪性能较Xbox Series X/S提升\"一个数量级\"；③支持GPU驱动工作图（Work Graph），消除CPU瓶颈；④内置AMD FSR Next，支持神经渲染、ML多帧生成、新型光线再生技术；⑤支持深度纹理压缩（Neural Texture Compression + DirectStorage）。开发者版Alpha机将于2027年发出，消费者版预计更晚。同日，微软官方游戏开发账号发布Project Helix开发套件的黑白\"先睹为快\"照片。此外演讲还宣布\"Xbox Mode\"将于4月在Windows 11特定市场推出，带来类Xbox Ally的体验。",
+        "title": "【行业平台侧·硬件策略】微软正式确认次世代主机代号“Project Helix“，GDC 2026公布核心技术规格，开发者版本将于2027年发出",
+        "summary": "微软在GDC 2026举行30分钟主题演讲，VP Jason Ronald确认次世代Xbox代号为Project Helix，将兼容Xbox主机游戏与PC游戏。技术亮点：①采用定制AMD SOC，与AMD联合设计下一代DirectX；②光线追踪性能较Xbox Series X/S提升“一个数量级“；③支持GPU驱动工作图（Work Graph），消除CPU瓶颈；④内置AMD FSR Next，支持神经渲染、ML多帧生成、新型光线再生技术；⑤支持深度纹理压缩（Neural Texture Compression + DirectStorage）。开发者版Alpha机将于2027年发出，消费者版预计更晚。同日，微软官方游戏开发账号发布Project Helix开发套件的黑白“先睹为快“照片。此外演讲还宣布“Xbox Mode“将于4月在Windows 11特定市场推出，带来类Xbox Ally的体验。",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -20106,7 +19914,7 @@ const newsData = [
     {
         "id": 1301,
         "title": "【行业需求侧·头部产品动向】宝可梦新作《Pokémon Pokopia》爆红，带动任天堂股价两日内飙升15%，实体版多地售罄",
-        "summary": "《Pokémon Pokopia》上周发售后迅速成为现象级爆款。据Bloomberg报道，任天堂股价在发售后两日内上涨约1015%。Metacritic均分89（68篇媒体评测），用户评分8.5/10（726条）。分析师Atul Goyal称其为\"病毒式爆款\"，抵消了此前投资者对内存成本上涨的忧虑；东京证券分析师Hideki Yasu...",
+        "summary": "《Pokémon Pokopia》上周发售后迅速成为现象级爆款。据Bloomberg报道，任天堂股价在发售后两日内上涨约1015%。Metacritic均分89（68篇媒体评测），用户评分8.5/10（726条）。分析师Atul Goyal称其为“病毒式爆款“，抵消了此前投资者对内存成本上涨的忧虑；东京证券分析师Hideki Yasu...",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -20172,7 +19980,7 @@ const newsData = [
     },
     {
         "id": 1306,
-        "title": "Google's Genie 3 world models start to break down after around a minute",
+        "title": "Google‘s Genie 3 world models start to break down after around a minute",
         "summary": "谷歌DeepMind在GDC大会上介绍了Genie 3生成式AI技术，该技术生成的世界模型因内存限制在大约一分钟后会出现不一致性。其目标并非取代传统游戏，而是探索AI创造新型游戏体验的潜力。同时，谷歌还展示了能玩任何游戏的SIMA 2 AI智能体。",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
@@ -20191,7 +19999,7 @@ const newsData = [
     },
     {
         "id": 1307,
-        "title": "1080p at 30fps – Valve Finally Details Steam Machine's Verified Program",
+        "title": "1080p at 30fps – Valve Finally Details Steam Machine‘s Verified Program",
         "summary": "Valve在2026年GDC大会上公布了Steam Machine的验证程序细节，要求游戏在1080p分辨率下以30fps运行才能获得认证，同时已通过Steam Deck验证的游戏将自动获得认证。Valve还在改进SteamOS的反作弊支持，以吸引更多竞技游戏，但内核级反作弊和安全启动问题仍未完全解决。Valve表示Steam Machines性能为便携前作的6倍，行业分析师预测其售价可能高达1000美元",
         "source": "腾讯文档策展",
         "sourceUrl": "https://www.ign.com/articles/1080p-at-30fps-valve-steam-machines-verified-program",
@@ -20239,8 +20047,8 @@ const newsData = [
     },
     {
         "id": 363,
-        "title": "《堡垒之夜》V-Bucks涨价：Epic以\"运营成本上涨\"为由削减充值比例",
-        "summary": "Epic宣布本月晚些时候调整所有充值档位，价格不变但获得的V-Bucks数量减少。Epic表示\"运营成本大幅上涨\"，此举反映跨平台（主机+PC）头部F2P游戏商业化收紧趋势。",
+        "title": "《堡垒之夜》V-Bucks涨价：Epic以“运营成本上涨“为由削减充值比例",
+        "summary": "Epic宣布本月晚些时候调整所有充值档位，价格不变但获得的V-Bucks数量减少。Epic表示“运营成本大幅上涨“，此举反映跨平台（主机+PC）头部F2P游戏商业化收紧趋势。",
         "source": "VGC · IT之家",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -20357,30 +20165,6 @@ const newsData = [
             "游戏发行"
         ],
         "sentiment": "positive",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 372,
-        "title": "PC和主机大一统！下一代Xbox你不得不看的9大要点",
-        "summary": "PC和主机大一统！下一代Xbox你不得不看的9大要点",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.3dmgame.com/news/202603/3939538.html",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.3dmgame.com/news/202603/3939538.html"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-03-11",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
         "tdocMarking": "tdoc-verified",
         "analysis": "",
         "relatedNewsIds": []
@@ -20652,25 +20436,6 @@ const newsData = [
         "title": "PlayStation Plus 3月游戏目录泄露：含Madden NFL 26、Persona 5 Royal等",
         "summary": "VGC获悉3月PS Plus游戏目录（含Madden NFL 26、女神异闻录5皇家版等6款），另有《铁拳：黑暗复活》加入PS Plus经典目录，反映索尼持续丰富订阅库吸引用户留存。",
         "source": "VGC",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-03-10",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 365,
-        "title": "Steam塔防游戏节开启（持续至3月17日）",
-        "summary": "Steam发起塔防专题活动，多款PC塔防游戏达史低折扣，体现平台以专题活动拉动垂类品类销售的推广策略。",
-        "source": "IT之家",
         "sourceUrl": "#",
         "sourceUrls": [],
         "category": "platform",
@@ -21308,7 +21073,7 @@ const newsData = [
     },
     {
         "id": 51,
-        "title": "育碧宣布战略重组：3款游戏取消，聚焦\"更少但更好\"策略",
+        "title": "育碧宣布战略重组：3款游戏取消，聚焦“更少但更好“策略",
         "summary": "育碧在最新的投资者电话会议上宣布取消3款未公布项目的开发，年发行数量从15款缩减至8-10款。",
         "source": "GamesIndustry",
         "sourceUrl": "https://www.gamesindustry.biz/",
@@ -21768,7 +21533,7 @@ const newsData = [
     {
         "id": 55,
         "title": "欧盟数字市场法案新规：游戏平台必须开放跨平台存档转移",
-        "summary": "欧盟数字市场法案(DMA)最新修正案要求所有\"守门人\"游戏平台必须在2027年前支持游戏存档和成就的跨平台转移功能。",
+        "summary": "欧盟数字市场法案(DMA)最新修正案要求所有“守门人“游戏平台必须在2027年前支持游戏存档和成就的跨平台转移功能。",
         "source": "GamesIndustry",
         "sourceUrl": "https://www.gamesindustry.biz/",
         "category": "policy",
@@ -22036,8 +21801,8 @@ const newsData = [
     },
     {
         "id": 1266,
-        "title": "Warner Bros. Discovery is \"rebuilding its video game pipeline\" after a \"significant\" 2025",
-        "summary": "华纳兄弟在2025年财报中称其为\"重要\"的一年，2025 Q4收入为94亿美元，同比下降6%，2025财年总收入下降5%至373亿美元。但对其游戏业务提及甚少，仅表示正在\"重建\"其视频游戏业务线。公司整体收入下降，游戏部门收入在第四季度大幅下滑34%，全年工作室部门收入下降14%至31.8亿美元。",
+        "title": "Warner Bros. Discovery is “rebuilding its video game pipeline“ after a “significant“ 2025",
+        "summary": "华纳兄弟在2025年财报中称其为“重要“的一年，2025 Q4收入为94亿美元，同比下降6%，2025财年总收入下降5%至373亿美元。但对其游戏业务提及甚少，仅表示正在“重建“其视频游戏业务线。公司整体收入下降，游戏部门收入在第四季度大幅下滑34%，全年工作室部门收入下降14%至31.8亿美元。",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
         "sourceUrls": [],
@@ -22118,7 +21883,7 @@ const newsData = [
     {
         "id": 57,
         "title": "《黑神话：钟馗》项目正式确认，游戏科学启动全球预热",
-        "summary": "游戏科学工作室通过官方社交媒体正式确认《黑神话》系列第二款作品为《黑神话：钟馗》，以中国民间传说\"钟馗捉鬼\"为主题。",
+        "summary": "游戏科学工作室通过官方社交媒体正式确认《黑神话》系列第二款作品为《黑神话：钟馗》，以中国民间传说“钟馗捉鬼“为主题。",
         "source": "机核",
         "sourceUrl": "https://www.gcores.com/news",
         "sourceUrls": [
@@ -22144,7 +21909,7 @@ const newsData = [
     },
     {
         "id": 1255,
-        "title": "Resident Evil Requiem's Steam concurrent peak is the biggest in franchise history",
+        "title": "Resident Evil Requiem‘s Steam concurrent peak is the biggest in franchise history",
         "summary": "《生化危机：安魂曲》在Steam平台上的同时在线玩家数峰值达到344,214人，创下该系列历史最高纪录，远超《生化危机4重制版》（峰值约172,107人）和《生化危机村庄》（峰值约114,738人）的表现。",
         "source": "腾讯文档策展",
         "sourceUrl": "https://www.ithome.com/0/924/471.htm",
@@ -22265,7 +22030,7 @@ const newsData = [
     {
         "id": 58,
         "title": "PlayStation Stars 会员体系大幅升级，引入游戏折扣与抢先体验权限",
-        "summary": "索尼宣布对PlayStation Stars忠诚度计划进行重大升级，新增\"Platinum Tier\"等级，提供PS Store折扣、新游抢先体验48小时等独占权益。",
+        "summary": "索尼宣布对PlayStation Stars忠诚度计划进行重大升级，新增“Platinum Tier“等级，提供PS Store折扣、新游抢先体验48小时等独占权益。",
         "source": "PlayStation Blog",
         "sourceUrl": "https://blog.playstation.com/",
         "category": "platform",
@@ -22305,7 +22070,7 @@ const newsData = [
     {
         "id": 1256,
         "title": "黑客宣称《生化危机：安魂曲》游戏 D 加密已在发售首日破解",
-        "summary": "黑客Kirigiri's在Discord上宣称已成功在《生化危机：安魂曲》发售首日破解其D加密（Denuvo）技术，采用hypervisor方式绕过保护系统，并支持AMD和英特尔处理器，目前正进行封测。",
+        "summary": "黑客Kirigiri‘s在Discord上宣称已成功在《生化危机：安魂曲》发售首日破解其D加密（Denuvo）技术，采用hypervisor方式绕过保护系统，并支持AMD和英特尔处理器，目前正进行封测。",
         "source": "腾讯文档策展",
         "sourceUrl": "https://www.ithome.com/0/924/685.htm",
         "sourceUrls": [
@@ -22392,30 +22157,6 @@ const newsData = [
         "date": "2026-02-28",
         "tags": [
             "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 339,
-        "title": "派拉蒙与华纳兄弟探索达成1110亿美元并购协议",
-        "summary": "派拉蒙与华纳兄弟探索达成1110亿美元的并购协议，派拉蒙将以每股31美元的价格收购华纳兄弟探索。若交易未能在2026年9月30日前完成，派拉蒙需每季度向股东额外支付每股0.25美元的费用；若因监管问题未能交割，需支付70亿美元的监管终止费。派拉蒙已代付华纳兄弟因终止先前协议而需向网飞支付的28亿美元分手费。网飞此前因价格原因退出竞购。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gcores.com/articles/211247",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gcores.com/articles/211247"
-            }
-        ],
-        "category": "policy",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-28",
-        "tags": [
-            "业内资讯"
         ],
         "sentiment": "neutral",
         "tdocMarking": "tdoc-verified",
@@ -22709,25 +22450,6 @@ const newsData = [
         "relatedNewsIds": []
     },
     {
-        "id": 329,
-        "title": "亚马逊进一步精简游戏业务，放弃发行一开放世界赛车游戏",
-        "summary": "亚马逊取消与Maverick Games合作的开放世界赛车游戏发行计划，进一步精简游戏业务，将资源集中于Luna云游戏平台和《古墓丽影》系列项目。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "#",
-        "sourceUrls": [],
-        "category": "policy",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-26",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
         "id": 330,
         "title": "纽约起诉 Valve，指控其游戏开箱系统是“典型的赌博”",
         "summary": "纽约州总检察长利蒂西亚·詹姆斯起诉游戏公司Valve，指控其游戏开箱系统为非法赌博行为，要求禁止推广赌博功能、追缴非法所得并支付罚款。诉状指出Valve通过开箱系统获利数千万美元，且该系统对未成年人危害严重。",
@@ -22844,7 +22566,7 @@ const newsData = [
     },
     {
         "id": 332,
-        "title": "Mobile revenue remained flat across 2025, but PC gaming \"sees another record year\" | Sensor Tower State of Gaming 2026",
+        "title": "Mobile revenue remained flat across 2025, but PC gaming “sees another record year“ | Sensor Tower State of Gaming 2026",
         "summary": "Sensor Tower发布的《2026年游戏行业状况报告》显示，2025年移动游戏收入...",
         "source": "腾讯文档策展",
         "sourceUrl": "#",
@@ -23036,150 +22758,6 @@ const newsData = [
             "微软"
         ],
         "sentiment": "positive"
-    },
-    {
-        "id": 1240,
-        "title": "Embark Studios CEO Patrick Soderlund named executive chairman of Nexon",
-        "summary": "Nexon任命《Arc Raiders》开发商Embark Studios首席执行官兼联合创始人Patrick Söderlund为执行董事长。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamedeveloper.com/business/embark-studios-ceo-patrick-soderlund-named-executive-chairman-of-nexon",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamedeveloper.com/business/embark-studios-ceo-patrick-soderlund-named-executive-chairman-of-nexon"
-            }
-        ],
-        "category": "policy",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-23",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1241,
-        "title": "Roblox responds to LA County lawsuit that alleges it is \"failing to protect children from predatory behavior\"",
-        "summary": "洛杉矶县指控Roblox平台设计存在安全隐患，成为掠夺者针对儿童的温床。诉讼称儿童在平台上反复接触性暗示内容、剥削和诱骗行为，Roblox将公司利润置于儿童安全之上。Roblox强烈否认诉讼中的指控，并表示将积极辩护。Roblox强调其平台设计以安全为核心，持续改进保护措施，包括监控有害内容和限制图像聊天功能。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.gamesindustry.biz/roblox-responds-to-la-county-lawsuit-that-alleges-it-is-failing-to-protect-children-from-predatory-behavior",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.gamesindustry.biz/roblox-responds-to-la-county-lawsuit-that-alleges-it-is-failing-to-protect-children-from-predatory-behavior"
-            }
-        ],
-        "category": "policy",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-23",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1243,
-        "title": "Valve's new Deadlock shooter nearly as popular on Steam as Overwatch, despite being invite-only and far from finished",
-        "summary": "Valve的新射击游戏《Deadlock》在Steam上的玩家数量已接近《守望先锋》，尽管该游戏目前仅限受邀用户参与测试且尚未完成开发。根据Circana的数据，《Deadlock》在1月成为美国Steam上第六大最受欢迎游戏，峰值同时在线玩家数达到125,000人，而《守望先锋》的峰值同时在线玩家数为134,000人。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.eurogamer.net/valves-deadlock-nearly-as-popular-as-overwatch",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.eurogamer.net/valves-deadlock-nearly-as-popular-as-overwatch"
-            }
-        ],
-        "category": "policy",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-23",
-        "tags": [
-            "业内资讯"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 323,
-        "title": "Steam 新品节 2026 年 2 月版正式启动，截至 3 月 2 日 23:00",
-        "summary": "Steam 新品节已启动，玩家可在 2 月 23 日 23:00 至 3 月 2 日 23:00 期间免费试玩未发布游戏的试用版，并与开发者互动或添加游戏至愿望单。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/923/003.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/923/003.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "low",
-        "featured": true,
-        "date": "2026-02-23",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1236,
-        "title": "微软游戏新掌门阿莎 · 夏尔马回应 Xbox 独占游戏回归呼声：我听到了",
-        "summary": "微软游戏新掌门阿莎·夏尔马回应了粉丝对Xbox独占游戏回归的呼声，并强调将重新聚焦Xbox核心玩家群体和主机体验。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/922/790.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/922/790.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-02-22",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
-    },
-    {
-        "id": 1238,
-        "title": "Epic 收购德国 AI 数字人 3D 建模企业 Meshcapade",
-        "summary": "Epic Games收购了德国AI数字人3D建模企业Meshcapade，Meshcapade的核心技术是基于马克斯·普朗克智能系统研究所开发的SMPL人体模型，该技术已成为3D人体建模的事实性标准。此次收购旨在降低创建逼真数字角色的门槛，扩展Epic在游戏、电影等领域的数字人工具。",
-        "source": "腾讯文档策展",
-        "sourceUrl": "https://www.ithome.com/0/922/869.htm",
-        "sourceUrls": [
-            {
-                "name": "腾讯文档策展",
-                "url": "https://www.ithome.com/0/922/869.htm"
-            }
-        ],
-        "category": "platform",
-        "importance": "high",
-        "featured": true,
-        "date": "2026-02-22",
-        "tags": [
-            "平台发行"
-        ],
-        "sentiment": "neutral",
-        "tdocMarking": "tdoc-verified",
-        "analysis": "",
-        "relatedNewsIds": []
     }
 ];
 
