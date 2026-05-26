@@ -1,17 +1,119 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-05-25T18:00:00Z
-// 更新者: news-agent (v5.2 腾讯文档缓存+web_search 14轮+新增20条+更新2条+90天清理)
+// 最后更新: 2026-05-26T18:00:00Z
+// 更新者: news-agent (v5.2 腾讯文档HTTP API+web_search 12轮+新增5条+更新2条+90天清理1条)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
 // ============================================
 const newsData = [
     {
+        "id": 1577,
+        "title": "虚幻引擎6正式公布，《火箭联盟》成首个落地商业产品",
+        "summary": "Epic Games联合Psynix在RLCS 2026巴黎Major上正式公布虚幻引擎6（UE6），并以《火箭联盟》新版作为首个商业搭载游戏展示实时游戏画面。这是《火箭联盟》自2015年来首次大版本引擎升级，新引擎将带来视觉保真度的巨大跃升。UE6采用全新Verse编程语言，标志着下一代游戏开发技术基线确立。Fortnite也将随后升级至UE6。",
+        "source": "Gematsu",
+        "sourceUrl": "https://www.gematsu.com/2026/05/unreal-engine-6-announced-with-rocket-league-reveal",
+        "sourceUrls": [
+            {"name": "Gematsu", "url": "https://www.gematsu.com/2026/05/unreal-engine-6-announced-with-rocket-league-reveal"},
+            {"name": "Polygon", "url": "https://www.polygon.com/unreal-engine-6-announcement-rocket-league/"},
+            {"name": "gHacks", "url": "https://www.ghacks.net/2026/05/25/epic-games-reveals-unreal-engine-6-with-rocket-league-as-the-first-confirmed-title/"},
+            {"name": "Game Rant", "url": "https://gamerant.com/rocket-league-unreal-engine-ue6-reavel/"}
+        ],
+        "category": "market",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-25",
+        "tags": ["Unreal Engine 6", "Epic Games", "Rocket League", "游戏引擎"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "UE6的公布是游戏行业技术基线的重大里程碑。Epic选择《火箭联盟》而非Fortnite作为首发展示，说明UE6不仅面向3A大作，也覆盖中量级实时服务游戏。Verse编程语言的引入预示着UE6在AI辅助开发、跨平台工作流等方面将有质的飞跃。对Unity等竞品引擎构成更大压力，可能加速行业向UE生态集中。",
+        "relatedNewsIds": [1557, 1525]
+    },
+    {
+        "id": 1578,
+        "title": "007 First Light即将发售：IO Interactive打造的邦德起源故事",
+        "summary": "IO Interactive（Hitman系列开发商）制作的詹姆斯·邦德游戏《007 First Light》将于5月27日正式发售，登陆PS5/Xbox Series/PC。本作讲述年轻邦德的起源故事，融合潜行与动作玩法。媒体试玩评价'有趣但偏保守'，评测代码仅提前数日发放引发关注。这是继《Hitman》三部曲后IO Interactive最重要的新作。",
+        "source": "Game Rant",
+        "sourceUrl": "https://gamerant.com/007-first-light-james-bond-preview/",
+        "sourceUrls": [
+            {"name": "Game Rant", "url": "https://gamerant.com/007-first-light-james-bond-preview/"},
+            {"name": "PC Gamer", "url": "https://www.pcgamer.com/games/action/007-first-light-guide/"},
+            {"name": "Kotaku", "url": "https://kotaku.com/over-3-hours-with-007-first-light-a-bond-game-thats-a-ton-of-fun-despite-playing-it-safe-2000692050"}
+        ],
+        "category": "game",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-26",
+        "tags": ["007 First Light", "IO Interactive", "James Bond", "PS5"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "007 First Light是2026年最具话题性的新作之一。IO Interactive将Hitman的潜行系统与邦德IP结合，但媒体评价'偏保守'暗示创新不足。评测代码仅提前数日发放的策略与GTA6类似，反映发行方对首周销量的信心与对泄露的担忧。该作商业表现将直接影响IO未来是否继续邦德系列。",
+        "relatedNewsIds": [1543, 1525]
+    },
+    {
+        "id": 1579,
+        "title": "《异环》上架Steam/Epic，7月发行支持多平台数据互通",
+        "summary": "幻塔工作室超自然都市开放世界RPG《异环》正式上架Steam和Epic Games Store，确认7月发行。游戏支持PC/Mac/PS5/移动端跨平台数据互通，主打单人+在线合作模式。这是国产PC/主机大作的又一重要进展，此前该作已在国内获得较高关注度。",
+        "source": "IT之家",
+        "sourceUrl": "https://www.ithome.com/0/954/366.htm",
+        "sourceUrls": [
+            {"name": "IT之家", "url": "https://www.ithome.com/0/954/366.htm"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-05-23",
+        "tags": ["异环", "Steam", "Epic", "国产游戏"],
+        "sentiment": "positive",
+        "tdocMarking": "none"
+    },
+    {
+        "id": 1580,
+        "title": "任天堂Switch 2全球涨价确认：美区$449涨至$499，9月生效",
+        "summary": "任天堂正式确认Switch 2全球涨价方案：美区从$449.99涨至$499.99，日区从49,980日元涨至56,980日元，欧洲从€469.99涨至€499.99。涨价将于2026年9月1日生效，原因是内存及元器件价格持续高企。同时任天堂下调FY2027 Switch 2销量预期，股价应声下跌40%。",
+        "source": "CNBC",
+        "sourceUrl": "https://www.cnbc.com/2026/05/08/nintendo-switch-2-price-hike-sales-fall-memory-crunch.html",
+        "sourceUrls": [
+            {"name": "CNBC", "url": "https://www.cnbc.com/2026/05/08/nintendo-switch-2-price-hike-sales-fall-memory-crunch.html"},
+            {"name": "IGN", "url": "https://www.ign.com/articles/nintendo-announces-switch-2-price-rise-in-light-of-changes-in-market-conditions-issues-apology"},
+            {"name": "Gematsu", "url": "https://www.gematsu.com/2026/05/switch-2-switch-and-nintendo-switch-online-price-increases-announced"}
+        ],
+        "category": "hardware",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-08",
+        "tags": ["Switch 2", "Nintendo", "涨价", "内存"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "Switch 2涨价$50是2026年主机市场最重大的价格变动，直接原因是内存短缺和关税压力。更值得警惕的是任天堂同时下调了销量预期——这说明涨价不仅是成本转嫁，更反映了需求端不确定性。股价暴跌40%显示投资者对Switch 2长期前景的担忧。PS5和Xbox此前也已涨价，三大主机同时涨价是行业结构性问题而非单一公司决策。",
+        "relatedNewsIds": [1566, 1559, 1561]
+    },
+    {
+        "id": 1581,
+        "title": "Embracer拆分细节明确：Fellowship获《古墓丽影》《魔戒》IP，2027年独立上市",
+        "summary": "Embracer Group正式公布拆分细节：新公司Fellowship Entertainment将持有《古墓丽影》《指环王/中土世界》等核心IP，计划2027年在纳斯达克斯德哥尔摩独立上市。原Embracer保留《地铁》《天国：拯救》《死亡岛》等IP。这是继Asmodee、Coffee Stain分拆后第三次重大架构调整。同时Q4盈利超预期，启动7.5亿克朗回购。",
+        "source": "GamesIndustry.biz",
+        "sourceUrl": "https://www.gamesindustry.biz/embracer-group-announces-plans-to-spin-off-fellowship-entertainment",
+        "sourceUrls": [
+            {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/embracer-group-announces-plans-to-spin-off-fellowship-entertainment"},
+            {"name": "Gematsu", "url": "https://www.gematsu.com/2026/05/embracer-group-to-split-into-two-companies-fellowship-entertainment-and-embracer"},
+            {"name": "IT之家", "url": "https://www.ithome.com/0/953/470.htm"}
+        ],
+        "category": "policy",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-20",
+        "tags": ["Embracer", "Fellowship", "古墓丽影", "拆分"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "Embracer第三次拆分标志着其帝国拆解战略进入深水区。Fellowship获得最值钱的IP（古墓丽影、魔戒）独立上市，有望释放被集团折价掩盖的价值。但拆分后两个实体都面临规模缩小导致议价权下降的风险。对行业而言，Embracer的持续瘦身意味着其旗下众多工作室和IP可能获得更灵活的发展空间，也可能被其他大厂收购。",
+        "relatedNewsIds": [1558]
+    },
+    {
         "id": 1543,
         "title": "FH6首周490万销量+$3.25亿收入，Steam 280万/Xbox 210万，300万Game Pass玩家",
-        "summary": "据Alinea Analytics数据，Forza Horizon 6首周售出约490万份，总收入$3.25亿。其中Steam约280万份、Xbox商店约210万份（占比42%），另超300万Game Pass玩家游玩。分析师指出Game Pass蚕食了部分传统销量，但Xbox端收入仍占51%。PS5版预计2026年晚些时候推出。",
+        "summary": "据Alinea Analytics数据，Forza Horizon 6首周售出约490万份，总收入$3.25亿。其中Steam约280万份、Xbox商店约210万份（占比42%），另超300万Game Pass玩家游玩。Steam同时在线峰值29.8万，超越《光环：无限》成Xbox第一方Steam双冠。分析师指出Game Pass蚕食了部分传统销量，但Xbox端收入仍占51%。PS5版预计2026年晚些时候推出。",
         "source": "gHacks",
         "sourceUrl": "https://www.ghacks.net/2026/05/24/forza-horizon-6-sells-4-9-million-copies-in-first-week-as-analyst-says-game-pass-cannibalized-revenue/",
         "sourceUrls": [
@@ -2725,8 +2827,8 @@ const newsData = [
     },
     {
         "id": 522,
-        "title": "《深海迷航2》发售1小时销量破百万，Steam峰值46.7万",
-        "summary": "《Subnautica 2》EA版登陆Steam及Xbox Series，首发进Game Pass，发售仅1小时销量突破百万，Steam愿望单早已超500万，峰值同时在线约46.7万人，是前作的9倍",
+        "title": "《深海迷航2》首周售出400万份+收入$1亿，EULA条款引争议",
+        "summary": "Unknown Worlds旗下深海生存游戏《深海迷航2》抢先体验首周售出逾400万份，总收入超1亿美元，成2026年Steam最快发售记录。然而EULA中含禁止VPN使用、损害赔偿上限50美元等条款引发玩家强烈反弹，无法主动攻击鱼类的设计也引争议。官方已宣布将改动相关条款。Steam同时在线峰值超46万。",
         "source": "3DM / GamingBolt",
         "sourceUrl": "#",
         "sourceUrls": [],
