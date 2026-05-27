@@ -1,13 +1,249 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-05-26T18:00:00Z
-// 更新者: news-agent (v5.2 腾讯文档HTTP API+web_search 12轮+新增5条+更新2条+90天清理1条)
+// 最后更新: 2026-05-27T18:00:00Z
+// 更新者: news-agent (v5.2 腾讯文档HTTP API+web_search 12轮+新增12条+更新1条+90天清理0条)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
 // ============================================
 const newsData = [
+    {
+        "id": 1593,
+        "title": "PlayStation Days of Play 2026启动：5/27-6/10大型促销+赛事",
+        "summary": "索尼正式开启Days of Play 2026年度促销活动，5月27日至6月10日为期两周。硬件方面PS VR2优惠$100、DualSense Edge优惠$30；软件方面多款大作折扣；PS Plus会员最高享七折。活动恰逢6月2日State of Play发布会，PS Direct额外5%优惠可叠加。这是PS5涨价后的首个大型促销季。",
+        "source": "PlayStation Blog",
+        "sourceUrl": "https://blog.playstation.com/2026/05/26/days-of-play-returns-may-27-through-june-10-with-deals-events-and-more/",
+        "sourceUrls": [
+            {"name": "PlayStation Blog", "url": "https://blog.playstation.com/2026/05/26/days-of-play-returns-may-27-through-june-10-with-deals-events-and-more/"},
+            {"name": "IGN", "url": "https://www.ign.com/articles/playstation-days-of-play-sale-2026"},
+            {"name": "IT之家", "url": "https://www.ithome.com/0/955/691.htm"}
+        ],
+        "category": "platform",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-05-26",
+        "tags": ["PlayStation", "Days of Play", "促销", "PS5"],
+        "sentiment": "positive",
+        "tdocMarking": "none"
+    },
+    {
+        "id": 1592,
+        "title": "Dragon Quest 12：命运之炎 5/27 40周年直播揭面纱",
+        "summary": "Square Enix宣布将于5月27日Dragon Quest 40周年纪念日举办特别直播活动，系列创始人堀井雄二确认将公布DQ系列未来规划。DQ12：命运之炎自2021年公布后已沉寂5年，此次直播被广泛认为将首次展示实机画面和发售信息。直播时间：北京时间5月27日11:00。",
+        "source": "Gematsu",
+        "sourceUrl": "https://www.gematsu.com/2026/05/dragon-quest-40th-anniversary-update-from-the-dragon-quest-team-broadcast-set-for-may-27",
+        "sourceUrls": [
+            {"name": "Gematsu", "url": "https://www.gematsu.com/2026/05/dragon-quest-40th-anniversary-update-from-the-dragon-quest-team-broadcast-set-for-may-27"},
+            {"name": "Polygon", "url": "https://www.polygon.com/dragon-quest-40th-anniversary-stream-dq12-flames-of-fate/"},
+            {"name": "Game Informer", "url": "https://www.gameinformer.com/2026/05/26/dragon-quest-40th-anniversary-stream-will-feature-new-announcements-tomorrow"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-26",
+        "tags": ["Dragon Quest 12", "Square Enix", "JRPG"],
+        "sentiment": "positive",
+        "tdocMarking": "none"
+    },
+    {
+        "id": 1591,
+        "title": "HoYoverse宣布3年最高投资$146亿用于AI内部工具研发",
+        "summary": "HoYoverse联合创始人刘伟在北京私域技术分享会上宣布，未来三年将投入最高146亿美元用于AI内部工具研发，涵盖AI NPC系统、自动化内容生成、实时服务环境优化等方向。公司将从依赖外部AI模型转向自研全栈AI生态。这是游戏行业有史以来最大规模的AI专项投资，远超同行水平。",
+        "source": "GamesIndustry.biz",
+        "sourceUrl": "https://www.gamesindustry.biz/hoyoverse-to-invest-up-to-146bn-in-ai-for-in-house-tools",
+        "sourceUrls": [
+            {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/hoyoverse-to-invest-up-to-146bn-in-ai-for-in-house-tools"},
+            {"name": "ResetEra", "url": "https://www.resetera.com/threads/gi-biz-hoyoverse-to-invest-up-to-14-6bn-in-ai-for-game-dev-enhancing-npc-systems-automation-content-generation-and-live-service-environments.1530469/"},
+            {"name": "Masters in Gaming", "url": "https://mastersingaming.com/2026/05/26/hoyoverse-reportedly-investing-up-to-14-7bn-in-ai-over-next-three-years/"}
+        ],
+        "category": "policy",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-26",
+        "tags": ["HoYoverse", "AI", "米哈游", "投资"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "HoYoverse的$146亿AI投资是游戏行业迄今最大规模的AI专项投入，标志着头部厂商从'AI应用'阶段进入'AI基建'阶段。自研全栈AI意味着HoYoverse不再依赖OpenAI/Google等外部模型，将AI能力内化为核心竞争壁垒。对行业而言，这可能加速AI在游戏开发中的标准化：AI NPC、自动化测试、程序化内容生成等环节将率先落地。中小厂商难以匹配此投资规模，AI能力差距将进一步扩大。",
+        "relatedNewsIds": [1577, 1558]
+    },
+    {
+        "id": 1590,
+        "title": "PS Plus 6月会员游戏公布：Grounded/Warhammer 40K暗潮/尼克全明星2",
+        "summary": "索尼公布2026年6月PS Plus Essential会员免费游戏阵容：Obsidian出品的合作生存游戏《Grounded全力以赴版》、Fatshark的《战锤40K：暗潮》、以及《尼克国际频道全明星格斗赛2》。这是PS Plus涨价后首个会员游戏阵容，含一款Xbox工作室作品（Grounded），显示平台间交叉发布趋势持续。",
+        "source": "PlayStation Blog",
+        "sourceUrl": "https://blog.playstation.com/2026/05/26/playstation-plus-monthly-games-for-june-grounded-fully-yoked-edition-nickelodeon-all-star-brawl-2-warhammer-40000-darktide/",
+        "sourceUrls": [
+            {"name": "PlayStation Blog", "url": "https://blog.playstation.com/2026/05/26/playstation-plus-monthly-games-for-june-grounded-fully-yoked-edition-nickelodeon-all-star-brawl-2-warhammer-40000-darktide/"},
+            {"name": "IGN", "url": "https://www.ign.com/articles/sony-confirms-playstation-plus-monthly-games-for-june-2026-first-lineup-announcement-since-price-rise"},
+            {"name": "Polygon", "url": "https://www.polygon.com/playstation-plus-june-2026-games-announced-ps4-ps5-free-essential/"}
+        ],
+        "category": "platform",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-05-26",
+        "tags": ["PS Plus", "Grounded", "Warhammer 40K", "索尼"],
+        "sentiment": "neutral",
+        "tdocMarking": "none"
+    },
+    {
+        "id": 1589,
+        "title": "007 First Light发售前1天遭DenuvOwO破解 Denuvo保护再失守",
+        "summary": "黑客组织DenuvOwO在007 First Light正式发售（5月27日）前一天即攻破了其Denuvo反篡改保护。IO Interactive在发售前6天才悄然添加Denuvo加密，引发大量预购退款，如今加密又在发售前被破解，Denuvo保护策略的效果和信誉遭受双重打击。这延续了2026年Denuvo加密被快速破解的趋势。",
+        "source": "VGTimes",
+        "sourceUrl": "https://vgtimes.com/gaming-news/156808-007-first-light-cracked-a-day-before-official-release.html",
+        "sourceUrls": [
+            {"name": "VGTimes", "url": "https://vgtimes.com/gaming-news/156808-007-first-light-cracked-a-day-before-official-release.html"},
+            {"name": "Tom's Hardware", "url": "https://www.tomshardware.com/video-games/pc-gaming/007-first-light-drops-last-minute-denuvo-drm-bombshell-leaving-pre-order-customers-and-fans-furious"},
+            {"name": "GameGPU", "url": "https://en.gamegpu.com/news/igry/khakerskaya-gruppa-denuvowo-vzlomala-zashchitu-denuvo-v-007-first-light"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-26",
+        "tags": ["007 First Light", "Denuvo", "DRM", "IO Interactive"],
+        "sentiment": "negative",
+        "tdocMarking": "none"
+    },
+    {
+        "id": 1588,
+        "title": "Xbox Player Voice论坛上线3天即落实改进：游玩时长改以小时显示",
+        "summary": "微软5月18日推出Xbox Player Voice社区反馈平台，取代原Xbox Cloud Gaming反馈门户。上线仅3天就落实了首个改进：将游玩时长显示单位从天改为小时。该平台让玩家提交反馈后可追踪处理进度，Xbox团队审核并标记状态。此举显示微软重视社区反馈的快速响应能力。",
+        "source": "Xbox Wire",
+        "sourceUrl": "https://news.xbox.com/en-us/2026/05/18/introducing-xbox-player-voice/",
+        "sourceUrls": [
+            {"name": "Xbox Wire", "url": "https://news.xbox.com/en-us/2026/05/18/introducing-xbox-player-voice/"},
+            {"name": "Pure Xbox", "url": "https://www.purexbox.com/news/2026/05/microsoft-announces-fan-feedback-program-xbox-player-voice-and-its-now-live"},
+            {"name": "IT之家", "url": "https://www.ithome.com/0/954/649.htm"}
+        ],
+        "category": "platform",
+        "importance": "low",
+        "featured": false,
+        "date": "2026-05-25",
+        "tags": ["Xbox", "Player Voice", "反馈", "微软"],
+        "sentiment": "positive",
+        "tdocMarking": "none"
+    },
+    {
+        "id": 1587,
+        "title": "摩根士丹利预测GTA6上市4月销量达4000万份，或定价$80",
+        "summary": "摩根士丹利发布报告预测GTA6上市4个月内销量可达4000万份，将超越GTA5首月2900万纪录，有望成为史上销量最快游戏。预计定价$80，Take-Two FY2027营收将因此大幅提升。Xbox发布的GTA6愿望单提醒获3600万浏览量，显示玩家热度极高。",
+        "source": "IT之家",
+        "sourceUrl": "https://www.ithome.com/0/954/395.htm",
+        "sourceUrls": [
+            {"name": "IT之家", "url": "https://www.ithome.com/0/954/395.htm"},
+            {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3944855.html"}
+        ],
+        "category": "market",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-25",
+        "tags": ["GTA6", "Take-Two", "摩根士丹利", "销量预测"],
+        "sentiment": "positive",
+        "tdocMarking": "none"
+    },
+    {
+        "id": 1586,
+        "title": "Xbox发布GTA6愿望单提醒获3600万浏览量，创平台互动纪录",
+        "summary": "Xbox在社交媒体发布提醒玩家可在Xbox商店添加GTA6愿望单的消息，获得超过3600万浏览量，创下Xbox平台单条推文互动纪录。GTA6将于2026年11月19日发售，相关消息热度持续攀升。",
+        "source": "3DM",
+        "sourceUrl": "https://www.3dmgame.com/news/202605/3944855.html",
+        "sourceUrls": [
+            {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3944855.html"}
+        ],
+        "category": "market",
+        "importance": "low",
+        "featured": false,
+        "date": "2026-05-25",
+        "tags": ["GTA6", "Xbox", "愿望单"],
+        "sentiment": "positive",
+        "tdocMarking": "none"
+    },
+    {
+        "id": 1585,
+        "title": "微软与动视暴雪股东达成和解，赔付2.5亿美元",
+        "summary": "微软及动视暴雪前高管同意支付2.5亿美元，就2023年690亿美元收购案引发的股东集体诉讼达成和解。股东指控收购过程信息披露不充分、涉嫌少付股东款项。和解协议中各方均不承认不当行为。该和解标志着围绕这笔游戏行业史上最大收购案的又一法律纠纷暂告段落。",
+        "source": "IT之家",
+        "sourceUrl": "https://www.ithome.com/0/954/395.htm",
+        "sourceUrls": [
+            {"name": "IT之家", "url": "https://www.ithome.com/0/954/395.htm"},
+            {"name": "新浪财经", "url": "https://finance.sina.com.cn/stock/usstock/c/2026-05-23/doc-inhyvhty4827028.shtml"},
+            {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3944850.html"}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-23",
+        "tags": ["微软", "动视暴雪", "收购", "和解"],
+        "sentiment": "neutral",
+        "tdocMarking": "none"
+    },
+    {
+        "id": 1584,
+        "title": "CoD 2026确认为新《现代战争》 不登陆Game Pass首日/放弃PS4",
+        "summary": "Infinity Ward联合工作室主管Mark Grigsby和Jack O'Hara正式确认2026年《使命召唤》为全新《现代战争》作品，称之为'决定性的现代战争'体验。关键确认：不登陆Xbox Game Pass首日、放弃PS4/Xbox One上一代平台、采用全面翻新的引擎。预计10月发售，这是Black Ops 7后最受期待的CoD作品。",
+        "source": "Eurogamer",
+        "sourceUrl": "https://www.eurogamer.net/call-of-duty-2026-modern-warfare-confirmed",
+        "sourceUrls": [
+            {"name": "Eurogamer", "url": "https://www.eurogamer.net/call-of-duty-2026-modern-warfare-confirmed"},
+            {"name": "VGC", "url": "https://www.videogameschronicle.com/news/call-of-duty-2026-confirmed-to-be-a-new-modern-warfare/"},
+            {"name": "Dexerto", "url": "https://www.dexerto.com/call-of-duty/call-of-duty-2026-confirmed-to-be-new-modern-warfare-from-infinity-ward-3367127/"},
+            {"name": "IT之家", "url": "https://news.qq.com/rain/a/20260523A07CHE00"}
+        ],
+        "category": "game",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-22",
+        "tags": ["Call of Duty", "Modern Warfare", "Infinity Ward", "Xbox"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "CoD 2026确认回归现代战争系列是系列粉丝最期待的方向，但两个关键信号更值得注意：①不登陆Game Pass首日——这意味着微软在CoD这一核心IP上仍选择传统销售模式而非订阅驱动，与此前'所有第一方首日入库'的承诺形成微妙对比；②放弃PS4/Xbox One——标志着完全进入本世代开发，引擎翻新有望带来画质飞跃。对EA的Battlefield 6构成直接竞争压力。",
+        "relatedNewsIds": [1543, 1570]
+    },
+    {
+        "id": 1583,
+        "title": "任天堂上调Switch 2产能20%：FY27前目标2000万台",
+        "summary": "彭博社报道任天堂将Switch 2生产目标提升至2000万台（截至2027年3月），相比此前公布的1650万台销量预期增加约20%。尽管已宣布9月全球涨价，任天堂仍选择在涨价生效前加速生产以抢占市场。Switch 2自2025年6月上市以来不到一年已售出1986万台。",
+        "source": "Eurogamer",
+        "sourceUrl": "https://www.eurogamer.net/switch-2-production-ramps-up-march-2027",
+        "sourceUrls": [
+            {"name": "Eurogamer", "url": "https://www.eurogamer.net/switch-2-production-ramps-up-march-2027"},
+            {"name": "VGC", "url": "https://www.videogameschronicle.com/news/nintendo-wants-to-produce-20-million-switch-2-consoles-by-march-2027-as-production-ramps-up/"},
+            {"name": "Nintendo Wire", "url": "https://nintendowire.com/news/2026/05/22/nintendo-is-looking-to-increase-switch-2-production-by-20-through-to-march-2027/"},
+            {"name": "Metro", "url": "https://metro.co.uk/2026/05/22/nintendo-ramps-switch-2-production-despite-worldwide-price-hike-28482415/"}
+        ],
+        "category": "platform",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-22",
+        "tags": ["Switch 2", "Nintendo", "产能", "彭博社"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "Switch 2在宣布涨价的同时上调产能20%，这一矛盾信号揭示了任天堂的战略逻辑：在9月涨价生效前的窗口期最大化出货量，利用当前强劲需求消化产能。2000万台的FY27目标意味着任天堂对Switch 2的长期需求仍有信心，涨价更多是成本转嫁而非需求看空。对索尼和微软而言，Switch 2在涨价前的冲量将加剧Q2-Q3主机市场竞争。",
+        "relatedNewsIds": [1580, 1566, 1561]
+    },
+    {
+        "id": 1582,
+        "title": "《荒野大镖客：救赎2》销量破8500万 跻身史上第三",
+        "summary": "Take-Two FY2026财报披露RDR2全球销量突破8500万份，超越Wii Sports（8300万）成为史上第三畅销游戏，仅次于Minecraft和GTA5。RDR2过去一年销量创2018年首发以来最佳年度表现，发售近8年仍保持强劲销售势头。至今未推出PS5/Xbox Series X原生版本。",
+        "source": "IGN",
+        "sourceUrl": "https://www.ign.com/articles/red-dead-redemption-2-overtakes-wii-sports-in-best-selling-games-of-all-time-list",
+        "sourceUrls": [
+            {"name": "IGN", "url": "https://www.ign.com/articles/red-dead-redemption-2-overtakes-wii-sports-in-best-selling-games-of-all-time-list"},
+            {"name": "RDR2.org", "url": "https://www.rdr2.org/news/rockstar-now-owns-two-of-the-three-best-selling-games-ever-made/"},
+            {"name": "IT之家", "url": "https://www.ithome.com/0/953/674.htm"},
+            {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3944695.html"}
+        ],
+        "category": "game",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-22",
+        "tags": ["RDR2", "Rockstar", "Take-Two", "销量里程碑"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "RDR2突破8500万份意味着Rockstar现在拥有史上最畅销游戏前三中的两款（GTA5 #1，RDR2 #3），这在游戏行业前所未有。更值得注意的是过去一年创下首发以来最佳年度——这暗示RDR2可能通过深度折扣和平台扩展持续获取新用户。至今未推出次世代原生版本反而意味着还有增长空间。对GTA6而言，Rockstar的长尾运营能力是定价$80的最佳背书。",
+        "relatedNewsIds": [1587, 1570]
+    },
     {
         "id": 1577,
         "title": "虚幻引擎6正式公布，《火箭联盟》成首个落地商业产品",
@@ -32,14 +268,15 @@ const newsData = [
     },
     {
         "id": 1578,
-        "title": "007 First Light即将发售：IO Interactive打造的邦德起源故事",
-        "summary": "IO Interactive（Hitman系列开发商）制作的詹姆斯·邦德游戏《007 First Light》将于5月27日正式发售，登陆PS5/Xbox Series/PC。本作讲述年轻邦德的起源故事，融合潜行与动作玩法。媒体试玩评价'有趣但偏保守'，评测代码仅提前数日发放引发关注。这是继《Hitman》三部曲后IO Interactive最重要的新作。",
-        "source": "Game Rant",
-        "sourceUrl": "https://gamerant.com/007-first-light-james-bond-preview/",
+        "title": "007 First Light评测解禁：MC88/OC87获近30年最佳邦德游戏评价",
+        "summary": "IO Interactive制作的詹姆斯·邦德游戏《007 First Light》评测解禁，Metacritic PS5版88分/PC版87分，OpenCritic 87分，IGN中国9分。被誉為自1997年《GoldenEye》以来最佳邦德游戏。然而发售前1天遭DenuvOwO破解Denuvo加密，且发售前6天才悄然添加Denuvo引发预购退款潮。游戏5月27日正式发售PS5/Xbox/PC，Switch 2版Q3推出。",
+        "source": "Metacritic",
+        "sourceUrl": "https://www.metacritic.com/game/007-first-light/",
         "sourceUrls": [
-            {"name": "Game Rant", "url": "https://gamerant.com/007-first-light-james-bond-preview/"},
-            {"name": "PC Gamer", "url": "https://www.pcgamer.com/games/action/007-first-light-guide/"},
-            {"name": "Kotaku", "url": "https://kotaku.com/over-3-hours-with-007-first-light-a-bond-game-thats-a-ton-of-fun-despite-playing-it-safe-2000692050"}
+            {"name": "Metacritic", "url": "https://www.metacritic.com/game/007-first-light/"},
+            {"name": "TheGamer", "url": "https://www.thegamer.com/007-first-light-best-review-scores-since-goldeneye/"},
+            {"name": "IGN中国", "url": "https://www.ign.com.cn/007-first-light/60248/007-chu-lu-feng-mang-yuan-chuang-ping-ce-9-fen-ign-zhong-guo"},
+            {"name": "Dot Esports", "url": "https://dotesports.com/general/news/007-first-light-review-roundup"}
         ],
         "category": "game",
         "importance": "high",
