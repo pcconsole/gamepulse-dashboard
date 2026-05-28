@@ -1,8 +1,8 @@
 // ============================================
-// 待上线 Pipeline 数据模块 V3.9
+// 待上线 Pipeline 数据模块 V3.11
 // 数据源：腾讯文档 MCP（唯一基准，文档ID: LRcKfOTzgHrV）
 //         + 网络搜索验证补充（标注来源，不覆盖MCP数据）
-// 最后更新: 2026-05-21 (V3.10 2款已发售移至released: 极限竞速地平线6+耀西)
+// 最后更新: 2026-05-28 (V3.11 2款已发售+MCP新增2款+网络搜索新增4款)
 // ============================================
 
 // ====== 未上线产品数据（全部展示）======
@@ -12,12 +12,10 @@ const pipelineUnreleased = [
     // =============================================
 
     // --- MCP 海外产品（有具体日期）---
-    { region: "海外", name: "乐高蝙蝠侠：黑暗骑士的遗产", publisher: "华纳兄弟", studio: "/", releaseDate: "2026/5/23", platforms: "PC+Switch2+PS5+Xbox", heat: "中低", heatNote: "乐高+蝙蝠侠双IP", gameplay: "潜行跑酷+开放世界探索，乐高积木风格", licenseStatus: "", licenseNote: "", source: "MCP" },
-    { region: "海外", name: "007：锋芒初露", publisher: "世嘉", studio: "IO Interactive", releaseDate: "2026/5/28", platforms: "PC+PS5+Xbox", heat: "中", heatNote: "开发成本达1.8亿美元", gameplay: "特工题材ACG，潜行及多武器枪战刺杀", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "Marvel Tokon Fighting Souls", publisher: "索尼", studio: "/", releaseDate: "2026/6/8", platforms: "PS5+PC", heat: "低", heatNote: "漫威IP，PS 6/8先发，PC 8/6", gameplay: "4v4团队格斗游戏", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "UFC 6", publisher: "EA", studio: "/", releaseDate: "2026/6/19", platforms: "PS5+Xbox", heat: "低", heatNote: "UFC授权", gameplay: "格斗", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "冒险家艾略特的千年物语", publisher: "史克威尔艾尼克斯", studio: "/", releaseDate: "2026/6/19", platforms: "PC+Switch+PS5+Xbox", heat: "低", heatNote: "HD-2D视觉动作冒险，时空开放世界", gameplay: "俯视角探索，仙女辅助战斗，时空穿梭冒险", licenseStatus: "", licenseNote: "", source: "MCP" },
-    { region: "海外", name: "艾恩葛朗特 回荡新声", publisher: "万代南梦宫", studio: "/", releaseDate: "2026/7/22", platforms: "PC+PS+Xbox", heat: "低", heatNote: "刀剑神域IP", gameplay: "创建英雄，装备选择，伙伴协同战斗升级", licenseStatus: "", licenseNote: "", source: "MCP" },
+    { region: "海外", name: "艾恩葛朗特 回荡新声", publisher: "万代南梦宫", studio: "/", releaseDate: "2026/7/10", platforms: "PC+PS+Xbox", heat: "低", heatNote: "刀剑神域IP", gameplay: "创建英雄，装备选择，伙伴协同战斗升级", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "轮回之兽（Beast of Reincarnation）", publisher: "Game Freak", studio: "/", releaseDate: "2026/8/4", platforms: "PC+PS5+Xbox", heat: "中低", heatNote: "宝可梦开发商Game Freak转型之作", gameplay: "后末日日本，一人一狗探索，技术要求高战斗", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "月光光心慌慌（Halloween: The Game）", publisher: "IllFonic&Gun Interactive", studio: "/", releaseDate: "2026/9/8", platforms: "PC+PS5+Xbox", heat: "低", heatNote: "万圣节电影改编", gameplay: "非对称对抗+恐怖冒险", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "漫威金刚狼", publisher: "索尼", studio: "Insomniac Games", releaseDate: "2026/9/15", platforms: "PS5", heat: "中高", heatNote: "漫威IP+Insomniac顶级工作室", gameplay: "独占漫威动作游戏，X战警金刚狼", licenseStatus: "", licenseNote: "", source: "MCP" },
@@ -26,13 +24,14 @@ const pipelineUnreleased = [
     // --- MCP 海外产品（季度/年份/夏秋）---
     { region: "海外", name: "Control Resonant", publisher: "505 Games", studio: "Remedy Entertainment", releaseDate: "2026年Q2", platforms: "PC+Switch+PS5+Xbox", heat: "中低", heatNote: "前作销量500万", gameplay: "超自然能力战斗，扭曲曼哈顿探索", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "光环：战役进化", publisher: "微软", studio: "Halo Studios", releaseDate: "2026年夏", platforms: "PC+PS+Xbox", heat: "中高", heatNote: "光环IP续作，系列超800万，忠实重制+扩展", gameplay: "HD画面，4人联机合作，新武器敌人", licenseStatus: "", licenseNote: "", source: "MCP" },
+    { region: "海外", name: "Stranger Than Heaven", publisher: "/", studio: "/", releaseDate: "2026年秋", platforms: "PC+PS+Xbox", heat: "低", heatNote: "如龙工作室新作", gameplay: "待定", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "我的世界：地下城2", publisher: "微软", studio: "/", releaseDate: "2026年秋", platforms: "待定", heat: "中", heatNote: "我的世界IP", gameplay: "待定", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "幻兽帕鲁集换式卡牌", publisher: "Pocketpair", studio: "/", releaseDate: "2026年", platforms: "待定", heat: "低", heatNote: "幻兽帕鲁IP", gameplay: "集换式卡牌", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "真·三国无双2 with 猛将传 Remastered", publisher: "光荣特库摩", studio: "/", releaseDate: "2026年", platforms: "PC+Switch+PS5", heat: "低", heatNote: "IP重制版，垂类头部", gameplay: "割草动作", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "黎明行者之血", publisher: "万代南梦宫", studio: "Rebel Wolves", releaseDate: "2026/9/3", platforms: "PC+PS5+Xbox", heat: "中低", heatNote: "巫师3总监新工作室，2026/4/29确认9/3发售", gameplay: "暗黑奇幻吸血鬼动作RPG", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "堕落之主2", publisher: "CI Games", studio: "/", releaseDate: "2026年", platforms: "PC+PS5+Xbox", heat: "低", heatNote: "", gameplay: "类魂ARPG", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "原子之心2", publisher: "Mundfish", studio: "/", releaseDate: "2026年", platforms: "PC", heat: "中低", heatNote: "前作销量500万", gameplay: "第一人称射击+苏联科幻风", licenseStatus: "", licenseNote: "", source: "MCP" },
-    { region: "海外", name: "战锤40K：战争黎明4", publisher: "King Art Games", studio: "/", releaseDate: "2026年", platforms: "PC", heat: "中高", heatNote: "星际战士2销量700万+", gameplay: "即时战略RTS", licenseStatus: "", licenseNote: "", source: "MCP" },
+    { region: "海外", name: "战锤40K：战争黎明4", publisher: "Relic", studio: "/", releaseDate: "2026/9/17", platforms: "待定", heat: "低", heatNote: "战锤IP续作", gameplay: "即时战略RTS", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "战争机器：E-Day", publisher: "微软", studio: "/", releaseDate: "2026年", platforms: "PC+Xbox", heat: "中低", heatNote: "战争机器IP", gameplay: "第三人称射击", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "女神异闻录4 Revival", publisher: "世嘉", studio: "/", releaseDate: "2026年", platforms: "PC+PS5+Xbox", heat: "低", heatNote: "女神异闻录IP", gameplay: "JRPG", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "皇牌空战8：希孚之翼", publisher: "万代南梦宫", studio: "/", releaseDate: "2026年", platforms: "PC+PS5+Xbox", heat: "低", heatNote: "皇牌空战系列IP", gameplay: "空战射击", licenseStatus: "", licenseNote: "", source: "MCP" },
@@ -43,6 +42,7 @@ const pipelineUnreleased = [
     { region: "海外", name: "漫威1943：九头蛇崛起", publisher: "Skydance New Media", studio: "/", releaseDate: "2026年", platforms: "PC+PS5+Xbox", heat: "中低", heatNote: "漫威IP", gameplay: "二战背景动作冒险", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "宝可梦：风 / 浪", publisher: "任天堂", studio: "宝可梦公司", releaseDate: "2026年", platforms: "Switch2", heat: "高", heatNote: "宝可梦第十世代新作", gameplay: "回合制战斗RPG，融合宝可梦传说阿尔宙斯战斗系统", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "地平线：钢铁边境", publisher: "索尼", studio: "Guerrilla&NCSOFT", releaseDate: "2026年末", platforms: "移动+PC", heat: "中低", heatNote: "", gameplay: "狩猎MMORPG", licenseStatus: "", licenseNote: "", source: "MCP" },
+    { region: "海外", name: "地铁2039", publisher: "Deep Silver", studio: "/", releaseDate: "2026年冬", platforms: "PC+PS+Xbox", heat: "低", heatNote: "地铁系列IP", gameplay: "第一人称射击+生存", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "全面战争：战锤40000", publisher: "Creative Assembly", studio: "/", releaseDate: "2026年", platforms: "PC+PS5+Xbox", heat: "中低", heatNote: "全战系列销量4200万+，战锤前作700万+", gameplay: "回合制+即时战术RTS", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "战锤40K：机械神教2", publisher: "Kasedo Games", studio: "/", releaseDate: "2026年", platforms: "PC+PS5+Xbox", heat: "低", heatNote: "战锤IP，核心粉丝忠诚度高", gameplay: "策略战棋", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "刺客信条：黑旗 Resynced", publisher: "育碧", studio: "/", releaseDate: "2026/7/9", platforms: "PC+PS5+Xbox", heat: "中", heatNote: "育碧黑旗重制版，4/23官方确认7/9发售", gameplay: "潜行刺杀+海战+岛屿探索", licenseStatus: "", licenseNote: "", source: "MCP" },
@@ -63,7 +63,7 @@ const pipelineUnreleased = [
     { region: "海外", name: "马克思佩恩 1&2重制版", publisher: "R星", studio: "Rockstar Games", releaseDate: "2027年", platforms: "待定", heat: "中", heatNote: "系列销量1100万", gameplay: "子弹时间射击", licenseStatus: "", licenseNote: "", source: "MCP" },
 
     // --- MCP 国内产品（有具体日期）---
-    { region: "国内", name: "影之刃零（Phantom Blade Zero）", publisher: "灵游坊", studio: "/", releaseDate: "2026/9/10", platforms: "PC+PS", heat: "中", heatNote: "虚幻5引擎，BOSS融入AI智能", gameplay: "魂类ARPG，双刀+弹反机制", licenseStatus: "已获版号", licenseNote: "移动版号", source: "MCP" },
+    { region: "国内", name: "影之刃零（Phantom Blade Zero）", publisher: "灵游坊", studio: "/", releaseDate: "2026/9/9", platforms: "PC+PS", heat: "中", heatNote: "虚幻5引擎，BOSS融入AI智能", gameplay: "魂类ARPG，双刀+弹反机制", licenseStatus: "已获版号", licenseNote: "移动版号", source: "MCP" },
 
     // --- MCP 国内产品（季度/年份）---
     { region: "国内", name: "头号禁区", publisher: "字节跳动", studio: "沐瞳", releaseDate: "2026年Q2", platforms: "移动", heat: "中低", heatNote: "更注重策略性，偏向MOBA", gameplay: "第三人称搜打撤+MOBA", licenseStatus: "未获版号", licenseNote: "", source: "MCP" },
@@ -113,11 +113,19 @@ const pipelineUnreleased = [
     { region: "海外", name: "碧蓝幻想Relink：无尽黄昏", publisher: "Cygames", studio: "Cygames", releaseDate: "2026/7/9", platforms: "PC+Switch2+PS5", heat: "中", heatNote: "前作全球300万+，据GamesRadar确认7/9", gameplay: "多人联机ARPG", licenseStatus: "", licenseNote: "", source: "网络搜索" },
     { region: "海外", name: "最终幻想7 重生 Xbox/Switch版", publisher: "史克威尔艾尼克斯", studio: "/", releaseDate: "2026/6/3", platforms: "Xbox+Switch", heat: "中高", heatNote: "FF7重制三部曲第二作移植版，据GamesRadar确认6/3", gameplay: "ARPG", licenseStatus: "", licenseNote: "", source: "网络搜索" },
     { region: "海外", name: "Gothic 1 Remake", publisher: "THQ Nordic", studio: "Alkimia Interactive", releaseDate: "2026/6/5", platforms: "PC+Xbox+PS5", heat: "中", heatNote: "经典RPG重制，据GamesRadar确认6/5发售", gameplay: "开放世界动作RPG", licenseStatus: "", licenseNote: "", source: "网络搜索" },
+    { region: "海外", name: "Star Fox", publisher: "任天堂", studio: "/", releaseDate: "2026/6/25", platforms: "Switch2", heat: "中高", heatNote: "Star Fox 64电影化重制，任天堂5/6 Direct公布，据Nintendo官方+Gematsu+NintendoLife 8+源确认", gameplay: "轨道射击+空战冒险", licenseStatus: "", licenseNote: "", source: "网络搜索" },
+    { region: "海外", name: "Splatoon Raiders", publisher: "任天堂", studio: "/", releaseDate: "2026/7/23", platforms: "Switch2", heat: "中", heatNote: "Splatoon系列首款衍生作，单人为焦点的地牢探索，据Nintendo官方+TheGamer+NintendoLife 8+源确认", gameplay: "单人地牢探索+宝藏收集", licenseStatus: "", licenseNote: "", source: "网络搜索" },
+    { region: "海外", name: "Mina the Hollower", publisher: "Yacht Club Games", studio: "Yacht Club Games", releaseDate: "2026/5/29", platforms: "PC+PS5+Xbox+Switch2+Switch", heat: "中低", heatNote: "《铲子骑士》开发商新作，据Gematsu+RPGSite+GameInformer 8+源确认5/29", gameplay: "8-bit复古哥特风动作冒险", licenseStatus: "", licenseNote: "", source: "网络搜索" },
+    { region: "海外", name: "合金装备：大师合集 Vol.2", publisher: "科乐美", studio: "/", releaseDate: "2026/8/27", platforms: "PC+PS5+Xbox+Switch2+Switch", heat: "中低", heatNote: "含MGS4+和平行者+Ghost Babel，据Konami官方+PlayStation Blog 8+源确认8/27", gameplay: "潜行动作合集", licenseStatus: "", licenseNote: "", source: "网络搜索" },
     { region: "国内", name: "刺客信条：影（国行版）", publisher: "育碧/腾讯", studio: "/", releaseDate: "2026年", platforms: "PC+PS5+Xbox", heat: "中", heatNote: "国行版审核中", gameplay: "潜行动作冒险", licenseStatus: "审核中", licenseNote: "腾讯代理国行版", source: "网络搜索" },
 ];
 
 // ====== 已上线产品数据（仅展示2026年上线的）======
 const pipelineReleased = [
+    // ===== 2026-05-28 更新: 新增已发售 =====
+    { region: "海外", name: "乐高蝙蝠侠：黑暗骑士的遗产", publisher: "华纳兄弟", studio: "/", releaseDate: "2026/5/23", platforms: "PC+Switch2+PS5+Xbox", heat: "中低", heatNote: "乐高+蝙蝠侠双IP，据GameSpot+MSN+Gematsu多源确认5/22发售", gameplay: "潜行跑酷+开放世界探索，乐高积木风格", source: "MCP" },
+    { region: "海外", name: "007：锋芒初露", publisher: "世嘉", studio: "IO Interactive", releaseDate: "2026/5/28", platforms: "PC+PS5+Xbox", heat: "中", heatNote: "开发成本达1.8亿美元，据IGN+GameSpot+TechTimes+Beebom 10+源确认5/27发售", gameplay: "特工题材ACG，潜行及多武器枪战刺杀", source: "MCP" },
+    { region: "海外", name: "Luna Abyss", publisher: "Kwalee", studio: "Kwalee Labs", releaseDate: "2026/5/21", platforms: "PC+PS5+Xbox", heat: "低", heatNote: "弹幕地狱FPS，据Gematsu+IGN+Wccftech 8+源确认5/21发售，Game Pass首日入库", gameplay: "第一人称弹幕地狱射击+宇宙恐怖", source: "网络搜索" },
     // ===== 2026-05-21 更新: 新增已发售 =====
     { region: "海外", name: "极限竞速：地平线6", publisher: "微软", studio: "Playground Games", releaseDate: "2026/5/19", platforms: "PC+Xbox", heat: "中低", heatNote: "IP续作，垂类头部，日本设定MC高分(IGN/TechRadar/PCGamer/GamesRadar多源评测确认5/19发售)", gameplay: "赛车竞速游戏头部游戏", source: "MCP" },
     { region: "海外", name: "耀西与不可思议的图鉴（Yoshi and the Mysterious Book）", publisher: "任天堂", studio: "Good-Feel", releaseDate: "2026/5/21", platforms: "Switch2", heat: "中", heatNote: "任天堂官方确认5/21，超级马力欧40周年纪念作品(Nintendo官方+NintendoLife+Gematsu多源确认)", gameplay: "横版平台跳跃冒险", source: "网络搜索" },
