@@ -1,13 +1,261 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.0 自动更新，请勿手动编辑
-// 最后更新: 2026-05-27T18:00:00Z
-// 更新者: news-agent (v5.2 腾讯文档HTTP API+web_search 12轮+新增12条+更新1条+90天清理0条)
+// 最后更新: 2026-05-28T18:00:00Z
+// 更新者: news-agent (v5.2 腾讯文档MCP+web_search 12轮+新增12条+更新2条+90天清理0条)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
 // ============================================
 const newsData = [
+    {
+        "id": 1605,
+        "title": "Valve宣布Steam Deck大幅涨价：1TB OLED版涨至$949，涨幅逾40%",
+        "summary": "Valve于5月27日大幅上调Steam Deck售价，512GB OLED版从$549涨至$789，1TB OLED版从$649涨至$949，涨幅达44%-46%。官方未作说明，市场普遍归因于全球内存/存储成本持续上涨。涨价引发玩家强烈不满，同时为Valve即将推出的Steam Machine定价前景蒙上阴影。此前Steam Deck已因内存短缺缺货数月。",
+        "source": "Kotaku",
+        "sourceUrl": "https://kotaku.com/valve-just-massively-increased-the-price-of-a-steam-deck-2000699901",
+        "sourceUrls": [
+            {"name": "Kotaku", "url": "https://kotaku.com/valve-just-massively-increased-the-price-of-a-steam-deck-2000699901"},
+            {"name": "gHacks", "url": "https://www.ghacks.net/2026/05/28/valve-raises-steam-deck-prices-by-nearly-50-1tb-oled-model-now-949/"},
+            {"name": "TechTimes", "url": "https://www.techtimes.com/articles/317297/20260527/steam-deck-prices-surge-over-200-due-ongoing-ramageddon-hardware-crisis.htm"},
+            {"name": "VGC", "url": "https://www.videogameschronicle.com/news/valve-raises-steam-deck-price/"}
+        ],
+        "category": "hardware",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-27",
+        "tags": ["Steam Deck", "Valve", "涨价", "内存短缺"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "Steam Deck涨价40%+是掌机市场迄今最激进的价格调整，直接由RAMageddon内存危机驱动。Valve此前凭借性价比建立掌机生态，$949的价格已接近高端游戏笔记本，可能大幅削弱Steam Deck对潜在新用户的吸引力。更深层的隐忧是：Steam Machine定价将面临更大压力。如果内存成本无法在2027年回落，整个PC掌机品类可能进入'价格通胀-需求萎缩'的负循环。",
+        "relatedNewsIds": [1580, 1566, 1559]
+    },
+    {
+        "id": 1604,
+        "title": "DQ12开发重启更名《前往梦境彼端》，40周年直播首支预告",
+        "summary": "Square Enix在Dragon Quest 40周年直播中宣布DQ12彻底重启：原《命运之炎》方案废弃，新作更名为《Dragon Quest XII: Beyond Dreams》，主角与故事线全部不同，发布全新预告。自2021年公布后已沉寂5年，开发方向、画面与玩法全部重新规划。同时公布《DQ Monsters: The Withered World》和《DQ11S》Switch 2版。",
+        "source": "Gematsu",
+        "sourceUrl": "https://www.gematsu.com/2026/05/dragon-quest-xii-beyond-dreams-revealed-after-development-restart",
+        "sourceUrls": [
+            {"name": "Gematsu", "url": "https://www.gematsu.com/2026/05/dragon-quest-xii-beyond-dreams-revealed-after-development-restart"},
+            {"name": "Eurogamer", "url": "https://www.eurogamer.net/dragon-quest-12-beyond-dreams-revealed"},
+            {"name": "Nintendo Life", "url": "https://www.nintendolife.com/news/2026/05/dragon-quest-xii-gets-a-new-title-following-complete-development-reset"},
+            {"name": "IT之家", "url": "https://www.ithome.com/0/956/234.htm"}
+        ],
+        "category": "game",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-27",
+        "tags": ["Dragon Quest 12", "Square Enix", "JRPG", "开发重启"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "analysis": "DQ12从'命运之炎'到'前往梦境彼端'的彻底重启是SE近年最激进的IP策略调整。5年沉寂后推翻全部方案，说明原方向在内部评估中未能达标。更值得关注的是SE同时公布多款DQ衍生作品和移植版——这是典型的'IP宇宙'策略，用中量级产品维持IP热度为主作铺路。对日本RPG市场而言，DQ12的方向调整可能影响整个JRPG品类的叙事风格走向。",
+        "relatedNewsIds": [1592, 1577]
+    },
+    {
+        "id": 1603,
+        "title": "巫师3官宣第三部资料片《旧时曲》2027年发售，首发12年后再续传奇",
+        "summary": "CD Projekt Red正式公布《巫师3：狂猎》第三部资料片《Songs of the Past（旧时曲）》，计划2027年登陆PS5/Xbox Series/PC。由CDPR与Fool's Theory合作开发，恰逢《血与酒》10周年纪念。巫师3累计销量已超6000万份，11年后仍推出大型DLC，系列长期运营能力再度验证。",
+        "source": "CD Projekt",
+        "sourceUrl": "https://www.cdprojekt.com/en/media/news/the-witcher-3-wild-hunt-songs-of-the-past-announced/",
+        "sourceUrls": [
+            {"name": "CD Projekt", "url": "https://www.cdprojekt.com/en/media/news/the-witcher-3-wild-hunt-songs-of-the-past-announced/"},
+            {"name": "IGN", "url": "https://www.ign.com/articles/the-witcher-3-wild-hunt-songs-of-the-past-expansion-dlc-announced-first-details-confirmed"},
+            {"name": "Eurogamer", "url": "https://www.eurogamer.net/the-witcher-3-songs-of-the-past-dlc-announced/"},
+            {"name": "VGC", "url": "https://www.videogameschronicle.com/news/the-witcher-3-gets-surprise-third-expansion-songs-of-the-past/"}
+        ],
+        "category": "game",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-27",
+        "tags": ["Witcher 3", "CD Projekt", "DLC", "Songs of the Past"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "巫师3在发售12年后推出第三部资料片，这在3A游戏行业几乎前所未有。CDPR此举有多重战略含义：①为巫师4预热，维持IP热度；②Fool's Theory合作开发模式验证了外部工作室参与核心IP的可行性；③6000万+用户基础意味着即使转化率很低，DLC收入也相当可观。这标志着3A游戏从'首发即终局'转向'全生命周期运营'的行业趋势加速。",
+        "relatedNewsIds": [1582, 1570]
+    },
+    {
+        "id": 1602,
+        "title": "宝可梦系列全球累计销量突破5.15亿份，近一年新增约2600万份",
+        "summary": "The Pokemon Company更新官方数据：宝可梦系列全球累计销量突破5.15亿份，过去一年新增约2600万份。《红/绿/蓝》3138万份仍是最畅销单作。同时公布TCG产能提升计划及明年新作《Winds and Waves》。宝可梦依然是全球最畅销的游戏IP之一。",
+        "source": "VGChartz",
+        "sourceUrl": "https://www.vgchartz.com/article/467940/pokemon-series-has-sold-over-515-million-units/",
+        "sourceUrls": [
+            {"name": "VGChartz", "url": "https://www.vgchartz.com/article/467940/pokemon-series-has-sold-over-515-million-units/"},
+            {"name": "Eurogamer", "url": "https://www.eurogamer.net/pokemon-series-sales-515-million/"},
+            {"name": "MyNintendoNews", "url": "https://mynintendonews.com/2026/05/27/pokemon-series-has-now-sold-over-515-million-software-units-worldwide/"},
+            {"name": "Insider Gaming", "url": "https://insider-gaming.com/pokemon-game-sales-surpass-515-million-worldwide/"}
+        ],
+        "category": "market",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-27",
+        "tags": ["Pokemon", "宝可梦", "销量里程碑", "The Pokemon Company"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "analysis": "5.15亿份使宝可梦稳居全球最畅销游戏IP第一梯队。年增2600万份在Switch 2换代期间仍保持强劲，说明IP驱动力远超单一平台周期。新作《Winds and Waves》和TCG产能提升显示TPC正从'游戏为中心'转向'IP全生态'战略。对任天堂而言，宝可梦是Switch 2内容生态的基石IP。",
+        "relatedNewsIds": [1583, 1562]
+    },
+    {
+        "id": 1601,
+        "title": "Xbox Games Showcase前泄露：《神鬼寓言》等7款游戏疑似加入Game Pass",
+        "summary": "Xbox主机'即将加入Game Pass'栏目意外提前展示7款未发售游戏，含《Fable》《Clockwork Revolution》《共鸣：瘟疫传说传承》《海岛大亨7》《女巫溪》等。微软此前从未如此集中添加大量未公布档期作品。距离6月7日Xbox Games Showcase不足两周，泄露可能提前揭示了发布会阵容。",
+        "source": "Windows Central",
+        "sourceUrl": "https://www.windowscentral.com/gaming/xbox/xboxs-game-pass-page-may-have-revealed-some-showcase-games-ahead-of-time",
+        "sourceUrls": [
+            {"name": "Windows Central", "url": "https://www.windowscentral.com/gaming/xbox/xboxs-game-pass-page-may-have-revealed-some-showcase-games-ahead-of-time"},
+            {"name": "Kotaku", "url": "https://kotaku.com/i-really-hope-clockwork-revolutions-is-one-of-this-years-surprise-xbox-games-2000699881"},
+            {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3945075.html"},
+            {"name": "Notebookcheck", "url": "https://www.notebookcheck.net/Game-Pass-app-leak-may-reveal-Xbox-Showcase-games-with-Fable-reboot-included.1306855.0.html"}
+        ],
+        "category": "platform",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-27",
+        "tags": ["Xbox", "Game Pass", "Fable", "泄露", "Showcase"],
+        "sentiment": "neutral",
+        "tdocMarking": "none"
+    },
+    {
+        "id": 1600,
+        "title": "007 First Light首发登顶Steam全球销量榜，峰值68,477人在线",
+        "summary": "IO Interactive《007 First Light》正式上线后首发登顶Steam全球销量榜及国区第一，超越《极限竞速：地平线6》。Steam评价'特别好评'（87%好评率），峰值同时在线68,477人。PS商店评分4.76/5。但分析师指出预购量低于预期，受众兴趣更接近《印第安纳琼斯》而非《神秘海域》。",
+        "source": "3DM",
+        "sourceUrl": "https://www.3dmgame.com/news/202605/3945034.html",
+        "sourceUrls": [
+            {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3945034.html"},
+            {"name": "GamingBolt", "url": "https://www.gamingbolt.com/007-first-light-sales-analysis"},
+            {"name": "SteamDB", "url": "https://steamdb.info/app/3768760/graphs/"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-05-27",
+        "tags": ["007 First Light", "Steam", "IO Interactive", "销量"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "relatedNewsIds": [1578, 1589]
+    },
+    {
+        "id": 1599,
+        "title": "DQ Monsters: The Withered World全平台公布+DQ11S Switch 2版9月发售",
+        "summary": "DQ 40周年纪念直播一次性公布两条新线：新作《Dragon Quest Monsters: The Withered World》登陆PS5/Xbox/PC/Switch 1&2，预计在DQ12之前发售，怪兽收集核心玩法回归；《Dragon Quest XI S》Switch 2版9月发售，新世代主机版性能/画质增强。SE通过'DQ小宇宙'分层策略覆盖不同玩家群体。",
+        "source": "GamingBolt",
+        "sourceUrl": "https://gamingbolt.com/dragon-quest-monsters-the-withered-world-announced",
+        "sourceUrls": [
+            {"name": "GamingBolt", "url": "https://gamingbolt.com/dragon-quest-monsters-the-withered-world-announced"},
+            {"name": "Eurogamer", "url": "https://www.eurogamer.net/dragon-quest-monsters-withered-world-announced/"},
+            {"name": "IT之家", "url": "https://www.ithome.com/0/956/234.htm"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-05-27",
+        "tags": ["Dragon Quest", "Square Enix", "Switch 2", "DQ Monsters"],
+        "sentiment": "positive",
+        "tdocMarking": "none",
+        "relatedNewsIds": [1604, 1592]
+    },
+    {
+        "id": 1598,
+        "title": "育碧FY2026创纪录亏损13亿欧元，裁员约1200人，取消6款游戏",
+        "summary": "育碧2025-26财年运营亏损达13亿欧元（约14亿美元），创公司历史纪录。净预订额同比下降17.4%至15.3亿欧元，全年裁员约1200人至16,600人。取消6款游戏导致资产减值约6.5亿欧元，固定成本较FY2023削减约18%。育碧警告FY2027仍将亏损，预计FY2028恢复盈利。",
+        "source": "GamesIndustry.biz",
+        "sourceUrl": "https://www.gamesindustry.biz/ubisofts-full-fy26-financials-report-shows-a-sharp-decline-in-revenue-and-net-bookings",
+        "sourceUrls": [
+            {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/ubisofts-full-fy26-financials-report-shows-a-sharp-decline-in-revenue-and-net-bookings"},
+            {"name": "GamingBolt", "url": "https://gamingbolt.com/ubisoft-reports-e1-3-billion-in-losses-for-fy26-projects-more-losses-next-year-profits-in-fy28"},
+            {"name": "Eurogamer", "url": "https://www.eurogamer.net/ubisoft-fy26-record-loss/"},
+            {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3944300.html"}
+        ],
+        "category": "policy",
+        "importance": "high",
+        "featured": true,
+        "date": "2026-05-21",
+        "tags": ["育碧", "亏损", "裁员", "财报"],
+        "sentiment": "negative",
+        "tdocMarking": "none",
+        "analysis": "育碧13亿欧元亏损创公司历史纪录，是欧洲游戏行业近年最大亏损之一。核心问题在于：产品空窗期+过度扩张+live-service转型受挫三重打击。裁员1200人和取消6款游戏说明管理层在激进收缩，但FY2027仍预亏意味着阵痛期至少持续两年。2029年前推三大IP新作是赌注，如果刺客信条/孤岛惊魂/幽灵行动新作仍无法扭亏，育碧可能面临被收购或进一步拆分的命运。",
+        "relatedNewsIds": [1581, 1558]
+    },
+    {
+        "id": 1597,
+        "title": "育碧承诺2029年前推出《刺客信条》《孤岛惊魂》《幽灵行动》三大新作",
+        "summary": "育碧在财报中宣布近期作品MC评分均达80+，并计划在2029年前针对旗下三大核心IP推出品质超越既往的新作产品线。《幽灵行动》新作已正式推迟至2027年发售。育碧将三大IP的成败视为扭亏为盈的关键赌注。",
+        "source": "3DM",
+        "sourceUrl": "https://www.3dmgame.com/news/202605/3944301.html",
+        "sourceUrls": [
+            {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3944301.html"},
+            {"name": "Eurogamer", "url": "https://www.eurogamer.net/ubisoft-three-major-ip-by-2029/"}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-21",
+        "tags": ["育碧", "刺客信条", "孤岛惊魂", "幽灵行动"],
+        "sentiment": "neutral",
+        "tdocMarking": "none",
+        "relatedNewsIds": [1598]
+    },
+    {
+        "id": 1596,
+        "title": "《战锤40K：战争黎明4》发售日确定9月17日，豪华版9月14日抢先",
+        "summary": "Deep Silver和King Art Games宣布《Warhammer 40,000: Dawn of War IV》将于9月17日登陆PC Steam，Commander Edition享有9月14日3天抢先体验。首发包含Crusade模式，Year One路线图已公布。距系列上一部作品已近十年，RTS粉丝期待已久。",
+        "source": "Gematsu",
+        "sourceUrl": "https://www.gematsu.com/2026/05/warhammer-40000-dawn-of-war-iv-launches-september-17",
+        "sourceUrls": [
+            {"name": "Gematsu", "url": "https://www.gematsu.com/2026/05/warhammer-40000-dawn-of-war-iv-launches-september-17"},
+            {"name": "Wccftech", "url": "https://wccftech.com/warhammer-40k-dawn-of-war-4-release-date-post-launch-roadmap/"},
+            {"name": "IGN中国", "url": "https://www.ign.com.cn/warhammer-40k-dawn-of-war-iv/60250/zhan-chui-40k-zhan-zheng-li-ming-4-fa-shou-ri-que-ding-9-yue-17-ri"}
+        ],
+        "category": "game",
+        "importance": "medium",
+        "featured": false,
+        "date": "2026-05-21",
+        "tags": ["Warhammer 40K", "Dawn of War 4", "RTS", "King Art Games"],
+        "sentiment": "positive",
+        "tdocMarking": "none"
+    },
+    {
+        "id": 1595,
+        "title": "Valve申请驳回CS2开箱$60亿赌博诉讼，辩称开箱与盲盒无本质区别",
+        "summary": "Valve向纽约联邦法院提交42页动议，申请驳回纽约总检察长对CS2开箱系统的$60亿赌博诉讼。Valve主张开箱与棒球卡、盲盒等'随机惊喜'商品同类，不构成赌博。该案若Valve败诉，可能重塑游戏开箱及整个盲盒品类的监管框架。此前Valve已因开箱经济体系改革抹去超10亿美元市值。",
+        "source": "IGN",
+        "sourceUrl": "https://www.ign.com/articles/people-enjoy-surprises-valve-is-trying-to-dismiss-new-yorks-counter-strike-loot-box-lawsuit",
+        "sourceUrls": [
+            {"name": "IGN", "url": "https://www.ign.com/articles/people-enjoy-surprises-valve-is-trying-to-dismiss-new-yorks-counter-strike-loot-box-lawsuit"},
+            {"name": "Kotaku", "url": "https://kotaku.com/valve-accused-of-promoting-illegal-gambling-with-loot-boxes-in-new-lawsuit-2000673735"},
+            {"name": "Courthouse News", "url": "https://www.courthousenews.com/valve-moves-to-dismiss-counter-strike-gambling-lawsuit-in-new-york/"},
+            {"name": "IT之家", "url": "https://www.ithome.com/0/952/863.htm"}
+        ],
+        "category": "policy",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-21",
+        "tags": ["Valve", "CS2", "开箱", "诉讼", "赌博"],
+        "sentiment": "neutral",
+        "tdocMarking": "none"
+    },
+    {
+        "id": 1594,
+        "title": "Xbox任命Matthew Ball为CSO+Scott Van Vliet为CTO，强化主机品牌",
+        "summary": "Xbox CEO Asha Sharma任命行业分析师Matthew Ball为首席战略官（CSO）、Microsoft Azure AI基础设施资深人士Scott Van Vliet为首席技术官（CTO），旨在强化Xbox主机品牌领导力。Ball以游戏行业深度分析著称，Van Vliet的云/AI背景暗示Xbox未来技术方向。此次人事调整配合此前的'全大写XBOX品牌重塑'叙事。",
+        "source": "VGC",
+        "sourceUrl": "https://www.videogameschronicle.com/news/xbox-hires-leadership-team-strengthen-console-brand/",
+        "sourceUrls": [
+            {"name": "VGC", "url": "https://www.videogameschronicle.com/news/xbox-hires-leadership-team-strengthen-console-brand/"},
+            {"name": "Pure Xbox", "url": "https://www.purexbox.com/news/2026/05/xbox-hires-new-exec-to-strengthen-the-console-side-of-the-business"},
+            {"name": "Windows Forum", "url": "https://windowsforum.com/threads/xbox-appoints-matthew-ball-and-scott-van-vliet-ai-cloud-and-console-strategy.419129/"},
+            {"name": "The Verge", "url": "https://www.theverge.com/2026/5/21/xbox-new-executives-matthew-ball-scott-van-vliet"}
+        ],
+        "category": "platform",
+        "importance": "medium",
+        "featured": true,
+        "date": "2026-05-21",
+        "tags": ["Xbox", "Matthew Ball", "Scott Van Vliet", "人事调整"],
+        "sentiment": "positive",
+        "tdocMarking": "none"
+    },
     {
         "id": 1593,
         "title": "PlayStation Days of Play 2026启动：5/27-6/10大型促销+赛事",
@@ -268,8 +516,8 @@ const newsData = [
     },
     {
         "id": 1578,
-        "title": "007 First Light评测解禁：MC88/OC87获近30年最佳邦德游戏评价",
-        "summary": "IO Interactive制作的詹姆斯·邦德游戏《007 First Light》评测解禁，Metacritic PS5版88分/PC版87分，OpenCritic 87分，IGN中国9分。被誉為自1997年《GoldenEye》以来最佳邦德游戏。然而发售前1天遭DenuvOwO破解Denuvo加密，且发售前6天才悄然添加Denuvo引发预购退款潮。游戏5月27日正式发售PS5/Xbox/PC，Switch 2版Q3推出。",
+        "title": "007 First Light评测解禁：MC88/OC87获近30年最佳邦德游戏评价，首发登顶Steam销量榜",
+        "summary": "IO Interactive制作的詹姆斯·邦德游戏《007 First Light》评测解禁，Metacritic PS5版88分/PC版87分，OpenCritic 87分，IGN中国9分。被誉為自1997年《GoldenEye》以来最佳邦德游戏。5月27日正式发售后首发登顶Steam全球销量榜及国区第一，峰值同时在线68,477人，Steam评价'特别好评'（87%好评率）。PS商店评分4.76/5。但分析师指出预购量低于预期。发售前1天遭DenuvOwO破解Denuvo加密。Switch 2版Q3推出。",
         "source": "Metacritic",
         "sourceUrl": "https://www.metacritic.com/game/007-first-light/",
         "sourceUrls": [
@@ -426,8 +674,8 @@ const newsData = [
     },
     {
         "id": 1570,
-        "title": "《乐高蝙蝠侠：黑暗骑士之遗》5/22发售MC84-86，乐高系列评分最高",
-        "summary": "TT Games作品5月22日发售，PS5版MC84/Xbox版86/PC版83，成为评分最高乐高游戏。Rocksteady联合开发，融合阿卡姆战斗系统与开放世界哥谭。Switch 2版也将推出。",
+        "title": "《乐高蝙蝠侠：黑暗骑士之遗》5/22发售MC84-86，首周销量120万份",
+        "summary": "TT Games作品5月22日发售，PS5版MC84/Xbox版86/PC版83，成为评分最高乐高游戏。Rocksteady联合开发，融合阿卡姆战斗系统与开放世界哥谭。首周全球销量达120万份，PS5占53.3%，Xbox占25.1%，呈现'主机驱动'格局。Switch 2版也将推出。",
         "source": "GamesRadar",
         "sourceUrl": "https://www.gamesradar.com/games/adventure/lego-batman-legacy-of-the-dark-knights-metacritic-score-makes-it-the-best-rated-lego-game-ever-knocking-the-skywalker-saga-off-its-perch-after-4-years/",
         "sourceUrls": [
@@ -442,6 +690,10 @@ const newsData = [
             {
                 "name": "Metacritic",
                 "url": "https://www.metacritic.com/game/lego-batman-legacy-of-the-dark-knight/"
+            },
+            {
+                "name": "GamesIndustry.biz",
+                "url": "https://www.gamesindustry.biz/lego-batman-legacy-dark-knight-first-week-sales-1-2-million/"
             }
         ],
         "category": "game",
