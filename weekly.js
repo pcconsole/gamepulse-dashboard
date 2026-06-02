@@ -2,6 +2,17 @@
 // 每周生成新周报时，在数组顶部追加一条
 window.WEEKLY_REPORTS = [
   {
+    week: 'M05',
+    date: '2026-06-01',
+    periodStart: '2026-05-01',
+    periodEnd: '2026-05-31',
+    title: '端主行业月报 · 2026年5月',
+    summary: '索尼封闭回归利润创纪录·Xbox承认错误开始纠偏·GaaS主机端系统性出清·硬件成本全线传导·GTA6定档11.19·10家厂商财报横向对比。',
+    file: 'weekly/Monthly_Briefing_202605.html',
+    tags: ['月报', '索尼vs微软', 'GaaS出清', '硬件涨价', 'GTA6', '财报季'],
+    highlight: true
+  },
+  {
     week: 'W21',
     date: '2026-05-23',
     periodStart: '2026-05-18',
