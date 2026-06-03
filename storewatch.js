@@ -34272,3 +34272,254 @@ const storewatchMeta = {
     totalEntries: 3632,
     vendorMatchRate: '9%'
 };
+
+// ============ Xbox 资源位归并工具 ============
+// StoreWatch 共享函数（PC端+移动端共享）
+// build_storewatch.js 替换数据时以此标记为边界，标记之后的函数代码会被保留
+
+// 资源位优先级定义（Tier 分层）
+const storewatchSlotPriority = {
+    PS5: [
+        { tier: 1, label: 'Must See', name: 'Must See' },
+        { tier: 2, label: 'What\'s hot', name: "What's hot" },
+        { tier: 2, label: 'Top games', name: 'Top games' },
+        { tier: 3, label: 'PS Plus', name: 'PS Plus' },
+        { tier: 3, label: 'Recently launched', name: 'Recently launched' },
+        { tier: 3, label: 'New releases', name: 'New releases' },
+        { tier: 3, label: 'Deals', name: 'Deals' },
+        { tier: 4, label: 'Best sellers', name: 'Best sellers' },
+        { tier: 4, label: 'Free to play', name: 'Free to play' }
+    ],
+    Xbox: [
+        { tier: 1, label: '主界面Banner', name: 'Dash home-banner', subSlots: ['Dash home-banner', 'Dash home-banner2'] },
+        { tier: 2, label: '商店Banner', name: 'Store Home-hero banner', subSlots: ['Store Home-hero banner', 'Store Home-banner'] },
+        { tier: 3, label: '游戏Banner', name: 'Game Home-hero banner', subSlots: ['Game Home-hero banner', 'Game Home-banner'] },
+        { tier: 4, label: 'Spotlight', name: 'Spotlight' },
+        { tier: 4, label: 'Most popular', name: 'Most popular' }
+    ]
+};
+
+// Xbox 资源位归并映射
+const xboxSlotGroupMap = {
+    'Dash home-banner': 'Dash home-banner',
+    'Dash home-banner2': 'Dash home-banner',
+    'Store Home-hero banner': 'Store Home-hero banner',
+    'Store Home-banner': 'Store Home-hero banner',
+    'Game Home-hero banner': 'Game Home-hero banner',
+    'Game Home-banner': 'Game Home-hero banner'
+};
+
+// 合并 Xbox 归并资源位
+function mergeXboxSlots(slots) {
+    if (!slots) return slots;
+    const merged = {};
+    for (const [slotName, slotData] of Object.entries(slots)) {
+        const targetName = xboxSlotGroupMap[slotName] || slotName;
+        if (!merged[targetName]) {
+            merged[targetName] = { positions: [] };
+        }
+        if (slotData && slotData.positions) {
+            slotData.positions.forEach(pos => {
+                merged[targetName].positions.push({
+                    ...pos,
+                    sourceSlot: pos.sourceSlot || slotName
+                });
+            });
+        }
+    }
+    // Sort positions within each merged slot by rank
+    for (const slotData of Object.values(merged)) {
+        if (slotData.positions) {
+            slotData.positions.sort((a, b) => (a.rank || 0) - (b.rank || 0));
+        }
+    }
+    return merged;
+}
+
+// 获取星期几
+function getWeekday(dateStr) {
+    if (!dateStr) return '';
+    const days = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+    try {
+        const d = new Date(dateStr + 'T00:00:00');
+        return days[d.getDay()];
+    } catch (e) {
+        return '';
+    }
+}
+
+// 游戏显示名称处理（双语名称拆分）
+function getGameDisplayName(name, showSecondary) {
+    if (!name) return { primary: '', secondary: '' };
+    // 中文括号包裹英文名的模式：如 "哈迪斯2（Hades2）"
+    const match = name.match(/^(.+?)（(.+?)）$/);
+    if (match) {
+        return { primary: match[1], secondary: match[2] };
+    }
+    // 英文括号模式
+    const match2 = name.match(/^(.+?)\((.+?)\)$/);
+    if (match2) {
+        return { primary: match2[1].trim(), secondary: match2[2].trim() };
+    }
+    return { primary: name, secondary: '' };
+}
+
+// 获取平台统计数据
+function getStorewatchStats(platformKey) {
+    const data = storewatchData[platformKey] || [];
+    const totalDays = data.length;
+    if (totalDays === 0) return { totalDays: 0, topVendors: [], latestDate: '-' };
+
+    const latestDate = data[0]?.date || '-';
+    const vendorCounts = {};
+    // 近7天数据
+    const recentData = data.slice(0, 7);
+    let totalPositions = 0;
+
+    recentData.forEach(day => {
+        if (!day.slots) return;
+        for (const [slotName, slotData] of Object.entries(day.slots)) {
+            if (!slotData || !slotData.positions) continue;
+            slotData.positions.forEach(pos => {
+                if (pos.isNonGame) return;
+                totalPositions++;
+                const vendor = pos.vendor || (typeof storewatchVendorMap !== 'undefined' ? storewatchVendorMap[pos.us] : null) || '未知';
+                if (!vendorCounts[vendor]) vendorCounts[vendor] = 0;
+                vendorCounts[vendor]++;
+            });
+        }
+    });
+
+    const totalVendorPositions = Object.values(vendorCounts).reduce((a, b) => a + b, 0) || 1;
+    const topVendors = Object.entries(vendorCounts)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 10)
+        .map(([name, count]) => ({
+            name,
+            count,
+            pct: Math.round(count / totalVendorPositions * 100)
+        }));
+
+    return { totalDays, topVendors, latestDate };
+}
+
+// 获取双平台近N天汇总统计
+function getCombinedWeeklyStats(days) {
+    const ps5Data = storewatchData.PS5 || [];
+    const xboxData = storewatchData.Xbox || [];
+
+    const ps5Latest = ps5Data[0]?.date;
+    const xboxLatest = xboxData[0]?.date;
+    const latestDate = ps5Latest && xboxLatest ? (ps5Latest > xboxLatest ? ps5Latest : xboxLatest) : (ps5Latest || xboxLatest || '');
+
+    if (!latestDate) {
+        return {
+            dateRange: { actualFrom: '', actualTo: '', actualDayCount: 0 },
+            totalPositions: 0,
+            topGames: [],
+            vendorCoverage: []
+        };
+    }
+
+    const latestD = new Date(latestDate + 'T00:00:00');
+    const fromDate = new Date(latestD.getTime() - (days - 1) * 24 * 60 * 60 * 1000);
+    const dateFrom = fromDate.toISOString().slice(0, 10);
+
+    const fmtShort = d => d ? `${parseInt(d.slice(5,7))}/${parseInt(d.slice(8,10))}` : '-';
+
+    // Count actual days with data
+    const allDates = new Set();
+    [ps5Data, xboxData].forEach(platformData => {
+        platformData.forEach(day => {
+            if (day.date >= dateFrom && day.date <= latestDate) {
+                allDates.add(day.date);
+            }
+        });
+    });
+    const actualDayCount = allDates.size;
+    const sortedDates = [...allDates].sort();
+    const actualFrom = sortedDates[0] || dateFrom;
+    const actualTo = sortedDates[sortedDates.length - 1] || latestDate;
+
+    // Game exposure counts
+    const gameCounts = {};
+    const vendorSlots = {};
+
+    [ps5Data, xboxData].forEach(platformData => {
+        platformData.forEach(day => {
+            if (day.date < dateFrom || day.date > latestDate) return;
+            if (!day.slots) return;
+            const platformName = platformData === ps5Data ? 'PS5' : 'Xbox';
+            for (const [slotName, slotData] of Object.entries(day.slots)) {
+                if (!slotData || !slotData.positions) continue;
+                slotData.positions.forEach(pos => {
+                    if (pos.isNonGame) return;
+                    const regions = [pos.us, pos.jp, pos.hk].filter(Boolean);
+                    regions.forEach(name => {
+                        if (!gameCounts[name]) gameCounts[name] = { count: 0, vendor: '' };
+                        gameCounts[name].count++;
+                        const v = pos.vendor || (typeof storewatchVendorMap !== 'undefined' ? storewatchVendorMap[name] : null) || '未知';
+                        if (!gameCounts[name].vendor || gameCounts[name].vendor === '未知') {
+                            gameCounts[name].vendor = v;
+                        }
+                    });
+                    // Vendor tracking
+                    const vendor = pos.vendor || '未知';
+                    if (!vendorSlots[vendor]) vendorSlots[vendor] = { total: 0, slots: new Set(), platforms: new Set() };
+                    vendorSlots[vendor].total++;
+                    vendorSlots[vendor].slots.add(slotName);
+                    vendorSlots[vendor].platforms.add(platformName);
+                });
+            }
+        });
+    });
+
+    // Top games by exposure
+    const topGames = Object.entries(gameCounts)
+        .sort((a, b) => b[1].count - a[1].count)
+        .slice(0, 10)
+        .map(([name, data], i) => ({
+            rank: i + 1,
+            name,
+            count: data.count,
+            vendor: data.vendor
+        }));
+
+    // Vendor coverage
+    const vendorCoverage = Object.entries(vendorSlots)
+        .filter(([name]) => name !== '未知')
+        .sort((a, b) => b[1].total - a[1].total)
+        .slice(0, 15)
+        .map(([name, data]) => ({
+            name,
+            total: data.total,
+            platforms: [...data.platforms].sort().join(' / '),
+            slotCount: data.slots.size,
+            slots: [...data.slots]
+        }));
+
+    // Total positions
+    let totalPositions = 0;
+    [ps5Data, xboxData].forEach(platformData => {
+        platformData.forEach(day => {
+            if (day.date < dateFrom || day.date > latestDate) return;
+            if (!day.slots) return;
+            for (const slotData of Object.values(day.slots)) {
+                if (slotData && slotData.positions) {
+                    totalPositions += slotData.positions.filter(p => !p.isNonGame).length;
+                }
+            }
+        });
+    });
+
+    return {
+        dateRange: {
+            actualFrom,
+            actualTo,
+            actualDayCount
+        },
+        totalPositions,
+        topGames,
+        vendorCoverage
+    };
+}

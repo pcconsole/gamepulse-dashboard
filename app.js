@@ -70,6 +70,15 @@ async function loadDataFileInfo() {
     } catch (e) { /* ignore */ }
 }
 
+// ============ 工具函数 ============
+
+function isThisWeek(dateStr) {
+    const d = new Date(dateStr);
+    const now = new Date();
+    const weekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+    return d >= weekAgo;
+}
+
 // ============ 全局更新 ============
 
 function updateAll(games) {
