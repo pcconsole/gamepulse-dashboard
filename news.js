@@ -14000,8 +14000,8 @@ function clusterNewsByTopic(newsItems) {
 
             // Check keyword match in title
             const kwMatch = config.keywords.some(kw => title.includes(kw.toLowerCase()));
-            // Check category match
-            const catMatch = config.category.includes(category);
+            // Check category match (safe access for missing category field)
+            const catMatch = config.category && config.category.includes(category);
 
             if (kwMatch || catMatch) {
                 clusters[key].news.push(item);
@@ -14225,50 +14225,65 @@ const NEWS_TOPIC_CLUSTERS = {
     'ps5-sony': {
         label: '🎮 PlayStation / 索尼',
         keywords: ['PS5', 'PS6', 'PlayStation', '索尼', 'Sony', 'SIE', 'State of Play'],
+        category: ['platform'],
         color: '#003087',
         icon: '🎮'
     },
     'xbox-ms': {
         label: '🎮 Xbox / 微软',
         keywords: ['Xbox', 'Game Pass', '微软', 'Microsoft', 'Phil Spencer', 'XGP'],
+        category: ['platform'],
         color: '#107c10',
         icon: '🎮'
     },
     'nintendo': {
         label: '🎮 任天堂',
         keywords: ['Nintendo', 'Switch', '任天堂', '塞尔达', '马里奥', '宝可梦'],
+        category: ['platform'],
         color: '#e60012',
         icon: '🎮'
     },
     'hot-product': {
         label: '🔥 热门产品',
         keywords: ['GTA6', 'GTA 6', '荒野大镖客', '红色沙漠', 'Crimson Desert', 'FH6', '极限竞速', '黑神话', '战神', 'Marathon'],
+        category: ['game'],
         color: '#f59e0b',
         icon: '🔥'
     },
     'ma-strategy': {
         label: '💼 并购/重组/战略',
         keywords: ['收购', '并购', '合并', 'acquisition', 'merger', '裁员', 'layoff', '重组', '私有化'],
+        category: ['policy'],
         color: '#8b5cf6',
         icon: '💼'
     },
     'market-info': {
         label: '📊 市场/数据/政策',
         keywords: ['NPD', '销量', '收入', '营收', '出货', '市场份额', '版号', '反垄断', '数据泄露', '黑客'],
+        category: ['market', 'policy'],
         color: '#06b6d4',
         icon: '📊'
     },
     'upstream-hw': {
         label: '🔧 硬件/供应链',
         keywords: ['AMD', 'NVIDIA', 'GPU', '芯片', '处理器', 'BOM', 'SSD', '散热', '供应'],
+        category: ['hardware'],
         color: '#64748b',
         icon: '🔧'
     },
     'steam-valve': {
         label: '🎮 Steam / Valve',
         keywords: ['Steam', 'Valve', 'Steam Deck', 'Steam Machine', 'Gabe'],
+        category: ['platform'],
         color: '#1b2838',
         icon: '🎮'
+    },
+    'other': {
+        label: '📌 其他',
+        keywords: [],
+        category: [],
+        color: '#94a3b8',
+        icon: '📌'
     }
 };
 
