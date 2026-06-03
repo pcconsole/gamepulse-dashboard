@@ -14222,7 +14222,7 @@ const newsSources = [
 // 主题聚类引擎 v9.0 配置（PC端+移动端共享）
 // ============================================
 const NEWS_TOPIC_CLUSTERS = {
-    'ps5-sony': {
+    'sony-ps': {
         label: '🎮 PlayStation / 索尼',
         keywords: ['PS5', 'PS6', 'PlayStation', '索尼', 'Sony', 'SIE', 'State of Play'],
         category: ['platform'],
