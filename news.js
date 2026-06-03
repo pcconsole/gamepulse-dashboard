@@ -14224,57 +14224,57 @@ const newsSources = [
 const NEWS_TOPIC_CLUSTERS = {
     'sony-ps': {
         label: '🎮 PlayStation / 索尼',
-        keywords: ['PS5', 'PS6', 'PlayStation', '索尼', 'Sony', 'SIE', 'State of Play'],
-        category: ['platform'],
+        keywords: ['PS5', 'PS6', 'PlayStation', '索尼', 'Sony', 'SIE', 'State of Play', 'PS Plus', 'PS Store', 'DualSense', 'PS VR'],
+        category: [],
         color: '#003087',
         icon: '🎮'
     },
     'xbox-ms': {
         label: '🎮 Xbox / 微软',
-        keywords: ['Xbox', 'Game Pass', '微软', 'Microsoft', 'Phil Spencer', 'XGP'],
-        category: ['platform'],
+        keywords: ['Xbox', 'Game Pass', '微软', 'Microsoft', 'Phil Spencer', 'XGP', 'Activision', 'Bethesda', 'Halo', 'Forza'],
+        category: [],
         color: '#107c10',
         icon: '🎮'
     },
     'nintendo': {
         label: '🎮 任天堂',
-        keywords: ['Nintendo', 'Switch', '任天堂', '塞尔达', '马里奥', '宝可梦'],
-        category: ['platform'],
+        keywords: ['Nintendo', 'Switch', '任天堂', '塞尔达', '马里奥', '宝可梦', 'Pokemon', 'Zelda', 'Mario'],
+        category: [],
         color: '#e60012',
         icon: '🎮'
     },
     'hot-product': {
         label: '🔥 热门产品',
-        keywords: ['GTA6', 'GTA 6', '荒野大镖客', '红色沙漠', 'Crimson Desert', 'FH6', '极限竞速', '黑神话', '战神', 'Marathon'],
-        category: ['game'],
+        keywords: ['GTA6', 'GTA 6', '荒野大镖客', '红色沙漠', 'Crimson Desert', 'FH6', '极限竞速', '黑神话', '战神', 'Marathon', '007', 'Dragon Quest', '使命召唤', 'Call of Duty', 'MW4', '赛博朋克', '深海迷航', '乐高蝙蝠侠', 'Wolverine', '金刚狼'],
+        category: [],
         color: '#f59e0b',
         icon: '🔥'
     },
     'ma-strategy': {
         label: '💼 并购/重组/战略',
-        keywords: ['收购', '并购', '合并', 'acquisition', 'merger', '裁员', 'layoff', '重组', '私有化'],
-        category: ['policy'],
+        keywords: ['收购', '并购', '合并', 'acquisition', 'merger', '裁员', 'layoff', '重组', '私有化', '拆分', '关闭工作室', '亏损', '破产'],
+        category: [],
         color: '#8b5cf6',
         icon: '💼'
     },
     'market-info': {
         label: '📊 市场/数据/政策',
-        keywords: ['NPD', '销量', '收入', '营收', '出货', '市场份额', '版号', '反垄断', '数据泄露', '黑客'],
-        category: ['market', 'policy'],
+        keywords: ['NPD', '销量', '收入', '营收', '出货', '市场份额', '版号', '反垄断', '数据泄露', '黑客', 'Circana', '财报', '季度'],
+        category: ['market'],
         color: '#06b6d4',
         icon: '📊'
     },
     'upstream-hw': {
         label: '🔧 硬件/供应链',
-        keywords: ['AMD', 'NVIDIA', 'GPU', '芯片', '处理器', 'BOM', 'SSD', '散热', '供应'],
+        keywords: ['AMD', 'NVIDIA', 'GPU', '芯片', '处理器', 'BOM', 'SSD', '散热', '供应', 'Steam Deck', 'Steam Machine', 'Steam主机'],
         category: ['hardware'],
         color: '#64748b',
         icon: '🔧'
     },
     'steam-valve': {
         label: '🎮 Steam / Valve',
-        keywords: ['Steam', 'Valve', 'Steam Deck', 'Steam Machine', 'Gabe'],
-        category: ['platform'],
+        keywords: ['Steam', 'Valve', 'Gabe', 'SteamOS', '虚幻引擎', 'Unreal Engine', 'Epic Games Store'],
+        category: [],
         color: '#1b2838',
         icon: '🎮'
     },
