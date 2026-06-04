@@ -1,13 +1,30 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.2 自动更新，请勿手动编辑
-// 最后更新: 2026-06-04T14:35:00Z
-// 更新者: news-agent (v5.2 腾讯文档MCP+web_search 12轮+新增24条+更新2条+90天清理28条)
+// 最后更新: 2026-06-04T18:00:00Z
+// 更新者: news-agent (v5.2 腾讯文档MCP+web_search 8轮+新增4条+0天清理)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
 // ============================================
 const newsData = [
+    {
+    "id": 1649,
+    "title": "Gothic 1 Remake明日发售，THQ Nordic确认PC/PS5/Xbox同步上线",
+    "summary": "THQ Nordic宣布Gothic 1 Remake将于6月5日正式发售，登陆PC/PS5/Xbox Series X|S。重制版采用虚幻引擎5重建，保留原版核心叙事与开放世界探索，同时全面升级战斗系统与视觉效果。",
+    "source": "THQ Nordic",
+    "sourceUrl": "https://www.thqnordic.com/games/gothic-1-remake",
+    "sourceUrls": [
+        {"name": "THQ Nordic", "url": "https://www.thqnordic.com/games/gothic-1-remake"},
+        {"name": "Gematsu", "url": "https://www.gematsu.com/2026/06/gothic-1-remake-launches-june-5"},
+    ],
+    "category": "game",
+    "importance": "medium",
+    "featured": true,
+    "date": "2026-06-04",
+    "tags": ["Gothic","THQ Nordic","重制版","UE5","发售"],
+    "sentiment": "positive",
+    },
     {
     "id": 1648,
     "title": "PS Plus Premium经典目录新增三款PS2经典游戏",
@@ -381,6 +398,54 @@ const newsData = [
     "date": "2026-06-02",
     "tags": ["Rayman","雷曼","育碧","重制版","Switch 2"],
     "sentiment": "neutral",
+    },
+    {
+    "id": 1650,
+    "title": "KEMURI：前顽皮狗成员组建Umoja Games首作亮相State of Play",
+    "summary": "由前顽皮狗成员组建的Umoja Games在State of Play上公开了首部作品KEMURI，一款风格化的动作冒险游戏。游戏以独特的'墨'视觉效果为核心机制，具体发售日未公布。",
+    "source": "PlayStation Blog",
+    "sourceUrl": "https://blog.playstation.com/2026/06/02/kemuri-announced-at-state-of-play/",
+    "sourceUrls": [
+        {"name": "PS Blog", "url": "https://blog.playstation.com/2026/06/02/kemuri-announced-at-state-of-play/"},
+        {"name": "Engadget", "url": "https://www.engadget.com/gaming/kemuri-umoja-games-state-of-play/"},
+    ],
+    "category": "game",
+    "importance": "medium",
+    "featured": true,
+    "date": "2026-06-02",
+    "tags": ["KEMURI","Umoja Games","顽皮狗","State of Play","PS5"],
+    "sentiment": "positive",
+    },
+    {
+    "id": 1651,
+    "title": "Stuntman: Hollywood公布，好莱坞特技动作新游亮相State of Play",
+    "summary": "State of Play上公布了Stuntman: Hollywood，一款以好莱坞特技动作为主题的新作。玩家将扮演特技替身演员，完成各种高难度特技场景。发售日未公布。",
+    "source": "PlayStation Blog",
+    "sourceUrl": "https://blog.playstation.com/2026/06/02/stuntman-hollywood-announced-at-state-of-play/",
+    "sourceUrls": [
+        {"name": "PS Blog", "url": "https://blog.playstation.com/2026/06/02/stuntman-hollywood-announced-at-state-of-play/"},
+        {"name": "MonsterVine", "url": "https://monstervine.com/2026/06/stuntman-hollywood-state-of-play/"},
+    ],
+    "category": "game",
+    "importance": "low",
+    "date": "2026-06-02",
+    "tags": ["Stuntman","Hollywood","特技","State of Play"],
+    "sentiment": "positive",
+    },
+    {
+    "id": 1652,
+    "title": "真三国无双2 Remaster公布，光荣特库摩经典重制",
+    "summary": "光荣特库摩在State of Play上宣布《真三国无双2》重制版。重制版将提升画面分辨率与帧率，保留原版无双战斗体验。",
+    "source": "光荣特库摩",
+    "sourceUrl": "https://www.gamecity.ne.jp/smusou2-remaster/",
+    "sourceUrls": [
+        {"name": "光荣特库摩", "url": "https://www.gamecity.ne.jp/smusou2-remaster/"},
+    ],
+    "category": "game",
+    "importance": "low",
+    "date": "2026-06-02",
+    "tags": ["真三国无双","光荣特库摩","重制版","State of Play"],
+    "sentiment": "positive",
     },
     {
     "id": 1642,
