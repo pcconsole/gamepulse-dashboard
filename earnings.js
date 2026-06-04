@@ -2,9 +2,9 @@
 // 重点公司财报分析数据模块 V10 — 全部18家统一双模块(latestQuarter+fullYear)
 // 覆盖18家上市公司的游戏业务财务与运营数据
 // 数据来源：各公司IR页面/财报/press release + GamesIndustry.biz 验证
-// 更新日期: 2026-05-20
-// 本次更新: Embracer Q4+FY25/26全年(5/20发布: Q4净销售SEK39.31亿-24%,全年SEK159.06亿-25%,SEK72亿非现金减值,REANIMAL超100万套,FY26/27 Cash EBIT≥SEK10亿)
-// 上次更新(5/15): Nexon Q1 2026
+// 更新日期: 2026-06-04
+// 本次更新(6/4): Take-Two FY26 Q4+全年(5/21:全年净预订$67.2亿+19%/GAAP营收$66.6亿+18%/GAAP净亏损-$2.98亿大幅收窄/EBITDA转正$7.61亿/RCS占78%/GTA6 11/19定档/FY27指引$80-82亿) + 育碧FY26全年(5/20:净预订€15.25亿-17%/运营亏损€13亿创纪录/裁员1200人/取消6款项目/数字占比87%/腾讯入股新子公司) + 网易2026 Q1(5/21:总营收¥306亿+6.1%/游戏¥257亿+6.9%≈$3.7B/营业利润¥126.57亿+21.2%/净利¥107亿/游戏毛利率74.8%)
+// 上次更新(5/20): Embracer Q4+FY25/26全年
 // 上次更新(5/13): 索尼FY2026全年 + 任天堂FY2026全年 + 卡普空FY2026全年
 //   重构范围: Sony/Microsoft/Nintendo/腾讯/网易/EA/Take-Two/Ubisoft/Nexon/
 //             万代南梦宫/Capcom/Square Enix/Konami/Sega/Krafton/Roblox/Unity/Embracer
@@ -304,13 +304,14 @@ const earningsCompanies = [
         logo: '🎯',
         color: '#D42922',
         segment: '在线游戏服务',
-        fiscalPeriod: '2025年全年(2025年1-12月)',
+        fiscalPeriod: '2026年Q1 (2026年1-3月)',
         currency: 'CNY',
         latestQuarter: {
-            period: '2025年Q4', calendarPeriod: '2025年10-12月', filingDate: '2026-02-11',
-            revenue: { value: 22000, unit: '百万人民币(Q4游戏)', yoy: 3.4, label: 'Q4游戏收入¥220亿', usdEquiv: '≈$3.03B' },
+            period: '2026年Q1', calendarPeriod: '2026年1-3月', filingDate: '2026-05-21',
+            revenue: { value: 25713, unit: '百万人民币(Q1游戏)', yoy: 6.9, label: 'Q1游戏收入¥257亿(+6.9%)', usdEquiv: '≈$3.7B' },
             gameMetrics: {
-                q4GameRevenue: { value: 220, unit: '亿', yoy: 3.4, label: 'Q4游戏收入' }
+                q1GameRevenue: { value: 257, unit: '亿', yoy: 6.9, label: 'Q1游戏及增值服务收入' },
+                onlineShare: { value: 97.5, unit: '%', label: '在线游戏占游戏分部收入' }
             }
         },
         fullYear: {
@@ -325,39 +326,39 @@ const earningsCompanies = [
             }
         },
         companyOverall: {
-            totalRevenue: { value: 112626, unit: '百万人民币', yoy: 6.9, label: '2025全年总营收', source: '网易2025年Q4及全年财报(2026/02/11)' },
-            totalOperatingProfit: { value: 35800, unit: '百万人民币', yoy: 21, label: '全年营业利润' },
-            totalOperatingMargin: { value: 31.8, label: '全年营业利润率' },
-            netProfit: { value: 33800, unit: '百万人民币', yoy: 13.8, label: '归母净利润' },
-            nonGAAPNetProfit: { value: 37300, unit: '百万人民币', yoy: 11.3, label: 'Non-GAAP归母净利润' },
-            note: '网易2025全年总营收¥1126亿(+6.9%)，归母净利润¥338亿(+13.8%)，Non-GAAP归母净利润¥373亿(+11.3%)。经营活动净现金流入¥507亿。净现金余额¥1635亿。'
+            totalRevenue: { value: 30600, unit: '百万人民币', yoy: 6.1, label: '2026 Q1总营收¥306亿', source: '网易2026 Q1财报(2026/05/21)' },
+            totalOperatingProfit: { value: 12657, unit: '百万人民币', yoy: 21.2, label: 'Q1营业利润¥126.57亿(去年¥104.41亿)' },
+            totalOperatingMargin: { value: 41.4, label: 'Q1营业利润率' },
+            netProfit: { value: 10700, unit: '百万人民币', yoy: 3.9, label: '归母净利润¥107亿(去年¥103亿)' },
+            nonGAAPNetProfit: { value: 11300, unit: '百万人民币', yoy: 0.6, label: 'Non-GAAP归母净利润¥113亿' },
+            note: '网易2026 Q1总营收¥306亿(+6.1%)，毛利润¥212亿(+14.8%)，营业利润¥126.57亿(+21.2%)，归母净利润¥107亿(+3.9%)。整体毛利率约69.4%，游戏分部毛利率约74.8%。净现金余额¥1675亿，经营活动现金流¥137亿。'
         },
         financials: {
-            revenue: { value: 92100, unit: '百万人民币(全年游戏)', yoy: 10, label: '2025全年游戏及相关增值服务收入', source: '网易2025年全年财报(2026/02/11)', usdEquiv: '≈$12.7B' },
-            operatingProfit: { value: null, unit: '百万人民币', yoy: null, label: '游戏营业利润(未单独披露)' },
-            operatingMargin: { value: null, label: '游戏利润率(未单独披露)' },
-            segmentRevenuePct: { value: 81.8, label: '游戏占总营收比例' },
-            q4Revenue: { value: 22000, unit: '百万人民币(Q4游戏)', yoy: 3.4, label: 'Q4游戏收入' },
-            q3Revenue: { value: 23300, unit: '百万人民币(Q3游戏)', yoy: 11.8, label: 'Q3游戏收入' },
+            revenue: { value: 25713, unit: '百万人民币(Q1游戏)', yoy: 6.9, label: '2026 Q1游戏及相关增值服务收入', source: '网易2026 Q1财报(2026/05/21)', usdEquiv: '≈$3.7B' },
+            operatingProfit: { value: null, unit: '百万人民币', yoy: null, label: '游戏营业利润(未单独披露,游戏毛利率约74.8%)' },
+            operatingMargin: { value: 74.8, label: '游戏分部毛利率(约74.8%)' },
+            segmentRevenuePct: { value: 84.0, label: '游戏占总营收比例(¥257亿/¥306亿)' },
+            q1Revenue: { value: 25713, unit: '百万人民币(Q1游戏)', yoy: 6.9, label: 'Q1游戏收入' },
+            grossProfit: { value: 21200, unit: '百万人民币', yoy: 14.8, label: 'Q1毛利润¥212亿' },
         },
         gameMetrics: {
-            onlineGameRevenue: { value: 89600, unit: '百万人民币(全年)', yoy: 11, label: '在线游戏净收入(同比+11%)' },
-            rdExpense: { value: 17700, unit: '百万人民币', label: '全年研发投入(¥177亿,连续六年破百亿)' },
-            cashPosition: { value: 163500, unit: '百万人民币', label: '净现金余额(¥1635亿)' },
+            onlineGameShare: { value: 97.5, unit: '%', label: '在线游戏占游戏分部净收入(同比持平)' },
+            cashPosition: { value: 167500, unit: '百万人民币', label: '净现金余额(¥1675亿)' },
+            operatingCashFlow: { value: 13700, unit: '百万人民币', label: 'Q1经营活动现金流(¥137亿)' },
         },
-        keyProducts: ['《漫威争锋》(Marvel Rivals)', '《永劫无间》', '《逆水寒》', '《梦幻西游》', '《燕云十六声》', '《魔兽世界》代理', '《风之交汇》'],
+        keyProducts: ['《逆水寒》手游', '《漫威争锋》(Marvel Rivals)', '《燕云十六声》(Where Winds Meet)', '《梦幻西游》', '《第五人格》', '《蛋仔派对》', '《魔兽世界》代理'],
         analysis: {
-            performance: '2025全年总营收¥1126亿(+6.9%)，游戏及相关增值服务收入¥921亿(+10%)，在线游戏收入¥896亿(+11%)。全年营业利润¥358亿(+21%)，归母净利润¥338亿(+13.8%)。增长主要由《梦幻西游》PC版、《第五人格》、新上线的《燕云十六声》和《漫威争锋》驱动。暴雪系列代理回归年度收入创新高。研发投入¥177亿连续六年破百亿。',
-            strategy: 'AI已成为研发与运营基础核心能力，系统化应用于游戏开发与玩法创新。《漫威争锋》(2024/12上线)成为全球PC/主机市场里程碑。海外工作室(樱花工作室、Jackalope Games)多款3A项目推进中。',
-            outlook: '2026年《漫威争锋》持续赛季更新仍将是核心增长引擎。《燕云十六声》主机版拓展用户群。AI赋能效率持续提升。经营活动现金流¥507亿为多元化投入提供底气。',
-            newProducts: '《漫威争锋》赛季更新；《燕云十六声》主机版；樱花工作室3A项目；Jackalope Games开放世界新作。'
+            performance: '2026 Q1总营收¥306亿(+6.1%)，游戏及相关增值服务收入¥257亿(+6.9%,≈$3.7B)，Beat。利润端表现更亮眼:毛利润¥212亿(+14.8%)、营业利润¥126.57亿(+21.2%,去年¥104.41亿)、归母净利润¥107亿(+3.9%)。整体毛利率提升至约69.4%、游戏分部毛利率约74.8%，反映自研高毛利产品占比提升。增长由自研产品《梦幻西游》系列、《燕云十六声》驱动，在线游戏占游戏分部收入约97.5%。利润增速显著快于营收，体现规模效应与产品结构优化。',
+            strategy: 'CEO丁磊强调近期全球发布展现"强劲跨市场吸引力"，将持续推进国际化:《燕云十六声》(Where Winds Meet)与《漫威争锋》(Marvel Rivals)双线推进海外扩张。暴雪游戏在中国稳定运营、本地化内容稳步推出。成熟产品(梦幻西游/第五人格/蛋仔派对/逆水寒)靠高频内容更新维持高参与度。',
+            outlook: '2026年全球化是核心主线，《漫威争锋》赛季更新+《燕云十六声》多平台拓展持续贡献增量。净现金¥1675亿、Q1经营现金流¥137亿为研发与回购提供底气(已回购约2,320万ADS耗资$21亿，计划上限$50亿延至2029/1)。季度股息每ADS $0.72。',
+            newProducts: '《燕云十六声》主机版/全球版；《漫威争锋》赛季更新；樱花工作室3A项目；Jackalope Games开放世界新作。'
         },
         dataSources: [
-            { type: '年度财报', name: '网易2025年Q4及全年财报', date: '2026-02-11', url: 'https://ir.netease.com/financial-information/quarterly-earnings' },
-            { type: '行业分析', name: '2025年全年业绩解读', date: '2026-02-11', url: 'https://ir.netease.com/financial-information/quarterly-earnings' }
+            { type: '季度财报', name: 'NetEase Announces First Quarter 2026 Unaudited Financial Results', date: '2026-05-21', url: 'https://ir.netease.com/financial-information/quarterly-earnings' },
+            { type: '行业报道', name: 'GamesIndustry.biz: NetEase reports 6.9% increase in games revenue to $3.7bn', date: '2026-05-22', url: 'https://www.gamesindustry.biz/topics/financials' }
         ],
-        filingDate: '2026-02-11',
-        filingType: '年度财报(全年)',
+        filingDate: '2026-05-21',
+        filingType: '季度财报',
         filingUrl: 'https://ir.netease.com/financial-information/quarterly-earnings'
     },
     {
@@ -440,46 +441,50 @@ const earningsCompanies = [
         logo: '🌟',
         color: '#FF6B35',
         segment: '整体（游戏专用）',
-        fiscalPeriod: 'FY2026 Q3 (2025年10-12月)',
+        fiscalPeriod: 'FY2026 Q4 + 全年 (2025年4月-2026年3月)',
         currency: 'USD',
         latestQuarter: {
-            period: 'FY2026 Q3', calendarPeriod: '2025年10-12月', filingDate: '2026-02-04',
-            revenue: { value: 1580, unit: '百万美元(净预订)', yoy: 15.3, label: 'Q3净预订$15.8亿(+15.3%)', usdEquiv: '$1.58B' },
+            period: 'FY2026 Q4', calendarPeriod: '2026年1-3月', filingDate: '2026-05-21',
+            revenue: { value: 1680, unit: '百万美元(GAAP营收)', yoy: 6.3, label: 'Q4 GAAP营收$16.8亿(+6%)', usdEquiv: '$1.68B' },
             gameMetrics: {
-                gtaVTotalSales: { value: 215, unit: '百万套+', label: 'GTA V累计销量' },
-                civ7Sales: { value: 5, unit: '百万套+(估)', label: '文明7累计销量(估)' }
+                q4NetBookings: { value: 1580, unit: '百万美元', label: 'Q4净预订$15.8亿(超指引)' },
+                q4NetLoss: { value: -59.5, unit: '百万美元', label: 'Q4 GAAP净亏损(每股-$0.32)' }
             }
         },
         fullYear: {
-            period: 'FY2026全年指引', filingDate: '2026-02-04', status: '管理层指引',
-            revenue: { value: 5600, unit: '百万美元(净预订指引)', yoy: null, label: '全年净预订$55-57亿', usdEquiv: '$5.6B' },
-            note: '基于管理层指引;GTA6已延期至2026/05/26不在本财年'
+            period: 'FY2026全年(2025/4-2026/3)', filingDate: '2026-05-21', status: '已发布',
+            revenue: { value: 6720, unit: '百万美元(净预订)', yoy: 19, label: '全年净预订$67.2亿(+19%)', usdEquiv: '$6.72B' },
+            gameBreakdown: {
+                gaapRevenue: { value: 6660, unit: '百万美元', yoy: 18, label: 'GAAP净收入$66.6亿(+18%)' },
+                netLoss: { value: -298, unit: '百万美元', label: 'GAAP净亏损(较上年-$44.8亿大幅收窄)' }
+            }
         },
         financials: {
-            revenue: { value: 1580, unit: '百万美元(净预订)', yoy: 15.3, label: '净预订(Net Bookings)', source: 'Take-Two FY2026 Q3 Earnings Release (2026/02/03)' },
-            operatingProfit: { value: -50, unit: '百万美元(GAAP,估)', yoy: null, label: '营业利润(GAAP,估)' },
-            operatingMargin: { value: -3.2, label: '营业利润率(GAAP,估)' },
+            revenue: { value: 6720, unit: '百万美元(全年净预订)', yoy: 19, label: '全年净预订(Net Bookings)', source: 'Take-Two FY2026 Q4 & Full Year Earnings Release (2026/05/21)' },
+            operatingProfit: { value: -298, unit: '百万美元(GAAP净亏损)', yoy: null, label: 'GAAP净亏损(EBITDA $7.61亿转正)' },
+            operatingMargin: { value: -4.5, label: 'GAAP净利率(净亏损/GAAP营收)' },
             segmentRevenuePct: { value: 100, label: '游戏占比' },
         },
         gameMetrics: {
-            gtaVTotalSales: { value: 215, unit: '百万套+', label: 'GTA V累计销量', source: 'Take-Two IR' },
-            rdr2TotalSales: { value: 67, unit: '百万套+', label: 'RDR2累计销量' },
-            civ7Sales: { value: 5, unit: '百万套+(估)', label: '文明7累计销量(估)' },
-            recurrentRevenue: { value: 72, unit: '%', label: '经常性收入占比(估)' },
+            fy26NetBookings: { value: 6720, unit: '百万美元', yoy: 19, label: '全年净预订(超初始指引$7.5亿)', source: 'Take-Two FY26 Earnings Release' },
+            rcsShare: { value: 78, unit: '%', label: '经常性消费(RCS)占净预订(NBA2K +30%/移动+13%/GTA Online +6%)' },
+            digitalShare: { value: 97, unit: '%', label: '数字在线渠道占净收入' },
+            mobileShare: { value: 50, unit: '%', label: '移动平台占净收入' },
+            gtaVTotalSales: { value: 215, unit: '百万套+', label: 'GTA V累计销量' },
         },
-        keyProducts: ['GTA Online', 'NBA 2K26', '文明VII', 'Red Dead Online', 'Borderlands 4'],
+        keyProducts: ['GTA Online', 'NBA 2K26', 'GTA6(2026/11/19)', 'Borderlands 4', 'Zynga移动'],
         analysis: {
-            performance: 'FY2026 Q3净预订约$15.8亿(+15.3% YoY)，好于市场预期。《文明7》(2025/02)持续贡献增量，NBA 2K26表现稳健。GTA V累计销量超2.15亿套长尾依旧惊人。注：GTA6已延期至2026年5月26日，本季度不含GTA6收入。CEO泽尔尼克确认全力支持Rockstar延长开发时间。',
-            strategy: '全公司资源聚焦GTA6品质打磨。GTA6延期至2026年5月26日发售(原定2025年秋季)。同时维护GTA Online、NBA 2K等核心产品线。《无主之地4》发售窗口将避开GTA6。',
-            outlook: 'GTA6于2026年5月26日发售后，FY2027将成Take-Two历史性财年。管理层预计GTA6创造力将超越前作。Take-Two股价因延期短期下跌约10%但随后反弹。FY2026全年净预订指引约$55-57亿。',
-            newProducts: '《GTA6》(2026/05/26)；《无主之地4》(FY2026-27)；NBA 2K27 (2026/09)。'
+            performance: 'FY2026全年净预订$67.2亿(+19% YoY)，超初始指引$7.5亿，Beat。GAAP净收入$66.6亿(+18%)，GAAP净亏损-$2.98亿(较上年-$44.8亿大幅收窄，主因上年商誉减值出清)，EBITDA转正至$7.61亿。增长由经常性消费(RCS +17%，占净预订78%)驱动——NBA 2K +30%、移动+13%、GTA Online +6%。Q4 GAAP营收$16.8亿(+6%)、净预订$15.8亿超指引、净亏损仅-$5,950万优于预期。数字渠道占净收入97%、移动占50%，业务结构持续向高毛利数字+经常性收入倾斜。',
+            strategy: 'CEO泽尔尼克正式确认《GTA6》2026年11月19日如期发售，打消市场延期疑虑，这是FY2027超级周期的核心催化剂。同步披露截至FY2029共29款产品储备管线(含3款全新IP:Ghost Story《犹大》、31st Union《ETHOS计划》)。当前以经常性消费稳住基本盘，等待GTA6引爆。',
+            outlook: 'FY2027指引净预订$80-82亿(约+20%)、GAAP净收入$79-81亿、GAAP净利润$1.05-1.41亿(扭亏为盈)、EBITDA $10.1-10.7亿。管理层定位FY2027为"突破之年"。但FY27净预订指引低于此前市场预期($91.1亿)，反映GTA6贡献节奏的谨慎假设。Q1 FY27预计净亏损-$4,200万至-$2,700万。',
+            newProducts: '《GTA6》(2026/11/19，行业最大催化剂)；《无主之地4》；NBA 2K27；3款全新IP(FY27-29)。'
         },
         dataSources: [
-            { type: '季度财报', name: 'Take-Two FY2026 Q3 Earnings Release', date: '2026-02-03', url: 'https://ir.take2games.com/' },
-            { type: '新闻', name: 'GTA6延期至2026年5月26日', date: '2025-05-02', url: 'https://www.rockstargames.com/' }
+            { type: '季度财报', name: 'Take-Two FY2026 Q4 & Full Year Earnings Release', date: '2026-05-21', url: 'https://ir.take2games.com/static-files/de7eeb58-9a3d-44c4-8407-9b0453cae8a4' },
+            { type: '行业报道', name: 'BusinessWire/StockTitan: Take-Two Q4 Net Bookings $1.58B above guidance', date: '2026-05-22', url: 'https://www.stocktitan.net/news/TTWO/take-two-interactive-software-inc-reports-results-for-fourth-quarter-b4smbtxrgpw8.html' }
         ],
-        filingDate: '2026-02-04',
-        filingType: '季度财报',
+        filingDate: '2026-05-21',
+        filingType: '季度+全年财报',
         filingUrl: 'https://ir.take2games.com/'
     },
     {
@@ -493,43 +498,48 @@ const earningsCompanies = [
         logo: '🔷',
         color: '#0070FF',
         segment: '整体（游戏专用）',
-        fiscalPeriod: 'FY2026 Q3 (2025年10-12月)',
+        fiscalPeriod: 'FY2026全年 (2025年4月-2026年3月)',
         currency: 'EUR',
         latestQuarter: {
-            period: 'FY2026 Q3', calendarPeriod: '2025年10-12月', filingDate: '2026-01-29',
-            revenue: { value: 900, unit: '百万欧元(净预定,估)', yoy: 24.1, label: 'Q3净预定≈€9亿(+24%)', usdEquiv: '≈$980M' },
+            period: 'FY2026 Q4', calendarPeriod: '2026年1-3月', filingDate: '2026-05-20',
+            revenue: { value: 415, unit: '百万欧元(净预订)', yoy: null, label: 'Q4净预订€4.15亿(超目标)', usdEquiv: '≈$456M' },
             gameMetrics: {
                 acShadowsSales: { value: 10, unit: '百万套+(估)', label: '刺客信条:影 累计销量(估)' }
             }
         },
         fullYear: {
-            period: 'FY2026全年(估)', filingDate: '2026-01-29', status: '估算',
-            revenue: { value: 1800, unit: '百万美元(估)', yoy: null, label: '全年≈€16-18亿≈$18亿', usdEquiv: '≈$1.8B' },
-            note: 'Shadows推动改善,私有化可能性仍存'
+            period: 'FY2026全年(已发布)', filingDate: '2026-05-20', status: '已发布(创纪录亏损)',
+            revenue: { value: 1525, unit: '百万欧元(净预订)', yoy: -17, label: '全年净预订€15.25亿(-17%)', usdEquiv: '≈$16.8亿' },
+            gameBreakdown: {
+                operatingLoss: { value: -1300, unit: '百万欧元', label: '运营亏损€13亿(创纪录,含€6.5亿减值)' },
+                digitalShare: { value: 87, unit: '%', label: '数字收入占比' }
+            }
         },
         financials: {
-            revenue: { value: 900, unit: '百万欧元(净预定,估)', yoy: 24.1, label: '净预定收入(估)', source: 'Ubisoft FY2026 Q3 Sales Report(2026/01,估)', usdEquiv: '≈$980M' },
-            operatingProfit: { value: 70, unit: '百万欧元(估)', yoy: null, label: '营业利润(估)', usdEquiv: '≈$76M' },
-            operatingMargin: { value: 7.8, label: '营业利润率(估)' },
+            revenue: { value: 1525, unit: '百万欧元(全年净预订)', yoy: -17, label: '全年净预订(Net Bookings)', source: 'Ubisoft FY2025-26 Full-Year Earnings (2026/05/20)', usdEquiv: '≈$16.8亿' },
+            operatingProfit: { value: -1300, unit: '百万欧元(运营亏损)', yoy: null, label: '运营亏损€13亿(创纪录)', usdEquiv: '≈-$14.3亿' },
+            operatingMargin: { value: -85, label: '运营亏损率(亏损/净预订,含巨额减值)' },
             segmentRevenuePct: { value: 100, label: '游戏占比' },
         },
         gameMetrics: {
-            acShadowsSales: { value: 10, unit: '百万套+(估)', label: '刺客信条:影 累计销量(估)', source: '行业分析估算' },
-            pri: { value: 55, unit: '%', label: 'PRI(玩家经常性投入)占比(估)' },
-            tencentStake: { value: 10, unit: '%', label: '腾讯持股比例(战略投资)' },
+            revenueDecline: { value: -21.8, unit: '%', label: 'IFRS营收同比(-21.8%)', source: 'GamesIndustry.biz' },
+            layoffs: { value: 1200, unit: '人', label: '裁员约1,200人(员工降至16,600)' },
+            cancelledProjects: { value: 6, unit: '款', label: '取消项目数(减值约€6.5亿)' },
+            tencentStake: { value: 25, unit: '%', label: '腾讯入股新子公司(承接三大IP)' },
         },
-        keyProducts: ['《刺客信条：影》', '《彩虹六号：围攻》', '《全境封锁》', 'Tom Clancy系列'],
+        keyProducts: ['《刺客信条：影》', '《刺客信条》新作', '《孤岛惊魂》新作', '《幽灵行动》新作(推迟至2027)', '《彩虹六号：围攻》'],
         analysis: {
-            performance: 'FY2026 Q3受益于《刺客信条：影》(2025/03/20发售)的后续销售和数字内容。净预定预计约€9亿(+24% YoY)，大幅改善。Shadows延期后销售表现总体积极。腾讯完成战略投资(持股约10%)。注：具体数据以官方Sales Report为准。',
-            strategy: '腾讯战略投资后组织架构重组。"更少但更好"策略执行中。精简产品线聚焦核心IP(刺客信条/Tom Clancy)。',
-            outlook: 'FY2026全年在Shadows推动下应有明显改善。私有化可能性仍存(腾讯+Guillemot家族)。中长期需要更多大作验证转型。',
-            newProducts: '刺客信条下一作(开发中)；Star Wars新项目；彩虹六号新赛季。'
+            performance: 'FY2025-26全年净预订€15.25亿(-17% YoY)，IFRS营收-21.8%，Miss。受新作发布档期偏软拖累，叠加€6.5亿资产减值+重组费用，造成创纪录运营亏损€13亿(≈-$14.3亿，非经营性损失占主体)。回溯目录(back-catalog)表现稳健、数字收入占比达87%是少数亮点。Q4净预订€4.15亿超内部目标。公司同步裁员约1,200人(员工降至16,600)、取消6款项目，转型代价集中释放。',
+            strategy: '"战略重置"全面启动:成立由腾讯入股(约25%)的新子公司承接《刺客信条》《孤岛惊魂》《彩虹六号》三大旗舰IP，剥离非核心资产。执行"更少但更好"策略，精简产品线聚焦核心IP。腾讯入股为转型提供资金与战略背书。',
+            outlook: 'FY2026-27被定位为自由现金流(FCF)轨迹"低点":管理层指引净预订高个位数百分比下滑、运营亏损率个位数(较FY26大幅改善)，承诺2029年前推出刺客信条/孤岛惊魂/幽灵行动三大新作(近期作品M站均80+)。但《幽灵行动》新作已推迟至2027年，转型仍需大作验证。',
+            newProducts: '《刺客信条》新作(开发中)；《孤岛惊魂》新作；《幽灵行动》新作(推迟至2027)；彩虹六号新赛季。'
         },
         dataSources: [
-            { type: '季度销售', name: 'Ubisoft FY2026 Q3 Sales Report(估)', date: '2026-01-29', url: 'https://www.ubisoft.com/en-us/company/about-us/investors' }
+            { type: '全年财报', name: 'Ubisoft Reports Full-Year 2025-26 Earnings Figures', date: '2026-05-20', url: 'https://live.euronext.com/en/products/equities/company-news/2026-05-20-ubisoft-reports-full-year-2025-26-earnings-figures' },
+            { type: '行业报道', name: 'GamesIndustry.biz: Ubisoft FY26 revenue -21.8%, net bookings -17.4%', date: '2026-05-20', url: 'https://www.gamesindustry.biz/ubisofts-full-fy26-financials-report-shows-a-sharp-decline-in-revenue-and-net-bookings' }
         ],
-        filingDate: '2026-01-29',
-        filingType: '季度销售报告',
+        filingDate: '2026-05-20',
+        filingType: '全年财报',
         filingUrl: 'https://www.ubisoft.com/en-us/company/about-us/investors'
     },
     {
@@ -1211,23 +1221,23 @@ const quarterlyRevenueComparison = [
     },
     {
         name: '网易',
-        revenue: 3034, // ¥220亿游戏Q4 / 7.25
+        revenue: 3700, // ¥257亿游戏Q1, 官方US$3.7B
         currency: 'USD',
-        period: '2025 Q4 (10-12月)',
-        note: 'Q4游戏¥220亿≈$30.3亿',
+        period: '2026 Q1 (1-3月)',
+        note: 'Q1游戏¥257亿≈$3.7B(+6.9%),营业利润¥126.57亿(+21.2%)',
         color: '#D42922',
         dataGrade: 'A',
-        yoy: 3.4
+        yoy: 6.9
     },
     {
         name: 'Take-Two',
-        revenue: 1580, // $15.8亿净预订
+        revenue: 1680, // Q4 GAAP营收$16.8亿(+6%); 净预订$15.8亿
         currency: 'USD',
-        period: 'FY26 Q3 (10-12月)',
-        note: 'Q3净预订$15.8亿(+15.3%)',
+        period: 'FY26 Q4 (1-3月)',
+        note: 'Q4 GAAP营收$16.8亿(+6%),净预订$15.8亿超指引',
         color: '#FF6B35',
         dataGrade: 'A',
-        yoy: 15.3
+        yoy: 6.3
     },
     {
         name: 'Roblox',
@@ -1261,13 +1271,13 @@ const quarterlyRevenueComparison = [
     },
     {
         name: '育碧',
-        revenue: 978, // €9亿 / 0.92
+        revenue: 451, // €4.15亿 / 0.92
         currency: 'USD',
-        period: 'FY26 Q3 (10-12月)',
-        note: 'Q3净预定≈€9亿≈$9.8亿(Shadows推动)',
+        period: 'FY26 Q4 (1-3月)',
+        note: 'Q4净预订€4.15亿≈$4.5亿(超目标);全年净预订-17%运营亏损€13亿',
         color: '#0070FF',
-        dataGrade: 'C',
-        yoy: 24.1
+        dataGrade: 'A',
+        yoy: null
     },
     {
         name: 'Embracer',
@@ -1420,14 +1430,14 @@ const fullYearRevenueComparison = [
     },
     {
         name: 'Take-Two',
-        revenue: 5600, // FY26全年净预订指引$55-57亿
+        revenue: 6720, // FY26全年净预订$67.2亿(+19%)
         currency: 'USD',
-        period: 'FY26全年指引',
-        note: 'FY26全年净预订指引$55-57亿',
+        period: 'FY26全年(已发布)',
+        note: 'FY26全年净预订$67.2亿(+19%),GAAP营收$66.6亿(+18%)',
         color: '#FF6B35',
-        dataGrade: 'B',
-        yoy: null,
-        caveat: '基于管理层指引;GTA6已延期至2026/05/26不在本财年'
+        dataGrade: 'A',
+        yoy: 19,
+        caveat: 'GAAP净亏损-$2.98亿大幅收窄(上年-$44.8亿),EBITDA转正$7.61亿;FY27指引$80-82亿;GTA6 11/19定档'
     },
     {
         name: 'Roblox',
@@ -1484,13 +1494,14 @@ const fullYearRevenueComparison = [
     },
     {
         name: '育碧',
-        revenue: 1800, // FY26估约€16-18亿
+        revenue: 1680, // FY26全年净预订€15.25亿≈$16.8亿
         currency: 'USD',
-        period: 'FY26全年估',
-        note: '全年≈€16-18亿≈$18亿(估,Shadows推动改善)',
+        period: 'FY26全年(已发布)',
+        note: '全年净预订€15.25亿≈$16.8亿(-17%),运营亏损€13亿创纪录',
         color: '#0070FF',
-        dataGrade: 'C',
-        yoy: null
+        dataGrade: 'A',
+        yoy: -17,
+        caveat: '裁员1200人+取消6款项目+€6.5亿减值;数字收入占比87%;腾讯入股新子公司承接三大IP'
     },
     {
         name: 'Embracer',
