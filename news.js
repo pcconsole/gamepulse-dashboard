@@ -1,13 +1,193 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.2 自动更新，请勿手动编辑
-// 最后更新: 2026-06-04T18:00:00Z
-// 更新者: news-agent (v5.2 腾讯文档MCP+web_search 8轮+新增4条+0天清理)
+// 最后更新: 2026-06-05T18:00:00Z
+// 更新者: news-agent (v5.2 腾讯文档MCP+web_search 12轮+新增11条+90天清理10条)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
 // ============================================
 const newsData = [
+    {
+    "id": 1661,
+    "title": "2026夏日游戏节今日开幕，Geoff Keighley称史上规模最大一届",
+    "summary": "Summer Game Fest 2026于6月5日在洛杉矶杜比剧院开幕，为期约2小时的主秀将展示数十个全球首秀和预告片。组织者Geoff Keighley预告本届为史上规模最大。同期Xbox Games Showcase、独立游戏节等活动持续至6/8。GTA6、星球大战等重磅作品或将亮相。",
+    "source": "17173",
+    "sourceUrl": "https://news.17173.com/content/06052026/064621294.shtml",
+    "sourceUrls": [
+        {"name": "17173", "url": "https://news.17173.com/content/06052026/064621294.shtml"},
+        {"name": "Eurogamer", "url": "https://www.eurogamer.net/summer-game-fest-2026-schedule-all-showcases"},
+        {"name": "SGF官网", "url": "https://www.summergamefest.com/events/summer-game-fest"}
+    ],
+    "category": "policy",
+    "importance": "medium",
+    "featured": true,
+    "date": "2026-06-05",
+    "tags": ["夏日游戏节","SGF","Geoff Keighley","展会","2026"],
+    "sentiment": "positive",
+    "relatedNewsIds": [1611],
+    },
+    {
+    "id": 1655,
+    "title": "Switch 2日本涨价后周销量暴跌87%，仅3.2万台",
+    "summary": "Famitsu最新数据显示，任天堂Switch 2在5/25日本涨价(49980→59980日元)后首周销量仅31751台，较前一周247880台环比暴跌87%。老款Switch销量也受波及跌至冰点。任天堂已下调FY2027 Switch 2销量预期至1650万台(-16.9%)。",
+    "source": "IT之家",
+    "sourceUrl": "https://finance.sina.com.cn/tech/digi/2026-06-05/doc-iniaicuz1925505.shtml",
+    "sourceUrls": [
+        {"name": "IT之家", "url": "https://finance.sina.com.cn/tech/digi/2026-06-05/doc-iniaicuz1925505.shtml"},
+        {"name": "3DM", "url": "https://www.3dmgame.com/news/202606/3945636.html"},
+        {"name": "游民星空", "url": "https://www.gamersky.com/news/202606/2151622.shtml"},
+        {"name": "Famitsu", "url": "https://www.famitsu.com"}
+    ],
+    "category": "platform",
+    "importance": "high",
+    "featured": true,
+    "date": "2026-06-05",
+    "tags": ["Switch 2","任天堂","涨价","日本","销量","Famitsu"],
+    "sentiment": "negative",
+    "tdocMarking": "tdoc-verified",
+    "analysis": "涨价1万日元导致Switch 2日本周销量暴跌87%，是主机涨价对需求影响的罕见实证案例。但暴跌是否为短期观望效应需持续观察——日本玩家可能等待新直面会公布3D马力欧等重磅游戏后再购入。任天堂已下调FY2027销量预期至1650万台(-16.9%)，涨价策略的长期影响尚待验证。",
+    "relatedNewsIds": [1612,1471],
+    },
+    {
+    "id": 1654,
+    "title": "《007：初露锋芒》销量突破220万份，PS5占比超55%登顶月销榜",
+    "summary": "IO Interactive新作发售首月全平台销量约220万份，收入超1.5亿美元。PS5平台销量占比55.1%，北美43.4%+西欧为主力市场。游戏同时登顶PS5 5月月销量榜和Steam全球周销量榜。此前报道该作预算高达13亿丹麦克朗(约$2亿)。",
+    "source": "游民星空",
+    "sourceUrl": "https://wap.gamersky.com/news/Content-2151394.html",
+    "sourceUrls": [
+        {"name": "游民星空", "url": "https://wap.gamersky.com/news/Content-2151394.html"},
+        {"name": "游侠网", "url": "https://3g.ali213.net/news/html/1015527.html"},
+        {"name": "IGN中国", "url": "https://www.ign.com.cn/007-first-light/60462/007-chu-lu-feng-mang-gu-ji-xiao-liang-220mo-fen-shou-ru-chao-15yi-mei-yuan"},
+        {"name": "Ampere Analytics", "url": "https://ampereanalytics.com"}
+    ],
+    "category": "game",
+    "importance": "high",
+    "featured": true,
+    "date": "2026-06-05",
+    "tags": ["007","初露锋芒","IO Interactive","销量","PS5","里程碑"],
+    "sentiment": "positive",
+    "tdocMarking": "tdoc-verified",
+    "analysis": "007首月220万份/1.5亿美元收入意义重大——此前报道预算高达13亿丹麦克朗(约$2亿)，意味着尚需更多销量才能回本。PS5占比55%反映索尼平台在欧美3A市场的强势地位，也解释了第三方大作持续优先PS5的策略。",
+    "relatedNewsIds": [1630,1600],
+    },
+    {
+    "id": 1653,
+    "title": "《极限竞速：地平线6》640万销量+600万订阅，收入逼近5亿美元",
+    "summary": "Alinea Analytics最新数据显示，FH6全球累计销量640万份，XGP订阅玩家约600万，总玩家突破1240万，收入逼近5亿美元。Xbox主机端销量与Steam端差距不大，超预期。PS5版尚未发售。此前Alinea预估首周600万，如今实际销量已超出。",
+    "source": "IT之家",
+    "sourceUrl": "https://m.ithome.com/html/960214.htm",
+    "sourceUrls": [
+        {"name": "IT之家", "url": "https://m.ithome.com/html/960214.htm"},
+        {"name": "游侠网", "url": "https://3g.ali213.net/news/html/1015109.html"},
+        {"name": "游民星空", "url": "https://wap.gamersky.com/news/Content-2151639.html"},
+        {"name": "Alinea Analytics", "url": "https://alinea-analytics.com"}
+    ],
+    "category": "game",
+    "importance": "high",
+    "featured": true,
+    "date": "2026-06-05",
+    "tags": ["极限竞速","地平线6","Playground Games","销量","Xbox","里程碑"],
+    "sentiment": "positive",
+    "tdocMarking": "tdoc-verified",
+    "analysis": "FH6在PS5版尚未发售的情况下已达640万销量+5亿美元收入，证明Xbox第一方'双平台发行+Game Pass'策略的商业可行性。Xbox主机端销量与Steam端的接近度出乎预期，暗示Xbox核心用户群购买力被低估。PS5版上线后有望再创新高。",
+    "relatedNewsIds": [1626,1629,1607],
+    },
+    {
+    "id": 1660,
+    "title": "英国Switch 2销量破百万，走势与Xbox One同期相当",
+    "summary": "英国市场调研数据显示任天堂Switch 2在英国累计销量已突破100万台，上市后销售走势与微软Xbox One同期在英国市场的表现基本相当。部分零售商仍有缺货情况，供需相对紧张。",
+    "source": "VGC",
+    "sourceUrl": "https://www.videogameschronicle.com",
+    "sourceUrls": [
+        {"name": "VGC", "url": "https://www.videogameschronicle.com"},
+        {"name": "My Nintendo News", "url": "https://mynintendonews.com"}
+    ],
+    "category": "platform",
+    "importance": "medium",
+    "date": "2026-06-04",
+    "tags": ["Switch 2","任天堂","英国","销量"],
+    "sentiment": "neutral",
+    "tdocMarking": "tdoc-verified",
+    "relatedNewsIds": [1612],
+    },
+    {
+    "id": 1659,
+    "title": "Steam 5月硬件调查：RTX 3060登顶显卡榜，Win11占比逼近七成",
+    "summary": "Steam 5月硬件报告显示，RTX 3060以3.85%份额重回显卡榜首，Windows 11系统占比逼近70%，1080P分辨率显示器仍被超半数玩家使用，揭示当前Steam玩家硬件配置保守与升级并存的趋势。",
+    "source": "IT之家",
+    "sourceUrl": "https://www.ithome.com/0/960/214.htm",
+    "sourceUrls": [
+        {"name": "IT之家", "url": "https://www.ithome.com/0/960/214.htm"}
+    ],
+    "category": "hardware",
+    "importance": "medium",
+    "date": "2026-06-04",
+    "tags": ["Steam","硬件调查","RTX 3060","Windows 11","GPU"],
+    "sentiment": "neutral",
+    "tdocMarking": "tdoc-verified",
+    "relatedNewsIds": [],
+    },
+    {
+    "id": 1658,
+    "title": "《沙丘：觉醒》主机版9/22发售，首发加入XGP+新增单人模式",
+    "summary": "Funcom在State of Play宣布《沙丘：觉醒》9/22登陆PS5/Xbox Series X|S，首发加入XGP，同步推出可自定义难度的单人模式。主机版整合PC版所有更新，支持60fps性能模式。Xbox版支持Play Anywhere+Cloud Gaming。暂不支持跨平台联机。",
+    "source": "IT之家",
+    "sourceUrl": "https://www.ithome.com/0/959/894.htm",
+    "sourceUrls": [
+        {"name": "IT之家", "url": "https://www.ithome.com/0/959/894.htm"},
+        {"name": "IGN中国", "url": "https://www.ign.com.cn/dune-awakening/60427/sha-qiu-jue-xing-jiang-yu-9-yue-22-ri-deng-lu-zhu-ji-ping-tai"},
+        {"name": "17173", "url": "http://news.17173.com/content/06032026/203503655.shtml"}
+    ],
+    "category": "game",
+    "importance": "medium",
+    "featured": true,
+    "date": "2026-06-04",
+    "tags": ["沙丘觉醒","Funcom","Game Pass","主机版","单人模式"],
+    "sentiment": "positive",
+    "tdocMarking": "tdoc-verified",
+    "relatedNewsIds": [],
+    },
+    {
+    "id": 1657,
+    "title": "FIFA 2026世界杯游戏6月11日登陆Netflix，对订阅用户免费",
+    "summary": "FIFA与Netflix合作推出《FIFA World Cup: Launch Edition》，6/11在Netflix Games独家上线，所有Netflix订阅用户免费游玩。游戏包含48支球队、16座球场和1200+球星，支持智能手机操控，内容随世界杯赛程实时更新。标志着FIFA与EA分手后的新发行模式。",
+    "source": "VGC",
+    "sourceUrl": "https://www.videogameschronicle.com/news/fifa-world-cup-2026-game-launches-on-netflix-june-11-as-ea-rivalry-begins",
+    "sourceUrls": [
+        {"name": "VGC", "url": "https://www.videogameschronicle.com/news/fifa-world-cup-2026-game-launches-on-netflix-june-11-as-ea-rivalry-begins"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/905/851.htm"},
+        {"name": "直播吧", "url": "https://m.zhibo8.com/news/web/zuqiu/2026-06-05/6a224536beac4native.htm"}
+    ],
+    "category": "platform",
+    "importance": "medium",
+    "featured": true,
+    "date": "2026-06-04",
+    "tags": ["FIFA","Netflix","世界杯","免费游戏","足球"],
+    "sentiment": "neutral",
+    "tdocMarking": "tdoc-verified",
+    "relatedNewsIds": [],
+    },
+    {
+    "id": 1656,
+    "title": "Xbox CEO Sharma重申'平台必须有独占内容'，正逐案审视独占策略",
+    "summary": "Xbox CEO Asha Sharma在Bloomberg Live活动上重申将'非常仔细地'审视Xbox独占内容策略，称'平台必须有独占内容'。同时透露上任100天工作成果评估进展，明确Xbox长期目标是成为全球第一大游戏和娱乐公司。",
+    "source": "VGC",
+    "sourceUrl": "https://www.videogameschronicle.com/news/xbox-ceo-says-platforms-must-have-exclusive-content-as-she-weighs-exclusivity-shift/",
+    "sourceUrls": [
+        {"name": "VGC", "url": "https://www.videogameschronicle.com/news/xbox-ceo-says-platforms-must-have-exclusive-content-as-she-weighs-exclusivity-shift/"},
+        {"name": "Vertical Slice Games", "url": "https://www.verticalslicegames.com/news/asha-sharma-xbox-ceo-strategy-exclusivity-game-pass"}
+    ],
+    "category": "platform",
+    "importance": "high",
+    "featured": true,
+    "date": "2026-06-04",
+    "tags": ["Xbox","Asha Sharma","独占","Game Pass","微软"],
+    "sentiment": "neutral",
+    "tdocMarking": "tdoc-verified",
+    "analysis": "Sharma在Bloomberg Live上的表态是Xbox独占策略的最新信号弹。'必须有独占内容'暗示Xbox可能重新收紧多平台发行策略，但'逐案审视'也说明不会一刀切。结合此前Game Pass降价生效的背景，Xbox正在构建'独占+低价订阅'的双轨竞争策略。",
+    "relatedNewsIds": [1627,1629,1603],
+    },
     {
     "id": 1649,
     "title": "Gothic 1 Remake明日发售，THQ Nordic确认PC/PS5/Xbox同步上线",
@@ -16,7 +196,7 @@ const newsData = [
     "sourceUrl": "https://www.thqnordic.com/games/gothic-1-remake",
     "sourceUrls": [
         {"name": "THQ Nordic", "url": "https://www.thqnordic.com/games/gothic-1-remake"},
-        {"name": "Gematsu", "url": "https://www.gematsu.com/2026/06/gothic-1-remake-launches-june-5"},
+        {"name": "Gematsu", "url": "https://www.gematsu.com/2026/06/gothic-1-remake-launches-june-5"}
     ],
     "category": "game",
     "importance": "medium",
@@ -26,6 +206,41 @@ const newsData = [
     "sentiment": "positive",
     },
     {
+    "id": 1663,
+    "title": "《Gamble With Your Friends》首月销量突破200万，休闲合作类市场强劲",
+    "summary": "合作类游戏《Gamble With Your Friends》2026年5月1日上线后首周即卖出100万份，上线满一个月总销量突破200万份，印证了休闲合作类游戏在当前市场的强劲需求。",
+    "source": "GamesIndustry.biz",
+    "sourceUrl": "https://www.gamesindustry.biz",
+    "sourceUrls": [
+        {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz"}
+    ],
+    "category": "game",
+    "importance": "low",
+    "date": "2026-06-03",
+    "tags": ["Gamble With Your Friends","休闲合作","销量","独立游戏"],
+    "sentiment": "positive",
+    "tdocMarking": "tdoc-verified",
+    "relatedNewsIds": [],
+    },
+    {
+    "id": 1662,
+    "title": "美国ESA调查：67%美国人是游戏玩家，80岁以上32%玩游戏",
+    "summary": "美国娱乐软件协会(ESA)万人调查显示，美国游戏玩家规模达2.123亿人，占人口67%。最值得注意的是81-90岁人群中也有32%在玩游戏，打破对玩家年龄层的固有认知。",
+    "source": "IT之家",
+    "sourceUrl": "https://www.ithome.com",
+    "sourceUrls": [
+        {"name": "IT之家", "url": "https://www.ithome.com"},
+        {"name": "ESA", "url": "https://www.theesa.com"}
+    ],
+    "category": "market",
+    "importance": "low",
+    "date": "2026-06-03",
+    "tags": ["ESA","游戏玩家","美国","调查"],
+    "sentiment": "positive",
+    "tdocMarking": "tdoc-verified",
+    "relatedNewsIds": [],
+    },
+    {
     "id": 1648,
     "title": "PS Plus Premium经典目录新增三款PS2经典游戏",
     "summary": "索尼宣布PS Plus Premium会员经典游戏目录将新增三款PS2经典：《吉他小子》（6月）、《超能力战警》（7月）、《新鬼武者：梦之觉醒》（8月）。",
@@ -33,7 +248,7 @@ const newsData = [
     "sourceUrl": "https://www.videogameschronicle.com/news/ps-plus-premium-ps2-classics-june-2026/",
     "sourceUrls": [
         {"name": "VGC", "url": "https://www.videogameschronicle.com/news/ps-plus-premium-ps2-classics-june-2026/"},
-        {"name": "3DM", "url": "https://www.3dmgame.com/news/202606/3945380.html"},
+        {"name": "3DM", "url": "https://www.3dmgame.com/news/202606/3945380.html"}
     ],
     "category": "platform",
     "importance": "low",
@@ -50,7 +265,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "IT之家", "url": "https://www.ithome.com/0/958/324.htm"},
         {"name": "GamingBolt", "url": "https://gamingbolt.com/phantom-blade-zero-delayed-state-of-play"},
-        {"name": "搜狐", "url": "https://www.sohu.com/a/1031403641_122220088"},
+        {"name": "搜狐", "url": "https://www.sohu.com/a/1031403641_122220088"}
     ],
     "category": "game",
     "importance": "medium",
@@ -65,7 +280,7 @@ const newsData = [
     "source": "3DM",
     "sourceUrl": "https://www.3dmgame.com/news/202606/3945401.html",
     "sourceUrls": [
-        {"name": "3DM", "url": "https://www.3dmgame.com/news/202606/3945401.html"},
+        {"name": "3DM", "url": "https://www.3dmgame.com/news/202606/3945401.html"}
     ],
     "category": "game",
     "importance": "medium",
@@ -82,7 +297,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/marvel-tokon-fighting-souls-state-of-play"},
         {"name": "IGN中国", "url": "https://www.ign.com.cn/marvel-tokon-fighting-souls/60393/man-wei-dou-hun-hui-mie-qi-shi-xuan-chuan-shi-pin-state-of-play"},
-        {"name": "GamingBolt", "url": "https://gamingbolt.com/marvel-tokon-fighting-souls-state-of-play"},
+        {"name": "GamingBolt", "url": "https://gamingbolt.com/marvel-tokon-fighting-souls-state-of-play"}
     ],
     "category": "game",
     "importance": "medium",
@@ -100,7 +315,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "Rock Paper Shotgun", "url": "https://www.rockpapershotgun.com/what-the-f-do-i-pay-you-for-if-thats-your-opinion-gabe-newell-reportedly-once-shouted-at-one-of-valves-lionel-hutzes-during-steam-porn-debate"},
         {"name": "GamesRadar", "url": "https://www.gamesradar.com/games/gabe-newell-asked-valves-top-lawyer-what-the-f-do-i-pay-you-for-if-thats-your-opinion-in-heated-debate-over-porn-games-on-steam-report-says/"},
-        {"name": "3DM", "url": "https://www.3dmgame.com/news/202606/3945375.html"},
+        {"name": "3DM", "url": "https://www.3dmgame.com/news/202606/3945375.html"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -120,7 +335,7 @@ const newsData = [
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/valve-antitrust-lawsuit-steam-price-parity"},
         {"name": "Games.gg", "url": "https://games.gg/news/valve-antitrust-lawsuit-steam-price-parity/"},
         {"name": "3DM", "url": "https://www.3dmgame.com/news/202606/3945391.html"},
-        {"name": "IGN", "url": "https://www.ign.com/articles/steam-owner-valve-faces-900-million-lawsuit-over-pc-monopoly-claims-following-uk-tribunal-ruling"},
+        {"name": "IGN", "url": "https://www.ign.com/articles/steam-owner-valve-faces-900-million-lawsuit-over-pc-monopoly-claims-following-uk-tribunal-ruling"}
     ],
     "category": "platform",
     "importance": "high",
@@ -132,6 +347,54 @@ const newsData = [
     "relatedNewsIds": [1433],
     },
     {
+    "id": 1652,
+    "title": "真三国无双2 Remaster公布，光荣特库摩经典重制",
+    "summary": "光荣特库摩在State of Play上宣布《真三国无双2》重制版。重制版将提升画面分辨率与帧率，保留原版无双战斗体验。",
+    "source": "光荣特库摩",
+    "sourceUrl": "https://www.gamecity.ne.jp/smusou2-remaster/",
+    "sourceUrls": [
+        {"name": "光荣特库摩", "url": "https://www.gamecity.ne.jp/smusou2-remaster/"}
+    ],
+    "category": "game",
+    "importance": "low",
+    "date": "2026-06-02",
+    "tags": ["真三国无双","光荣特库摩","重制版","State of Play"],
+    "sentiment": "positive",
+    },
+    {
+    "id": 1651,
+    "title": "Stuntman: Hollywood公布，好莱坞特技动作新游亮相State of Play",
+    "summary": "State of Play上公布了Stuntman: Hollywood，一款以好莱坞特技动作为主题的新作。玩家将扮演特技替身演员，完成各种高难度特技场景。发售日未公布。",
+    "source": "PlayStation Blog",
+    "sourceUrl": "https://blog.playstation.com/2026/06/02/stuntman-hollywood-announced-at-state-of-play/",
+    "sourceUrls": [
+        {"name": "PS Blog", "url": "https://blog.playstation.com/2026/06/02/stuntman-hollywood-announced-at-state-of-play/"},
+        {"name": "MonsterVine", "url": "https://monstervine.com/2026/06/stuntman-hollywood-state-of-play/"}
+    ],
+    "category": "game",
+    "importance": "low",
+    "date": "2026-06-02",
+    "tags": ["Stuntman","Hollywood","特技","State of Play"],
+    "sentiment": "positive",
+    },
+    {
+    "id": 1650,
+    "title": "KEMURI：前顽皮狗成员组建Umoja Games首作亮相State of Play",
+    "summary": "由前顽皮狗成员组建的Umoja Games在State of Play上公开了首部作品KEMURI，一款风格化的动作冒险游戏。游戏以独特的'墨'视觉效果为核心机制，具体发售日未公布。",
+    "source": "PlayStation Blog",
+    "sourceUrl": "https://blog.playstation.com/2026/06/02/kemuri-announced-at-state-of-play/",
+    "sourceUrls": [
+        {"name": "PS Blog", "url": "https://blog.playstation.com/2026/06/02/kemuri-announced-at-state-of-play/"},
+        {"name": "Engadget", "url": "https://www.engadget.com/gaming/kemuri-umoja-games-state-of-play/"}
+    ],
+    "category": "game",
+    "importance": "medium",
+    "featured": true,
+    "date": "2026-06-02",
+    "tags": ["KEMURI","Umoja Games","顽皮狗","State of Play","PS5"],
+    "sentiment": "positive",
+    },
+    {
     "id": 1647,
     "title": "《命运石之门》系列销量破400万，重制版8月发售新增世界线与结局",
     "summary": "经典视觉小说《命运石之门》系列全球累计销量突破400万份。重制版《命运石之门 Re:Boot》8月20日登陆Xbox/PC，10月29日登陆NS/NS2/PS5。新增对白、调整叙事节奏、收录全新世界线和结局路线，美术资源较原版增加20%。",
@@ -139,7 +402,7 @@ const newsData = [
     "sourceUrl": "https://www.ithome.com/0/958/324.htm",
     "sourceUrls": [
         {"name": "IT之家", "url": "https://www.ithome.com/0/958/324.htm"},
-        {"name": "3DM", "url": "https://www.3dmgame.com/news/202606/3945352.html"},
+        {"name": "3DM", "url": "https://www.3dmgame.com/news/202606/3945352.html"}
     ],
     "category": "game",
     "importance": "low",
@@ -156,7 +419,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "VGC", "url": "https://www.videogameschronicle.com/news/rayman-legends-retold-state-of-play/"},
         {"name": "IT之家", "url": "https://www.ithome.com/0/957/451.htm"},
-        {"name": "GamingBolt", "url": "https://gamingbolt.com/rayman-legends-retold-state-of-play"},
+        {"name": "GamingBolt", "url": "https://gamingbolt.com/rayman-legends-retold-state-of-play"}
     ],
     "category": "game",
     "importance": "low",
@@ -174,7 +437,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "VGC", "url": "https://www.videogameschronicle.com/news/no-rest-for-the-wicked-1-0-state-of-play/"},
         {"name": "IT之家", "url": "https://www.ithome.com/0/958/324.htm"},
-        {"name": "GamingBolt", "url": "https://gamingbolt.com/no-rest-for-the-wicked-1-0-state-of-play"},
+        {"name": "GamingBolt", "url": "https://gamingbolt.com/no-rest-for-the-wicked-1-0-state-of-play"}
     ],
     "category": "game",
     "importance": "low",
@@ -191,7 +454,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "IT之家", "url": "https://www.ithome.com/0/958/324.htm"},
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/ace-combat-8-state-of-play"},
-        {"name": "GamingBolt", "url": "https://gamingbolt.com/ace-combat-8-state-of-play"},
+        {"name": "GamingBolt", "url": "https://gamingbolt.com/ace-combat-8-state-of-play"}
     ],
     "category": "game",
     "importance": "low",
@@ -208,7 +471,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "GamingBolt", "url": "https://gamingbolt.com/onimusha-way-of-the-sword-state-of-play"},
         {"name": "IT之家", "url": "https://www.ithome.com/0/958/324.htm"},
-        {"name": "Eurogamer", "url": "https://www.eurogamer.net/onimusha-state-of-play"},
+        {"name": "Eurogamer", "url": "https://www.eurogamer.net/onimusha-state-of-play"}
     ],
     "category": "game",
     "importance": "low",
@@ -225,7 +488,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/tomb-raider-remake-delayed-switch-2-state-of-play"},
         {"name": "IT之家", "url": "https://www.ithome.com/0/958/324.htm"},
-        {"name": "GamingBolt", "url": "https://gamingbolt.com/tomb-raider-delayed-switch-2"},
+        {"name": "GamingBolt", "url": "https://gamingbolt.com/tomb-raider-delayed-switch-2"}
     ],
     "category": "game",
     "importance": "medium",
@@ -243,7 +506,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/control-resonance-state-of-play"},
         {"name": "IT之家", "url": "https://www.ithome.com/0/958/324.htm"},
-        {"name": "GamingBolt", "url": "https://gamingbolt.com/control-resonance-state-of-play"},
+        {"name": "GamingBolt", "url": "https://gamingbolt.com/control-resonance-state-of-play"}
     ],
     "category": "game",
     "importance": "medium",
@@ -260,7 +523,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/silent-hill-townfall-release-date-state-of-play"},
         {"name": "VGC", "url": "https://www.videogameschronicle.com/news/silent-hill-townfall-state-of-play/"},
-        {"name": "3DM", "url": "https://www.3dmgame.com/news/202606/3945369.html"},
+        {"name": "3DM", "url": "https://www.3dmgame.com/news/202606/3945369.html"}
     ],
     "category": "game",
     "importance": "medium",
@@ -276,7 +539,7 @@ const newsData = [
     "sourceUrl": "https://www.eurogamer.net/until-dawn-2-state-of-play",
     "sourceUrls": [
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/until-dawn-2-state-of-play"},
-        {"name": "VGC", "url": "https://www.videogameschronicle.com/news/until-dawn-2-state-of-play/"},
+        {"name": "VGC", "url": "https://www.videogameschronicle.com/news/until-dawn-2-state-of-play/"}
     ],
     "category": "game",
     "importance": "medium",
@@ -294,7 +557,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/summer-game-fest-2026-schedule-all-showcases"},
         {"name": "VGC", "url": "https://www.videogameschronicle.com/news/summer-game-fest-schedule-your-complete-2026-guide/"},
-        {"name": "GamingBolt", "url": "https://gamingbolt.com/summer-game-fest-2026-is-our-biggest-yet-says-geoff-keighley"},
+        {"name": "GamingBolt", "url": "https://gamingbolt.com/summer-game-fest-2026-is-our-biggest-yet-says-geoff-keighley"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -312,7 +575,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "IGN", "url": "https://www.ign.com/articles/marvels-wolverine-gameplay-state-of-play"},
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/marvels-wolverine-gameplay-state-of-play"},
-        {"name": "IT之家", "url": "https://www.ithome.com/0/958/324.htm"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/958/324.htm"}
     ],
     "category": "game",
     "importance": "high",
@@ -332,7 +595,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "IT之家", "url": "https://www.ithome.com/0/958/474.htm"},
         {"name": "DoNews", "url": "https://www.donews.com/news/detail/8/6578738.html"},
-        {"name": "NotebookCheck", "url": "https://www.notebookcheck.net/ghost-of-yotei-only-on-ps5/"},
+        {"name": "NotebookCheck", "url": "https://www.notebookcheck.net/ghost-of-yotei-only-on-ps5/"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -352,7 +615,7 @@ const newsData = [
         {"name": "Game File", "url": "https://www.gamefile.news/p/playstation-first-party-sales-decline"},
         {"name": "IGN", "url": "https://www.ign.com/articles/playstation-first-party-game-sales-have-declined-over-the-past-5-years-although-ghost-of-yotei-helped-reverse-the-trend"},
         {"name": "VGC", "url": "https://www.videogameschronicle.com/news/playstation-first-party-game-sales-declined-for-5-straight-years/"},
-        {"name": "IT之家", "url": "https://www.ithome.com/0/958/474.htm"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/958/474.htm"}
     ],
     "category": "platform",
     "importance": "high",
@@ -373,7 +636,7 @@ const newsData = [
         {"name": "PlayStation Blog", "url": "https://blog.playstation.com/2026/06/02/first-look-at-god-of-war-laufey/"},
         {"name": "IGN", "url": "https://www.ign.com/articles/god-of-war-laufey-revealed-at-state-of-play"},
         {"name": "VGC", "url": "https://www.videogameschronicle.com/news/playstation-unveils-god-of-war-laufey-a-new-ps5-entry-starring-kratoss-dead-wife-faye/"},
-        {"name": "GameSpot", "url": "https://www.gamespot.com/articles/new-god-of-war-game-revealed-at-state-of-play/"},
+        {"name": "GameSpot", "url": "https://www.gamespot.com/articles/new-god-of-war-game-revealed-at-state-of-play/"}
     ],
     "category": "game",
     "importance": "high",
@@ -391,61 +654,13 @@ const newsData = [
     "source": "VGC",
     "sourceUrl": "https://www.videogameschronicle.com/news/rayman-legends-retold-state-of-play/",
     "sourceUrls": [
-        {"name": "IT之家", "url": "https://www.ithome.com/0/957/451.htm"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/957/451.htm"}
     ],
     "category": "game",
     "importance": "low",
     "date": "2026-06-02",
     "tags": ["Rayman","雷曼","育碧","重制版","Switch 2"],
     "sentiment": "neutral",
-    },
-    {
-    "id": 1650,
-    "title": "KEMURI：前顽皮狗成员组建Umoja Games首作亮相State of Play",
-    "summary": "由前顽皮狗成员组建的Umoja Games在State of Play上公开了首部作品KEMURI，一款风格化的动作冒险游戏。游戏以独特的'墨'视觉效果为核心机制，具体发售日未公布。",
-    "source": "PlayStation Blog",
-    "sourceUrl": "https://blog.playstation.com/2026/06/02/kemuri-announced-at-state-of-play/",
-    "sourceUrls": [
-        {"name": "PS Blog", "url": "https://blog.playstation.com/2026/06/02/kemuri-announced-at-state-of-play/"},
-        {"name": "Engadget", "url": "https://www.engadget.com/gaming/kemuri-umoja-games-state-of-play/"},
-    ],
-    "category": "game",
-    "importance": "medium",
-    "featured": true,
-    "date": "2026-06-02",
-    "tags": ["KEMURI","Umoja Games","顽皮狗","State of Play","PS5"],
-    "sentiment": "positive",
-    },
-    {
-    "id": 1651,
-    "title": "Stuntman: Hollywood公布，好莱坞特技动作新游亮相State of Play",
-    "summary": "State of Play上公布了Stuntman: Hollywood，一款以好莱坞特技动作为主题的新作。玩家将扮演特技替身演员，完成各种高难度特技场景。发售日未公布。",
-    "source": "PlayStation Blog",
-    "sourceUrl": "https://blog.playstation.com/2026/06/02/stuntman-hollywood-announced-at-state-of-play/",
-    "sourceUrls": [
-        {"name": "PS Blog", "url": "https://blog.playstation.com/2026/06/02/stuntman-hollywood-announced-at-state-of-play/"},
-        {"name": "MonsterVine", "url": "https://monstervine.com/2026/06/stuntman-hollywood-state-of-play/"},
-    ],
-    "category": "game",
-    "importance": "low",
-    "date": "2026-06-02",
-    "tags": ["Stuntman","Hollywood","特技","State of Play"],
-    "sentiment": "positive",
-    },
-    {
-    "id": 1652,
-    "title": "真三国无双2 Remaster公布，光荣特库摩经典重制",
-    "summary": "光荣特库摩在State of Play上宣布《真三国无双2》重制版。重制版将提升画面分辨率与帧率，保留原版无双战斗体验。",
-    "source": "光荣特库摩",
-    "sourceUrl": "https://www.gamecity.ne.jp/smusou2-remaster/",
-    "sourceUrls": [
-        {"name": "光荣特库摩", "url": "https://www.gamecity.ne.jp/smusou2-remaster/"},
-    ],
-    "category": "game",
-    "importance": "low",
-    "date": "2026-06-02",
-    "tags": ["真三国无双","光荣特库摩","重制版","State of Play"],
-    "sentiment": "positive",
     },
     {
     "id": 1642,
@@ -456,7 +671,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/tomodachi-life-best-seller-april-2026"},
         {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/tomodachi-life-living-the-dream-tops-april-us-sales-us-monthly-charts"},
-        {"name": "GamingBolt", "url": "https://gamingbolt.com/tomodachi-life-living-the-dream-tops-us-sales-charts-for-april-2026"},
+        {"name": "GamingBolt", "url": "https://gamingbolt.com/tomodachi-life-living-the-dream-tops-us-sales-charts-for-april-2026"}
     ],
     "category": "market",
     "importance": "medium",
@@ -471,7 +686,7 @@ const newsData = [
     "source": "GamesIndustry.biz",
     "sourceUrl": "https://www.gamesindustry.biz/netease-reports-69-increase-in-games-revenue-to-37bn-during-q1",
     "sourceUrls": [
-        {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/netease-reports-69-increase-in-games-revenue-to-37bn-during-q1"},
+        {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/netease-reports-69-increase-in-games-revenue-to-37bn-during-q1"}
     ],
     "category": "market",
     "importance": "medium",
@@ -489,7 +704,7 @@ const newsData = [
         {"name": "NVIDIA", "url": "https://www.nvidia.com/en-us/geforce/news/computex-2026-nvidia-geforce-rtx-announcements/"},
         {"name": "IT之家", "url": "https://www.ithome.com/0/958/088.htm"},
         {"name": "3DM", "url": "https://www.3dmgame.com/news/202606/3945357.html"},
-        {"name": "新浪科技", "url": "https://finance.sina.com.cn/tech/roll/2026-06-01/doc-inhzxewp2340211.shtml"},
+        {"name": "新浪科技", "url": "https://finance.sina.com.cn/tech/roll/2026-06-01/doc-inhzxewp2340211.shtml"}
     ],
     "category": "hardware",
     "importance": "high",
@@ -507,7 +722,7 @@ const newsData = [
     "source": "IT之家",
     "sourceUrl": "https://www.ithome.com/0/957/970.htm",
     "sourceUrls": [
-        {"name": "IT之家", "url": "https://www.ithome.com/0/957/970.htm"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/957/970.htm"}
     ],
     "category": "game",
     "importance": "low",
@@ -522,7 +737,7 @@ const newsData = [
     "source": "IT之家",
     "sourceUrl": "https://www.ithome.com/0/957/263.htm",
     "sourceUrls": [
-        {"name": "IT之家", "url": "https://www.ithome.com/0/957/263.htm"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/957/263.htm"}
     ],
     "category": "game",
     "importance": "low",
@@ -539,7 +754,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "TechPowerUp", "url": "https://www.techpowerup.com/349537/steam-machine-welcome-tour-signals-potential-launch-imminent"},
         {"name": "3DM", "url": "https://www.3dmgame.com/news/202606/3945326.html"},
-        {"name": "GamingProMax", "url": "https://gamingpromax.com/valve-steam-machine-welcome-tour-leak/"},
+        {"name": "GamingProMax", "url": "https://gamingpromax.com/valve-steam-machine-welcome-tour-leak/"}
     ],
     "category": "hardware",
     "importance": "medium",
@@ -559,7 +774,7 @@ const newsData = [
         {"name": "Tech4Gamers", "url": "https://tech4gamers.com/modern-warfare-4-generative-ai-content/"},
         {"name": "KhelNow", "url": "https://khelnow.com/gaming/call-of-duty-modern-warfare-4-confirms-generative-ai-content-through-steam-202605"},
         {"name": "3DM", "url": "https://www.3dmgame.com/news/202606/3945316.html"},
-        {"name": "游民星空", "url": "https://www.ali213.net/news/html/2026-5/1014653.html"},
+        {"name": "游民星空", "url": "https://www.ali213.net/news/html/2026-5/1014653.html"}
     ],
     "category": "game",
     "importance": "medium",
@@ -578,7 +793,7 @@ const newsData = [
         {"name": "The Gamer", "url": "https://www.thegamer.com/007-first-light-reportedly-cost-200-million-took-7-years-develop/"},
         {"name": "Wccftech", "url": "https://wccftech.com/007-first-light-break-even-sales-needed/"},
         {"name": "NeonLights", "url": "https://www.neonlightsmedia.com/blog/007-first-light-development-cost-budget"},
-        {"name": "GameReactor", "url": "https://www.gamereactor.cn/007-first-light-reportedly-cost-200-million-and-took-seven-years-to-develop-1327073/"},
+        {"name": "GameReactor", "url": "https://www.gamereactor.cn/007-first-light-reportedly-cost-200-million-and-took-seven-years-to-develop-1327073/"}
     ],
     "category": "game",
     "importance": "high",
@@ -596,7 +811,7 @@ const newsData = [
     "source": "IT之家",
     "sourceUrl": "https://www.ithome.com/0/957/939.htm",
     "sourceUrls": [
-        {"name": "IT之家", "url": "https://www.ithome.com/0/957/939.htm"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/957/939.htm"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -614,7 +829,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "IGN", "url": "https://www.ign.com/articles/xbox-showcase-will-feature-competing-platforms-but-dont-expect-any-helix-news"},
         {"name": "IT之家", "url": "https://finance.sina.com.cn/tech/digi/2026-05-30/doc-inhzrzup8786474.shtml"},
-        {"name": "GamingBible", "url": "https://www.gamingbible.com/news/platform/xbox/xbox-fear-helix-delays-game-showcase-omission-597752-20260530"},
+        {"name": "GamingBible", "url": "https://www.gamingbible.com/news/platform/xbox/xbox-fear-helix-delays-game-showcase-omission-597752-20260530"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -634,7 +849,7 @@ const newsData = [
         {"name": "IGN", "url": "https://www.ign.com/articles/xbox-delays-fable-to-2027"},
         {"name": "GameSpot", "url": "https://www.gamespot.com/articles/fable-has-been-delayed-to-february-2027/"},
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/fable-reboot-delayed-2027-amid-reported-gta-6-worries"},
-        {"name": "IT之家", "url": "https://www.ithome.com/0/957/451.htm"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/957/451.htm"}
     ],
     "category": "game",
     "importance": "high",
@@ -654,7 +869,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "IT之家", "url": "https://www.ithome.com/0/957/005.htm"},
         {"name": "新浪科技", "url": "https://finance.sina.com.cn/tech/digi/2026-05-29/doc-inhzpwvs0853090.shtml"},
-        {"name": "36氪", "url": "https://www.36kr.com/p/2937300270668676"},
+        {"name": "36氪", "url": "https://www.36kr.com/p/2937300270668676"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -672,7 +887,7 @@ const newsData = [
         {"name": "GameRant", "url": "https://gamerant.com/cyberpunk-2077-pc-system-requirements-2026-change-windows-11/"},
         {"name": "IT之家", "url": "https://www.ithome.com/0/957/783.htm"},
         {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3945174.html"},
-        {"name": "17173", "url": "https://news.17173.com/content/05292026/120223232.shtml"},
+        {"name": "17173", "url": "https://news.17173.com/content/05292026/120223232.shtml"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -691,7 +906,7 @@ const newsData = [
         {"name": "The Verge", "url": "https://www.eurogamer.net/xbox-game-pass-price-cut-working-asha-sharma"},
         {"name": "GameSpot", "url": "https://www.gamespot.com/articles/xbox-game-pass-price-cut-is-working-ceo-says/"},
         {"name": "GameRant", "url": "https://gamerant.com/xbox-asha-sharma-game-pass-price-cuts-growth/"},
-        {"name": "IT之家", "url": "https://www.ithome.com/0/956/858.htm"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/956/858.htm"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -712,7 +927,7 @@ const newsData = [
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/stop-killing-games-passes-floor-vote-california"},
         {"name": "17173", "url": "https://news.17173.com/content/05292026/161713387.shtml"},
         {"name": "虎嗅", "url": "https://www.huxiu.com/article/4859085.html"},
-        {"name": "IT之家", "url": "https://www.ithome.com/0/951/280.htm"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/951/280.htm"}
     ],
     "category": "policy",
     "importance": "high",
@@ -731,7 +946,7 @@ const newsData = [
     "sourceUrl": "https://www.3dmgame.com/news/202605/3945082.html",
     "sourceUrls": [
         {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3945082.html"},
-        {"name": "IT之家", "url": "https://www.ithome.com/0/954/630.htm"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/954/630.htm"}
     ],
     "category": "game",
     "importance": "medium",
@@ -750,7 +965,7 @@ const newsData = [
         {"name": "Wccftech", "url": "https://wccftech.com/007-first-light-1-5-m-copies-sold-in-24hrs/"},
         {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3945034.html"},
         {"name": "GamingBolt", "url": "https://www.gamingbolt.com/007-first-light-sales-analysis"},
-        {"name": "SteamDB", "url": "https://steamdb.info/app/3768760/graphs/"},
+        {"name": "SteamDB", "url": "https://steamdb.info/app/3768760/graphs/"}
     ],
     "category": "game",
     "importance": "high",
@@ -769,7 +984,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/heroes-of-might-and-magic-olden-era-roadmap"},
         {"name": "PC Gamer", "url": "https://www.pcgamer.com/games/strategy/heroes-of-might-and-magic-olden-era-teases-a-roguelike-mode-as-it-hits-1-million-sales/"},
-        {"name": "Soren", "url": "https://soren.com/en/news/heroes-of-might-and-magic-olden-era/2026-05-28-olden-era-hits-1-million-sales-milestone"},
+        {"name": "Soren", "url": "https://soren.com/en/news/heroes-of-might-and-magic-olden-era/2026-05-28-olden-era-hits-1-million-sales-milestone"}
     ],
     "category": "game",
     "importance": "medium",
@@ -787,7 +1002,7 @@ const newsData = [
         {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/fortnites-global-ios-return-reportedly-reaches-34m-downloads-marking-an-eight-year-high"},
         {"name": "TweakTown", "url": "https://www.tweaktown.com/news/111850/fortnites-global-ios-return-pulls-3-4-million-downloads-in-its-first-week-back/index.html"},
         {"name": "PocketGamer", "url": "https://www.pocketgamer.biz/fortnites-global-ios-comeback-drives-downloads-to-eight-year-high/"},
-        {"name": "Epic Games", "url": "https://www.epicgames.com/site/news/fortnite-is-back-on-the-app-store-around-the-world-as-the-final-battle-approaches"},
+        {"name": "Epic Games", "url": "https://www.epicgames.com/site/news/fortnite-is-back-on-the-app-store-around-the-world-as-the-final-battle-approaches"}
     ],
     "category": "platform",
     "importance": "high",
@@ -809,7 +1024,7 @@ const newsData = [
         {"name": "IGN", "url": "https://www.ign.com/articles/call-of-duty-modern-warfare-4-revealed-with-dmz-release-date-and-nintendo-switch-2-version-confirmed"},
         {"name": "Nintendo", "url": "https://www.nintendo.com/us/whatsnew/call-of-duty-modern-warfare-4-coming-to-nintendo-switch-2-this-october/"},
         {"name": "Xbox Wire", "url": "https://news.xbox.com/en-us/2026/05/28/call-of-duty-modern-warfare-4-first-details-campaign/"},
-        {"name": "Gematsu", "url": "https://www.gematsu.com/2026/05/call-of-duty-modern-warfare-4-announced-for-ps5-xbox-series-switch-2-and-pc"},
+        {"name": "Gematsu", "url": "https://www.gematsu.com/2026/05/call-of-duty-modern-warfare-4-announced-for-ps5-xbox-series-switch-2-and-pc"}
     ],
     "category": "game",
     "importance": "high",
@@ -830,7 +1045,7 @@ const newsData = [
         {"name": "Kotaku", "url": "https://kotaku.com/valve-just-massively-increased-the-price-of-a-steam-deck-2000699901"},
         {"name": "gHacks", "url": "https://www.ghacks.net/2026/05/28/valve-raises-steam-deck-prices-by-nearly-50-1tb-oled-model-now-949/"},
         {"name": "TechTimes", "url": "https://www.techtimes.com/articles/317297/20260527/steam-deck-prices-surge-over-200-due-ongoing-ramageddon-hardware-crisis.htm"},
-        {"name": "VGC", "url": "https://www.videogameschronicle.com/news/valve-raises-steam-deck-price/"},
+        {"name": "VGC", "url": "https://www.videogameschronicle.com/news/valve-raises-steam-deck-price/"}
     ],
     "category": "hardware",
     "importance": "high",
@@ -851,7 +1066,7 @@ const newsData = [
         {"name": "Gematsu", "url": "https://www.gematsu.com/2026/05/dragon-quest-xii-beyond-dreams-revealed-after-development-restart"},
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/dragon-quest-12-beyond-dreams-revealed"},
         {"name": "Nintendo Life", "url": "https://www.nintendolife.com/news/2026/05/dragon-quest-xii-gets-a-new-title-following-complete-development-reset"},
-        {"name": "IT之家", "url": "https://www.ithome.com/0/956/234.htm"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/956/234.htm"}
     ],
     "category": "game",
     "importance": "high",
@@ -872,7 +1087,7 @@ const newsData = [
         {"name": "CD Projekt", "url": "https://www.cdprojekt.com/en/media/news/the-witcher-3-wild-hunt-songs-of-the-past-announced/"},
         {"name": "IGN", "url": "https://www.ign.com/articles/the-witcher-3-wild-hunt-songs-of-the-past-expansion-dlc-announced-first-details-confirmed"},
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/the-witcher-3-songs-of-the-past-dlc-announced/"},
-        {"name": "VGC", "url": "https://www.videogameschronicle.com/news/the-witcher-3-gets-surprise-third-expansion-songs-of-the-past/"},
+        {"name": "VGC", "url": "https://www.videogameschronicle.com/news/the-witcher-3-gets-surprise-third-expansion-songs-of-the-past/"}
     ],
     "category": "game",
     "importance": "high",
@@ -893,7 +1108,7 @@ const newsData = [
         {"name": "VGChartz", "url": "https://www.vgchartz.com/article/467940/pokemon-series-has-sold-over-515-million-units/"},
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/pokemon-series-sales-515-million/"},
         {"name": "MyNintendoNews", "url": "https://mynintendonews.com/2026/05/27/pokemon-series-has-now-sold-over-515-million-software-units-worldwide/"},
-        {"name": "Insider Gaming", "url": "https://insider-gaming.com/pokemon-game-sales-surpass-515-million-worldwide/"},
+        {"name": "Insider Gaming", "url": "https://insider-gaming.com/pokemon-game-sales-surpass-515-million-worldwide/"}
     ],
     "category": "market",
     "importance": "high",
@@ -914,7 +1129,7 @@ const newsData = [
         {"name": "Windows Central", "url": "https://www.windowscentral.com/gaming/xbox/xboxs-game-pass-page-may-have-revealed-some-showcase-games-ahead-of-time"},
         {"name": "Kotaku", "url": "https://kotaku.com/i-really-hope-clockwork-revolutions-is-one-of-this-years-surprise-xbox-games-2000699881"},
         {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3945075.html"},
-        {"name": "Notebookcheck", "url": "https://www.notebookcheck.net/Game-Pass-app-leak-may-reveal-Xbox-Showcase-games-with-Fable-reboot-included.1306855.0.html"},
+        {"name": "Notebookcheck", "url": "https://www.notebookcheck.net/Game-Pass-app-leak-may-reveal-Xbox-Showcase-games-with-Fable-reboot-included.1306855.0.html"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -932,7 +1147,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "GamingBolt", "url": "https://gamingbolt.com/dragon-quest-monsters-the-withered-world-announced"},
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/dragon-quest-monsters-withered-world-announced/"},
-        {"name": "IT之家", "url": "https://www.ithome.com/0/956/234.htm"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/956/234.htm"}
     ],
     "category": "game",
     "importance": "medium",
@@ -950,7 +1165,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "PlayStation Blog", "url": "https://blog.playstation.com/2026/05/26/days-of-play-returns-may-27-through-june-10-with-deals-events-and-more/"},
         {"name": "IGN", "url": "https://www.ign.com/articles/playstation-days-of-play-sale-2026"},
-        {"name": "IT之家", "url": "https://www.ithome.com/0/955/691.htm"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/955/691.htm"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -967,7 +1182,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "Gematsu", "url": "https://www.gematsu.com/2026/05/dragon-quest-40th-anniversary-update-from-the-dragon-quest-team-broadcast-set-for-may-27"},
         {"name": "Polygon", "url": "https://www.polygon.com/dragon-quest-40th-anniversary-stream-dq12-flames-of-fate/"},
-        {"name": "Game Informer", "url": "https://www.gameinformer.com/2026/05/26/dragon-quest-40th-anniversary-stream-will-feature-new-announcements-tomorrow"},
+        {"name": "Game Informer", "url": "https://www.gameinformer.com/2026/05/26/dragon-quest-40th-anniversary-stream-will-feature-new-announcements-tomorrow"}
     ],
     "category": "game",
     "importance": "medium",
@@ -985,7 +1200,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/hoyoverse-to-invest-up-to-146bn-in-ai-for-in-house-tools"},
         {"name": "ResetEra", "url": "https://www.resetera.com/threads/gi-biz-hoyoverse-to-invest-up-to-14-6bn-in-ai-for-game-dev-enhancing-npc-systems-automation-content-generation-and-live-service-environments.1530469/"},
-        {"name": "Masters in Gaming", "url": "https://mastersingaming.com/2026/05/26/hoyoverse-reportedly-investing-up-to-14-7bn-in-ai-over-next-three-years/"},
+        {"name": "Masters in Gaming", "url": "https://mastersingaming.com/2026/05/26/hoyoverse-reportedly-investing-up-to-14-7bn-in-ai-over-next-three-years/"}
     ],
     "category": "policy",
     "importance": "high",
@@ -1005,7 +1220,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "PlayStation Blog", "url": "https://blog.playstation.com/2026/05/26/playstation-plus-monthly-games-for-june-grounded-fully-yoked-edition-nickelodeon-all-star-brawl-2-warhammer-40000-darktide/"},
         {"name": "IGN", "url": "https://www.ign.com/articles/sony-confirms-playstation-plus-monthly-games-for-june-2026-first-lineup-announcement-since-price-rise"},
-        {"name": "Polygon", "url": "https://www.polygon.com/playstation-plus-june-2026-games-announced-ps4-ps5-free-essential/"},
+        {"name": "Polygon", "url": "https://www.polygon.com/playstation-plus-june-2026-games-announced-ps4-ps5-free-essential/"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -1022,7 +1237,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "VGTimes", "url": "https://vgtimes.com/gaming-news/156808-007-first-light-cracked-a-day-before-official-release.html"},
         {"name": "Tom's Hardware", "url": "https://www.tomshardware.com/video-games/pc-gaming/007-first-light-drops-last-minute-denuvo-drm-bombshell-leaving-pre-order-customers-and-fans-furious"},
-        {"name": "GameGPU", "url": "https://en.gamegpu.com/news/igry/khakerskaya-gruppa-denuvowo-vzlomala-zashchitu-denuvo-v-007-first-light"},
+        {"name": "GameGPU", "url": "https://en.gamegpu.com/news/igry/khakerskaya-gruppa-denuvowo-vzlomala-zashchitu-denuvo-v-007-first-light"}
     ],
     "category": "game",
     "importance": "medium",
@@ -1041,7 +1256,7 @@ const newsData = [
         {"name": "Metacritic", "url": "https://www.metacritic.com/game/007-first-light/"},
         {"name": "TheGamer", "url": "https://www.thegamer.com/007-first-light-best-review-scores-since-goldeneye/"},
         {"name": "IGN中国", "url": "https://www.ign.com.cn/007-first-light/60248/007-chu-lu-feng-mang-yuan-chuang-ping-ce-9-fen-ign-zhong-guo"},
-        {"name": "Dot Esports", "url": "https://dotesports.com/general/news/007-first-light-review-roundup"},
+        {"name": "Dot Esports", "url": "https://dotesports.com/general/news/007-first-light-review-roundup"}
     ],
     "category": "game",
     "importance": "high",
@@ -1061,7 +1276,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "Xbox Wire", "url": "https://news.xbox.com/en-us/2026/05/18/introducing-xbox-player-voice/"},
         {"name": "Pure Xbox", "url": "https://www.purexbox.com/news/2026/05/microsoft-announces-fan-feedback-program-xbox-player-voice-and-its-now-live"},
-        {"name": "IT之家", "url": "https://www.ithome.com/0/954/649.htm"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/954/649.htm"}
     ],
     "category": "platform",
     "importance": "low",
@@ -1077,7 +1292,7 @@ const newsData = [
     "sourceUrl": "https://www.ithome.com/0/954/395.htm",
     "sourceUrls": [
         {"name": "IT之家", "url": "https://www.ithome.com/0/954/395.htm"},
-        {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3944855.html"},
+        {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3944855.html"}
     ],
     "category": "market",
     "importance": "medium",
@@ -1093,7 +1308,7 @@ const newsData = [
     "source": "3DM",
     "sourceUrl": "https://www.3dmgame.com/news/202605/3944855.html",
     "sourceUrls": [
-        {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3944855.html"},
+        {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3944855.html"}
     ],
     "category": "market",
     "importance": "low",
@@ -1111,7 +1326,7 @@ const newsData = [
         {"name": "Gematsu", "url": "https://www.gematsu.com/2026/05/unreal-engine-6-announced-with-rocket-league-reveal"},
         {"name": "Polygon", "url": "https://www.polygon.com/unreal-engine-6-announcement-rocket-league/"},
         {"name": "gHacks", "url": "https://www.ghacks.net/2026/05/25/epic-games-reveals-unreal-engine-6-with-rocket-league-as-the-first-confirmed-title/"},
-        {"name": "Game Rant", "url": "https://gamerant.com/rocket-league-unreal-engine-ue6-reavel/"},
+        {"name": "Game Rant", "url": "https://gamerant.com/rocket-league-unreal-engine-ue6-reavel/"}
     ],
     "category": "market",
     "importance": "high",
@@ -1132,7 +1347,7 @@ const newsData = [
         {"name": "gHacks", "url": "https://www.ghacks.net/2026/05/24/forza-horizon-6-sells-4-9-million-copies-in-first-week-as-analyst-says-game-pass-cannibalized-revenue/"},
         {"name": "GamesRadar", "url": "https://www.gamesradar.com/games/forza-horizon/forza-horizon-6-sells-4-9-million-copies-despite-xbox-game-pass-cannibalizing-revenue-says-analyst/"},
         {"name": "Gizchina", "url": "https://www.gizchina.com/gaming/forza-horizon-6-hits-49-million-sales-and-325m-in-one-week"},
-        {"name": "TechPowerUp", "url": "https://www.techpowerup.com/349301/forza-horizon-6-nears-5-million-sales-42-on-xbox"},
+        {"name": "TechPowerUp", "url": "https://www.techpowerup.com/349301/forza-horizon-6-nears-5-million-sales-42-on-xbox"}
     ],
     "category": "game",
     "importance": "high",
@@ -1152,7 +1367,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "IT之家", "url": "https://www.ithome.com/0/954/395.htm"},
         {"name": "新浪财经", "url": "https://finance.sina.com.cn/stock/usstock/c/2026-05-23/doc-inhyvhty4827028.shtml"},
-        {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3944850.html"},
+        {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3944850.html"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -1168,7 +1383,7 @@ const newsData = [
     "source": "IT之家",
     "sourceUrl": "https://www.ithome.com/0/954/366.htm",
     "sourceUrls": [
-        {"name": "IT之家", "url": "https://www.ithome.com/0/954/366.htm"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/954/366.htm"}
     ],
     "category": "game",
     "importance": "medium",
@@ -1186,7 +1401,7 @@ const newsData = [
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/switch-2-production-ramps-up-march-2027"},
         {"name": "VGC", "url": "https://www.videogameschronicle.com/news/nintendo-wants-to-produce-20-million-switch-2-consoles-by-march-2027-as-production-ramps-up/"},
         {"name": "Nintendo Wire", "url": "https://nintendowire.com/news/2026/05/22/nintendo-is-looking-to-increase-switch-2-production-by-20-through-to-march-2027/"},
-        {"name": "Metro", "url": "https://metro.co.uk/2026/05/22/nintendo-ramps-switch-2-production-despite-worldwide-price-hike-28482415/"},
+        {"name": "Metro", "url": "https://metro.co.uk/2026/05/22/nintendo-ramps-switch-2-production-despite-worldwide-price-hike-28482415/"}
     ],
     "category": "platform",
     "importance": "high",
@@ -1207,7 +1422,7 @@ const newsData = [
         {"name": "IGN", "url": "https://www.ign.com/articles/red-dead-redemption-2-overtakes-wii-sports-in-best-selling-games-of-all-time-list"},
         {"name": "RDR2.org", "url": "https://www.rdr2.org/news/rockstar-now-owns-two-of-the-three-best-selling-games-ever-made/"},
         {"name": "IT之家", "url": "https://www.ithome.com/0/953/674.htm"},
-        {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3944695.html"},
+        {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3944695.html"}
     ],
     "category": "game",
     "importance": "high",
@@ -1228,7 +1443,7 @@ const newsData = [
         {"name": "GamesRadar", "url": "https://www.gamesradar.com/games/adventure/lego-batman-legacy-of-the-dark-knights-metacritic-score-makes-it-the-best-rated-lego-game-ever-knocking-the-skywalker-saga-off-its-perch-after-4-years/"},
         {"name": "IT之家", "url": "https://www.ithome.com/0/952/331.htm"},
         {"name": "Metacritic", "url": "https://www.metacritic.com/game/lego-batman-legacy-of-the-dark-knight/"},
-        {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/lego-batman-legacy-dark-knight-first-week-sales-1-2-million/"},
+        {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/lego-batman-legacy-dark-knight-first-week-sales-1-2-million/"}
     ],
     "category": "game",
     "importance": "medium",
@@ -1246,7 +1461,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "Techmeme/Bloomberg", "url": "https://www.techmeme.com/260522/p4"},
         {"name": "TechInAsia", "url": "https://www.techinasia.com/news/nintendo-ramps-up-switch-2-production-as-demand-grows"},
-        {"name": "TweakTown", "url": "https://www.tweaktown.com/news/36098/nintendo-to-produce-20-million-switch-2s-in-fy27-exceeding-sales-forecast-by-21.html"},
+        {"name": "TweakTown", "url": "https://www.tweaktown.com/news/36098/nintendo-to-produce-20-million-switch-2s-in-fy27-exceeding-sales-forecast-by-21.html"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -1265,7 +1480,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "Gematsu", "url": "https://www.gematsu.com/2026/05/capcom-platinum-titles-sales-update-as-of-march-31-2026"},
         {"name": "FinalWeapon", "url": "https://finalweapon.net/2026/05/21/capcom-platinum-titles-march-2026/"},
-        {"name": "VGChartz", "url": "https://www.vgchartz.com/article/467888/capcom-updates-its-best-sellers-list-re-requiem-at-69m-re2-remake-at-183m-more/"},
+        {"name": "VGChartz", "url": "https://www.vgchartz.com/article/467888/capcom-updates-its-best-sellers-list-re-requiem-at-69m-re2-remake-at-183m-more/"}
     ],
     "category": "market",
     "importance": "medium",
@@ -1286,7 +1501,7 @@ const newsData = [
         {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/tomodachi-life-living-the-dream-tops-april-us-sales-us-monthly-charts"},
         {"name": "Circana", "url": "https://wccftech.com/tomodachi-life-pragmata-tops-april-2026-us-sales-charts-circana-new-method/"},
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/tomodachi-life-best-seller-april-2026"},
-        {"name": "GamingBolt", "url": "https://gamingbolt.com/tomodachi-life-living-the-dream-tops-us-sales-charts-for-april-2026"},
+        {"name": "GamingBolt", "url": "https://gamingbolt.com/tomodachi-life-living-the-dream-tops-us-sales-charts-for-april-2026"}
     ],
     "category": "market",
     "importance": "low",
@@ -1304,7 +1519,7 @@ const newsData = [
         {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/ubisofts-full-fy26-financials-report-shows-a-sharp-decline-in-revenue-and-net-bookings"},
         {"name": "GamingBolt", "url": "https://gamingbolt.com/ubisoft-reports-e1-3-billion-in-losses-for-fy26-projects-more-losses-next-year-profits-in-fy28"},
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/ubisoft-fy26-record-loss/"},
-        {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3944300.html"},
+        {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3944300.html"}
     ],
     "category": "policy",
     "importance": "high",
@@ -1323,7 +1538,7 @@ const newsData = [
     "sourceUrl": "https://www.3dmgame.com/news/202605/3944301.html",
     "sourceUrls": [
         {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3944301.html"},
-        {"name": "Eurogamer", "url": "https://www.eurogamer.net/ubisoft-three-major-ip-by-2029/"},
+        {"name": "Eurogamer", "url": "https://www.eurogamer.net/ubisoft-three-major-ip-by-2029/"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -1342,7 +1557,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "Gematsu", "url": "https://www.gematsu.com/2026/05/warhammer-40000-dawn-of-war-iv-launches-september-17"},
         {"name": "Wccftech", "url": "https://wccftech.com/warhammer-40k-dawn-of-war-4-release-date-post-launch-roadmap/"},
-        {"name": "IGN中国", "url": "https://www.ign.com.cn/warhammer-40k-dawn-of-war-iv/60250/zhan-chui-40k-zhan-zheng-li-ming-4-fa-shou-ri-que-ding-9-yue-17-ri"},
+        {"name": "IGN中国", "url": "https://www.ign.com.cn/warhammer-40k-dawn-of-war-iv/60250/zhan-chui-40k-zhan-zheng-li-ming-4-fa-shou-ri-que-ding-9-yue-17-ri"}
     ],
     "category": "game",
     "importance": "medium",
@@ -1360,7 +1575,7 @@ const newsData = [
         {"name": "IGN", "url": "https://www.ign.com/articles/people-enjoy-surprises-valve-is-trying-to-dismiss-new-yorks-counter-strike-loot-box-lawsuit"},
         {"name": "Kotaku", "url": "https://kotaku.com/valve-accused-of-promoting-illegal-gambling-with-loot-boxes-in-new-lawsuit-2000673735"},
         {"name": "Courthouse News", "url": "https://www.courthousenews.com/valve-moves-to-dismiss-counter-strike-gambling-lawsuit-in-new-york/"},
-        {"name": "IT之家", "url": "https://www.ithome.com/0/952/863.htm"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/952/863.htm"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -1379,7 +1594,7 @@ const newsData = [
         {"name": "VGC", "url": "https://www.videogameschronicle.com/news/xbox-hires-leadership-team-strengthen-console-brand/"},
         {"name": "Pure Xbox", "url": "https://www.purexbox.com/news/2026/05/xbox-hires-new-exec-to-strengthen-the-console-side-of-the-business"},
         {"name": "Windows Forum", "url": "https://windowsforum.com/threads/xbox-appoints-matthew-ball-and-scott-van-vliet-ai-cloud-and-console-strategy.419129/"},
-        {"name": "The Verge", "url": "https://www.theverge.com/2026/5/21/xbox-new-executives-matthew-ball-scott-van-vliet"},
+        {"name": "The Verge", "url": "https://www.theverge.com/2026/5/21/xbox-new-executives-matthew-ball-scott-van-vliet"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -1398,7 +1613,7 @@ const newsData = [
         {"name": "Kotaku", "url": "https://kotaku.com/destiny-2-final-update-bungie-layoffs-sony-marathon-2000698425"},
         {"name": "IGN", "url": "https://www.ign.com/articles/bungie-walks-away-from-destiny-2-final-content-update-coming-in-june"},
         {"name": "PushSquare", "url": "https://www.pushsquare.com/news/2026/05/bungie-is-not-making-destiny-3-dev-to-be-rocked-by-significant-layoffs"},
-        {"name": "Bloomberg/Schreier", "url": "https://gamingpromax.com/bungie-layoffs-destiny-3-not-in-development-marathon-2026/"},
+        {"name": "Bloomberg/Schreier", "url": "https://gamingpromax.com/bungie-layoffs-destiny-3-not-in-development-marathon-2026/"}
     ],
     "category": "policy",
     "importance": "high",
@@ -1419,7 +1634,7 @@ const newsData = [
         {"name": "IGN", "url": "https://www.ign.com/articles/red-dead-redemption-2-overtakes-wii-sports-in-best-selling-games-of-all-time-list"},
         {"name": "RockstarIntel", "url": "https://rockstarintel.com/red-dead-redemption-2-is-now-the-3rd-best-selling-game-of-all-time-with-85-million-copies-sold/"},
         {"name": "RDR2.org", "url": "https://www.rdr2.org/news/rockstar-now-owns-two-of-the-three-best-selling-games-ever-made/"},
-        {"name": "Instant Gaming", "url": "https://news.instant-gaming.com/en/articles/19680-gta-v-has-sold-230-million-copies-and-red-dead-redemption-2-has-sold-85-million"},
+        {"name": "Instant Gaming", "url": "https://news.instant-gaming.com/en/articles/19680-gta-v-has-sold-230-million-copies-and-red-dead-redemption-2-has-sold-85-million"}
     ],
     "category": "market",
     "importance": "high",
@@ -1440,7 +1655,7 @@ const newsData = [
         {"name": "Take-Two IR", "url": "https://www.take2games.com/ir/quarterly-earnings"},
         {"name": "Intellectia", "url": "https://intellectia.ai/news/stock/taketwo-interactive-reports-strong-q4-2026-earnings-with-gta-vi-launch-ahead"},
         {"name": "Seeking Alpha", "url": "https://seekingalpha.com/news/4596120-take-two-forecasts-8b-8_2b-fiscal-2027-net-bookings-led-by-grand-theft-auto-vi-launch-on"},
-        {"name": "ScreenRant", "url": "https://screenrant.com/gta-6-release-date-update-earnings-call-may-2026/"},
+        {"name": "ScreenRant", "url": "https://screenrant.com/gta-6-release-date-update-earnings-call-may-2026/"}
     ],
     "category": "market",
     "importance": "high",
@@ -1461,7 +1676,7 @@ const newsData = [
         {"name": "VGC", "url": "https://www.videogameschronicle.com/news/sony-trademarks-break-in-state-of-play-showcase/"},
         {"name": "PushSquare", "url": "https://www.pushsquare.com/news/2026/05/sony-trademarks-new-ps5-game-break-in-registers-several-social-media-accounts"},
         {"name": "IGN", "url": "https://www.ign.com/articles/sony-files-trademark-for-new-game-called-break-in"},
-        {"name": "IGN中国", "url": "https://www.ign.com.cn/playstation-5/60189/suo-ni-zhu-ce-shen-mi-xin-you-xi-shang-biao-break-in"},
+        {"name": "IGN中国", "url": "https://www.ign.com.cn/playstation-5/60189/suo-ni-zhu-ce-shen-mi-xin-you-xi-shang-biao-break-in"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -1481,7 +1696,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/playstation-dynamic-pricing-sony-transparency-eu-law"},
         {"name": "PCMag", "url": "https://www.pcmag.com/news/how-much-did-you-pay-sony-may-be-trialing-dynamic-pricing-for-ps5-games"},
-        {"name": "GamingProMax", "url": "https://gamingpromax.com/sony-playstation-store-dynamic-pricing-eu-law-violation/"},
+        {"name": "GamingProMax", "url": "https://gamingpromax.com/sony-playstation-store-dynamic-pricing-eu-law-violation/"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -1502,7 +1717,7 @@ const newsData = [
         {"name": "IGN", "url": "https://www.ign.com/articles/everything-announced-at-warhammer-skulls-2026"},
         {"name": "GeekCulture", "url": "https://geekculture.co/warhammer-40k-dawn-of-war-iv-rts-sets-sept-launch-will-add-factions-via-dlc/"},
         {"name": "GameDaily", "url": "https://gamedaily.com/games/dawn-of-war-iv-reveal-releases-september-2026"},
-        {"name": "GamingProMax", "url": "https://gamingpromax.com/warhammer-40k-dawn-of-war-4-release-date-factions-roadmap/"},
+        {"name": "GamingProMax", "url": "https://gamingpromax.com/warhammer-40k-dawn-of-war-4-release-date-factions-roadmap/"}
     ],
     "category": "game",
     "importance": "medium",
@@ -1520,7 +1735,7 @@ const newsData = [
     "sourceUrl": "https://www.verticalslicegames.com/news/terraria-70-million-sales-anniversary-crossplay-updates-re-logic",
     "sourceUrls": [
         {"name": "VerticalSliceGames", "url": "https://www.verticalslicegames.com/news/terraria-70-million-sales-anniversary-crossplay-updates-re-logic"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "market",
     "importance": "medium",
@@ -1539,7 +1754,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "Wccftech", "url": "https://wccftech.com/tomodachi-life-pragmata-tops-april-2026-us-sales-charts-circana-new-method/"},
         {"name": "ResetEra", "url": "https://www.resetera.com/threads/circana-us-sales-april-2026-1-tomodachi-life-2-pragmata-9-saros-switch-2-1-11-ahead-of-switch-1.1525381/"},
-        {"name": "Nintendo Everything", "url": "https://nintendoeverything.com/best-selling-games-in-the-u-s-for-april-2026-tomodachi-life-beats-out-everything/"},
+        {"name": "Nintendo Everything", "url": "https://nintendoeverything.com/best-selling-games-in-the-u-s-for-april-2026-tomodachi-life-beats-out-everything/"}
     ],
     "category": "market",
     "importance": "medium",
@@ -1557,7 +1772,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "TwistedVoxel", "url": "https://twistedvoxel.com/reanimal-surpasses-1-million-sales-as-embracer-confirms-dlc-expansion-plans/"},
         {"name": "Gamereactor", "url": "https://www.gamereactor.eu/reanimal-has-sold-1-million-copies-with-embracer-regarding-it-as-something-to-really-build-on-for-the-long-term-1721953/"},
-        {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/embracer-group-announces-plans-to-spin-off-fellowship-entertainment"},
+        {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/embracer-group-announces-plans-to-spin-off-fellowship-entertainment"}
     ],
     "category": "game",
     "importance": "low",
@@ -1573,7 +1788,7 @@ const newsData = [
     "sourceUrl": "https://news.xbox.com/en-us/2026/05/21/introducing-the-xbox-game-studios-shop/",
     "sourceUrls": [
         {"name": "Xbox Wire", "url": "https://news.xbox.com/en-us/2026/05/21/introducing-the-xbox-game-studios-shop/"},
-        {"name": "PureXbox", "url": "https://www.purexbox.com/news/2026/05/xbox-game-studios-now-has-an-official-shop-featuring-merch-for-major-first-party-games"},
+        {"name": "PureXbox", "url": "https://www.purexbox.com/news/2026/05/xbox-game-studios-now-has-an-official-shop-featuring-merch-for-major-first-party-games"}
     ],
     "category": "platform",
     "importance": "low",
@@ -1589,7 +1804,7 @@ const newsData = [
     "sourceUrl": "https://www.vgchartz.com/article/467665/luna-abyss-launches-may-21-for-ps5-xbox-series-pc-and-game-pass/",
     "sourceUrls": [
         {"name": "VGChartz", "url": "https://www.vgchartz.com/article/467665/luna-abyss-launches-may-21-for-ps5-xbox-series-pc-and-game-pass/"},
-        {"name": "AllKeyshop", "url": "https://www.allkeyshop.com/blog/en-gb/luna-abyss-launch-atmospheric-sci-fi-horror-news-l/"},
+        {"name": "AllKeyshop", "url": "https://www.allkeyshop.com/blog/en-gb/luna-abyss-launch-atmospheric-sci-fi-horror-news-l/"}
     ],
     "category": "game",
     "importance": "low",
@@ -1607,7 +1822,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "NetEase IR", "url": "https://ir.netease.com/node/15401/pdf"},
         {"name": "Grafa", "url": "https://grafa.com/en/news/united-states/netease-q1-2026-earnings-gaming-revenue-growth"},
-        {"name": "Rallies.ai", "url": "https://rallies.ai/news/netease-q1-revenue-hits-rmb306-billion-gross-profit-jumps-148"},
+        {"name": "Rallies.ai", "url": "https://rallies.ai/news/netease-q1-revenue-hits-rmb306-billion-gross-profit-jumps-148"}
     ],
     "category": "market",
     "importance": "medium",
@@ -1628,7 +1843,7 @@ const newsData = [
         {"name": "Metacritic", "url": "https://www.metacritic.com/game/yoshi-and-the-mysterious-book/"},
         {"name": "Game Rant", "url": "https://gamerant.com/yoshi-mysterious-book-reviews-round-up/"},
         {"name": "Nintendo Life", "url": "https://www.nintendolife.com/games/nintendo-switch-2/yoshi-and-the-mysterious-book"},
-        {"name": "新浪科技", "url": "https://finance.sina.com.cn/tech/digi/2026-05-19/doc-inhymytf7395544.shtml"},
+        {"name": "新浪科技", "url": "https://finance.sina.com.cn/tech/digi/2026-05-19/doc-inhymytf7395544.shtml"}
     ],
     "category": "game",
     "importance": "medium",
@@ -1677,7 +1892,7 @@ const newsData = [
         {"name": "Outlook Respawn", "url": "https://respawn.outlookindia.com/gaming/gaming-news/forza-horizon-6-shatters-records-with-140m-early-access-launch"},
         {"name": "Hypebeast", "url": "https://hypebeast.com/2026/5/playground-games-forza-horizon-6-over-1-million-players-ahead-of-official-launch-report"},
         {"name": "TweakTown", "url": "https://www.tweaktown.com/news/111704/forza-horizon-6-breaks-player-records-on-pc-premium-edition-copies-achieve-platinum-sales/index.html"},
-        {"name": "AllKeyshop", "url": "https://www.allkeyshop.com/blog/forza-horizon-6-ratings-early-access-records-news-n/"},
+        {"name": "AllKeyshop", "url": "https://www.allkeyshop.com/blog/forza-horizon-6-ratings-early-access-records-news-n/"}
     ],
     "category": "game",
     "importance": "high",
@@ -1698,7 +1913,7 @@ const newsData = [
         {"name": "IGN", "url": "https://www.ign.com/articles/subnautica-2-is-already-making-waves-selling-2-million-copies-in-just-12-hours"},
         {"name": "GamesRadar", "url": "https://www.gamesradar.com/games/survival/subnautica-2-makes-a-splash-with-2-million-copies-sold-in-12-hours-18-000-positive-steam-reviews-and-651-000-concurrent-players-across-pc-and-xbox/"},
         {"name": "PC Gamer", "url": "https://www.pcgamer.com/games/survival-crafting/subnautica-2-has-sold-2-million-copies-in-12-hours-with-9x-the-players-as-the-first-and-at-this-point-i-figure-that-krafton-ceo-is-already-on-his-second-bottle/"},
-        {"name": "GameDeveloper", "url": "https://www.gamedeveloper.com/business/subnautica-2-has-surpassed-2-million-sales-in-12-hours"},
+        {"name": "GameDeveloper", "url": "https://www.gamedeveloper.com/business/subnautica-2-has-surpassed-2-million-sales-in-12-hours"}
     ],
     "category": "game",
     "importance": "high",
@@ -1718,7 +1933,7 @@ const newsData = [
         {"name": "PlayStation Blog", "url": "https://blog.playstation.com/2026/05/20/state-of-play-returns-tuesday-june-2/"},
         {"name": "PushSquare", "url": "https://www.pushsquare.com/news/2026/05/state-of-play-confirmed-for-2nd-june-60plus-minutes-of-wolverine-and-ps5-games"},
         {"name": "Polygon", "url": "https://www.polygon.com/playstation-state-of-play-june-2026-date-time/"},
-        {"name": "IGN", "url": "https://www.ign.com/articles/what-to-expect-playstation-state-of-play-june-2026"},
+        {"name": "IGN", "url": "https://www.ign.com/articles/what-to-expect-playstation-state-of-play-june-2026"}
     ],
     "category": "platform",
     "importance": "high",
@@ -1738,7 +1953,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/embracer-group-announces-plans-to-spin-off-fellowship-entertainment"},
         {"name": "Gematsu", "url": "https://www.gematsu.com/2026/05/embracer-group-to-split-into-two-companies-fellowship-entertainment-and-embracer"},
-        {"name": "IT之家", "url": "https://www.ithome.com/0/953/470.htm"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/953/470.htm"}
     ],
     "category": "policy",
     "importance": "high",
@@ -1756,7 +1971,7 @@ const newsData = [
     "source": "VGC",
     "sourceUrl": "https://www.videogameschronicle.com/news/xbox-hires-leadership-team-strengthen-console-brand/",
     "sourceUrls": [
-        {"name": "VGC", "url": "https://www.videogameschronicle.com/news/xbox-hires-leadership-team-strengthen-console-brand/"},
+        {"name": "VGC", "url": "https://www.videogameschronicle.com/news/xbox-hires-leadership-team-strengthen-console-brand/"}
     ],
     "category": "policy",
     "importance": "low",
@@ -1771,7 +1986,7 @@ const newsData = [
     "source": "3DM",
     "sourceUrl": "https://www.3dmgame.com/news/202605/3944526.html",
     "sourceUrls": [
-        {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3944526.html"},
+        {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3944526.html"}
     ],
     "category": "policy",
     "importance": "low",
@@ -1789,7 +2004,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "PlayStation Blog", "url": "https://blog.playstation.com/2026/05/20/state-of-play-returns-tuesday-june-2/"},
         {"name": "PushSquare", "url": "https://www.pushsquare.com/news/2026/05/state-of-play-confirmed-for-2nd-june-60plus-minutes-of-wolverine-and-ps5-games"},
-        {"name": "VGC", "url": "https://www.videogameschronicle.com/news/sony-confirms-june-state-of-play-featuring-marvels-wolverine/"},
+        {"name": "VGC", "url": "https://www.videogameschronicle.com/news/sony-confirms-june-state-of-play-featuring-marvels-wolverine/"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -1808,7 +2023,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "VGC", "url": "https://www.videogameschronicle.com/news/playstation-plus-is-going-up-in-price-for-new-members/"},
         {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/sony-announces-playstation-plus-price-rises-due-to-ongoing-market-conditions"},
-        {"name": "GamingBolt", "url": "https://gamingbolt.com/playstation-plus-essential-price-increase-starts-on-may-20th-for-new-subscribers"},
+        {"name": "GamingBolt", "url": "https://gamingbolt.com/playstation-plus-essential-price-increase-starts-on-may-20th-for-new-subscribers"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -1828,7 +2043,7 @@ const newsData = [
         {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/embracer-group-announces-plans-to-spin-off-fellowship-entertainment"},
         {"name": "Gematsu", "url": "https://www.gematsu.com/2026/05/embracer-group-to-split-into-two-companies-fellowship-entertainment-and-embracer"},
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/embracer-group-to-split-into-two-companies-fellowship-entertainment"},
-        {"name": "VGC", "url": "https://www.videogameschronicle.com/news/embracer-splits-in-two-forming-new-fellowship-entertainment-company/"},
+        {"name": "VGC", "url": "https://www.videogameschronicle.com/news/embracer-splits-in-two-forming-new-fellowship-entertainment-company/"}
     ],
     "category": "policy",
     "importance": "high",
@@ -1846,7 +2061,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/952/863.htm https://www.3dmgame.com/news/202605/3944518.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/952/863.htm https://www.3dmgame.com/news/202605/3944518.html"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/952/863.htm https://www.3dmgame.com/news/202605/3944518.html"}
     ],
     "category": "game",
     "importance": "medium",
@@ -1905,7 +2120,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.videogameschronicle.com/news/xbox-hires-leadership-team-strengthen-console-brand/",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.videogameschronicle.com/news/xbox-hires-leadership-team-strengthen-console-brand/"},
+        {"name": "腾讯文档策展", "url": "https://www.videogameschronicle.com/news/xbox-hires-leadership-team-strengthen-console-brand/"}
     ],
     "category": "policy",
     "importance": "low",
@@ -1939,7 +2154,7 @@ const newsData = [
         {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/ubisofts-full-fy26-financials-report-shows-a-sharp-decline-in-revenue-and-net-bookings"},
         {"name": "GameDeveloper", "url": "https://www.gamedeveloper.com/business/ubisoft-s-net-bookings-are-down-54-year-on-year"},
         {"name": "GamesBeat", "url": "https://gamesbeat.com/ubisoft-reports-482m-in-fyq4-net-bookings-down-54-from-a-year-ago-but-above-expectations/"},
-        {"name": "Euronext", "url": "https://live.euronext.com/en/products/equities/company-news/2026-05-20-ubisoft-reports-full-year-2025-26-earnings-figures"},
+        {"name": "Euronext", "url": "https://live.euronext.com/en/products/equities/company-news/2026-05-20-ubisoft-reports-full-year-2025-26-earnings-figures"}
     ],
     "category": "market",
     "importance": "high",
@@ -1960,7 +2175,7 @@ const newsData = [
         {"name": "PlayStation Blog", "url": "https://blog.playstation.com/2026/05/20/state-of-play-returns-tuesday-june-2/"},
         {"name": "Polygon", "url": "https://www.polygon.com/playstation-state-of-play-june-2026-date-time/"},
         {"name": "PushSquare", "url": "https://www.pushsquare.com/news/2026/05/state-of-play-confirmed-for-2nd-june-60plus-minutes-of-wolverine-and-ps5-games"},
-        {"name": "GameSpot", "url": "https://www.gamespot.com/articles/playstation-state-of-play-confirmed-for-june-2/1100-6540054/"},
+        {"name": "GameSpot", "url": "https://www.gamespot.com/articles/playstation-state-of-play-confirmed-for-june-2/1100-6540054/"}
     ],
     "category": "platform",
     "importance": "high",
@@ -1979,7 +2194,7 @@ const newsData = [
     "sourceUrl": "https://www.gamespot.com/articles/lords-of-the-fallen-2s-epic-exclusivity-deal-canceled/1100-6540050/",
     "sourceUrls": [
         {"name": "GameSpot", "url": "https://www.gamespot.com/articles/lords-of-the-fallen-2s-epic-exclusivity-deal-canceled/1100-6540050/"},
-        {"name": "Eurogamer", "url": "https://www.eurogamer.net/lord-of-the-fallen-2-exits-epic-exclusivity"},
+        {"name": "Eurogamer", "url": "https://www.eurogamer.net/lord-of-the-fallen-2-exits-epic-exclusivity"}
     ],
     "category": "platform",
     "importance": "low",
@@ -1996,7 +2211,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/far-far-west-sells-one-million-copies"},
         {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/far-far-west-publisher-says-we-dont-work-with-partners-that-are-relying-on-generative-ai"},
-        {"name": "DualShockers", "url": "https://www.dualshockers.com/far-far-west-developers-take-noble-stance-against-genai/"},
+        {"name": "DualShockers", "url": "https://www.dualshockers.com/far-far-west-developers-take-noble-stance-against-genai/"}
     ],
     "category": "game",
     "importance": "medium",
@@ -2014,7 +2229,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "Epic Games", "url": "https://www.epicgames.com/site/news/fortnite-is-back-on-the-app-store-around-the-world-as-the-final-battle-approaches"},
         {"name": "IGN", "url": "https://www.ign.com/articles/fortnite-is-back-on-the-app-store-across-the-world"},
-        {"name": "MacRumors", "url": "https://www.macrumors.com/2026/05/19/fortnite-returns-to-app-store-worldwide/"},
+        {"name": "MacRumors", "url": "https://www.macrumors.com/2026/05/19/fortnite-returns-to-app-store-worldwide/"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -2032,7 +2247,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "IT之家", "url": "https://www.ithome.com/0/952/111.htm"},
         {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3944526.html"},
-        {"name": "虎嗅", "url": "https://www.huxiu.com/article/4860024.html"},
+        {"name": "虎嗅", "url": "https://www.huxiu.com/article/4860024.html"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -2050,7 +2265,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "IGN", "url": "https://www.ign.com/articles/xbox-is-apparently-rebranding-to-xbox"},
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/xbox-rebrands-to-xbox-as-new-ceo-asha-sharma-lets-a-fan-poll-decide/"},
-        {"name": "VGC", "url": "https://www.videogameschronicle.com/news/xbox-hires-leadership-team-strengthen-console-brand/"},
+        {"name": "VGC", "url": "https://www.videogameschronicle.com/news/xbox-hires-leadership-team-strengthen-console-brand/"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -2068,7 +2283,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "Kotaku", "url": "https://kotaku.com/sony-is-being-sued-for-allegedly-retaining-substantial-windfall-generated-by-illegal-tariffs-2000697029"},
         {"name": "GizmoChina", "url": "https://www.gizmochina.com/2026/05/19/sony-faces-class-action-lawsuit-over-ps5-price-hikes-tied-to-tariffs/"},
-        {"name": "TwistedVoxel", "url": "https://twistedvoxel.com/sony-sued-over-alleged-ps5-tariff-windfall-in-new-proposed-class-action/"},
+        {"name": "TwistedVoxel", "url": "https://twistedvoxel.com/sony-sued-over-alleged-ps5-tariff-windfall-in-new-proposed-class-action/"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -2086,7 +2301,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://mynintendonews.com/2026/05/19/jeff-grub-says-hes-heard-therell-be-a-nintendo-direct-by-mid-june/ ; https://gamingbolt.com/nintendo-direct-potentially-set-for-mid-june-rumor",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://mynintendonews.com/2026/05/19/jeff-grub-says-hes-heard-therell-be-a-nintendo-direct-by-mid-june/ ; https://gamingbolt.com/nintendo-direct-potentially-set-for-mid-june-rumor"},
+        {"name": "腾讯文档策展", "url": "https://mynintendonews.com/2026/05/19/jeff-grub-says-hes-heard-therell-be-a-nintendo-direct-by-mid-june/ ; https://gamingbolt.com/nintendo-direct-potentially-set-for-mid-june-rumor"}
     ],
     "category": "platform",
     "importance": "low",
@@ -2103,7 +2318,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/952/111.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/952/111.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/952/111.htm"}
     ],
     "category": "platform",
     "importance": "low",
@@ -2120,7 +2335,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/952/453.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/952/453.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/952/453.htm"}
     ],
     "category": "platform",
     "importance": "high",
@@ -2137,7 +2352,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.eurogamer.net/far-far-west-sells-one-million-copies",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.eurogamer.net/far-far-west-sells-one-million-copies"},
+        {"name": "腾讯文档策展", "url": "https://www.eurogamer.net/far-far-west-sells-one-million-copies"}
     ],
     "category": "game",
     "importance": "low",
@@ -2154,7 +2369,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/952/082.htm ；https://gamingbolt.com/xbox-bats-for-transparency-with-new-player-voice-feedback-system",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/952/082.htm ；https://gamingbolt.com/xbox-bats-for-transparency-with-new-player-voice-feedback-system"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/952/082.htm ；https://gamingbolt.com/xbox-bats-for-transparency-with-new-player-voice-feedback-system"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -2171,7 +2386,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.eurogamer.net/xbox-game-pass-may ; https://gamingbolt.com/remnant-2-the-outer-worlds-spaces-choice-edition-and-more-coming-to-game-pass ; https://www.videogameschronicle.com/news/xbox-game-pass-titles-for-the-rest-of-may-have-been-revealed/ ; https://www.3dmgame.com/news/202605/3944538.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.eurogamer.net/xbox-game-pass-may ; https://gamingbolt.com/remnant-2-the-outer-worlds-spaces-choice-edition-and-more-coming-to-game-pass ; https://www.videogameschronicle.com/news/xbox-game-pass-titles-for-the-rest-of-may-have-been-revealed/ ; https://www.3dmgame.com/news/202605/3944538.html"},
+        {"name": "腾讯文档策展", "url": "https://www.eurogamer.net/xbox-game-pass-may ; https://gamingbolt.com/remnant-2-the-outer-worlds-spaces-choice-edition-and-more-coming-to-game-pass ; https://www.videogameschronicle.com/news/xbox-game-pass-titles-for-the-rest-of-may-have-been-revealed/ ; https://www.3dmgame.com/news/202605/3944538.html"}
     ],
     "category": "platform",
     "importance": "low",
@@ -2188,7 +2403,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://mynintendonews.com/2026/05/19/nintendos-stock-has-climbed-as-much-as-6-8-thanks-to-ai-fatigue/",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://mynintendonews.com/2026/05/19/nintendos-stock-has-climbed-as-much-as-6-8-thanks-to-ai-fatigue/"},
+        {"name": "腾讯文档策展", "url": "https://mynintendonews.com/2026/05/19/nintendos-stock-has-climbed-as-much-as-6-8-thanks-to-ai-fatigue/"}
     ],
     "category": "platform",
     "importance": "low",
@@ -2205,7 +2420,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/952/091.htm ; https://www.ithome.com/0/951/892.htm ; https://www.3dmgame.com/news/202605/3944518.html ; https://gamingbolt.com/forza-horizon-6-is-xboxs-biggest-steam-launch-in-history",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/952/091.htm ; https://www.ithome.com/0/951/892.htm ; https://www.3dmgame.com/news/202605/3944518.html ; https://gamingbolt.com/forza-horizon-6-is-xboxs-biggest-steam-launch-in-history"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/952/091.htm ; https://www.ithome.com/0/951/892.htm ; https://www.3dmgame.com/news/202605/3944518.html ; https://gamingbolt.com/forza-horizon-6-is-xboxs-biggest-steam-launch-in-history"}
     ],
     "category": "game",
     "importance": "medium",
@@ -2222,7 +2437,7 @@ const newsData = [
     "source": "MyNintendoNews",
     "sourceUrl": "https://mynintendonews.com/2026/05/19/nintendos-stock-has-climbed-as-much-as-6-8-thanks-to-ai-fatigu",
     "sourceUrls": [
-        {"name": "MyNintendoNews", "url": "https://mynintendonews.com/2026/05/19/nintendos-stock-has-climbed-as-much-as-6-8-thanks-to-ai-fatigu"},
+        {"name": "MyNintendoNews", "url": "https://mynintendonews.com/2026/05/19/nintendos-stock-has-climbed-as-much-as-6-8-thanks-to-ai-fatigu"}
     ],
     "category": "market",
     "importance": "low",
@@ -2239,7 +2454,7 @@ const newsData = [
     "sourceUrl": "https://mynintendonews.com/2026/05/19/jeff-grub-says-hes-heard-therell-be-a-nintendo-direct-by-mid-j",
     "sourceUrls": [
         {"name": "MyNintendoNews", "url": "https://mynintendonews.com/2026/05/19/jeff-grub-says-hes-heard-therell-be-a-nintendo-direct-by-mid-j"},
-        {"name": "GamingBolt", "url": "https://gamingbolt.com/nintendo-direct-reportedly-coming-before-summer-game-fest"},
+        {"name": "GamingBolt", "url": "https://gamingbolt.com/nintendo-direct-reportedly-coming-before-summer-game-fest"}
     ],
     "category": "platform",
     "importance": "low",
@@ -2258,7 +2473,7 @@ const newsData = [
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/far-far-west-sells-one-million-copies"},
         {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/far-far-west-publisher-says-we-dont-work-with-partners-that-are-relying-on-generative-ai"},
         {"name": "TechPowerUp", "url": "https://www.techpowerup.com/349195/publisher-of-indie-hit-far-far-west-rejects-gen-ai-in-videogames"},
-        {"name": "GamingProMax", "url": "https://gamingpromax.com/far-far-west-1-million-sales-fireshine-games-no-generative-ai/"},
+        {"name": "GamingProMax", "url": "https://gamingpromax.com/far-far-west-1-million-sales-fireshine-games-no-generative-ai/"}
     ],
     "category": "game",
     "importance": "medium",
@@ -2276,7 +2491,7 @@ const newsData = [
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/lord-of-the-fallen-2-exits-epic-exclusivity"},
         {"name": "Escapist", "url": "https://www.escapistmagazine.com/news-ci-games-ending-its-epic-games-pc-exclusivity-agreement-lords-of-the-fallen-2/"},
         {"name": "TweakTown", "url": "https://www.tweaktown.com/news/111684/lords-of-the-fallen-2-can-now-launch-on-steam-as-ci-games-and-epic-terminate-exclusivity-deal/index.html"},
-        {"name": "GamingProMax", "url": "https://gamingpromax.com/lords-of-the-fallen-2-epic-exclusivity-terminated-steam-2026/"},
+        {"name": "GamingProMax", "url": "https://gamingpromax.com/lords-of-the-fallen-2-epic-exclusivity-terminated-steam-2026/"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -2295,7 +2510,7 @@ const newsData = [
         {"name": "IGN", "url": "https://www.ign.com/articles/playstation-console-owners-launch-class-action-lawsuit-against-sony-over-tariff-refunds"},
         {"name": "AndroidHeadlines", "url": "https://www.androidheadlines.com/2026/05/sony-gamers-lawsuit-illegal-tariff-money-price-hikes.html"},
         {"name": "GizmoChina", "url": "https://www.gizmochina.com/2026/05/19/sony-faces-class-action-lawsuit-over-ps5-price-hikes-tied-to-tariffs/"},
-        {"name": "InfiniteStart", "url": "https://infinitestart.com/2026/05/sony-faces-class-action-lawsuit-over-retention-of-post-tariff-refunds/"},
+        {"name": "InfiniteStart", "url": "https://infinitestart.com/2026/05/sony-faces-class-action-lawsuit-over-retention-of-post-tariff-refunds/"}
     ],
     "category": "policy",
     "importance": "high",
@@ -2316,7 +2531,7 @@ const newsData = [
         {"name": "Xbox Wire", "url": "https://news.xbox.com/en-us/2026/05/19/xbox-game-pass-may-2026-wave-2/"},
         {"name": "GameSpot", "url": "https://www.gamespot.com/articles/xbox-game-pass-expands-with-racing-pigeons-and-classic-final-fantasy-this-month/1100-6540026/"},
         {"name": "Game Rant", "url": "https://gamerant.com/xbox-game-pass-may-2026-wave-2-lineup-all-games-list/"},
-        {"name": "Digital Trends", "url": "https://www.digitaltrends.com/gaming/xbox-game-pass-just-dropped-its-may-2026-lineup-and-it-includes-forza-horizon-6-and-doom/"},
+        {"name": "Digital Trends", "url": "https://www.digitaltrends.com/gaming/xbox-game-pass-just-dropped-its-may-2026-lineup-and-it-includes-forza-horizon-6-and-doom/"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -2333,7 +2548,7 @@ const newsData = [
     "source": "Tech4Gamers",
     "sourceUrl": "https://tech4gamers.com/roguelikes-steam-500m-2026/",
     "sourceUrls": [
-        {"name": "Tech4Gamers", "url": "https://tech4gamers.com/roguelikes-steam-500m-2026/"},
+        {"name": "Tech4Gamers", "url": "https://tech4gamers.com/roguelikes-steam-500m-2026/"}
     ],
     "category": "market",
     "importance": "medium",
@@ -2352,7 +2567,7 @@ const newsData = [
         {"name": "VGC", "url": "https://www.videogameschronicle.com/news/playstation-boss-says-single-player-games-wont-come-to-pc-going-forward/"},
         {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/sony-wont-be-bringing-any-more-single-player-games-to-pc-says-playstation-studios-boss"},
         {"name": "Ars Technica", "url": "https://arstechnica.com/gaming/2026/03/sony-wont-bring-any-more-single-player-playstation-games-to-pc/"},
-        {"name": "PushSquare", "url": "https://www.pushsquare.com/news/2026/03/sony-returns-to-playstation-exclusivity-and-stops-single-player-pc-ports-new-report-says"},
+        {"name": "PushSquare", "url": "https://www.pushsquare.com/news/2026/03/sony-returns-to-playstation-exclusivity-and-stops-single-player-pc-ports-new-report-says"}
     ],
     "category": "platform",
     "importance": "high",
@@ -2370,7 +2585,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://mynintendonews.com/2026/05/18/nintendo-announces-return-to-gamescom-2026-in-august/",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://mynintendonews.com/2026/05/18/nintendo-announces-return-to-gamescom-2026-in-august/"},
+        {"name": "腾讯文档策展", "url": "https://mynintendonews.com/2026/05/18/nintendo-announces-return-to-gamescom-2026-in-august/"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -2401,7 +2616,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/952/331.htm ; https://www.eurogamer.net/lego-batman-legacy-of-the-dark-knight-arkham-rocksteady ; https://www.videogameschronicle.com/news/arkham-dev-rocksteady-is-credited-as-co-developer-on-new-lego-batman/",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/952/331.htm ; https://www.eurogamer.net/lego-batman-legacy-of-the-dark-knight-arkham-rocksteady ; https://www.videogameschronicle.com/news/arkham-dev-rocksteady-is-credited-as-co-developer-on-new-lego-batman/"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/952/331.htm ; https://www.eurogamer.net/lego-batman-legacy-of-the-dark-knight-arkham-rocksteady ; https://www.videogameschronicle.com/news/arkham-dev-rocksteady-is-credited-as-co-developer-on-new-lego-batman/"}
     ],
     "category": "game",
     "importance": "low",
@@ -2421,7 +2636,7 @@ const newsData = [
         {"name": "Xbox Wire", "url": "https://news.xbox.com/en-us/2026/05/18/introducing-xbox-player-voice/"},
         {"name": "IGN", "url": "https://www.ign.com/articles/microsoft-launches-xbox-player-voice-to-gather-feedback-fans-immediately-demand-a-return-to-exclusives"},
         {"name": "Pure Xbox", "url": "https://www.purexbox.com/news/2026/05/microsoft-announces-fan-feedback-program-xbox-player-voice-and-its-now-live"},
-        {"name": "Gadgets360", "url": "https://www.gadgets360.com/games/news/xbox-player-voice-portal-launched-bring-back-exclusives-user-feedback-11521610"},
+        {"name": "Gadgets360", "url": "https://www.gadgets360.com/games/news/xbox-player-voice-portal-launched-bring-back-exclusives-user-feedback-11521610"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -2441,7 +2656,7 @@ const newsData = [
         {"name": "IGN", "url": "https://www.ign.com/articles/steam-adds-edits-and-removes-dozens-of-store-tags"},
         {"name": "ComicBook", "url": "https://comicbook.com/gaming/news/valve-just-made-some-big-changes-to-steam-tags-and-the-new-additions-shed-light-on-recent-trends/"},
         {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/valve-overhauls-tag-system-on-steam-to-improve-game-discoverability"},
-        {"name": "TechPowerUp", "url": "https://www.techpowerup.com/349196/valve-streamlines-steam-store-tags-list-reveals-most-ubiquitous-tags"},
+        {"name": "TechPowerUp", "url": "https://www.techpowerup.com/349196/valve-streamlines-steam-store-tags-list-reveals-most-ubiquitous-tags"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -2457,7 +2672,7 @@ const newsData = [
     "source": "IT之家",
     "sourceUrl": "https://www.ithome.com/0/951/406.htm",
     "sourceUrls": [
-        {"name": "IT之家", "url": "https://www.ithome.com/0/951/406.htm"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/951/406.htm"}
     ],
     "category": "market",
     "importance": "medium",
@@ -2502,7 +2717,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/951/434.htm ；https://gamingbolt.com/gta-6-will-have-a-review-event-to-avoid-leaks-rumor",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/951/434.htm ；https://gamingbolt.com/gta-6-will-have-a-review-event-to-avoid-leaks-rumor"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/951/434.htm ；https://gamingbolt.com/gta-6-will-have-a-review-event-to-avoid-leaks-rumor"}
     ],
     "category": "game",
     "importance": "high",
@@ -2550,7 +2765,7 @@ const newsData = [
         {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3944303.html"},
         {"name": "Tech4Gamers", "url": "https://tech4gamers.com/roguelikes-steam-500m-2026/"},
         {"name": "GameMinr", "url": "https://gameminr.com/articles/193?t=Slay-the-Spire-2-Tops-Steam-Sales%253A-Why-Roguelikes-Are-Dominating-2026"},
-        {"name": "Sohu", "url": "https://www.sohu.com/a/1023213778_122598898"},
+        {"name": "Sohu", "url": "https://www.sohu.com/a/1023213778_122598898"}
     ],
     "category": "market",
     "importance": "medium",
@@ -2569,7 +2784,7 @@ const newsData = [
         {"name": "PushSquare", "url": "https://www.pushsquare.com/news/2026/05/ps-plus-price-increase-announced-by-sony-for-new-members"},
         {"name": "CNET", "url": "https://www.cnet.com/tech/gaming/playstation-plus-prices-are-increasing-for-new-subscribers-starting-may-20/"},
         {"name": "TalkEsport", "url": "https://www.talkesport.com/news/ps-plus-price-increase-may-2026/"},
-        {"name": "TechPowerUp", "url": "https://www.techpowerup.com/349162/playstation-plus-price-hike-sees-new-subscribers-pay-up-to-12-more"},
+        {"name": "TechPowerUp", "url": "https://www.techpowerup.com/349162/playstation-plus-price-hike-sees-new-subscribers-pay-up-to-12-more"}
     ],
     "category": "platform",
     "importance": "high",
@@ -2590,7 +2805,7 @@ const newsData = [
         {"name": "Polygon", "url": "https://www.polygon.com/sony-playstation-exclusives-officially-ending-pc/"},
         {"name": "TechRadar", "url": "https://www.techradar.com/gaming/playstation/pc-gamers-say-goodbye-to-playstation-exclusives-as-sony-confirms-single-player-games-arent-coming-to-pc-anymore-except-for-one"},
         {"name": "Wccftech", "url": "https://wccftech.com/playstation-first-party-single-player-games-not-coming-to-pc-anymore-herman-hulst/"},
-        {"name": "TweakTown", "url": "https://www.tweaktown.com/news/111678/sony-first-party-singleplayer-games-to-stay-playstation-console-exclusive-no-longer-release-on-pc/index.html"},
+        {"name": "TweakTown", "url": "https://www.tweaktown.com/news/111678/sony-first-party-singleplayer-games-to-stay-playstation-console-exclusive-no-longer-release-on-pc/index.html"}
     ],
     "category": "platform",
     "importance": "high",
@@ -2609,7 +2824,7 @@ const newsData = [
     "sourceUrl": "https://www.ithome.com/0/951/228.htm",
     "sourceUrls": [
         {"name": "IT之家", "url": "https://www.ithome.com/0/951/228.htm"},
-        {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3944318.html"},
+        {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3944318.html"}
     ],
     "category": "platform",
     "importance": "low",
@@ -2624,7 +2839,7 @@ const newsData = [
     "source": "GamesIndustry",
     "sourceUrl": "https://www.gamesindustry.biz/nexon-q1-net-profit-up-118-percent-to-record-3607-million",
     "sourceUrls": [
-        {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/nexon-q1-net-profit-up-118-percent-to-record-3607-million"},
+        {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/nexon-q1-net-profit-up-118-percent-to-record-3607-million"}
     ],
     "category": "market",
     "importance": "medium",
@@ -2641,7 +2856,7 @@ const newsData = [
     "sourceUrl": "https://www.gamesindustry.biz/square-enix-fy26-operating-income-surges-349-despite-net-sales-decline",
     "sourceUrls": [
         {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/square-enix-fy26-operating-income-surges-349-despite-net-sales-decline"},
-        {"name": "MassivelyOP", "url": "https://massivelyop.com/2026/05/18/square-enix-financials-notes-a-decline-in-mmo-sales-offset-by-a-rise-in-income-thanks-to-remasters/"},
+        {"name": "MassivelyOP", "url": "https://massivelyop.com/2026/05/18/square-enix-financials-notes-a-decline-in-mmo-sales-offset-by-a-rise-in-income-thanks-to-remasters/"}
     ],
     "category": "market",
     "importance": "medium",
@@ -2658,7 +2873,7 @@ const newsData = [
     "sourceUrl": "https://www.eurogamer.net/nintendo-explains-switch-2-price-increase-memory-costs",
     "sourceUrls": [
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/nintendo-explains-switch-2-price-increase-memory-costs"},
-        {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/nintendo-explains-switch-2-price-increase-components"},
+        {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/nintendo-explains-switch-2-price-increase-components"}
     ],
     "category": "hardware",
     "importance": "medium",
@@ -2717,7 +2932,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/951/228.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/951/228.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/951/228.htm"}
     ],
     "category": "platform",
     "importance": "low",
@@ -2863,7 +3078,7 @@ const newsData = [
         {"name": "IGN", "url": "https://www.ign.com/articles/forza-horizon-6-suffers-disastrous-leak-as-steam-preload-files-are-made-available-without-encryption"},
         {"name": "Windows Central", "url": "https://www.windowscentral.com/gaming/xbox/what-an-insane-screw-up-xbox-itself-leaks-forza-horizon-6-pc-files-in-full-a-week-before-launch-and-pirates-already-cracked-it"},
         {"name": "Notebookcheck", "url": "https://www.notebookcheck.net/Playground-Games-warns-Forza-Horizon-6-pirates-of-franchise-wide-and-hardware-permabans.1295178.0.html"},
-        {"name": "Digital Foundry", "url": "https://www.digitalfoundry.net/news/2026/05/forza-horizon-6-has-been-leaked-a-week-early-playground-promises-franchise-wide-hardware-bans-for-pirates"},
+        {"name": "Digital Foundry", "url": "https://www.digitalfoundry.net/news/2026/05/forza-horizon-6-has-been-leaked-a-week-early-playground-promises-franchise-wide-hardware-bans-for-pirates"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -2883,7 +3098,7 @@ const newsData = [
         {"name": "The Verge", "url": "https://www.theverge.com/news/929454/microsoft-xbox-game-pass-china-expansion-rumors"},
         {"name": "Windows Central", "url": "https://www.windowscentral.com/gaming/xbox/project-saluki-a-new-xbox-game-pass-tier-has-been-unearthed-alongside-a-curious-positron-disc-to-digital-program-and-it-could-be-huge"},
         {"name": "IT之家", "url": "https://www.ithome.com/0/950/037.htm"},
-        {"name": "动点科技", "url": "https://cn.technode.com/post/2026-05-14/microsoft-xbox-game-pass-china-expansion-rumors/"},
+        {"name": "动点科技", "url": "https://cn.technode.com/post/2026-05-14/microsoft-xbox-game-pass-china-expansion-rumors/"}
     ],
     "category": "platform",
     "importance": "high",
@@ -2960,7 +3175,7 @@ const newsData = [
         {"name": "PC Gamer", "url": "https://www.pcgamer.com/gaming-industry/events-conferences/summer-game-fest-2026/"},
         {"name": "Summer Game Fest", "url": "https://www.summergamefest.com/"},
         {"name": "GamesRadar", "url": "https://www.gamesradar.com/summer-game-fest-schedule-2026/"},
-        {"name": "PushSquare", "url": "https://www.pushsquare.com/features/what-do-you-want-from-a-may-2026-state-of-play-showcase"},
+        {"name": "PushSquare", "url": "https://www.pushsquare.com/features/what-do-you-want-from-a-may-2026-state-of-play-showcase"}
     ],
     "category": "market",
     "importance": "medium",
@@ -2978,7 +3193,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "GamingBolt", "url": "https://gamingbolt.com/lego-batman-legacy-of-the-dark-knight-has-950000-wishlists-on-steam-ahead-of-launch"},
         {"name": "App2Top", "url": "https://app2top.com/news/lego-batman-legacy-of-the-dark-knight-garnered-950-thousand-wishlists-on-steam-290365.html"},
-        {"name": "AllKeyShop", "url": "https://www.allkeyshop.com/blog/lego-batman-goes-gold-pc-spec-worries-news-r/"},
+        {"name": "AllKeyShop", "url": "https://www.allkeyshop.com/blog/lego-batman-goes-gold-pc-spec-worries-news-r/"}
     ],
     "category": "game",
     "importance": "medium",
@@ -2996,7 +3211,7 @@ const newsData = [
         {"name": "Gematsu", "url": "https://www.gematsu.com/2026/04/playstation-plus-monthly-games-lineup-for-may-2026-announced"},
         {"name": "FandomWire", "url": "https://fandomwire.com/all-games-coming-to-ps-plus-game-catalog-in-may-2026-extra-premium-lineup-revealed/"},
         {"name": "NotebookCheck", "url": "https://www.notebookcheck.net/PS-Plus-May-2026-Game-Catalogue-officially-revealed-featuring-Red-Dead-Redemption-2-Star-Wars-Outlaws-and-more.1296075.0.html"},
-        {"name": "PS Lifestyle", "url": "https://www.playstationlifestyle.net/2026/05/13/ps-plus-extra-premium-may-2026-games-full-list/"},
+        {"name": "PS Lifestyle", "url": "https://www.playstationlifestyle.net/2026/05/13/ps-plus-extra-premium-may-2026-games-full-list/"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -3015,7 +3230,7 @@ const newsData = [
         {"name": "Automaton Media", "url": "https://automaton-media.com/en/news/nihon-falcom-reports-1227-year-on-year-operating-profit-growth-thanks-to-strong-overseas-sales/"},
         {"name": "Push Square", "url": "https://www.pushsquare.com/news/2026/05/overseas-trails-in-the-sky-1st-chapter-sales-propel-falcom-profits-to-insane-heights"},
         {"name": "Final Weapon", "url": "https://finalweapon.net/2026/05/13/falcom-1227-percent-profit-growth-trails-in-the-sky-1st-chapter-success/"},
-        {"name": "NoisyPixel", "url": "https://noisypixel.net/falcom-fy2026-financial-results-trails-ys-sales/"},
+        {"name": "NoisyPixel", "url": "https://noisypixel.net/falcom-fy2026-financial-results-trails-ys-sales/"}
     ],
     "category": "market",
     "importance": "medium",
@@ -3034,7 +3249,7 @@ const newsData = [
         {"name": "Windows Central", "url": "https://www.ali213.net/news/html/2026-5/1011367.html"},
         {"name": "新浪科技", "url": "https://finance.sina.com.cn/tech/digi/2026-05-13/doc-inhxufve9230056.shtml"},
         {"name": "ZOL", "url": "https://game.zol.com.cn/1180/11807800.html"},
-        {"name": "TheCodersBlog", "url": "https://thecodersblog.com/xbox-pc-app-hints-at-game-pass-expansion-to-china-2026/"},
+        {"name": "TheCodersBlog", "url": "https://thecodersblog.com/xbox-pc-app-hints-at-game-pass-expansion-to-china-2026/"}
     ],
     "category": "platform",
     "importance": "high",
@@ -3139,7 +3354,7 @@ const newsData = [
         {"name": "Capcom IR", "url": "https://www.capcom.co.jp/ir/english/2026"},
         {"name": "TwistedVoxel", "url": "https://twistedvoxel.com/capcom-reports-record-fy2026-results-led-by-resident-evil-and-monster-hunter/"},
         {"name": "Kantenna", "url": "https://kantenna.com/topic/capcom-fy2026-record-earnings-resident-evil-requiem-monster-hunter-eleventh-straight-growth"},
-        {"name": "Insider Gaming", "url": "https://insider-gaming.com/capcom-reports-record-profits-and-59-million-games-sold/"},
+        {"name": "Insider Gaming", "url": "https://insider-gaming.com/capcom-reports-record-profits-and-59-million-games-sold/"}
     ],
     "category": "market",
     "importance": "medium",
@@ -3159,7 +3374,7 @@ const newsData = [
         {"name": "Push Square", "url": "https://www.pushsquare.com/news/2026/05/monster-hunter-wilds-sales-really-have-fallen-off-a-cliff"},
         {"name": "TwistedVoxel", "url": "https://twistedvoxel.com/capcom-reports-record-fy2026-results-led-by-resident-evil-and-monster-hunter/"},
         {"name": "NewsGlobeNow", "url": "https://www.newsglobenow.com/new353995.html"},
-        {"name": "Capcom IR", "url": "https://www.capcom.co.jp/ir/english/data/pdf/explanation/2025/full/explanation_2025_full_01.pdf"},
+        {"name": "Capcom IR", "url": "https://www.capcom.co.jp/ir/english/data/pdf/explanation/2025/full/explanation_2025_full_01.pdf"}
     ],
     "category": "game",
     "importance": "medium",
@@ -3177,7 +3392,7 @@ const newsData = [
         {"name": "Push Square", "url": "https://www.pushsquare.com/news/2026/05/saros-ps5-sales-estimates-at-300k-selling-slower-than-returnal-on-a-bigger-install-base"},
         {"name": "Gadgets360", "url": "https://www.gadgets360.com/games/news/saros-sales-300k-2-weeks-estimate-ps5-exclusive-sony-housemarque-11488733"},
         {"name": "TechPowerUp", "url": "https://www.techpowerup.com/349018/saros-estimated-to-have-sold-300-000-units-in-2-weeks-with-high-daily-active-players"},
-        {"name": "ResetEra", "url": "https://www.resetera.com/threads/saros-has-sold-300k-in-its-first-two-weeks-generating-over-22m-based-on-alinea-analytics-estimates.1518475/"},
+        {"name": "ResetEra", "url": "https://www.resetera.com/threads/saros-has-sold-300k-in-its-first-two-weeks-generating-over-22m-based-on-alinea-analytics-estimates.1518475/"}
     ],
     "category": "game",
     "importance": "medium",
@@ -3196,7 +3411,7 @@ const newsData = [
         {"name": "Insider Gaming", "url": "https://insider-gaming.com/sony-says-supporting-ps5-devs-is-a-big-investment-amid-30-commission-fee-discussion/"},
         {"name": "Kotaku", "url": "https://kotaku.com/sony-playstation-prices-you-owe-us-lawsuit-ruling-fees-2000693593"},
         {"name": "GameApps", "url": "https://www.gameapps.hk/news/69618/sony-playstation-store-30-percent-commission-response/"},
-        {"name": "PCQuest", "url": "https://www.pcquest.com/gaming/sonys-30-commission-faces-26b-uk-legal-fire-gamers-eye-cheaper-ps5-games-11810303"},
+        {"name": "PCQuest", "url": "https://www.pcquest.com/gaming/sonys-30-commission-faces-26b-uk-legal-fire-gamers-eye-cheaper-ps5-games-11810303"}
     ],
     "category": "policy",
     "importance": "high",
@@ -3217,7 +3432,7 @@ const newsData = [
         {"name": "IGN", "url": "https://www.ign.com/articles/silent-hill-2-remake-reaches-6-million-players-as-silent-hill-f-hits-new-sales-milestone"},
         {"name": "Push Square", "url": "https://www.pushsquare.com/news/2026/05/konami-successfully-revives-silent-hill-with-strong-sales-for-2-remake-f"},
         {"name": "Ungeek", "url": "https://www.ungeek.ph/2026/05/silent-hill-f-exceeds-2-million-units-shipped-silent-hill-2-remake-surpasses-6-million-players/"},
-        {"name": "GamerMatters", "url": "https://gamermatters.com/silent-hill-f-sales-pass-2-million-copies-silent-hill-2-remake-has-more-than-6-million-players/"},
+        {"name": "GamerMatters", "url": "https://gamermatters.com/silent-hill-f-sales-pass-2-million-copies-silent-hill-2-remake-has-more-than-6-million-players/"}
     ],
     "category": "game",
     "importance": "high",
@@ -3336,7 +3551,7 @@ const newsData = [
         {"name": "Inven Global", "url": "https://www.invenglobal.com/articles/21780/pearl-abyss-posts-record-high-q1-operating-profit-of-2121-billion"},
         {"name": "TechTimes", "url": "https://www.techtimes.com/articles/316584/20260513/crimson-desert-earns-179m-six-weeks-pushing-pearl-abyss-its-highest-quarterly-revenue-record.htm"},
         {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3944024.html"},
-        {"name": "Chosun Biz", "url": "https://biz.chosun.com/en/en-it/2026/05/12/MADVR6SNSNAORAKV5JMY3BNTE4/"},
+        {"name": "Chosun Biz", "url": "https://biz.chosun.com/en/en-it/2026/05/12/MADVR6SNSNAORAKV5JMY3BNTE4/"}
     ],
     "category": "market",
     "importance": "high",
@@ -3357,7 +3572,7 @@ const newsData = [
         {"name": "Nintendo Life", "url": "https://www.nintendolife.com/news/2026/05/former-tekken-boss-establishes-new-studio-under-snk-corporation"},
         {"name": "Gameranx", "url": "https://gameranx.com/updates/id/562668/article/katsuhiro-harada-is-back-making-video-games-under-snk-with-a-new-subsidiary-called-vs-studio/"},
         {"name": "GodIsAGeek", "url": "https://godisageek.com/2026/05/harada-vs-studio-snk-launch/"},
-        {"name": "GoSuGamers", "url": "https://www.gosugamers.net/entertainment/news/78423-former-tekken-director-katsuhiro-harada-joins-snk-to-establish-vs-studio"},
+        {"name": "GoSuGamers", "url": "https://www.gosugamers.net/entertainment/news/78423-former-tekken-director-katsuhiro-harada-joins-snk-to-establish-vs-studio"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -3376,7 +3591,7 @@ const newsData = [
         {"name": "IGN", "url": "https://sea.ign.com/steam-machine/242588/update-leak-suggests-four-steam-machine-packages-available-at-launch-alongside-reservation-queue"},
         {"name": "Mashable", "url": "https://mashable.com/article/steam-machine-details-leaked-pre-orders-begin-soon"},
         {"name": "TechSpot", "url": "https://www.techspot.com/news/112364-steam-machine-may-launch-soon-reservation-system-four.html"},
-        {"name": "AllKeyShop", "url": "https://www.allkeyshop.com/blog/en-gb/valve-steam-machine-2026-hardware-leak-shipments-news-d/"},
+        {"name": "AllKeyShop", "url": "https://www.allkeyshop.com/blog/en-gb/valve-steam-machine-2026-hardware-leak-shipments-news-d/"}
     ],
     "category": "hardware",
     "importance": "medium",
@@ -3396,7 +3611,7 @@ const newsData = [
         {"name": "Automaton Media", "url": "https://automaton-media.com/en/news/shift-up-plans-to-self-publish-stellar-blade-sequel-and-shinji-mikami-titles-update-on-mysterious-new-flagship-ip-due-within-2026/"},
         {"name": "Gadgets360", "url": "https://www.gadgets360.com/games/news/stellar-blade-2-shift-up-shelf-publish-release-ps5-exclusive-11484298"},
         {"name": "GameLuster", "url": "https://gameluster.com/shift-up-self-publish-stellar-blade-2-sony/"},
-        {"name": "Checkpoint", "url": "https://checkpointgaming.net/news/2026/05/stellar-blade-studio-shift-up-to-self-publish-sequel/"},
+        {"name": "Checkpoint", "url": "https://checkpointgaming.net/news/2026/05/stellar-blade-studio-shift-up-to-self-publish-sequel/"}
     ],
     "category": "policy",
     "importance": "high",
@@ -3417,7 +3632,7 @@ const newsData = [
         {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/sega-reports-316m-net-loss-during-fy26-cancels-super-game-project-amid-strategic-pivot"},
         {"name": "IGN中国", "url": "https://www.ign.com.cn/sega/59988/shi-jia-que-ren-qu-xiao-yi-gong-bu-wu-nian-de-shen-mi-chao-ji-you-xi-xiang-mu"},
         {"name": "Push Square", "url": "https://www.pushsquare.com/news/2026/05/sega-cancels-super-game-project-and-moves-away-from-live-service"},
-        {"name": "Nintendo Life", "url": "https://www.nintendolife.com/news/2026/05/sega-explains-why-exactly-it-cancelled-its-super-game"},
+        {"name": "Nintendo Life", "url": "https://www.nintendolife.com/news/2026/05/sega-explains-why-exactly-it-cancelled-its-super-game"}
     ],
     "category": "policy",
     "importance": "high",
@@ -3435,7 +3650,7 @@ const newsData = [
     "source": "GamingBolt",
     "sourceUrl": "https://gamingbolt.com/metal-gear-sales-hit-661-million-silent-hill-franchises-at-171-million",
     "sourceUrls": [
-        {"name": "GamingBolt", "url": "https://gamingbolt.com/metal-gear-sales-hit-661-million-silent-hill-franchises-at-171-million"},
+        {"name": "GamingBolt", "url": "https://gamingbolt.com/metal-gear-sales-hit-661-million-silent-hill-franchises-at-171-million"}
     ],
     "category": "game",
     "importance": "medium",
@@ -3453,7 +3668,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "17173", "url": "https://news.17173.com/content/05112026/180645819.shtml"},
         {"name": "IGN", "url": "https://www.ign.com/articles/forza-horizon-6-suffers-disastrous-leak-as-steam-preload-files-are-made-available-without-encryption"},
-        {"name": "Gamespot", "url": "https://www.gamespot.com/articles/forza-horizon-6-suffers-massive-leak-via-steam-preload-blunder/1100-6539872/"},
+        {"name": "Gamespot", "url": "https://www.gamespot.com/articles/forza-horizon-6-suffers-massive-leak-via-steam-preload-blunder/1100-6539872/"}
     ],
     "category": "game",
     "importance": "medium",
@@ -3557,7 +3772,7 @@ const newsData = [
         {"name": "Windows Central", "url": "https://www.windowscentral.com/microsoft/windows-11/windows-11s-may-2026-update-is-packed-with-11-powerful-features-you-cant-ignore"},
         {"name": "Tech4Gamers", "url": "https://tech4gamers.com/windows-11-xbox-mode-gaming-gains/"},
         {"name": "知乎", "url": "https://zhuanlan.zhihu.com/p/2037074621703401585"},
-        {"name": "WindowsLatest", "url": "https://www.windowslatest.com/2026/03/11/microsoft-confirms-xbox-mode-for-windows-11-pcs-in-2026-and-i-tested-the-new-console-style-gaming-interface/"},
+        {"name": "WindowsLatest", "url": "https://www.windowslatest.com/2026/03/11/microsoft-confirms-xbox-mode-for-windows-11-pcs-in-2026-and-i-tested-the-new-console-style-gaming-interface/"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -3577,7 +3792,7 @@ const newsData = [
         {"name": "Vice", "url": "https://www.vice.com/en/article/resident-evil-10-and-multiple-capcom-remakes-reportedly-leaked-by-insider/"},
         {"name": "Wccftech", "url": "https://wccftech.com/capcom-leak-devil-may-cry-1-remake-re1-re10-full-roadmap/"},
         {"name": "MSN", "url": "https://www.msn.com/en-us/news/other/capcom-leaks-hint-at-resident-evil-10-and-devil-may-cry-remake/gm-GMEA58C145"},
-        {"name": "Gfinity", "url": "https://www.gfinityesports.com/article/new-capcom-leak-hints-devil-may-cry-may-finally-get-the-resident-evil-treatment"},
+        {"name": "Gfinity", "url": "https://www.gfinityesports.com/article/new-capcom-leak-hints-devil-may-cry-may-finally-get-the-resident-evil-treatment"}
     ],
     "category": "game",
     "importance": "medium",
@@ -3597,7 +3812,7 @@ const newsData = [
         {"name": "Xbox官方博客", "url": "https://blogs.windows.com/windowsexperience/2026/05/11/xbox-and-discord-partnership-bringing-more-benefits-to-players/"},
         {"name": "TechCrunch", "url": "https://techcrunch.com/2026/05/11/discord-launches-nitro-rewards-giving-subscribers-access-to-the-base-tier-of-xbox-game-pass-for-no-extra-cost/"},
         {"name": "MobileSyrup", "url": "https://mobilesyrup.com/2026/05/11/discord-nitro-xbox-game-pass-standard-edition/"},
-        {"name": "GameInformer", "url": "https://www.gameinformer.com/2026/05/11/discord-partners-with-xbox-bringing-game-pass-to-nitro-subscribers"},
+        {"name": "GameInformer", "url": "https://www.gameinformer.com/2026/05/11/discord-partners-with-xbox-bringing-game-pass-to-nitro-subscribers"}
     ],
     "category": "platform",
     "importance": "high",
@@ -3616,7 +3831,7 @@ const newsData = [
     "sourceUrl": "https://www.3dmgame.com/news/202605/3943736.html",
     "sourceUrls": [
         {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3943736.html"},
-        {"name": "IT之家", "url": "https://www.ithome.com/0/947/303.htm"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/947/303.htm"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -3635,7 +3850,7 @@ const newsData = [
         {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3943740.html"},
         {"name": "Kotaku", "url": "https://kotaku.com/slay-the-spire-2-is-getting-review-bombed-again-this-time-because-of-chuds-2000693961"},
         {"name": "GameRant", "url": "https://gamerant.com/slay-the-spire-2-review-bombed/"},
-        {"name": "BadLandGame", "url": "https://badlandgame.com/slay-the-spire-2-sarkeesian-review-bomb/"},
+        {"name": "BadLandGame", "url": "https://badlandgame.com/slay-the-spire-2-sarkeesian-review-bomb/"}
     ],
     "category": "game",
     "importance": "high",
@@ -3655,7 +3870,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "IT之家", "url": "https://www.ithome.com/0/947/269.htm"},
         {"name": "TechPP", "url": "https://techpp.com/roundup/playstation-6-ps6/"},
-        {"name": "GameMarkt", "url": "https://www.gamermarkt.com/blog/ps6-three-models-rumor-leaked-prices-next-gen/"},
+        {"name": "GameMarkt", "url": "https://www.gamermarkt.com/blog/ps6-three-models-rumor-leaked-prices-next-gen/"}
     ],
     "category": "hardware",
     "importance": "high",
@@ -3690,7 +3905,7 @@ const newsData = [
         {"name": "GamingBolt", "url": "https://gamingbolt.com/project-helix-will-lean-heavily-into-zstandard-to-directly-stream-assets-from-the-ssd"},
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/project-helix-ray-tracing-a-order-of-magnitude-better-than-series-x"},
         {"name": "borecraft", "url": "https://borecraft.com/findings/helix-zstd-directstorage-findings.html"},
-        {"name": "XboxDynasty", "url": "https://www.xboxdynasty.de/news/xbox-next/project-helix-setzt-auf-zstandard-und-neural-compression/"},
+        {"name": "XboxDynasty", "url": "https://www.xboxdynasty.de/news/xbox-next/project-helix-setzt-auf-zstandard-und-neural-compression/"}
     ],
     "category": "hardware",
     "importance": "high",
@@ -3710,7 +3925,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/unity-q1-revenue-rises-17-posts-347m-loss-following-ironsource-closure"},
         {"name": "Investing.com", "url": "https://cn.investing.com/news/transcripts/article-93CH-3354189"},
-        {"name": "雪球", "url": "https://xueqiu.com/1464699229/388062626"},
+        {"name": "雪球", "url": "https://xueqiu.com/1464699229/388062626"}
     ],
     "category": "market",
     "importance": "medium",
@@ -3729,7 +3944,7 @@ const newsData = [
         {"name": "Capcom IR", "url": "https://www.capcom.co.jp/ir/english/news/html/e260507.html"},
         {"name": "Gematsu", "url": "https://www.gematsu.com/2026/05/pragmata-sales-top-two-million-in-16-days"},
         {"name": "IT之家", "url": "https://www.ithome.com/0/947/260.htm"},
-        {"name": "Play.asia", "url": "https://play.asia/blog/2026/05/08/pragmata-sales-surpassed-two-million-in-16-days/"},
+        {"name": "Play.asia", "url": "https://play.asia/blog/2026/05/08/pragmata-sales-surpassed-two-million-in-16-days/"}
     ],
     "category": "game",
     "importance": "medium",
@@ -3749,7 +3964,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "Wired", "url": "https://www.wired.com/story/what-to-know-about-sony-785-million-playstation-settlement/"},
         {"name": "CNET", "url": "https://www.cnet.com/tech/gaming/sony-playstation-store-settlement-what-to-know/"},
-        {"name": "GameMarkt", "url": "https://www.gamermarkt.com/blog/sony-playstation-store-antitrust-settlement-7-85-million-digital-games/"},
+        {"name": "GameMarkt", "url": "https://www.gamermarkt.com/blog/sony-playstation-store-antitrust-settlement-7-85-million-digital-games/"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -3811,7 +4026,7 @@ const newsData = [
         {"name": "Gematsu", "url": "https://www.gematsu.com/2026/05/ps5-shipments-top-93-7-million"},
         {"name": "Push Square", "url": "https://www.pushsquare.com/news/2026/05/sony-ships-93-7-million-ps5-consoles-but-recent-sales-down-by-almost-50percent"},
         {"name": "3DMGame", "url": "https://www.3dmgame.com/news/202605/3943722.html"},
-        {"name": "GamingBolt", "url": "https://gamingbolt.com/ps5-shipments-reach-93-7-million-but-latest-quarter-down-37-percent"},
+        {"name": "GamingBolt", "url": "https://gamingbolt.com/ps5-shipments-reach-93-7-million-but-latest-quarter-down-37-percent"}
     ],
     "category": "market",
     "importance": "high",
@@ -3832,7 +4047,7 @@ const newsData = [
         {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/valve-is-pivoting-from-a-side-quest-to-a-full-blown-ambition-with-its-hardware"},
         {"name": "CBR", "url": "https://www.cbr.com/steam-machine-price-officially-sparks-backlash-2026-launch-delay/"},
         {"name": "IT之家", "url": "https://www.ithome.com/0/947/252.htm"},
-        {"name": "CNET", "url": "https://www.cnet.com/tech/gaming/valves-steam-machine-how-much-will-it-cost-when-does-it-come-out-and-more/"},
+        {"name": "CNET", "url": "https://www.cnet.com/tech/gaming/valves-steam-machine-how-much-will-it-cost-when-does-it-come-out-and-more/"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -3851,7 +4066,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "CNBC", "url": "https://www.cnbc.com/2026/05/08/nintendo-switch-2-price-hike-sales-fall-memory-crunch.html"},
         {"name": "IGN", "url": "https://www.ign.com/articles/nintendo-announces-switch-2-price-rise-in-light-of-changes-in-market-conditions-issues-apology"},
-        {"name": "Gematsu", "url": "https://www.gematsu.com/2026/05/switch-2-switch-and-nintendo-switch-online-price-increases-announced"},
+        {"name": "Gematsu", "url": "https://www.gematsu.com/2026/05/switch-2-switch-and-nintendo-switch-online-price-increases-announced"}
     ],
     "category": "hardware",
     "importance": "high",
@@ -3925,7 +4140,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202605/3943732.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202605/3943732.html"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202605/3943732.html"}
     ],
     "category": "platform",
     "importance": "high",
@@ -4015,7 +4230,7 @@ const newsData = [
         {"name": "Nintendo Inquirer", "url": "https://nintendoinquirer.com/nintendo-switch-2-global-price-hike-september-2026-details/"},
         {"name": "Variety", "url": "https://variety.com/2026/gaming/news/nintendo-switch-2-price-increase-20-million-sold-1236741441/"},
         {"name": "Tom's Hardware", "url": "https://www.tomshardware.com/video-games/nintendo/nintendo-is-raising-the-price-of-the-switch-2-by-usd50-starting-in-september"},
-        {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/nintendo-fy-sales-soar-986-to-146bn-following-launch-of-switch-2"},
+        {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/nintendo-fy-sales-soar-986-to-146bn-following-launch-of-switch-2"}
     ],
     "category": "hardware",
     "importance": "high",
@@ -4036,7 +4251,7 @@ const newsData = [
         {"name": "机核", "url": "https://www.gcores.com/articles/214220"},
         {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/nintendo-fy-sales-soar-986-to-1"},
         {"name": "IT之家", "url": "https://www.ithome.com/0/947/303.htm"},
-        {"name": "超能网", "url": "https://www.expreview.com/105718.html"},
+        {"name": "超能网", "url": "https://www.expreview.com/105718.html"}
     ],
     "category": "platform",
     "importance": "high",
@@ -4057,7 +4272,7 @@ const newsData = [
         {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3943732.html"},
         {"name": "17173", "url": "https://news.17173.com/content/05082026/181750513.shtml"},
         {"name": "ZOL", "url": "https://game.zol.com.cn/1177/11772905.html"},
-        {"name": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260508A0580P00"},
+        {"name": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260508A0580P00"}
     ],
     "category": "policy",
     "importance": "high",
@@ -4078,7 +4293,7 @@ const newsData = [
         {"name": "VGC", "url": "https://www.videogameschronicle.com/news/sony-ps6-price-release-date-undecided-hiroki-totoki/"},
         {"name": "GameSpot", "url": "https://www.gamespot.com/articles/ps6-release-date-and-price-are-still-up-in-the-air-sony-says/1100-6539857/"},
         {"name": "MSN", "url": "https://www.msn.com/en-us/news/other/sony-confirms-ps6-development-but-delays-price-and-launch-decisions/gm-GMC382F1DD"},
-        {"name": "TalkEsport", "url": "https://www.talkesport.com/news/ps6-release-date-price-not-decided/"},
+        {"name": "TalkEsport", "url": "https://www.talkesport.com/news/ps6-release-date-price-not-decided/"}
     ],
     "category": "platform",
     "importance": "high",
@@ -4138,7 +4353,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/947/021.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/947/021.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/947/021.htm"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -4169,7 +4384,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/947/269.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/947/269.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/947/269.htm"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -4231,7 +4446,7 @@ const newsData = [
         {"name": "TheGamer", "url": "https://www.thegamer.com/mixtape-highest-review-scores-2026/"},
         {"name": "OpenCritic", "url": "https://opencritic.com/game/20188/mixtape/reviews"},
         {"name": "Game8", "url": "https://game8.co/articles/reviews/mixtape-game-review"},
-        {"name": "Playfront", "url": "https://playfront.de/en/mixtape-im-review-check-ein-interaktives-album-als-adventure-highlight-raeumt-ab/"},
+        {"name": "Playfront", "url": "https://playfront.de/en/mixtape-im-review-check-ein-interaktives-album-als-adventure-highlight-raeumt-ab/"}
     ],
     "category": "game",
     "importance": "medium",
@@ -4249,7 +4464,7 @@ const newsData = [
     "source": "GamesIndustry.biz",
     "sourceUrl": "https://www.gamesindustry.biz/griffin-gaming-partners-launches-100m-indie-game-fund",
     "sourceUrls": [
-        {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/griffin-gaming-partners-launches-100m-indie-game-fund"},
+        {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/griffin-gaming-partners-launches-100m-indie-game-fund"}
     ],
     "category": "market",
     "importance": "medium",
@@ -4266,7 +4481,7 @@ const newsData = [
     "sourceUrl": "https://www.ithome.com/0/947/269.htm",
     "sourceUrls": [
         {"name": "IT之家", "url": "https://www.ithome.com/0/947/269.htm"},
-        {"name": "VGC", "url": "https://www.videogameschronicle.com/news/capcoms-pragmata-has-now-shipped-over-2-million-copies-in-16-days/"},
+        {"name": "VGC", "url": "https://www.videogameschronicle.com/news/capcoms-pragmata-has-now-shipped-over-2-million-copies-in-16-days/"}
     ],
     "category": "game",
     "importance": "medium",
@@ -4339,7 +4554,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202605/3943344.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202605/3943344.html"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202605/3943344.html"}
     ],
     "category": "game",
     "importance": "high",
@@ -4384,7 +4599,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202605/3943597.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202605/3943597.html"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202605/3943597.html"}
     ],
     "category": "policy",
     "importance": "low",
@@ -4418,7 +4633,7 @@ const newsData = [
         {"name": "Polygon", "url": "https://www.polygon.com/star-fox-2026-game-nintendo-switch-2/"},
         {"name": "Nintendo Inquirer", "url": "https://nintendoinquirer.com/star-fox-switch-2-remake-release-date-june-2026-gameplay-modes-price/"},
         {"name": "Digital Foundry", "url": "https://www.digitalfoundry.net/news/2026/05/star-fox-64-remake-for-switch-2-announced-arrives-next-month"},
-        {"name": "VGC", "url": "https://www.videogameschronicle.com/news/star-fox-price-confirms-its-the-second-nintendo-published-switch-2-title-being-sold-cheaper-digitally-in-the-us/"},
+        {"name": "VGC", "url": "https://www.videogameschronicle.com/news/star-fox-price-confirms-its-the-second-nintendo-published-switch-2-title-being-sold-cheaper-digitally-in-the-us/"}
     ],
     "category": "game",
     "importance": "high",
@@ -4437,7 +4652,7 @@ const newsData = [
     "sourceUrl": "https://www.3dmgame.com/news/202605/3943344.html",
     "sourceUrls": [
         {"name": "3DM", "url": "https://www.3dmgame.com/news/202605/3943344.html"},
-        {"name": "IT之家", "url": "https://www.ithome.com/0/947/021.htm"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/947/021.htm"}
     ],
     "category": "game",
     "importance": "medium",
@@ -4652,7 +4867,7 @@ const newsData = [
         {"name": "GameWorldObserver", "url": "https://gameworldobserver.com/2026/05/05/supercell-to-become-the-owner-of-metacore-the-developer-of-merge-mansion"},
         {"name": "InvestGame", "url": "https://investgame.net/news/supercell-completes-full-metacore-acquisition-as-studio-restructures/"},
         {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/griffin-gaming-partners-launches-100m-indie-dev-fund-led-by-hooded-horse-ceo-tim-bender"},
-        {"name": "GameLook", "url": "http://www.gamelook.com.cn/2026/05/592669/"},
+        {"name": "GameLook", "url": "http://www.gamelook.com.cn/2026/05/592669/"}
     ],
     "category": "policy",
     "importance": "high",
@@ -4701,7 +4916,7 @@ const newsData = [
         {"name": "IGN", "url": "https://www.ign.com/articles/the-blood-of-dawnwalker-has-a-release-date-and-a-new-story-trailer"},
         {"name": "EuroGamer", "url": "https://www.eurogamer.net/blood-of-dawnwalker-release-date"},
         {"name": "Gematsu", "url": "https://www.gematsu.com/2026/04/the-blood-of-dawnwalker-launches-september-3"},
-        {"name": "Bandai Namco官站", "url": "https://www.bandainamcoent.com/games/dawnwalker"},
+        {"name": "Bandai Namco官站", "url": "https://www.bandainamcoent.com/games/dawnwalker"}
     ],
     "category": "game",
     "importance": "high",
@@ -4806,7 +5021,7 @@ const newsData = [
         {"name": "Krafton IR", "url": "https://www.krafton.com/en/news/press/krafton-announces-first-quarter-2026-results/"},
         {"name": "Outlook Respawn", "url": "https://respawn.outlookindia.com/gaming/gaming-news/krafton-q1-2026-earnings-pubg-bgmi-record-revenue"},
         {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/krafton-q1-2026-revenue-1-37-trillion-won"},
-        {"name": "Chosun Biz", "url": "https://biz.chosun.com/en/en-it/2026/04/30/HAPDK4NA25DTNFLEYRPSWWQ6LA/"},
+        {"name": "Chosun Biz", "url": "https://biz.chosun.com/en/en-it/2026/04/30/HAPDK4NA25DTNFLEYRPSWWQ6LA/"}
     ],
     "category": "market",
     "importance": "high",
@@ -4827,7 +5042,7 @@ const newsData = [
         {"name": "VGC", "url": "https://www.videogameschronicle.com/news/intel-warns-cpu-prices-could-be-the-next-to-rise-due-to-ai-demand/"},
         {"name": "Tom's Hardware", "url": "https://www.tomshardware.com/pc-components/cpus/shifting-need-for-cpus-in-ai-workloads-drives-intensifying-shortages-price-hikes"},
         {"name": "Insider Gaming", "url": "https://insider-gaming.com/cpu-prices-rising-again/"},
-        {"name": "PCVenus", "url": "https://pcvenus.com/intel-cpu-price-hike-may-2026-ai-demand/"},
+        {"name": "PCVenus", "url": "https://pcvenus.com/intel-cpu-price-hike-may-2026-ai-demand/"}
     ],
     "category": "hardware",
     "importance": "high",
@@ -4848,7 +5063,7 @@ const newsData = [
         {"name": "PlayStation Blog", "url": "https://blog.playstation.com/2026/03/27/20260327-ps/"},
         {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/ps5-prices-to-rise-in-south-korea-and-southeast-asia-from-may-1-2026"},
         {"name": "VGC", "url": "https://www.videogameschronicle.com/news/south-korea-and-southeast-asia-are-the-latest-regions-to-get-a-ps5-price-increase/"},
-        {"name": "Wccftech", "url": "https://wccftech.com/ps5-ps5-pro-ps-portal-price-increase-asia-korea/"},
+        {"name": "Wccftech", "url": "https://wccftech.com/ps5-ps5-pro-ps-portal-price-increase-asia-korea/"}
     ],
     "category": "platform",
     "importance": "high",
@@ -4868,7 +5083,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "GameRant", "url": "https://gamerant.com/xbox-project-helix-price-availability-memory-shortage-ceo-comment/"},
         {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/xbox-boss-memory-crisis-could-impact-next-gen-hardware-availability-and-pricing"},
-        {"name": "IT之家", "url": "https://www.ithome.com/0/941/070.htm"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/941/070.htm"}
     ],
     "category": "platform",
     "importance": "high",
@@ -4889,7 +5104,7 @@ const newsData = [
         {"name": "TheGamer", "url": "https://www.thegamer.com/there-are-no-more-remaining-uncracked-denuvo-games/"},
         {"name": "PCMag", "url": "https://www.pcmag.com/news/rip-denuvo-all-games-protected-by-controversial-drm-now-cracked"},
         {"name": "The Verge", "url": "https://www.theverge.com/games/920161/denuvo-drm-reportedly-fully-bypassed-or-cracked"},
-        {"name": "XDA Developers", "url": "https://www.xda-developers.com/denuvo-is-finally-dead-every-pc-game-protected-by-the-drm-can-now-be-cracked-or-bypassed/"},
+        {"name": "XDA Developers", "url": "https://www.xda-developers.com/denuvo-is-finally-dead-every-pc-game-protected-by-the-drm-can-now-be-cracked-or-bypassed/"}
     ],
     "category": "market",
     "importance": "high",
@@ -4910,7 +5125,7 @@ const newsData = [
         {"name": "IGN", "url": "https://nordic.ign.com/steam-controller/106850/valve-confirms-steam-controller-price-and-release-date-promises-more-news-on-steam-machine-soon"},
         {"name": "TechRadar", "url": "https://www.techradar.com/computing/peripherals-accessories/valve-steam-controller-2026"},
         {"name": "TechPowerUp", "url": "https://www.techpowerup.com/348577/valve-confirms-ongoing-steam-deck-2-development-a-long-wait-remains"},
-        {"name": "Hypebeast", "url": "https://hypebeast.com/2026/4/valve-steam-deck-2-targets-massive-performance-leap"},
+        {"name": "Hypebeast", "url": "https://hypebeast.com/2026/4/valve-steam-deck-2-targets-massive-performance-leap"}
     ],
     "category": "platform",
     "importance": "high",
@@ -4928,7 +5143,7 @@ const newsData = [
     "source": "IT之家",
     "sourceUrl": "https://www.ithome.com/0/941/040.htm",
     "sourceUrls": [
-        {"name": "IT之家", "url": "https://www.ithome.com/0/941/040.htm"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/941/040.htm"}
     ],
     "category": "game",
     "importance": "low",
@@ -5031,7 +5246,7 @@ const newsData = [
         {"name": "Notebookcheck", "url": "https://www.notebookcheck.net/Toei-Games-Anime-giant-enters-gaming-but-not-with-Dragon-Ball-or-One-Piece.1282279.0.html"},
         {"name": "TechWiser", "url": "https://techwiser.com/toei-animation-launches-toei-games-division/"},
         {"name": "Essential Japan", "url": "https://essential-japan.com/news/anime-powerhouse-toei-announces-massive-expansion-into-gaming-industry/"},
-        {"name": "Toei Games官网", "url": "https://games.toei.co.jp/en/"},
+        {"name": "Toei Games官网", "url": "https://games.toei.co.jp/en/"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -5051,7 +5266,7 @@ const newsData = [
         {"name": "EuroGamer", "url": "https://www.eurogamer.net/take-two-ceo-on-gta-6-price-why-it-may-not-hit-100"},
         {"name": "Hypebeast", "url": "https://hypebeast.com/2026/4/take-two-ceo-strauss-zelnick-responds-grand-theft-auto-gta-vi-100-usd-price-rumors"},
         {"name": "Dexerto", "url": "https://www.dexerto.com/gta/take-two-ceo-shares-update-on-gta-6-cost-amid-100-price-tag-rumors-3358783/"},
-        {"name": "Gadgets360", "url": "https://www.gadgets360.com/games/news/gta-6-price-take-two-ceo-strauss-zelnick-rockstar-games-11424336"},
+        {"name": "Gadgets360", "url": "https://www.gadgets360.com/games/news/gta-6-price-take-two-ceo-strauss-zelnick-rockstar-games-11424336"}
     ],
     "category": "game",
     "importance": "high",
@@ -5071,7 +5286,7 @@ const newsData = [
         {"name": "IGN", "url": "https://www.ign.com/articles/sony-clarifies-ps5-drm-policy-license-check"},
         {"name": "Metro", "url": "https://metro.co.uk/2026/04/30/ps5-drm-system-isnt-online-sony-finally-explains-works-28177992/"},
         {"name": "GamesSpot", "url": "https://www.gamespot.com/articles/playstation-users-report-new-online-license-checks-for-digital-games/1100-6539651/"},
-        {"name": "CBR", "url": "https://www.cbr.com/sony-responds-playstation-online-license-checks/"},
+        {"name": "CBR", "url": "https://www.cbr.com/sony-responds-playstation-online-license-checks/"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -5091,7 +5306,7 @@ const newsData = [
         {"name": "TechCrunch", "url": "https://techcrunch.com/2026/04/29/apple-epic-games-app-store-fees-pause-changes-supreme-court/"},
         {"name": "MacRumors", "url": "https://www.macrumors.com/2026/04/29/epic-games-wins-reversal-app-store-fee-battle/"},
         {"name": "BetaNews", "url": "https://betanews.com/article/epic-wins-ninth-circuit-lifts-apple-app-store-stay/"},
-        {"name": "iClarified", "url": "https://www.iclarified.com/100711/apple-loses-bid-to-delay-app-store-changes-in-epic-games-lawsuit"},
+        {"name": "iClarified", "url": "https://www.iclarified.com/100711/apple-loses-bid-to-delay-app-store-changes-in-epic-games-lawsuit"}
     ],
     "category": "policy",
     "importance": "high",
@@ -5109,7 +5324,7 @@ const newsData = [
     "sourceUrl": "https://www.ithome.com/0/942/076.htm",
     "sourceUrls": [
         {"name": "IT之家", "url": "https://www.ithome.com/0/942/076.htm"},
-        {"name": "NewsGlobeNow", "url": "https://www.newsglobenow.com/new332738.html"},
+        {"name": "NewsGlobeNow", "url": "https://www.newsglobenow.com/new332738.html"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -5126,7 +5341,7 @@ const newsData = [
     "sourceUrl": "https://www.gamesindustry.biz/starbreeze-to-make-second-game-following-roblox-success",
     "sourceUrls": [
         {"name": "GIB", "url": "https://www.gamesindustry.biz/starbreeze-to-make-second-game-following-roblox-success"},
-        {"name": "Checkpoint Gaming", "url": "https://checkpointgaming.net/news/2026/04/starbreeze-to-develop-second-title-based-on-roblox-success"},
+        {"name": "Checkpoint Gaming", "url": "https://checkpointgaming.net/news/2026/04/starbreeze-to-develop-second-title-based-on-roblox-success"}
     ],
     "category": "game",
     "importance": "medium",
@@ -5143,7 +5358,7 @@ const newsData = [
     "sourceUrl": "https://www.3dmgame.com/news/202604/3942596.html",
     "sourceUrls": [
         {"name": "3DMGame", "url": "https://www.3dmgame.com/news/202604/3942596.html"},
-        {"name": "TheWinCentral", "url": "https://thewincentral.com/microsoft-k2-windows-11-performance-overhaul-steamos-benchmark/"},
+        {"name": "TheWinCentral", "url": "https://thewincentral.com/microsoft-k2-windows-11-performance-overhaul-steamos-benchmark/"}
     ],
     "category": "platform",
     "importance": "high",
@@ -5165,7 +5380,7 @@ const newsData = [
         {"name": "Wccftech", "url": "https://wccftech.com/xbox-revenue-down-again-hardware-revenue-down-microsoft-fy26-q3-earnings/"},
         {"name": "Windows Report", "url": "https://windowsreport.com/microsoft-q3-2026-earnings-cloud-and-azure-drive-18-growth-as-xbox-devices-decline/"},
         {"name": "TalkEsport", "url": "https://www.talkesport.com/news/xbox-revenue-down-microsoft-fy26-q3-earnings/"},
-        {"name": "3DMGame", "url": "https://www.3dmgame.com/"},
+        {"name": "3DMGame", "url": "https://www.3dmgame.com/"}
     ],
     "category": "policy",
     "importance": "high",
@@ -5186,7 +5401,7 @@ const newsData = [
         {"name": "VGC", "url": "https://www.videogameschronicle.com/news/nacons-collapse-claims-first-closure-as-rpg-studio-confirms-it-no-longer-exists/"},
         {"name": "Wccftech", "url": "https://wccftech.com/greedfall-makers-spiders-confirms-shut-down-nacon/"},
         {"name": "Gematsu", "url": "https://www.gematsu.com/2026/04/greedfall-developer-spiders-shuts-down"},
-        {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/greedfall-developer-spiders-reportedly-set-to-close"},
+        {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/greedfall-developer-spiders-reportedly-set-to-close"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -5203,7 +5418,7 @@ const newsData = [
     "source": "3DMGame",
     "sourceUrl": "https://www.3dmgame.com/news/202604/3942596.html",
     "sourceUrls": [
-        {"name": "3DMGame", "url": "https://www.3dmgame.com/news/202604/3942596.html"},
+        {"name": "3DMGame", "url": "https://www.3dmgame.com/news/202604/3942596.html"}
     ],
     "category": "platform",
     "importance": "low",
@@ -5221,7 +5436,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "IGN中国", "url": "https://www.ign.com.cn/gamegame/59722/ea-sports-ufc-6-6-yue-19-ri-fa-shou"},
         {"name": "GamingPromax", "url": "https://gamingpromax.com/ea-sports-ufc-6-release-date-june-2026/"},
-        {"name": "RealSport101", "url": "https://realsport101.com/article/ufc-6-release-date-cover-stars-and-pre-order-perks-revealed"},
+        {"name": "RealSport101", "url": "https://realsport101.com/article/ufc-6-release-date-cover-stars-and-pre-order-perks-revealed"}
     ],
     "category": "game",
     "importance": "medium",
@@ -5240,7 +5455,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "Windows Central", "url": "https://www.windowscentral.com/gaming/a-new-starcraft-game-is-rumoured-to-be-in-the-works-by-nexons-shooter-division-implying-that-the-game-could-be-a-first-or-third-person-shooter"},
         {"name": "Inverse", "url": "https://www.inverse.com/gaming/starcrafts-third-person-shooter-news-blizzard"},
-        {"name": "IT之家", "url": "https://www.ithome.com/0/941/410.htm"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/941/410.htm"}
     ],
     "category": "game",
     "importance": "medium",
@@ -5258,7 +5473,7 @@ const newsData = [
     "sourceUrl": "https://www.ithome.com/0/941/070.htm",
     "sourceUrls": [
         {"name": "IT之家", "url": "https://www.ithome.com/0/941/070.htm"},
-        {"name": "ResetEra", "url": "https://www.resetera.com/threads/microsoft-appoints-asha-sharma-as-new-xbox-ceo.1234567/"},
+        {"name": "ResetEra", "url": "https://www.resetera.com/threads/microsoft-appoints-asha-sharma-as-new-xbox-ceo.1234567/"}
     ],
     "category": "platform",
     "importance": "high",
@@ -5346,7 +5561,7 @@ const newsData = [
     "source": "IT之家",
     "sourceUrl": "https://www.ithome.com/0/944/694.htm",
     "sourceUrls": [
-        {"name": "IT之家", "url": "https://www.ithome.com/0/944/694.htm"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/944/694.htm"}
     ],
     "category": "hardware",
     "importance": "medium",
@@ -5365,7 +5580,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "Blizzard", "url": "https://diablo4.blizzard.com/en-us/lord-of-hatred/"},
         {"name": "RPG Site", "url": "https://www.rpgsite.net/news/19169-diablo-4-lord-of-hatred-expansion-dlc-editions-ultimate-deluxe-standard-preorder-price"},
-        {"name": "KeenGamer", "url": "https://www.keengamer.com/articles/guides/diablo-iv-lord-of-hatred-all-new-changes-and-updates/"},
+        {"name": "KeenGamer", "url": "https://www.keengamer.com/articles/guides/diablo-iv-lord-of-hatred-all-new-changes-and-updates/"}
     ],
     "category": "game",
     "importance": "medium",
@@ -5384,7 +5599,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "PocketGamer.biz", "url": "https://www.pocketgamer.biz/games-industry-manda-hit-15-month-high-in-q1-2026-with-over-100bn-in-deal-value/"},
         {"name": "Drake Star", "url": "https://www.drakestar.com/news/global-gaming-report-q1-2026"},
-        {"name": "Respawn", "url": "https://respawn.outlookindia.com/gaming/gaming-news/q1-2026-gaming-ma-hits-100-billion-amid-major-acquisitions"},
+        {"name": "Respawn", "url": "https://respawn.outlookindia.com/gaming/gaming-news/q1-2026-gaming-ma-hits-100-billion-amid-major-acquisitions"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -5401,7 +5616,7 @@ const newsData = [
     "source": "GamesIndustry.biz",
     "sourceUrl": "https://www.gamesindustry.biz/warner-bros-discovery-shareholders-vote-in-favor-of-111-billion-acquisition-of-paramount",
     "sourceUrls": [
-        {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/warner-bros-discovery-shareholders-vote-in-favor-of-111-billion-acquisition-of-paramount"},
+        {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/warner-bros-discovery-shareholders-vote-in-favor-of-111-billion-acquisition-of-paramount"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -5419,7 +5634,7 @@ const newsData = [
     "sourceUrl": "https://www.eurogamer.com/stop-killing-games-eu-law-could-protect-digital-purchases",
     "sourceUrls": [
         {"name": "Eurogamer", "url": "https://www.eurogamer.com/stop-killing-games-eu-law-could-protect-digital-purchases"},
-        {"name": "IT之家", "url": "https://www.ithome.com/0/940/699.htm"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/940/699.htm"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -5439,7 +5654,7 @@ const newsData = [
         {"name": "Wccftech", "url": "https://wccftech.com/steam-controller-release-date-price-no-update-on-steam-machine/"},
         {"name": "PCMag", "url": "https://www.pcmag.com/news/steam-deck-2-development-continues-valve-says-its-hard-at-work"},
         {"name": "GamesRadar", "url": "https://www.gamesradar.com/hardware/desktop-pc/steam-deck-2-still-in-the-works-valve-says-but-steam-machine-and-steam-controller-come-first-a-lot-of-what-were-doing-here-will-be-learnings-that-build-up-to-it/"},
-        {"name": "3DM", "url": "https://www.3dmgame.com/"},
+        {"name": "3DM", "url": "https://www.3dmgame.com/"}
     ],
     "category": "platform",
     "importance": "high",
@@ -5461,7 +5676,7 @@ const newsData = [
         {"name": "Wccftech", "url": "https://wccftech.com/ps5-ps5-pro-ps-portal-price-increase-asia-korea/"},
         {"name": "VGC", "url": "https://www.videogameschronicle.com/news/south-korea-and-southeast-asia-are-the-latest-regions-to-get-a-ps5-price-increase/"},
         {"name": "Kotaku", "url": "https://kotaku.com/sony-jacks-up-the-price-of-the-ps5-in-even-more-countries-amid-continued-pressures-in-the-global-economic-landscape-2000690815"},
-        {"name": "3DM", "url": "https://www.3dmgame.com/"},
+        {"name": "3DM", "url": "https://www.3dmgame.com/"}
     ],
     "category": "platform",
     "importance": "high",
@@ -5483,7 +5698,7 @@ const newsData = [
         {"name": "GameSpot", "url": "https://www.gamespot.com/articles/next-gen-xbox-impacted-by-memory-crisis-new-ceo-admits/1100-6539620/"},
         {"name": "Wccftech", "url": "https://wccftech.com/xbox-asha-sharma-memory-crisis-project-helix-price/"},
         {"name": "GamesIndustry.biz/Game Developer", "url": "https://www.gamedeveloper.com/business/xbox-boss-memory-crisis-could-impact-next-gen-hardware-availability-and-pricing"},
-        {"name": "新浪科技", "url": "https://finance.sina.com.cn/tech/digi/2026-04-28/doc-inhvzfsh8537657.shtml"},
+        {"name": "新浪科技", "url": "https://finance.sina.com.cn/tech/digi/2026-04-28/doc-inhvzfsh8537657.shtml"}
     ],
     "category": "hardware",
     "importance": "high",
@@ -5504,7 +5719,7 @@ const newsData = [
         {"name": "VGC", "url": "https://www.videogameschronicle.com/news/intel-warns-cpu-prices-could-be-the-next-to-rise-due-to-ai-demand/"},
         {"name": "TechSpot", "url": "https://www.techspot.com/"},
         {"name": "Wccftech", "url": "https://wccftech.com/amd-intel-consumer-cpu-prices-jump-10-percent-in-a-month/"},
-        {"name": "tbreak", "url": "https://tbreak.com/intel-cpu-prices-rise-ai-demand/"},
+        {"name": "tbreak", "url": "https://tbreak.com/intel-cpu-prices-rise-ai-demand/"}
     ],
     "category": "hardware",
     "importance": "high",
@@ -5525,7 +5740,7 @@ const newsData = [
         {"name": "TheGamer", "url": "https://www.thegamer.com/there-are-no-more-remaining-uncracked-denuvo-games/"},
         {"name": "VGTimes", "url": "https://vgtimes.com/gaming-news/154805-end-of-an-era-hackers-crack-every-denuvo-protected-game-for-the-first-time-ever-the-uncracked-list-is-empty.html"},
         {"name": "TechSpot", "url": "https://www.techspot.com/news/112202-denuvo-may-have-reached-end-every-protected-pc.html"},
-        {"name": "游民星空", "url": "https://www.gamersky.com/news/202604/2131232.shtml"},
+        {"name": "游民星空", "url": "https://www.gamersky.com/news/202604/2131232.shtml"}
     ],
     "category": "market",
     "importance": "high",
@@ -5545,7 +5760,7 @@ const newsData = [
         {"name": "IT之家", "url": "https://www.ithome.com/0/944/229.htm"},
         {"name": "游民星空", "url": "https://www.gamersky.com/news/202604/2132026.shtml"},
         {"name": "17173", "url": "https://news.17173.com/content/04282026/080335739.shtml"},
-        {"name": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260428A04QHQ00"},
+        {"name": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260428A04QHQ00"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -5565,7 +5780,7 @@ const newsData = [
         {"name": "Blizzard官方", "url": "https://diablo4.blizzard.com/en-us/lord-of-hatred/"},
         {"name": "IGN", "url": "https://www.ign.com/articles/diablo-4-lord-of-hatred-global-release-times-and-details-confirmed"},
         {"name": "PC Gamer", "url": "https://www.pcgamer.com/games/action/diablo-4-lord-of-hatred-release-date-launch-times/"},
-        {"name": "GameSpot", "url": "https://www.gamespot.com/articles/diablo-4-lord-of-hatred-pre-load-and-launch-times-revealed/1100-6539585/"},
+        {"name": "GameSpot", "url": "https://www.gamespot.com/articles/diablo-4-lord-of-hatred-pre-load-and-launch-times-revealed/1100-6539585/"}
     ],
     "category": "game",
     "importance": "medium",
@@ -5670,7 +5885,7 @@ const newsData = [
         {"name": "Windows Central", "url": "https://www.windowscentral.com/gaming/ffxiv-announces-new-expansion-evercold-during-fanfest-2026-keynote-and-whoa-it-already-has-a-release-date"},
         {"name": "Gematsu", "url": "https://www.gematsu.com/2026/04/final-fantasy-xiv-evercold-expansion-switch-2-version-and-evangelion-collaboration-announced"},
         {"name": "RPGamer", "url": "https://rpgamer.com/2026/04/final-fantasy-xiv-evercold-expansion-switch-2-version-announced/"},
-        {"name": "17173", "url": "https://news.17173.com/content/04252026/054634868.shtml"},
+        {"name": "17173", "url": "https://news.17173.com/content/04252026/054634868.shtml"}
     ],
     "category": "game",
     "importance": "medium",
@@ -5690,7 +5905,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "VGC", "url": "https://www.videogameschronicle.com/"},
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/"},
-        {"name": "IT之家", "url": "https://www.ithome.com/"},
+        {"name": "IT之家", "url": "https://www.ithome.com/"}
     ],
     "category": "game",
     "importance": "medium",
@@ -5712,7 +5927,7 @@ const newsData = [
         {"name": "Ars Technica", "url": "https://arstechnica.com/gaming/2026/04/microsofts-game-pass-gets-cheaper-loses-launch-day-call-of-duty-access/"},
         {"name": "Windows Central", "url": "https://www.windowscentral.com/gaming/xbox/xbox-game-pass-price-gets-a-massive-price-cut-call-of-duty-2026-will-not-be-included-details"},
         {"name": "VGC", "url": "https://www.purexbox.com/news/2026/04/xbox-game-pass-starter-edition-revealed-via-discord-nitro-leak"},
-        {"name": "Reuters", "url": "https://money.usnews.com/investing/news/articles/2026-04-21/microsoft-cuts-xbox-game-pass-price-to-remove-call-of-duty-day-one-inclusions"},
+        {"name": "Reuters", "url": "https://money.usnews.com/investing/news/articles/2026-04-21/microsoft-cuts-xbox-game-pass-price-to-remove-call-of-duty-day-one-inclusions"}
     ],
     "category": "platform",
     "importance": "high",
@@ -5773,7 +5988,7 @@ const newsData = [
     "sourceUrl": "https://www.gamesindustry.biz/",
     "sourceUrls": [
         {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/"},
-        {"name": "Research Blaze", "url": "https://researchblaze.com/"},
+        {"name": "Research Blaze", "url": "https://researchblaze.com/"}
     ],
     "category": "policy",
     "importance": "high",
@@ -5794,7 +6009,7 @@ const newsData = [
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/shuhei-yoshida-playstation-pc-strategy-keynote"},
         {"name": "PSU", "url": "https://www.psu.com/news/shuhei-yoshida-says-ps5-games-coming-to-pc-on-day-one-isnt-a-good-strategy-for-a-platform-holder-like-playstation/"},
         {"name": "NotebookCheck", "url": "https://www.notebookcheck.net/Ex-PlayStation-boss-thinks-PS5-PC-ports-will-continue-but-opposes-day-one-games.1281753.0.html"},
-        {"name": "RespawnFirst", "url": "https://respawnfirst.com/shuhei-yoshida-says-he-doesnt-see-any-proof-of-playstation-changing-its-pc-strategy/"},
+        {"name": "RespawnFirst", "url": "https://respawnfirst.com/shuhei-yoshida-says-he-doesnt-see-any-proof-of-playstation-changing-its-pc-strategy/"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -5829,7 +6044,7 @@ const newsData = [
         {"name": "虎嗅", "url": "https://www.huxiu.com/article/4853672.html"},
         {"name": "TechNode", "url": "https://cn.technode.com/post/2026-04-24/xbox-exclusivity-project-helix-microsoft-gaming-asha-sharma/"},
         {"name": "3DMGame", "url": "https://www.3dmgame.com/"},
-        {"name": "VGC", "url": "https://www.videogameschronicle.com/"},
+        {"name": "VGC", "url": "https://www.videogameschronicle.com/"}
     ],
     "category": "platform",
     "importance": "high",
@@ -5851,7 +6066,7 @@ const newsData = [
         {"name": "CNBC", "url": "https://www.cnbc.com/2026/04/23/sk-hynix-earnings-ai-memory-shortage-hbm-demand.html"},
         {"name": "TrendForce", "url": "https://www.trendforce.com/news/2026/04/23/news-sk-hynix-reports-5x-1q26-profit-surge-operating-margin-hits-72-outpacing-tsmc-and-micron/"},
         {"name": "Korea JoongAng Daily", "url": "https://koreajoongangdaily.joins.com/news/2026-04-23/business/industry/SK-hynix-posts-fivefold-profit-surge-in-Q1-beats-estimates/2575839"},
-        {"name": "3DMGame", "url": "https://www.3dmgame.com/"},
+        {"name": "3DMGame", "url": "https://www.3dmgame.com/"}
     ],
     "category": "hardware",
     "importance": "high",
@@ -5872,7 +6087,7 @@ const newsData = [
         {"name": "The Gamer", "url": "https://www.thegamer.com/clair-obscur-expedition-33-sales-2026/"},
         {"name": "Pure Xbox", "url": "https://www.purexbox.com/news/2026/04/expedition-33-celebrates-one-year-anniversary-with-small-update-on-xbox-and-beyond"},
         {"name": "Gematsu", "url": "https://www.gematsu.com/2026/04/clair-obscur-expedition-33-sales-top-eight-million"},
-        {"name": "Eurogamer", "url": "https://www.eurogamer.net/"},
+        {"name": "Eurogamer", "url": "https://www.eurogamer.net/"}
     ],
     "category": "game",
     "importance": "medium",
@@ -5890,7 +6105,7 @@ const newsData = [
     "sourceUrl": "https://www.videogameschronicle.com/",
     "sourceUrls": [
         {"name": "VGC", "url": "https://www.videogameschronicle.com/"},
-        {"name": "3DMGame", "url": "https://www.3dmgame.com/"},
+        {"name": "3DMGame", "url": "https://www.3dmgame.com/"}
     ],
     "category": "game",
     "importance": "medium",
@@ -6038,7 +6253,7 @@ const newsData = [
         {"name": "Windows Central", "url": "https://www.windowscentral.com/gaming/xbox/everything-announced-for-xbox-and-pc-at-the-id-xbox-and-ign-april-2026-showcase"},
         {"name": "Wccftech", "url": "https://wccftech.com/id-at-xbox-spring-showcase-2026-everything-announced/"},
         {"name": "VGChartz", "url": "https://www.vgchartz.com/article/467633/idxbox-spring-showcase-featured-over-20-games/"},
-        {"name": "TrueAchievements", "url": "https://www.trueachievements.com/news/id-xbox-showcase-roundup-april-2026"},
+        {"name": "TrueAchievements", "url": "https://www.trueachievements.com/news/id-xbox-showcase-roundup-april-2026"}
     ],
     "category": "platform",
     "importance": "high",
@@ -6060,7 +6275,7 @@ const newsData = [
         {"name": "GamesRadar", "url": "https://www.gamesradar.com/games/assassin-s-creed/ubisoft-confirms-assassins-creed-black-flag-resynced-reveal-showcase-as-it-clowns-on-its-own-worst-kept-secret/"},
         {"name": "Metro", "url": "https://metro.co.uk/2026/04/23/assassins-creed-black-flag-resynced-officially-revealed-28088833/"},
         {"name": "HypeBeast", "url": "https://hypebeast.com/zh/2026/4/assassins-creed-black-flag-resynced-remake-launches-2026"},
-        {"name": "17173", "url": "https://news.17173.com/content/04212026/001812662.shtml"},
+        {"name": "17173", "url": "https://news.17173.com/content/04212026/001812662.shtml"}
     ],
     "category": "game",
     "importance": "high",
@@ -6120,7 +6335,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.gamesindustry.biz/not-surprising-at-all-analysts-see-xbox-game-pass-price-cut-as-inevitable-shift-that-will-drive-subscription-growth-in-2026https://www.videogameschronicle.com/news/analysts-say-xbox-game-pass-price-drop-is-unsurprising-after-cod-failed-to-significantly-increase-subscriptions/",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.gamesindustry.biz/not-surprising-at-all-analysts-see-xbox-game-pass-price-cut-as-inevitable-shift-that-will-drive-subscription-growth-in-2026https://www.videogameschronicle.com/news/analysts-say-xbox-game-pass-price-drop-is-unsurprising-after-cod-failed-to-significantly-increase-subscriptions/"},
+        {"name": "腾讯文档策展", "url": "https://www.gamesindustry.biz/not-surprising-at-all-analysts-see-xbox-game-pass-price-cut-as-inevitable-shift-that-will-drive-subscription-growth-in-2026https://www.videogameschronicle.com/news/analysts-say-xbox-game-pass-price-drop-is-unsurprising-after-cod-failed-to-significantly-increase-subscriptions/"}
     ],
     "category": "policy",
     "importance": "low",
@@ -6137,7 +6352,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.gamesindustry.biz/gamers-sue-nintendo-over-tariff-refundshttps://www.videogameschronicle.com/news/nintendo-sued-by-players-who-say-they-should-get-any-tariff-refunds-received-by-the-us-government/https://www.3dmgame.com/news/202604/3942643.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.gamesindustry.biz/gamers-sue-nintendo-over-tariff-refundshttps://www.videogameschronicle.com/news/nintendo-sued-by-players-who-say-they-should-get-any-tariff-refunds-received-by-the-us-government/https://www.3dmgame.com/news/202604/3942643.html"},
+        {"name": "腾讯文档策展", "url": "https://www.gamesindustry.biz/gamers-sue-nintendo-over-tariff-refundshttps://www.videogameschronicle.com/news/nintendo-sued-by-players-who-say-they-should-get-any-tariff-refunds-received-by-the-us-government/https://www.3dmgame.com/news/202604/3942643.html"}
     ],
     "category": "platform",
     "importance": "low",
@@ -6196,7 +6411,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/942/076.htmhttps://www.3dmgame.com/news/202604/3942596.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/942/076.htmhttps://www.3dmgame.com/news/202604/3942596.html"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/942/076.htmhttps://www.3dmgame.com/news/202604/3942596.html"}
     ],
     "category": "game",
     "importance": "low",
@@ -6216,7 +6431,7 @@ const newsData = [
         {"name": "Xbox Wire", "url": "https://news.xbox.com/en-us/2026/04/21/xbox-game-pass-update/"},
         {"name": "GameSpot", "url": "https://www.gamespot.com/articles/game-pass-gets-price-drop-new-call-of-duty-games-no-longer-included/1100-6539523/"},
         {"name": "CNBC", "url": "https://www.cnbc.com/2026/04/21/microsoft-game-pass-ultimate-subscription-price-cut.html"},
-        {"name": "Ars Technica", "url": "https://arstechnica.com/gaming/2026/04/microsofts-game-pass-gets-cheaper-loses-launch-day-call-of-duty-access/"},
+        {"name": "Ars Technica", "url": "https://arstechnica.com/gaming/2026/04/microsofts-game-pass-gets-cheaper-loses-launch-day-call-of-duty-access/"}
     ],
     "category": "platform",
     "importance": "high",
@@ -6237,7 +6452,7 @@ const newsData = [
         {"name": "GamesIndustry.biz", "url": "https://www.gamesindustry.biz/us-hardware-sales-rose-69-in-march-2026-following-strong-switch-2-performance-us-monthly-charts"},
         {"name": "GameSpot", "url": "https://www.gamespot.com/articles/march-2026-was-a-huge-month-for-console-sales-in-the-us/1100-6539556/"},
         {"name": "Insider Gaming", "url": "https://insider-gaming.com/video-game-hardware-sales-rose-69-march-2026/"},
-        {"name": "NeoGAF", "url": "https://www.neogaf.com/threads/circana-march-2026-1-mlb-the-show-3-wwe-4-marathon-5-pokopia-switch-2-1-march-and-ytd-12-vs-switch-1-10-month-ltd-2nd-fastest-console.1696060/"},
+        {"name": "NeoGAF", "url": "https://www.neogaf.com/threads/circana-march-2026-1-mlb-the-show-3-wwe-4-marathon-5-pokopia-switch-2-1-march-and-ytd-12-vs-switch-1-10-month-ltd-2nd-fastest-console.1696060/"}
     ],
     "category": "market",
     "importance": "high",
@@ -6260,7 +6475,7 @@ const newsData = [
         {"name": "PlayStation官方", "url": "https://www.playstation.com/en-gb/support/account/age-verification-faq/"},
         {"name": "PushSquare", "url": "https://www.pushsquare.com/news/2026/04/upgraded-roblox-brings-smoother-gameplay-to-ps5-amid-increasing-scrutiny-over-child-safety"},
         {"name": "PSU", "url": "https://www.psu.com/news/sony-is-rolling-out-playstation-age-verification-in-the-uk-ireland/"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "policy",
     "importance": "medium",
@@ -6282,7 +6497,7 @@ const newsData = [
         {"name": "游民星空", "url": "https://www.gamersky.com/news/202604/2128443.shtml"},
         {"name": "网易科技", "url": "https://m.163.com/tech/article/KR43STCH0526D8LR.html"},
         {"name": "同花顺", "url": "https://stock.10jqka.com.cn/20260422/c676178069.shtml"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "policy",
     "importance": "medium",
@@ -6305,7 +6520,7 @@ const newsData = [
         {"name": "VGChartz", "url": "https://www.vgchartz.com/article/467598/switch-2-outsells-ps5-in-the-us-in-march-2026-mlb-the-show-26-debuts-in-1st/"},
         {"name": "FinalWeapon", "url": "https://finalweapon.net/2026/04/22/nintendo-switch-2-march-2026-circana-sales-best-selling-console/"},
         {"name": "Delimiter", "url": "https://delimiter.online/blog/us-hardware-sales-march-2026/"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "market",
     "importance": "high",
@@ -6327,7 +6542,7 @@ const newsData = [
         {"name": "Drake Star Report", "url": "https://www.drakestar.com/hubfs/Research/GAMING/Drake%20Star%20Global%20Gaming%20Report%20Q1%202026.pdf"},
         {"name": "Games Market Global", "url": "https://www.gamesmarket.global/drake-star-gaming-m-a-private-financings-and-more-in-q1-2026/"},
         {"name": "Outlook Respawn", "url": "https://respawn.outlookindia.com/gaming/gaming-news/q1-2026-gaming-ma-hits-100-billion-amid-major-acquisitions"},
-        {"name": "Mobile Marketing Reads", "url": "https://mobilemarketingreads.com/q1-2026-gaming-deals-hit-15-month-high-with-100b-in-value-led-by-mobile-activity/"},
+        {"name": "Mobile Marketing Reads", "url": "https://mobilemarketingreads.com/q1-2026-gaming-deals-hit-15-month-high-with-100b-in-value-led-by-mobile-activity/"}
     ],
     "category": "market",
     "importance": "high",
@@ -6350,7 +6565,7 @@ const newsData = [
         {"name": "OverCentral", "url": "https://overcentral.com/en/xbox-project-helix-next-gen-console-expected-to-retail-between-1200-and-1500/"},
         {"name": "GameNGadgets", "url": "https://www.gamengadgets.com/the-1000-console-moores-law-is-dead-breaks-down-project-helix-pricing/"},
         {"name": "3DM", "url": "https://www.3dmgame.com/news/202604/3942451.html"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "hardware",
     "importance": "high",
@@ -6372,7 +6587,7 @@ const newsData = [
         {"name": "VGC", "url": "https://www.videogameschronicle.com/news/koei-tecmo-predicts-50-higher-profit-for-fy2026-than-originally-forecast-due-to-strong-game-sales-and-investments/"},
         {"name": "Gaming Amigos", "url": "https://www.gamingamigos.com/post/koei-tecmo-revises-fy2026-earning"},
         {"name": "News USA Today", "url": "https://news-usa.today/koei-tecmo-raises-fy26-earnings-forecast-on-pokemon-pokopia-and-nioh-3-success/"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "policy",
     "importance": "medium",
@@ -6394,7 +6609,7 @@ const newsData = [
         {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/gamers-sue-nintendo-over-tariff-refunds"},
         {"name": "Nintendo Life", "url": "https://www.nintendolife.com/news/2026/04/two-u-s-gamers-are-suing-nintendo-over-tariff-refunds"},
         {"name": "Hoodline", "url": "https://hoodline.com/2026/04/seattle-gamers-say-nintendo-double-dipped-on-tariffs-in-new-lawsuit/"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "policy",
     "importance": "medium",
@@ -6416,7 +6631,7 @@ const newsData = [
         {"name": "Kotaku", "url": "https://kotaku.com/report-xbox-game-pass-could-soon-be-offer-pick-your-own-deals-and-im-nervously-optimistic-2000689684"},
         {"name": "GamingBolt", "url": "https://gamingbolt.com/game-pass-might-get-pick-your-own-plan-options-rumor"},
         {"name": "GameRant", "url": "https://gamerant.com/xbox-game-pass-flexible-plan-rumor/"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "platform",
     "importance": "medium",
@@ -6438,7 +6653,7 @@ const newsData = [
         {"name": "Notebookcheck", "url": "https://www.notebookcheck.net/Head-of-next-gen-Xbox-shuts-down-speculation-surrounding-1st-party-Xbox-Helix-console.1279487.0.html"},
         {"name": "IT之家", "url": "https://www.ithome.com/0/941/895.htm"},
         {"name": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260422A027LW00"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "hardware",
     "importance": "medium",
@@ -6462,7 +6677,7 @@ const newsData = [
         {"name": "Instant Gaming", "url": "https://news.instant-gaming.com/en/articles/19150-microsoft-may-announce-massive-layoffs-in-the-coming-weeks"},
         {"name": "NeoGAF", "url": "https://www.neogaf.com/threads/microsoft-to-announce-15-layoffs-on-5-6-gaming-division-impacted.1696049/"},
         {"name": "IT之家", "url": "https://www.ithome.com/0/941/650.htm"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "policy",
     "importance": "high",
@@ -6480,7 +6695,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/941/632.htmhttps://www.eurogamer.net/dragon-ball-and-digimon-anime-producer-toei-creates-toei-games-publisherhttps://www.gamesindustry.biz/toei-company-launches-publishing-label-toei-games",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/941/632.htmhttps://www.eurogamer.net/dragon-ball-and-digimon-anime-producer-toei-creates-toei-games-publisherhttps://www.gamesindustry.biz/toei-company-launches-publishing-label-toei-games"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/941/632.htmhttps://www.eurogamer.net/dragon-ball-and-digimon-anime-producer-toei-creates-toei-games-publisherhttps://www.gamesindustry.biz/toei-company-launches-publishing-label-toei-games"}
     ],
     "category": "policy",
     "importance": "low",
@@ -6497,7 +6712,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202604/3942451.htmlhttps://gamingbolt.com/idxbox-showcase-announced-for-april-23rd-features-mistfall-hunter-aphelion-and-more",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202604/3942451.htmlhttps://gamingbolt.com/idxbox-showcase-announced-for-april-23rd-features-mistfall-hunter-aphelion-and-more"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202604/3942451.htmlhttps://gamingbolt.com/idxbox-showcase-announced-for-april-23rd-features-mistfall-hunter-aphelion-and-more"}
     ],
     "category": "platform",
     "importance": "high",
@@ -6514,7 +6729,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/941/450.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/941/450.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/941/450.htm"}
     ],
     "category": "platform",
     "importance": "low",
@@ -6531,7 +6746,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/941/449.htmhttps://www.3dmgame.com/news/202604/3942443.htmlhttps://gamingbolt.com/playstation-will-require-age-verification-for-online-voice-chat-and-messages",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/941/449.htmhttps://www.3dmgame.com/news/202604/3942443.htmlhttps://gamingbolt.com/playstation-will-require-age-verification-for-online-voice-chat-and-messages"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/941/449.htmhttps://www.3dmgame.com/news/202604/3942443.htmlhttps://gamingbolt.com/playstation-will-require-age-verification-for-online-voice-chat-and-messages"}
     ],
     "category": "policy",
     "importance": "low",
@@ -6548,7 +6763,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/941/410.htmhttps://www.3dmgame.com/news/202604/3942436.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/941/410.htmhttps://www.3dmgame.com/news/202604/3942436.html"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/941/410.htmhttps://www.3dmgame.com/news/202604/3942436.html"}
     ],
     "category": "game",
     "importance": "low",
@@ -6571,7 +6786,7 @@ const newsData = [
         {"name": "Ars Technica", "url": "https://arstechnica.com/gaming/2026/04/microsofts-game-pass-gets-cheaper-loses-launch-day-call-of-duty-access/"},
         {"name": "CNBC", "url": "https://www.cnbc.com/2026/04/21/microsoft-game-pass-ultimate-subscription-price-cut.html"},
         {"name": "IT之家", "url": "https://www.ithome.com/0/941/632.htm"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "platform",
     "importance": "high",
@@ -6594,7 +6809,7 @@ const newsData = [
         {"name": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260421A03ZQC00"},
         {"name": "搜狐", "url": "https://www.sohu.com/a/1012436313_122004016"},
         {"name": "网易数码", "url": "https://m.163.com/dy/article/KR438SC50511CPVM.html"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "hardware",
     "importance": "medium",
@@ -6617,7 +6832,7 @@ const newsData = [
         {"name": "ZOL", "url": "https://diy.zol.com.cn/1169/11692533.html"},
         {"name": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260421A04PNE00"},
         {"name": "网易游戏", "url": "https://m.163.com/game/article/KR1TDLM40526D8LR.html"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "hardware",
     "importance": "high",
@@ -6640,7 +6855,7 @@ const newsData = [
         {"name": "Metro", "url": "https://metro.co.uk/2026/04/21/playstation-consoles-will-need-age-verification-use-voice-chat-this-year-28054735/"},
         {"name": "Sportskeeda", "url": "https://tech.sportskeeda.com/gaming-news/news-playstation-introduces-age-verification-uk-ireland-voice-chat-messaging-features"},
         {"name": "IT之家", "url": "https://www.ithome.com/0/941/449.htm"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "policy",
     "importance": "high",
@@ -6663,7 +6878,7 @@ const newsData = [
         {"name": "IT之家", "url": "https://www.ithome.com/0/941/293.htm"},
         {"name": "搜狐财经", "url": "https://www.sohu.com/a/1010907906_121814834"},
         {"name": "36氪", "url": "https://www.36kr.com/p/3770751773098498"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "market",
     "importance": "high",
@@ -6686,7 +6901,7 @@ const newsData = [
         {"name": "Gematsu", "url": "https://www.gematsu.com/2026/04/idxbox-showcase-set-for-april-23"},
         {"name": "GamingBolt", "url": "https://gamingbolt.com/idxbox-showcase-announced-for-april-23rd-features-mistfall-hunter-aphelion-and-more"},
         {"name": "3DM", "url": "https://www.3dmgame.com/news/202604/3942451.html"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "platform",
     "importance": "medium",
@@ -6746,7 +6961,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.capcom.co.jp/ir/english/news/html/e260420.htmlhttps://www.eurogamer.net/pragmata-surpasses-1m-copies-sold-in-two-dayshttps://www.3dmgame.com/news/202604/3942471.htmlhttps://www.ithome.com/0/941/006.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.capcom.co.jp/ir/english/news/html/e260420.htmlhttps://www.eurogamer.net/pragmata-surpasses-1m-copies-sold-in-two-dayshttps://www.3dmgame.com/news/202604/3942471.htmlhttps://www.ithome.com/0/941/006.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.capcom.co.jp/ir/english/news/html/e260420.htmlhttps://www.eurogamer.net/pragmata-surpasses-1m-copies-sold-in-two-dayshttps://www.3dmgame.com/news/202604/3942471.htmlhttps://www.ithome.com/0/941/006.htm"}
     ],
     "category": "game",
     "importance": "high",
@@ -6781,7 +6996,7 @@ const newsData = [
         {"name": "Nasdaq", "url": "https://www.nasdaq.com/press-release/capcoms-all-new-ip-pragmata-surpasses-one-million-units-sold-two-days-2026-04-20"},
         {"name": "RPG Site", "url": "https://www.rpgsite.net/news/20170-pragmata-sales-numbers-1-million-copies"},
         {"name": "Gamespress", "url": "https://www.gamespress.com/zh-CN/PRAGMATA-Surpasses-One-Million-Units-Sold-in-Two-Days"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "game",
     "importance": "medium",
@@ -6804,7 +7019,7 @@ const newsData = [
         {"name": "Gematsu", "url": "https://www.gematsu.com/2026/04/pragmata-sales-top-one-million-in-two-days"},
         {"name": "RPG Site", "url": "https://www.rpgsite.net/news/20170-pragmata-sales-numbers-1-million-copies"},
         {"name": "TechPowerUp", "url": "https://www.techpowerup.com/348370/pragmata-opening-week-sales-figures-impress"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "game",
     "importance": "high",
@@ -6828,7 +7043,7 @@ const newsData = [
         {"name": "The Wrap", "url": "https://www.thewrap.com/creative-content/movies/disney-layoffs-marvel-publicity-teams-2026/"},
         {"name": "ScreenRant", "url": "https://screenrant.com/disney-marvel-visual-development-team-layoffs-impact/"},
         {"name": "3DM", "url": "https://www.3dmgame.com/news/202604/3942052.html"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "policy",
     "importance": "medium",
@@ -6850,7 +7065,7 @@ const newsData = [
         {"name": "Memesita", "url": "https://www.memesita.com/crystal-dynamics-layoffs-tomb-raider-studio-hit-by-embracer-restructuring/"},
         {"name": "GamesRadar", "url": "https://www.gamesradar.com/games/tomb-raider/tomb-raider-developer-crystal-dynamics-continues-to-bleed-out-laying-off-under-30-more-employees-in-third-cut-of-the-year-the-realities-of-the-industry-continue-to-evolve/"},
         {"name": "TechReviewer", "url": "https://www.techreviewer.com/gaming-news/2025-08-27-tomb-raider-pushes-forward-amid-crystal-dynamics-staff-cuts/"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "policy",
     "importance": "medium",
@@ -6873,7 +7088,7 @@ const newsData = [
         {"name": "ComicBook", "url": "https://comicbook.com/gaming/news/new-ghost-recon-game-leaked-2026-release-rumor-ubisoft/"},
         {"name": "KhelNow", "url": "https://khelnow.com/gaming/ghost-recon-next-big-ubisoft-game-far-cry-7-facing-development-struggles-report-202604"},
         {"name": "LevelUp", "url": "https://www.levelup.com/en/news/next-ghost-recon-to-launch-in-2026-enters-alpha-testing-this-fall/"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "game",
     "importance": "medium",
@@ -6896,7 +7111,7 @@ const newsData = [
         {"name": "Insider Gaming", "url": "https://insider-gaming.com/diablo-4-could-be-coming-to-switch-2/"},
         {"name": "Newswire Games", "url": "https://newswire.games/2026/04/15/diablo-4-switch-2/"},
         {"name": "3DM", "url": "https://www.3dmgame.com/news/202604/3942009.html"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "game",
     "importance": "medium",
@@ -6918,7 +7133,7 @@ const newsData = [
         {"name": "Gematsu", "url": "https://www.gematsu.com/2026/04/windrose-early-access-sales-top-one-million-in-six-days"},
         {"name": "GamesRadar", "url": "https://www.gamesradar.com/games/open-world/windrose-sells-1-million-copies-in-less-than-a-week-and-as-the-open-world-pirate-game-passes-220-000-concurrent-steam-players-devs-say-the-support-is-absolutely-astonishing/"},
         {"name": "TweakTown", "url": "https://www.tweaktown.com/news/111127/new-indie-hit-pirate-sim-windrose-sells-1-million-copies-in-6-days-attracts-205k-players-on-steam/index.html"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "game",
     "importance": "high",
@@ -6940,7 +7155,7 @@ const newsData = [
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/dragon-ball-xenoverse-3-announced"},
         {"name": "RPG Site", "url": "https://www.rpgsite.net/news/20168-dragon-ball-xenoverse-3-2027-release-ps5-xbox-series-pc-steam"},
         {"name": "Gematsu", "url": "https://www.gematsu.com/2026/04/dragon-ball-xenoverse-3-announced-for-ps5-xbox-series-and-pc"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "game",
     "importance": "medium",
@@ -6957,7 +7172,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/940/699.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/940/699.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/940/699.htm"}
     ],
     "category": "platform",
     "importance": "low",
@@ -6994,7 +7209,7 @@ const newsData = [
         {"name": "Insider Gaming", "url": "https://insider-gaming.com/xboxs-rumored-first-party-game-pass-tier-could-cap-your-cloud-gaming-allowance/"},
         {"name": "GamingBolt", "url": "https://gamingbolt.com/new-game-pass-tier-will-offer-cloud-gaming-with-time-limits-rumor"},
         {"name": "IT之家", "url": "https://www.ithome.com/0/940/699.htm"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "platform",
     "importance": "high",
@@ -7072,7 +7287,7 @@ const newsData = [
         {"name": "Insider Gaming", "url": "https://insider-gaming.com/forza-horizon-6-has-reportedly-already-sold-500000-copies-on-steam/"},
         {"name": "GameRant", "url": "https://gamerant.com/forza-horizon-6-steam-preorder-numbers/"},
         {"name": "Expreview", "url": "https://m.expreview.com/105348.html"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "game",
     "importance": "medium",
@@ -7094,7 +7309,7 @@ const newsData = [
         {"name": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260417A08PZY00"},
         {"name": "KhelNow", "url": "https://khelnow.com/gaming/stop-killing-games-gains-major-support-from-european-parliament-202604"},
         {"name": "PEQ42", "url": "https://peq42.com/blog/stop-killing-games-massive-w-with-new-legislation-and-eu-hearings/"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "policy",
     "importance": "medium",
@@ -7116,7 +7331,7 @@ const newsData = [
         {"name": "36氪", "url": "https://www.36kr.com/p/3770751773098498"},
         {"name": "搜狐", "url": "https://www.sohu.com/a/1011769164_121814834"},
         {"name": "腾讯财经", "url": "https://news.qq.com/rain/a/20260422A05ZJ900"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "market",
     "importance": "high",
@@ -7140,7 +7355,7 @@ const newsData = [
         {"name": "Insider Gaming", "url": "https://insider-gaming.com/black-flag-resynced-release-date/"},
         {"name": "NME", "url": "https://www.nme.com/news/gaming-news/assassins-creed-black-flag-resynced-july-release-date-3941325"},
         {"name": "17173", "url": "https://news.17173.com/content/04172026/051634300.shtml"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "game",
     "importance": "medium",
@@ -7162,7 +7377,7 @@ const newsData = [
         {"name": "This Week in Video Games", "url": "https://thisweekinvideogames.com/news/analyst-claims-forza-horizon-6-has-already-pre-sold-500000-copies-on-steam-alone/"},
         {"name": "GAMES.GG", "url": "https://games.gg/news/forza-horizon-6-500k-steam-sales/"},
         {"name": "Instant Gaming", "url": "https://news.instant-gaming.com/en/articles/19081-forza-horizon-6-has-reportedly-sold-500-000-copies-on-steam"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "game",
     "importance": "medium",
@@ -7185,7 +7400,7 @@ const newsData = [
         {"name": "GamingBolt", "url": "https://gamingbolt.com/warhammer-40000-space-marine-2-crosses-12-million-players"},
         {"name": "Gamereactor", "url": "https://www.gamereactor.eu/warhammer-40000-space-marine-ii-has-surpassed-12-million-players-1707123/"},
         {"name": "Kitguru", "url": "https://www.kitguru.net/gaming/mustafa-mahmoud/warhammer-40k-space-marine-2-reaches-new-player-milestone/"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "game",
     "importance": "medium",
@@ -7208,7 +7423,7 @@ const newsData = [
         {"name": "欧盟官方", "url": "https://commission.europa.eu/european-citizens-initiative/hearing-european-parliament-stop-destroying-videogames-european-citizens-initiative-2026-04-16_en"},
         {"name": "Yahoo", "url": "https://www.yahoo.com/news/articles/stop-killing-games-delivers-absolutely-215059730.html"},
         {"name": "Khelnow", "url": "https://khelnow.com/gaming/stop-killing-games-gains-major-support-from-european-parliament-202604"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "policy",
     "importance": "high",
@@ -7229,7 +7444,7 @@ const newsData = [
         {"name": "IGN", "url": "https://www.ign.com/articles/new-metro-sequel-reportedly-set-for-reveal-at-microsoft-xbox-show-this-week-after-major-gameplay-leak-over-the-weekend"},
         {"name": "Polygon", "url": "https://www.polygon.com/metro-2039-announcement-4a-games-xbox-showcase/"},
         {"name": "GameSpot", "url": "https://www.gamespot.com/articles/metro-2039-finally-emerges-with-first-look-set-for-april-16/1100-6539358/"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "game",
     "importance": "medium",
@@ -7247,7 +7462,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202604/3942174.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202604/3942174.html"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202604/3942174.html"}
     ],
     "category": "platform",
     "importance": "low",
@@ -7264,7 +7479,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.gamesindustry.biz/xbox-cco-details-unified-approach-for-next-gen-project-helix-console",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.gamesindustry.biz/xbox-cco-details-unified-approach-for-next-gen-project-helix-console"},
+        {"name": "腾讯文档策展", "url": "https://www.gamesindustry.biz/xbox-cco-details-unified-approach-for-next-gen-project-helix-console"}
     ],
     "category": "platform",
     "importance": "low",
@@ -7288,7 +7503,7 @@ const newsData = [
         {"name": "PSU", "url": "https://www.psu.com/news/rumour-ps6-will-be-backwards-compatible-with-ps5-ps4-games/"},
         {"name": "TheGamer", "url": "https://www.thegamer.com/playstation-6-backwards-compatible-rumor/"},
         {"name": "Metro", "url": "https://metro.co.uk/2026/04/15/ps6-console-handheld-backwards-compatible-ps4-games-claims-leak-27983053/"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "hardware",
     "importance": "high",
@@ -7320,7 +7535,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202604/3942009.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202604/3942009.html"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202604/3942009.html"}
     ],
     "category": "game",
     "importance": "low",
@@ -7337,7 +7552,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202604/3942020.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202604/3942020.html"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202604/3942020.html"}
     ],
     "category": "policy",
     "importance": "low",
@@ -7354,7 +7569,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202604/3942052.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202604/3942052.html"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202604/3942052.html"}
     ],
     "category": "policy",
     "importance": "high",
@@ -7385,7 +7600,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/939/275.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/939/275.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/939/275.htm"}
     ],
     "category": "policy",
     "importance": "low",
@@ -7402,7 +7617,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.gcores.com/articles/213325",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.gcores.com/articles/213325"},
+        {"name": "腾讯文档策展", "url": "https://www.gcores.com/articles/213325"}
     ],
     "category": "game",
     "importance": "high",
@@ -7419,7 +7634,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.eurogamer.net/wuchang-fallen-feathers-development-team-disbanded",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.eurogamer.net/wuchang-fallen-feathers-development-team-disbanded"},
+        {"name": "腾讯文档策展", "url": "https://www.eurogamer.net/wuchang-fallen-feathers-development-team-disbanded"}
     ],
     "category": "policy",
     "importance": "low",
@@ -7436,7 +7651,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.gcores.com/articles/213300",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.gcores.com/articles/213300"},
+        {"name": "腾讯文档策展", "url": "https://www.gcores.com/articles/213300"}
     ],
     "category": "game",
     "importance": "low",
@@ -7472,7 +7687,7 @@ const newsData = [
         {"name": "GameSpot", "url": "https://www.gamespot.com/articles/huge-spoilers-leaked-for-007-first-light-and-other-games-in-an-unusual-way/1100-6539368/"},
         {"name": "Wccftech", "url": "https://wccftech.com/007-first-light-ending-leak-major-spoilers-indonesian-games-rating-board/"},
         {"name": "PushSquare", "url": "https://www.pushsquare.com/news/2026/04/beware-007-first-light-gameplay-reportedly-leaks-online-possibly-including-the-ending"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "game",
     "importance": "medium",
@@ -7492,7 +7707,7 @@ const newsData = [
         {"name": "Notebookcheck", "url": "https://www.notebookcheck.net/Starfield-sells-over-140-000-copies-on-PS5-in-one-week-generating-7-7-million-in-revenue.1274081.0.html"},
         {"name": "Escapist", "url": "https://www.escapistmagazine.com/news-starfield-ps5-sales-disappoint-with-140k-copies-sold-relative-to-expectations/"},
         {"name": "Tech4Gamers", "url": "https://tech4gamers.com/starfield-sales-ps5/"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "game",
     "importance": "medium",
@@ -7514,7 +7729,7 @@ const newsData = [
         {"name": "Wccftech", "url": "https://wccftech.com/aaa-dominance-eroding-pc-gaming-revenue-top-20/"},
         {"name": "TechSpot", "url": "https://www.techspot.com/news/112092-2026-pc-console-gaming-report-shows-most-revenue.html"},
         {"name": "Newzoo官方报告", "url": "https://newzoo.com/resources/trend-reports/newzoo-global-games-market-report-2025"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "market",
     "importance": "high",
@@ -7537,7 +7752,7 @@ const newsData = [
         {"name": "游民星空", "url": "https://www.gamersky.com/news/202604/2121873.shtml"},
         {"name": "搜狐", "url": "https://www.sohu.com/a/1007736205_121212001"},
         {"name": "MSN (小黑盒)", "url": "https://www.msn.cn/zh-cn/news/other/%E6%98%8E%E6%9C%AB-%E6%B8%8A%E8%99%9A%E4%B9%8B%E7%BE%BD-%E5%88%B6%E4%BD%9C%E4%BA%BA%E5%A4%8F%E6%80%9D%E6%BA%90%E8%A2%AB%E6%9B%9D%E5%BC%80%E9%99%A4-%E5%BC%80%E5%8F%91%E5%9B%A2%E9%98%9F%E5%B7%B2%E8%A7%A3%E6%95%A3/ar-AA20yLHe"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "policy",
     "importance": "high",
@@ -7558,7 +7773,7 @@ const newsData = [
         {"name": "Kotaku", "url": "https://kotaku.com/ps5-sales-double-massive-price-hike-playstation-sony-2000687808"},
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/ps5-sales-spike-people-rush-to-beat-ai-driven-price-hikes"},
         {"name": "IGN", "url": "https://www.ign.com/articles/ps5-hardware-sales-spike"},
-        {"name": "TechPowerUp", "url": "https://www.techpowerup.com/348255/sonys-price-increase-triggered-playstation-5-buying-rush-for-record-2026-sales"},
+        {"name": "TechPowerUp", "url": "https://www.techpowerup.com/348255/sonys-price-increase-triggered-playstation-5-buying-rush-for-record-2026-sales"}
     ],
     "category": "market",
     "importance": "high",
@@ -7581,7 +7796,7 @@ const newsData = [
         {"name": "Star Wars News Net", "url": "https://www.starwarsnewsnet.com/2026/04/disney-lays-off-over-1000-employees-across-all-studios-marvel-studios-art-department-especially-affected.html"},
         {"name": "Gizmodo", "url": "https://gizmodo.com/disney-layoffs-marvel-cuts-visual-development-2000746765"},
         {"name": "The Wrap", "url": "https://www.thewrap.com/creative-content/movies/disney-layoffs-marvel-publicity-teams-2026/"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "policy",
     "importance": "high",
@@ -7601,7 +7816,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "3DM", "url": "https://www.3dmgame.com/news/202604/3942020.html"},
         {"name": "Game Developer (裁员)", "url": "https://www.gamedeveloper.com/business/embracer-studio-crystal-dynamics-continues-steady-stream-of-layoffs"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "policy",
     "importance": "medium",
@@ -7735,7 +7950,7 @@ const newsData = [
         {"name": "TheGamer", "url": "https://www.thegamer.com/xbox-big-discussions-exclusive-games/"},
         {"name": "My Nintendo News", "url": "https://mynintendonews.com/2026/04/14/windows-centrals-jez-corden-says-xbox-discussing-internally-whether-to-return-to-exclusives/"},
         {"name": "XP Gained", "url": "https://xpgained.co.uk/gaming-news/very-big-discussions-exclusives-rock-xbox-internally"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "platform",
     "importance": "high",
@@ -7758,7 +7973,7 @@ const newsData = [
         {"name": "PC Gamer", "url": "https://www.pcgamer.com/games/rpg/despite-rumors-of-a-gta-6-inspired-delay-fable-studio-says-its-excited-to-welcome-you-back-to-albion-in-autumn-2026/"},
         {"name": "Polygon", "url": "https://www.polygon.com/fable-release-date-delay-gta-6-debunked/"},
         {"name": "Rock Paper Shotgun", "url": "https://www.rockpapershotgun.com/no-fables-release-window-chicken-hasnt-been-kicked-down-the-road-playground-games-say-following-report-of-potential-gta-6-related-delay"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "game",
     "importance": "medium",
@@ -7779,7 +7994,7 @@ const newsData = [
         {"name": "RPGSite", "url": "https://www.rpgsite.net/news/20118-hades-ii-april-2026-patch-notes-ps5-xbox-game-pass-download-discount"},
         {"name": "Fextralife", "url": "https://fextralife.com/hades-ii-update-adds-new-patch-game-pass-launch-and-console-release/"},
         {"name": "GameEmpress", "url": "https://gameempress.com/hades-ii-is-now-on-xbox-and-ps5-everything-you-need-to-know-about-the-game-pass-launch/"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "game",
     "importance": "medium",
@@ -7800,7 +8015,7 @@ const newsData = [
         {"name": "TechCrunch", "url": "https://techcrunch.com/2026/04/13/roblox-introduces-kids-and-select-accounts-for-age-appropriate-access-to-games-and-chat/"},
         {"name": "GameSpot", "url": "https://www.gamespot.com/articles/roblox-is-rethinking-accounts-after-lawsuits-over-failing-to-protect-children/1100-6539359/"},
         {"name": "CBS News", "url": "https://www.cbsnews.com/news/roblox-age-based-accounts-kids-safety-controls/"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "policy",
     "importance": "medium",
@@ -7821,7 +8036,7 @@ const newsData = [
         {"name": "Metacritic", "url": "https://www.metacritic.com/game/pragmata/"},
         {"name": "OpenCritic", "url": "https://opencritic.com/game/19920/pragmata/reviews"},
         {"name": "腾讯文档", "url": ""},
-        {"name": "3DM", "url": ""},
+        {"name": "3DM", "url": ""}
     ],
     "category": "game",
     "importance": "medium",
@@ -7841,7 +8056,7 @@ const newsData = [
         {"name": "TweakTown", "url": "https://www.tweaktown.com/news/111012/gta-online-makes-dollars4-4-million-per-week-on-ps5-platform-rakes-in-53-percent-of-all-gtao-weekly-bookings/index.html"},
         {"name": "Tom's Hardware", "url": "https://www.tomshardware.com/tech-industry/cyber-security/rockstar-games-confirms-it-was-hacked-by-malicious-group-shinyhunters-takes-credit-gives-until-april-14-to-pay-ransom-or-risk-leaking-confidential-data-shinyhunters"},
         {"name": "IT之家", "url": "https://www.ithome.com/0/938/762.htm"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "market",
     "importance": "high",
@@ -7865,7 +8080,7 @@ const newsData = [
         {"name": "GamesRadar", "url": "https://www.gamesradar.com/games/xbox-game-pass-has-become-too-expensive-for-players-new-ceo-reportedly-admits-in-leaked-memo/"},
         {"name": "NME", "url": "https://www.nme.com/news/gaming-news/xbox-game-pass-is-too-expensive-says-new-xbox-chief-3940199"},
         {"name": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260414A04V2U00"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "platform",
     "importance": "high",
@@ -7917,7 +8132,7 @@ const newsData = [
         {"name": "Polygon", "url": "https://www.polygon.com/metro-2039-announcement-4a-games-xbox-showcase/"},
         {"name": "TweakTown", "url": "https://www.tweaktown.com/news/111000/metro-2039-reveal-officially-set-for-april-16-new-teaser-site-launched/index.html"},
         {"name": "IT之家", "url": "https://www.ithome.com/0/938/729.htm"},
-        {"name": "腾讯文档", "url": ""},
+        {"name": "腾讯文档", "url": ""}
     ],
     "category": "game",
     "importance": "medium",
@@ -7939,7 +8154,7 @@ const newsData = [
         {"name": "Wccftech", "url": "https://wccftech.com/fable-reboot-could-be-delayed-2027-gta6/"},
         {"name": "NotebookCheck", "url": "https://www.notebookcheck.net/Microsoft-reportedly-delays-Fable-as-GTA-6-release-date-threatens-Xbox-game.1272151.0.html"},
         {"name": "TheGamer", "url": "https://www.thegamer.com/fable-xbox-new-game-delay-2026/"},
-        {"name": "腾讯文档", "url": "https://docs.qq.com/"},
+        {"name": "腾讯文档", "url": "https://docs.qq.com/"}
     ],
     "category": "game",
     "importance": "high",
@@ -8032,7 +8247,7 @@ const newsData = [
         {"name": "GameSpot", "url": "https://www.gamespot.com/articles/call-of-duty-2026-release-date-trailer-story-modern-warfare-4/1100-6538487/"},
         {"name": "游民星空", "url": "https://www.gamersky.com/news/202604/2122751.shtml"},
         {"name": "17173", "url": "https://news.17173.com/content/04132026/061558355.shtml"},
-        {"name": "腾讯文档", "url": "https://docs.qq.com/"},
+        {"name": "腾讯文档", "url": "https://docs.qq.com/"}
     ],
     "category": "platform",
     "importance": "high",
@@ -8069,7 +8284,7 @@ const newsData = [
         {"name": "TechPowerUp", "url": "https://www.techpowerup.com/348151/epic-games-plans-standalone-disney-themed-extraction-shooter-similar-to-arc-raiders"},
         {"name": "Wccftech", "url": "https://wccftech.com/epic-games-disney-game-november-2026-shooting-game-along-the-lines-of-arc-raiders/"},
         {"name": "Game Rant", "url": "https://gamerant.com/epic-games-disney-extraction-shooter/"},
-        {"name": "腾讯文档", "url": "https://docs.qq.com/"},
+        {"name": "腾讯文档", "url": "https://docs.qq.com/"}
     ],
     "category": "game",
     "importance": "high",
@@ -8092,7 +8307,7 @@ const newsData = [
         {"name": "Push Square", "url": "https://www.pushsquare.com/news/2026/03/ps6-could-be-cheaper-than-expected-despite-usd1000-concerns"},
         {"name": "VICE", "url": "https://www.vice.com/en/article/ps6-price-could-hit-700-as-new-leak-reveals-expensive-cost-to-make-console/"},
         {"name": "游戏星空", "url": "https://www.gamersky.com/news/202604/2122355.shtml"},
-        {"name": "腾讯文档", "url": "https://docs.qq.com/"},
+        {"name": "腾讯文档", "url": "https://docs.qq.com/"}
     ],
     "category": "hardware",
     "importance": "medium",
@@ -8109,7 +8324,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202604/3941722.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202604/3941722.html"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202604/3941722.html"}
     ],
     "category": "policy",
     "importance": "low",
@@ -8168,7 +8383,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202604/3941738.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202604/3941738.html"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202604/3941738.html"}
     ],
     "category": "game",
     "importance": "high",
@@ -8189,7 +8404,7 @@ const newsData = [
         {"name": "Push Square", "url": "https://www.pushsquare.com/news/2026/04/you-might-not-want-to-know-how-much-it-reportedly-cost-bungie-to-make-marathon"},
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/marathon-budget-over-200-million-dollars-likely-250-million"},
         {"name": "Game Rant", "url": "https://gamerant.com/marathon-budget-200-million/"},
-        {"name": "腾讯文档", "url": "https://docs.qq.com/"},
+        {"name": "腾讯文档", "url": "https://docs.qq.com/"}
     ],
     "category": "game",
     "importance": "high",
@@ -8210,7 +8425,7 @@ const newsData = [
         {"name": "PC Gamer", "url": "https://www.pcgamer.com/software/platforms/amazons-luna-cloud-gaming-service-is-ending-support-for-game-purchases-and-subscriptions-from-third-party-stores-and-users-will-lose-streaming-access-to-purchased-third-party-games-in-june/"},
         {"name": "VideoCardz", "url": "https://videocardz.com/newz/amazon-luna-disables-ea-ubisoft-and-gog-libraries-for-cloud-streaming"},
         {"name": "Android Authority", "url": "https://www.androidauthority.com/amazon-luna-ends-game-purchases-third-party-subscriptions-3656684/"},
-        {"name": "腾讯文档", "url": "https://docs.qq.com/"},
+        {"name": "腾讯文档", "url": "https://docs.qq.com/"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -8230,7 +8445,7 @@ const newsData = [
         {"name": "VGChartz", "url": "https://www.vgchartz.com/article/467500/pokemon-pokopia-once-again-tops-the-japanese-charts-switch-2-sells-60k/"},
         {"name": "Gematsu", "url": "https://www.gematsu.com/2026/04/famitsu-sales-3-30-26-4-5-26"},
         {"name": "My Nintendo News", "url": "https://mynintendonews.com/2026/04/09/japan-nintendo-switch-2-has-surpassed-5-million-units-sold/"},
-        {"name": "腾讯文档", "url": "https://www.3dmgame.com/news/202604/3941738.html"},
+        {"name": "腾讯文档", "url": "https://www.3dmgame.com/news/202604/3941738.html"}
     ],
     "category": "hardware",
     "importance": "high",
@@ -8251,7 +8466,7 @@ const newsData = [
         {"name": "VideoCardz", "url": "https://videocardz.com/newz/intel-shows-texture-set-neural-compression-claims-up-to-18x-smaller-texture-sets"},
         {"name": "TechPowerUp", "url": "https://www.techpowerup.com/348013/intel-texture-set-neural-compression-shrinks-textures-by-up-to-18x-with-minimal-quality-loss"},
         {"name": "3DM", "url": "https://www.3dmgame.com/news/202604/3941722.html"},
-        {"name": "腾讯文档", "url": "https://docs.qq.com/"},
+        {"name": "腾讯文档", "url": "https://docs.qq.com/"}
     ],
     "category": "hardware",
     "importance": "medium",
@@ -8269,7 +8484,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "IT之家", "url": "https://www.ithome.com/0/efootball-1-billion/"},
         {"name": "VGC", "url": "https://www.videogameschronicle.com/news/efootball-celebrates-1-billion-downloads/"},
-        {"name": "腾讯文档", "url": "https://docs.qq.com/"},
+        {"name": "腾讯文档", "url": "https://docs.qq.com/"}
     ],
     "category": "game",
     "importance": "medium",
@@ -8313,7 +8528,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.gcores.com/articles/213062",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.gcores.com/articles/213062"},
+        {"name": "腾讯文档策展", "url": "https://www.gcores.com/articles/213062"}
     ],
     "category": "game",
     "importance": "high",
@@ -8333,7 +8548,7 @@ const newsData = [
         {"name": "GameSpot", "url": "https://www.gamespot.com/articles/next-sony-state-of-play-coming-april-16-report/1100-6539288/"},
         {"name": "NotebookCheck", "url": "https://www.notebookcheck.net/Sony-PlayStation-State-of-Play-rumored-on-April-16-but-may-not-show-PS5-exclusives.1269328.0.html"},
         {"name": "GAMES.GG", "url": "https://games.gg/news/sony-state-of-play-april-16-2026/"},
-        {"name": "腾讯文档", "url": "https://docs.qq.com/"},
+        {"name": "腾讯文档", "url": "https://docs.qq.com/"}
     ],
     "category": "platform",
     "importance": "high",
@@ -8421,7 +8636,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202604/3941525.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202604/3941525.html"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202604/3941525.html"}
     ],
     "category": "platform",
     "importance": "low",
@@ -8442,7 +8657,7 @@ const newsData = [
         {"name": "GameSpot", "url": "https://www.gamespot.com/articles/xbox-achievements-are-getting-a-visual-overhaul-and-other-welcome-changes/1100-6539283/"},
         {"name": "Windows Central", "url": "https://www.windowscentral.com/gaming/xbox/xbox-is-finally-giving-achievements-a-huge-update-with-several-new-features-2026-april"},
         {"name": "TrueAchievements", "url": "https://www.trueachievements.com/news/xbox-achievement-overhaul-april-2026"},
-        {"name": "腾讯文档", "url": "https://docs.qq.com/"},
+        {"name": "腾讯文档", "url": "https://docs.qq.com/"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -8463,7 +8678,7 @@ const newsData = [
         {"name": "Eurogamer", "url": "https://www.eurogamer.net/pokemon-champions-reception-performance-woes-competitive-changes"},
         {"name": "Game Rant", "url": "https://gamerant.com/pokemon-champions-pokedex-size-fps/"},
         {"name": "GosuGamers", "url": "https://www.gosugamers.net/entertainment/news/78246-pokemon-champions-launches-to-mixed-reception-amid-complaints-over-poor-performance-and-bugs"},
-        {"name": "CGMagazine", "url": "https://www.cgmagonline.com/news/pokemon-champions-rough-launch/"},
+        {"name": "CGMagazine", "url": "https://www.cgmagonline.com/news/pokemon-champions-rough-launch/"}
     ],
     "category": "game",
     "importance": "medium",
@@ -8509,7 +8724,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202604/3941434.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202604/3941434.html"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202604/3941434.html"}
     ],
     "category": "policy",
     "importance": "low",
@@ -8540,7 +8755,7 @@ const newsData = [
     "source": "IT之家",
     "sourceUrl": "https://www.ithome.com/0/947/269.htm",
     "sourceUrls": [
-        {"name": "IT之家", "url": "https://www.ithome.com/0/947/269.htm"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/947/269.htm"}
     ],
     "category": "hardware",
     "importance": "medium",
@@ -8561,7 +8776,7 @@ const newsData = [
         {"name": "PlayStation Blog", "url": "https://blog.playstation.com/2026/03/17/starfield-is-coming-to-playstation-5-on-april-7/"},
         {"name": "VICE", "url": "https://www.vice.com/en/article/starfield-ps5-review-free-lanes-update-makes-it-bethesdas-best-rpg-in-years/"},
         {"name": "Wccftech", "url": "https://wccftech.com/starfield-freelanes-terran-armada-ps5-april-7-everything-new/"},
-        {"name": "GameSpot", "url": "https://www.gamespot.com/articles/starfield-free-lanes-and-terran-armada-global-launch-times-confirmed/1100-6539229/"},
+        {"name": "GameSpot", "url": "https://www.gamespot.com/articles/starfield-free-lanes-and-terran-armada-global-launch-times-confirmed/1100-6539229/"}
     ],
     "category": "platform",
     "importance": "high",
@@ -8583,7 +8798,7 @@ const newsData = [
         {"name": "TweakTown", "url": "https://www.tweaktown.com/news/110893/saudi-arabia-ups-stake-in-capcom-now-owns-dollars670-million-worth-of-stock-or-6-percent-of-shares/index.html"},
         {"name": "Insider Gaming", "url": "https://insider-gaming.com/saudi-investment-firm-stake-in-capcom/"},
         {"name": "Variety", "url": "https://variety.com/2026/gaming/asia/saudi-arabia-electronic-gaming-developemnt-stake-capcom-1236691117/"},
-        {"name": "Game Rant", "url": "https://gamerant.com/capcom-saudi-arabia-investment-stake-purchase/"},
+        {"name": "Game Rant", "url": "https://gamerant.com/capcom-saudi-arabia-investment-stake-purchase/"}
     ],
     "category": "policy",
     "importance": "high",
@@ -8618,7 +8833,7 @@ const newsData = [
         {"name": "GamingBolt", "url": "https://gamingbolt.com/slay-the-spire-2-reportedly-sold-5-3-million-copies-in-march-netting-108-million-in-revenue"},
         {"name": "Wccftech", "url": "https://wccftech.com/slay-the-spire-2-reportedly-best-selling-game-on-steam-march-2026-beat-crimson-desert/"},
         {"name": "Fextralife", "url": "https://fextralife.com/slay-the-spire-2-steam-sales-march-record-data/"},
-        {"name": "Games.gg", "url": "https://games.gg/news/slay-the-spire-2-beats-crimson-desert-to-top-steam-march-sales/"},
+        {"name": "Games.gg", "url": "https://games.gg/news/slay-the-spire-2-beats-crimson-desert-to-top-steam-march-sales/"}
     ],
     "category": "game",
     "importance": "high",
@@ -8694,7 +8909,7 @@ const newsData = [
         {"name": "The Verge", "url": "https://www.theverge.com/games/906752/lenovo-legion-go-2-suddenly-costs-650-more-as-ramageddon-lays-waste-to-gaming-hardware"},
         {"name": "PCMag", "url": "https://www.pcmag.com/news/lenovos-legion-go-2-is-the-latest-console-to-raise-prices"},
         {"name": "Insider Gaming", "url": "https://insider-gaming.com/lenovo-legion-go-2-prices-increase-nearly-50/"},
-        {"name": "Android Headlines", "url": "https://www.androidheadlines.com/2026/04/the-lenovo-legion-go-2-price-skyrockets-to-2000.html"},
+        {"name": "Android Headlines", "url": "https://www.androidheadlines.com/2026/04/the-lenovo-legion-go-2-price-skyrockets-to-2000.html"}
     ],
     "category": "hardware",
     "importance": "high",
@@ -8716,7 +8931,7 @@ const newsData = [
         {"name": "GamesRadar", "url": "https://www.gamesradar.com/platforms/playstation/it-took-3-years-for-playstation-to-earn-usd300-million-in-pc-sales-according-to-former-manager-which-makes-the-platform-less-than-half-as-lucrative-as-the-ps4-and-ps5/"},
         {"name": "GamingBolt", "url": "https://gamingbolt.com/playstation-studios-made-300-million-over-3-years-from-pc-releases-rumor"},
         {"name": "Insider Gaming", "url": "https://insider-gaming.com/playstation-games-on-pc-took-3-years-to-earn-300m/"},
-        {"name": "The Nerd Stash", "url": "https://thenerdstash.com/playstation-studios-drops-pc-mentions-amid-low-sales-300m-in-3-years/"},
+        {"name": "The Nerd Stash", "url": "https://thenerdstash.com/playstation-studios-drops-pc-mentions-amid-low-sales-300m-in-3-years/"}
     ],
     "category": "platform",
     "importance": "high",
@@ -8738,7 +8953,7 @@ const newsData = [
         {"name": "Windows Central", "url": "https://www.windowscentral.com/gaming/blizzard/xbox-and-blizzard-are-hiring-for-an-upcoming-aaa-open-world-shooter-is-this-the-new-starcraft-fps-weve-been-waiting-for"},
         {"name": "TweakTown", "url": "https://www.tweaktown.com/news/110830/blizzard-is-hiring-for-a-aaa-open-world-shooter-that-could-be-set-in-the-starcraft-universe/index.html"},
         {"name": "VICE", "url": "https://www.vice.com/en/article/blizzard-is-developing-a-new-open-world-shooter-fans-think-its-starcraft/"},
-        {"name": "IT之家", "url": "https://cn.technave.com/2026/04/04/"},
+        {"name": "IT之家", "url": "https://cn.technave.com/2026/04/04/"}
     ],
     "category": "game",
     "importance": "medium",
@@ -8813,7 +9028,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "GamesRadar", "url": "https://www.gamesradar.com/platforms/nintendo-switch-2/switch-2-prices-will-go-up-says-ex-nintendo-sales-lead-its-inevitable/"},
         {"name": "Nintendo Life", "url": "https://www.nintendolife.com/news/2026/04/former-nintendo-sales-lead-thinks-switch-2-price-increase-is-inevitable"},
-        {"name": "TamilTech", "url": "https://tamiltech.in/article/nintendo-switch-2-price-hike-inevitable-tariffs-ram-oil-helium-india-2026"},
+        {"name": "TamilTech", "url": "https://tamiltech.in/article/nintendo-switch-2-price-hike-inevitable-tariffs-ram-oil-helium-india-2026"}
     ],
     "category": "hardware",
     "importance": "high",
@@ -8834,7 +9049,7 @@ const newsData = [
         {"name": "PlayStation Blog", "url": "https://blog.playstation.com/2026/03/17/starfield-is-coming-to-playstation-5-on-april-7/"},
         {"name": "Bethesda", "url": "https://bethesda.net/en/game/starfield/article/5EB9OYuO9DdP4lna0jkyMz/starfield-launches-on-playstation-5-on-april-7"},
         {"name": "GameSpot", "url": "https://www.gamespot.com/articles/starfield-hits-ps5-on-april-7-extensive-new-dlc-coming-to-all-platforms/1100-6538823/"},
-        {"name": "Push Square", "url": "https://www.pushsquare.com/news/2026/03/starfield-finally-lands-on-ps5-in-april-with-new-dlc-and-huge-updates"},
+        {"name": "Push Square", "url": "https://www.pushsquare.com/news/2026/03/starfield-finally-lands-on-ps5-in-april-with-new-dlc-and-huge-updates"}
     ],
     "category": "platform",
     "importance": "high",
@@ -8925,7 +9140,7 @@ const newsData = [
         {"name": "SIE Official", "url": "https://sonyinteractive.com/en/news/blog/sony-interactive-entertainment-acquires-cinemersive-labs/"},
         {"name": "IT之家", "url": "https://www.ithome.com/0/935/737.htm"},
         {"name": "Engadget", "url": "https://www.engadget.com/gaming/playstation/sonys-gaming-division-just-bought-an-ai-startup-that-turns-photos-into-3d-volumes-220648699.html"},
-        {"name": "This Week In Video Games", "url": "https://thisweekinvideogames.com/news/sony-acquires-ai-computer-vision-company-cinemersive-labs/"},
+        {"name": "This Week In Video Games", "url": "https://thisweekinvideogames.com/news/sony-acquires-ai-computer-vision-company-cinemersive-labs/"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -8947,7 +9162,7 @@ const newsData = [
         {"name": "IGN", "url": "https://www.ign.com/articles/uspto-rejects-nintendos-controversial-summon-character-and-let-it-fight-pokemon-patent-in-non-final-ruling-as-palworld-legal-battle-rumbles-on"},
         {"name": "PC Gamer", "url": "https://www.pcgamer.com/gaming-industry/us-patent-office-revokes-nintendos-controversial-pokemon-battling-patent-in-nonfinal-decision/"},
         {"name": "Nintendo Life", "url": "https://www.nintendolife.com/news/2026/04/nintendos-summon-character-to-fight-patent-rejected-by-us-patent-office"},
-        {"name": "TechSpot", "url": "https://www.techspot.com/news/111927-uspto-rejects-nintendo-summon-character-fight-pokmon-patent.html"},
+        {"name": "TechSpot", "url": "https://www.techspot.com/news/111927-uspto-rejects-nintendo-summon-character-fight-pokmon-patent.html"}
     ],
     "category": "policy",
     "importance": "high",
@@ -9006,7 +9221,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/934/751.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/934/751.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/934/751.htm"}
     ],
     "category": "game",
     "importance": "low",
@@ -9023,7 +9238,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202604/3941026.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202604/3941026.html"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202604/3941026.html"}
     ],
     "category": "policy",
     "importance": "low",
@@ -9040,7 +9255,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202604/3941018.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202604/3941018.html"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202604/3941018.html"}
     ],
     "category": "game",
     "importance": "high",
@@ -9113,7 +9328,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202604/3941016.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202604/3941016.html"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202604/3941016.html"}
     ],
     "category": "platform",
     "importance": "low",
@@ -9133,7 +9348,7 @@ const newsData = [
         {"name": "Game Rant", "url": "https://gamerant.com/xbox-game-pass-new-games-coming-soon-list-april-2026/"},
         {"name": "VICE", "url": "https://www.vice.com/en/article/every-game-coming-to-xbox-game-pass-in-april/"},
         {"name": "Pure Xbox", "url": "https://www.purexbox.com/features/all-new-games-coming-to-xbox-in-april-2026"},
-        {"name": "Eurogamer", "url": "https://www.eurogamer.net/xbox-game-pass-games-list-this-month-price-6400"},
+        {"name": "Eurogamer", "url": "https://www.eurogamer.net/xbox-game-pass-games-list-this-month-price-6400"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -9152,7 +9367,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "腾讯文档", "url": "https://docs.qq.com/sheet/LMLdoimBsILX"},
         {"name": "PlayStation Blog", "url": "https://blog.playstation.com"},
-        {"name": "GamingBolt", "url": "https://gamingbolt.com"},
+        {"name": "GamingBolt", "url": "https://gamingbolt.com"}
     ],
     "category": "game",
     "importance": "medium",
@@ -9172,7 +9387,7 @@ const newsData = [
         {"name": "腾讯文档", "url": "https://docs.qq.com/sheet/LMLdoimBsILX"},
         {"name": "Ampere Analysis", "url": "https://cdn.www.ampereanalysis.com/media/press_releases/2026/03/31/Ampere_Analysis_Nintendo_Switch_2_Third_Party.pdf"},
         {"name": "My Nintendo News", "url": "https://mynintendonews.com/2026/04/01/analytics-firm-says-nintendo-switch-and-nintendo-switch-2-third-party-ecosystem-sales-up-76-in-2025/"},
-        {"name": "TweakTown", "url": "https://www.tweaktown.com/news/110810/switch-2-boosts-third-party-sales-by-dollars1-billion-analyst-firm-estimates-wb-games-bandai-and-ea-earned-dollars100-million-plus/index.html"},
+        {"name": "TweakTown", "url": "https://www.tweaktown.com/news/110810/switch-2-boosts-third-party-sales-by-dollars1-billion-analyst-firm-estimates-wb-games-bandai-and-ea-earned-dollars100-million-plus/index.html"}
     ],
     "category": "market",
     "importance": "high",
@@ -9194,7 +9409,7 @@ const newsData = [
         {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/stellar-blade-developer-shift-up-acquires-shinji-mikamis-new-studio"},
         {"name": "VGC", "url": "https://www.videogameschronicle.com"},
         {"name": "Push Square", "url": "https://www.pushsquare.com/news/2026/04/stellar-blade-dev-acquires-shinji-mikamis-new-studio-will-publish-its-games"},
-        {"name": "Gematsu", "url": "https://www.gematsu.com/2026/03/shift-up-acquires-shinji-mikami-led-studio-unbound"},
+        {"name": "Gematsu", "url": "https://www.gematsu.com/2026/03/shift-up-acquires-shinji-mikami-led-studio-unbound"}
     ],
     "category": "policy",
     "importance": "high",
@@ -9297,7 +9512,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://gamingbolt.com/disney-might-want-to-acquire-epic-games-rumor",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://gamingbolt.com/disney-might-want-to-acquire-epic-games-rumor"},
+        {"name": "腾讯文档策展", "url": "https://gamingbolt.com/disney-might-want-to-acquire-epic-games-rumor"}
     ],
     "category": "policy",
     "importance": "low",
@@ -9314,7 +9529,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/934/685.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/934/685.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/934/685.htm"}
     ],
     "category": "policy",
     "importance": "low",
@@ -9331,7 +9546,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202603/3940989.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3940989.html"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3940989.html"}
     ],
     "category": "policy",
     "importance": "low",
@@ -9348,7 +9563,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202603/3940988.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3940988.html"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3940988.html"}
     ],
     "category": "hardware",
     "importance": "high",
@@ -9365,7 +9580,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202603/3940932.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3940932.html"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3940932.html"}
     ],
     "category": "policy",
     "importance": "low",
@@ -9382,7 +9597,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202603/3940935.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3940935.html"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3940935.html"}
     ],
     "category": "platform",
     "importance": "high",
@@ -9399,7 +9614,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202604/3941005.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202604/3941005.html"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202604/3941005.html"}
     ],
     "category": "policy",
     "importance": "low",
@@ -9420,7 +9635,7 @@ const newsData = [
         {"name": "Wccftech", "url": "https://wccftech.com/eidos-montreal-loses-124-developers-mass-layoff-head-of-studio-leaves/"},
         {"name": "Game Developer", "url": "https://www.gamedeveloper.com/business/embracer-has-laid-off-124-employees-at-eidos-montreal"},
         {"name": "Gematsu", "url": "https://www.gematsu.com/2026/03/eidos-montreal-lays-off-124-staff-head-of-studio-david-anfossi-departs"},
-        {"name": "CTV News", "url": "https://www.ctvnews.ca/montreal/article/montreal-videogame-developer-eidos-lays-off-124-employees-head-of-studio/"},
+        {"name": "CTV News", "url": "https://www.ctvnews.ca/montreal/article/montreal-videogame-developer-eidos-lays-off-124-employees-head-of-studio/"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -9441,7 +9656,7 @@ const newsData = [
         {"name": "腾讯文档", "url": "https://docs.qq.com/sheet/LMLdoimBsILX"},
         {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/vr-platform-rec-room-to-shut-down-in-june-2026"},
         {"name": "IGN", "url": "https://www.ign.com/articles/vr-social-game-rec-room-is-shutting-down-on-its-10th-anniversary-our-costs-always-ended-up-overwhelming-the-revenue-we-brought-in"},
-        {"name": "TechCrunch", "url": "https://techcrunch.com/2026/03/31/social-gaming-platform-rec-room-once-valued-at-3-5b-is-shutting-down/"},
+        {"name": "TechCrunch", "url": "https://techcrunch.com/2026/03/31/social-gaming-platform-rec-room-once-valued-at-3-5b-is-shutting-down/"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -9487,7 +9702,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.gamesindustry.biz/krafton-shutters-free-to-play-pubg-spin-off-after-two-months-in-line-with-policy-of-using-early-access-to-quickly-validate-a-games-potential",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.gamesindustry.biz/krafton-shutters-free-to-play-pubg-spin-off-after-two-months-in-line-with-policy-of-using-early-access-to-quickly-validate-a-games-potential"},
+        {"name": "腾讯文档策展", "url": "https://www.gamesindustry.biz/krafton-shutters-free-to-play-pubg-spin-off-after-two-months-in-line-with-policy-of-using-early-access-to-quickly-validate-a-games-potential"}
     ],
     "category": "game",
     "importance": "low",
@@ -9504,7 +9719,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.eurogamer.net/microsoft-confirms-new-xbox-boss-scrapped-controversial-ad-campaign",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.eurogamer.net/microsoft-confirms-new-xbox-boss-scrapped-controversial-ad-campaign"},
+        {"name": "腾讯文档策展", "url": "https://www.eurogamer.net/microsoft-confirms-new-xbox-boss-scrapped-controversial-ad-campaign"}
     ],
     "category": "platform",
     "importance": "low",
@@ -9535,7 +9750,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://gamingbolt.com/ps5-ps5-pros-price-hikes-might-lead-to-ps6-costing-50-percent-m...",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://gamingbolt.com/ps5-ps5-pros-price-hikes-might-lead-to-ps6-costing-50-percent-m..."},
+        {"name": "腾讯文档策展", "url": "https://gamingbolt.com/ps5-ps5-pros-price-hikes-might-lead-to-ps6-costing-50-percent-m..."}
     ],
     "category": "platform",
     "importance": "low",
@@ -9552,7 +9767,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202603/3940901.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3940901.html"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3940901.html"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -9569,7 +9784,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202603/3940882.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3940882.html"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3940882.html"}
     ],
     "category": "game",
     "importance": "low",
@@ -9587,7 +9802,7 @@ const newsData = [
     "sourceUrl": "https://www.gamesindustry.biz/krafton-shutters-free-to-play-pubg-spin-off-after-two-months",
     "sourceUrls": [
         {"name": "腾讯文档", "url": "https://docs.qq.com/sheet/LMLdoimBsILX"},
-        {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/krafton-shutters-free-to-play-pubg-spin-off-after-two-months"},
+        {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/krafton-shutters-free-to-play-pubg-spin-off-after-two-months"}
     ],
     "category": "game",
     "importance": "medium",
@@ -9605,7 +9820,7 @@ const newsData = [
         {"name": "腾讯文档", "url": "https://docs.qq.com/sheet/LMLdoimBsILX"},
         {"name": "EuroGamer", "url": "https://www.eurogamer.net/microsoft-confirms-new-xbox-boss-scrapped-controversial-ad-campaign"},
         {"name": "IGN", "url": "https://www.ign.com/articles/this-is-an-xbox-announcement-looks-to-have-been-pulled-offline-after-new-gaming-boss-asha-sharma-takes-charge"},
-        {"name": "Pure Xbox", "url": "https://www.purexbox.com/news/2026/03/it-was-asha-sharmas-direction-to-scrub-this-is-an-xbox-marketing-suggests-report"},
+        {"name": "Pure Xbox", "url": "https://www.purexbox.com/news/2026/03/it-was-asha-sharmas-direction-to-scrub-this-is-an-xbox-marketing-suggests-report"}
     ],
     "category": "platform",
     "importance": "high",
@@ -9653,7 +9868,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202603/3940818.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3940818.html"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3940818.html"}
     ],
     "category": "hardware",
     "importance": "medium",
@@ -9670,7 +9885,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202603/3940805.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3940805.html"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3940805.html"}
     ],
     "category": "platform",
     "importance": "low",
@@ -9728,7 +9943,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202603/3940781.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3940781.html"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3940781.html"}
     ],
     "category": "game",
     "importance": "high",
@@ -9773,7 +9988,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/933/538.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/933/538.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/933/538.htm"}
     ],
     "category": "platform",
     "importance": "low",
@@ -9807,7 +10022,7 @@ const newsData = [
         {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/pc-will-overtake-console-revenue-by-2028-says-newzoo"},
         {"name": "Newzoo官方", "url": "https://newzoo.com/resources/trend-reports/the-pc-console-gaming-report-2026"},
         {"name": "GameLook", "url": "http://www.gamelook.com.cn/2026/03/589635/"},
-        {"name": "AWN China", "url": "https://awnchina.cn/newzoo-2026%e5%b9%b4pc%e5%8f%8a%e4%b8%bb%e6%9c%ba%e6%b8%b8%e6%88%8f%e6%8a%a5%e5%91%8a%e6%ad%a3%e5%bc%8f%e5%8f%91%e5%b8%83-%e5%b8%82%e5%9c%ba%e9%87%8d%e5%9b%9e%e5%a2%9e%e9%95%bf/"},
+        {"name": "AWN China", "url": "https://awnchina.cn/newzoo-2026%e5%b9%b4pc%e5%8f%8a%e4%b8%bb%e6%9c%ba%e6%b8%b8%e6%88%8f%e6%8a%a5%e5%91%8a%e6%ad%a3%e5%bc%8f%e5%8f%91%e5%b8%83-%e5%b8%82%e5%9c%ba%e9%87%8d%e5%9b%9e%e5%a2%9e%e9%95%bf/"}
     ],
     "category": "market",
     "importance": "high",
@@ -9825,7 +10040,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.gamesindustry.biz/german-games-market-rose-4-in-2025-to-94bn-driven-by-hardware-sales",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.gamesindustry.biz/german-games-market-rose-4-in-2025-to-94bn-driven-by-hardware-sales"},
+        {"name": "腾讯文档策展", "url": "https://www.gamesindustry.biz/german-games-market-rose-4-in-2025-to-94bn-driven-by-hardware-sales"}
     ],
     "category": "policy",
     "importance": "low",
@@ -9842,7 +10057,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/933/517.htm; https://www.ithome.com/0/933/807.htm) / VGC",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/933/517.htm; https://www.ithome.com/0/933/807.htm) / VGC"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/933/517.htm; https://www.ithome.com/0/933/807.htm) / VGC"}
     ],
     "category": "platform",
     "importance": "low",
@@ -9889,7 +10104,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/sony-announces-global-price-rises-for-ps5-consoles-from-april-2-2026"},
         {"name": "SyncToBest", "url": "https://synctobest.com/ps5-price-hike-2026-memory-chip-ai-demand-ps6-delay-2028-2029/"},
-        {"name": "GamesRadar", "url": "https://www.gamesradar.com/hardware/ps5-will-hopefully-avoid-a-price-hike-this-year-as-sony-cfo-says-we-intend-to-minimize-the-impact-of-ongoing-ram-shortage-company-positioned-to-secure-memory-through-2026/"},
+        {"name": "GamesRadar", "url": "https://www.gamesradar.com/hardware/ps5-will-hopefully-avoid-a-price-hike-this-year-as-sony-cfo-says-we-intend-to-minimize-the-impact-of-ongoing-ram-shortage-company-positioned-to-secure-memory-through-2026/"}
     ],
     "category": "hardware",
     "importance": "high",
@@ -9909,7 +10124,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/german-games-market-rose-4-in-2025-to-94bn-driven-by-hardware-sales"},
         {"name": "Game协会官方", "url": "https://www.game.de/en/german-games-market-grows-by-4-per-cent-in-2025/"},
-        {"name": "DigiTrendz", "url": "https://digitrendz.blog/newswire/technology/155637/german-gaming-market-hits-e9-4bn-in-2025-fueled-by-hardware/"},
+        {"name": "DigiTrendz", "url": "https://digitrendz.blog/newswire/technology/155637/german-gaming-market-hits-e9-4bn-in-2025-fueled-by-hardware/"}
     ],
     "category": "market",
     "importance": "medium",
@@ -9924,7 +10139,7 @@ const newsData = [
     "source": "GamerBolt",
     "sourceUrl": "https://www.gamerbolt.com/this-week-in-gaming-news-march-23rd-march-29th-2026/",
     "sourceUrls": [
-        {"name": "GamerBolt", "url": "https://www.gamerbolt.com/this-week-in-gaming-news-march-23rd-march-29th-2026/"},
+        {"name": "GamerBolt", "url": "https://www.gamerbolt.com/this-week-in-gaming-news-march-23rd-march-29th-2026/"}
     ],
     "category": "game",
     "importance": "medium",
@@ -9953,7 +10168,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.gamesindustry.biz/meta-quest-usage-reaches-all-time-high-in-2025-despite-studi...",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.gamesindustry.biz/meta-quest-usage-reaches-all-time-high-in-2025-despite-studi..."},
+        {"name": "腾讯文档策展", "url": "https://www.gamesindustry.biz/meta-quest-usage-reaches-all-time-high-in-2025-despite-studi..."}
     ],
     "category": "policy",
     "importance": "low",
@@ -10225,7 +10440,7 @@ const newsData = [
         {"name": "IGN", "url": "https://www.ign.com/articles/xbox-partner-preview-march-2026-everything-announced-updating-live"},
         {"name": "EuroGamer", "url": "https://www.eurogamer.net/xbox-partner-preview-showcase-march-2026-heres-everything-announced"},
         {"name": "GameInformer", "url": "https://www.gameinformer.com/xbox-partner-preview/2026/03/26/everything-announced-at-the-march-2026-xbox-partner-preview"},
-        {"name": "Windows Central", "url": "https://www.windowscentral.com/gaming/xbox/everything-announced-at-the-xbox-partner-preview-march-2026-sega-xbox-game-pass-xbox-play-anywhere-and-more"},
+        {"name": "Windows Central", "url": "https://www.windowscentral.com/gaming/xbox/everything-announced-at-the-xbox-partner-preview-march-2026-sega-xbox-game-pass-xbox-play-anywhere-and-more"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -10243,7 +10458,7 @@ const newsData = [
     "source": "GamesIndustry",
     "sourceUrl": "https://www.gamerbolt.com/this-week-in-gaming-news-march-23rd-march-29th-2026/",
     "sourceUrls": [
-        {"name": "GamerBolt", "url": "https://www.gamerbolt.com/this-week-in-gaming-news-march-23rd-march-29th-2026/"},
+        {"name": "GamerBolt", "url": "https://www.gamerbolt.com/this-week-in-gaming-news-march-23rd-march-29th-2026/"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -10259,7 +10474,7 @@ const newsData = [
     "sourceUrl": "https://news.xbox.com/en-us/",
     "sourceUrls": [
         {"name": "腾讯文档MCP", "url": "https://docs.qq.com/sheet/LMLdoimBsILX"},
-        {"name": "Xbox Wire", "url": "https://news.xbox.com/en-us/"},
+        {"name": "Xbox Wire", "url": "https://news.xbox.com/en-us/"}
     ],
     "category": "game",
     "importance": "medium",
@@ -10275,7 +10490,7 @@ const newsData = [
     "sourceUrl": "https://www.videogameschronicle.com/",
     "sourceUrls": [
         {"name": "腾讯文档MCP", "url": "https://docs.qq.com/sheet/LMLdoimBsILX"},
-        {"name": "VGC", "url": "https://www.videogameschronicle.com/"},
+        {"name": "VGC", "url": "https://www.videogameschronicle.com/"}
     ],
     "category": "market",
     "importance": "high",
@@ -10292,7 +10507,7 @@ const newsData = [
     "sourceUrl": "https://www.videogameschronicle.com/",
     "sourceUrls": [
         {"name": "腾讯文档MCP", "url": "https://docs.qq.com/sheet/LMLdoimBsILX"},
-        {"name": "VGC", "url": "https://www.videogameschronicle.com/"},
+        {"name": "VGC", "url": "https://www.videogameschronicle.com/"}
     ],
     "category": "market",
     "importance": "high",
@@ -10309,7 +10524,7 @@ const newsData = [
     "sourceUrl": "https://www.ign.com/",
     "sourceUrls": [
         {"name": "腾讯文档MCP", "url": "https://docs.qq.com/sheet/LMLdoimBsILX"},
-        {"name": "IGN", "url": "https://www.ign.com/"},
+        {"name": "IGN", "url": "https://www.ign.com/"}
     ],
     "category": "game",
     "importance": "medium",
@@ -10325,7 +10540,7 @@ const newsData = [
     "sourceUrl": "https://www.ign.com/",
     "sourceUrls": [
         {"name": "腾讯文档MCP", "url": "https://docs.qq.com/sheet/LMLdoimBsILX"},
-        {"name": "IGN", "url": "https://www.ign.com/"},
+        {"name": "IGN", "url": "https://www.ign.com/"}
     ],
     "category": "policy",
     "importance": "high",
@@ -10343,7 +10558,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "3DTested", "url": "https://3dtested.com/"},
         {"name": "VGC", "url": "https://www.videogameschronicle.com/"},
-        {"name": "腾讯文档MCP", "url": "https://docs.qq.com/sheet/LMLdoimBsILX"},
+        {"name": "腾讯文档MCP", "url": "https://docs.qq.com/sheet/LMLdoimBsILX"}
     ],
     "category": "platform",
     "importance": "high",
@@ -10363,7 +10578,7 @@ const newsData = [
         {"name": "VGChartz", "url": "https://www.vgchartz.com/article/467374/crimson-desert-debuts-in-1st-on-the-steam-charts/"},
         {"name": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260326A0003P00"},
         {"name": "Korea JoongAng Daily", "url": "https://koreajoongangdaily.joins.com/news/2026-03-22/business/industry/Pearl-Abysss-Crimson-Desert-sells-2-million-copies-on-day-of-release/2550732"},
-        {"name": "SteamDB", "url": "https://steamdb.info/app/2020070/charts/"},
+        {"name": "SteamDB", "url": "https://steamdb.info/app/2020070/charts/"}
     ],
     "category": "game",
     "importance": "high",
@@ -10423,7 +10638,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "ThisWeekInVideoGames", "url": "https://thisweekinvideogames.com/news/marathon-has-sold-1-2-million-copies-per-alinea-estimates/"},
         {"name": "Push Square", "url": "https://www.pushsquare.com/news/2026/03/were-in-it-for-the-long-haul-bungie-rejects-rumours-it-could-move-on-from-marathon-after-unremarkable-ps5-sales"},
-        {"name": "GamerBolt", "url": "https://www.gamerbolt.com/this-week-in-gaming-news-march-23rd-march-29th-2026/"},
+        {"name": "GamerBolt", "url": "https://www.gamerbolt.com/this-week-in-gaming-news-march-23rd-march-29th-2026/"}
     ],
     "category": "game",
     "importance": "high",
@@ -10442,7 +10657,7 @@ const newsData = [
     "sourceUrl": "https://thisweekinvideogames.com/news/7-days-to-die-developer-acquired-by-behaviour-interactive/",
     "sourceUrls": [
         {"name": "ThisWeekInVideoGames", "url": "https://thisweekinvideogames.com/news/7-days-to-die-developer-acquired-by-behaviour-interactive/"},
-        {"name": "GamerBolt", "url": "https://www.gamerbolt.com/this-week-in-gaming-news-march-23rd-march-29th-2026/"},
+        {"name": "GamerBolt", "url": "https://www.gamerbolt.com/this-week-in-gaming-news-march-23rd-march-29th-2026/"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -10460,7 +10675,7 @@ const newsData = [
         {"name": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260325A06PCW00"},
         {"name": "国家新闻出版署", "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/"},
         {"name": "17173", "url": "https://news.17173.com/content/03252026/200237227.shtml"},
-        {"name": "TapTap", "url": "https://www.taptap.cn/hashtag/2026%E5%B9%B43%E6%9C%88%E7%89%88%E5%8F%B7%E5%8F%91%E6%94%BE"},
+        {"name": "TapTap", "url": "https://www.taptap.cn/hashtag/2026%E5%B9%B43%E6%9C%88%E7%89%88%E5%8F%B7%E5%8F%91%E6%94%BE"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -10476,7 +10691,7 @@ const newsData = [
     "sourceUrl": "https://godisageek.com/2026/03/nintendo-cuts-switch-2-production-holiday-sales/",
     "sourceUrls": [
         {"name": "GodisaGeek", "url": "https://godisageek.com/2026/03/nintendo-cuts-switch-2-production-holiday-sales/"},
-        {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/archive/2026/03"},
+        {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/archive/2026/03"}
     ],
     "category": "hardware",
     "importance": "high",
@@ -10494,7 +10709,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.gamedeveloper.com/business/report-nintendo-slashes-switch-2-production-by-a-third-due-to-weak-u-s-sales",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.gamedeveloper.com/business/report-nintendo-slashes-switch-2-production-by-a-third-due-to-weak-u-s-sales"},
+        {"name": "腾讯文档策展", "url": "https://www.gamedeveloper.com/business/report-nintendo-slashes-switch-2-production-by-a-third-due-to-weak-u-s-sales"}
     ],
     "category": "platform",
     "importance": "low",
@@ -10511,7 +10726,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/932/332.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/932/332.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/932/332.htm"}
     ],
     "category": "platform",
     "importance": "high",
@@ -10528,7 +10743,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/932/292.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/932/292.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/932/292.htm"}
     ],
     "category": "platform",
     "importance": "high",
@@ -10545,7 +10760,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.gamesindustry.biz/tiga-uk-games-dev-sector-faces-most-severe-downturn-on-record",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.gamesindustry.biz/tiga-uk-games-dev-sector-faces-most-severe-downturn-on-record"},
+        {"name": "腾讯文档策展", "url": "https://www.gamesindustry.biz/tiga-uk-games-dev-sector-faces-most-severe-downturn-on-record"}
     ],
     "category": "policy",
     "importance": "low",
@@ -10562,7 +10777,7 @@ const newsData = [
     "source": "GameStop IR",
     "sourceUrl": "https://investor.gamestop.com/news-releases/news-details/2026/GameStop-Reports-Fourth-Quarter-and-Fiscal-Year-2025-Results/default.aspx",
     "sourceUrls": [
-        {"name": "GameStop IR", "url": "https://investor.gamestop.com/news-releases/news-details/2026/GameStop-Reports-Fourth-Quarter-and-Fiscal-Year-2025-Results/default.aspx"},
+        {"name": "GameStop IR", "url": "https://investor.gamestop.com/news-releases/news-details/2026/GameStop-Reports-Fourth-Quarter-and-Fiscal-Year-2025-Results/default.aspx"}
     ],
     "category": "market",
     "importance": "medium",
@@ -10581,7 +10796,7 @@ const newsData = [
         {"name": "TechCrunch", "url": "https://techcrunch.com/2026/03/24/epic-games-cuts-1000-jobs-says-fortnite-engagement-is-down/"},
         {"name": "AP News", "url": "https://apnews.com/article/epic-games-layoffs-fortnite-video-games-6a15e7c3f7916ecba10150a767295549"},
         {"name": "Variety", "url": "https://variety.com/2026/gaming/news/epic-games-layoff-1000-fortnite-downturn-500-million-1236697837/"},
-        {"name": "Fox Business", "url": "https://www.foxbusiness.com/economy/epic-games-cuts-1000-jobs-fortnite-magic-fades-extreme-market-conditions"},
+        {"name": "Fox Business", "url": "https://www.foxbusiness.com/economy/epic-games-cuts-1000-jobs-fortnite-magic-fades-extreme-market-conditions"}
     ],
     "category": "policy",
     "importance": "high",
@@ -10599,7 +10814,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.gamesindustry.biz/resident-evil-requiem-tops-us-february-charts-launch-sales-60-higher-than-village-us-monthly-charts",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.gamesindustry.biz/resident-evil-requiem-tops-us-february-charts-launch-sales-60-higher-than-village-us-monthly-charts"},
+        {"name": "腾讯文档策展", "url": "https://www.gamesindustry.biz/resident-evil-requiem-tops-us-february-charts-launch-sales-60-higher-than-village-us-monthly-charts"}
     ],
     "category": "policy",
     "importance": "low",
@@ -10616,7 +10831,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://gamingbolt.com/xbox-partner-preview-announced-for-march-26th-includes-in-depth-look-at-stranger-than-heaven",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://gamingbolt.com/xbox-partner-preview-announced-for-march-26th-includes-in-depth-look-at-stranger-than-heaven"},
+        {"name": "腾讯文档策展", "url": "https://gamingbolt.com/xbox-partner-preview-announced-for-march-26th-includes-in-depth-look-at-stranger-than-heaven"}
     ],
     "category": "policy",
     "importance": "low",
@@ -10633,7 +10848,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/931/860.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/931/860.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/931/860.htm"}
     ],
     "category": "policy",
     "importance": "low",
@@ -10650,7 +10865,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/931/648.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/931/648.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/931/648.htm"}
     ],
     "category": "policy",
     "importance": "low",
@@ -10681,7 +10896,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.eurogamer.net/call-of-duty-modern-warfare-2019-gets-deep-discount-on-steam-and-overtakes-more-recent-cod-entries",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.eurogamer.net/call-of-duty-modern-warfare-2019-gets-deep-discount-on-steam-and-overtakes-more-recent-cod-entries"},
+        {"name": "腾讯文档策展", "url": "https://www.eurogamer.net/call-of-duty-modern-warfare-2019-gets-deep-discount-on-steam-and-overtakes-more-recent-cod-entries"}
     ],
     "category": "game",
     "importance": "low",
@@ -10698,7 +10913,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.videogameschronicle.com/news/nintendo-switch-is-more-popular-among-japanese-teens-than-disney-pokemon-and-nintendo-itself-survey-finds/",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.videogameschronicle.com/news/nintendo-switch-is-more-popular-among-japanese-teens-than-disney-pokemon-and-nintendo-itself-survey-finds/"},
+        {"name": "腾讯文档策展", "url": "https://www.videogameschronicle.com/news/nintendo-switch-is-more-popular-among-japanese-teens-than-disney-pokemon-and-nintendo-itself-survey-finds/"}
     ],
     "category": "policy",
     "importance": "low",
@@ -10718,7 +10933,7 @@ const newsData = [
         {"name": "GameDeveloper", "url": "http://www.gamedeveloper.com/production/whoops-pearl-abyss-forgot-to-mention-it-used-generative-ai-to-create-crimson-desert"},
         {"name": "Yahoo Tech", "url": "https://tech.yahoo.com/gaming/articles/pearl-abyss-apologizes-unintentional-ai-161916137.html"},
         {"name": "Shacknews", "url": "https://www.shacknews.com/article/148425/crimson-desert-generative-ai-content"},
-        {"name": "GamerBolt", "url": "https://www.gamerbolt.com/this-week-in-gaming-news-march-23rd-march-29th-2026/"},
+        {"name": "GamerBolt", "url": "https://www.gamerbolt.com/this-week-in-gaming-news-march-23rd-march-29th-2026/"}
     ],
     "category": "game",
     "importance": "medium",
@@ -10737,7 +10952,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "Parsers.vc", "url": "https://parsers.vc/news/260323-china-clears-major-tech-takeover--cqxa/"},
         {"name": "东方财富", "url": "https://caifuhao.eastmoney.com/news/20260319233617433250980"},
-        {"name": "Asetek IR", "url": "https://ir.asetek.com/news/stock-exchange-releases/default.aspx"},
+        {"name": "Asetek IR", "url": "https://ir.asetek.com/news/stock-exchange-releases/default.aspx"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -10754,7 +10969,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "TechNode", "url": "https://technode.com/"},
         {"name": "Engadget", "url": "https://www.engadget.com/"},
-        {"name": "CNTechPost", "url": "https://cntechpost.com/"},
+        {"name": "CNTechPost", "url": "https://cntechpost.com/"}
     ],
     "category": "policy",
     "importance": "high",
@@ -10800,7 +11015,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "TechSpot", "url": "https://www.techspot.com/"},
         {"name": "PC Gamer", "url": "https://www.pcgamer.com/"},
-        {"name": "Hypebeast", "url": "https://hypebeast.com/"},
+        {"name": "Hypebeast", "url": "https://hypebeast.com/"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -10816,7 +11031,7 @@ const newsData = [
     "sourceUrl": "https://www.videogameschronicle.com/",
     "sourceUrls": [
         {"name": "Tom's Hardware", "url": "https://www.tomshardware.com/"},
-        {"name": "IEEE Spectrum", "url": "https://spectrum.ieee.org/"},
+        {"name": "IEEE Spectrum", "url": "https://spectrum.ieee.org/"}
     ],
     "category": "hardware",
     "importance": "high",
@@ -10834,7 +11049,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "IT之家", "url": "https://www.ithome.com/"},
         {"name": "NintendoNews", "url": "https://mynintendonews.com/"},
-        {"name": "Nintendo", "url": "https://www.nintendo.com/"},
+        {"name": "Nintendo", "url": "https://www.nintendo.com/"}
     ],
     "category": "game",
     "importance": "high",
@@ -10906,7 +11121,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/931/363.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/931/363.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/931/363.htm"}
     ],
     "category": "policy",
     "importance": "low",
@@ -10953,7 +11168,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "GamerUrge", "url": "https://gamerurge.com/psn-down-playstation-network-outage-march-2026"},
         {"name": "TechRadar", "url": "https://www.techradar.com/news/live/psn-down-21-march-2026"},
-        {"name": "Planet News", "url": "https://planet.news/article/playstation-network-global-outage-march-2026"},
+        {"name": "Planet News", "url": "https://planet.news/article/playstation-network-global-outage-march-2026"}
     ],
     "category": "platform",
     "importance": "high",
@@ -10971,7 +11186,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "IT之家", "url": "https://www.ithome.com/"},
         {"name": "PushSquare", "url": "https://www.pushsquare.com/"},
-        {"name": "NotebookCheck", "url": "https://www.notebookcheck.net/"},
+        {"name": "NotebookCheck", "url": "https://www.notebookcheck.net/"}
     ],
     "category": "platform",
     "importance": "high",
@@ -10987,7 +11202,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/930/931.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/930/931.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/930/931.htm"}
     ],
     "category": "policy",
     "importance": "low",
@@ -11004,7 +11219,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/931/029.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/931/029.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/931/029.htm"}
     ],
     "category": "policy",
     "importance": "low",
@@ -11035,7 +11250,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://gamingbolt.com/death-stranding-2-on-the-beach-pc-peaks-at-nearly-56000-concurrent-steam-players",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://gamingbolt.com/death-stranding-2-on-the-beach-pc-peaks-at-nearly-56000-concurrent-steam-players"},
+        {"name": "腾讯文档策展", "url": "https://gamingbolt.com/death-stranding-2-on-the-beach-pc-peaks-at-nearly-56000-concurrent-steam-players"}
     ],
     "category": "game",
     "importance": "medium",
@@ -11052,7 +11267,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202603/3940135.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3940135.html"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3940135.html"}
     ],
     "category": "game",
     "importance": "low",
@@ -11069,7 +11284,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/930/812.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/930/812.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/930/812.htm"}
     ],
     "category": "policy",
     "importance": "low",
@@ -11088,7 +11303,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "VGChartz", "url": "https://www.vgchartz.com/article/467329/ps5-outsells-switch-2-in-the-us-in-february-2026-resident-evil-requiem-debuts-in-1st/"},
         {"name": "Push Square", "url": "https://www.pushsquare.com/news/2026/03/feb-2026-usa-sales-ps5-outsells-nintendos-new-switch-2-for-a-second-consecutive-month"},
-        {"name": "Metro", "url": "https://metro.co.uk/2026/03/20/ps5-outsells-switch-2-second-month-resident-evil-requiem-tops-charts-27559086/"},
+        {"name": "Metro", "url": "https://metro.co.uk/2026/03/20/ps5-outsells-switch-2-second-month-resident-evil-requiem-tops-charts-27559086/"}
     ],
     "category": "market",
     "importance": "high",
@@ -11108,7 +11323,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "游民星空", "url": "https://www.gamersky.com/"},
         {"name": "Insider Gaming", "url": "https://insider-gaming.com/"},
-        {"name": "Rock Paper Shotgun", "url": "https://www.rockpapershotgun.com/"},
+        {"name": "Rock Paper Shotgun", "url": "https://www.rockpapershotgun.com/"}
     ],
     "category": "policy",
     "importance": "high",
@@ -11137,7 +11352,7 @@ const newsData = [
     "sourceUrl": "https://www.videogameschronicle.com/",
     "sourceUrls": [
         {"name": "VGC", "url": "https://www.videogameschronicle.com/"},
-        {"name": "PlayStation Universe", "url": "https://www.psu.com/"},
+        {"name": "PlayStation Universe", "url": "https://www.psu.com/"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -11154,7 +11369,7 @@ const newsData = [
     "sourceUrl": "https://www.videogameschronicle.com/news/resident-evil-requiem-pragmata-and-more-to-appear-in-capcom-showcase-next-week/",
     "sourceUrls": [
         {"name": "VGC", "url": "https://www.videogameschronicle.com/news/resident-evil-requiem-pragmata-and-more-to-appear-in-capcom-showcase-next-week/"},
-        {"name": "CapcomAsia微博", "url": "https://weibo.com/capcomasia"},
+        {"name": "CapcomAsia微博", "url": "https://weibo.com/capcomasia"}
     ],
     "category": "game",
     "importance": "medium",
@@ -11169,7 +11384,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.eurogamer.net/esrb-pegi-age-rating-changes",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.eurogamer.net/esrb-pegi-age-rating-changes"},
+        {"name": "腾讯文档策展", "url": "https://www.eurogamer.net/esrb-pegi-age-rating-changes"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -11186,7 +11401,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.vide...",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.vide..."},
+        {"name": "腾讯文档策展", "url": "https://www.vide..."}
     ],
     "category": "game",
     "importance": "high",
@@ -11203,7 +11418,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.videogameschronicle.com/news/ubisoft-ends-game-development-at-tom-clancy-studio-red-storm-resulting-in-105-job-losses/ https://www.eurogamer.net/ubisoft-reportedly-shrinks-tom-clancy-studio-red-storm-entertainment-laying-off-105-staff https://gamingbolt.com/red-storm-entertainment-suffers-105-layoffs-turned-into-support-studio-rumor",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.videogameschronicle.com/news/ubisoft-ends-game-development-at-tom-clancy-studio-red-storm-resulting-in-105-job-losses/ https://www.eurogamer.net/ubisoft-reportedly-shrinks-tom-clancy-studio-red-storm-entertainment-laying-off-105-staff https://gamingbolt.com/red-storm-entertainment-suffers-105-layoffs-turned-into-support-studio-rumor"},
+        {"name": "腾讯文档策展", "url": "https://www.videogameschronicle.com/news/ubisoft-ends-game-development-at-tom-clancy-studio-red-storm-resulting-in-105-job-losses/ https://www.eurogamer.net/ubisoft-reportedly-shrinks-tom-clancy-studio-red-storm-entertainment-laying-off-105-staff https://gamingbolt.com/red-storm-entertainment-suffers-105-layoffs-turned-into-support-studio-rumor"}
     ],
     "category": "policy",
     "importance": "high",
@@ -11220,7 +11435,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/930/842.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/930/842.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/930/842.htm"}
     ],
     "category": "game",
     "importance": "medium",
@@ -11237,7 +11452,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202603/3940046.html https://www.ithome.com/0/930/451.htm https://www.eurogamer.net/crimson-desert-review https://gamingbolt.com/crimson-desert-pc-review-virtues-last-reward https://gamingbolt.com/crimson-desert-pc-graphics-analysis-an-ambitious-open-world-tech-showcase",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3940046.html https://www.ithome.com/0/930/451.htm https://www.eurogamer.net/crimson-desert-review https://gamingbolt.com/crimson-desert-pc-review-virtues-last-reward https://gamingbolt.com/crimson-desert-pc-graphics-analysis-an-ambitious-open-world-tech-showcase"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3940046.html https://www.ithome.com/0/930/451.htm https://www.eurogamer.net/crimson-desert-review https://gamingbolt.com/crimson-desert-pc-review-virtues-last-reward https://gamingbolt.com/crimson-desert-pc-graphics-analysis-an-ambitious-open-world-tech-showcase"}
     ],
     "category": "game",
     "importance": "low",
@@ -11254,7 +11469,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://gamingbolt.com/double-fines-kiln-launches-on-april-23rd-open-beta-announced",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://gamingbolt.com/double-fines-kiln-launches-on-april-23rd-open-beta-announced"},
+        {"name": "腾讯文档策展", "url": "https://gamingbolt.com/double-fines-kiln-launches-on-april-23rd-open-beta-announced"}
     ],
     "category": "game",
     "importance": "medium",
@@ -11271,7 +11486,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://gamingbolt.com/highguard-players-on-ps5-are-seemingly-getting-refunds-for-in-game-purchases https://www.gamesindustry.biz/sony-appears-to-be-auto-refunding-highguard-players-their-microtransaction-payments",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://gamingbolt.com/highguard-players-on-ps5-are-seemingly-getting-refunds-for-in-game-purchases https://www.gamesindustry.biz/sony-appears-to-be-auto-refunding-highguard-players-their-microtransaction-payments"},
+        {"name": "腾讯文档策展", "url": "https://gamingbolt.com/highguard-players-on-ps5-are-seemingly-getting-refunds-for-in-game-purchases https://www.gamesindustry.biz/sony-appears-to-be-auto-refunding-highguard-players-their-microtransaction-payments"}
     ],
     "category": "platform",
     "importance": "low",
@@ -11288,7 +11503,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/930/446.htm https://www.3dmgame.com/news/202603/3940047.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/930/446.htm https://www.3dmgame.com/news/202603/3940047.html"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/930/446.htm https://www.3dmgame.com/news/202603/3940047.html"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -11305,7 +11520,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202603/3940043.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3940043.html"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3940043.html"}
     ],
     "category": "game",
     "importance": "medium",
@@ -11326,7 +11541,7 @@ const newsData = [
         {"name": "IGN", "url": "https://www.ign.com/articles/ubisoft-laying-off-100-staff-and-ending-game-development-at-ghost-recon-studio-red-storm-entertainment"},
         {"name": "PC Gamer", "url": "https://www.pcgamer.com/gaming-industry/ubisoft-lays-off-105-people-at-red-storm-the-studio-founded-30-years-ago-by-tom-clancy-converts-it-to-a-support-role/"},
         {"name": "Kotaku", "url": "https://kotaku.com/tom-clancy-studio-no-longer-making-games-as-it-lays-off-105-developers-2000680319"},
-        {"name": "VGC", "url": "https://www.videogameschronicle.com/news/ubisoft-ends-game-development-at-tom-clancy-studio-red-storm-resulting-in-105-job-losses/"},
+        {"name": "VGC", "url": "https://www.videogameschronicle.com/news/ubisoft-ends-game-development-at-tom-clancy-studio-red-storm-resulting-in-105-job-losses/"}
     ],
     "category": "policy",
     "importance": "high",
@@ -11347,7 +11562,7 @@ const newsData = [
         {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/gaming-copilot-coming-to-current-gen-xbox-consoles-in-2026"},
         {"name": "GameSpot", "url": "https://www.gamespot.com/articles/gaming-copilot-ai-assistant-is-coming-to-current-gen-xbox-consoles-this-year/1100-6538770/"},
         {"name": "Windows Central", "url": "https://www.windowscentral.com/gaming/xbox/microsofts-xbox-ai-assistant-gaming-copilot-is-coming-to-consoles-this-year-and-not-stopping-there"},
-        {"name": "GamesRadar", "url": "https://www.gamesradar.com/games/xbox-just-revealed-gaming-copilot-is-coming-to-current-generation-consoles-later-this-year/"},
+        {"name": "GamesRadar", "url": "https://www.gamesradar.com/games/xbox-just-revealed-gaming-copilot-is-coming-to-current-generation-consoles-later-this-year/"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -11366,7 +11581,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "Steam官方", "url": "https://partner.steamgames.com/doc/marketing/upcoming_events/2026_spring_sale"},
         {"name": "4ScarrsGaming", "url": "https://www.4scarrsgaming.com/2026/03/steam-spring-sale-2026.html"},
-        {"name": "IT之家", "url": "https://www.ithome.com/0/872/473.htm"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/872/473.htm"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -11382,7 +11597,7 @@ const newsData = [
     "sourceUrl": "https://www.videogameschronicle.com/news/valve-insists-it-will-release-steam-machine-and-steam-frame-in-2026-after-blog-said-it-hoped-to/",
     "sourceUrls": [
         {"name": "VGC", "url": "https://www.videogameschronicle.com/news/valve-insists-it-will-release-steam-machine-and-steam-frame-in-2026-after-blog-said-it-hoped-to/"},
-        {"name": "GameRes", "url": "https://www.gameres.com/916991.html"},
+        {"name": "GameRes", "url": "https://www.gameres.com/916991.html"}
     ],
     "category": "hardware",
     "importance": "high",
@@ -11400,7 +11615,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "彭博社(Jason Schreier)", "url": "https://www.bloomberg.com/"},
         {"name": "IT之家", "url": "https://www.ithome.com/tags/%e7%b4%a2%e5%b0%bc/"},
-        {"name": "GameRes", "url": "https://www.gameres.com/916991.html"},
+        {"name": "GameRes", "url": "https://www.gameres.com/916991.html"}
     ],
     "category": "platform",
     "importance": "high",
@@ -11418,7 +11633,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "PlayStation Blog", "url": "https://blog.playstation.com/2026/03/17/death-stranding-2-new-pc-ps5-features-detailed-live-march-19/"},
         {"name": "3DM", "url": "https://www.3dmgame.com/games/deathstranding2/"},
-        {"name": "17173", "url": "https://news.17173.com/content/03182026/054614140.shtml"},
+        {"name": "17173", "url": "https://news.17173.com/content/03182026/054614140.shtml"}
     ],
     "category": "game",
     "importance": "medium",
@@ -11433,7 +11648,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/930/287.htm https://www.ithome.com/0/930/278.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/930/287.htm https://www.ithome.com/0/930/278.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/930/287.htm https://www.ithome.com/0/930/278.htm"}
     ],
     "category": "policy",
     "importance": "low",
@@ -11450,7 +11665,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/930/464.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/930/464.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/930/464.htm"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -11481,7 +11696,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/930/187.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/930/187.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/930/187.htm"}
     ],
     "category": "game",
     "importance": "low",
@@ -11499,7 +11714,7 @@ const newsData = [
     "sourceUrl": "https://news.qq.com/rain/a/20260318A0004N00",
     "sourceUrls": [
         {"name": "腾讯新闻/GameLook", "url": "https://news.qq.com/rain/a/20260318A0004N00"},
-        {"name": "GameLook", "url": "http://gamelook.com.cn/"},
+        {"name": "GameLook", "url": "http://gamelook.com.cn/"}
     ],
     "category": "market",
     "importance": "high",
@@ -11516,7 +11731,7 @@ const newsData = [
     "sourceUrl": "https://www.fragster.com/",
     "sourceUrls": [
         {"name": "Fragster", "url": "https://www.fragster.com/"},
-        {"name": "游民星空", "url": "https://ku.gamersky.com/release/pc_202603/"},
+        {"name": "游民星空", "url": "https://ku.gamersky.com/release/pc_202603/"}
     ],
     "category": "game",
     "importance": "medium",
@@ -11532,7 +11747,7 @@ const newsData = [
     "sourceUrl": "https://zerocounts.net/",
     "sourceUrls": [
         {"name": "IGN/Zero Counts", "url": "https://zerocounts.net/"},
-        {"name": "微博(二柄APP)", "url": "https://weibo.com/erbingapp"},
+        {"name": "微博(二柄APP)", "url": "https://weibo.com/erbingapp"}
     ],
     "category": "policy",
     "importance": "high",
@@ -11550,7 +11765,7 @@ const newsData = [
     "sourceUrl": "https://hbsslaw.com/",
     "sourceUrls": [
         {"name": "Hagens Berman", "url": "https://hbsslaw.com/"},
-        {"name": "VGC", "url": "https://www.videogameschronicle.com/"},
+        {"name": "VGC", "url": "https://www.videogameschronicle.com/"}
     ],
     "category": "policy",
     "importance": "high",
@@ -11568,7 +11783,7 @@ const newsData = [
     "sourceUrl": "https://www.gamesindustry.biz/nexon-revenue-rises-65-to-31bn-in-2025-driven-by-ongoing-success-of-arc-raiders",
     "sourceUrls": [
         {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/nexon-revenue-rises-65-to-31bn-in-2025-driven-by-ongoing-success-of-arc-raiders"},
-        {"name": "EuroGamer", "url": "https://www.eurogamer.net/arc-raiders-had-nearly-1000000-concurrent-players-last-month-and-thats-on-pc-alone"},
+        {"name": "EuroGamer", "url": "https://www.eurogamer.net/arc-raiders-had-nearly-1000000-concurrent-players-last-month-and-thats-on-pc-alone"}
     ],
     "category": "market",
     "importance": "high",
@@ -11587,7 +11802,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "IT之家", "url": "https://www.ithome.com/0/930/053.htm"},
         {"name": "EuroGamer", "url": "https://www.eurogamer.net/"},
-        {"name": "Gamingbolt", "url": "https://gamingbolt.com/"},
+        {"name": "Gamingbolt", "url": "https://gamingbolt.com/"}
     ],
     "category": "game",
     "importance": "medium",
@@ -11604,7 +11819,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "VGC", "url": "https://www.videogameschronicle.com/news/take-two-ceo-says-its-laughable-to-say-ai-like-google-project-genie-can-create-hit-games-at-the-press-of-a-button/"},
         {"name": "EuroGamer", "url": "https://www.eurogamer.net/"},
-        {"name": "3DM", "url": "https://www.3dmgame.com/"},
+        {"name": "3DM", "url": "https://www.3dmgame.com/"}
     ],
     "category": "market",
     "importance": "medium",
@@ -11620,7 +11835,7 @@ const newsData = [
     "sourceUrl": "https://www.videogameschronicle.com/news/xbox-reveals-the-rest-of-marchs-game-pass-titles-including-disco-elysium-resi-7-absolum-and-final-fantasy-4/",
     "sourceUrls": [
         {"name": "VGC", "url": "https://www.videogameschronicle.com/news/xbox-reveals-the-rest-of-marchs-game-pass-titles-including-disco-elysium-resi-7-absolum-and-final-fantasy-4/"},
-        {"name": "EuroGamer", "url": "https://www.eurogamer.net/"},
+        {"name": "EuroGamer", "url": "https://www.eurogamer.net/"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -11720,7 +11935,7 @@ const newsData = [
     "sourceUrl": "https://www.videogameschronicle.com/",
     "sourceUrls": [
         {"name": "Gamingbolt", "url": "https://gamingbolt.com/"},
-        {"name": "快科技", "url": "https://news.mydrivers.com/"},
+        {"name": "快科技", "url": "https://news.mydrivers.com/"}
     ],
     "category": "game",
     "importance": "medium",
@@ -11749,7 +11964,7 @@ const newsData = [
     "sourceUrl": "https://blog.playstation.com/",
     "sourceUrls": [
         {"name": "搜狐转载", "url": "https://www.sohu.com/a/995499452_122598898"},
-        {"name": "PlayStation Blog", "url": "https://blog.playstation.com/"},
+        {"name": "PlayStation Blog", "url": "https://blog.playstation.com/"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -11765,7 +11980,7 @@ const newsData = [
     "sourceUrl": "https://pc.ign.com/",
     "sourceUrls": [
         {"name": "IGN", "url": "https://pc.ign.com/"},
-        {"name": "Fortnite官方", "url": "https://www.fortnite.com/battle-pass"},
+        {"name": "Fortnite官方", "url": "https://www.fortnite.com/battle-pass"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -11793,7 +12008,7 @@ const newsData = [
     "sourceUrl": "https://www.videogameschronicle.com/news/switch-2-finally-lets-you-play-switch-1-games-in-docked-mode-while-playing-on-handheld/",
     "sourceUrls": [
         {"name": "VGC", "url": "https://www.videogameschronicle.com/news/switch-2-finally-lets-you-play-switch-1-games-in-docked-mode-while-playing-on-handheld/"},
-        {"name": "IGN中国", "url": "https://www.ign.com/"},
+        {"name": "IGN中国", "url": "https://www.ign.com/"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -11809,7 +12024,7 @@ const newsData = [
     "sourceUrl": "https://www.eurogamer.net/saudi-arabia-capcom-resident-evil-street-fighter-shares",
     "sourceUrls": [
         {"name": "EuroGamer", "url": "https://www.eurogamer.net/saudi-arabia-capcom-resident-evil-street-fighter-shares"},
-        {"name": "VGC", "url": "https://www.videogameschronicle.com/"},
+        {"name": "VGC", "url": "https://www.videogameschronicle.com/"}
     ],
     "category": "policy",
     "importance": "high",
@@ -11827,7 +12042,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "IT之家(发布)", "url": "https://www.ithome.com/0/929/681.htm"},
         {"name": "VGC(批评)", "url": "https://www.videogameschronicle.com/"},
-        {"name": "新浪财经", "url": "https://finance.sina.com.cn/tech/roll/2026-03-18/doc-inhrknav7593836.shtml"},
+        {"name": "新浪财经", "url": "https://finance.sina.com.cn/tech/roll/2026-03-18/doc-inhrknav7593836.shtml"}
     ],
     "category": "hardware",
     "importance": "high",
@@ -11843,7 +12058,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/929/439.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/929/439.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/929/439.htm"}
     ],
     "category": "policy",
     "importance": "low",
@@ -11860,7 +12075,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.gcores.com/articles/211928",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.gcores.com/articles/211928"},
+        {"name": "腾讯文档策展", "url": "https://www.gcores.com/articles/211928"}
     ],
     "category": "platform",
     "importance": "low",
@@ -11877,7 +12092,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/929/354.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/929/354.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/929/354.htm"}
     ],
     "category": "platform",
     "importance": "low",
@@ -11895,7 +12110,7 @@ const newsData = [
     "sourceUrl": "https://www.gamesindustry.biz/resources/directory/company/sony",
     "sourceUrls": [
         {"name": "GamesIndustry(Vikki Blake)", "url": "https://www.gamesindustry.biz/resources/directory/company/sony"},
-        {"name": "新浪财经", "url": "https://finance.sina.com.cn/tech/roll/2025-05-11/doc-ineweiwc2494692.shtml"},
+        {"name": "新浪财经", "url": "https://finance.sina.com.cn/tech/roll/2025-05-11/doc-ineweiwc2494692.shtml"}
     ],
     "category": "hardware",
     "importance": "high",
@@ -11912,7 +12127,7 @@ const newsData = [
     "sourceUrl": "https://www.minecraft.net/en-us",
     "sourceUrls": [
         {"name": "Minecraft官方", "url": "https://www.minecraft.net/en-us"},
-        {"name": "Gamedod", "url": "https://gamedod.com/"},
+        {"name": "Gamedod", "url": "https://gamedod.com/"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -11952,7 +12167,7 @@ const newsData = [
     "sourceUrl": "https://www.eurogamer.net/warner-bros-montreal-devs-report-layoffs",
     "sourceUrls": [
         {"name": "EuroGamer", "url": "https://www.eurogamer.net/warner-bros-montreal-devs-report-layoffs"},
-        {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/"},
+        {"name": "GamesIndustry", "url": "https://www.gamesindustry.biz/"}
     ],
     "category": "policy",
     "importance": "medium",
@@ -11968,7 +12183,7 @@ const newsData = [
     "sourceUrl": "https://www.3dmgame.com/news/202603/3939829.html",
     "sourceUrls": [
         {"name": "3DM", "url": "https://www.3dmgame.com/news/202603/3939829.html"},
-        {"name": "Cyberockk", "url": "https://www.cyberockk.com/"},
+        {"name": "Cyberockk", "url": "https://www.cyberockk.com/"}
     ],
     "category": "game",
     "importance": "high",
@@ -11996,7 +12211,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/929/276.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/929/276.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/929/276.htm"}
     ],
     "category": "game",
     "importance": "low",
@@ -12051,7 +12266,7 @@ const newsData = [
     "sourceUrl": "https://www.ithome.com/0/929/276.htm",
     "sourceUrls": [
         {"name": "IT之家", "url": "https://www.ithome.com/0/929/276.htm"},
-        {"name": "机核", "url": "https://www.gcores.com/articles/211813"},
+        {"name": "机核", "url": "https://www.gcores.com/articles/211813"}
     ],
     "category": "game",
     "importance": "medium",
@@ -12066,7 +12281,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://mynintendonews.com/2026/03/13/us-nintendos-lawsuit-against-government-automatically-paused/",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://mynintendonews.com/2026/03/13/us-nintendos-lawsuit-against-government-automatically-paused/"},
+        {"name": "腾讯文档策展", "url": "https://mynintendonews.com/2026/03/13/us-nintendos-lawsuit-against-government-automatically-paused/"}
     ],
     "category": "policy",
     "importance": "low",
@@ -12083,7 +12298,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/929/029.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/929/029.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/929/029.htm"}
     ],
     "category": "policy",
     "importance": "low",
@@ -12100,7 +12315,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/929/058.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/929/058.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/929/058.htm"}
     ],
     "category": "game",
     "importance": "high",
@@ -12117,7 +12332,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/929/108.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/929/108.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/929/108.htm"}
     ],
     "category": "policy",
     "importance": "low",
@@ -12183,7 +12398,7 @@ const newsData = [
     "sourceUrl": "https://www.ithome.com/0/929/058.htm",
     "sourceUrls": [
         {"name": "IT之家", "url": "https://www.ithome.com/0/929/058.htm"},
-        {"name": "SteamDB", "url": "https://store.steampowered.com/app/2868840/Slay_the_Spire_2/"},
+        {"name": "SteamDB", "url": "https://store.steampowered.com/app/2868840/Slay_the_Spire_2/"}
     ],
     "category": "game",
     "importance": "medium",
@@ -12211,7 +12426,7 @@ const newsData = [
     "sourceUrl": "https://www.ithome.com/0/929/007.htm",
     "sourceUrls": [
         {"name": "IT之家", "url": "https://www.ithome.com/0/929/007.htm"},
-        {"name": "Gamingbolt", "url": "https://gamingbolt.com/ps6-ps6-handheld-and-project-helix-still-on-track-for-holiday-2027-launch-rumor"},
+        {"name": "Gamingbolt", "url": "https://gamingbolt.com/ps6-ps6-handheld-and-project-helix-still-on-track-for-holiday-2027-launch-rumor"}
     ],
     "category": "hardware",
     "importance": "high",
@@ -12241,7 +12456,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://mynintendonews.com/2026/03/13/cd-projekt-red-rules-out-new-dlc-for-cyberpunk-2077/",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://mynintendonews.com/2026/03/13/cd-projekt-red-rules-out-new-dlc-for-cyberpunk-2077/"},
+        {"name": "腾讯文档策展", "url": "https://mynintendonews.com/2026/03/13/cd-projekt-red-rules-out-new-dlc-for-cyberpunk-2077/"}
     ],
     "category": "game",
     "importance": "low",
@@ -12258,7 +12473,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.gcores.com/articles/211813",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.gcores.com/articles/211813"},
+        {"name": "腾讯文档策展", "url": "https://www.gcores.com/articles/211813"}
     ],
     "category": "game",
     "importance": "low",
@@ -12327,7 +12542,7 @@ const newsData = [
         {"name": "VGC", "url": "https://www.videogameschronicle.com/news/microsoft-reveals-next-gen-console-details-and-promises-an-order-of-magnitude-increase-in-power/"},
         {"name": "EuroGamer", "url": "https://www.eurogamer.net/"},
         {"name": "Gamingbolt", "url": "https://gamingbolt.com/"},
-        {"name": "3DM", "url": "https://www.3dmgame.com/news/202603/3939538.html"},
+        {"name": "3DM", "url": "https://www.3dmgame.com/news/202603/3939538.html"}
     ],
     "category": "platform",
     "importance": "high",
@@ -12411,7 +12626,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.eurogamer.net/valve-expresses-disappointment-over-new-york-state-loot-box-lawsuit",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.eurogamer.net/valve-expresses-disappointment-over-new-york-state-loot-box-lawsuit"},
+        {"name": "腾讯文档策展", "url": "https://www.eurogamer.net/valve-expresses-disappointment-over-new-york-state-loot-box-lawsuit"}
     ],
     "category": "policy",
     "importance": "low",
@@ -12442,7 +12657,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/928/299.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/928/299.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/928/299.htm"}
     ],
     "category": "policy",
     "importance": "low",
@@ -12488,7 +12703,7 @@ const newsData = [
     "sourceUrl": "https://mynintendonews.com/",
     "sourceUrls": [
         {"name": "任天堂IR", "url": "https://www.nintendo.co.jp/ir/"},
-        {"name": "NintendoNews", "url": "https://mynintendonews.com/"},
+        {"name": "NintendoNews", "url": "https://mynintendonews.com/"}
     ],
     "category": "game",
     "importance": "high",
@@ -12553,7 +12768,7 @@ const newsData = [
     "sourceUrl": "https://www.videogameschronicle.com/news/all-games-with-loot-boxes-in-them-will-be-rated-minimum-pegi-16-starting-this-summer/",
     "sourceUrls": [
         {"name": "VGC", "url": "https://www.videogameschronicle.com/news/all-games-with-loot-boxes-in-them-will-be-rated-minimum-pegi-16-starting-this-summer/"},
-        {"name": "EuroGamer", "url": "https://www.eurogamer.net/"},
+        {"name": "EuroGamer", "url": "https://www.eurogamer.net/"}
     ],
     "category": "policy",
     "importance": "high",
@@ -12583,7 +12798,7 @@ const newsData = [
     "sourceUrl": "https://gamingbolt.com/ps6-ps6-handheld-and-project-helix-still-on-track-for-holiday-2027-launch-rumor",
     "sourceUrls": [
         {"name": "Gamingbolt", "url": "https://gamingbolt.com/ps6-ps6-handheld-and-project-helix-still-on-track-for-holiday-2027-launch-rumor"},
-        {"name": "IT之家", "url": "https://www.ithome.com/0/929/007.htm"},
+        {"name": "IT之家", "url": "https://www.ithome.com/0/929/007.htm"}
     ],
     "category": "hardware",
     "importance": "high",
@@ -12599,7 +12814,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202603/3939538.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3939538.html"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3939538.html"}
     ],
     "category": "platform",
     "importance": "low",
@@ -12616,7 +12831,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ign.com/articles/1080p-at-30fps-valve-steam-machines-verified-program",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ign.com/articles/1080p-at-30fps-valve-steam-machines-verified-program"},
+        {"name": "腾讯文档策展", "url": "https://www.ign.com/articles/1080p-at-30fps-valve-steam-machines-verified-program"}
     ],
     "category": "policy",
     "importance": "low",
@@ -12647,7 +12862,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.gamesindustry.biz/google-unveils...",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.gamesindustry.biz/google-unveils..."},
+        {"name": "腾讯文档策展", "url": "https://www.gamesindustry.biz/google-unveils..."}
     ],
     "category": "policy",
     "importance": "low",
@@ -12664,7 +12879,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202603/3939505.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3939505.html"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3939505.html"}
     ],
     "category": "game",
     "importance": "low",
@@ -12709,7 +12924,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.3dmgame.com/news/202603/3939396.html",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3939396.html"},
+        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3939396.html"}
     ],
     "category": "game",
     "importance": "high",
@@ -12740,7 +12955,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.gcores.com/articles/211744",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.gcores.com/articles/211744"},
+        {"name": "腾讯文档策展", "url": "https://www.gcores.com/articles/211744"}
     ],
     "category": "game",
     "importance": "high",
@@ -12757,7 +12972,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/928/164.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/928/164.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/928/164.htm"}
     ],
     "category": "game",
     "importance": "medium",
@@ -12832,7 +13047,7 @@ const newsData = [
     "sourceUrls": [
         {"name": "IGN", "url": "https://zerocounts.net/"},
         {"name": "IT之家", "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_2736998e6f148352"},
-        {"name": "Xbox Wire", "url": "https://news.xbox.com/"},
+        {"name": "Xbox Wire", "url": "https://news.xbox.com/"}
     ],
     "category": "policy",
     "importance": "high",
@@ -12946,7 +13161,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/927/404.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/927/404.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/927/404.htm"}
     ],
     "category": "policy",
     "importance": "high",
@@ -12963,7 +13178,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/927/405.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/927/405.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/927/405.htm"}
     ],
     "category": "platform",
     "importance": "high",
@@ -12980,7 +13195,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/927/450.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/927/450.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/927/450.htm"}
     ],
     "category": "policy",
     "importance": "high",
@@ -13011,7 +13226,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.gcores.com/articles/211673",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.gcores.com/articles/211673"},
+        {"name": "腾讯文档策展", "url": "https://www.gcores.com/articles/211673"}
     ],
     "category": "game",
     "importance": "high",
@@ -13041,7 +13256,7 @@ const newsData = [
     "sourceUrl": "https://mynintendonews.com/",
     "sourceUrls": [
         {"name": "NintendoNews", "url": "https://mynintendonews.com/"},
-        {"name": "IGN", "url": "https://www.ign.com/"},
+        {"name": "IGN", "url": "https://www.ign.com/"}
     ],
     "category": "platform",
     "importance": "high",
@@ -13093,7 +13308,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.gcores.com/articles/211645",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.gcores.com/articles/211645"},
+        {"name": "腾讯文档策展", "url": "https://www.gcores.com/articles/211645"}
     ],
     "category": "game",
     "importance": "low",
@@ -13110,7 +13325,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/927/046.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/927/046.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/927/046.htm"}
     ],
     "category": "game",
     "importance": "high",
@@ -13141,7 +13356,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.videogameschronicle.com/news/sony-is-testing-dynamic-pricing-on-the-playstation-store/",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.videogameschronicle.com/news/sony-is-testing-dynamic-pricing-on-the-playstation-store/"},
+        {"name": "腾讯文档策展", "url": "https://www.videogameschronicle.com/news/sony-is-testing-dynamic-pricing-on-the-playstation-store/"}
     ],
     "category": "platform",
     "importance": "low",
@@ -13158,7 +13373,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.videogameschronicle.com/news/amazon-hikes-pokopia-price-as-new-pokemon-game-seemingly-sells-out-everywhere/",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.videogameschronicle.com/news/amazon-hikes-pokopia-price-as-new-pokemon-game-seemingly-sells-out-everywhere/"},
+        {"name": "腾讯文档策展", "url": "https://www.videogameschronicle.com/news/amazon-hikes-pokopia-price-as-new-pokemon-game-seemingly-sells-out-everywhere/"}
     ],
     "category": "policy",
     "importance": "low",
@@ -13175,7 +13390,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.gcores.com/articles/211648",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.gcores.com/articles/211648"},
+        {"name": "腾讯文档策展", "url": "https://www.gcores.com/articles/211648"}
     ],
     "category": "policy",
     "importance": "low",
@@ -13192,7 +13407,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.eurogamer.net/over-half-a-million-of-us-played-slay-the-spire-2-this-weekend",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.eurogamer.net/over-half-a-million-of-us-played-slay-the-spire-2-this-weekend"},
+        {"name": "腾讯文档策展", "url": "https://www.eurogamer.net/over-half-a-million-of-us-played-slay-the-spire-2-this-weekend"}
     ],
     "category": "game",
     "importance": "low",
@@ -13209,7 +13424,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://gamingbolt.com/steam-machine-steam-frame-and-more-still-shipping-this-year-as-valve-works-to-finalize-plans",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://gamingbolt.com/steam-machine-steam-frame-and-more-still-shipping-this-year-as-valve-works-to-finalize-plans"},
+        {"name": "腾讯文档策展", "url": "https://gamingbolt.com/steam-machine-steam-frame-and-more-still-shipping-this-year-as-valve-works-to-finalize-plans"}
     ],
     "category": "platform",
     "importance": "low",
@@ -13238,7 +13453,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/926/827.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/926/827.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/926/827.htm"}
     ],
     "category": "platform",
     "importance": "medium",
@@ -13255,7 +13470,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.ithome.com/0/926/824.htm",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/926/824.htm"},
+        {"name": "腾讯文档策展", "url": "https://www.ithome.com/0/926/824.htm"}
     ],
     "category": "game",
     "importance": "high",
@@ -13272,7 +13487,7 @@ const newsData = [
     "source": "腾讯文档策展",
     "sourceUrl": "https://www.gamedeveloper.com/business/nintendo-sues-us-government-over-trump-administration-tariffs",
     "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.gamedeveloper.com/business/nintendo-sues-us-government-over-trump-administration-tariffs"},
+        {"name": "腾讯文档策展", "url": "https://www.gamedeveloper.com/business/nintendo-sues-us-government-over-trump-administration-tariffs"}
     ],
     "category": "policy",
     "importance": "low",
@@ -13294,314 +13509,6 @@ const newsData = [
     "tags": ["怪物猎人","卡普空","ARPG"],
     "sentiment": "positive",
     },
-    {
-    "id": 1288,
-    "title": "The logic of platform exclusivity remains undefeated | Opinion",
-    "summary": "文章阐述了多重观点",
-    "source": "腾讯文档策展",
-    "sourceUrl": "#",
-    "category": "policy",
-    "importance": "low",
-    "featured": true,
-    "date": "2026-03-06",
-    "tags": ["业内资讯"],
-    "sentiment": "neutral",
-    "tdocMarking": "tdoc-verified",
-    },
-    {
-    "id": 1286,
-    "title": "Project Helix Will Have 30 Percent More, 65 Percent Faster CUs Than Xbox Series X – Rumor",
-    "summary": "根据传闻，微软下一代Xbox主机Project Helix的性能规格和定价信息已曝光，其AMD Magnus APU将比Xbox Series X多30%计算单元且速度快65%，目标帧率超过120FPS。预计售价在999至1200美元之间，主要受内存和Magnus APU成本影响。与PS6的Orion芯片相比，Magnus APU体积更大且CPU性能更强，但实际性能差距可能因软件开销而缩小。Project Helix和PS6的发布可能因内存短缺情况改善而按计划进行。",
-    "source": "腾讯文档策展",
-    "sourceUrl": "https://gamingbolt.com/project-helix-will-have-30-percent-more-65-percent-faster-cus-than-xbox-series-x-rumor",
-    "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://gamingbolt.com/project-helix-will-have-30-percent-more-65-percent-faster-cus-than-xbox-series-x-rumor"},
-    ],
-    "category": "platform",
-    "importance": "low",
-    "featured": true,
-    "date": "2026-03-06",
-    "tags": ["平台发行"],
-    "sentiment": "neutral",
-    "tdocMarking": "tdoc-verified",
-    },
-    {
-    "id": 1281,
-    "title": "暴涨86%！2025中国主机游戏市场迎来春天",
-    "summary": "据CADPA数据，2025年中国游戏市场支出预计达3507.89亿元人民币（501.1亿美元），同比增长7.68%。主机游戏支出增长86.33%至11.8亿美元，移动游戏仍占主导（73.29%），PC游戏位居第二，占据市场份额的22.28%。中国游戏海外收入增长10.23%至204.55亿美元，美国为最大市场（32.31%）。",
-    "source": "腾讯文档策展",
-    "sourceUrl": "https://www.3dmgame.com/news/202603/3939110.html",
-    "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3939110.html"},
-    ],
-    "category": "platform",
-    "importance": "high",
-    "featured": true,
-    "date": "2026-03-06",
-    "tags": ["平台发行"],
-    "sentiment": "positive",
-    "tdocMarking": "tdoc-verified",
-    },
-    {
-    "id": 1280,
-    "title": "国区玩家立功！《生化危机9》PC销量过半碾压主机",
-    "summary": "Alinea Analytics数据表示，《生化危机9：安魂曲》发售首周全球出货量突破500万份，直接销售给终端用户的430万份中，Steam平台贡献了收入的绝大部分，总计3.4亿美元，PC平台占比近2亿美元，Xbox Series X|S的销量据估算不足30万份。中国玩家在Steam和PS5平台的贡献显著，Steam第二，PS5第三。",
-    "source": "腾讯文档策展",
-    "sourceUrl": "https://www.3dmgame.com/news/202603/3939100.html",
-    "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3939100.html"},
-    ],
-    "category": "game",
-    "importance": "low",
-    "featured": true,
-    "date": "2026-03-06",
-    "tags": ["游戏发行"],
-    "sentiment": "neutral",
-    "tdocMarking": "tdoc-verified",
-    },
-    {
-    "id": 1278,
-    "title": "微软确认次世代Xbox代号为Helix 能玩Xbox和PC游戏",
-    "summary": "微软确认下一代Xbox主机代号为Project Helix，主打高性能和跨平台游戏兼容性，支持运行Xbox和PC游戏，首次明确其混合型PC设备定位，并将在下周GDC大会上进一步讨论细节。",
-    "source": "腾讯文档策展",
-    "sourceUrl": "https://www.3dmgame.com/news/202603/3939080.html",
-    "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3939080.html"},
-    ],
-    "category": "platform",
-    "importance": "high",
-    "featured": true,
-    "date": "2026-03-06",
-    "tags": ["平台发行"],
-    "sentiment": "neutral",
-    "tdocMarking": "tdoc-verified",
-    },
-    {
-    "id": 354,
-    "title": "国区玩家立���！《生化危机9》PC销量过半碾压主机",
-    "summary": "Alinea Analytics数据表示，《生化危机...",
-    "source": "腾讯文档策展",
-    "sourceUrl": "#",
-    "category": "game",
-    "importance": "low",
-    "featured": true,
-    "date": "2026-03-06",
-    "tags": ["游戏发行"],
-    "sentiment": "neutral",
-    "tdocMarking": "tdoc-verified",
-    },
-    {
-    "id": 353,
-    "title": "全新搜打撤《马拉松》正式发售 Steam同时在线8.6万",
-    "summary": "搜打撤游戏《马拉松》正式发售，登陆PC（Steam）/PS5/Xbox Series X|S平台，Steam同时在线人数稳定在8.6万左右，开发成本高达2.5亿美元，回本压力巨大。",
-    "source": "腾讯文档策展",
-    "sourceUrl": "https://www.3dmgame.com/news/202603/3939091.html",
-    "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.3dmgame.com/news/202603/3939091.html"},
-    ],
-    "category": "game",
-    "importance": "medium",
-    "featured": true,
-    "date": "2026-03-06",
-    "tags": ["游戏发行"],
-    "sentiment": "neutral",
-    "tdocMarking": "tdoc-verified",
-    },
-    {
-    "id": 351,
-    "title": "Slay the Spire 2 Launches, Immediately Shatters a Concurrent Player Record on Steam",
-    "summary": "《杀戮尖塔2》在Steam平台发布后迅速打破了roguelike类游戏的并发玩家记录，达到17.7万同时在线玩家，并仍在持续上升。该游戏目前是Steam上第四受欢迎的游戏，表现优于同期发布的《生化危机：安魂曲》等大作。",
-    "source": "腾讯文档策展",
-    "sourceUrl": "https://www.ign.com/articles/slay-the-spire-2-launches-immediately-shatters-a-concurrent-player-record-on-steam",
-    "sourceUrls": [
-        {"name": "腾讯文档策展", "url": "https://www.ign.com/articles/slay-the-spire-2-launches-immediately-shatters-a-concurrent-player-record-on-steam"},
-    ],
-    "category": "game",
-    "importance": "low",
-    "featured": true,
-    "date": "2026-03-06",
-    "tags": ["游戏发行"],
-    "sentiment": "neutral",
-    "tdocMarking": "tdoc-verified",
-    },
-    {
-    "id": 51,
-    "title": "育碧宣布战略重组：3款游戏取消，聚焦“更少但更好“策略",
-    "summary": "育碧在最新的投资者电话会议上宣布取消3款未公布项目的开发，年发行数量从15款缩减至8-10款。",
-    "source": "GamesIndustry",
-    "sourceUrl": "https://www.gamesindustry.biz/",
-    "category": "policy",
-    "importance": "medium",
-    "featured": true,
-    "date": "2026-03-06",
-    "tags": ["育碧","重组","战略"],
-    "sentiment": "negative",
-    },
-    {
-    "id": 50,
-    "title": "《GTA6》正式定档2026年5月26日，Rockstar确认延期一年",
-    "summary": "Rockstar Games正式宣布《GTA6》将于2026年5月26日发售，较原计划延期约一年。官方表示需要额外时间打磨质量以达到玩家期待的水准。发行商Take-Two Interactive表示全力支持这一决定。",
-    "source": "Rockstar Games",
-    "sourceUrl": "https://www.rockstargames.com/newswire",
-    "sourceUrls": [
-        {"name": "Rockstar官方", "url": "https://www.rockstargames.com/newswire"},
-        {"name": "新浪财经", "url": "https://finance.sina.com.cn/tech/roll/2025-05-03/doc-inevhatx1078454.shtml"},
-        {"name": "IGN", "url": "https://www.ign.com/"},
-    ],
-    "category": "game",
-    "importance": "high",
-    "featured": true,
-    "date": "2026-03-06",
-    "tags": ["GTA6","R星","延期","Take-Two"],
-    "sentiment": "neutral",
-    },
-];
-
-
-// ============================================
-// 辅助函数（PC端+移动端共享）
-// ============================================
-
-// ---- 重点新闻原因 ----
-function getHighReason(n) {
-    if (!n) return '';
-    const title = n.title || '';
-    const highReasons = [
-        { kw: ['收购','并购','合并','acquisition','merger'], reason: '💰 行业格局变动' },
-        { kw: ['裁员','layoff','重组','关闭工作室'], reason: '💰 行业格局变动' },
-        { kw: ['销量','收入','营收','出货','里程碑','百万','千万'], reason: '📊 里程碑数据' },
-        { kw: ['涨价','提价','降价','price'], reason: '💵 价格/成本冲击' },
-        { kw: ['发售','定档','公布','announce','release','reveal','延期','delay'], reason: '🚀 重要产品节点' },
-        { kw: ['反垄断','版号','监管','法规','法案','policy'], reason: '⚖️ 政策/监管' },
-    ];
-
-    for (const r of highReasons) {
-        if (r.kw.some(k => title.includes(k))) return r.reason;
-    }
-
-    if (n.importance === 'high') return '⭐ 重点关注';
-    if (n.tdocMarking) return '📰 策展精选';
-    return '⭐ 重点关注';
-}
-
-// ---- 自动洞察生成 ----
-function generateAutoInsight(n) {
-    if (!n) return '';
-    const title = n.title || '';
-    const category = n.category || '';
-    const sentiment = n.sentiment || '';
-
-    // Category-based insights
-    const categoryInsights = {
-        'platform': '此事件可能影响平台竞争格局与玩家生态。',
-        'game': '关注该产品对品类竞争和玩家选择的影响。',
-        'industry': '此变动可能对产业链上下游产生连锁反应。',
-        'policy': '政策变动可能重塑行业合规框架与运营策略。',
-        'market': '市场数据变化反映行业结构性趋势。',
-        'hardware': '硬件生态变化可能影响平台迭代节奏与玩家体验。',
-        'technology': '技术进展可能改变开发范式与产品形态。',
-        'data': '数据指标反映市场结构与玩家偏好变化。',
-        'earnings': '财报数据反映公司战略执行与市场表现。',
-    };
-
-    let insight = categoryInsights[category] || '持续关注此事件对PC/主机行业的影响。';
-
-    // Sentiment overlay
-    if (sentiment === 'negative') {
-        insight = '⚠️ ' + insight;
-    } else if (sentiment === 'positive') {
-        insight = '📈 ' + insight;
-    }
-
-    return insight;
-}
-
-// ---- 新闻分类标签 ----
-function getNewsCategory(cat) {
-    const map = {
-        'platform': '🎮 平台动态',
-        'game': '🕹️ 重点新品',
-        'industry': '🏭 业内动态',
-        'policy': '📋 政策战略',
-        'market': '📊 市场数据',
-        'hardware': '🔧 硬件生态',
-        'technology': '💻 技术前沿',
-        'data': '📊 数据追踪',
-        'earnings': '💰 财报'
-    };
-    return map[cat] || '📰 综合';
-}
-
-// ---- 重要性标签 ----
-function getImportanceLabel(imp) {
-    const map = {
-        'high': '🔴 高',
-        'medium': '🟡 中',
-        'low': '⚪ 低'
-    };
-    return map[imp] || '⚪ 低';
-}
-
-// ---- 情绪标签 ----
-function getNewsSentimentLabel(sentiment) {
-    const map = {
-        'positive': '📈 利好',
-        'negative': '📉 利空',
-        'neutral': '➡️ 中性'
-    };
-    return map[sentiment] || '➡️ 中性';
-}
-
-// ---- 情绪颜色 ----
-function getNewsSentimentColor(sentiment) {
-    const map = {
-        'positive': '#10b981',
-        'negative': '#ef4444',
-        'neutral': '#94a3b8'
-    };
-    return map[sentiment] || '#94a3b8';
-}
-
-// ============================================
-// 新闻信源参考列表（PC端+移动端共享）
-// ============================================
-const newsSources = [
-    // 平台官方
-    { name: 'PlayStation Blog', category: 'platform', region: 'global' },
-    { name: 'Xbox Wire', category: 'platform', region: 'global' },
-    { name: 'Nintendo', category: 'platform', region: 'global' },
-    { name: 'Steam Blog', category: 'platform', region: 'global' },
-    { name: 'Valve', category: 'platform', region: 'global' },
-    // 一线媒体
-    { name: 'IGN', category: 'tier1-media', region: 'global' },
-    { name: 'GameSpot', category: 'tier1-media', region: 'global' },
-    { name: 'VGC', category: 'tier1-media', region: 'global' },
-    { name: 'Eurogamer', category: 'tier1-media', region: 'global' },
-    { name: 'PC Gamer', category: 'tier1-media', region: 'global' },
-    { name: 'GamesRadar', category: 'tier1-media', region: 'global' },
-    { name: 'Polygon', category: 'tier1-media', region: 'global' },
-    { name: 'The Verge', category: 'tier1-media', region: 'global' },
-    { name: 'Kotaku', category: 'tier1-media', region: 'global' },
-    { name: 'Gematsu', category: 'tier1-media', region: 'global' },
-    // 行业媒体
-    { name: 'GamesIndustry.biz', category: 'industry', region: 'global' },
-    { name: 'Bloomberg', category: 'industry', region: 'global' },
-    { name: 'Reuters', category: 'industry', region: 'global' },
-    { name: 'TechCrunch', category: 'industry', region: 'global' },
-    { name: 'Forbes', category: 'industry', region: 'global' },
-    { name: 'Nikkei', category: 'industry', region: 'jp' },
-    { name: 'Famitsu', category: 'industry', region: 'jp' },
-    // 中国媒体
-    { name: 'IT之家', category: 'cn-media', region: 'cn' },
-    { name: '36氪', category: 'cn-media', region: 'cn' },
-    { name: '界面新闻', category: 'cn-media', region: 'cn' },
-    { name: '游民星空', category: 'cn-media', region: 'cn' },
-    // 社区/数据
-    { name: 'SteamDB', category: 'data', region: 'global' },
-    { name: 'Metacritic', category: 'data', region: 'global' },
-    { name: 'NPD', category: 'data', region: 'us' },
-    { name: 'Newzoo', category: 'data', region: 'global' },
-    { name: 'Steam Chart', category: 'data', region: 'global' }
 ];
 
 // ============================================
