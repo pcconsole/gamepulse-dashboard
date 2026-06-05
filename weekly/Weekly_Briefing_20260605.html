@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>端主行业周报 · W22</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4f6f9; --ink: #1e3a5f; --ink-2: #2c4a6e; --ink-dim: #4a5c6e; --ink-ghost: #7b8a99;
+    --red: #c85a4a; --red-bg: #f5e0db; --red-dim: #a0483b;
+    --gold: #8b6914; --gold-bg: #ede4cf;
+    --green: #3d6b57; --green-bg: #dde7e0;
+    --surface: #ffffff; --surface-2: #eef1f5;
+    --rule: #d5dce3; --rule-dim: #e5e9ee;
+    --sony: #003087; --xbox: #107c10;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #c8ced6; font-family: 'Microsoft YaHei', '微软雅黑', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  .page { width: 430px; background: var(--bg); color: var(--ink); margin: 0 auto; overflow: hidden; }
+
+  .hero { background: linear-gradient(135deg, #1e3a5f 0%, #2c4a6e 100%); color: white; padding: 22px 20px 26px; position: relative; }
+  .hero::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background: linear-gradient(90deg, var(--red) 0%, var(--gold) 100%); }
+  .hero .brand { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.3em; color: #c85a4a; font-weight: 700; margin-bottom: 10px; }
+  .hero h1 { font-size: 30px; font-weight: 800; line-height: 1.15; }
+  .hero .sub { font-size: 13px; color: rgba(255,255,255,0.75); margin-top: 8px; line-height: 1.5; }
+  .hero .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+  .hero .tags .pill { font-size: 9px; font-weight: 700; padding: 3px 8px; border-radius: 10px; letter-spacing: 0.02em; }
+  .hero .meta { display: flex; gap: 18px; margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.15); font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: rgba(255,255,255,0.7); letter-spacing: 0.1em; }
+  .hero .meta strong { color: white; font-weight: 700; }
+
+  .section { padding: 26px 20px 20px; }
+  .section + .section { border-top: 10px solid #e2e7ed; }
+  .sec-head { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid var(--ink); position: relative; }
+  .sec-head::after { content:''; position:absolute; left:0; bottom:-2px; width:50px; height:2px; background:var(--red); }
+  .sec-head .num { font-family: 'IBM Plex Mono', monospace; font-size: 32px; font-weight: 800; color: var(--red); line-height: 0.9; }
+  .sec-head .title { font-size: 18px; font-weight: 800; color: var(--ink); flex: 1; line-height: 1.3; }
+  .sec-head .title em { display: block; font-size: 12px; font-weight: 600; color: var(--red); font-style: normal; margin-top: 3px; }
+  .sec-subtitle { font-size: 13px; font-weight: 700; color: var(--red); margin: 8px 0 16px; line-height: 1.5; }
+
+  .stbl { width: 100%; border-collapse: collapse; font-size: 11px; margin: 8px 0 10px; table-layout: fixed; }
+  .stbl thead { background: linear-gradient(135deg, #1e3a5f 0%, #2c4a6e 100%); color: white; }
+  .stbl th { text-align: left; padding: 6px 6px; font-weight: 700; font-size: 10px; letter-spacing: 0.1em; }
+  .stbl td { padding: 6px 6px; border-bottom: 1px solid var(--rule-dim); vertical-align: middle; line-height: 1.5; }
+  .stbl td:last-child { text-align: center; }
+  .stbl .num { font-family: 'IBM Plex Mono', monospace; font-weight: 600; white-space: nowrap; }
+  .stbl .hl-row { background: var(--red-bg); }
+  .stbl tbody tr:nth-child(even) { background: var(--surface-2); }
+
+  .insight { background: linear-gradient(135deg, #1e3a5f 0%, #263f5e 100%); border-radius: 6px; padding: 14px 16px; margin: 12px 0; color: rgba(255,255,255,0.92); font-size: 12px; line-height: 1.7; }
+  .insight .il { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.2em; color: var(--red); margin-bottom: 8px; border-bottom: 1px dashed rgba(255,255,255,0.15); padding-bottom: 6px; font-weight: 700; }
+  .insight p { margin-bottom: 6px; }
+  .insight p:last-child { margin-bottom: 0; }
+  .insight em { font-style: normal; color: #f0a07a; font-weight: 700; }
+  .insight strong { color: #fff; }
+
+  .trend { background: var(--gold-bg); border-left: 4px solid var(--gold); padding: 10px 14px; margin: 10px 0 14px; border-radius: 0 5px 5px 0; font-size: 11px; line-height: 1.65; color: var(--ink-dim); }
+  .trend .tl { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.15em; color: var(--gold); font-weight: 700; margin-bottom: 4px; }
+
+  .ev-line { background: var(--surface); border: 1px solid var(--rule-dim); border-radius: 5px; padding: 8px 12px; margin-bottom: 5px; font-size: 11px; line-height: 1.6; }
+  .ev-line .ev-head { display: flex; align-items: center; gap: 6px; margin-bottom: 2px; }
+  .ev-line .d { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--ink-ghost); font-weight: 600; }
+  .tg { font-size: 9px; font-weight: 700; padding: 1px 5px; border-radius: 2px; }
+  .tg-r { background: var(--red-bg); color: var(--red); }
+  .tg-b { background: #dce8f5; color: #2a5a8f; }
+  .tg-y { background: var(--gold-bg); color: var(--gold); }
+  .tg-g { background: var(--green-bg); color: var(--green); }
+  .tg-p { background: #e8e0f5; color: #5a3a8f; }
+
+  /* 9月日历热力条 */
+  .sept-bar { display: flex; gap: 2px; margin: 12px 0; align-items: flex-end; }
+  .sept-bar .day { flex: 1; border-radius: 3px 3px 0 0; position: relative; min-height: 12px; transition: all 0.2s; }
+  .sept-bar .day.hot { background: var(--red); }
+  .sept-bar .day.warm { background: var(--gold); }
+  .sept-bar .day.cool { background: var(--rule); }
+  .sept-bar .day-label { position: absolute; bottom: -14px; left: 50%; transform: translateX(-50%); font-size: 7px; font-family: 'IBM Plex Mono', monospace; color: var(--ink-ghost); white-space: nowrap; }
+  .sept-bar .game-tag { position: absolute; top: -18px; left: 50%; transform: translateX(-50%); font-size: 7px; font-weight: 700; color: var(--red); white-space: nowrap; text-align: center; }
+
+  /* 时间线 */
+  .tl-wrap { position: relative; padding-left: 14px; margin: 14px 0; border-left: 2px solid var(--rule); }
+  .tl-item { position: relative; padding: 6px 0 12px 14px; font-size: 11px; line-height: 1.55; }
+  .tl-item::before { content: ''; position: absolute; left: -19px; top: 10px; width: 8px; height: 8px; border-radius: 50%; background: var(--red); border: 2px solid var(--bg); }
+  .tl-item.minor::before { background: var(--rule); width: 6px; height: 6px; left: -18px; top: 11px; }
+  .tl-item .tl-d { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--ink-ghost); font-weight: 700; }
+  .tl-item .tl-t { font-weight: 700; color: var(--ink); }
+
+  /* Valve 流程图 */
+  .flow-chain { display: flex; flex-direction: column; gap: 0; margin: 12px 0; }
+  .flow-node { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 10px 14px; font-size: 11px; line-height: 1.55; }
+  .flow-node .fn-head { font-weight: 800; font-size: 12px; color: var(--ink); margin-bottom: 4px; }
+  .flow-node .fn-sub { color: var(--ink-dim); }
+  .flow-arrow { text-align: center; font-size: 14px; color: var(--red); line-height: 1.2; padding: 2px 0; }
+
+  .placeholder { background: repeating-linear-gradient(45deg, var(--surface-2), var(--surface-2) 8px, var(--bg) 8px, var(--bg) 16px); border: 2px dashed var(--rule); border-radius: 6px; padding: 30px 20px; text-align: center; margin: 12px 0; }
+  .placeholder .ph-title { font-size: 14px; font-weight: 800; color: var(--ink-dim); margin-bottom: 6px; }
+  .placeholder .ph-sub { font-size: 11px; color: var(--ink-ghost); line-height: 1.5; }
+
+  .footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 20px; text-align: center; font-size: 10px; line-height: 1.8; }
+  .footer .logo { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.3em; color: white; margin-bottom: 8px; }
+</style>
+</head>
+<body>
+
+<!-- 导出工具栏 -->
+<div id="export-toolbar" style="position:fixed;top:10px;right:10px;z-index:9999;font-family:'Microsoft YaHei',sans-serif;user-select:none;">
+  <div style="display:flex;gap:6px;">
+    <button id="exp-main" style="background:#c85a4a;color:#fff;border:0;padding:6px 12px;border-radius:4px;font-size:11px;font-weight:700;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,0.2);letter-spacing:.05em;">📥 导出长图</button>
+  </div>
+  <div id="exp-panel" style="display:none;margin-top:6px;background:rgba(30,58,95,0.96);padding:8px;border-radius:4px;box-shadow:0 4px 12px rgba(0,0,0,0.25);">
+    <div style="display:flex;flex-direction:column;gap:4px;">
+      <button data-scale="2" class="exp-btn" style="background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.15);padding:6px 10px;border-radius:3px;font-size:10px;cursor:pointer;font-weight:600;">@2x · 860px</button>
+      <button data-scale="3" class="exp-btn" style="background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.15);padding:6px 10px;border-radius:3px;font-size:10px;cursor:pointer;font-weight:600;">@3x · 1290px（推荐）</button>
+      <button data-scale="4" class="exp-btn" style="background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.15);padding:6px 10px;border-radius:3px;font-size:10px;cursor:pointer;font-weight:600;">@4x · 1720px</button>
+    </div>
+    <div id="exp-status" style="font-size:9px;color:#ffb896;margin-top:6px;letter-spacing:.03em;line-height:1.3;min-height:11px;"></div>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="brand">GAMEPULSE · WEEKLY</div>
+    <h1>端主行业动态周报 W22</h1>
+    <div class="sub">PC & Console Industry Weekly Briefing</div>
+    <div class="tags">
+      <span class="pill" style="background:rgba(0,48,135,0.6);color:#8fbceb;">State of Play</span>
+      <span class="pill" style="background:rgba(200,90,74,0.5);color:#ffd4c4;">9月大逃杀</span>
+      <span class="pill" style="background:rgba(139,105,20,0.5);color:#f5ecd4;">Valve反垄断</span>
+      <span class="pill" style="background:rgba(16,124,16,0.5);color:#82d99b;">Xbox独占</span>
+    </div>
+    <div class="meta">
+      <span>DATE · <strong>2026.06.05</strong></span>
+      <span>COVERAGE · <strong>6.01 – 6.05</strong></span>
+    </div>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- PART 01 · State of Play 全景                                     -->
+  <!-- ================================================================ -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="num">01</div>
+      <div class="title">State of Play 6/2：GTA6前的9月大逃杀<em>60分钟 · 20+款游戏 · 9月11天5款大作扎堆</em></div>
+    </div>
+
+    <!-- 核心结论 -->
+    <div style="background:linear-gradient(135deg,#1e3a5f 0%,#263f5e 100%);color:rgba(255,255,255,0.92);padding:14px 16px;border-radius:6px;margin-bottom:14px;font-size:12px;line-height:1.7;border-left:4px solid var(--red);">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.15em;color:var(--red);font-weight:700;margin-bottom:6px;">核心判断</div>
+      9月15日至25日，<strong style="color:#fff;">11天5款大作集中发售</strong>——Wolverine(9/15)、Dune(9/22)、寂静岭(9/24)、Control(9/24)、鬼武者(9/25)——都在抢<span style="color:#f0a07a;font-weight:700;">GTA6(11/19)</span>前最后窗口。
+    </div>
+
+    <!-- 9月档期可视化 -->
+    <div style="font-size:10px;font-weight:700;color:var(--ink-dim);margin:14px 0 6px;">9月发售日历 · "11天5款大作"</div>
+    <div style="background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:12px 10px;margin-bottom:14px;">
+      <div style="font-size:9px;color:var(--ink-ghost);margin-bottom:6px;line-height:1.4;">平台策略标注：<span style="background:#1e3a5f;color:#fff;padding:1px 4px;border-radius:2px;font-weight:700;">PS5独占</span> 仅PS5 · <span style="background:#6b2121;color:#fff;padding:1px 4px;border-radius:2px;font-weight:700;">无Xbox</span> 首发跳过Xbox · 无标注=全平台</div>
+      <table class="stbl" style="margin:0;">
+        <colgroup><col style="width:38px"><col style="width:108px"><col style="width:90px"><col style="width:auto"></colgroup>
+        <thead><tr><th>日期</th><th>游戏</th><th>平台策略</th><th>开发商</th></tr></thead>
+        <tbody>
+          <tr class="hl-row"><td class="num">9/15</td><td><strong>漫威金刚狼</strong></td><td><span style="font-size:8px;padding:2px 5px;border-radius:2px;font-weight:700;background:#1e3a5f;color:#fff;">PS5独占</span></td><td>Insomniac</td></tr>
+          <tr><td class="num">9/22</td><td><strong>沙丘：觉醒</strong></td><td style="font-size:10px;">PS5/Xbox/PC<br><span style="font-size:8px;color:var(--green);">+Game Pass</span></td><td>Funcom</td></tr>
+          <tr class="hl-row"><td class="num">9/24</td><td><strong>寂静岭：小镇陷落</strong></td><td><span style="font-size:8px;padding:2px 5px;border-radius:2px;font-weight:700;background:#6b2121;color:#fff;">无Xbox</span><br><span style="font-size:9px;">PS5+PC</span></td><td>科乐美</td></tr>
+          <tr><td class="num">9/24</td><td><strong>控制：共振</strong></td><td style="font-size:10px;">PS5/Xbox/PC</td><td>Remedy</td></tr>
+          <tr><td class="num">9/25</td><td><strong>鬼武者：剑之道</strong></td><td style="font-size:10px;">PS5+PC<br><span style="font-size:8px;color:var(--ink-ghost);">Xbox待确认</span></td><td>卡普空</td></tr>
+          <tr><td colspan="4" style="text-align:center;color:var(--ink-ghost);font-size:10px;padding:8px;">── 10月 ──</td></tr>
+          <tr><td class="num">10/1</td><td>雷曼：传奇再叙</td><td style="font-size:10px;">PS5/Xbox/NS2/PC</td><td>育碧</td></tr>
+          <tr><td class="num">10/1</td><td>三国无双3 重制</td><td style="font-size:10px;">PS5/Xbox/NS2/PC</td><td>光荣特库摩</td></tr>
+          <tr><td class="num">10/2</td><td><strong>皇牌空战8</strong></td><td style="font-size:10px;">PS5/Xbox/PC</td><td>万代南梦宫</td></tr>
+          <tr><td class="num">10/27</td><td>恶意不息 1.0</td><td><span style="font-size:8px;padding:2px 5px;border-radius:2px;font-weight:700;background:#6b2121;color:#fff;">无Xbox</span><br><span style="font-size:9px;">PS5+PC先发</span></td><td>Moon Studios</td></tr>
+          <tr class="hl-row"><td class="num">10/29</td><td><strong>影之刃零</strong></td><td><span style="font-size:8px;padding:2px 5px;border-radius:2px;font-weight:700;background:#1e3a5f;color:#fff;">PS5独占</span><br><span style="font-size:8px;color:var(--ink-ghost);">延期自9/9</span></td><td>S-Game</td></tr>
+          <tr><td colspan="4" style="text-align:center;padding:10px 6px;background:linear-gradient(135deg,#1e3a5f,#2c4a6e);border-radius:4px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:800;color:#fff;letter-spacing:0.05em;">11/19</span><span style="color:#f0a07a;font-size:13px;font-weight:800;margin:0 8px;">GTA6 发售</span><span style="font-size:9px;color:rgba(255,255,255,0.6);">— 全行业排期的终极黑洞 —</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 重磅公布 -->
+    <div style="font-size:10px;font-weight:700;color:var(--ink-dim);margin:14px 0 6px;">🔥 重磅公布</div>
+    <div class="ev-line" style="border-left:3px solid var(--sony);">
+      <div class="ev-head"><span class="tg tg-r">压轴</span></div>
+      <div class="ev-body"><strong>战神系列新作 God of War: Laufey</strong> — 系列首次以菲(Faye)为主角，20分钟实机，Santa Monica Studio，PS5独占，日期未定</div>
+    </div>
+    <div class="ev-line" style="border-left:3px solid var(--sony);">
+      <div class="ev-head"><span class="tg tg-r">开场</span><span class="d">9/15</span></div>
+      <div class="ev-body"><strong>漫威金刚狼</strong> — 7分钟实机，M级暴力，Jean Grey合作角色，Insomniac，PS5独占</div>
+    </div>
+    <div class="ev-line" style="border-left:3px solid var(--sony);">
+      <div class="ev-head"><span class="tg tg-r">延期</span><span class="d">→ 2027/2/12</span></div>
+      <div class="ev-body"><strong>古墓丽影：亚特兰蒂斯遗迹</strong> — Crystal Dynamics + Flying Wild Hog，Amazon Games发行，新增Switch 2</div>
+    </div>
+
+    <!-- 部分新作 -->
+    <div style="font-size:10px;font-weight:700;color:var(--ink-dim);margin:14px 0 6px;">部分新作</div>
+    <div class="ev-line">
+      <div class="ev-head"><span class="tg tg-p">2027</span></div>
+      <div class="ev-body"><strong>直到黎明2（Until Dawn 2）</strong> — Firesprite开发，全新角色阵容，PS5独占</div>
+    </div>
+    <div class="ev-line">
+      <div class="ev-head"><span class="tg tg-p">2027</span></div>
+      <div class="ev-body"><strong>KEMURI</strong> — 中村育美(Ikumi Nakamura)领导Unseen工作室，超自然动作冒险，3人合作，PS5独占</div>
+    </div>
+
+
+    <!-- 洞察 -->
+    <div class="insight">
+      <div class="il">洞察 · 为什么所有人都在抢9月？</div>
+      <div style="display:flex;gap:8px;margin-bottom:10px;padding-bottom:10px;border-bottom:1px dashed rgba(255,255,255,0.12);">
+        <div style="min-width:18px;font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:800;color:var(--red);line-height:1.4;">1</div>
+        <div><strong>GTA6 = 11/19黑洞效应</strong><br>Take-Two定档后，全行业排期逻辑变为"GTA6之前上市 or 等到2027年"。9月是最后安全窗口。</div>
+      </div>
+      <div style="display:flex;gap:8px;margin-bottom:10px;padding-bottom:10px;border-bottom:1px dashed rgba(255,255,255,0.12);">
+        <div style="min-width:18px;font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:800;color:var(--red);line-height:1.4;">2</div>
+        <div><strong>11天5款 = 消费者极限选择</strong><br>中小体量作品面临Wolverine虹吸效应（寂静岭/鬼武者/Control）。影之刃零延期至10/29是聪明闪避。</div>
+      </div>
+      <div style="display:flex;gap:8px;">
+        <div style="min-width:18px;font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:800;color:var(--red);line-height:1.4;">3</div>
+        <div><strong>独占回归落地</strong>（呼应W21）<br>PS第一方销量FY2020<em>5840万</em>→FY2024<em>2890万</em>腰斩（Game File/IGN数据）。SoP三连组合拳+收紧独占（跳Xbox/锁PS5/停登PC），从"开放PC"逆转为"独占锁死购买理由"。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- PART 02 · Valve反垄断风暴                                         -->
+  <!-- ================================================================ -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="num">02</div>
+      <div class="title">Valve反垄断风暴：Steam 30%抽成的审判日<em>5年诉讼进入决战期 · 解封文件首次揭露定价控制实锤</em></div>
+    </div>
+
+    <!-- 背景铺垫 -->
+    <div style="font-size:11px;color:var(--ink-dim);line-height:1.65;margin-bottom:14px;">
+      <strong style="color:var(--ink);">背景</strong>：Steam占据PC数字发行约<strong>75%</strong>市场份额，向开发者/发行商收取<strong>30%佣金</strong>（年销售额超$5000万可降至20%）。同时要求签署"价格平价条款"(MFN)——发行商不得在Epic(12%)/GOG等竞争平台定价更低。这一模式自2003年运行至今未被法律挑战，直到2021年。
+    </div>
+
+    <!-- 完整时间线 -->
+    <div style="font-size:10px;font-weight:700;color:var(--ink-dim);margin:0 0 8px;">完整时间线 · 从立案到审判</div>
+    <div class="tl-wrap">
+      <div class="tl-item minor">
+        <span class="tl-d">2021.4 · <span style="background:#dce8f5;color:#2a5a8f;padding:1px 4px;border-radius:2px;font-size:8px;">美国</span></span><br>
+        <span class="tl-t">Wolfire Games起诉Valve</span>（案号2:21-cv-00563），指控MFN条款+30%佣金违反谢尔曼反托拉斯法§1§2
+      </div>
+      <div class="tl-item minor">
+        <span class="tl-d">2021.11 · <span style="background:#dce8f5;color:#2a5a8f;padding:1px 4px;border-radius:2px;font-size:8px;">美国</span></span><br>
+        法院驳回部分诉求（无偏见），<span class="tl-t">允许修改后重新提交</span>
+      </div>
+      <div class="tl-item minor">
+        <span class="tl-d">2022.5 · <span style="background:#dce8f5;color:#2a5a8f;padding:1px 4px;border-radius:2px;font-size:8px;">美国</span></span><br>
+        诉讼重启，Dark Catt Studios加入原告，<span class="tl-t">核心MFN条款指控存续</span>
+      </div>
+      <div class="tl-item minor">
+        <span class="tl-d">2024.6 · <span style="background:#1e3a5f;color:#fff;padding:1px 4px;border-radius:2px;font-size:8px;">英国</span></span><br>
+        数字权益倡导者<span class="tl-t">Vicki Shotbolt向英国CAT提起集体诉讼</span>，代表约1400万英国PC玩家
+      </div>
+      <div class="tl-item">
+        <span class="tl-d">2024.11 · <span style="background:#dce8f5;color:#2a5a8f;padding:1px 4px;border-radius:2px;font-size:8px;">美国</span></span><br>
+        <span class="tl-t">美国法院批准集体诉讼认证</span>，原告扩展为约32,000名开发者/发行商（Secretariat经济学专家报告支持）
+      </div>
+      <div class="tl-item">
+        <span class="tl-d">2026.1.26 · <span style="background:#1e3a5f;color:#fff;padding:1px 4px;border-radius:2px;font-size:8px;">英国</span></span><br>
+        <span class="tl-t">英国CAT批准£656M集体诉讼</span>（[2026] CAT 4），Opt-out机制覆盖全部英国PC玩家。下次庭审管理会议6月22日
+      </div>
+      <div class="tl-item">
+        <span class="tl-d" style="color:var(--red);">2026.6.2 · <span style="background:#dce8f5;color:#2a5a8f;padding:1px 4px;border-radius:2px;font-size:8px;">美国</span></span><br>
+        <span class="tl-t">Bloomberg曝光解封庭审文件</span>：Valve邮件显示曾威胁育碧（《彩虹六号》）和华纳（《暗影魔多》）下架——因其在竞争平台定价更低。开发者调查显示多家"担心被惩罚或驱逐"
+      </div>
+      <div class="tl-item">
+        <span class="tl-d" style="color:var(--red);">2026.6.3 · <span style="background:#dce8f5;color:#2a5a8f;padding:1px 4px;border-radius:2px;font-size:8px;">美国</span></span><br>
+        <span class="tl-t">Gabe Newell庭审证词公开</span>：①辩护Steam面临充分竞争 ②同期曝光他曾怒斥法务总监"What the f*** do I pay you for?"（因后者主张加强内容审核）
+      </div>
+      <div class="tl-item minor">
+        <span class="tl-d">2026 H2 · <span style="background:#dce8f5;color:#2a5a8f;padding:1px 4px;border-radius:2px;font-size:8px;">美国</span> <span style="background:#1e3a5f;color:#fff;padding:1px 4px;border-radius:2px;font-size:8px;">英国</span></span><br>
+        <span class="tl-t">美国联邦审判</span>预计进行；英国CAT 6/22 CMC后确定审判日程
+      </div>
+    </div>
+
+    <!-- 核心争议（简化流程图） -->
+    <div style="font-size:10px;font-weight:700;color:var(--ink-dim);margin:14px 0 8px;">核心争议 · 为什么这次不一样？</div>
+    <div class="flow-chain">
+      <div class="flow-node">
+        <div class="fn-head">过去5年：诉讼一直存在但缺乏实锤</div>
+        <div class="fn-sub">Wolfire的指控停留在"合同条款层面"——Valve可辩称MFN只是标准商业惯例，没有证据表明实际强制执行</div>
+      </div>
+      <div class="flow-arrow">↓ 6月转折点</div>
+      <div class="flow-node" style="border-color:var(--red);">
+        <div class="fn-head" style="color:var(--red);">解封文件 = 第一次有了"执行证据"</div>
+        <div class="fn-sub">Valve内部邮件显示不止是"写在合同里"——实际威胁下架育碧/华纳旗下热门游戏。从"纸面条款"升级为"垄断行为"的实锤</div>
+      </div>
+      <div class="flow-arrow">↓ 同时</div>
+      <div class="flow-node" style="border-color:var(--gold);">
+        <div class="fn-head" style="color:var(--gold);">英美双线同步 = 无处躲藏</div>
+        <div class="fn-sub">美国：32,000名开发者集体诉讼（供给侧）<br>英国：1400万玩家£656M集体诉讼（消费端）<br>两条线从不同角度夹击——即使一方败诉，另一方仍有独立判决效力</div>
+      </div>
+    </div>
+
+    <!-- 洞察 -->
+    <div class="insight">
+      <div class="il">洞察 · 如果Steam输了会怎样？</div>
+      <div style="display:flex;gap:8px;margin-bottom:10px;padding-bottom:10px;border-bottom:1px dashed rgba(255,255,255,0.12);">
+        <div style="min-width:18px;font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:800;color:var(--red);line-height:1.4;">1</div>
+        <div><strong>短期影响有限</strong><br>£656M赔偿对估值$100亿+的Valve可控，但判例效应巨大。</div>
+      </div>
+      <div style="display:flex;gap:8px;margin-bottom:10px;padding-bottom:10px;border-bottom:1px dashed rgba(255,255,255,0.12);">
+        <div style="min-width:18px;font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:800;color:var(--red);line-height:1.4;">2</div>
+        <div><strong>MFN被判违法 = PC定价重构</strong><br>发行商可合法在Epic(12%抽成)定价更低。Steam被迫降佣或失去头部内容，<em>"Steam定价=全平台定价"的时代终结</em>。</div>
+      </div>
+      <div style="display:flex;gap:8px;">
+        <div style="min-width:18px;font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:800;color:var(--red);line-height:1.4;">3</div>
+        <div><strong>多米诺效应</strong><br>30%行业标准（Steam/Apple/Google/Sony/Xbox共同维持）一旦在法律层面被突破，可能蔓延至主机和手机生态。</div>
+      </div>
+    </div>
+
+    <div class="trend">
+      <div class="tl">值得关注</div>
+      2026下半年美国联邦审判 + 英国CAT 6/22后确定日程。这是PC游戏分销格局20年来最大的法律挑战——对开发者/发行商是潜在利好（佣金下降），对玩家可能意味着真正的跨平台比价时代。
+    </div>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- PART 03 · 预留区（6/4-6/5 补充）                                  -->
+  <!-- ================================================================ -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="num">03</div>
+      <div class="title">本周其他动态<em>Xbox策略验证 · 007回本追踪 · 硬件信号</em></div>
+    </div>
+
+    <!-- Xbox策略信号（用绿色左条突出，格式与其他ev-line统一） -->
+    <div style="font-size:10px;font-weight:700;color:var(--xbox);margin:0 0 6px;">XBOX 策略信号 · 上任100天</div>
+    <div class="ev-line" style="border-left:3px solid var(--xbox);background:#f5fbf6;">
+      <div class="ev-head"><span class="tg tg-g">数据</span><span class="d">Alinea Analytics · 6/5</span></div>
+      <div class="ev-body"><strong style="color:var(--xbox);">FH6收入逼近$5亿</strong>：累计640万份销量 + 600万GP订阅用户，PS5版尚未发行。GP+买断混合模式的首个标杆数据。</div>
+    </div>
+    <div class="ev-line" style="border-left:3px solid var(--xbox);background:#eaf5ea;">
+      <div class="ev-head"><span class="tg tg-g">表态</span><span class="d">Bloomberg Live · 6/4</span></div>
+      <div class="ev-body"><strong style="color:var(--xbox);">★ CEO Sharma："平台必须有独占"</strong>，上任100天首次公开明确独占策略方向，长期目标"全球第一大游戏和娱乐公司"。</div>
+    </div>
+
+    <!-- 007销量追踪 -->
+    <div style="font-size:10px;font-weight:700;color:var(--ink-dim);margin:14px 0 6px;">007：初露锋芒 · 回本追踪</div>
+    <div class="ev-line" style="border-left:3px solid var(--gold);">
+      <div class="ev-head"><span class="tg tg-y">销量</span><span class="d">发售2周</span></div>
+      <div class="ev-body">
+        <strong>累计220万份</strong>，PS5贡献过半，Steam好评率82%<br>
+        <span style="font-size:10px;color:var(--ink-ghost);">发售日5/28 · 平台PS5/Xbox/PC · 开发商IO Interactive · 成本$2亿/7年</span><br>
+        <span style="font-size:10px;color:var(--ink-ghost);">220万×$60≈$1.32亿毛收入（扣除平台分成后约$0.9亿） → 距$2亿回本仍有缺口，需长尾+Switch 2版补足</span>
+      </div>
+    </div>
+    <div style="font-size:9px;color:var(--ink-ghost);margin:4px 0 0 15px;line-height:1.5;">
+      佐证：Steam周榜007登顶击败FH6（6/4） · PS Store 5月下载榜007第1 / 乐高蝙蝠侠第2
+    </div>
+
+    <!-- 硬件动态 -->
+    <div style="font-size:10px;font-weight:700;color:var(--ink-dim);margin:16px 0 6px;">硬件信号</div>
+    <div class="ev-line"><div class="ev-head"><span class="tg tg-b">Valve</span><span class="d">6/5</span></div><div class="ev-body"><strong>Steam Machine确认今夏推出</strong>（The Verge），同期公布Steam Frame VR头显，具体日期/售价未定</div></div>
+    <div class="ev-line"><div class="ev-head"><span class="tg tg-r">Switch 2</span><span class="d">6/4</span></div><div class="ev-body">日本涨价后<strong>周销量暴跌87%</strong>（抢购透支效应） · 英国累计破100万台（走势≈Xbox One同期）</div></div>
+
+    <!-- FIFA -->
+    <div style="font-size:10px;font-weight:700;color:var(--ink-dim);margin:16px 0 6px;">值得关注</div>
+    <div class="ev-line"><div class="ev-head"><span class="tg tg-y">订阅</span><span class="d">6/11</span></div><div class="ev-body"><strong>FIFA 2026世界杯官方游戏登陆Netflix</strong>，对现有订阅者免费——与EA足球游戏正面竞争正式开启</div></div>
+
+    <!-- 近期重点日历 -->
+    <div style="font-size:10px;font-weight:700;color:var(--ink-dim);margin:16px 0 6px;">近期重点日历</div>
+    <table class="stbl" style="margin:0;">
+      <colgroup><col style="width:58px"><col style="width:auto"></colgroup>
+      <thead><tr><th>日期</th><th>事件</th></tr></thead>
+      <tbody>
+        <tr class="hl-row"><td class="num">6/5</td><td><strong>Summer Game Fest</strong> · Geoff Keighley · 2小时 · "史上规模最大"</td></tr>
+        <tr class="hl-row"><td class="num">6/7</td><td><strong>Xbox Games Showcase</strong> + Gears of War: E-Day Direct</td></tr>
+        <tr><td class="num">6/9</td><td>Nintendo Direct（泄露，<strong>未官方确认</strong>） · 时隔9个月</td></tr>
+        <tr><td class="num">6/11</td><td>FIFA 2026世界杯游戏 Netflix上线</td></tr>
+        <tr><td class="num">6/22</td><td>英国CAT v. Valve 庭审管理会议</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 下期预告 -->
+  <div style="background:linear-gradient(135deg,#1e3a5f,#2c4a6e);padding:12px 20px;text-align:center;">
+    <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.15em;color:rgba(255,255,255,0.5);font-weight:700;">NEXT WEEK</span>
+    <div style="font-size:12px;color:rgba(255,255,255,0.88);margin-top:4px;font-weight:700;">W23预告：Xbox Showcase全景 · Sharma独占策略验证</div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="logo">GAMEPULSE · PC & CONSOLE</div>
+    <div>数据来源：PlayStation Blog · IGN · Bloomberg · Eurogamer · The Verge · Alinea Analytics · GamesIndustry.biz · VGC · Gematsu</div>
+    <div style="margin-top:6px;">2026.06.05 · W22 WEEKLY · COVERAGE 6.01–6.05</div>
+  </div>
+
+</div>
+
+<!-- 导出脚本 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+(function(){
+  const toolbar = document.getElementById('export-toolbar');
+  const mainBtn = document.getElementById('exp-main');
+  const panel = document.getElementById('exp-panel');
+  const status = document.getElementById('exp-status');
+  let panelVisible = false;
+  mainBtn.addEventListener('click', () => { panelVisible = !panelVisible; panel.style.display = panelVisible ? 'block' : 'none'; });
+  document.addEventListener('click', (e) => { if (!toolbar.contains(e.target)) { panelVisible = false; panel.style.display = 'none'; } });
+  async function exportAt(scale) {
+    status.textContent = `正在生成 @${scale}x ...`;
+    toolbar.style.display = 'none';
+    const page = document.querySelector('.page');
+    try {
+      const canvas = await html2canvas(page, { scale, useCORS: true, backgroundColor: '#f4f6f9', width: 430, windowWidth: 430 });
+      toolbar.style.display = '';
+      const link = document.createElement('a');
+      link.download = `Weekly_Briefing_W22_20260605_${scale}x.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+      status.textContent = `✅ @${scale}x 已下载 (${canvas.width}×${canvas.height})`;
+    } catch(e) { toolbar.style.display = ''; status.textContent = '❌ ' + e.message; }
+  }
+  panel.querySelectorAll('.exp-btn').forEach(btn => btn.addEventListener('click', (e) => { e.stopPropagation(); exportAt(parseInt(btn.dataset.scale, 10)); }));
+})();
+</script>
+
+</body>
+</html>

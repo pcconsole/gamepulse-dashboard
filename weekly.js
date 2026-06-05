@@ -2,6 +2,17 @@
 // 每周生成新周报时，在数组顶部追加一条
 window.WEEKLY_REPORTS = [
   {
+    week: 'W22',
+    date: '2026-06-05',
+    periodStart: '2026-06-01',
+    periodEnd: '2026-06-05',
+    title: '端主行业周报 W22：GTA6前的9月大逃杀 · Valve反垄断风暴',
+    summary: 'State of Play 60分钟20+款游戏，9月11天5款大作扎堆抢GTA6前窗口；Valve解封文件首次实锤定价控制，英美双线诉讼进入决战；Xbox CEO Sharma首次表态"必须有独占"。',
+    file: 'weekly/Weekly_Briefing_20260605.html',
+    tags: ['State of Play', '9月大逃杀', 'Valve反垄断', 'Xbox独占', 'GTA6'],
+    highlight: true
+  },
+  {
     week: 'M05',
     date: '2026-06-01',
     periodStart: '2026-05-01',
