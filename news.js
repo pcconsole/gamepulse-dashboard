@@ -1,13 +1,135 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.2 自动更新，请勿手动编辑
-// 最后更新: 2026-06-10T18:00:00Z
-// 更新者: news-agent (v5.2 腾讯文档MCP+web_search 14轮+新增15条+90天清理17条)
+// 最后更新: 2026-06-11T18:00:00Z
+// 更新者: news-agent (v5.2 腾讯文档MCP+web_search 14轮+新增3条+90天清理0条)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
 // ============================================
 const newsData = [
+  {
+    id: 1711,
+    title: "Xbox发布'Next 100 Days'重置备忘录，利润率仅3%，7月将大规模裁员",
+    summary: "Xbox CEO Asha Sharma与EVP Matt Booty联名发布内部备忘录'Next 100 Days: Xbox Reset'，承认Xbox'accountability margin'已跌至仅3%，多年重投入未换来收入增长。Sharma称现状'this cannot continue'。备忘录概述四大重置方向：硬件(Helix)、内容(独占优先)、体验、服务(Game Pass)。Bloomberg同日报道微软计划7月进行大规模裁员并大幅削减营销预算。这是Xbox史上最严厉的业务自省。",
+    source: "Bloomberg",
+    sourceUrl: "https://www.geekwire.com/2026/this-cannot-continue-microsoft-xbox-ceo-calls-for-reset-amid-reports-of-impending-job-cuts/",
+    sourceUrls: [
+      {
+        name: "Bloomberg",
+        url: "https://www.geekwire.com/2026/this-cannot-continue-microsoft-xbox-ceo-calls-for-reset-amid-reports-of-impending-job-cuts/"
+      },
+      {
+        name: "Eurogamer",
+        url: "https://www.eurogamer.net/xbox-layoffs-business-reset"
+      },
+      {
+        name: "TweakTown",
+        url: "https://www.tweaktown.com/news/112137/xbox-to-hold-major-layoffs-as-profit-margins-drop-to-3-percent/index.html"
+      },
+      {
+        name: "Gematsu",
+        url: "https://www.gematsu.com/2026/06/xbox-ceo-asha-sharma-and-executive-vice-president-matt-booty-publish-staff-memo-next-100-days-xbox-reset"
+      },
+      {
+        name: "IT之家",
+        url: "https://www.ithome.com/0/962/715.htm"
+      }
+    ],
+    category: "policy",
+    importance: "high",
+    featured: true,
+    date: "2026-06-11",
+    tags: [
+      "Xbox",
+      "Microsoft",
+      "裁员",
+      "Xbox Reset",
+      "Asha Sharma"
+    ],
+    sentiment: "negative",
+    tdocMarking: "tdoc-verified",
+    analysis: "Xbox Reset备忘录是微软游戏业务687亿美元收购动视暴雪后最深层的自省(What)。3%利润率意味着游戏部门在微软集团内部已成为利润率最低的业务之一，687亿并购尚未产生预期回报，Game Pass降价+CoD退出首日入库进一步压缩了收入(Why)。7月裁员将是2024年以来的第四轮，叠加营销预算削减，意味着Xbox从'不惜代价扩张'转向'盈利优先'的硬着陆(So What)。若裁员波及工作室，第一方3A产能可能进一步萎缩，Helix主机2027年发售时的首发阵容存在变数；Game Pass涨价与降价的拉锯战也将考验用户留存(What Next)。",
+    relatedNewsIds: [213, 199, 1439]
+  },
+  {
+    id: 1712,
+    title: "《最终幻想16》领衔6月PS Plus游戏目录，6月16日上线",
+    summary: "索尼公布2026年6月PS Plus Extra/Premium游戏目录更新，领衔作品为《最终幻想16》(PS5)，另有《索尼克x夏特：世代重启》《天国：拯救》《奇异人生：双重曝光》等。这也是PS Plus涨价后首个游戏目录更新，6月16日全区域上线。",
+    source: "PlayStation Blog",
+    sourceUrl: "https://blog.playstation.com/2026/06/10/playstation-plus-game-catalog-for-june-final-fantasy-xvi-sonic-x-shadow-generations-kingdom-come-deliverance-and-more/",
+    sourceUrls: [
+      {
+        name: "PlayStation Blog",
+        url: "https://blog.playstation.com/2026/06/10/playstation-plus-game-catalog-for-june-final-fantasy-xvi-sonic-x-shadow-generations-kingdom-come-deliverance-and-more/"
+      },
+      {
+        name: "IGN",
+        url: "https://www.ign.com/articles/playstation-plus-game-catalog-for-june-2026-headlined-by-final-fantasy-16-and-kingdom-come-deliverance"
+      },
+      {
+        name: "VGC",
+        url: "https://www.videogameschronicle.com/news/final-fantasy-16-headlines-junes-ps-plus-game-catalog-additions/"
+      },
+      {
+        name: "3DM",
+        url: "https://www.3dmgame.com/news/202606/3946097.html"
+      }
+    ],
+    category: "platform",
+    importance: "medium",
+    featured: true,
+    date: "2026-06-11",
+    tags: [
+      "PS Plus",
+      "PlayStation",
+      "Final Fantasy 16",
+      "订阅服务"
+    ],
+    sentiment: "positive",
+    tdocMarking: "tdoc-verified",
+    relatedNewsIds: []
+  },
+  {
+    id: 1713,
+    title: "任天堂直面会缺乏重磅IP新作，股价单日暴跌7.5%",
+    summary: "任天堂6月10日直面会因未公布《超级马力欧》等重磅IP新作，投资者信心受挫，东京证券交易所任天堂股价单日下跌7.5%，盘中一度跌超8.5%至7073日元。市场担忧Switch 2缺乏能带动销量的扛鼎之作。任天堂股价年初至今已累计下跌约33%。",
+    source: "Reuters",
+    sourceUrl: "https://www.fxleaders.com/news/2026/06/10/nintendo-shares-slide-7-5-as-switch-2-content-concerns-deepen-technicals-signal-weakness-after-33-ytd-drop/",
+    sourceUrls: [
+      {
+        name: "Reuters",
+        url: "https://www.fxleaders.com/news/2026/06/10/nintendo-shares-slide-7-5-as-switch-2-content-concerns-deepen-technicals-signal-weakness-after-33-ytd-drop/"
+      },
+      {
+        name: "AnalyticsInsight",
+        url: "https://www.analyticsinsight.net/news/nintendo-stock-falls-nearly-8-after-june-direct-misses-major-franchise-release"
+      },
+      {
+        name: "TweakTown",
+        url: "https://www.tweaktown.com/news/112124/nintendo-stocks-fall-over-7-percent-as-new-direct-fails-to-impress-investors/index.html"
+      },
+      {
+        name: "IT之家",
+        url: "https://www.ithome.com/0/962/462.htm"
+      }
+    ],
+    category: "platform",
+    importance: "high",
+    featured: true,
+    date: "2026-06-10",
+    tags: [
+      "Nintendo",
+      "Switch 2",
+      "直面会",
+      "股价",
+      "投资"
+    ],
+    sentiment: "negative",
+    tdocMarking: "tdoc-verified",
+    analysis: "任天堂直面会后股价暴跌7.5%是资本市场对Switch 2内容短板的严厉审判(What)。虽然公布了王国之心4/塞尔达时之笛/火焰纹章等第三方作品，但缺少第一方3D马力欧等核心IP让投资者质疑Switch 2的长期驱动力——尤其在日本涨价87%销量暴跌和FY27预测下调16.9%的背景下(Why)。年初至今33%跌幅已反映市场对'涨价+内存成本+内容空窗'三重压力的定价，此次暴跌进一步加深了'任天堂是否还有下一个马力欧时刻'的疑虑(So What)。下半年能否通过独立直面会或惊喜公布提振信心，将决定Switch 2能否在PS6和Helix发售前巩固用户基础(What Next)。",
+    relatedNewsIds: [1680, 1655]
+  },
   {
     id: 1710,
     title: "《任天堂Switch运动度假胜地》10月22日发售",
