@@ -2,6 +2,17 @@
 // 每周生成新周报时，在数组顶部追加一条
 window.WEEKLY_REPORTS = [
   {
+    week: 'W23',
+    date: '2026-06-12',
+    periodStart: '2026-06-06',
+    periodEnd: '2026-06-12',
+    title: '端主行业周报 W23：Xbox重置风暴·任天堂Direct·GP涨价反噬',
+    summary: 'Xbox Showcase 6/7公布10款第一方仅2款永久独占，6/11内部备忘录披露5年投$200亿收入反降$5亿利润率仅3%、7月或大规模裁员；任天堂Direct阵容华丽但股价跌7.5%；Q1全球游戏收入7季连增达$541亿。',
+    file: 'weekly/Weekly_Briefing_20260612.html',
+    tags: ['Xbox重置', 'GP反噬', '内部备忘录', '任天堂Direct', 'Helix'],
+    highlight: true
+  },
+  {
     week: 'W22',
     date: '2026-06-05',
     periodStart: '2026-06-01',
