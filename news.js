@@ -1,13 +1,180 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.2 自动更新，请勿手动编辑
-// 最后更新: 2026-06-11T18:00:00Z
-// 更新者: news-agent (v5.2 腾讯文档MCP+web_search 14轮+新增3条+90天清理0条)
+// 最后更新: 2026-06-12T18:00:00Z
+// 更新者: news-agent (v5.2 腾讯文档MCP+web_search 14轮+新增8条+90天清理0条)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
 // ============================================
 const newsData = [
+  {
+    id: 1714,
+    title: "育碧第6波裁员约380人，关闭温尼伯和贝尔格莱德两家工作室",
+    summary: "育碧宣布2026年第6波裁员，关闭加拿大温尼伯和塞尔维亚贝尔格莱德两家工作室，约380人受影响。温尼伯工作室核心为Rainbow Six Mobile团队，贝尔格莱德为技术支持工作室。巴塞罗那工作室也进行重组。这是育碧近年来持续裁员的最新一轮，反映出公司面临的财务压力和业务调整需求。员工曾发起三天国际罢工抗议重组，并要求CEO辞职。",
+    source: "Kotaku",
+    sourceUrl: "https://kotaku.com/ubisoft-closing-two-studios-and-cutting-up-to-380-staff-as-tough-restructuring-continues-2000704940",
+    sourceUrls: [
+      { name: "Kotaku", url: "https://kotaku.com/ubisoft-closing-two-studios-and-cutting-up-to-380-staff-as-tough-restructuring-continues-2000704940" },
+      { name: "VGC", url: "https://www.videogameschronicle.com/news/ubisoft-closing-multiple-studios/" },
+      { name: "Eurogamer", url: "https://www.eurogamer.net/ubisoft-two-studio-closures-layoffs" },
+      { name: "IT之家", url: "https://www.ithome.com/0/962/724.htm" }
+    ],
+    category: "policy",
+    importance: "high",
+    featured: true,
+    date: "2026-06-11",
+    tags: ["育碧", "裁员", "工作室关闭", "Rainbow Six", "重组"],
+    sentiment: "negative",
+    tdocMarking: "bold",
+    analysis: "育碧2026年已进行6波裁员，关闭工作室频率加快，反映其持续亏损下的激进收缩策略。温尼伯工作室关停意味着R6 Mobile项目严重受挫，巴塞罗那重组暗示欧陆研发中心在收缩。与Xbox同日宣布裁员，两大发行商同步收缩表明行业寒冬仍在加剧，中期可能看到更多中小工作室被收购或倒闭。",
+    relatedNewsIds: [1711, 1655, 1643, 1600]
+  },
+  {
+    id: 1715,
+    title: "Xbox备忘录确认Project Helix目标2027假日季，存储成本将涨5倍",
+    summary: "Xbox内部备忘录确认下一代主机Project Helix目标2027假日季推出。备忘录同时警告存储芯片成本已较2025年秋季翻4倍，预计2027年将涨至5倍，AI芯片需求导致供应链紧张。首席战略官Matthew Ball表示正重新思考Helix方案。该主机将搭载AMD定制SoC、整合Steam功能，性能对标$3000高端PC，但售价约$1200。",
+    source: "IGN",
+    sourceUrl: "https://www.ign.com/articles/new-xbox-memo-holiday-2027-project-helix-rumors",
+    sourceUrls: [
+      { name: "IGN", url: "https://www.ign.com/articles/new-xbox-memo-holiday-2027-project-helix-rumors" },
+      { name: "TechTimes", url: "https://www.techtimes.com/articles/318243/20260611/xbox-warns-storage-costs-hit-5x-2027-ai-chip-demand-breaks-console-subsidy-model.htm" },
+      { name: "Eurogamer", url: "https://www.eurogamer.net/xbox-matthew-ball-on-component-shortages-project-helix" },
+      { name: "IT之家", url: "https://www.ithome.com/0/962/716.htm" }
+    ],
+    category: "hardware",
+    importance: "high",
+    featured: true,
+    date: "2026-06-11",
+    tags: ["Xbox", "Project Helix", "次世代主机", "存储成本", "AMD"],
+    sentiment: "neutral",
+    tdocMarking: "bold",
+    analysis: "Project Helix 2027假日季的时间线与PS6预期同步，两大平台将再次同代竞争。存储成本5倍涨幅是最大变量：若AI芯片需求持续挤压NAND/DRAM产能，主机BOM成本可能突破$800，$1200售价也难以盈利。微软可能采用分期付款或订阅捆绑模式降低门槛。这将是主机史上首次面对AI算力与游戏硬件争夺供应链的格局。",
+    relatedNewsIds: [1711, 1692, 1648, 1539]
+  },
+  {
+    id: 1716,
+    title: "Xbox CEO暗示'全新商业模式'，可能今年推出更便宜的主机",
+    summary: "Xbox CEO Asha Sharma暗示正在探索'完全不同的商业模式'(radically different business models)，并可能在今年推出更便宜的主机。这显示Xbox正试图通过订阅服务、分期付款等方式降低主机准入门槛，让更多玩家进入Xbox生态。Sharma表示平台'必须有独占内容'，但需要先让业务恢复健康。",
+    source: "Eurogamer",
+    sourceUrl: "https://www.eurogamer.net/xbox-ceo-new-console-business-models-in-2026",
+    sourceUrls: [
+      { name: "Eurogamer", url: "https://www.eurogamer.net/xbox-ceo-new-console-business-models-in-2026" },
+      { name: "VGC", url: "https://www.videogameschronicle.com/news/xbox-is-exploring-radically-different-business-models-to-make-its-next-console-affordab" },
+      { name: "GamesIndustry", url: "https://www.gamesindustry.biz/xbox-ceo-outlines-strategy-to-prioritise-cost-efficiency-and-exclusive-titles-over-premium-hardware" }
+    ],
+    category: "platform",
+    importance: "high",
+    featured: true,
+    date: "2026-06-10",
+    tags: ["Xbox", "Asha Sharma", "商业模式", "主机定价", "独占"],
+    sentiment: "neutral",
+    tdocMarking: "none",
+    analysis: "Sharma的'全新商业模式'信号强烈：可能是手机式分期付款、Game Pass捆绑硬件零元购、或Cloud+本地混合架构的低配版主机。结合Helix存储成本5倍警告，Xbox很可能推出双轨硬件策略——高端Helix+低价流媒体/云主机。今年内推出更便宜主机意味着可能不是Helix，而是现有Series X/S的降价版或Cloud专用设备。",
+    relatedNewsIds: [1715, 1711, 1692, 1648]
+  },
+  {
+    id: 1717,
+    title: "Valve宣布年底全面停售Steam实体礼品卡，遏制诈骗",
+    summary: "Valve宣布为遏制诈骗，2026年12月31日起将全面停止向全球零售渠道供应Steam实体礼品卡，即日起不再向零售商补货。诈骗者长期利用实体礼品卡欺骗用户，Valve此前多次加强限制但诈骗者总能找到新方法绕过。停售实体卡后，玩家仍可使用数字礼品卡。这是Valve打击欺诈的激进措施，也是PC游戏零售进一步数字化的标志。",
+    source: "TechSpot",
+    sourceUrl: "https://www.techspot.com/news/112714-valve-confirms-physical-steam-gift-cards-discontinued-after.html",
+    sourceUrls: [
+      { name: "TechSpot", url: "https://www.techspot.com/news/112714-valve-confirms-physical-steam-gift-cards-discontinued-after.html" },
+      { name: "Eurogamer", url: "https://www.eurogamer.net/steam-valve-ends-physical-gift-cards" },
+      { name: "IT之家", url: "https://www.ithome.com/0/962/844.htm" }
+    ],
+    category: "platform",
+    importance: "medium",
+    featured: true,
+    date: "2026-06-11",
+    tags: ["Steam", "Valve", "礼品卡", "反诈骗", "数字化"],
+    sentiment: "neutral",
+    tdocMarking: "none",
+    relatedNewsIds: []
+  },
+  {
+    id: 1718,
+    title: "《红色沙漠》83天销量突破600万份，美国年度销量第二",
+    summary: "Pearl Abyss宣布《红色沙漠》(Crimson Desert)发售83天全球累计销量突破600万份，位列2026年美国年度销量排行榜第二。该作自3月发售以来持续热销，成为2026年最大黑马之一。Pearl Abyss同时透露DLC和后续更新计划正在进行中。",
+    source: "Pearl Abyss官方",
+    sourceUrl: "https://pressreleases.triplepointpr.com/2026/06/11/crimson-desert-surpasses-6-million-copies-sold-worldwide/",
+    sourceUrls: [
+      { name: "Pearl Abyss PR", url: "https://pressreleases.triplepointpr.com/2026/06/11/crimson-desert-surpasses-6-million-copies-sold-worldwide/" },
+      { name: "GamerBraves", url: "https://www.gamerbraves.com/crimson-desert-hits-6-million-copies-sold/" },
+      { name: "PushSquare", url: "https://www.pushsquare.com/news/2026/06/crimson-desert-hits-six-million-sales-milestone-inside-three-months" },
+      { name: "3DM", url: "https://www.3dmgame.com/news/202606/3946135.html" }
+    ],
+    category: "game",
+    importance: "high",
+    featured: true,
+    date: "2026-06-11",
+    tags: ["红色沙漠", "Pearl Abyss", "销量", "600万"],
+    sentiment: "positive",
+    tdocMarking: "bold",
+    relatedNewsIds: [1678, 1685, 1654]
+  },
+  {
+    id: 1719,
+    title: "《生化危机：维罗妮卡》公布一周愿望单破100万",
+    summary: "卡普空宣布《生化危机：维罗妮卡》重制版在SGF公布不到一周内，Steam和主机商店愿望单总数已突破100万，显示玩家对这款重制版的高度期待。该作是《生化危机 代号：维罗妮卡》的完全重制版，计划2027年发售。",
+    source: "PushSquare",
+    sourceUrl: "https://www.pushsquare.com/news/2026/06/resident-evil-veronica-ps5-remake-in-demand-with-one-million-wishlists",
+    sourceUrls: [
+      { name: "PushSquare", url: "https://www.pushsquare.com/news/2026/06/resident-evil-veronica-ps5-remake-in-demand-with-one-million-wishlists" },
+      { name: "GamingBolt", url: "https://gamingbolt.com/resident-evil-veronica-has-already-crossed-1-million-wishlists" },
+      { name: "GameReactor", url: "https://www.gamereactor.eu/resident-evil-veronica-has-reached-a-million-wishlists-after-only-one-week-1734203/" },
+      { name: "3DM", url: "https://www.3dmgame.com/news/202606/3946130.html" }
+    ],
+    category: "game",
+    importance: "medium",
+    featured: true,
+    date: "2026-06-11",
+    tags: ["生化危机", "卡普空", "维罗妮卡", "重制版", "愿望单"],
+    sentiment: "positive",
+    tdocMarking: "none",
+    relatedNewsIds: [1701, 1699, 1648]
+  },
+  {
+    id: 1720,
+    title: "世嘉为Sonic Team大规模招聘，暗示系列新作筹备",
+    summary: "世嘉正在为Sonic Team进行大规模招聘，开放职位包括制作人、剧本作家、主策划、技术美术等多个核心岗位。时值索尼克系列35周年，此次招聘力度前所未有，暗示世嘉可能在筹备系列下一款重要3D作品。",
+    source: "Eurogamer",
+    sourceUrl: "https://www.eurogamer.net/sonic-team-hiring-35th-anniversary",
+    sourceUrls: [
+      { name: "Eurogamer", url: "https://www.eurogamer.net/sonic-team-hiring-35th-anniversary" },
+      { name: "MyNintendoNews", url: "https://mynintendonews.com/2026/06/11/sega-is-heavily-recruiting-for-sonic-team/" },
+      { name: "SonicStadium", url: "https://www.sonicstadium.org/articles/sega/sega-is-massively-scaling-up-sonic-team-and-theyre-hiring-for-everything-r3475/" }
+    ],
+    category: "game",
+    importance: "low",
+    featured: false,
+    date: "2026-06-11",
+    tags: ["世嘉", "索尼克", "Sonic Team", "招聘"],
+    sentiment: "neutral",
+    tdocMarking: "none",
+    relatedNewsIds: []
+  },
+  {
+    id: 1721,
+    title: "Xbox CEO：业务恢复健康后将推出更多独占游戏",
+    summary: "Xbox CEO Asha Sharma表示，在Xbox业务恢复健康后，将尝试推出更多独占游戏。这标志着微软策略的转变，从'万物皆Xbox'的跨平台策略回归主机独占策略，以强化Xbox主机竞争力。Sharma称平台'必须有独占内容'，计划每年至少推出一款独占游戏。目前已确认《战争机器：事变日》和《发条革命》为独占作品。",
+    source: "GamesIndustry.biz",
+    sourceUrl: "https://www.gamesindustry.biz/xbox-ceo-outlines-strategy-to-prioritise-cost-efficiency-and-exclusive-titles-over-premium-hardware",
+    sourceUrls: [
+      { name: "GamesIndustry", url: "https://www.gamesindustry.biz/xbox-ceo-outlines-strategy-to-prioritise-cost-efficiency-and-exclusive-titles-over-premium-hardware" },
+      { name: "IT之家", url: "https://www.ithome.com/0/962/403.htm" },
+      { name: "Kotaku", url: "https://kotaku.com/xbox-ceo-says-its-not-in-a-healthy-spot-the-next-100-days-is-going-to-be-about-resetting-the-business-2000702973" }
+    ],
+    category: "platform",
+    importance: "medium",
+    featured: true,
+    date: "2026-06-10",
+    tags: ["Xbox", "独占", "Asha Sharma", "策略转变"],
+    sentiment: "neutral",
+    tdocMarking: "none",
+    relatedNewsIds: [1716, 1711, 1692, 1648]
+  },
   {
     id: 1711,
     title: "Xbox发布'Next 100 Days'重置备忘录，利润率仅3%，7月将大规模裁员",
