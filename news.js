@@ -1,13 +1,200 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.2 自动更新，请勿手动编辑
-// 最后更新: 2026-06-15T18:00:00Z
-// 更新者: news-agent (v5.2 腾讯文档MCP+web_search 14轮+新增10条+90天清理52条)
+// 最后更新: 2026-06-16T18:00:00Z
+// 更新者: news-agent (v5.2 腾讯文档MCP+web_search 14轮+新增9条+90天清理)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
 // ============================================
 const newsData = [
+  {
+    id: 1740,
+    title: "《黎明行者之血》发售前愿望单突破150万",
+    summary: "Rebel Wolves开发的《黎明行者之血》(The Blood of Dawnwalker)在9月发售前Steam愿望单数量已达近150万。该作由前《巫师3》总监Konrad Tomaszkiewicz领衔开发，万代南梦宫发行，是一款开放世界黑暗幻想动作RPG。夏日游戏节展示预告片末尾的现代背景画面被证实为片尾彩蛋，暗示系列化布局。",
+    source: "GamingBolt",
+    sourceUrl: "https://gamingbolt.com/the-blood-of-dawnwalker-reaches-nearly-1-5-million-wishlists-ahead-of-september-launch",
+    sourceUrls: [
+      { name: "GamingBolt", url: "https://gamingbolt.com/the-blood-of-dawnwalker-reaches-nearly-1-5-million-wishlists-ahead-of-september-launch" },
+      { name: "IT之家", url: "https://www.ithome.com/0/964/618.htm" },
+    ],
+    category: "game",
+    importance: "medium",
+    featured: false,
+    date: "2026-06-14",
+    tags: ["黎明行者之血","Dawnwalker","Rebel Wolves","万代","愿望单"],
+    sentiment: "positive",
+    tdocMarking: "none",
+    relatedNewsIds: [1718,1716]
+  },
+  {
+    id: 1739,
+    title: "Steam 6月版新品节开幕，近5000款免费试玩上线",
+    summary: "2026年度Steam6月版新品节于6月15日开幕，持续至6月22日。本届新品节提供近5000款免费试玩demo，创历史新高。重点作品包括《Among Us Story: On Guard》和《EMPULSE》等。新品节期间玩家可直接安装试玩或将心仪作品加入愿望单，开发商也可通过直播与玩家互动。",
+    source: "TechTimes",
+    sourceUrl: "https://www.techtimes.com/articles/318387/20260615/steam-next-fest-june-2026-opens-today-nearly-5000-free-demos-are-now-live.htm",
+    sourceUrls: [
+      { name: "TechTimes", url: "https://www.techtimes.com/articles/318387/20260615/steam-next-fest-june-2026-opens-today-nearly-5000-free-demos-are-now-live.htm" },
+      { name: "IT之家", url: "https://www.ithome.com/0/964/657.htm" },
+      { name: "Steamworks", url: "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest/2026june" },
+    ],
+    category: "platform",
+    importance: "medium",
+    featured: false,
+    date: "2026-06-15",
+    tags: ["Steam","Valve","新品节","Next Fest","试玩"],
+    sentiment: "positive",
+    tdocMarking: "none",
+    relatedNewsIds: []
+  },
+  {
+    id: 1738,
+    title: "Xbox将引入先买后付分期付款，Klarna和PayPal合作",
+    summary: "Xbox官网后台代码曝光显示微软即将在Xbox商店引入先买后付(BNPL)分期付款服务，支持PayPal和Klarna两大支付平台。用户可将游戏和硬件消费分周或月支付，无需利息。此举旨在降低游戏购买门槛，扩大Xbox生态的用户基础，也是Sharma此前暗示创新商业模式的具体落地。",
+    source: "Windows Central",
+    sourceUrl: "https://www.windowscentral.com/gaming/xbox/microsoft-is-gearing-up-to-let-you-spread-the-cost-of-xbox-purchases-partnering-with-klarna-and-paypal",
+    sourceUrls: [
+      { name: "Windows Central", url: "https://www.windowscentral.com/gaming/xbox/microsoft-is-gearing-up-to-let-you-spread-the-cost-of-xbox-purchases-partnering-with-klarna-and-paypal" },
+      { name: "Kotaku", url: "https://kotaku.com/xbox-series-x-klarna-paypal-pay-later-financing-microsoft-2000706625" },
+      { name: "IT之家", url: "https://www.ithome.com/0/964/592.htm" },
+    ],
+    category: "platform",
+    importance: "medium",
+    featured: true,
+    date: "2026-06-14",
+    tags: ["Xbox","微软","分期付款","Klarna","PayPal","BNPL"],
+    sentiment: "neutral",
+    tdocMarking: "none",
+    relatedNewsIds: [1722,1721,1714]
+  },
+  {
+    id: 1737,
+    title: "任天堂遭遇数据泄露，黑客窃取859MB员工敏感信息并勒索200万美元",
+    summary: "黑客组织SHADOWBYT3$声称入侵任天堂HR平台TINYpulse系统，窃取约859MB内部数据，包括2016-2026年间员工银行流水等敏感信息，并索要200万美元赎金。任天堂尚未正式回应。此次攻击针对的是第三方HR系统而非任天堂核心游戏基础设施，但泄露范围和勒索金额仍引发行业对游戏公司数据安全的关注。",
+    source: "Cybernews",
+    sourceUrl: "https://cybernews.com/security/nintendo-employee-data-ransom-claim/",
+    sourceUrls: [
+      { name: "Cybernews", url: "https://cybernews.com/security/nintendo-employee-data-ransom-claim/" },
+      { name: "Nintendo Life", url: "https://www.nintendolife.com/news/2026/06/hacker-group-claims-to-have-stolen-nintendo-data-posts-usd2-million-ransom" },
+      { name: "Nintendo Everything", url: "https://nintendoeverything.com/rumor-nintendo-hit-with-data-breach-hacker-steals-859mb-of-data-via-tinypulse/" },
+      { name: "3DM", url: "https://www.3dmgame.com/news/202606/3946448.html" },
+    ],
+    category: "market",
+    importance: "medium",
+    featured: true,
+    date: "2026-06-15",
+    tags: ["任天堂","数据泄露","黑客","SHADOWBYT3","勒索","安全"],
+    sentiment: "negative",
+    tdocMarking: "none",
+    relatedNewsIds: [1728]
+  },
+  {
+    id: 1736,
+    title: "巴西法院重罚苹果/微软/腾讯等，要求整改游戏盲盒机制",
+    summary: "巴西法院裁定苹果、微软、腾讯等公司因游戏中面向未成年人的盲盒机制违规，合计罚款近6000万美元。苹果单独被罚近1000万美元。该裁决基于2025年通过的《数字ECA法》(Lei 15.211/2025)，该法已禁止18岁以下用户购买盲盒。此次法院判决是数字ECA法实施以来最大规模执法行动，反映全球游戏监管趋严趋势。",
+    source: "9to5Mac",
+    sourceUrl: "https://9to5mac.com/2026/06/15/apple-among-companies-ordered-to-pay-nearly-60-million-in-brazil-over-loot-boxes/",
+    sourceUrls: [
+      { name: "9to5Mac", url: "https://9to5mac.com/2026/06/15/apple-among-companies-ordered-to-pay-nearly-60-million-in-brazil-over-loot-boxes/" },
+      { name: "MacObserver", url: "https://www.macobserver.com/news/apple-ordered-to-pay-nearly-10-million-in-brazil-over-loot-boxes-accessible-to-minors/" },
+      { name: "IT之家", url: "https://www.ithome.com/0/964/613.htm" },
+    ],
+    category: "policy",
+    importance: "high",
+    featured: true,
+    date: "2026-06-15",
+    tags: ["巴西","盲盒","loot box","监管","苹果","微软","腾讯","数字ECA"],
+    sentiment: "negative",
+    tdocMarking: "none",
+    analysis: "What: 巴西法院重罚多家科技巨头近6000万美元，因其游戏中的盲盒机制违规。Why: 2025年通过的数字ECA法禁止18岁以下购买盲盒，此次为该法实施以来最大规模执法。So What: 全球游戏监管趋严信号明确，中国/欧盟/巴西三大市场同步收紧盲盒政策，将迫使发行商重新设计商业化模型。What Next: 预计其他拉美国家将跟进巴西判例，跨国发行商可能需要为不同市场定制不同版本的商业化系统。",
+    relatedNewsIds: []
+  },
+  {
+    id: 1735,
+    title: "英国政府宣布禁止16岁以下儿童使用社交媒体",
+    summary: "英国首相基尔-斯塔默宣布禁止16岁以下儿童使用社交媒体，包括YouTube、TikTok、Snapchat、Instagram等平台。该政策作为《儿童福祉与学校法》的一部分，将于近期实施。同时将对直播、陌生人联系等功能实施限制。此举对游戏行业影响深远：Twitch和游戏内社交功能可能受限，主机/PC平台的年龄验证要求也将趋严。",
+    source: "GOV.UK",
+    sourceUrl: "https://www.gov.uk/government/publications/fact-sheet-new-rules-to-protect-children-online/fact-sheet-new-rules-to-protect-children-online",
+    sourceUrls: [
+      { name: "GOV.UK", url: "https://www.gov.uk/government/publications/fact-sheet-new-rules-to-protect-children-online/fact-sheet-new-rules-to-protect-children-online" },
+      { name: "TechCrunch", url: "https://techcrunch.com/2026/06/15/uk-unveils-sweeping-social-media-ban-for-users-under-16/" },
+      { name: "VGC", url: "https://www.videogameschronicle.com/news/uk-government-announces-ban-on-social-media-for-under-16s/" },
+    ],
+    category: "policy",
+    importance: "high",
+    featured: true,
+    date: "2026-06-14",
+    tags: ["英国","社交媒体","禁令","未成年人","监管","Twitch"],
+    sentiment: "neutral",
+    tdocMarking: "none",
+    analysis: "What: 英国禁止16岁以下使用社交媒体，覆盖YouTube/TikTok/Snapchat等。Why: 儿童在线安全立法趋势加速，《儿童福祉与学校法》2026年4月获御准后快速落地。So What: 对游戏行业影响三层——Twitch直播生态受冲击、游戏内社交功能需年龄验证、主机平台可能需要更严格的家长控制系统。What Next: 预计欧盟和其他英联邦国家将跟进，游戏发行商可能需要为青少年用户开发替代社交方案。",
+    relatedNewsIds: []
+  },
+  {
+    id: 1734,
+    title: "EA推出EA广告平台，允许品牌方在游戏中植入广告",
+    summary: "艺电正式推出EA Advertising平台，允许品牌方以非破坏性方式将广告植入EA游戏。首发合作品牌包括Visa、State Farm、Red Bull等。平台覆盖1.2亿月活用户，支持动态广告位、精准定向和效果衡量。初期聚焦EA Sports系列，从体育场标牌到定制游戏内内容均支持品牌植入。EA承诺广告不会干扰玩家体验，但此举在玩家社区引发对游戏内广告的争议。",
+    source: "BusinessWire",
+    sourceUrl: "https://www.businesswire.com/news/home/20260615782397/en/Electronic-Arts-Introduces-EA-Advertising-Launching-Brands-Directly-Into-Gameplay-and-Live-Experiences",
+    sourceUrls: [
+      { name: "BusinessWire", url: "https://www.businesswire.com/news/home/20260615782397/en/Electronic-Arts-Introduces-EA-Advertising-Launching-Brands-Directly-Into-Gameplay-and-Live-Experiences" },
+      { name: "CNBC", url: "https://www.cnbc.com/2026/06/15/electronic-arts-launches-a-new-way-to-advertise-directly-into-gameplay.html" },
+      { name: "Campaign", url: "https://www.campaignlive.com/article/electronic-arts-launches-new-in-game-advertising-platform-global-brands/1961648" },
+      { name: "IT之家", url: "https://www.ithome.com/0/964/579.htm" },
+    ],
+    category: "platform",
+    importance: "high",
+    featured: true,
+    date: "2026-06-14",
+    tags: ["EA","广告","Advertising","品牌植入","EA Sports","游戏内广告"],
+    sentiment: "neutral",
+    tdocMarking: "none",
+    analysis: "What: EA正式推出游戏内广告平台，品牌可直接在EA游戏中植入广告。Why: EA Sports系列（FIFA/Madden/NHL）的拟真体育场景天然适合品牌植入，1.2亿月活用户对广告主有巨大吸引力。So What: 若EA模式成功，其他3A发行商（Take-Two/2K Sports/Ubisoft）将跟进，游戏内广告可能成为继MTX和DLC之后的第三大商业化支柱，但玩家抵触情绪是最大风险。What Next: 预计2026-2027年其他体育类和竞速类游戏将推出类似平台，行业可能需要建立游戏内广告伦理准则。",
+    relatedNewsIds: [1721]
+  },
+  {
+    id: 1733,
+    title: "微软CEO纳德拉承认Xbox不赚钱：YouTube变现能力超过微软",
+    summary: "微软CEO萨提亚-纳德拉在访谈中承认，微软多年来一直在补贴Xbox而非靠其赚钱，并直言Xbox游戏在YouTube上的变现比在微软还多。纳德拉表示Xbox确实为用户提供了大量娱乐价值，但微软并未将这部分价值转化为收入。此番表态呼应了此前Xbox利润率仅3%的报道和内部备忘录中的改革呼声，凸显微软游戏业务的变现困境。",
+    source: "VGC",
+    sourceUrl: "https://www.videogameschronicle.com/news/microsoft-ceo-says-youtube-is-better-at-monetizing-xbox-content-than-microsoft/",
+    sourceUrls: [
+      { name: "VGC", url: "https://www.videogameschronicle.com/news/microsoft-ceo-says-youtube-is-better-at-monetizing-xbox-content-than-microsoft/" },
+      { name: "IT之家", url: "https://www.ithome.com/0/964/013.htm" },
+    ],
+    category: "policy",
+    importance: "high",
+    featured: true,
+    date: "2026-06-14",
+    tags: ["微软","纳德拉","Xbox","变现","YouTube","利润率"],
+    sentiment: "negative",
+    tdocMarking: "none",
+    analysis: "What: 微软CEO纳德拉公开承认Xbox不赚钱，YouTube对Xbox内容的变现能力超过微软自身。Why: Xbox利润率仅3%，内容生态的变现渠道被YouTube/Twitch等平台截流——玩家观看Xbox游戏内容产生的广告收入流向了谷歌而非微软。So What: 这解释了为何微软急于推行EA式广告平台和BNPL分期付款等新商业模式，也暗示Game Pass降价策略需要新的变现路径补充。What Next: 预计微软将加速Xbox内容生态的商业闭环建设，可能推出Xbox原生直播/短视频功能或创作者分成计划。",
+    relatedNewsIds: [1722,1721,1714]
+  },
+  {
+    id: 1732,
+    title: "Xbox多家工作室面临关闭，Compulsion/Ninja Theory/Double Fine或将独立或关停",
+    summary: "据Bloomberg和The Verge报道，微软正准备关闭或出售至少三家第一方工作室——Compulsion Games、Ninja Theory和Double Fine。多家工作室正就独立运营进行谈判以避免关闭。此前Xbox内部备忘录已确认7月将大规模裁员和削减预算。Ninja Theory上周刚展示《Senua》新作，关闭消息令业界震惊。这是Xbox利润率仅3%背景下的激进收缩行动。",
+    source: "VGC",
+    sourceUrl: "https://www.videogameschronicle.com/news/xbox-studios-compulsion-double-fine-and-ninja-theory-facing-closure-its-claimed/",
+    sourceUrls: [
+      { name: "VGC", url: "https://www.videogameschronicle.com/news/xbox-studios-compulsion-double-fine-and-ninja-theory-facing-closure-its-claimed/" },
+      { name: "Engadget", url: "https://www.engadget.com/2194941/xbox-closing-ninja-theory-double-fine-compulsion-game-studios/" },
+      { name: "Bloomberg", url: "https://www.bloomberg.com/news/articles/2026-06-16/microsoft-xbox-studio-closures" },
+      { name: "VGChartz", url: "https://www.vgchartz.com/article/468219/ninja-theory-double-fine-and-compulsion-games-reportedly-in-talks-to-spin-off-from-xbox-as-they-face-closure/" },
+      { name: "IT之家", url: "https://www.ithome.com/0/964/618.htm" },
+    ],
+    category: "policy",
+    importance: "high",
+    featured: true,
+    date: "2026-06-15",
+    tags: ["Xbox","微软","工作室关闭","Ninja Theory","Double Fine","Compulsion Games","裁员"],
+    sentiment: "negative",
+    tdocMarking: "none",
+    analysis: "What: 微软准备关闭或出售Compulsion/Ninja Theory/Double Fine三家工作室，部分正谈判独立运营。Why: Xbox利润率仅3%，7月裁员+削减预算是结构性改革的延续，关闭低产出工作室是最直接的成本削减手段。So What: Ninja Theory刚展示Senua新作即面临关闭，对开发者信心和Xbox第一方内容产能是重大打击；若工作室成功独立，可能开创被收购工作室反向MBO的新模式。What Next: 7月裁员窗口期可能有更多工作室受影响，Obsidian/Playground/Infinity Ward等核心工作室是否安全将是行业关注焦点。",
+    relatedNewsIds: [1722,1721,1714,1711]
+  },
   {
     id: 1731,
     title: "《幻兽帕鲁》专利诉讼接近尾声，任天堂几乎一无所获",
