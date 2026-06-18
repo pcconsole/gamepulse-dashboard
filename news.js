@@ -203,7 +203,7 @@ const newsData = [
   {
     id: 1750,
     title: "Xbox首席战略官否认取消独占策略传闻，称每年将推独占作品",
-    summary: "Xbox首席战略官马修·鲍尔（Matthew Ball）公开否认"微软取消独占策略"传闻，明确表示未来Xbox每年都会推出独占作品。这一表态旨在消除外界对Xbox平台策略的疑虑，与CEO夏尔马此前"业务健康后尝试更多独占"的表态相呼应，确认微软正从全平台策略回归独占路线。",
+    summary: "Xbox首席战略官马修·鲍尔（Matthew Ball）公开否认\u201C微软取消独占策略\u201D传闻，明确表示未来Xbox每年都会推出独占作品。这一表态旨在消除外界对Xbox平台策略的疑虑，与CEO夏尔马此前\u201C业务健康后尝试更多独占\u201D的表态相呼应，确认微软正从全平台策略回归独占路线。",
     source: "IT之家",
     sourceUrl: "https://www.ithome.com/",
     sourceUrls: [
