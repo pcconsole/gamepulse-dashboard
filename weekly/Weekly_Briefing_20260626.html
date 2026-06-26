@@ -1,0 +1,403 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>端主行业周报 · W25</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4f6f9; --ink: #1e3a5f; --ink-2: #2c4a6e; --ink-dim: #4a5c6e; --ink-ghost: #7b8a99;
+    --red: #c85a4a; --red-bg: #f5e0db; --red-dim: #a0483b;
+    --gold: #8b6914; --gold-bg: #ede4cf;
+    --green: #3d6b57; --green-bg: #dde7e0;
+    --surface: #ffffff; --surface-2: #eef1f5;
+    --rule: #d5dce3; --rule-dim: #e5e9ee;
+    --sony: #003087; --xbox: #107c10; --steam: #1b2838;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #c8ced6; font-family: 'Microsoft YaHei', '微软雅黑', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  .page { width: 430px; background: var(--bg); color: var(--ink); margin: 0 auto; overflow: hidden; }
+
+  .hero { background: linear-gradient(135deg, #1e3a5f 0%, #2c4a6e 100%); color: white; padding: 22px 20px 26px; position: relative; }
+  .hero::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background: linear-gradient(90deg, var(--red) 0%, var(--gold) 100%); }
+  .hero .brand { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.3em; color: #c85a4a; font-weight: 700; margin-bottom: 10px; }
+  .hero h1 { font-size: 30px; font-weight: 800; line-height: 1.15; }
+  .hero .sub { font-size: 13px; color: rgba(255,255,255,0.75); margin-top: 8px; line-height: 1.5; }
+  .hero .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+  .hero .tags .pill { font-size: 9px; font-weight: 700; padding: 3px 8px; border-radius: 10px; letter-spacing: 0.02em; }
+  .hero .meta { display: flex; gap: 18px; margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.15); font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: rgba(255,255,255,0.7); letter-spacing: 0.1em; }
+  .hero .meta strong { color: white; font-weight: 700; }
+
+  .section { padding: 26px 20px 20px; }
+  .section + .section { border-top: 10px solid #e2e7ed; }
+  .sec-head { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid var(--ink); position: relative; }
+  .sec-head::after { content:''; position:absolute; left:0; bottom:-2px; width:50px; height:2px; background:var(--red); }
+  .sec-head .num { font-family: 'IBM Plex Mono', monospace; font-size: 32px; font-weight: 800; color: var(--red); line-height: 0.9; }
+  .sec-head .title { font-size: 18px; font-weight: 800; color: var(--ink); flex: 1; line-height: 1.3; }
+  .sec-head .title em { display: block; font-size: 12px; font-weight: 600; color: var(--red); font-style: normal; margin-top: 3px; }
+
+  .stbl { width: 100%; border-collapse: collapse; font-size: 11px; margin: 8px 0 10px; table-layout: fixed; }
+  .stbl thead { background: linear-gradient(135deg, #1e3a5f 0%, #2c4a6e 100%); color: white; }
+  .stbl th { text-align: left; padding: 6px 6px; font-weight: 700; font-size: 11px; letter-spacing: 0.08em; }
+  .stbl td { padding: 6px 6px; border-bottom: 1px solid var(--rule-dim); vertical-align: middle; line-height: 1.5; }
+  .stbl td:last-child { text-align: center; }
+  .stbl .num { font-family: 'IBM Plex Mono', monospace; font-weight: 600; white-space: nowrap; }
+  .stbl .hl-row { background: var(--red-bg); }
+  .stbl tbody tr:nth-child(even) { background: var(--surface-2); }
+
+  .insight { background: linear-gradient(135deg, #1e3a5f 0%, #263f5e 100%); border-radius: 6px; padding: 14px 16px; margin: 12px 0; color: rgba(255,255,255,0.92); font-size: 12px; line-height: 1.7; }
+  .insight .il { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: var(--red); margin-bottom: 8px; border-bottom: 1px dashed rgba(255,255,255,0.15); padding-bottom: 6px; font-weight: 700; }
+  .insight p { margin-bottom: 6px; }
+  .insight p:last-child { margin-bottom: 0; }
+  .insight em { font-style: normal; color: #f0a07a; font-weight: 700; }
+  .insight strong { color: #fff; }
+
+  .trend { background: var(--gold-bg); border-left: 4px solid var(--gold); padding: 10px 14px; margin: 10px 0 14px; border-radius: 0 5px 5px 0; font-size: 11px; line-height: 1.65; color: var(--ink-dim); }
+  .trend .tl { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: var(--gold); font-weight: 700; margin-bottom: 4px; }
+
+  .ev-line { background: var(--surface); border: 1px solid var(--rule-dim); border-radius: 5px; padding: 8px 12px; margin-bottom: 5px; font-size: 12px; line-height: 1.6; }
+  .ev-line .ev-head { display: flex; align-items: center; gap: 6px; margin-bottom: 2px; }
+  .ev-line .d { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--ink-ghost); font-weight: 600; }
+  .tg { font-size: 10px; font-weight: 700; padding: 1px 5px; border-radius: 2px; }
+  .tg-r { background: var(--red-bg); color: var(--red); }
+  .tg-b { background: #dce8f5; color: #2a5a8f; }
+  .tg-y { background: var(--gold-bg); color: var(--gold); }
+  .tg-g { background: var(--green-bg); color: var(--green); }
+  .tg-p { background: #e8e0f5; color: #5a3a8f; }
+
+  /* 危机数据卡 */
+  .crisis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 12px 0; }
+  .crisis-cell { background: #fbeeeb; border: 1px solid #f0d2ca; border-radius: 6px; padding: 10px 12px; }
+  .crisis-cell .cv { font-family: 'IBM Plex Mono', monospace; font-size: 19px; font-weight: 800; color: var(--red-dim); line-height: 1.1; }
+  .crisis-cell .cl { font-size: 11px; color: var(--ink-dim); margin-top: 4px; line-height: 1.4; }
+
+  .footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 20px; text-align: center; font-size: 10px; line-height: 1.8; }
+  .footer .logo { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.3em; color: white; margin-bottom: 8px; }
+</style>
+</head>
+<body>
+
+<!-- 导出工具栏 -->
+<div id="export-toolbar" style="position:fixed;top:10px;right:10px;z-index:9999;font-family:'Microsoft YaHei',sans-serif;user-select:none;">
+  <div style="display:flex;gap:6px;">
+    <button id="exp-main" style="background:#c85a4a;color:#fff;border:0;padding:6px 12px;border-radius:4px;font-size:11px;font-weight:700;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,0.2);letter-spacing:.05em;">📥 导出长图</button>
+  </div>
+  <div id="exp-panel" style="display:none;margin-top:6px;background:rgba(30,58,95,0.96);padding:8px;border-radius:4px;box-shadow:0 4px 12px rgba(0,0,0,0.25);">
+    <div style="display:flex;flex-direction:column;gap:4px;">
+      <button data-scale="2" class="exp-btn" style="background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.15);padding:6px 10px;border-radius:3px;font-size:10px;cursor:pointer;font-weight:600;">@2x · 860px</button>
+      <button data-scale="3" class="exp-btn" style="background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.15);padding:6px 10px;border-radius:3px;font-size:10px;cursor:pointer;font-weight:600;">@3x · 1290px（推荐）</button>
+      <button data-scale="4" class="exp-btn" style="background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.15);padding:6px 10px;border-radius:3px;font-size:10px;cursor:pointer;font-weight:600;">@4x · 1720px</button>
+    </div>
+    <div id="exp-status" style="font-size:9px;color:#ffb896;margin-top:6px;letter-spacing:.03em;line-height:1.3;min-height:11px;"></div>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="brand">GAMEPULSE · WEEKLY</div>
+    <h1>端主行业动态周报 W25</h1>
+    <div class="sub">PC & Console Industry Weekly Briefing</div>
+    <div class="tags">
+      <span class="pill" style="background:rgba(27,40,56,0.6);color:#9bb8d6;">Steam Machine发售</span>
+      <span class="pill" style="background:rgba(139,105,20,0.5);color:#f5ecd4;">GTA6预购</span>
+      <span class="pill" style="background:rgba(0,48,135,0.5);color:#a9c6f5;">索尼独占坐实</span>
+      <span class="pill" style="background:rgba(200,90,74,0.5);color:#ffd4c4;">RAM涨价反噬</span>
+    </div>
+    <div class="meta">
+      <span>DATE · <strong>2026.06.26</strong></span>
+      <span>COVERAGE · <strong>6.20 – 6.26</strong></span>
+    </div>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- PART 01 · Steam Machine 登场（40%）                               -->
+  <!-- ================================================================ -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="num">01</div>
+      <div class="title">Steam Machine登场：性能扎实，价格劝退<em>6/30发货 · $1049起 · 内存涨价吃掉性价比</em></div>
+    </div>
+
+    <!-- 核心判断卡 -->
+    <div style="background:linear-gradient(135deg,#1e3a5f 0%,#263f5e 100%);color:rgba(255,255,255,0.92);padding:14px 16px;border-radius:6px;margin-bottom:16px;border-left:4px solid var(--red);">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;color:var(--red);font-weight:700;margin-bottom:8px;">核心判断</div>
+      <div style="font-size:15px;font-weight:800;color:#fff;line-height:1.4;margin-bottom:10px;">机器口碑不差，价格却劝退</div>
+      <div style="display:flex;flex-direction:column;gap:7px;font-size:12px;line-height:1.55;">
+        <div style="display:flex;gap:9px;"><span style="min-width:30px;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:800;color:#82d99b;padding-top:2px;">口碑</span><div>IGN 8分、Digital Foundry"除价格外无敌"；机身安静、体积小巧是公认卖点</div></div>
+        <div style="display:flex;gap:9px;"><span style="min-width:30px;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:800;color:#f0a07a;padding-top:2px;">痛点</span><div><strong style="color:#fff;">$1049起售、比$600的PS5贵$450</strong>，早期帧率也不占上风</div></div>
+        <div style="display:flex;gap:9px;"><span style="min-width:30px;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:800;color:#f0a07a;padding-top:2px;">根因</span><div><strong style="color:#fff;">内存暴涨把原定$750推到$1049</strong>，Valve对内存厂"零议价权"</div></div>
+      </div>
+      <div style="margin-top:10px;padding-top:8px;border-top:1px dashed rgba(255,255,255,0.15);font-size:12px;font-weight:700;"><span style="color:#f0a07a;">结论</span>&nbsp;&nbsp;口碑在线、定位偏发烧友的高端客厅PC</div>
+    </div>
+
+    <!-- ① 价格 & 规格 -->
+    <div style="font-size:12px;font-weight:700;color:var(--ink-dim);margin:0 0 8px;">① 价格 · 四个版本（原定目标价仅 $700–800）</div>
+    <table class="stbl" style="margin:0 0 8px;text-align:center;">
+      <colgroup><col style="width:50%"><col style="width:50%"></colgroup>
+      <thead><tr><th style="text-align:center;">配置</th><th style="text-align:center;">美元</th></tr></thead>
+      <tbody>
+        <tr class="hl-row"><td>512GB</td><td class="num">$1049</td></tr>
+        <tr><td>512GB + 手柄</td><td class="num">$1128</td></tr>
+        <tr><td>2TB</td><td class="num">$1349</td></tr>
+        <tr><td>2TB + 手柄</td><td class="num">$1428</td></tr>
+      </tbody>
+    </table>
+    <div class="ev-line" style="border-left:3px solid var(--ink-dim);margin-bottom:8px;">
+      <div class="ev-head"><span class="tg tg-b">日/台/港</span><span class="d">KOMODO · 6/23</span></div>
+      <div class="ev-body">Valve亚洲官方分销商KOMODO在日台港<strong>6/23率先开售</strong>（早于全球6/30），512GB ¥189,980 / 2TB ¥249,980（约¥8500–11000），<strong>全配置迅速售罄</strong>——日本对紧凑型客厅PC接受度高。美/中等地仍待发售。</div>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:9px 12px;margin-bottom:14px;font-size:11px;color:var(--ink-dim);line-height:1.6;">
+      <strong style="color:var(--ink);">规格</strong>：半定制AMD Zen4（6核12线程）+ RDNA3（28CU）· 16GB DDR5 + 8GB GDDR6 · 512GB/2TB SSD · SteamOS · 号称Steam Deck 6倍 · DP1.4/HDMI2.0/USB-C · Wi-Fi 6E
+    </div>
+
+    <!-- ② 性能定位 -->
+    <div style="font-size:12px;font-weight:700;color:var(--ink-dim);margin:0 0 5px;">② 性能定位 ·《战神：诸神黄昏》帧率对照（LTT实测 · VRR开）</div>
+    <div style="font-size:11px;font-weight:700;color:var(--ink);margin:0 0 9px;padding:6px 10px;background:var(--surface-2);border-left:3px solid var(--ink);border-radius:0 4px 4px 0;">GPU性能 ≈ RTX 3060 / RX 7600 · 原生定位 1080p/60fps</div>
+    <table class="stbl" style="margin:0 0 6px;text-align:center;">
+      <colgroup><col style="width:36%"><col style="width:auto"><col style="width:62px"></colgroup>
+      <thead><tr><th style="text-align:center;">设备</th><th style="text-align:center;">画质设置</th><th style="text-align:center;">FPS</th></tr></thead>
+      <tbody>
+        <tr><td>PS5 Pro</td><td style="font-size:11px;">4K 默认</td><td class="num">110–112</td></tr>
+        <tr><td>PS5</td><td style="font-size:11px;">4K 默认</td><td class="num">75–78</td></tr>
+        <tr class="hl-row"><td>Steam Machine</td><td style="font-size:11px;">4K 中画+FSR质量</td><td class="num">60–63</td></tr>
+        <tr><td>Steam Machine</td><td style="font-size:11px;">1440p 优化</td><td class="num">70–73</td></tr>
+      </tbody>
+    </table>
+    <div style="background:var(--gold-bg);border-left:3px solid var(--gold);border-radius:0 5px 5px 0;padding:8px 12px;margin-bottom:14px;font-size:11px;color:var(--ink-dim);line-height:1.6;">
+      ⚠️ <strong style="color:var(--ink);">主机有深度底层优化，帧率不能与PC同口径直接对比</strong>，此表仅作大致参考（4K需降画质+升频）。定价$1049对比PS5 $600、PS5 Pro $900。<strong style="color:var(--red-dim);">但就早期实测看，Steam Machine帧率也不占上风。</strong>
+    </div>
+
+    <!-- ③ 评测口碑条 -->
+    <div style="font-size:12px;font-weight:700;color:var(--ink-dim);margin:0 0 6px;">③ 媒体评测 · 一致"硬件好、价格劝退"</div>
+    <div class="ev-line" style="border-left:3px solid var(--green);">
+      <div class="ev-head"><span class="tg tg-g">IGN 8分</span><span class="d">"PC游戏最实惠入场券"</span></div>
+      <div class="ev-body">数毛社（Digital Foundry）："除了价格外其他无敌"；Eurogamer："可爱但太贵"。静音紧凑是公认卖点。</div>
+    </div>
+    <div class="ev-line" style="border-left:3px solid var(--red);">
+      <div class="ev-head"><span class="tg tg-r">硬伤</span><span class="d">反作弊不兼容</span></div>
+      <div class="ev-body">内核级反作弊游戏（GTA Online、Apex、堡垒之夜、PUBG）<strong>无法运行</strong>；V社已低调撤下"4K 60帧"宣传语、承认误导。</div>
+    </div>
+
+    <!-- ④ 洞察 -->
+    <div class="insight">
+      <div class="il">三维洞察 · RAM根因 / 开放哲学 / 小众宿命</div>
+      <div style="display:flex;gap:8px;margin-bottom:10px;padding-bottom:10px;border-bottom:1px dashed rgba(255,255,255,0.12);">
+        <div style="min-width:38px;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:800;color:#82d99b;line-height:1.45;padding-top:2px;">RAM<br>根因</div>
+        <div><strong>$750→$1049，内存涨价直接吃掉性价比</strong><br>Valve亲承对内存厂"零议价权"，AI数据中心抢空消费级内存产能。<em>这正是W24"存储超级周期"的最实锤注脚。</em></div>
+      </div>
+      <div style="display:flex;gap:8px;margin-bottom:10px;padding-bottom:10px;border-bottom:1px dashed rgba(255,255,255,0.12);">
+        <div style="min-width:38px;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:800;color:#82d99b;line-height:1.45;padding-top:2px;">开放<br>哲学</div>
+        <div><strong>不补贴硬件，"不锁定"暗讽主机</strong><br>Valve拒绝主机"亏本卖硬件、靠独占/订阅回血"的模式："以低于成本卖硬件，是为了把你锁进封闭系统。"代价是Steam Machine只能按成本卖——<em>开放的理想，在存储涨价下成了实打实的溢价。</em></div>
+      </div>
+      <div style="display:flex;gap:8px;">
+        <div style="min-width:38px;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:800;color:#82d99b;line-height:1.45;padding-top:2px;">涨价<br>潮</div>
+        <div><strong>不止Steam Machine：硬件涨价潮已成型</strong><br>同期微软宣布<em>Xbox主机8/1全球涨价</em>（512GB +$100、2TB停产，直指"组件危机"）；分析师预警PS6/Helix也可能破$1000；美光称短缺要<em>2028年才逐步改善</em>。Steam Machine只是存储超级周期的第一张多米诺——<strong>高端游戏硬件正集体"奢侈品化"，且短期无解</strong>。</div>
+      </div>
+    </div>
+
+    <div class="trend">
+      <div class="tl">值得关注</div>
+      6/30正式发货后的真实供货与抢购情况 · 美国/中国等地区发售时间（目前仅日本开售并秒罄）· 高价是否拖累客厅市场渗透 · 是否倒逼Valve加速Steam Deck 2。
+    </div>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- PART 02 · GTA6 预购开启（25%）                                    -->
+  <!-- ================================================================ -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="num">02</div>
+      <div class="title">GTA6预购开启：暑期档发令枪<em>6/25预购 · $79.99起 · 11/19发售 · 仅数字版</em></div>
+    </div>
+
+    <!-- 核心判断卡 -->
+    <div style="background:linear-gradient(135deg,#1e3a5f 0%,#263f5e 100%);color:rgba(255,255,255,0.92);padding:14px 16px;border-radius:6px;margin-bottom:14px;border-left:4px solid var(--gold);">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#e0b85a;font-weight:700;margin-bottom:8px;">核心判断</div>
+      <div style="font-size:15px;font-weight:800;color:#fff;line-height:1.4;margin-bottom:10px;">定价克制，却全面数字化</div>
+      <div style="display:flex;flex-direction:column;gap:7px;font-size:12px;line-height:1.55;">
+        <div style="display:flex;gap:9px;"><span style="min-width:42px;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:800;color:#e0b85a;padding-top:1px;">价格</span><div><strong style="color:#fff;">标准版$79.99 / 终极版$99.99</strong>，11/19登陆PS5/Xbox</div></div>
+        <div style="display:flex;gap:9px;"><span style="min-width:42px;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:800;color:#82d99b;padding-top:1px;">利好</span><div>$80低于此前"$100传闻"属克制；Take-Two股价单日<strong style="color:#fff;">+5%</strong></div></div>
+        <div style="display:flex;gap:9px;"><span style="min-width:42px;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:800;color:#f0a07a;padding-top:1px;">争议</span><div><strong style="color:#fff;">仅数字版</strong>（实体盒内仅下载码），部分零售商抵制</div></div>
+      </div>
+    </div>
+
+    <!-- 版本/区服价格表 -->
+    <div style="font-size:12px;font-weight:700;color:var(--ink-dim);margin:0 0 8px;">① 各版本 / 区服价格</div>
+    <table class="stbl" style="margin:0 0 10px;">
+      <colgroup><col style="width:auto"><col style="width:96px"><col style="width:96px"></colgroup>
+      <thead><tr><th>区服</th><th>标准版</th><th>终极版</th></tr></thead>
+      <tbody>
+        <tr class="hl-row"><td>美区</td><td class="num">$79.99</td><td class="num">$99.99</td></tr>
+        <tr><td>港服</td><td class="num">HK$568</td><td class="num">HK$708</td></tr>
+        <tr><td><span style="font-size:10px;color:var(--ink-ghost);">约合人民币</span></td><td class="num" style="font-size:11px;">≈¥520</td><td class="num" style="font-size:11px;">≈¥648</td></tr>
+      </tbody>
+    </table>
+    <div style="background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:9px 12px;margin-bottom:14px;font-size:11px;color:var(--ink-dim);line-height:1.7;">
+      <strong style="color:var(--ink);">发售</strong> 11/19 · <strong style="color:var(--ink);">预载</strong> 11/12 · 平台 PS5 / Xbox Series X|S<br>
+      <strong style="color:var(--ink);">预购奖励</strong>：全版本含"复古罪恶都市包"；终极版另含专属载具/武器/时装/动作
+    </div>
+
+    <!-- 争议点 -->
+    <div style="font-size:12px;font-weight:700;color:var(--ink-dim);margin:0 0 6px;">② 三个争议点</div>
+    <div class="ev-line" style="border-left:3px solid var(--red);">
+      <div class="ev-head"><span class="tg tg-r">仅数字版</span><span class="d">实体=下载码</span></div>
+      <div class="ev-body">实体版盒内仅含下载码、无光盘，部分零售商拒绝销售。</div>
+    </div>
+    <div class="ev-line" style="border-left:3px solid var(--gold);">
+      <div class="ev-head"><span class="tg tg-y">$80定价</span><span class="d">分析师辩</span></div>
+      <div class="ev-body">$79.99低于"$100传闻"，但仍是3A涨价新锚点，分析师讨论是否影响首年销量。</div>
+    </div>
+    <div class="ev-line" style="border-left:3px solid var(--sony);">
+      <div class="ev-head"><span class="tg tg-b">PS5抢体验</span><span class="d">Sony</span></div>
+      <div class="ev-body">索尼称"PS5体验最佳"、支持PS5 Pro增强、加载近瞬时；线上模式R星未提，玩家担心需单独购买。</div>
+    </div>
+
+    <!-- 洞察 -->
+    <div class="insight">
+      <div class="il">双维洞察 · 首年销量预估 / $80定价影响</div>
+      <div style="display:flex;gap:10px;margin-bottom:10px;padding-bottom:10px;border-bottom:1px dashed rgba(255,255,255,0.12);">
+        <div style="min-width:42px;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:800;color:#82d99b;line-height:1.45;padding-top:2px;">首年<br>销量</div>
+        <div><strong>主流预估3000–3800万份，乐观看5000–6000万</strong><br>首日全球销售额或超$12亿。对比GTA5首发1100–1500万——本作站在PS5装机超9000万的基础上，<em>翻倍并非难事</em>。零售商更警告：GTA6或引爆<strong>圣诞主机需求</strong>，叠加Xbox涨价/存储短缺，假日恐供不应求。</div>
+      </div>
+      <div style="display:flex;gap:10px;">
+        <div style="min-width:42px;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:800;color:#82d99b;line-height:1.45;padding-top:2px;">$80<br>定价</div>
+        <div><strong>"危险先例，但难引发全行业普涨"</strong><br>任天堂《马趴世界》已先试$80。分析师警示：<em>连GTA都不敢超$80，恰说明天花板真实存在</em>。调查显示<strong>超80%玩家会买终极版</strong>——"$100 GTA6"实际成真；但多数厂商更可能走<strong>$70基础版+$80–100高级版</strong>，盲目跟涨只会流失价格敏感玩家。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- PART 03 · 索尼独占·战略追踪（压缩）                               -->
+  <!-- ================================================================ -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="num">03</div>
+      <div class="title">索尼独占坐实：从口头到删字<em>战略追踪 · W21战略的官方落地</em></div>
+    </div>
+
+    <div class="insight" style="margin-top:0;">
+      <div class="il">战略追踪 · W21战略的官方落地</div>
+      <div style="font-size:14px;font-weight:800;color:#fff;line-height:1.4;margin-bottom:10px;">"回归独占"：从口头到删字</div>
+      <div style="display:flex;flex-direction:column;gap:7px;font-size:12px;line-height:1.55;">
+        <div style="display:flex;gap:9px;"><span style="min-width:30px;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:800;color:#82d99b;padding-top:2px;">动作</span><div>官网<strong>删除"PC多平台战略"表述</strong>，正式坐实</div></div>
+        <div style="display:flex;gap:9px;"><span style="min-width:30px;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:800;color:#82d99b;padding-top:2px;">理由</span><div>PC策略不一致 + <strong>PC版赚得不够</strong> + IP与平台一致<span style="color:#9bb8d6;">（Hulst/彭博Schreier）</span></div></div>
+        <div style="display:flex;gap:9px;"><span style="min-width:30px;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:800;color:#82d99b;padding-top:2px;">官方</span><div>西野秀明：单机打磨PS独占价值，<em>服务型仍PS5+PC双平台</em></div></div>
+        <div style="display:flex;gap:9px;"><span style="min-width:30px;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:800;color:#f0a07a;padding-top:2px;">余震</span><div>索尼高管确认Bungie《命运2》团队<strong>"大规模"裁员</strong>、负责人离职——W24传闻坐实，<em>GaaS豪赌正式反噬</em></div></div>
+      </div>
+      <div style="margin-top:10px;padding-top:8px;border-top:1px dashed rgba(255,255,255,0.15);font-size:12px;line-height:1.6;"><span style="color:#f0a07a;font-weight:700;">信号</span>&nbsp;&nbsp;一边重押单机独占、一边未弃服务型——<strong>独占是主线，服务型是不甘心的副线</strong></div>
+    </div>
+
+    <div class="trend">
+      <div class="tl">关联</div>
+      与Xbox本周低调上线"Exclusive（独占）"标签呼应——两大平台在世代末期同步强化"独占"叙事，争夺核心玩家心智。
+    </div>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- PART 04 · 其他新闻速览（18%）                                     -->
+  <!-- ================================================================ -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="num">04</div>
+      <div class="title">其他新闻速览<em>资本/裁员 · 销量 · 平台动态</em></div>
+    </div>
+
+    <!-- 资本/裁员 -->
+    <div style="font-size:12px;font-weight:700;color:var(--ink-dim);margin:0 0 6px;">资本 · 裁员</div>
+    <div class="ev-line" style="border-left:3px solid var(--red);">
+      <div class="ev-head"><span class="tg tg-r">裁员</span><span class="d">① 6/20 · EA</span></div>
+      <div class="ev-body">EA已开始通知裁员，多个部门受波及。</div>
+    </div>
+    <div class="ev-line" style="border-left:3px solid var(--red);">
+      <div class="ev-head"><span class="tg tg-r">撤资</span><span class="d">② 6/24 · 腾讯</span></div>
+      <div class="ev-body"><strong>腾讯拟撤资多家日本工作室</strong>（如Marvelous），白金工作室、FromSoftware不受影响。</div>
+    </div>
+    <div class="ev-line" style="border-left:3px solid var(--green);">
+      <div class="ev-head"><span class="tg tg-g">投资</span><span class="d">③ 6/24 · 韩国</span></div>
+      <div class="ev-body">韩国政府设大型游戏基金，Nexon拟投2500亿韩元。</div>
+    </div>
+    <div class="ev-line" style="border-left:3px solid var(--green);">
+      <div class="ev-head"><span class="tg tg-g">数据</span><span class="d">④ 6/21 · 全球</span></div>
+      <div class="ev-body">2025全球游戏市场破<strong>$2000亿</strong>，手游占56%。</div>
+    </div>
+
+    <!-- 销量 -->
+    <div style="font-size:12px;font-weight:700;color:var(--ink-dim);margin:14px 0 6px;">销量里程碑</div>
+    <div class="ev-line" style="border-left:3px solid var(--gold);">
+      <div class="ev-head"><span class="tg tg-y">独立黑马</span><span class="d">6/23 · 超变色龙</span></div>
+      <div class="ev-body"><strong>《超变色龙》10天破700万份</strong>（W24为300万→翻倍），上半年最大独立黑马。</div>
+    </div>
+    <div class="ev-line" style="border-left:3px solid var(--sony);">
+      <div class="ev-head"><span class="tg tg-b">PS5独占</span><span class="d">6/22 · 宇宙机器人</span></div>
+      <div class="ev-body">《宇宙机器人》销量破<strong>430万</strong>、营收$2.5亿，索尼第一方创新作的商业标杆。</div>
+    </div>
+    <div class="ev-line" style="border-left:3px solid var(--green);">
+      <div class="ev-head"><span class="tg tg-g">RPG</span><span class="d">6/26 · 天国拯救2</span></div>
+      <div class="ev-body">《天国：拯救2》销量破<strong>600万</strong>、刷新系列纪录，2026上半年最畅销RPG之一。</div>
+    </div>
+
+    <!-- 平台动态 -->
+    <div style="font-size:12px;font-weight:700;color:var(--ink-dim);margin:14px 0 6px;">平台动态</div>
+    <div class="ev-line" style="border-left:3px solid var(--ink-dim);">
+      <div class="ev-head"><span class="tg tg-p">Switch 2</span><span class="d">6/21 · 暴雪</span></div>
+      <div class="ev-body"><strong>《暗黑破坏神IV》确认登陆Switch 2</strong>——系列正传首次上任天堂主机。</div>
+    </div>
+    <div class="ev-line" style="border-left:3px solid var(--ink-dim);">
+      <div class="ev-head"><span class="tg tg-p">Switch 2</span><span class="d">6/25 · Circana</span></div>
+      <div class="ev-body">Switch 2带动<strong>美国实体游戏自2009年来首次同比增长</strong>(+3%)；日本销量已超基础版PS5。</div>
+    </div>
+    <div class="ev-line" style="border-left:3px solid var(--ink-dim);">
+      <div class="ev-head"><span class="tg tg-b">Epic / 任天堂 / Xbox</span><span class="d">6/21–24</span></div>
+      <div class="ev-body">Epic Games Store"彻底重建"启动提速5倍；任天堂Switch Online日本区7/1涨价；Xbox现身"掌机"标识，或为自研掌机铺路。</div>
+    </div>
+  </div>
+
+  <!-- 下期预告 -->
+  <div style="background:linear-gradient(135deg,#1e3a5f,#2c4a6e);padding:12px 20px;text-align:center;">
+    <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;color:rgba(255,255,255,0.5);font-weight:700;">NEXT WEEK</span>
+    <div style="font-size:12px;color:rgba(255,255,255,0.88);margin-top:4px;font-weight:700;">W26预告：Steam Machine发货实况 · 7月Xbox裁员落地 · 卡普空发布会</div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="logo">GAMEPULSE · PC & CONSOLE</div>
+    <div>数据来源：腾讯文档 · Eurogamer · GamesIndustry · GamingBolt · IGN · Digital Foundry · Linus Tech Tips · 3DM · IT之家 · Take-Two</div>
+    <div style="margin-top:6px;">2026.06.26 · W25 WEEKLY · COVERAGE 6.20–6.26</div>
+  </div>
+
+</div>
+
+<!-- 导出脚本 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+(function(){
+  const toolbar = document.getElementById('export-toolbar');
+  const mainBtn = document.getElementById('exp-main');
+  const panel = document.getElementById('exp-panel');
+  const status = document.getElementById('exp-status');
+  let panelVisible = false;
+  mainBtn.addEventListener('click', () => { panelVisible = !panelVisible; panel.style.display = panelVisible ? 'block' : 'none'; });
+  document.addEventListener('click', (e) => { if (!toolbar.contains(e.target)) { panelVisible = false; panel.style.display = 'none'; } });
+  async function exportAt(scale) {
+    status.textContent = `正在生成 @${scale}x ...`;
+    toolbar.style.display = 'none';
+    const page = document.querySelector('.page');
+    try {
+      const canvas = await html2canvas(page, { scale, useCORS: true, backgroundColor: '#f4f6f9', width: 430, windowWidth: 430 });
+      toolbar.style.display = '';
+      const link = document.createElement('a');
+      link.download = `Weekly_Briefing_W25_20260626_${scale}x.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+      status.textContent = `✅ @${scale}x 已下载 (${canvas.width}×${canvas.height})`;
+    } catch(e) { toolbar.style.display = ''; status.textContent = '❌ ' + e.message; }
+  }
+  panel.querySelectorAll('.exp-btn').forEach(btn => btn.addEventListener('click', (e) => { e.stopPropagation(); exportAt(parseInt(btn.dataset.scale, 10)); }));
+})();
+</script>
+
+</body>
+</html>
+

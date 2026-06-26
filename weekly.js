@@ -2,6 +2,28 @@
 // 每周生成新周报时，在数组顶部追加一条
 window.WEEKLY_REPORTS = [
   {
+    week: 'W25',
+    date: '2026-06-26',
+    periodStart: '2026-06-20',
+    periodEnd: '2026-06-26',
+    title: '端主行业周报 W25：Steam Machine登场·GTA6预购开启·索尼独占坐实',
+    summary: 'Steam Machine $1049起售、口碑不差但价格劝退，Valve承认内存采购无议价权且反作弊游戏存在兼容硬伤；GTA6标准版$79.99/终极版$99.99开启预购，分析师预估首年3000-3800万份；索尼删除PC多平台战略表述，Bungie裁员坐实GaaS反噬。',
+    file: 'weekly/Weekly_Briefing_20260626.html',
+    tags: ['Steam Machine', 'GTA6', '索尼独占', '硬件涨价', 'Bungie'],
+    highlight: true
+  },
+  {
+    week: 'W24',
+    date: '2026-06-19',
+    periodStart: '2026-06-13',
+    periodEnd: '2026-06-19',
+    title: '端主行业周报 W24：Xbox关厂潮·Bungie裁员·存储涨价冲击主机',
+    summary: 'Xbox关厂传闻部分坐实，Ninja Theory确认关闭并寻买家，Double Fine/Compulsion谈判求独立；Bungie或裁半数，索尼GaaS豪赌反噬；DRAM/NAND合约价大涨，Steam Machine因内存涨价推迟，次世代主机成本承压。',
+    file: 'weekly/Weekly_Briefing_20260619.html',
+    tags: ['Xbox关厂', 'Ninja Theory', 'Bungie', '存储涨价', 'Steam Machine'],
+    highlight: true
+  },
+  {
     week: 'W23',
     date: '2026-06-12',
     periodStart: '2026-06-06',
