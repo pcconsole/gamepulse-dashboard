@@ -1,13 +1,777 @@
 // ============================================
 // 行业热点新闻数据模块
 // [AUTO-GENERATED] 由 News Agent v5.2 自动更新，请勿手动编辑
-// 最后更新: 2026-06-29T11:30:00Z
+// 最后更新: 2026-06-29T18:00:00Z
 // 更新者: news-agent (v5.2 腾讯文档MCP+web_search 12+轮+新增28条+90天清理120条)
 // 数据来源: MCP 腾讯文档 LMLdoimBsILX (Tier 0) + web_search (Tier 1-3)
 // 重要性方案: v5.0 — 统一重点新闻标记（featured），深度洞察分析+历史关联
 // 新增字段: analysis(洞察分析), relatedNewsIds(关联新闻ID)
 // ============================================
 const newsData = [
+
+  {
+    "id": 1782,
+    "title": "港服Switch 2主机正式涨价！从3450港元涨至3700港元",
+    "summary": "任天堂香港6月29日宣布，受全球市场环境变化影响，港版Switch 2建议零售价将从3450港元涨至3700港元，涨幅250港元（约225元人民币），是日本宣布9月涨价后又一亚洲市场落地。Switch 2自6月5日全球发售以来销量超600万台，涨价后香港玩家转向国行/水货版本可能性增大。",
+    "source": "Nintendo HK / 3DM",
+    "sourceUrl": "https://mp.weixin.qq.com/s/ekbvjPri1fcaUKdH1NYmRA",
+    "sourceUrls": [
+      {
+        "name": "Nintendo HK",
+        "url": "https://mp.weixin.qq.com/s/ekbvjPri1fcaUKdH1NYmRA"
+      },
+      {
+        "name": "3DM",
+        "url": "https://www.3dmgame.com/"
+      }
+    ],
+    "category": "platform",
+    "importance": "high",
+    "featured": true,
+    "date": "2026-06-29",
+    "tags": [
+      "Switch 2",
+      "港服",
+      "涨价",
+      "3450港币",
+      "3700港币"
+    ],
+    "sentiment": "negative",
+    "tdocMarking": "none",
+    "analysis": "What:港服Switch 2主机涨价250港元至3700港元。Why:全球硬件成本上涨(DRAM/HBM)+汇率波动+亚洲市场跟随日本涨价策略。So What:港服作为亚洲价格洼地的优势被削弱，国行/水货渠道将面临更大分流压力。What Next:7-8月亚洲各市场可能跟进涨价，Switch 2全年销量预测将面临下修风险。",
+    "relatedNewsIds": [
+      1780,
+      1759,
+      1781,
+      1766
+    ]
+  },
+  {
+    "id": 1783,
+    "title": "GTA 6港服预购开启：PS5/Xbox版568港币起步",
+    "summary": "《GTA 6》PS5和Xbox Series X|S版港服商店6月25日开启预购，最低售价568港币（约520元人民币），标准版568港币，终极版约868港币。Take-Two在亚洲市场延续美元定价策略，但港币相对美元贬值使其成为亚洲价格相对亲民的市场之一。",
+    "source": "3DM",
+    "sourceUrl": "https://www.3dmgame.com/",
+    "sourceUrls": [
+      {
+        "name": "3DM",
+        "url": "https://www.3dmgame.com/"
+      }
+    ],
+    "category": "game",
+    "importance": "medium",
+    "featured": true,
+    "date": "2026-06-25",
+    "tags": [
+      "GTA 6",
+      "港服",
+      "预购",
+      "568港币",
+      "PS5"
+    ],
+    "sentiment": "positive",
+    "tdocMarking": "none",
+    "analysis": "What:GTA 6港服预购568港币起步。Why:港币兑美元汇率(7.8)+Take-Two统一美元定价+港服玩家消费力强。So What:港服有望成为GTA 6亚洲首发销量主力，PS Store港服或将出现服务器拥堵。What Next:11月19日港服实际销售数据将反映亚洲玩家支付意愿，影响Take-Two后续市场策略。",
+    "relatedNewsIds": [
+      1754,
+      1773,
+      1762,
+      1778
+    ]
+  },
+  {
+    "id": 1784,
+    "title": "GTA 6确认仅数字版，实体版仅含下载码",
+    "summary": "Rockstar确认《GTA 6》发售时将没有实体光盘版本，盒装版仅包含下载码，与行业向数字版过渡趋势一致。部分实体零售商(如GameStop竞争对手)因此拒绝进货或采取保守库存策略。玩家社区对'无光盘'策略反应分化，担心二手市场消失和数字版绑定账号风险。",
+    "source": "Eurogamer / IGN / VGC",
+    "sourceUrl": "https://www.eurogamer.net/",
+    "sourceUrls": [
+      {
+        "name": "Eurogamer",
+        "url": "https://www.eurogamer.net/"
+      },
+      {
+        "name": "IGN",
+        "url": "https://www.ign.com/"
+      },
+      {
+        "name": "VGC",
+        "url": "https://www.videogameschronicle.com/"
+      }
+    ],
+    "category": "game",
+    "importance": "medium",
+    "featured": true,
+    "date": "2026-06-24",
+    "tags": [
+      "GTA 6",
+      "数字版",
+      "实体版",
+      "下载码",
+      "无光盘"
+    ],
+    "sentiment": "negative",
+    "tdocMarking": "none",
+    "analysis": "What:GTA 6确认仅数字版+实体版仅下载码。Why:行业全面数字化趋势+Take-Two节省实体版成本+避免二手市场分流。So What:实体零售商将面临更大压力，二手游戏市场进一步萎缩。What Next:3A级游戏数字版占比将超95%，中小型零售商可能加速退出。",
+    "relatedNewsIds": [
+      1754,
+      1773,
+      1762
+    ]
+  },
+  {
+    "id": 1785,
+    "title": "R星未提GTA 6线上模式，玩家担心需单独购买",
+    "summary": "Rockstar在公布《GTA 6》预购信息时未提及线上多人模式GTA Online，引发玩家担心该模式可能不包含在基础版中，需要单独购买。此前GTA V的GTA Online采用免费更新+微交易模式，是Take-Two最长青的收入来源之一。",
+    "source": "IT之家 / 3DM / Eurogamer",
+    "sourceUrl": "https://www.ithome.com/",
+    "sourceUrls": [
+      {
+        "name": "IT之家",
+        "url": "https://www.ithome.com/"
+      },
+      {
+        "name": "3DM",
+        "url": "https://www.3dmgame.com/"
+      },
+      {
+        "name": "Eurogamer",
+        "url": "https://www.eurogamer.net/"
+      }
+    ],
+    "category": "game",
+    "importance": "medium",
+    "featured": false,
+    "date": "2026-06-25",
+    "tags": [
+      "GTA 6",
+      "线上模式",
+      "GTA Online",
+      "Take-Two"
+    ],
+    "sentiment": "neutral",
+    "tdocMarking": "none",
+    "analysis": "What:R星未提GTA 6线上模式。Why:Take-Two可能在为GTA Online 2.0做商业化重新设计+预留单独收费空间。So What:玩家对终极版109.99美元的接受度可能下降，影响首发销量。What Next:Take-Two可能在11月19日前后公布GTA Online细节，定价策略将影响2027-2028财年营收。",
+    "relatedNewsIds": [
+      1754,
+      1778,
+      1762
+    ]
+  },
+  {
+    "id": 1786,
+    "title": "Sony官宣GTA 6 PS5深度合作：DualSense适配+PS5 Pro增强",
+    "summary": "索尼在PlayStation Blog详细介绍了《GTA 6》在PS5上的优化：近瞬时加载时间、DualSense手柄触觉反馈和自适应扳机深度适配、PS5 Pro GPU增强、PS5欢迎屏幕与PS App主题营销。索尼称GTA 6是'PS5平台本年度最重要的推广节点'，但强调游戏不是PS5独占。",
+    "source": "PlayStation Blog / Eurogamer / GamingBolt",
+    "sourceUrl": "https://blog.playstation.com/",
+    "sourceUrls": [
+      {
+        "name": "PlayStation Blog",
+        "url": "https://blog.playstation.com/"
+      },
+      {
+        "name": "Eurogamer",
+        "url": "https://www.eurogamer.net/"
+      },
+      {
+        "name": "GamingBolt",
+        "url": "https://gamingbolt.com/"
+      }
+    ],
+    "category": "platform",
+    "importance": "high",
+    "featured": true,
+    "date": "2026-06-24",
+    "tags": [
+      "GTA 6",
+      "PS5",
+      "PS5 Pro",
+      "Sony",
+      "DualSense",
+      "深度合作"
+    ],
+    "sentiment": "positive",
+    "tdocMarking": "none",
+    "analysis": "What:Sony官宣GTA 6 PS5深度合作含DualSense/PS5 Pro增强。Why:Take-Two与Sony达成PS5营销独占协议(非游戏独占)+Sony需借助GTA 6带动PS5/PS5 Pro销量。So What:PS5 Pro将获益于GTA 6独家优化，Sony的PS5销量可能借此反弹。What Next:11月19日GTA 6发售将带来PS5+PS5 Pro圣诞季销量高峰。",
+    "relatedNewsIds": [
+      1754,
+      1773,
+      1774,
+      1758,
+      1643
+    ]
+  },
+  {
+    "id": 1787,
+    "title": "分析师预测GTA 6首年销量：5000-7000万份",
+    "summary": "多位行业分析师对《GTA 6》首年销量做出预测：尽管标准版定价79.99美元偏高，但需求依然强劲，分析师普遍预测首年销量可能达5000-7000万份。Take-Two对GTA 6的全年净预订指引将达80-82亿美元，分析师认为GTA 6将主导2026-2027年游戏市场。",
+    "source": "3DM / GamesIndustry.biz / IGN",
+    "sourceUrl": "https://www.gamesindustry.biz/",
+    "sourceUrls": [
+      {
+        "name": "3DM",
+        "url": "https://www.3dmgame.com/"
+      },
+      {
+        "name": "GamesIndustry.biz",
+        "url": "https://www.gamesindustry.biz/"
+      },
+      {
+        "name": "IGN",
+        "url": "https://www.ign.com/"
+      }
+    ],
+    "category": "game",
+    "importance": "medium",
+    "featured": false,
+    "date": "2026-06-25",
+    "tags": [
+      "GTA 6",
+      "首年销量",
+      "5000万",
+      "Take-Two",
+      "分析师"
+    ],
+    "sentiment": "positive",
+    "tdocMarking": "none",
+    "analysis": "What:分析师预测GTA 6首年5000-7000万份。Why:GTA V首年3300万份的参考+更广平台覆盖(PS5+Xbox+潜在PC)+终极版预购强劲。So What:Take-Two 2027财年营收将远超80亿指引，股价长期看涨。What Next:11月19日实际销量将验证分析师预期，影响Take-Two股价与整个游戏行业估值。",
+    "relatedNewsIds": [
+      1754,
+      1762,
+      1778
+    ]
+  },
+  {
+    "id": 1788,
+    "title": "分析师警告：PS6/Project Helix次世代主机售价可能突破1000美元",
+    "summary": "行业分析师警告，受芯片、存储等硬件成本上涨(DRAM/HBM短缺)影响，索尼PS6和微软下一代主机Project Helix的售价可能突破1000美元。考虑到PS5 Pro 2024年才$699.99的定价，PS6可能$999起售，Project Helix可能$1099起售。玩家对主机涨价容忍度已达临界点。",
+    "source": "IT之家 / VGC / GamesIndustry.biz",
+    "sourceUrl": "https://www.ithome.com/",
+    "sourceUrls": [
+      {
+        "name": "IT之家",
+        "url": "https://www.ithome.com/"
+      },
+      {
+        "name": "VGC",
+        "url": "https://www.videogameschronicle.com/"
+      },
+      {
+        "name": "GamesIndustry.biz",
+        "url": "https://www.gamesindustry.biz/"
+      }
+    ],
+    "category": "market",
+    "importance": "high",
+    "featured": true,
+    "date": "2026-06-24",
+    "tags": [
+      "PS6",
+      "Project Helix",
+      "次世代主机",
+      "涨价",
+      "1000美元"
+    ],
+    "sentiment": "negative",
+    "tdocMarking": "none",
+    "analysis": "What:PS6/Project Helix可能破1000美元。Why:DRAM/HBM/SSD内存成本暴涨+先进制程芯片成本攀升+厂商追求高端利润。So What:主机硬件市场可能进入'高端化小众化'阶段，PC游戏掌机(如Steam Machine)将受益。What Next:2027-2028年次世代主机发布时，PC+掌机+云游戏分流将更明显。",
+    "relatedNewsIds": [
+      1766,
+      1758,
+      1756,
+      1648,
+      1767
+    ]
+  },
+  {
+    "id": 1789,
+    "title": "Valve承认在Steam Machine RAM采购上缺乏议价能力",
+    "summary": "Valve工程师Pierre-Loup Griffais承认，Valve在与RAM公司的采购谈判中缺乏议价能力：'那些家伙(内存厂商)想要什么价格就什么价格'。Steam Machine最终定价1049美元(512GB版)反映了DRAM成本压力对硬件厂商的全面冲击。",
+    "source": "GamingBolt / IGN",
+    "sourceUrl": "https://gamingbolt.com/",
+    "sourceUrls": [
+      {
+        "name": "GamingBolt",
+        "url": "https://gamingbolt.com/"
+      },
+      {
+        "name": "IGN",
+        "url": "https://www.ign.com/"
+      }
+    ],
+    "category": "platform",
+    "importance": "medium",
+    "featured": false,
+    "date": "2026-06-24",
+    "tags": [
+      "Valve",
+      "Steam Machine",
+      "RAM",
+      "议价能力",
+      "DRAM"
+    ],
+    "sentiment": "negative",
+    "tdocMarking": "none",
+    "analysis": "What:Valve承认RAM议价能力弱。Why:三大DRAM厂商(Samsung/SK Hynix/Micron)集中度高+AI需求挤压消费级内存+Valve规模相对小。So What:Steam Machine定价可能仍有压缩空间，但Valve不愿牺牲利润。What Next:Valve与DRAM厂商长期协议将影响Steam Machine BOM和Steam Deck 2发布时机。",
+    "relatedNewsIds": [
+      1766,
+      1788,
+      1648,
+      1767
+    ]
+  },
+  {
+    "id": 1790,
+    "title": "Steam Machine日本首发疯抢已售罄",
+    "summary": "Steam Machine在日本首发后遭到玩家疯抢，目前已经全部售罄。日本市场对Steam Machine的高需求可能与日本PC游戏市场近年快速增长有关，Valve在日本市场的品牌影响力也显著提升。",
+    "source": "3DM",
+    "sourceUrl": "https://www.3dmgame.com/",
+    "sourceUrls": [
+      {
+        "name": "3DM",
+        "url": "https://www.3dmgame.com/"
+      }
+    ],
+    "category": "platform",
+    "importance": "medium",
+    "featured": false,
+    "date": "2026-06-25",
+    "tags": [
+      "Steam Machine",
+      "日本",
+      "售罄",
+      "首发",
+      "Valve"
+    ],
+    "sentiment": "positive",
+    "tdocMarking": "none",
+    "analysis": "What:Steam Machine日本首发售罄。Why:日本PC游戏市场增长+Valve品牌力+Steam Deck在日本积累的口碑。So What:Steam Machine日本市场可能成为全球最大单一市场之一，Valve将加大日本本地化投入。What Next:Valve可能在日本设立更多仓储/客服，Steam Machine 2代将针对日本玩家做本地化设计。",
+    "relatedNewsIds": [
+      1766,
+      1789,
+      1642
+    ]
+  },
+  {
+    "id": 1791,
+    "title": "索尼称单机是核心优势，将稳定年更并布局服务型",
+    "summary": "索尼官方表示，单机游戏是PlayStation的核心优势，将保持稳定的年更节奏，同时布局游戏服务型项目。这是索尼对PlayStation战略的官方阐述：在GaaS遇挫(《星鸣特攻》取消/《马拉松》销量惨淡)的背景下，索尼选择双线发展。",
+    "source": "3DM",
+    "sourceUrl": "https://www.3dmgame.com/",
+    "sourceUrls": [
+      {
+        "name": "3DM",
+        "url": "https://www.3dmgame.com/"
+      }
+    ],
+    "category": "platform",
+    "importance": "medium",
+    "featured": false,
+    "date": "2026-06-25",
+    "tags": [
+      "索尼",
+      "单机游戏",
+      "服务型游戏",
+      "SIE",
+      "战略"
+    ],
+    "sentiment": "neutral",
+    "tdocMarking": "none",
+    "analysis": "What:索尼称单机为核心+稳定年更+服务型双线。Why:Bungie/Marathon GaaS受挫+单机仍是PS5销量核心+Horizon/God of War等3A成功。So What:索尼第一方资源将向单机倾斜，服务型项目数量减少但更精。What Next:2026-2027年索尼将公布更多单机新作，服务型项目将聚焦少数高质量IP。",
+    "relatedNewsIds": [
+      1800,
+      1773,
+      1757,
+      1755
+    ]
+  },
+  {
+    "id": 1792,
+    "title": "天国：拯救2全球销量突破600万份",
+    "summary": "Warhorse Studios官方公布《天国：拯救2》(Kingdom Come: Deliverance II)全球销量已突破600万份，刷新系列销量纪录，成为2026年最畅销的RPG游戏之一。游戏自2025年2月发售以来口碑持续强劲，Steam好评率82%且DLC 'Brushes with Death' 6月发布。",
+    "source": "3DM / GamingBolt",
+    "sourceUrl": "https://www.3dmgame.com/",
+    "sourceUrls": [
+      {
+        "name": "3DM",
+        "url": "https://www.3dmgame.com/"
+      },
+      {
+        "name": "GamingBolt",
+        "url": "https://gamingbolt.com/"
+      }
+    ],
+    "category": "game",
+    "importance": "medium",
+    "featured": false,
+    "date": "2026-06-26",
+    "tags": [
+      "天国拯救2",
+      "KCD2",
+      "600万",
+      "销量里程碑",
+      "Warhorse"
+    ],
+    "sentiment": "positive",
+    "tdocMarking": "none",
+    "analysis": "What:天国拯救2销量突破600万份。Why:写实中世纪RPG差异化定位+前作口碑积累+玩家对'非3A大厂RPG'的需求。So What:中世纪写实题材RPG细分市场被证明可行，Warhorse可能筹备系列3代。What Next:600万份达成将触发Warhorse与Plaion(发行商)利润分成新阶段，影响Warhorse研发投入。",
+    "relatedNewsIds": [
+      1764,
+      1745
+    ]
+  },
+  {
+    "id": 1793,
+    "title": "零售商警告：GTA 6或带动圣诞节期间主机供不应求",
+    "summary": "多家游戏零售商发出警告，《GTA 6》发售期间(11月19日)可能引发主机购买热潮，可能导致2026年圣诞节期间PS5/Xbox Series X|S出现供不应求。考虑到内存成本上涨导致主机备货谨慎，玩家可能需要提前数周预定。",
+    "source": "IT之家",
+    "sourceUrl": "https://www.ithome.com/",
+    "sourceUrls": [
+      {
+        "name": "IT之家",
+        "url": "https://www.ithome.com/"
+      }
+    ],
+    "category": "game",
+    "importance": "medium",
+    "featured": false,
+    "date": "2026-06-25",
+    "tags": [
+      "GTA 6",
+      "主机",
+      "供不应求",
+      "圣诞节",
+      "PS5"
+    ],
+    "sentiment": "positive",
+    "tdocMarking": "none",
+    "analysis": "What:GTA 6可能引发圣诞主机供不应求。Why:GTA 6 IP号召力+PS5+Xbox销量已从涨价中下滑+圣诞季GTA 6是核心驱动。So What:Sony/Microsoft将增加Q4主机备货，DRAM厂商将优先供货主机厂商。What Next:11月主机销量数据将成为GTA 6商业表现的关键指标，影响Take-Two和主机厂商股价。",
+    "relatedNewsIds": [
+      1754,
+      1786,
+      1758,
+      1756
+    ]
+  },
+  {
+    "id": 1794,
+    "title": "Circana：Switch 2帮助美国实体游戏支出首次同比增(自2009年)",
+    "summary": "市场研究公司Circana公布数据，Nintendo Switch 2的发售帮助美国实体游戏支出在2026年首次实现同比增长(+1.6B美元，+3%)，是自2009年以来首次年度同比增长。Switch 2成功重振美国游戏市场，但PS5/Xbox因涨价受挫。",
+    "source": "GamesIndustry.biz",
+    "sourceUrl": "https://www.gamesindustry.biz/",
+    "sourceUrls": [
+      {
+        "name": "GamesIndustry.biz",
+        "url": "https://www.gamesindustry.biz/"
+      }
+    ],
+    "category": "market",
+    "importance": "high",
+    "featured": true,
+    "date": "2026-06-25",
+    "tags": [
+      "Switch 2",
+      "Circana",
+      "美国市场",
+      "实体游戏",
+      "首次同比增"
+    ],
+    "sentiment": "positive",
+    "tdocMarking": "none",
+    "analysis": "What:Switch 2帮助美国实体游戏支出首次同比增(自2009年)。Why:Switch 2发售+PS5/Xbox涨价致玩家等待+实体游戏回归。So What:任天堂在美国市场份额将大幅提升，PS5/Xbox压力增大。What Next:2026年Q3-Q4美国市场Switch 2将持续主导，Sony/Microsoft可能调整下半年定价策略。",
+    "relatedNewsIds": [
+      1758,
+      1759,
+      1781,
+      1764
+    ]
+  },
+  {
+    "id": 1795,
+    "title": "V社低调修改Steam Machine宣传语，移除'4K 60帧'",
+    "summary": "Valve悄然修改了Steam Machine官方宣传页面的'4K 60帧游戏体验'描述，新版宣传语更改为'高帧率游戏体验'，没有明确标注4K分辨率。这可能与Valve对DRAM成本上升的妥协有关，也可能反映Valve对产品实际性能边界的重新评估。",
+    "source": "GamingBolt / IGN",
+    "sourceUrl": "https://gamingbolt.com/",
+    "sourceUrls": [
+      {
+        "name": "GamingBolt",
+        "url": "https://gamingbolt.com/"
+      },
+      {
+        "name": "IGN",
+        "url": "https://www.ign.com/"
+      }
+    ],
+    "category": "platform",
+    "importance": "medium",
+    "featured": false,
+    "date": "2026-06-25",
+    "tags": [
+      "Steam Machine",
+      "V社",
+      "4K 60帧",
+      "宣传语",
+      "修改"
+    ],
+    "sentiment": "negative",
+    "tdocMarking": "none",
+    "analysis": "What:V社修改Steam Machine宣传语移除4K 60帧。Why:实际测试发现DRAM成本压力下4K 60帧难以稳定+避免法律/营销风险。So What:Steam Machine实际体验可能与早期宣传有差距，部分玩家将感到失望。What Next:Valve需要更精确地说明Steam Machine的分辨率/帧率，避免首发后舆论反转。",
+    "relatedNewsIds": [
+      1766,
+      1789,
+      1648
+    ]
+  },
+  {
+    "id": 1796,
+    "title": "任天堂京都新楼定名'技术开发中心'，2029年3月竣工",
+    "summary": "任天堂公布其京都新大楼正式命名为'技术开发中心'(Technology Development Center)，预计2029年3月竣工。该中心将容纳研发部门，强化任天堂在主机硬件和软件技术领域的长期投入。",
+    "source": "3DM / My Nintendo News / VGC",
+    "sourceUrl": "https://www.3dmgame.com/",
+    "sourceUrls": [
+      {
+        "name": "3DM",
+        "url": "https://www.3dmgame.com/"
+      },
+      {
+        "name": "My Nintendo News",
+        "url": "https://mynintendonews.com/"
+      },
+      {
+        "name": "VGC",
+        "url": "https://www.videogameschronicle.com/"
+      }
+    ],
+    "category": "hardware",
+    "importance": "medium",
+    "featured": false,
+    "date": "2026-06-25",
+    "tags": [
+      "任天堂",
+      "京都",
+      "技术开发中心",
+      "2029",
+      "研发"
+    ],
+    "sentiment": "positive",
+    "tdocMarking": "none",
+    "analysis": "What:任天堂京都新楼定名技术开发中心2029竣工。Why:Switch 2后续机型/下一代主机需要更强大研发能力+应对内存成本挑战。So What:任天堂将加大硬件研发投入，可能为次世代主机(后Switch 2)做准备。What Next:2029-2030年任天堂次世代主机研发将进入关键期。",
+    "relatedNewsIds": [
+      1788,
+      1781,
+      1782
+    ]
+  },
+  {
+    "id": 1797,
+    "title": "Micron CEO：内存芯片短缺2028年将'逐步改善'",
+    "summary": "美光科技(Micron)CEO Sanjay Mehrotra表示，内存芯片短缺问题将在2028年'逐步改善'，但他承认当前短缺'比此前预期更严重'，AI需求是核心驱动。三星/SK海力士/美光都在扩大产能但2027年前难以缓解。",
+    "source": "GamesIndustry.biz",
+    "sourceUrl": "https://www.gamesindustry.biz/",
+    "sourceUrls": [
+      {
+        "name": "GamesIndustry.biz",
+        "url": "https://www.gamesindustry.biz/"
+      }
+    ],
+    "category": "hardware",
+    "importance": "high",
+    "featured": true,
+    "date": "2026-06-25",
+    "tags": [
+      "Micron",
+      "内存",
+      "DRAM",
+      "短缺",
+      "2028",
+      "AI需求"
+    ],
+    "sentiment": "neutral",
+    "tdocMarking": "none",
+    "analysis": "What:Micron称内存短缺2028逐步改善。Why:三大DRAM厂商集中扩产+AI需求持续高位+新工厂2027-2028年投产。So What:2026-2027年内存成本压力将持续，PS6/Project Helix/Steam Machine定价难以下降。What Next:内存价格2026下半年可能继续上涨，2027年企稳，2028年开始回落。",
+    "relatedNewsIds": [
+      1788,
+      1766,
+      1756,
+      1789
+    ]
+  },
+  {
+    "id": 1798,
+    "title": "多款新游戏公开将在PS5和Switch 2上发售",
+    "summary": "多款新游戏确认将在PS5和/或Nintendo Switch 2上发售，包括《Void/Breaker》(PS5)、《Saros》(PS5)等多款第三方作品。PS5+Switch 2双平台战略正在成为2026下半年第三方工作室的标配选择。",
+    "source": "PlayStation Blog / My Nintendo News",
+    "sourceUrl": "https://blog.playstation.com/",
+    "sourceUrls": [
+      {
+        "name": "PlayStation Blog",
+        "url": "https://blog.playstation.com/"
+      },
+      {
+        "name": "My Nintendo News",
+        "url": "https://mynintendonews.com/"
+      }
+    ],
+    "category": "game",
+    "importance": "low",
+    "featured": false,
+    "date": "2026-06-25",
+    "tags": [
+      "PS5",
+      "Switch 2",
+      "新游戏",
+      "第三方",
+      "多平台"
+    ],
+    "sentiment": "neutral",
+    "tdocMarking": "none",
+    "analysis": "What:多款新游戏确认PS5+Switch 2双平台。Why:PS5+Switch 2是2026最大装机量组合+Xbox销量下滑推动第三方避开Xbox。So What:PS5+Switch 2双平台将成为第三方3A标配，Xbox Series X|S独占优势进一步削弱。What Next:2027-2028年第三方游戏可能更倾向PS5+Switch 2组合，Xbox将更依赖Game Pass独占。",
+    "relatedNewsIds": [
+      1756,
+      1758,
+      1794,
+      1777
+    ]
+  },
+  {
+    "id": 1799,
+    "title": "任天堂美国宣布夏季促销，多款Switch/Switch 2游戏折扣",
+    "summary": "任天堂美国宣布开启夏季促销活动，多款Switch和Switch 2游戏参与折扣，包含多款第一方和第三方作品。任天堂美国还公布了6月25日的Nintendo Today应用更新内容。",
+    "source": "My Nintendo News",
+    "sourceUrl": "https://mynintendonews.com/",
+    "sourceUrls": [
+      {
+        "name": "My Nintendo News",
+        "url": "https://mynintendonews.com/"
+      }
+    ],
+    "category": "platform",
+    "importance": "medium",
+    "featured": false,
+    "date": "2026-06-25",
+    "tags": [
+      "任天堂",
+      "美国",
+      "夏季促销",
+      "Switch",
+      "Switch 2",
+      "折扣"
+    ],
+    "sentiment": "positive",
+    "tdocMarking": "none",
+    "analysis": "What:任天堂美国宣布夏季促销。Why:应对Q3淡季+清理库存+为GTA 6/Q4大作让路。So What:玩家将在夏季享受折扣，可能带动Switch/Switch 2装机量。What Next:任天堂Q3业绩有望好于预期，圣诞季Switch 2捆绑销售将启动。",
+    "relatedNewsIds": [
+      1782,
+      1759,
+      1781
+    ]
+  },
+  {
+    "id": 1800,
+    "title": "SIE CEO西野秀明重申对服务型游戏的信心",
+    "summary": "索尼互动娱乐CEO西野秀明在接受采访时重申，尽管《马拉松》《星鸣特攻》等服务型游戏遭遇失败或取消，索尼仍不会放弃服务型游戏赛道。索尼将聚焦于'高质量+长生命周期'的服务型项目(如《地狱潜兵2》)，而非追求数量。",
+    "source": "VGC / GamingBolt / Eurogamer",
+    "sourceUrl": "https://www.videogameschronicle.com/",
+    "sourceUrls": [
+      {
+        "name": "VGC",
+        "url": "https://www.videogameschronicle.com/"
+      },
+      {
+        "name": "GamingBolt",
+        "url": "https://gamingbolt.com/"
+      },
+      {
+        "name": "Eurogamer",
+        "url": "https://www.eurogamer.net/"
+      }
+    ],
+    "category": "platform",
+    "importance": "medium",
+    "featured": true,
+    "date": "2026-06-27",
+    "tags": [
+      "索尼",
+      "SIE",
+      "西野秀明",
+      "服务型游戏",
+      "GaaS"
+    ],
+    "sentiment": "neutral",
+    "tdocMarking": "none",
+    "analysis": "What:SIE CEO重申服务型游戏信心。Why:服务型游戏长期营收潜力+Hell Divers 2成功+玩家长期消费习惯。So What:索尼将减少服务型项目数量但提高单项目质量投入。What Next:索尼可能在2026-2027年公布2-3个核心服务型项目，Horizon/Marathon等IP将获重点投入。",
+    "relatedNewsIds": [
+      1791,
+      1757,
+      1755,
+      1775
+    ]
+  },
+  {
+    "id": 1801,
+    "title": "观点：Valve能承受小众高价硬件发布，索尼微软不能",
+    "summary": "GamesIndustry.biz发表观点文章称，Valve可以承受Steam Machine这样的小众高价硬件发布，但索尼和微软做不到：Valve的Steam平台收入(30%抽成)为硬件亏损/低利润提供补贴，而Sony/Microsoft的主机业务是核心利润来源。Steam Machine 1049美元的定价反映Valve在'游戏生态+硬件'的独特商业模式。",
+    "source": "GamesIndustry.biz",
+    "sourceUrl": "https://www.gamesindustry.biz/",
+    "sourceUrls": [
+      {
+        "name": "GamesIndustry.biz",
+        "url": "https://www.gamesindustry.biz/"
+      }
+    ],
+    "category": "market",
+    "importance": "medium",
+    "featured": false,
+    "date": "2026-06-27",
+    "tags": [
+      "Valve",
+      "Steam Machine",
+      "观点",
+      "商业模式",
+      "主机"
+    ],
+    "sentiment": "neutral",
+    "tdocMarking": "none",
+    "analysis": "What:Valve可承受高价硬件发布。Why:Valve的Steam平台收入+硬件低利润+小众用户。So What:Sony/Microsoft将面临PC掌机竞争压力加大。What Next:Valve的'平台+硬件'模式可能成为游戏行业新范式，Microsoft Xbox可能效仿(走'Game Pass+硬件'路线)。",
+    "relatedNewsIds": [
+      1766,
+      1788,
+      1789,
+      1756
+    ]
+  },
+  {
+    "id": 1802,
+    "title": "Valve从Steam Machine上获得可观利润，挑战'不补贴硬件'立场",
+    "summary": "硬件爆料人KeplerL2和Moore's Law is Dead表示，即便在当前RAM短缺情况下，Valve从Steam Machine上仍获得了'可观的'利润margin。如果属实，将对Valve一贯宣称的'不补贴硬件'立场构成挑战。Steam Machine 1049美元(512GB)的定价可能包含较高利润率，理论上Valve可以通过降低利润使定价更亲民。",
+    "source": "GamingBolt",
+    "sourceUrl": "https://gamingbolt.com/",
+    "sourceUrls": [
+      {
+        "name": "GamingBolt",
+        "url": "https://gamingbolt.com/"
+      }
+    ],
+    "category": "market",
+    "importance": "medium",
+    "featured": false,
+    "date": "2026-06-23",
+    "tags": [
+      "Valve",
+      "Steam Machine",
+      "利润",
+      "1049美元",
+      "爆料"
+    ],
+    "sentiment": "positive",
+    "tdocMarking": "none",
+    "analysis": "What:Valve从Steam Machine获得可观利润。Why:Valve规模优势+BOM优化+AMD半定制CPU/GPU议价。So What:Valve的'不补贴硬件'立场可能调整，未来硬件定价可能更具竞争力。What Next:Steam Deck 2可能延续高利润策略，Steam Machine 2代可能降价至$799-899。",
+    "relatedNewsIds": [
+      1766,
+      1789,
+      1795
+    ]
+  },
   {
     "id": 1764,
     "title": "捉迷藏游戏《超级变色龙》16天销量突破1000万份",
