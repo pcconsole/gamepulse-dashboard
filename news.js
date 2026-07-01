@@ -176,7 +176,7 @@ const newsData = [
   },
   {
     "id": 1807,
-    "title": "索尼PS平台在单人游戏领域\"完胜\"Xbox",
+    "title": "索尼PS平台在单人游戏领域“完胜”Xbox",
     "summary": "《游戏商业》杂志编辑Chris Dring发布最新调查报告：3A单机游戏首发时，PlayStation版销量占比75%-80%，Xbox占比明显较低。这一数据来自多项非公开销售数据汇总，PS5 9300万装机量+PS Plus订阅覆盖是核心驱动。任天堂NS/NS2上这种现象更明显但占比变化不大。",
     "source": "17173 / 网易 / 焦点资讯",
     "sourceUrl": "https://news.17173.com/content/06302026/080459430.shtml",
@@ -218,7 +218,7 @@ const newsData = [
   {
     "id": 1808,
     "title": "据称PS6制造成本约1000美元，索尼不打算亏本销售",
-    "summary": "硬件爆料人KeplerL2最新估算显示，PlayStation 6的物料清单成本已从三个月前的约760美元飙升至约960美元，逼近1000美元大关。索尼在近期投资者Q&A中明确表示\"不打算以显著亏损出售硬件\"，分析师预警PS6/Project Helix次世代主机可能突破1000美元零售价。",
+    "summary": "硬件爆料人KeplerL2最新估算显示，PlayStation 6的物料清单成本已从三个月前的约760美元飙升至约960美元，逼近1000美元大关。索尼在近期投资者Q&A中明确表示“不打算以显著亏损出售硬件”，分析师预警PS6/Project Helix次世代主机可能突破1000美元零售价。",
     "source": "17173 / 新浪财经 / ZAKER",
     "sourceUrl": "https://news.17173.com/content/06292026/222107775.shtml",
     "sourceUrls": [
@@ -248,7 +248,7 @@ const newsData = [
     ],
     "sentiment": "negative",
     "tdocMarking": "none",
-    "analysis": "What:PS6 BOM成本约960美元逼近1000美元，索尼不打算亏本销售。Why:DRAM/HBM/SSD等核心组件价格暴涨+先进制程成本上升+关税影响。So What:PS6零售价可能突破1000美元，将冲击主机游戏的核心\"亲民\"属性。What Next:若PS6/Project Helix双双破千美元，主机游戏将进入\"高端电子设备\"时代，可能加速玩家向PC/手机端分流。",
+    "analysis": "What:PS6 BOM成本约960美元逼近1000美元，索尼不打算亏本销售。Why:DRAM/HBM/SSD等核心组件价格暴涨+先进制程成本上升+关税影响。So What:PS6零售价可能突破1000美元，将冲击主机游戏的核心“亲民”属性。What Next:若PS6/Project Helix双双破千美元，主机游戏将进入“高端电子设备”时代，可能加速玩家向PC/手机端分流。",
     "relatedNewsIds": [
       1797,
       1788,
@@ -259,7 +259,7 @@ const newsData = [
   {
     "id": 1809,
     "title": "《鸣潮》3.5版本7月10日登陆Xbox，结束PS5独占期",
-    "summary": "库洛游戏宣布《鸣潮》3.5版本\"遗音扶剑，荡梦而歌\"将于7月10日全球同步上线，届时将首次登陆Xbox Series X|S主机与PC平台，支持免费游玩、中文与XPA(Xbox Play Anywhere)特性。Xbox商店已开启愿望单功能。",
+    "summary": "库洛游戏宣布《鸣潮》3.5版本“遗音扶剑，荡梦而歌”将于7月10日全球同步上线，届时将首次登陆Xbox Series X|S主机与PC平台，支持免费游玩、中文与XPA(Xbox Play Anywhere)特性。Xbox商店已开启愿望单功能。",
     "source": "IT之家 / 搜狐 / 中关村在线",
     "sourceUrl": "https://www.ithome.com/0/970/757.htm",
     "sourceUrls": [
@@ -381,8 +381,8 @@ const newsData = [
   },
   {
     "id": 1812,
-    "title": "《使命召唤：现代战争4》广告醒目标注\"今年不登陆Xbox Game Pass\"",
-    "summary": "一则疑似《使命召唤：现代战争4》的Facebook广告近日曝光，动视将\"今年不在Xbox Game Pass上\"作为核心卖点之一。微软在2026年4月已确认新发售的COD将不再首发日加入XGP，而是延期加入。《使命召唤：现代战争4》预计将成为微软订阅策略转向后的首款作品。",
+    "title": "《使命召唤：现代战争4》广告醒目标注“今年不登陆Xbox Game Pass”",
+    "summary": "一则疑似《使命召唤：现代战争4》的Facebook广告近日曝光，动视将“今年不在Xbox Game Pass上”作为核心卖点之一。微软在2026年4月已确认新发售的COD将不再首发日加入XGP，而是延期加入。《使命召唤：现代战争4》预计将成为微软订阅策略转向后的首款作品。",
     "source": "17173 / VGC / 搜狐",
     "sourceUrl": "https://news.17173.com/content/06302026/120027347.shtml",
     "sourceUrls": [
@@ -411,7 +411,7 @@ const newsData = [
     ],
     "sentiment": "neutral",
     "tdocMarking": "none",
-    "analysis": "What:《使命召唤：现代战争4》广告强调\"XGP不首发\"。Why:微软4月已确认COD不再首发日进入XGP，动视利用这一变化作为新卖点。So What:标志微软订阅服务\"首发即入库\"模式的结束，COD可能成为订阅策略转型的标志性产品。What Next:微软对XGP首发阵容的调整将影响第三方对XGP的合作意愿，Game Pass吸引力可能下降。",
+    "analysis": "What:《使命召唤：现代战争4》广告强调“XGP不首发”。Why:微软4月已确认COD不再首发日进入XGP，动视利用这一变化作为新卖点。So What:标志微软订阅服务“首发即入库”模式的结束，COD可能成为订阅策略转型的标志性产品。What Next:微软对XGP首发阵容的调整将影响第三方对XGP的合作意愿，Game Pass吸引力可能下降。",
     "relatedNewsIds": [
       1813,
       1810,
@@ -495,7 +495,7 @@ const newsData = [
   {
     "id": 1814,
     "title": "《战锤40K：行商浪人》销量突破200万份，11月推出盒装版",
-    "summary": "开发商Owlcat Games在B站发文宣布，旗下《战锤40K：行商浪人(Warhammer 40K: Rogue Trader)》在PC与各大主机平台的累计销量已突破200万份。伴随这一里程碑，官方确认将与Silver Lining合作推出游戏首个实体版本\"虚空旅者版\"(Voidfarer Edition)，预计11月发售。",
+    "summary": "开发商Owlcat Games在B站发文宣布，旗下《战锤40K：行商浪人(Warhammer 40K: Rogue Trader)》在PC与各大主机平台的累计销量已突破200万份。伴随这一里程碑，官方确认将与Silver Lining合作推出游戏首个实体版本“虚空旅者版”(Voidfarer Edition)，预计11月发售。",
     "source": "IT之家 / 搜狐 / 凤凰网",
     "sourceUrl": "https://www.ithome.com/0/970/173.htm",
     "sourceUrls": [
@@ -686,7 +686,7 @@ const newsData = [
     ],
     "sentiment": "neutral",
     "tdocMarking": "none",
-    "analysis": "What:索尼明确PS6不大幅亏本销售，PS5多市场涨价以消化成本。Why:零部件成本持续上涨+索尼财务纪律收紧+硬件业务长期亏损不可持续。So What:索尼PS6零售价可能突破1000美元，主机游戏\"亲民\"传统被打破。What Next:若PS6高价上市，将考验玩家对PlayStation品牌的支付意愿，可能加速行业向PC/手机端分流。",
+    "analysis": "What:索尼明确PS6不大幅亏本销售，PS5多市场涨价以消化成本。Why:零部件成本持续上涨+索尼财务纪律收紧+硬件业务长期亏损不可持续。So What:索尼PS6零售价可能突破1000美元，主机游戏“亲民”传统被打破。What Next:若PS6高价上市，将考验玩家对PlayStation品牌的支付意愿，可能加速行业向PC/手机端分流。",
     "relatedNewsIds": [
       1808,
       1788,
@@ -779,7 +779,7 @@ const newsData = [
   {
     "id": 1821,
     "title": "预购势头凶猛！《GTA6》登顶PS及Xbox商店销量榜首",
-    "summary": "尽管距离11月19日正式发售尚有近5个月，《GTA6》已成功登顶PlayStation Store和Xbox商店的销量排行榜。PlayStation Store\"最畅销\"榜单显示，《GTA6》力压《堡垒之夜》《NBA 2K26》《漫威争锋》。终极版预购第1，标准版排第9。",
+    "summary": "尽管距离11月19日正式发售尚有近5个月，《GTA6》已成功登顶PlayStation Store和Xbox商店的销量排行榜。PlayStation Store“最畅销”榜单显示，《GTA6》力压《堡垒之夜》《NBA 2K26》《漫威争锋》。终极版预购第1，标准版排第9。",
     "source": "游民星空 / 趣粉汽车 / 网易",
     "sourceUrl": "https://wap.gamersky.com/news/Content-2163462.html",
     "sourceUrls": [
@@ -809,7 +809,7 @@ const newsData = [
     ],
     "sentiment": "positive",
     "tdocMarking": "none",
-    "analysis": "What:《GTA6》登顶PS和Xbox商店预购榜首。Why:R星IP号召力+标准版/终极版定价合理(79.99/99.99美元)+预购奖励\"罪恶都市复古礼包\"吸引力。So What:游戏尚未发售已创造预购量级里程碑，Take-Two股价可能持续受益。What Next:11月19日实际首发数据将验证预购预测，对Take-Two市值和R星战略产生重大影响。",
+    "analysis": "What:《GTA6》登顶PS和Xbox商店预购榜首。Why:R星IP号召力+标准版/终极版定价合理(79.99/99.99美元)+预购奖励“罪恶都市复古礼包”吸引力。So What:游戏尚未发售已创造预购量级里程碑，Take-Two股价可能持续受益。What Next:11月19日实际首发数据将验证预购预测，对Take-Two市值和R星战略产生重大影响。",
     "relatedNewsIds": [
       1754,
       1783,
@@ -1205,7 +1205,7 @@ const newsData = [
     ],
     "sentiment": "positive",
     "tdocMarking": "none",
-    "analysis": "What:索尼互娱CEO赫尔斯特重申对服务型游戏的信心。Why:Bungie裁员但索尼整体GaaS战略不变+Live Service是主机游戏长期变现模式+《马拉松》等重点项目仍在推进。So What:索尼将持续投入GaaS赛道，但可能调整节奏从\"数量\"转向\"质量\"，以避免类似星鸣特攻的失败重演。What Next:《马拉松》发售表现将验证索尼GaaS战略的执行力，影响PlayStation整体收入结构。",
+    "analysis": "What:索尼互娱CEO赫尔斯特重申对服务型游戏的信心。Why:Bungie裁员但索尼整体GaaS战略不变+Live Service是主机游戏长期变现模式+《马拉松》等重点项目仍在推进。So What:索尼将持续投入GaaS赛道，但可能调整节奏从“数量”转向“质量”，以避免类似星鸣特攻的失败重演。What Next:《马拉松》发售表现将验证索尼GaaS战略的执行力，影响PlayStation整体收入结构。",
     "relatedNewsIds": [
       1757,
       1791,
@@ -1246,7 +1246,7 @@ const newsData = [
     ],
     "sentiment": "neutral",
     "tdocMarking": "none",
-    "analysis": "What:行业观点认为Valve可承受小众高价硬件，索尼/微软不能。Why:Valve核心收入来自Steam平台分成，硬件业务非核心；索尼/微软主机销量直接影响平台生态。So What:三家公司在硬件策略上的不同选择反映了其商业模式差异，Valve可以试错，索尼/微软必须谨慎。What Next:Steam Machine上市后表现将验证\"小众高价\"硬件的可持续性，为索尼/微软的PS6/Project Helix策略提供参考。",
+    "analysis": "What:行业观点认为Valve可承受小众高价硬件，索尼/微软不能。Why:Valve核心收入来自Steam平台分成，硬件业务非核心；索尼/微软主机销量直接影响平台生态。So What:三家公司在硬件策略上的不同选择反映了其商业模式差异，Valve可以试错，索尼/微软必须谨慎。What Next:Steam Machine上市后表现将验证“小众高价”硬件的可持续性，为索尼/微软的PS6/Project Helix策略提供参考。",
     "relatedNewsIds": [
       1789,
       1802,
@@ -1604,7 +1604,7 @@ const newsData = [
     ],
     "sentiment": "positive",
     "tdocMarking": "none",
-    "analysis": "What:《怪物猎人世界》销量破3000万，卡普空单款游戏最高。Why:长期品质运营+多平台覆盖(PS4/Xbox/PC)+持续内容更新+冰原DLC扩展+Steam夏季特惠再次拉动销售。So What:证明3A游戏长尾生命力可超过7年，\"老游戏新促销\"成为长尾销售重要模式。What Next:卡普空可能加速《怪猎世界2》或新作企划，3000万IP基础提供强大商业潜力。",
+    "analysis": "What:《怪物猎人世界》销量破3000万，卡普空单款游戏最高。Why:长期品质运营+多平台覆盖(PS4/Xbox/PC)+持续内容更新+冰原DLC扩展+Steam夏季特惠再次拉动销售。So What:证明3A游戏长尾生命力可超过7年，“老游戏新促销”成为长尾销售重要模式。What Next:卡普空可能加速《怪猎世界2》或新作企划，3000万IP基础提供强大商业潜力。",
     "relatedNewsIds": [
       1765,
       1814,
