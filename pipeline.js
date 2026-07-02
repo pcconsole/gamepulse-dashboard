@@ -1,8 +1,8 @@
 // ============================================
-// 待上线 Pipeline 数据模块 V3.14
+// 待上线 Pipeline 数据模块 V3.15
 // 数据源：腾讯文档 MCP（唯一基准，文档ID: LRcKfOTzgHrV）
 //         + 网络搜索验证补充（标注来源，不覆盖MCP数据）
-// 最后更新: 2026-06-18 (V3.14 MCP全量刷新: Marvel Tokon修正回8/6+MCP新增20款+字段更新15条+DOA6已发售)
+// 最后更新: 2026-07-02 (V3.15 周四调度: 4款已发售移至released[UFC6/冒险家艾略特/星际火狐/死或生6]+雾影猎人日期细化7/30，近2周无新公布大作)
 // ============================================
 
 // ====== 未上线产品数据（全部展示）======
@@ -12,9 +12,6 @@ const pipelineUnreleased = [
     // =============================================
 
     // --- MCP 海外产品（有具体日期）---
-    { region: "海外", name: "UFC 6", publisher: "EA", studio: "/", releaseDate: "2026/6/19", platforms: "PS5+Xbox", heat: "低", heatNote: "UFC授权", gameplay: "格斗", licenseStatus: "", licenseNote: "", source: "MCP" },
-    { region: "海外", name: "冒险家艾略特的千年物语", publisher: "史克威尔艾尼克斯", studio: "/", releaseDate: "2026/6/19", platforms: "PC+PS5+Xbox+Switch2", heat: "低", heatNote: "HD-2D视觉动作冒险，时空开放世界", gameplay: "俯视角探索，仙女辅助战斗，时空穿梭冒险", licenseStatus: "", licenseNote: "", source: "MCP" },
-    { region: "海外", name: "星际火狐（Star Fox）", publisher: "任天堂", studio: "/", releaseDate: "2026/6/25", platforms: "Switch2", heat: "低", heatNote: "重制版，系列中星际火狐64销量400万+", gameplay: "轨道式第三人称太空射击，支持单人/本地双人合作与4v4多人对战", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "艾恩葛朗特 回荡新声", publisher: "万代南梦宫", studio: "/", releaseDate: "2026/7/10", platforms: "PC+PS5+Xbox", heat: "低", heatNote: "刀剑神域IP", gameplay: "创建英雄，装备选择，伙伴协同战斗升级", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "光环：战役进化", publisher: "微软", studio: "Halo Studios", releaseDate: "2026/7/28", platforms: "PC+PS5+Xbox", heat: "中高", heatNote: "光环IP续作，系列超800万，忠实重制+扩展，Xbox Showcase确认7/28+登陆PS5+Game Pass首日", gameplay: "HD画面，4人联机合作，新武器敌人", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "轮回之兽（Beast of Reincarnation）", publisher: "Game Freak", studio: "/", releaseDate: "2026/8/4", platforms: "PC+PS5+Xbox", heat: "中低", heatNote: "宝可梦开发商Game Freak转型之作", gameplay: "后末日日本，一人一狗探索，技术要求高战斗", licenseStatus: "", licenseNote: "", source: "MCP" },
@@ -103,7 +100,7 @@ const pipelineUnreleased = [
 
     // --- MCP 国内产品（季度/年份）---
     { region: "国内", name: "头号禁区", publisher: "字节跳动", studio: "沐瞳", releaseDate: "2026年Q2", platforms: "移动", heat: "中低", heatNote: "更注重策略性，偏向MOBA", gameplay: "第三人称搜打撤+MOBA", licenseStatus: "未获版号", licenseNote: "", source: "MCP" },
-    { region: "国内", name: "雾影猎人（Mistfall Hunter）", publisher: "字节跳动", studio: "北京绿洲", releaseDate: "2026年7月", platforms: "PC+PS5+Xbox", heat: "中低", heatNote: "创新MMO+搜打撤玩法", gameplay: "PvPvE+冷兵器类魂搜打撤", licenseStatus: "已获版号", licenseNote: "客户端", source: "MCP" },
+    { region: "国内", name: "雾影猎人（Mistfall Hunter）", publisher: "字节跳动", studio: "北京绿洲", releaseDate: "2026/7/30", platforms: "PC+PS5+Xbox", heat: "中低", heatNote: "创新MMO+搜打撤玩法，字节官方定档7/30全球发售，6/15 Steam新品节开测", gameplay: "PvPvE+冷兵器类魂搜打撤", licenseStatus: "已获版号", licenseNote: "客户端", source: "MCP" },
     { region: "国内", name: "无限大（Ananta）", publisher: "网易", studio: "雷火旗下Naked Rain", releaseDate: "2026年7月", platforms: "移动+PC+PS5", heat: "高", heatNote: "和我司王者世界为直接竞品，目前实机视频品质表现优异", gameplay: "开放世界二游+类GTA+多玩法缝合", licenseStatus: "已获版号", licenseNote: "移动+客户端+游戏机（PS5）", source: "MCP" },
     { region: "国内", name: "遗忘之海（Sea of Remnants）", publisher: "网易", studio: "/", releaseDate: "2026年Q3", platforms: "移动+PC+PS5", heat: "中", heatNote: "网易新品", gameplay: "开放世界海洋冒险", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "国内", name: "伊莫", publisher: "Funplus", studio: "爪印工作室", releaseDate: "2026年", platforms: "待定", heat: "低", heatNote: "", gameplay: "待定", licenseStatus: "", licenseNote: "", source: "MCP" },
@@ -155,13 +152,17 @@ const pipelineUnreleased = [
     { region: "海外", name: "星刃：血雨（Stellar Blade: Blood Rain）", publisher: "Shift Up", studio: "Shift Up", releaseDate: "待定", platforms: "PC+PS5", heat: "中", heatNote: "《剑星》续作，新主角，SGF公布，据IGN+Polygon 6+源确认", gameplay: "动作冒险ARPG", licenseStatus: "", licenseNote: "", source: "网络搜索" },
     { region: "海外", name: "星球大战：零号连队（Zero Company）", publisher: "EA/Lucasfilm", studio: "Bit Reactor", releaseDate: "2026/8/27", platforms: "PC+PS5+Xbox", heat: "中", heatNote: "X-COM式星战回合策略，SGF确认8/27发售$59.99，据IGN+GamesRadar 6+源确认", gameplay: "回合制战术策略", licenseStatus: "", licenseNote: "", source: "网络搜索" },
     { region: "海外", name: "火焰纹章：万缕千丝（Fortune's Weave）", publisher: "任天堂", studio: "/", releaseDate: "2026/9/17", platforms: "Switch2", heat: "中低", heatNote: "系列销量1800万+，MCP已收录同名产品", gameplay: "战棋SRPG", licenseStatus: "", licenseNote: "", source: "网络搜索" },
-    { region: "海外", name: "死或生6：最后一战", publisher: "光荣特库摩", studio: "Team NINJA", releaseDate: "2026/6/25", platforms: "PC+PS5+Xbox", heat: "低", heatNote: "DOA系列30周年，29角色，Koei Tecmo+PlayStation Blog+Gematsu 8+源确认6/25发售", gameplay: "3D对战格斗", licenseStatus: "", licenseNote: "", source: "网络搜索" },
 
     { region: "国内", name: "刺客信条：影（国行版）", publisher: "育碧/腾讯", studio: "/", releaseDate: "2026年", platforms: "PC+PS5+Xbox", heat: "中", heatNote: "国行版审核中", gameplay: "潜行动作冒险", licenseStatus: "审核中", licenseNote: "腾讯代理国行版", source: "网络搜索" },
 ];
 
 // ====== 已上线产品数据（仅展示2026年上线的）======
 const pipelineReleased = [
+    // ===== 2026-07-02 更新: 新增已发售 =====
+    { region: "海外", name: "UFC 6", publisher: "EA", studio: "EA Vancouver", releaseDate: "2026/6/19", platforms: "PS5+Xbox", heat: "低", heatNote: "UFC授权格斗，寒霜引擎，EA官方确认6/19发售(6/12抢先体验)，据EA投资者页+IGN评测+Metacritic 8+源确认", gameplay: "格斗", source: "MCP" },
+    { region: "海外", name: "冒险家艾略特的千年物语", publisher: "史克威尔艾尼克斯", studio: "浅野团队", releaseDate: "2026/6/19", platforms: "PC+PS5+Xbox+Switch2", heat: "低", heatNote: "HD-2D视觉动作冒险，浅野团队(歧路旅人/三角战略)首款动作RPG，IGN 8分，主机6/18/Steam 6/19发售", gameplay: "俯视角探索，仙女辅助战斗，时空穿梭冒险", source: "MCP" },
+    { region: "海外", name: "星际火狐（Star Fox）", publisher: "任天堂", studio: "/", releaseDate: "2026/6/25", platforms: "Switch2", heat: "低", heatNote: "星际火狐64重制版，系列销量400万+，6月Switch2最大独占，据Gamermarkt+腾讯多源确认6/25发售", gameplay: "轨道式第三人称太空射击，支持单人/本地双人合作与4v4多人对战", source: "MCP" },
+    { region: "海外", name: "死或生6：最后一战", publisher: "光荣特库摩", studio: "Team NINJA", releaseDate: "2026/6/25", platforms: "PC+PS5+Xbox", heat: "低", heatNote: "DOA系列30周年强化版，整合原版5赛季DLC+29角色+KOF联动，据百度百科+3DM+腾讯多源确认6/25发售", gameplay: "3D对战格斗", source: "网络搜索" },
     // ===== 2026-06-18 更新: 新增已发售 =====
     { region: "海外", name: "Gothic 1 Remake", publisher: "THQ Nordic", studio: "Alkimia Interactive", releaseDate: "2026/6/5", platforms: "PC+Xbox+PS5", heat: "低", heatNote: "2001年经典RPG重制，核心怀旧玩家期待，据GamesRadar+IGN多源确认6/5发售", gameplay: "开放世界RPG", source: "MCP" },
     // ===== 2026-06-04 更新: 新增已发售 =====
