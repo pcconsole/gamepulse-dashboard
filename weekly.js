@@ -2,6 +2,17 @@
 // 每周生成新周报时，在数组顶部追加一条
 window.WEEKLY_REPORTS = [
   {
+    week: 'M06',
+    date: '2026-07-01',
+    periodStart: '2026-06-01',
+    periodEnd: '2026-06-30',
+    title: '端主行业月报 · 2026年6月',
+    summary: '利润摊牌月：微软Asha"扩收入+控成本"双轨改革为3%责任利润率买单（6月起关厂+7月近2000人裁员）、索尼强势收割（回归独占+2028弃盘+PS Plus或涨价）形成攻守对峙；硬件涨价潮Xbox最狠（一年三轮+2TB停产）、Steam Machine高价首发$1049；去实体化引发消费者反噬但资本点赞；GTA6预购屠榜60+国。',
+    file: 'weekly/Monthly_Briefing_202606.html',
+    tags: ['月报', 'Xbox双轨改革', '索尼收割', '硬件涨价', '去实体化', 'GTA6'],
+    highlight: true
+  },
+  {
     week: 'W25',
     date: '2026-06-26',
     periodStart: '2026-06-20',

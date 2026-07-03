@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>端主行业月报 · 2026年6月</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4f6f9; --ink: #1e3a5f; --ink-2: #2c4a6e; --ink-dim: #4a5c6e; --ink-ghost: #7b8a99;
+    --red: #c85a4a; --red-bg: #f5e0db; --red-dim: #a0483b;
+    --gold: #8b6914; --gold-bg: #ede4cf;
+    --green: #3d6b57; --green-bg: #dde7e0;
+    --surface: #ffffff; --surface-2: #eef1f5;
+    --rule: #d5dce3; --rule-dim: #e5e9ee;
+    --sony: #003087; --xbox: #107c10;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #c8ced6; font-family: 'Microsoft YaHei', '微软雅黑', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  .page { width: 430px; background: var(--bg); color: var(--ink); margin: 0 auto; overflow: hidden; }
+
+  .hero { background: linear-gradient(135deg, #1e3a5f 0%, #2c4a6e 100%); color: white; padding: 22px 20px 26px; position: relative; }
+  .hero::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background: linear-gradient(90deg, var(--red) 0%, var(--gold) 100%); }
+  .hero .brand { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.3em; color: #f0a07a; font-weight: 700; margin-bottom: 10px; }
+  .hero h1 { font-size: 28px; font-weight: 800; line-height: 1.15; letter-spacing: -0.01em; text-wrap: balance; }
+  .hero .sub { font-size: 13px; color: rgba(255,255,255,0.78); margin-top: 8px; line-height: 1.5; }
+  .hero .meta { display: flex; gap: 18px; margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.15); font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.7); letter-spacing: 0.1em; }
+  .hero .meta strong { color: white; font-weight: 700; }
+
+  /* Executive summary */
+  .exsum { background: var(--surface); padding: 15px 20px; border-bottom: 3px solid var(--red); }
+  .exsum .el { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.15em; color: var(--red); font-weight: 700; margin-bottom: 9px; }
+  .exsum .eb { font-size: 13px; line-height: 1.75; color: var(--ink); }
+  .exsum .eb strong { color: var(--ink); font-weight: 800; }
+  .guide { padding: 11px 20px; font-size: 11px; color: var(--ink-dim); line-height: 1.65; border-bottom: 1px solid var(--rule-dim); background: var(--surface-2); }
+  .guide strong { color: var(--red); font-weight: 700; }
+
+  .section { padding: 26px 20px 20px; }
+  .section + .section { border-top: 10px solid #e2e7ed; }
+  .sec-head { margin-bottom: 6px; padding-bottom: 10px; border-bottom: 2px solid var(--ink); }
+  .sec-head .num { font-family: 'IBM Plex Mono', monospace; font-size: 32px; font-weight: 800; color: var(--red); line-height: 1; display: inline; margin-right: 10px; }
+  .sec-head .title { font-size: 19px; font-weight: 800; color: var(--ink); line-height: 1.35; display: inline; }
+  .sec-subtitle { font-size: 15px; font-weight: 700; color: var(--red); margin: 8px 0 16px; line-height: 1.5; }
+  .mini-h { font-size: 13px; color: var(--ink-dim); margin: 14px 0 6px; font-weight: 700; }
+
+  /* Tables 表头11 / 正文11 */
+  .stbl { width: 100%; border-collapse: collapse; font-size: 12px; margin: 8px 0 10px; }
+  .stbl thead { background: var(--ink); color: white; }
+  .stbl th { text-align: left; padding: 7px 8px; font-weight: 700; font-size: 12px; letter-spacing: 0.04em; }
+  .stbl td { padding: 7px 8px; border-bottom: 1px solid var(--rule-dim); vertical-align: top; line-height: 1.5; }
+  .stbl .num { font-family: 'IBM Plex Mono', monospace; font-weight: 600; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .stbl .hl-row { background: var(--red-bg); }
+  .stbl tbody tr:nth-child(even) { background: var(--surface-2); }
+  .stbl .cat { font-weight: 800; color: var(--red-dim); white-space: nowrap; }
+  .stbl .arw { color: var(--red); font-weight: 800; }
+
+  /* 深蓝卡 insight — 标签/正文统一12 */
+  .insight { background: linear-gradient(135deg, #1e3a5f 0%, #263f5e 100%); border-radius: 6px; padding: 14px 16px; margin: 12px 0; color: rgba(255,255,255,0.92); font-size: 13px; line-height: 1.7; }
+  .insight .il { font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.08em; color: #f0a07a; margin-bottom: 8px; border-bottom: 1px dashed rgba(255,255,255,0.15); padding-bottom: 6px; font-weight: 700; }
+  .insight p { margin-bottom: 6px; font-size: 13px; }
+  .insight p:last-child { margin-bottom: 0; }
+  .insight em { font-style: normal; color: #f0a07a; font-weight: 700; }
+  .insight strong { color: #fff; }
+
+  /* 趋势卡 — 正文12 / 小标签10 */
+  .trend { background: var(--gold-bg); border-left: 4px solid var(--gold); padding: 10px 14px; margin: 10px 0 14px; border-radius: 0 5px 5px 0; font-size: 13px; line-height: 1.65; color: var(--ink-dim); }
+  .trend .tl { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--gold); font-weight: 700; margin-bottom: 4px; }
+  .trend strong { color: var(--ink); font-weight: 700; }
+  .trend em { font-style: normal; color: var(--red-dim); font-weight: 700; }
+
+  /* 白底事件卡 — 正文12 / 日期11 / 彩标10 */
+  .ev-line { background: var(--surface); border: 1px solid var(--rule-dim); border-radius: 5px; padding: 8px 12px; margin-bottom: 5px; font-size: 13px; line-height: 1.6; }
+  .ev-line .ev-head { display: flex; align-items: center; gap: 6px; margin-bottom: 2px; }
+  .ev-line .d { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--ink-ghost); font-weight: 600; }
+  .ev-line .ev-body strong { color: var(--ink); font-weight: 700; }
+  .tg { font-size: 11px; font-weight: 700; padding: 1px 6px; border-radius: 2px; }
+  .tg-r { background: var(--red-bg); color: var(--red); }
+  .tg-b { background: #dce8f5; color: #2a5a8f; }
+  .tg-y { background: var(--gold-bg); color: var(--gold); }
+  .tg-g { background: var(--green-bg); color: var(--green); }
+
+  /* 平台对比 vs-wrap — 正文12 */
+  .vs-wrap { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; margin: 12px 0 14px; box-shadow: 0 1px 6px rgba(30,58,95,0.07); }
+  .vs-header { display: grid; grid-template-columns: 1fr 1fr; }
+  .vs-header .vs-h { padding: 9px 12px; font-size: 13px; font-weight: 800; letter-spacing: 0.04em; display: flex; align-items: center; gap: 6px; color: #fff; }
+  .vs-header .vs-h.sony { background: var(--sony); }
+  .vs-header .vs-h.xbox { background: var(--xbox); }
+  .vs-header .vs-h .dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.55); flex: none; }
+  .vs-header .vs-h .vh-sub { font-weight: 600; font-size: 11px; opacity: 0.85; letter-spacing: 0; margin-left: auto; white-space: nowrap; }
+  .vs-cat { padding: 6px 12px; font-size: 13px; font-weight: 800; letter-spacing: 0.03em; color: var(--ink); background: linear-gradient(to right, #eaeef4, #f4f6fa); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule-dim); }
+  .vs-row { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--rule-dim); }
+  .vs-row:last-child { border-bottom: none; }
+  .vs-cell { padding: 8px 11px; font-size: 13px; line-height: 1.55; color: var(--ink-dim); }
+  .vs-cell.sony { border-left: 3px solid var(--sony); background: #f4f7fc; }
+  .vs-cell.xbox { border-left: 3px solid var(--xbox); background: #f5fbf6; }
+  .vs-cell .e { padding: 2.5px 0; }
+  .vs-cell .e strong { color: var(--ink); font-weight: 700; }
+  .vs-cell .d { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--ink-ghost); font-weight: 700; margin-right: 5px; }
+
+  /* 深蓝卡内 异同双栏 — 标签/正文12 */
+  .ix-split { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-bottom: 12px; }
+  .ix-col { padding: 9px 11px; border-radius: 5px; background: rgba(255,255,255,0.055); border-top: 2px solid; }
+  .ix-col.sony { border-top-color: #4f8fd6; }
+  .ix-col.xbox { border-top-color: #5cc079; }
+  .ix-col .ix-name { font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 800; letter-spacing: 0.04em; margin-bottom: 5px; }
+  .ix-col.sony .ix-name { color: #8fbceb; }
+  .ix-col.xbox .ix-name { color: #82d99b; }
+  .ix-col p { font-size: 13px; line-height: 1.55; color: rgba(255,255,255,0.88); margin: 0; }
+  .ix-deep { margin-bottom: 2px; }
+  .ix-deep p { margin-bottom: 7px; font-size: 13px; }
+  .ix-deep p:last-child { margin-bottom: 0; }
+  .ix-take { margin-top: 11px; padding: 10px 12px; border-radius: 5px; background: rgba(200,90,74,0.16); border-left: 3px solid var(--red); font-size: 13px; line-height: 1.65; color: rgba(255,255,255,0.92); }
+  .ix-take b { color: #f0a07a; font-weight: 700; }
+
+  /* 章节核心洞察 lead 卡（BLUF 结论先行） */
+  .chap-lead { background: linear-gradient(135deg, #1e3a5f 0%, #28496b 100%); border-radius: 7px; padding: 13px 15px; margin: 0 0 16px; box-shadow: 0 2px 10px rgba(30,58,95,0.18); border-left: 4px solid var(--gold); }
+  .chap-lead .cll { font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.08em; color: #e8b84a; font-weight: 700; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+  .chap-lead .clt { font-size: 13px; line-height: 1.7; color: rgba(255,255,255,0.94); }
+  .chap-lead .clt strong { color: #ffd98a; font-weight: 800; }
+  .chap-lead .clt em { font-style: normal; color: #ffd98a; font-weight: 700; }
+
+  /* 双轨改革可视化 */
+  .dual { margin: 12px 0 14px; }
+  .dual-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+  .dual-col { border-radius: 7px; padding: 11px 12px; }
+  .dual-col.up { background: var(--green-bg); border-top: 3px solid var(--green); }
+  .dual-col.dn { background: var(--red-bg); border-top: 3px solid var(--red); }
+  .dual-col .dh { font-size: 13px; font-weight: 800; margin-bottom: 7px; letter-spacing: 0.02em; }
+  .dual-col.up .dh { color: var(--green); }
+  .dual-col.dn .dh { color: var(--red-dim); }
+  .dual-col .di { font-size: 13px; line-height: 1.5; color: var(--ink-dim); padding: 3px 0 3px 15px; position: relative; }
+  .dual-col .di::before { content: ''; position: absolute; left: 3px; top: 8px; width: 5px; height: 5px; border-radius: 50%; }
+  .dual-col.up .di::before { background: var(--green); }
+  .dual-col.dn .di::before { background: var(--red); }
+  .dual-col .di strong { color: var(--ink); font-weight: 700; }
+  .dual-mid { text-align: center; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--ink-ghost); font-weight: 700; letter-spacing: 0.1em; margin: 7px 0 6px; }
+  .dual-goal { text-align: center; font-size: 13px; font-weight: 800; color: #fff; background: linear-gradient(135deg, var(--ink) 0%, var(--ink-2) 100%); border-radius: 7px; padding: 10px 12px; }
+  .dual-goal em { font-style: normal; color: #ffd98a; }
+
+  /* 攻守对比卡（PART02 可视化） */
+  .duel { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin: 12px 0 14px; }
+  .duel-side { border-radius: 7px; padding: 12px; color: #fff; }
+  .duel-side.sony { background: linear-gradient(155deg, #003087 0%, #0a4bb0 100%); }
+  .duel-side.xbox { background: linear-gradient(155deg, #0c5f0c 0%, #127c12 100%); }
+  .duel-side .ds-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.22); }
+  .duel-side .ds-name { font-size: 15px; font-weight: 800; letter-spacing: 0.02em; }
+  .duel-side .ds-badge { font-size: 20px; font-weight: 800; line-height: 1; padding: 3px 9px; border-radius: 5px; background: rgba(255,255,255,0.16); }
+  .duel-side .ds-metric { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: rgba(255,255,255,0.82); margin-bottom: 8px; font-variant-numeric: tabular-nums; }
+  .duel-side .ds-metric b { color: #fff; font-size: 13px; }
+  .duel-side .ds-move { font-size: 13px; line-height: 1.55; color: rgba(255,255,255,0.95); }
+  .duel-side .ds-foot { margin-top: 9px; font-size: 12px; font-weight: 700; padding-top: 7px; border-top: 1px dashed rgba(255,255,255,0.22); }
+  .duel-side.sony .ds-foot { color: #9fc4f0; }
+  .duel-side.xbox .ds-foot { color: #93dca0; }
+
+  /* 全平台涨价汇总条（PART03） */
+  .impact { margin: 12px 0 6px; background: var(--surface); border: 1px solid var(--rule); border-radius: 7px; padding: 12px 13px; box-shadow: 0 1px 5px rgba(30,58,95,0.06); }
+  .impact-title { font-size: 13px; font-weight: 800; color: var(--ink); margin-bottom: 10px; }
+  .impact-title em { font-style: normal; color: var(--red); }
+  .impact-row { display: grid; grid-template-columns: 66px 1fr; gap: 9px; align-items: center; margin-bottom: 8px; }
+  .impact-row .ir-name { font-size: 13px; font-weight: 800; color: var(--ink); }
+  .impact-row .ir-track { position: relative; height: 22px; background: var(--surface-2); border-radius: 4px; overflow: hidden; }
+  .impact-row .ir-bar { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 4px; display: flex; align-items: center; padding-left: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; color: #fff; white-space: nowrap; }
+  .impact-note { font-size: 12px; color: var(--ink-dim); line-height: 1.5; margin-top: 4px; }
+  .impact-note b { color: var(--red); }
+
+  /* 主体块（PART04） */
+  .subj-block { margin: 7px 0; border-left: 4px solid; border-radius: 0 6px 6px 0; background: var(--surface); padding: 10px 13px; box-shadow: 0 1px 3px rgba(30,58,95,0.05); }
+  .subj-block.sony { border-color: var(--sony); }
+  .subj-block.xbox { border-color: var(--xbox); }
+  .subj-block.warn { border-color: var(--red); background: var(--red-bg); }
+  .subj-block.calm { border-color: var(--green); background: var(--green-bg); }
+  .subj-block .sb-name { font-size: 14px; font-weight: 800; margin-bottom: 4px; display: flex; align-items: center; gap: 7px; }
+  .subj-block.sony .sb-name { color: var(--sony); }
+  .subj-block.xbox .sb-name { color: var(--xbox); }
+  .subj-block.warn .sb-name { color: var(--red-dim); }
+  .subj-block.calm .sb-name { color: var(--green); }
+  .subj-block .sb-date { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; color: var(--ink-ghost); }
+  .subj-block .sb-body { font-size: 13px; line-height: 1.6; color: var(--ink-dim); }
+  .subj-block .sb-body strong { color: var(--ink); font-weight: 700; }
+
+  .footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 20px; text-align: center; font-size: 10px; line-height: 1.8; }
+  .footer .logo { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.3em; color: white; margin-bottom: 8px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="brand">GAMEPULSE · MONTHLY</div>
+    <h1>端主行业动态月报<br>2026年6月</h1>
+    <div class="sub">微软 Asha 双轨改革 · 索尼强势收割 · 硬件涨价潮 · 实体游戏落幕</div>
+    <div class="meta">
+      <span>PERIOD <strong>2026.06.01–06.30</strong></span>
+      <span>ISSUE <strong>JUNE 2026</strong></span>
+    </div>
+  </div>
+
+  <!-- EXECUTIVE SUMMARY -->
+  <div class="exsum">
+    <div class="el">EXECUTIVE SUMMARY · 30秒速览</div>
+    <div class="eb">
+      <strong>① Xbox 双轨改革</strong>：Asha 上任后"扩收入+控成本"并行，3% 责任利润率倒逼 6 月起关停欧美创意小团队、7 月启动近 2000 人裁员。<br>
+      <strong>② 索尼强势收割</strong>：删 PC 多平台表述回归独占、2028 弃盘、PS Plus 或再涨价——与微软"降价认错"方向相反，同为世代末现金流保卫战。<br>
+      <strong>③ 硬件涨价潮</strong>：Xbox 三轮涨价（8/1 起 2TB 停产）、Steam Machine $1049、PS6 BOM 近 $1000，存储涨价全线传导。<br>
+      <strong>④ 去实体化临界</strong>：索尼 2028 停产光盘引发消费者起诉与舆论反噬，但资本用股价点赞。
+    </div>
+  </div>
+  <!-- PART 01 · Xbox 战略调整 -->
+  <div class="section">
+    <div class="sec-head"><span class="num">01</span><span class="title">Xbox 战略调整：双轨改革</span></div>
+    <div class="chap-lead">
+      <div class="cll">核心洞察</div>
+      <div class="clt">Asha 以<strong>"扩收入 + 控成本"双轨改革</strong>为仅 <em>3% 责任利润率</em>买单——6 月起关停欧美创意小团队、7 月启动近 2000 人裁员，标志微软要求 Xbox <strong>自我造血、贡献利润</strong>。</div>
+    </div>
+
+    <div class="mini-h">6月战略主链</div>
+    <div class="ev-line"><div class="ev-head"><span class="d">6/8</span> <span class="tg tg-g">独占</span></div><div class="ev-body">独占策略调整：《战争机器：事变日》《发条革命》<strong>永久主机独占</strong>，明确每年 ≥1 款标志独占</div></div>
+    <div class="ev-line"><div class="ev-head"><span class="d">6/9</span> <span class="tg tg-r">纠偏</span></div><div class="ev-body">GP 涨价流失数百万订阅 → <strong>降回 $22.99</strong>（代价：COD 不入库），官方承认业务不健康</div></div>
+    <div class="ev-line" style="border-color:var(--red);"><div class="ev-head"><span class="d">6/11</span> <span class="tg tg-r">爆雷</span></div><div class="ev-body">内部信《XBOX Reset》：核心收入下滑、<strong>责任利润率(accountability margin)仅 3%</strong>、计划 7 月裁员 + 砍营销预算</div></div>
+    <div class="ev-line"><div class="ev-head"><span class="d">6/13</span> <span class="tg tg-y">重构</span></div><div class="ev-body">The Information：微软考虑<strong>分拆 Xbox</strong>（独立子公司/合资/出售），催 Fallout·上古卷轴提速</div></div>
+    <div class="ev-line"><div class="ev-head"><span class="d">6/16</span> <span class="tg tg-r">关厂</span></div><div class="ev-body">年底前<strong>关闭 ≥2 家工作室</strong>（"一家会让人震惊"）</div></div>
+    <div class="ev-line" style="border-color:var(--red);"><div class="ev-head"><span class="d">7/6 当周</span> <span class="tg tg-r">裁员</span></div><div class="ev-body">启动<strong>近 2000 人裁员</strong>，横跨 Xbox/销售/咨询，或称"史上最大"</div></div>
+
+    <div class="mini-h">工作室处置：砍欧美创意小团队，保稳定现金流</div>
+    <table class="stbl">
+      <thead><tr><th>类型</th><th>工作室</th><th>状态</th><th style="width:13%">规模</th><th>收购年月</th></tr></thead>
+      <tbody>
+        <tr><td class="cat" rowspan="3">裁撤/<br>出售中</td><td><strong>Ninja Theory</strong></td><td>6/15 关闭寻买家，Mara 暂停</td><td class="num">~100</td><td class="num">2018-06</td></tr>
+        <tr><td><strong>Double Fine</strong></td><td>6/16 谈判求独立，脑航员3 放缓</td><td class="num">~90</td><td class="num">2019-06</td></tr>
+        <tr><td><strong>Compulsion</strong></td><td>6/16 剥离/潜在关停</td><td class="num">~40</td><td class="num">2018-06</td></tr>
+        <tr><td class="cat" rowspan="2">较高<br>概率</td><td><strong>Undead Labs</strong></td><td>6/30 考虑关闭并遣散</td><td class="num">~110</td><td class="num">2018-06</td></tr>
+        <tr><td><strong>Arkane Lyon</strong></td><td>倾向卖出而非直接关闭</td><td class="num">~190</td><td class="num">2021*</td></tr>
+      </tbody>
+    </table>
+    <div style="font-size:11px;color:var(--ink-dim);line-height:1.6;margin:2px 0 10px;">*Arkane Lyon 随 2021 ZeniMax 收购并入。</div>
+
+    <div class="mini-h">战略转向：Phil Spencer → Asha Sharma（26.2 上任）</div>
+    <table class="stbl">
+      <thead><tr><th style="width:16%">维度</th><th style="width:42%">Phil Spencer 时期</th><th>Asha Sharma 时期</th></tr></thead>
+      <tbody>
+        <tr><td class="cat">背景</td><td>Gen9 尾声，跨端+订阅求增长</td><td>Gen10 将发，独占保销量、解决低利润遗留</td></tr>
+        <tr><td class="cat">多端</td><td>云串流、"Xbox PC"链接多端</td><td>Gen10 <strong>原生跨端</strong>（PC+console）</td></tr>
+        <tr><td class="cat">独占</td><td>弱化独占、推跨平台发行</td><td><strong>独占回归</strong>：每年 1 款标志独占</td></tr>
+        <tr><td class="cat">订阅</td><td>XGP 涨价拉收入（致百万流失）</td><td>XGP <strong>降价 23%</strong> 换回高潜用户</td></tr>
+        <tr><td class="cat">扩张</td><td>大量收购、储备内容管线</td><td><strong>降本提效</strong>：关停亏损工作室 + 7 月裁员</td></tr>
+        <tr class="hl-row"><td class="cat">结果</td><td>遗留：责任利润率不及预期（<strong>3%</strong>）</td><td>战略重点：<strong>利润导向、降本提效</strong></td></tr>
+      </tbody>
+    </table>
+
+    <div class="mini-h">改革逻辑：双轨并行，只为一个目标</div>
+    <div class="dual">
+      <div class="dual-cols">
+        <div class="dual-col up">
+          <div class="dh">↑ 扩大收入</div>
+          <div class="di">Gen10 <strong>原生跨端</strong>（PC+console）</div>
+          <div class="di"><strong>独占回归</strong>：每年 1 款标志作</div>
+          <div class="di">GP <strong>降价 23%</strong> 引流</div>
+        </div>
+        <div class="dual-col dn">
+          <div class="dh">↓ 严格控成本</div>
+          <div class="di">砍<strong>欧美创意小团队</strong>（保 A/B/M）</div>
+          <div class="di"><strong>7 月裁员</strong>近 2000 人</div>
+          <div class="di">砍营销预算</div>
+        </div>
+      </div>
+      <div class="dual-mid">↓ 并行发力 ↓</div>
+      <div class="dual-goal">责任利润率 <em>3%</em> → 恢复健康 · <em>自我造血贡献利润</em></div>
+    </div>
+  </div>
+
+  <!-- PART 02 · 索尼 vs 微软 -->
+  <div class="section">
+    <div class="sec-head"><span class="num">02</span><span class="title">索尼 vs 微软：世代末攻守对峙</span></div>
+    <div class="chap-lead">
+      <div class="cll">核心洞察</div>
+      <div class="clt">同处世代末现金流保卫战，两强<strong>方向相反</strong>：索尼<em>涨价收割</em>（利润创纪录、底气足），微软<em>降价认错</em>（利润仅 3%、被迫收缩）——但都<strong>回归独占、都砍 GaaS</strong>，殊途同源。</div>
+    </div>
+
+    <div class="mini-h">索尼四线收紧（微软对照见下方洞察）</div>
+    <div class="ev-line" style="border-left:3px solid var(--sony);"><div class="ev-head"><span class="d">5/8 · 7/3</span> <span class="tg tg-b">财务</span></div><div class="ev-body">G&amp;NS 利润<strong>创历史新高</strong>；PS Plus <strong>或再涨价</strong>——榨取存量 LTV</div></div>
+    <div class="ev-line" style="border-left:3px solid var(--sony);"><div class="ev-head"><span class="d">6/20</span> <span class="tg tg-b">独占</span></div><div class="ev-body">删 PC 多平台表述，<strong>单机锁 PS 独占</strong>（因 PC 端口收入不足）</div></div>
+    <div class="ev-line" style="border-left:3px solid var(--sony);"><div class="ev-head"><span class="d">7/1</span> <span class="tg tg-b">硬件</span></div><div class="ev-body"><strong>2028 停产光盘</strong>，PS6 几乎确定 2028、可能弃光驱</div></div>
+    <div class="ev-line" style="border-left:3px solid var(--sony);"><div class="ev-head"><span class="d">6/27</span> <span class="tg tg-r">GaaS</span></div><div class="ev-body">Bungie 裁员 <strong>292 人/约 50%</strong>（Marathon 失败），索尼旗下</div></div>
+
+    <div class="mini-h">索尼 vs 微软 · 攻守对比：一攻一守</div>
+    <div class="duel">
+      <div class="duel-side sony">
+        <div class="ds-top"><span class="ds-name">索尼</span><span class="ds-badge">攻</span></div>
+        <div class="ds-metric">PS5 <b>~9370万</b> · 利润创纪录</div>
+        <div class="ds-move">涨价榨 LTV · 弃盘降本 · 独占筑壁垒</div>
+        <div class="ds-foot">底气足 → 主动收割</div>
+      </div>
+      <div class="duel-side xbox">
+        <div class="ds-top"><span class="ds-name">微软</span><span class="ds-badge">守</span></div>
+        <div class="ds-metric">Series <b>~3400万</b> · 利润率 3%</div>
+        <div class="ds-move">降价保活跃 · 关厂保利润 · 独占引流</div>
+        <div class="ds-foot">压力大 → 被迫收缩</div>
+      </div>
+    </div>
+    <div class="insight">
+      <div class="il">核心判断 · 同源殊途</div>
+      <div class="ix-deep">
+        <p><strong>① 相同</strong>：都在 Gen9 末打<em>现金流保卫战</em>、<em>回归独占</em>、砍 GaaS（索尼 Bungie / 微软关厂）、被利润倒逼。</p>
+        <p><strong>② 异·方向</strong>：微软<em>降价认错</em>（守），索尼<em>涨价强势</em>（攻）。</p>
+        <p><strong>③ 异·代价</strong>：微软是关厂裁员的<em>内部动荡</em>；索尼是弃盘涨价的<em>消费者反噬</em>。</p>
+      </div>
+      <div class="ix-take"><b>一守一攻</b>：谁的护城河更扛现金流消耗，决定下一代起跑位。</div>
+    </div>
+  </div>
+
+  <!-- PART 03 · 硬件成本总爆发 -->
+  <div class="section">
+    <div class="sec-head"><span class="num">03</span><span class="title">硬件成本总爆发</span></div>
+    <div class="chap-lead">
+      <div class="cll">核心洞察</div>
+      <div class="clt">本月<strong>硬件涨价与高定价发售集中爆发</strong>（Xbox 三度涨价、Steam Machine 高价首发、Switch2 涨价）——根源是 AI 抢占内存产能推高存储价，全平台无一幸免，其中 <em>Xbox 涨幅最大、范围最广</em>（一年三轮、全球生效、2TB 停产）。</div>
+    </div>
+
+    <div class="impact">
+      <div class="impact-title">全平台无一幸免 · <em>Xbox 最重</em></div>
+      <div class="impact-row"><div class="ir-name">Xbox</div><div class="ir-track"><div class="ir-bar" style="width:100%;background:linear-gradient(90deg,#a0483b,#c85a4a);">三轮 · 全球 · 2TB停产</div></div></div>
+      <div class="impact-row"><div class="ir-name">Steam M</div><div class="ir-track"><div class="ir-bar" style="width:72%;background:linear-gradient(90deg,#a86326,#d0873a);">首发 $1049（超预期 $750）</div></div></div>
+      <div class="impact-row"><div class="ir-name">Switch 2</div><div class="ir-track"><div class="ir-bar" style="width:46%;background:linear-gradient(90deg,#8b6914,#b8901e);">港服 +7%</div></div></div>
+      <div class="impact-row"><div class="ir-name">PS5/6</div><div class="ir-track"><div class="ir-bar" style="width:26%;background:linear-gradient(90deg,#2a5a8f,#3a6a9f);">暂未涨 · BOM $1000 压力</div></div></div>
+      <div class="impact-note">仅 <b>Xbox</b> 一年内三度涨价且全球生效；Steam Machine 属高价首发，其余或区域性、或仅成本承压未落地。</div>
+    </div>
+
+    <div class="trend">
+      <div class="tl">涨价传导链路</div>
+      <strong>AI 抢占内存产能（HBM/GDDR）→ DRAM/NAND 合约价飙升 → 全平台涨价/停产。</strong>美光：芯片短缺 <em>2028</em> 才缓解；闪迪 PS5 授权 SSD 涨 <em>370%</em> 近 $3000。
+    </div>
+
+    <div class="mini-h">Xbox 三轮涨价史</div>
+    <table class="stbl">
+      <thead><tr><th>轮次</th><th>时间</th><th>Series S 512GB</th><th>Series X 光驱</th></tr></thead>
+      <tbody>
+        <tr><td class="cat">第一轮</td><td class="num">25-05 全球</td><td class="num">$299 <span class="arw">→</span> $379</td><td class="num">$499 <span class="arw">→</span> $599</td></tr>
+        <tr><td class="cat">第二轮</td><td class="num">25-10 美国</td><td class="num">$379 <span class="arw">→</span> $399</td><td class="num">$599 <span class="arw">→</span> $649</td></tr>
+        <tr class="hl-row"><td class="cat">第三轮</td><td class="num">26-08 全球</td><td class="num">≈ $479</td><td class="num">1TB $799</td></tr>
+      </tbody>
+    </table>
+    <div style="font-size:11px;color:var(--ink-dim);line-height:1.6;margin:2px 0 10px;">Series S 三轮累计 <strong style="color:var(--red);">+60%</strong>；<strong>Series X 2TB 型号停产退市</strong>；口径从"宏观/供应链"升级为"组件危机"。</div>
+
+    <div class="mini-h">其他平台：涨价与高价发售</div>
+    <div class="ev-line"><div class="ev-head"><span class="d">6/22</span> <span class="tg tg-r">高价</span></div><div class="ev-body"><strong>Steam Machine 首发 $1049 起</strong>（远高于市场预期的 $750，内存涨价推高），Valve 承认对内存厂"零议价权"</div></div>
+    <div class="ev-line"><div class="ev-head"><span class="d">6/29</span> <span class="tg tg-r">涨价</span></div><div class="ev-body"><strong>Switch 2 港服 3450 → 3700 港元</strong>（9/1 生效）；此前 NSO 日区已涨价</div></div>
+    <div class="ev-line"><div class="ev-head"><span class="d">6/30</span> <span class="tg tg-y">成本</span></div><div class="ev-body"><strong>PS6 物料成本（BOM）≈ $1000</strong>，分析师警告零售价或破 $1000</div></div>
+
+    <div class="trend">
+      <div class="tl">核心判断</div>
+      次世代主机（PS6 / Helix）普及节奏被<em>成本锁死</em>，或推高至 <strong>$1000+ 世代</strong>。
+    </div>
+  </div>
+
+  <!-- PART 04 · 去实体化临界点 -->
+  <div class="section">
+    <div class="sec-head"><span class="num">04</span><span class="title">去实体化临界点</span></div>
+    <div class="chap-lead">
+      <div class="cll">核心洞察</div>
+      <div class="clt">索尼、微软<strong>同步走向无光驱</strong>，实体介质将于 <em>2028 前后落幕</em>；索尼弃盘吃相引发<strong>玩家碾碎 PS5、多国起诉</strong>的罕见反噬，但<em>资本用股价投了赞成票</em>。</div>
+    </div>
+
+    <div class="subj-block sony">
+      <div class="sb-name">索尼 <span class="sb-date">7/1</span></div>
+      <div class="sb-body">官宣 <strong>2028 停产 PS 实体光盘</strong> → PS6 几乎确定 2028、可能弃光驱</div>
+    </div>
+    <div class="subj-block xbox">
+      <div class="sb-name">微软 <span class="sb-date">7/1</span></div>
+      <div class="sb-body">测试 <strong>Disc2Digital</strong>（光盘转数字授权），次世代或弃光驱——两平台同步无光驱</div>
+    </div>
+    <div class="subj-block warn">
+      <div class="sb-name">消费者反噬 <span class="sb-date">7/2</span></div>
+      <div class="sb-body">玩家碾碎 PS5、<strong>多国消费者组织起诉</strong>、品牌公开调侃；但索尼<strong>股价反涨</strong>（资本视作降本增效）</div>
+    </div>
+    <div class="subj-block calm">
+      <div class="sb-name">行业反差 <span class="sb-date">6/25</span></div>
+      <div class="sb-body">Circana：Switch 2 带动美国实体游戏<strong>2009 年来首次同比增长</strong>（+3%，"暂时反弹"）</div>
+    </div>
+  </div>
+
+  <!-- PART 05 · 其他速览 -->
+  <div class="section">
+    <div class="sec-head"><span class="num">05</span><span class="title">其他速览</span></div>
+    <div class="chap-lead">
+      <div class="cll">核心洞察</div>
+      <div class="clt">三条外围主线：<strong>GTA6</strong> 预购屠榜开启超级周期、<strong>行业裁员潮</strong>蔓延至育碧/EA/Bungie、<strong>现象级黑马</strong>频出（超变色龙 16 天千万）。</div>
+    </div>
+
+    <div class="mini-h">GTA6 超级周期</div>
+    <div class="ev-line"><div class="ev-head"><span class="d">6/24</span> <span class="tg tg-b">预购</span></div><div class="ev-body">预购开启 <strong>$79.99 / $99.99</strong>，11/19 发售；6/29 登顶 PS/Xbox 商店、<strong>60+ 国</strong>第一</div></div>
+    <div class="ev-line"><div class="ev-head"><span class="d">6月</span> <span class="tg tg-y">预测</span></div><div class="ev-body">分析师首年 <strong>3000–5000 万份</strong>（⚠️"3900 万预购"系谣言，官方未公布）</div></div>
+
+    <div class="mini-h">行业裁员潮（不止 Xbox）</div>
+    <div class="ev-line"><div class="ev-head"><span class="d">6/11</span> <span class="tg tg-r">育碧</span></div><div class="ev-body">第 6 波裁员约 <strong>380 人</strong>，关闭 2 家工作室</div></div>
+    <div class="ev-line"><div class="ev-head"><span class="d">6/19</span> <span class="tg tg-r">EA</span></div><div class="ev-body">启动裁员通知流程，多部门受波及</div></div>
+    <div class="ev-line"><div class="ev-head"><span class="d">6/27</span> <span class="tg tg-r">Bungie</span></div><div class="ev-body">裁员 <strong>292 人/约 50%</strong>（Marathon 失败），索尼旗下</div></div>
+
+    <div class="mini-h">现象级爆款</div>
+    <div class="ev-line"><div class="ev-head"><span class="d">6/27</span> <span class="tg tg-g">黑马</span></div><div class="ev-body">《超变色龙 / MECCHA CHAMELEON》<strong>16 天售出 1000 万份</strong>，社媒病毒式传播</div></div>
+    <div class="ev-line"><div class="ev-head"><span class="d">6月</span> <span class="tg tg-b">3000万</span></div><div class="ev-body">《怪物猎人：世界》《女神异闻录》系列、《黑神话：悟空》<strong>均破 3000 万份</strong></div></div>
+  </div>
+
+  <!-- PART 06 · 7月展望 -->
+  <div class="section">
+    <div class="sec-head"><span class="num">06</span><span class="title">7 月展望</span></div>
+    <div class="chap-lead">
+      <div class="cll">核心洞察</div>
+      <div class="clt">7 月看 <strong>Xbox 近 2000 人裁员落地规模</strong>与工作室名单；8 月财报将验证"<em>微软控成本、索尼强收割</em>"的实际战果。</div>
+    </div>
+
+    <div class="ev-line"><div class="ev-head"><span class="d">7/6 当周</span> <span class="tg tg-r">Xbox</span></div><div class="ev-body"><strong>近 2000 人裁员落地</strong>，工作室处置名单确认——验证 Asha"控成本"力度</div></div>
+    <div class="ev-line"><div class="ev-head"><span class="d">7/28</span> <span class="tg tg-b">新游</span></div><div class="ev-body"><strong>《光环：战役进化》</strong>等暑期新游发售，检验独占内容产出</div></div>
+    <div class="ev-line"><div class="ev-head"><span class="d">8月</span> <span class="tg tg-y">财报</span></div><div class="ev-body">财报季来临，验证双雄改革成效（微软 FY 收官 / 索尼 Q1）</div></div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="logo">GAMEPULSE · PC & CONSOLE</div>
+    <div>数据来源：腾讯文档 · GamesIndustry.biz · The Verge · Bloomberg · VGC · Eurogamer · GamingBolt · IGN · IT之家 · 3DM</div>
+    <div style="margin-top:6px;">2026.07.03 · JUNE 2026 MONTHLY · DATA CUTOFF 07.03</div>
+  </div>
+
+</div>
+</body>
+</html>
