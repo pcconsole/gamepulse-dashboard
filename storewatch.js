@@ -97,7 +97,7 @@ const storewatchData = {
             },
             {
               "rank": 5,
-              "us": "牧场物语：来吧！风之繁华集市（Story of Seasons: Grand Bazaar）",
+              "us": "牧场物语：来吧！风之繁华集市（Story of Seasons: Grand Bazaar‌）",
               "jp": "鸣潮（Wuthering Waves）",
               "hk": "异环（Neverness To Everness）",
               "isNonGame": false,
@@ -250,7 +250,7 @@ const storewatchData = {
             },
             {
               "rank": 5,
-              "us": "牧场物语：来吧！风之繁华集市（Story of Seasons: Grand Bazaar）",
+              "us": "牧场物语：来吧！风之繁华集市（Story of Seasons: Grand Bazaar‌）",
               "jp": "实况足球（eFootball）",
               "hk": "侠盗猎车手6（Grand Theft Auto VI）",
               "isNonGame": false,
@@ -403,7 +403,7 @@ const storewatchData = {
             },
             {
               "rank": 5,
-              "us": "牧场物语：来吧！风之繁华集市（Story of Seasons: Grand Bazaar）",
+              "us": "牧场物语：来吧！风之繁华集市（Story of Seasons: Grand Bazaar‌）",
               "jp": "实况足球（eFootball）",
               "hk": "暗黑破坏神4（Diablo IV）",
               "isNonGame": false,
@@ -556,7 +556,7 @@ const storewatchData = {
             },
             {
               "rank": 5,
-              "us": "牧场物语：来吧！风之繁华集市（Story of Seasons: Grand Bazaar）",
+              "us": "牧场物语：来吧！风之繁华集市（Story of Seasons: Grand Bazaar‌）",
               "jp": "鸣潮（Wuthering Waves）",
               "hk": "NBA 2K26",
               "isNonGame": false,
@@ -701,7 +701,7 @@ const storewatchData = {
             },
             {
               "rank": 4,
-              "us": "Gothic Murder: Adventure That Changes Destiny",
+              "us": "‌Gothic Murder: Adventure That Changes Destiny‌",
               "jp": "Apex英雄（Apex Legends）",
               "hk": "NBA 2K26",
               "isNonGame": false,
@@ -709,7 +709,7 @@ const storewatchData = {
             },
             {
               "rank": 5,
-              "us": "牧场物语：来吧！风之繁华集市（Story of Seasons: Grand Bazaar）",
+              "us": "牧场物语：来吧！风之繁华集市（Story of Seasons: Grand Bazaar‌）",
               "jp": "鸣潮（Wuthering Waves）",
               "hk": "EA Sports FC 26",
               "isNonGame": false,
