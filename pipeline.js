@@ -1,8 +1,8 @@
 // ============================================
-// 待上线 Pipeline 数据模块 V3.15
+// 待上线 Pipeline 数据模块 V3.16
 // 数据源：腾讯文档 MCP（唯一基准，文档ID: LRcKfOTzgHrV）
 //         + 网络搜索验证补充（标注来源，不覆盖MCP数据）
-// 最后更新: 2026-07-02 (V3.15 周四调度: 4款已发售移至released[UFC6/冒险家艾略特/星际火狐/死或生6]+雾影猎人日期细化7/30，近2周无新公布大作)
+// 最后更新: 2026-07-10 (V3.16 周五自动化: 2款今日/昨日已发售移至released[艾恩葛朗特/碧蓝幻想Relink]+新增2款7月初发售[AC黑旗Resynced/数码宝贝物语]，近2周无新公布大作)
 // ============================================
 
 // ====== 未上线产品数据（全部展示）======
@@ -12,7 +12,7 @@ const pipelineUnreleased = [
     // =============================================
 
     // --- MCP 海外产品（有具体日期）---
-    { region: "海外", name: "艾恩葛朗特 回荡新声", publisher: "万代南梦宫", studio: "/", releaseDate: "2026/7/10", platforms: "PC+PS5+Xbox", heat: "低", heatNote: "刀剑神域IP", gameplay: "创建英雄，装备选择，伙伴协同战斗升级", licenseStatus: "", licenseNote: "", source: "MCP" },
+
     { region: "海外", name: "光环：战役进化", publisher: "微软", studio: "Halo Studios", releaseDate: "2026/7/28", platforms: "PC+PS5+Xbox", heat: "中高", heatNote: "光环IP续作，系列超800万，忠实重制+扩展，Xbox Showcase确认7/28+登陆PS5+Game Pass首日", gameplay: "HD画面，4人联机合作，新武器敌人", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "轮回之兽（Beast of Reincarnation）", publisher: "Game Freak", studio: "/", releaseDate: "2026/8/4", platforms: "PC+PS5+Xbox", heat: "中低", heatNote: "宝可梦开发商Game Freak转型之作", gameplay: "后末日日本，一人一狗探索，技术要求高战斗", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "漫威斗魂（Marvel Tokon Fighting Souls）", publisher: "索尼", studio: "/", releaseDate: "2026/8/6", platforms: "PS5+PC", heat: "低", heatNote: "漫威IP，4v4团队格斗，PlayStation Blog确认8/6发售", gameplay: "4v4团队格斗游戏", licenseStatus: "", licenseNote: "", source: "MCP" },
@@ -140,7 +140,7 @@ const pipelineUnreleased = [
     { region: "海外", name: "InZOI", publisher: "Krafton", studio: "Krafton", releaseDate: "2026年", platforms: "PS5", heat: "中", heatNote: "模拟人生竞品", gameplay: "生活模拟经营", licenseStatus: "", licenseNote: "", source: "网络搜索" },
     { region: "海外", name: "Intergalactic: The Heretic Prophet", publisher: "索尼", studio: "Naughty Dog", releaseDate: "待定", platforms: "PS5", heat: "中高", heatNote: "顽皮狗全新科幻IP", gameplay: "科幻第三人称动作冒险", licenseStatus: "", licenseNote: "", source: "网络搜索" },
     { region: "海外", name: "巫师4", publisher: "CD Projekt Red", studio: "CD Projekt Red", releaseDate: "2027年", platforms: "PC+PS5+Xbox", heat: "高", heatNote: "CDPR确认最早2027年发售", gameplay: "开放世界动作RPG", licenseStatus: "", licenseNote: "", source: "网络搜索" },
-    { region: "海外", name: "碧蓝幻想Relink：无尽黄昏", publisher: "Cygames", studio: "Cygames", releaseDate: "2026/7/9", platforms: "PC+Switch2+PS5", heat: "中", heatNote: "前作全球300万+，据GamesRadar确认7/9", gameplay: "多人联机ARPG", licenseStatus: "", licenseNote: "", source: "网络搜索" },
+
     { region: "海外", name: "Splatoon Raiders", publisher: "任天堂", studio: "/", releaseDate: "2026/7/23", platforms: "Switch2", heat: "中", heatNote: "Splatoon系列首款衍生作，单人为焦点的地牢探索，据Nintendo官方+TheGamer+NintendoLife 8+源确认", gameplay: "单人地牢探索+宝藏收集", licenseStatus: "", licenseNote: "", source: "网络搜索" },
     { region: "海外", name: "合金装备：大师合集 Vol.2", publisher: "科乐美", studio: "/", releaseDate: "2026/8/27", platforms: "PC+PS5+Xbox+Switch2+Switch", heat: "中低", heatNote: "含MGS4+和平行者+Ghost Babel，据Konami官方+PlayStation Blog 8+源确认8/27", gameplay: "潜行动作合集", licenseStatus: "", licenseNote: "", source: "网络搜索" },
     { region: "海外", name: "Vivarium", publisher: "Serenity Forge", studio: "Studio Meadowflower", releaseDate: "2027年", platforms: "PC+Xbox", heat: "低", heatNote: "手绘风生活模拟冒险，Xbox Showcase公布2027年，据Gematsu+NoisyPixel 6+源确认", gameplay: "手绘风生活模拟冒险", licenseStatus: "", licenseNote: "", source: "网络搜索" },
@@ -158,6 +158,11 @@ const pipelineUnreleased = [
 
 // ====== 已上线产品数据（仅展示2026年上线的）======
 const pipelineReleased = [
+    // ===== 2026-07-10 更新: 新增已发售 =====
+    { region: "海外", name: "艾恩葛朗特 回荡新声", publisher: "万代南梦宫", studio: "/", releaseDate: "2026/7/10", platforms: "PC+PS5+Xbox", heat: "低", heatNote: "刀剑神域IP，据allthings.how+ScreenRant多源确认7/10发售", gameplay: "创建英雄，装备选择，伙伴协同战斗升级", source: "MCP" },
+    { region: "海外", name: "碧蓝幻想Relink：无尽黄昏", publisher: "Cygames", studio: "Cygames", releaseDate: "2026/7/9", platforms: "PC+Switch2+PS5", heat: "中", heatNote: "前作全球300万+，据allthings.how+GamesRadar多源确认7/9发售", gameplay: "多人联机ARPG", source: "网络搜索" },
+    { region: "海外", name: "刺客信条：黑旗 Resynced", publisher: "育碧", studio: "育碧", releaseDate: "2026/7/9", platforms: "PC+PS5+Xbox", heat: "中", heatNote: "AC4黑旗完整重制，$59.99，据Ubisoft官方+IGN+GameSpot 8+源确认7/9发售", gameplay: "开放世界海战动作冒险，新角色+Mary Read扩展故事线", source: "网络搜索" },
+    { region: "海外", name: "数码宝贝物语：时空旅人", publisher: "万代南梦宫", studio: "Media.Vision", releaseDate: "2026/7/10", platforms: "Switch2+Switch", heat: "中低", heatNote: "数码宝贝IP RPG，据Bandai Namco官方+Gematsu确认7/10发售", gameplay: "怪物收集RPG，人兽羁绊+时空穿越题材", source: "网络搜索" },
     // ===== 2026-07-02 更新: 新增已发售 =====
     { region: "海外", name: "UFC 6", publisher: "EA", studio: "EA Vancouver", releaseDate: "2026/6/19", platforms: "PS5+Xbox", heat: "低", heatNote: "UFC授权格斗，寒霜引擎，EA官方确认6/19发售(6/12抢先体验)，据EA投资者页+IGN评测+Metacritic 8+源确认", gameplay: "格斗", source: "MCP" },
     { region: "海外", name: "冒险家艾略特的千年物语", publisher: "史克威尔艾尼克斯", studio: "浅野团队", releaseDate: "2026/6/19", platforms: "PC+PS5+Xbox+Switch2", heat: "低", heatNote: "HD-2D视觉动作冒险，浅野团队(歧路旅人/三角战略)首款动作RPG，IGN 8分，主机6/18/Steam 6/19发售", gameplay: "俯视角探索，仙女辅助战斗，时空穿梭冒险", source: "MCP" },
