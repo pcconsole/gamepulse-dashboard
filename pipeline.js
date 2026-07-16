@@ -1,8 +1,8 @@
 // ============================================
-// 待上线 Pipeline 数据模块 V3.16
+// 待上线 Pipeline 数据模块 V3.17
 // 数据源：腾讯文档 MCP（唯一基准，文档ID: LRcKfOTzgHrV）
 //         + 网络搜索验证补充（标注来源，不覆盖MCP数据）
-// 最后更新: 2026-07-10 (V3.16 周五自动化: 2款今日/昨日已发售移至released[艾恩葛朗特/碧蓝幻想Relink]+新增2款7月初发售[AC黑旗Resynced/数码宝贝物语]，近2周无新公布大作)
+// 最后更新: 2026-07-16 (V3.17 周四自动化: MCP Level 1[106+82行]+web_search 5轮，Palworld 1.0(7/10)+EA CFB 27(7/9)→released，异度神剑2 Switch2版(7/30)→unreleased，MCP字段同步[火纹source→MCP/哥特王朝6/5→6/6/AC黑旗名称])
 // ============================================
 
 // ====== 未上线产品数据（全部展示）======
@@ -142,6 +142,7 @@ const pipelineUnreleased = [
     { region: "海外", name: "巫师4", publisher: "CD Projekt Red", studio: "CD Projekt Red", releaseDate: "2027年", platforms: "PC+PS5+Xbox", heat: "高", heatNote: "CDPR确认最早2027年发售", gameplay: "开放世界动作RPG", licenseStatus: "", licenseNote: "", source: "网络搜索" },
 
     { region: "海外", name: "Splatoon Raiders", publisher: "任天堂", studio: "/", releaseDate: "2026/7/23", platforms: "Switch2", heat: "中", heatNote: "Splatoon系列首款衍生作，单人为焦点的地牢探索，据Nintendo官方+TheGamer+NintendoLife 8+源确认", gameplay: "单人地牢探索+宝藏收集", licenseStatus: "", licenseNote: "", source: "网络搜索" },
+    { region: "海外", name: "异度神剑2 Switch2版（Xenoblade Chronicles 2: Switch 2 Edition）", publisher: "任天堂", studio: "Monolith Soft", releaseDate: "2026/7/30", platforms: "Switch2", heat: "中低", heatNote: "Switch 2增强版，4K/60fps+1080p掌机模式，黄金国DLC免费升级，据Nintendo官方+Eurogamer 6+源确认7/30", gameplay: "JRPG增强版，支持4K/60fps TV模式+DLC黄金国", licenseStatus: "", licenseNote: "", source: "网络搜索" },
     { region: "海外", name: "合金装备：大师合集 Vol.2", publisher: "科乐美", studio: "/", releaseDate: "2026/8/27", platforms: "PC+PS5+Xbox+Switch2+Switch", heat: "中低", heatNote: "含MGS4+和平行者+Ghost Babel，据Konami官方+PlayStation Blog 8+源确认8/27", gameplay: "潜行动作合集", licenseStatus: "", licenseNote: "", source: "网络搜索" },
     { region: "海外", name: "Vivarium", publisher: "Serenity Forge", studio: "Studio Meadowflower", releaseDate: "2027年", platforms: "PC+Xbox", heat: "低", heatNote: "手绘风生活模拟冒险，Xbox Showcase公布2027年，据Gematsu+NoisyPixel 6+源确认", gameplay: "手绘风生活模拟冒险", licenseStatus: "", licenseNote: "", source: "网络搜索" },
     { region: "海外", name: "生化危机：维罗妮卡（RE Veronica）", publisher: "卡普空", studio: "/", releaseDate: "2027年", platforms: "PC+PS5+Xbox+Switch2", heat: "中高", heatNote: "《生化危机 Code: Veronica》重制版，SGF开场公布，据IGN+Polygon+Eurogamer 8+源确认", gameplay: "恐怖生存动作冒险", licenseStatus: "", licenseNote: "", source: "网络搜索" },
@@ -151,17 +152,19 @@ const pipelineUnreleased = [
     { region: "海外", name: "与狼同行2（The Wolf Among Us 2）", publisher: "Telltale", studio: "Telltale Games", releaseDate: "2027年", platforms: "PC+PS5+Xbox+Switch", heat: "中", heatNote: "Telltale经典叙事续作，SGF确认2027年，据IGN+Eurogamer 6+源确认", gameplay: "叙事互动冒险", licenseStatus: "", licenseNote: "", source: "网络搜索" },
     { region: "海外", name: "星刃：血雨（Stellar Blade: Blood Rain）", publisher: "Shift Up", studio: "Shift Up", releaseDate: "待定", platforms: "PC+PS5", heat: "中", heatNote: "《剑星》续作，新主角，SGF公布，据IGN+Polygon 6+源确认", gameplay: "动作冒险ARPG", licenseStatus: "", licenseNote: "", source: "网络搜索" },
     { region: "海外", name: "星球大战：零号连队（Zero Company）", publisher: "EA/Lucasfilm", studio: "Bit Reactor", releaseDate: "2026/8/27", platforms: "PC+PS5+Xbox", heat: "中", heatNote: "X-COM式星战回合策略，SGF确认8/27发售$59.99，据IGN+GamesRadar 6+源确认", gameplay: "回合制战术策略", licenseStatus: "", licenseNote: "", source: "网络搜索" },
-    { region: "海外", name: "火焰纹章：万缕千丝（Fortune's Weave）", publisher: "任天堂", studio: "/", releaseDate: "2026/9/17", platforms: "Switch2", heat: "中低", heatNote: "系列销量1800万+，MCP已收录同名产品", gameplay: "战棋SRPG", licenseStatus: "", licenseNote: "", source: "网络搜索" },
+    { region: "海外", name: "火焰纹章：万缕千丝（Fortune's Weave）", publisher: "任天堂", studio: "/", releaseDate: "2026/9/17", platforms: "Switch2", heat: "中低", heatNote: "系列销量1800万+，任天堂直面会公布", gameplay: "战棋SRPG", licenseStatus: "", licenseNote: "", source: "MCP" },
 
     { region: "国内", name: "刺客信条：影（国行版）", publisher: "育碧/腾讯", studio: "/", releaseDate: "2026年", platforms: "PC+PS5+Xbox", heat: "中", heatNote: "国行版审核中", gameplay: "潜行动作冒险", licenseStatus: "审核中", licenseNote: "腾讯代理国行版", source: "网络搜索" },
 ];
 
 // ====== 已上线产品数据（仅展示2026年上线的）======
 const pipelineReleased = [
-    // ===== 2026-07-10 更新: 新增已发售 =====
+    // ===== 2026-07-16 更新: 新增已发售 =====
+    { region: "海外", name: "幻兽帕鲁 1.0（Palworld 1.0）", publisher: "Pocketpair", studio: "Pocketpair", releaseDate: "2026/7/10", platforms: "PC+PS5+Xbox", heat: "中", heatNote: "SGF确认7/10退出EA正式发售，PS5首发+Xbox Game Pass，据Gematsu+GameSpot 8+源确认", gameplay: "开放世界生存制作+怪物收集，72只新帕鲁+世界树区域+PvP竞技场", source: "网络搜索" },
+    { region: "海外", name: "EA Sports College Football 27", publisher: "EA", studio: "EA Orlando", releaseDate: "2026/7/9", platforms: "PC+PS5+Xbox", heat: "中低", heatNote: "EA年货体育系列首次登陆PC，据EA官方+Gematsu确认7/9发售", gameplay: "美式橄榄球模拟运动", source: "网络搜索" },
     { region: "海外", name: "艾恩葛朗特 回荡新声", publisher: "万代南梦宫", studio: "/", releaseDate: "2026/7/10", platforms: "PC+PS5+Xbox", heat: "低", heatNote: "刀剑神域IP，据allthings.how+ScreenRant多源确认7/10发售", gameplay: "创建英雄，装备选择，伙伴协同战斗升级", source: "MCP" },
     { region: "海外", name: "碧蓝幻想Relink：无尽黄昏", publisher: "Cygames", studio: "Cygames", releaseDate: "2026/7/9", platforms: "PC+Switch2+PS5", heat: "中", heatNote: "前作全球300万+，据allthings.how+GamesRadar多源确认7/9发售", gameplay: "多人联机ARPG", source: "网络搜索" },
-    { region: "海外", name: "刺客信条：黑旗 Resynced", publisher: "育碧", studio: "育碧", releaseDate: "2026/7/9", platforms: "PC+PS5+Xbox", heat: "中", heatNote: "AC4黑旗完整重制，$59.99，据Ubisoft官方+IGN+GameSpot 8+源确认7/9发售", gameplay: "开放世界海战动作冒险，新角色+Mary Read扩展故事线", source: "网络搜索" },
+    { region: "海外", name: "刺客信条：黑旗 记忆重置", publisher: "育碧", studio: "育碧", releaseDate: "2026/7/9", platforms: "PC+PS5+Xbox", heat: "中", heatNote: "AC4黑旗完整重制，$59.99，据Ubisoft官方+IGN+GameSpot 8+源确认7/9发售", gameplay: "开放世界海战动作冒险，新角色+Mary Read扩展故事线", source: "MCP" },
     { region: "海外", name: "数码宝贝物语：时空旅人", publisher: "万代南梦宫", studio: "Media.Vision", releaseDate: "2026/7/10", platforms: "Switch2+Switch", heat: "中低", heatNote: "数码宝贝IP RPG，据Bandai Namco官方+Gematsu确认7/10发售", gameplay: "怪物收集RPG，人兽羁绊+时空穿越题材", source: "网络搜索" },
     // ===== 2026-07-02 更新: 新增已发售 =====
     { region: "海外", name: "UFC 6", publisher: "EA", studio: "EA Vancouver", releaseDate: "2026/6/19", platforms: "PS5+Xbox", heat: "低", heatNote: "UFC授权格斗，寒霜引擎，EA官方确认6/19发售(6/12抢先体验)，据EA投资者页+IGN评测+Metacritic 8+源确认", gameplay: "格斗", source: "MCP" },
@@ -169,7 +172,7 @@ const pipelineReleased = [
     { region: "海外", name: "星际火狐（Star Fox）", publisher: "任天堂", studio: "/", releaseDate: "2026/6/25", platforms: "Switch2", heat: "低", heatNote: "星际火狐64重制版，系列销量400万+，6月Switch2最大独占，据Gamermarkt+腾讯多源确认6/25发售", gameplay: "轨道式第三人称太空射击，支持单人/本地双人合作与4v4多人对战", source: "MCP" },
     { region: "海外", name: "死或生6：最后一战", publisher: "光荣特库摩", studio: "Team NINJA", releaseDate: "2026/6/25", platforms: "PC+PS5+Xbox", heat: "低", heatNote: "DOA系列30周年强化版，整合原版5赛季DLC+29角色+KOF联动，据百度百科+3DM+腾讯多源确认6/25发售", gameplay: "3D对战格斗", source: "网络搜索" },
     // ===== 2026-06-18 更新: 新增已发售 =====
-    { region: "海外", name: "Gothic 1 Remake", publisher: "THQ Nordic", studio: "Alkimia Interactive", releaseDate: "2026/6/5", platforms: "PC+Xbox+PS5", heat: "低", heatNote: "2001年经典RPG重制，核心怀旧玩家期待，据GamesRadar+IGN多源确认6/5发售", gameplay: "开放世界RPG", source: "MCP" },
+    { region: "海外", name: "Gothic 1 Remake", publisher: "THQ Nordic", studio: "Alkimia Interactive", releaseDate: "2026/6/6", platforms: "PC+Xbox+PS5", heat: "低", heatNote: "2001年经典RPG重制，核心怀旧玩家期待，据GamesRadar+IGN多源确认6/6发售（MCP修正为6/6）", gameplay: "开放世界RPG", source: "MCP" },
     // ===== 2026-06-04 更新: 新增已发售 =====
     { region: "海外", name: "最终幻想7 重生（Xbox/Switch版）", publisher: "史克威尔艾尼克斯", studio: "/", releaseDate: "2026/6/3", platforms: "Xbox+Switch2", heat: "中高", heatNote: "FF7重制三部曲第二作移植版，据GamesRadar+IGN+Gematsu 8+源确认6/3发售", gameplay: "ARPG", source: "网络搜索" },
     { region: "海外", name: "Mina the Hollower", publisher: "Yacht Club Games", studio: "Yacht Club Games", releaseDate: "2026/5/29", platforms: "PC+PS5+Xbox+Switch2+Switch", heat: "中低", heatNote: "《铲子骑士》开发商新作，据Gematsu+RPGSite+GameInformer 8+源确认5/29发售", gameplay: "8-bit复古哥特风动作冒险", source: "网络搜索" },
