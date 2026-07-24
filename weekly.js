@@ -2,6 +2,28 @@
 // 每周生成新周报时，在数组顶部追加一条
 window.WEEKLY_REPORTS = [
   {
+    week: 'W28',
+    date: '2026-07-24',
+    periodStart: '2026-07-20',
+    periodEnd: '2026-07-26',
+    title: '端主行业周报 W28：沙特550亿收购EA落地在即·Xbox战略摇摆',
+    summary: '沙特PIF以约550亿美元、93.4%股权收购EA获欧盟初步批准，成史上最大杠杆收购，PIF首次全资控盘3A发行商——从财务持股走向控盘运营；结合Scopely/沐瞳/任天堂/卡普空/ESL FACEIT，沙特游戏版图成全谱系。Xbox战略"既要又要"：工作室高层被曝"深恶痛绝"Game Pass、认为订阅贬损游戏价值，同时把初代游戏向后兼容登PC、测试云游戏广告，Bethesda公布TES6/辐射5路线图稳军心。产品面：帕鲁1.0累计3050万份收入约7亿美元、黑旗破300万。',
+    file: 'weekly/Weekly_Briefing_20260724.html',
+    tags: ['PIF收购EA', '沙特游戏帝国', 'Xbox战略', 'Game Pass', 'Bethesda', '幻兽帕鲁'],
+    highlight: true
+  },
+  {
+    week: 'W27',
+    date: '2026-07-17',
+    periodStart: '2026-07-13',
+    periodEnd: '2026-07-19',
+    title: '端主行业周报 W27：PC增长主机收缩·育碧黑旗回血·索尼弃盘监管反击',
+    summary: 'Alinea估Steam 2026 H1流水约111亿美元同比+14.5%创半年新高，Kagan预测全年主机出货约3390万台同比-19.5%，主机末期"降价换量"机制失效、增长向PC倾斜；育碧重组迎首个正反馈，《刺客信条：黑旗记忆重置》首日200万、系列累计2.5亿，验证经典IP现金化；索尼弃盘引欧盟"难阻止"表态与墨西哥反垄断投诉，弃盘本质是收紧交易入口。',
+    file: 'weekly/Weekly_Briefing_20260717.html',
+    tags: ['PC增长', '主机收缩', '育碧黑旗', '索尼弃盘', '监管'],
+    highlight: true
+  },
+  {
     week: 'M06',
     date: '2026-07-01',
     periodStart: '2026-06-01',
