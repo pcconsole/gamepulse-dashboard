@@ -24,6 +24,17 @@ window.WEEKLY_REPORTS = [
     highlight: true
   },
   {
+    week: 'W26',
+    date: '2026-07-10',
+    periodStart: '2026-07-06',
+    periodEnd: '2026-07-12',
+    title: '端主行业周报 W26：Xbox史上最大重组·止损布局·Project Latitude',
+    summary: 'Xbox启动史上最大规模重组：7/6千人级裁员、关停多家工作室，以"问题→止损→布局"逻辑推进——经营全面恶化(责任利润率约3%)倒逼组织扁平化与COO调整；Project Latitude明确为微软"把自家游戏卖到PS5等竞对平台"的多平台发行战略代号，处置动作用红/橙/绿状态标签区分(出售剥离/协商中/未受影响)。同期索尼弃盘按动因→落地→连锁反应推进。',
+    file: 'weekly/Weekly_Briefing_20260710.html',
+    tags: ['Xbox重组', '裁员关厂', 'Project Latitude', '责任利润率', '组织扁平化'],
+    highlight: true
+  },
+  {
     week: 'M06',
     date: '2026-07-01',
     periodStart: '2026-06-01',
