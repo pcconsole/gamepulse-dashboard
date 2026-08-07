@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>端主行业月报 · 2026年7月</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4f6f9; --ink: #1e3a5f; --ink-2: #2c4a6e; --ink-dim: #4a5c6e; --ink-ghost: #7b8a99;
+    --red: #c85a4a; --red-bg: #f5e0db; --red-dim: #a0483b;
+    --gold: #8b6914; --gold-bg: #ede4cf;
+    --green: #3d6b57; --green-bg: #dde7e0;
+    --surface: #ffffff; --surface-2: #eef1f5;
+    --rule: #d5dce3; --rule-dim: #e5e9ee;
+    --sony: #003087; --xbox: #107c10;
+    --up: #2f7d55; --down: #c04a3a; --flat: #b0862a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #c8ced6; font-family: 'Microsoft YaHei', '微软雅黑', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  .page { width: 430px; background: var(--bg); color: var(--ink); margin: 0 auto; overflow: hidden; }
+
+  .hero { background: linear-gradient(135deg, #16283f 0%, #24405f 55%, #2c4a6e 100%); color: white; padding: 26px 20px 28px; position: relative; }
+  .hero::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background: linear-gradient(90deg, var(--red) 0%, var(--gold) 100%); }
+  .hero .brand { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.3em; color: #e0a56a; font-weight: 700; margin-bottom: 12px; }
+  .hero h1 { font-size: 30px; font-weight: 800; line-height: 1.15; letter-spacing: -0.01em; }
+  .hero .sub { font-size: 13px; color: rgba(255,255,255,0.78); margin-top: 9px; line-height: 1.55; }
+  .hero .meta { display: flex; gap: 18px; margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.15); font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.7); letter-spacing: 0.08em; }
+  .hero .meta strong { color: white; font-weight: 700; }
+
+  .exec { background: #16283f; color: #fff; padding: 20px; }
+  .exec .eh { font-family:'IBM Plex Mono',monospace; font-size: 12px; letter-spacing:.18em; color:#e0a56a; font-weight:700; margin-bottom:14px; }
+  .exec .erow { display:flex; gap:12px; padding: 11px 0; border-top:1px solid rgba(255,255,255,.1); }
+  .exec .erow:first-of-type { border-top:0; }
+  .exec .en { font-family:'IBM Plex Mono',monospace; font-size: 20px; font-weight:800; color:#e8b84a; line-height:1; min-width:26px; }
+  .exec .et { flex:1; font-size:13px; line-height:1.6; color:rgba(255,255,255,.9); }
+  .exec .et b { color:#fff; font-weight:800; }
+
+  .section { padding: 26px 20px 22px; }
+  .section + .section { border-top: 10px solid #e2e7ed; }
+  .sec-head { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid var(--ink); position: relative; }
+  .sec-head::after { content:''; position:absolute; left:0; bottom:-2px; width:50px; height:2px; background:var(--red); }
+  .sec-head .num { font-family: 'IBM Plex Mono', monospace; font-size: 32px; font-weight: 800; color: var(--red); line-height: 0.9; }
+  .sec-head .title { font-size: 19px; font-weight: 800; color: var(--ink); flex: 1; line-height: 1.3; }
+  .sec-head .title em { display: block; font-size: 13px; font-weight: 600; color: var(--red); font-style: normal; margin-top: 3px; }
+
+  .mini-h { font-size: 13px; font-weight: 700; color: var(--ink-dim); margin: 18px 0 9px; display:flex; align-items:center; gap:7px; }
+  .mini-h::before { content:''; width:4px; height:14px; background:var(--red); border-radius:2px; }
+
+  /* 时间线 */
+  .tl { position: relative; padding-left: 4px; margin-top: 6px; }
+  .tl-item { position: relative; padding: 0 0 4px 46px; }
+  .tl-item::before { content:''; position:absolute; left:15px; top:4px; bottom:-8px; width:2px; background: var(--rule); }
+  .tl-item:last-child::before { display:none; }
+  .tl-date { position:absolute; left:0; top:2px; font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:800; color:#fff; background:var(--ink-2); border-radius:4px; padding:2px 5px; z-index:1; }
+  .tl-card { background:var(--surface); border:1px solid var(--rule-dim); border-left:3px solid var(--red); border-radius:5px; padding:8px 11px; margin-bottom:8px; }
+  .tl-card .tt { font-size:13px; font-weight:700; color:var(--ink); line-height:1.45; }
+  .tl-card .tb { font-size:12px; color:var(--ink-dim); line-height:1.55; margin-top:3px; }
+  .tl-card .tag2 { display:inline-block; font-size:10px; font-weight:700; padding:1px 6px; border-radius:3px; margin-top:5px; }
+  .tl-card.c-plat { border-left-color:#8f3d32; } .tag-plat { background:var(--red-bg); color:var(--red-dim); }
+  .tl-card.c-supply { border-left-color:var(--green); } .tag-supply { background:var(--green-bg); color:var(--green); }
+  .tl-card.c-cap { border-left-color:var(--gold); } .tag-cap { background:var(--gold-bg); color:var(--gold); }
+  .tl-card.c-market { border-left-color:var(--sony); } .tag-market { background:#dce8f5; color:#2a5a8f; }
+
+  .tl-sum { background: linear-gradient(135deg, #1e3a5f 0%, #263f5e 100%); border-left:4px solid var(--gold); border-radius:6px; padding:13px 15px; margin-top:12px; color:rgba(255,255,255,.92); }
+  .tl-sum .sl { font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.06em; color:#e8b84a; font-weight:700; margin-bottom:6px; }
+  .tl-sum .st { font-size:13px; line-height:1.65; } .tl-sum .st b { color:#fff; font-weight:800; }
+
+  /* 表格 */
+  .stbl { width: 100%; border-collapse: collapse; font-size: 12px; margin: 8px 0 6px; table-layout: fixed; }
+  .stbl thead { background: linear-gradient(135deg, #1e3a5f 0%, #2c4a6e 100%); color: white; }
+  .stbl th { text-align: left; padding: 7px 6px; font-weight: 700; font-size: 11.5px; letter-spacing: 0.02em; }
+  .stbl td { padding: 7px 6px; border-bottom: 1px solid var(--rule-dim); vertical-align: top; line-height: 1.5; }
+  .stbl .num { font-family: 'IBM Plex Mono', monospace; font-weight: 600; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .stbl tbody tr:nth-child(even) { background: var(--surface-2); }
+  .stbl .wk { font-weight: 800; color: var(--ink); }
+  .stbl .up { color: var(--up); font-weight:800; } .stbl .down { color: var(--down); font-weight:800; } .stbl .flat { color: var(--flat); font-weight:800; }
+  .dir { display:inline-block; font-size:10px; font-weight:800; padding:1px 5px; border-radius:3px; white-space:nowrap; }
+  .dir-up { background:var(--green-bg); color:var(--up); } .dir-down { background:var(--red-bg); color:var(--down); } .dir-flat { background:var(--gold-bg); color:var(--flat); }
+  .cur-note { font-size:11px; color:var(--ink-ghost); line-height:1.5; margin:2px 0 8px; }
+
+  /* 洞察卡 */
+  .insight { background: linear-gradient(135deg, #1e3a5f 0%, #263f5e 100%); border-radius: 6px; padding: 14px 16px; margin: 12px 0; color: rgba(255,255,255,0.92); }
+  .insight .il { font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.06em; color: #f0a07a; margin-bottom: 8px; border-bottom: 1px dashed rgba(255,255,255,0.15); padding-bottom: 6px; font-weight: 700; }
+  .analysis-list { display: flex; flex-direction: column; }
+  .analysis-row { display: flex; gap: 10px; padding: 7px 0; border-bottom: 1px dashed rgba(255,255,255,0.12); }
+  .analysis-row:last-child { border-bottom: 0; padding-bottom: 0; }
+  .analysis-tag { min-width: 42px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 800; color: #f0a07a; }
+  .analysis-text { flex: 1; font-size: 13px; line-height: 1.65; color: rgba(255,255,255,0.92); }
+  .analysis-text b { color:#fff; font-weight:800; }
+
+  /* 公司财报卡 */
+  .comp { background:var(--surface); border:1px solid var(--rule); border-radius:8px; margin:12px 0; overflow:hidden; }
+  .comp-h { display:flex; align-items:center; gap:9px; padding:11px 14px; color:#fff; }
+  .comp-h.ms { background:linear-gradient(135deg,#0c5f0c,#127c12); }
+  .comp-h.sony { background:linear-gradient(135deg,#002566,#003da5); }
+  .comp-h .cn { font-size:15px; font-weight:800; flex:1; }
+  .comp-h .cp { font-family:'IBM Plex Mono',monospace; font-size:10px; color:rgba(255,255,255,.8); }
+  .comp-h .cdir { font-size:10px; font-weight:800; padding:2px 7px; border-radius:9px; background:rgba(255,255,255,.2); }
+  .comp-b { padding:12px 14px; }
+  .comp-kpi { display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:6px; margin-bottom:11px; }
+  .kpi { background:var(--surface-2); border-radius:6px; padding:8px 3px; text-align:center; }
+  .kpi .kv { font-family:'IBM Plex Mono',monospace; font-size:15px; font-weight:800; line-height:1.05; }
+  .kpi .kv.up { color:var(--up); } .kpi .kv.down { color:var(--down); }
+  .kpi .kl { font-size:9.5px; color:var(--ink-dim); margin-top:3px; line-height:1.3; }
+
+  .fintbl { width:100%; border-collapse:collapse; font-size:11.5px; margin:2px 0 10px; }
+  .fintbl th { background:var(--surface-2); text-align:left; padding:5px 7px; font-size:10.5px; color:var(--ink-dim); font-weight:700; }
+  .fintbl th.r, .fintbl td.r { text-align:right; font-family:'IBM Plex Mono',monospace; }
+  .fintbl td { padding:5px 7px; border-bottom:1px solid var(--rule-dim); }
+  .fintbl td.lbl { color:var(--ink); font-weight:700; }
+  .fintbl .up { color:var(--up); font-weight:700; } .fintbl .down { color:var(--down); font-weight:700; } .fintbl .flat { color:var(--flat); font-weight:700; }
+
+  .comp-pt { font-size:12.5px; line-height:1.6; color:var(--ink-dim); }
+  .comp-pt .p { padding:3px 0; display:flex; gap:7px; }
+  .comp-pt .p::before { content:'▪'; color:var(--ink-ghost); }
+  .comp-pt .p b { color:var(--ink); font-weight:700; }
+  .comp-warn { margin-top:10px; background:linear-gradient(135deg,#1e3a5f,#263f5e); border-radius:6px; padding:10px 12px; }
+  .comp-warn .wl { font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.05em; color:#f0a07a; font-weight:700; margin-bottom:5px; }
+  .comp-warn .wt { font-size:12.5px; line-height:1.6; color:rgba(255,255,255,.92); }
+  .comp-warn .wt b { color:#fff; font-weight:800; }
+  .deep-list { display:flex; flex-direction:column; gap:7px; }
+  .deep-row { display:flex; gap:9px; padding:0 0 7px; border-bottom:1px dashed rgba(255,255,255,.12); }
+  .deep-row:last-child { border-bottom:0; padding-bottom:0; }
+  .deep-tag { min-width:42px; font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:800; color:#f0a07a; }
+  .deep-text { flex:1; font-size:12.5px; line-height:1.55; color:rgba(255,255,255,.92); }
+  .deep-text b { color:#fff; font-weight:800; }
+
+  /* 精简公司块 */
+  .mini-comp { background:var(--surface); border:1px solid var(--rule-dim); border-radius:6px; padding:10px 13px; margin-bottom:9px; border-top:3px solid var(--ink-2); }
+  .mini-comp .mc-h { display:flex; align-items:baseline; gap:8px; margin-bottom:5px; flex-wrap:wrap; }
+  .mini-comp .mc-n { font-size:14px; font-weight:800; color:var(--ink); }
+  .mini-comp .mc-d { font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:800; }
+  .mini-comp .mc-b { font-size:12.5px; line-height:1.6; color:var(--ink-dim); }
+  .mini-comp .mc-b b { color:var(--ink); font-weight:700; }
+  .mini-comp.kra { border-top-color:#b5651d; }
+  .kv-list { display:grid; grid-template-columns:1fr 1fr; gap:7px; margin:8px 0 9px; }
+  .kv-card { background:var(--surface-2); border-radius:6px; padding:8px 7px; text-align:center; }
+  .kv-card .v { font-family:'IBM Plex Mono',monospace; font-size:15px; font-weight:800; color:var(--ink); line-height:1.05; }
+  .kv-card .l { font-size:10px; color:var(--ink-dim); margin-top:3px; line-height:1.3; }
+  .struct-list { display:flex; flex-direction:column; gap:6px; }
+  .struct-row { display:flex; gap:8px; font-size:12.5px; line-height:1.55; color:var(--ink-dim); padding:0 0 6px; border-bottom:1px dashed var(--rule-dim); }
+  .struct-row:last-child { border-bottom:0; padding-bottom:0; }
+  .struct-tag { min-width:38px; font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:800; color:#b5651d; }
+
+  /* EA 退市说明块 */
+  .exit-note { background:#f0eeec; border:1px dashed #9a9184; border-radius:7px; padding:12px 14px; margin:12px 0; }
+  .exit-note .xh { display:flex; align-items:baseline; gap:8px; margin-bottom:6px; }
+  .exit-note .xn { font-size:14px; font-weight:800; color:#4a4a4a; }
+  .exit-note .xtag { font-size:10px; font-weight:800; color:#fff; background:#555; padding:2px 7px; border-radius:9px; }
+  .exit-note .xb { font-size:12px; line-height:1.6; color:var(--ink-dim); }
+  .exit-note .xb b { color:var(--ink); font-weight:700; }
+
+  /* 信号 */
+  .sig { display:flex; flex-direction:column; gap:8px; margin-top:6px; }
+  .sig-card { background:var(--surface); border:1px solid var(--rule-dim); border-radius:6px; padding:10px 12px; display:flex; gap:11px; }
+  .sig-card .si { font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:800; color:var(--red); line-height:1; min-width:22px; }
+  .sig-card .sc { flex:1; }
+  .sig-card .sct { font-size:13px; font-weight:800; color:var(--ink); line-height:1.4; margin-bottom:3px; }
+  .sig-card .scb { font-size:12px; line-height:1.55; color:var(--ink-dim); }
+  .sig-card .scb b { color:var(--ink); font-weight:700; }
+
+  .footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 20px; text-align: center; font-size: 10px; line-height: 1.8; }
+  .footer .logo { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.3em; color: white; margin-bottom: 8px; }
+  .footer .disc { margin-top:8px; font-size:9px; color:rgba(255,255,255,.4); line-height:1.6; }
+</style>
+</head>
+<body>
+
+<div id="export-toolbar" style="position:fixed;top:10px;right:10px;z-index:9999;font-family:'Microsoft YaHei',sans-serif;user-select:none;">
+  <button id="exp-main" style="background:#c85a4a;color:#fff;border:0;padding:6px 12px;border-radius:4px;font-size:11px;font-weight:700;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,0.2);letter-spacing:.05em;">📥 导出长图</button>
+  <div id="exp-panel" style="display:none;margin-top:6px;background:rgba(30,58,95,0.96);padding:8px;border-radius:4px;box-shadow:0 4px 12px rgba(0,0,0,0.25);">
+    <div style="display:flex;flex-direction:column;gap:4px;">
+      <button data-scale="2" class="exp-btn" style="background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.15);padding:6px 10px;border-radius:3px;font-size:10px;cursor:pointer;font-weight:600;">@2x · 860px</button>
+      <button data-scale="3" class="exp-btn" style="background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.15);padding:6px 10px;border-radius:3px;font-size:10px;cursor:pointer;font-weight:600;">@3x · 1290px（推荐）</button>
+      <button data-scale="4" class="exp-btn" style="background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.15);padding:6px 10px;border-radius:3px;font-size:10px;cursor:pointer;font-weight:600;">@4x · 1720px</button>
+    </div>
+    <div id="exp-status" style="font-size:9px;color:#ffb896;margin-top:6px;letter-spacing:.03em;line-height:1.3;min-height:11px;"></div>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="brand">GAMEPULSE · MONTHLY</div>
+    <h1>端主行业月报 2026·07</h1>
+    <div class="sub">财报超级周：平台方分化 · 日系全面爆发 · 沙特资本落定</div>
+    <div class="meta">
+      <span>ISSUE · <strong>2026.07.31</strong></span>
+      <span>COVERAGE · <strong>07.01 – 07.31</strong></span>
+    </div>
+  </div>
+
+  <!-- EXECUTIVE SUMMARY -->
+  <div class="exec">
+    <div class="eh">EXECUTIVE SUMMARY · 30秒速览</div>
+    <div class="erow"><div class="en">1</div><div class="et"><b>平台方分化</b>：微软 Xbox Q4 收入约 <b>49.8 亿美元、同比 −10%</b>，内容服务 −10%、硬件全年 −29%；索尼 G&amp;NS 利润 <b>2,020 亿日元、同比 +37%</b>，但主要靠关税退款与汇率。</div></div>
+    <div class="erow"><div class="en">2</div><div class="et"><b>日系全面爆发</b>：卡普空数字内容 +83%、科乐美数字娱乐 +36.5%（股价单日 +12.7%）、光荣特库摩 +17.3%，共同引擎是<b>目录游戏 + 数字化 + 日元贬值</b>。</div></div>
+    <div class="erow"><div class="en">3</div><div class="et"><b>资本格局重塑</b>：沙特 PIF 550 亿美元收购 EA 完成监管审批，<b>8/4 交割退市</b>，主权资本首次全资控盘 3A 发行商。</div></div>
+  </div>
+
+  <!-- ================= PART 01 时间线 ================= -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="num">01</div>
+      <div class="title">7 月全月大事回顾<em>平台收缩 · 资本整合 · 财报验证三线交汇</em></div>
+    </div>
+
+    <div class="tl">
+      <div class="tl-item"><span class="tl-date">7/06</span>
+        <div class="tl-card c-plat"><div class="tt">Xbox 启动史上最大规模重组</div><div class="tb">约 1,600 个 Xbox 岗位裁撤、关停剥离多家工作室；Project Latitude 确立"把自家游戏卖到 PS5 等竞对平台"的多平台发行战略。</div><span class="tag2 tag-plat">平台·收缩</span></div>
+      </div>
+      <div class="tl-item"><span class="tl-date">7/09</span>
+        <div class="tl-card c-supply"><div class="tt">育碧《黑旗 记忆重置》回血</div><div class="tb">《刺客信条：黑旗 记忆重置》14 天销量 350 万，超全年预期，验证经典 IP 重制的确定性回款能力。</div><span class="tag2 tag-supply">供给·经典IP</span></div>
+      </div>
+      <div class="tl-item"><span class="tl-date">7/10</span>
+        <div class="tl-card c-supply"><div class="tt">《幻兽帕鲁》1.0 发售</div><div class="tb">24h 峰值 96.1 万，累计约 3,050 万份、总收入约 7 亿美元（约 86% 来自 Steam）。</div><span class="tag2 tag-supply">产品·爆款</span></div>
+      </div>
+      <div class="tl-item"><span class="tl-date">7月中</span>
+        <div class="tl-card c-market"><div class="tt">PC 增长 vs 主机收缩</div><div class="tb">Alinea 估 Steam 上半年流水约 111 亿美元 +14.5% 创半年新高；Kagan 预测全年主机出货约 −19.5%，末期"降价换量"失效。</div><span class="tag2 tag-market">大盘·结构</span></div>
+      </div>
+      <div class="tl-item"><span class="tl-date">7月</span>
+        <div class="tl-card c-plat"><div class="tt">索尼弃盘持续发酵</div><div class="tb">欧盟表态"难阻止"、墨西哥反垄断投诉；美区仅 7 款 PS 实体破 10 万，72 亿美元二手市场受威胁。</div><span class="tag2 tag-plat">平台·数字化</span></div>
+      </div>
+      <div class="tl-item"><span class="tl-date">7/23</span>
+        <div class="tl-card c-cap"><div class="tt">沙特 PIF 550 亿收购 EA 获欧盟批准</div><div class="tb">占股 93.4%，史上最大杠杆收购；主权资本首次全资控盘 3A 发行商，8/4 交割退市。</div><span class="tag2 tag-cap">资本·整合</span></div>
+      </div>
+      <div class="tl-item"><span class="tl-date">7/27</span>
+        <div class="tl-card c-plat"><div class="tt">Xbox 重大服务故障超 15 小时</div><div class="tb">登录、游戏库、实体光盘验证均受影响，为继上周 PSN 宕机后的第二起大平台稳定性事故。</div><span class="tag2 tag-plat">平台·稳定性</span></div>
+      </div>
+      <div class="tl-item"><span class="tl-date">7/27–31</span>
+        <div class="tl-card c-cap"><div class="tt">财报"超级周"：6 家集中披露</div><div class="tb">微软 / 索尼 / 科乐美 / 光荣特库摩 / 卡普空 / KRAFTON 同期发布最新财报，多家比往年提前 —— 本月核心看点。</div><span class="tag2 tag-cap">资本·财报</span></div>
+      </div>
+    </div>
+
+    <div class="tl-sum">
+      <div class="sl">MONTH IN ONE LINE</div>
+      <div class="st">7 月是"<b>平台收缩 + 资本整合 + 财报验证</b>"三线交汇——微软重置 Xbox、沙特拿下 EA，而月底财报周里，日系厂商用业绩证明<b>"经典 IP + 数字化"</b>才是当下最确定的增长引擎。</div>
+    </div>
+  </div>
+
+  <!-- ================= PART 02 财报超级周 ================= -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="num">02</div>
+      <div class="title">财报超级周：谁在真增长，谁在撑场面<em>6 家集中披露 · 本月核心专题</em></div>
+    </div>
+
+    <!-- 2.1 总览表 -->
+    <div class="mini-h">一张表看懂 6 家财报</div>
+    <table class="stbl">
+      <colgroup><col style="width:23%"><col style="width:18%"><col style="width:22%"><col style="width:12%"><col style="width:25%"></colgroup>
+      <thead><tr><th>公司 / 分部</th><th>期间</th><th>游戏收入</th><th>同比</th><th>方向</th></tr></thead>
+      <tbody>
+        <tr><td class="wk">索尼<br>G&amp;NS</td><td>FY26 Q1<br>4–6月</td><td class="num">9,371亿<br>日元</td><td class="num flat">持平</td><td><span class="dir dir-up">🟢 上调指引</span></td></tr>
+        <tr><td class="wk">微软<br>Xbox</td><td>FY26 Q4<br>4–6月</td><td class="num">49.8亿<br>美元</td><td class="num down">−10%</td><td><span class="dir dir-down">🔴 连续4季下滑</span></td></tr>
+        <tr><td class="wk">卡普空<br>数字内容</td><td>FY26 Q1<br>4–6月</td><td class="num">546亿<br>日元</td><td class="num up">+83%</td><td><span class="dir dir-up">🟢 目录破纪录</span></td></tr>
+        <tr><td class="wk">科乐美<br>数字娱乐</td><td>FY27 Q1<br>4–6月</td><td class="num">1,001亿<br>日元</td><td class="num up">+36%</td><td><span class="dir dir-up">🟢 创纪录</span></td></tr>
+        <tr><td class="wk">光荣特库摩<br>娱乐</td><td>FY26 Q1<br>4–6月</td><td class="num">159亿<br>日元</td><td class="num up">+17%</td><td><span class="dir dir-flat">🟡 投资增厚</span></td></tr>
+        <tr><td class="wk">KRAFTON</td><td>2026 Q2<br>4–6月</td><td class="num">1.29万亿<br>韩元</td><td class="num up">+95%</td><td><span class="dir dir-flat">🟡 并表水分</span></td></tr>
+      </tbody>
+    </table>
+    <div class="cur-note">💱 统计周期均为<b>2026年4–6月</b>（各公司财年命名不同：微软FY26 Q4、索尼/卡普空/光荣FY26 Q1、科乐美FY27 Q1、KRAFTON 2026 Q2）。币种：日系厂商与索尼为<b>日元(JPY)</b>、微软为<b>美元(USD)</b>、KRAFTON 为<b>韩元(KRW)</b>。</div>
+
+    <!-- 2.2 三条主线 -->
+    <div class="insight">
+      <div class="il">核心判断 · 财报周的三条主线</div>
+      <div class="analysis-list">
+        <div class="analysis-row"><div class="analysis-tag">平台</div><div class="analysis-text">微软 Xbox 连续 4 季下滑、硬件全年 −29%；索尼利润 +37% 主靠<b>关税退款与汇率</b>等非经营因素。</div></div>
+        <div class="analysis-row"><div class="analysis-tag">日系</div><div class="analysis-text">卡普空 / 科乐美 / 光荣特库摩全部创纪录，引擎是<b>目录游戏 + 数字化 + 日元贬值</b>，而非新作。</div></div>
+        <div class="analysis-row"><div class="analysis-tag">资本</div><div class="analysis-text">EA 即将退市、微软持续重置——发行侧一边被资本整合，一边压成本、<b>向服务与经典 IP 收拢</b>。</div></div>
+      </div>
+    </div>
+
+    <!-- 2.3 微软展开 -->
+    <div class="mini-h">重点拆解 · 平台双雄（均含美元/日元清晰标注）</div>
+    <div class="comp">
+      <div class="comp-h ms"><div class="cn">微软 Xbox</div><div class="cp">FY26 Q4 · 4–6月 · 美元</div><div class="cdir">🔴 重置中</div></div>
+      <div class="comp-b">
+        <div class="comp-kpi">
+          <div class="kpi"><div class="kv down">−10%</div><div class="kl">内容与服务<br>（季度同比）</div></div>
+          <div class="kpi"><div class="kv down">−13%</div><div class="kl">硬件收入<br>（季度同比）</div></div>
+          <div class="kpi"><div class="kv down">−29%</div><div class="kl">硬件收入<br>（全年同比）</div></div>
+          <div class="kpi"><div class="kv down">−7%</div><div class="kl">全年Xbox收入<br>−17亿美元</div></div>
+        </div>
+        <table class="fintbl">
+          <thead><tr><th>指标（美元）</th><th class="r">FY26 Q4</th><th class="r">同比</th></tr></thead>
+          <tbody>
+            <tr><td class="lbl">微软集团营收</td><td class="r">900.1亿</td><td class="r up">+18%</td></tr>
+            <tr><td class="lbl">集团净利润</td><td class="r">357.7亿</td><td class="r up">+31%</td></tr>
+            <tr><td class="lbl">MPC 分部营收</td><td class="r">128.5亿</td><td class="r down">−4%</td></tr>
+            <tr><td class="lbl">MPC 营业利润</td><td class="r">27.5亿</td><td class="r down">−14%</td></tr>
+            <tr><td class="lbl">Xbox 游戏总收入</td><td class="r">约49.8亿</td><td class="r down">≈−10%</td></tr>
+          </tbody>
+        </table>
+        <div class="comp-pt">
+          <div class="p"><div>在集团营收 <b>+18%</b>、净利 +31% 的高增长里，Xbox 是<b>唯一持续下滑的板块</b>——内容服务与硬件双降，连续第 4 个季度收缩。</div></div>
+          <div class="p"><div>下滑三重原因：<b>主机硬件周期见顶</b>（销量放缓 + 8/1 还要再涨价）、<b>第一方内容空窗</b>、去年 Q4 有多款登 PS5 大作形成<b>高基数</b>。</div></div>
+          <div class="p"><div>Game Pass 本季<b>未披露</b>订阅数与收入；官方仅称全年内容服务下滑被"GP 增长"部分抵消。</div></div>
+          <div class="p"><div>约 <b>1,600 人裁撤</b>并剥离数家已收购工作室；遣散与减值推高 MPC 开支。</div></div>
+        </div>
+        <div class="comp-warn">
+          <div class="wl">DEEP READ · 重置的真实含义</div>
+          <div class="deep-list">
+            <div class="deep-row"><div class="deep-tag">口径</div><div class="deep-text">Nadella 称"长期增长重置 Xbox"，Sharma 提出 4 年 <b>5 亿 DAU</b>。</div></div>
+            <div class="deep-row"><div class="deep-tag">矛盾</div><div class="deep-text">管理层同时指引 FY27 Q1 游戏仍下滑，恢复增长并不在当下。</div></div>
+            <div class="deep-row"><div class="deep-tag">本质</div><div class="deep-text">短期是<b>控成本 + 跨端铺量</b>，把拐点押在 FY27 下半年产品线与提价。</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2.3 索尼展开 -->
+    <div class="comp">
+      <div class="comp-h sony"><div class="cn">索尼 G&amp;NS</div><div class="cp">FY26 Q1 · 4–6月 · 日元</div><div class="cdir">🟢 上调指引</div></div>
+      <div class="comp-b">
+        <div class="comp-kpi">
+          <div class="kpi"><div class="kv up">+37%</div><div class="kl">G&amp;NS营业利润<br>2,020亿日元</div></div>
+          <div class="kpi"><div class="kv">持平</div><div class="kl">G&amp;NS收入<br>9,371亿日元</div></div>
+          <div class="kpi"><div class="kv">160万</div><div class="kl">PS5季度出货<br>累计9,530万</div></div>
+          <div class="kpi"><div class="kv">82%</div><div class="kl">数字下载占比<br>软件销6,610万</div></div>
+        </div>
+        <table class="fintbl">
+          <thead><tr><th>指标（日元）</th><th class="r">FY26 Q1</th><th class="r">同比</th></tr></thead>
+          <tbody>
+            <tr><td class="lbl">索尼集团营收</td><td class="r">2.84万亿</td><td class="r up">+8%</td></tr>
+            <tr><td class="lbl">集团营业利润</td><td class="r">4,765亿</td><td class="r up">+40%</td></tr>
+            <tr><td class="lbl">G&amp;NS 收入</td><td class="r">9,371亿</td><td class="r flat">持平</td></tr>
+            <tr><td class="lbl">G&amp;NS 营业利润</td><td class="r">2,020亿</td><td class="r up">+37%</td></tr>
+            <tr><td class="lbl">全年G&amp;NS OI指引</td><td class="r">6,600亿</td><td class="r up">上调+10%</td></tr>
+          </tbody>
+        </table>
+        <div class="comp-pt">
+          <div class="p"><div>收入名义"持平"，但<b>按固定汇率实为 −1%</b>：硬件与第三方软件双降，全靠日元贬值托住表观数字。</div></div>
+          <div class="p"><div>PS5 季度出货仅 <b>160 万台</b>（全年 1,600 万、−14%），硬件周期见顶明确；数字化率 82%、PSN 月活 6 月创新高 <b>1.25 亿</b>，但<b>总游玩时长 −4%</b>。</div></div>
+          <div class="p"><div>PS Plus 订阅数<b>未披露</b>；Bungie 季末再裁约 292 人；PS6 研发已成明确成本项。</div></div>
+          <div class="p"><div>下半年催化：第一方《死亡搁浅》《Ghost of Yotei》+ 第三方 <b>GTA6（11月）</b>。</div></div>
+        </div>
+        <div class="comp-warn">
+          <div class="wl">DEEP READ · 高利润的成色</div>
+          <div class="deep-list">
+            <div class="deep-row"><div class="deep-tag">来源</div><div class="deep-text">利润 +37% 主要来自<b>美国关税退款 + 汇率</b>，均属非经营性。</div></div>
+            <div class="deep-row"><div class="deep-tag">隐忧</div><div class="deep-text">硬件放缓、总时长 −4%，说明经营基本盘并未同步走强。</div></div>
+            <div class="deep-row"><div class="deep-tag">风险</div><div class="deep-text">关税退款引发集体诉讼；全年指引未计入 <b>7/28 熊本地震</b>潜在冲击。</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2.3 日系三强对比 -->
+    <div class="mini-h">日系三强 · 全面创纪录，但含金量不同（均为日元）</div>
+    <table class="stbl">
+      <colgroup><col style="width:22%"><col style="width:26%"><col style="width:26%"><col style="width:26%"></colgroup>
+      <thead><tr><th>维度</th><th>卡普空</th><th>科乐美</th><th>光荣特库摩</th></tr></thead>
+      <tbody>
+        <tr><td class="wk">核心分部同比</td><td class="num up">+83.0%</td><td class="num up">+36.5%</td><td class="num up">+17.3%</td></tr>
+        <tr><td class="wk">分部利润率</td><td class="num">68.8%<br><span style="font-size:10px;color:var(--ink-ghost)">季节虚高</span></td><td class="num">44%</td><td class="num">33.2%</td></tr>
+        <tr><td class="wk">增长质量</td><td>⭐⭐⭐⭐<br>目录+新IP</td><td>⭐⭐⭐⭐⭐<br>内生多引擎</td><td>⭐⭐⭐<br>利润靠投资</td></tr>
+        <tr><td class="wk">关键点</td><td>生化安魂曲806万<br>街霸6破700万<br>Pragmata 251万</td><td>寂静岭复兴<br>eFootball破10亿下载<br>博彩扭亏</td><td>仁王3最快破百万<br>无新作靠目录<br>数字下载+38%</td></tr>
+      </tbody>
+    </table>
+    <div class="cur-note">卡普空 Q1 目录游戏 2,126 万套创纪录、新作仅 255 万；光荣特库摩经常利润 +79% 中约 66% 来自自营投资理财，<b>质量偏低、不可重复</b>。三家高增速均含日元贬值顺风。</div>
+
+    <!-- EA 退市说明（非本周财报） -->
+    <div class="mini-h">特别说明 · EA 不在本周财报之列</div>
+    <div class="exit-note">
+      <div class="xh"><span class="xn">EA（Electronic Arts）</span><span class="xtag">⚫ 8/4 交割退市</span></div>
+      <div class="xb">EA <b>本周并未发布新财报</b>——其最后一份公开季报是 <b>2026 年 5 月的 FY26 Q4 及全年</b>（净预订 80.3 亿美元创新高、+9%，但净利 8.87 亿美元、<b>−21%</b>，主要靠《战地 6》单点支撑）。近日提交的仅是 10-K/A 年报修正案。<b>随沙特 PIF 收购于 8/4 交割，EA 将退市，此后大概率不再公开披露财报。</b></div>
+    </div>
+
+    <!-- 2.4 财报结论 -->
+    <div class="mini-h">本章结论 · 财报透露的 3 个行业判断</div>
+    <div class="sig">
+      <div class="sig-card"><div class="si">1</div><div class="sc"><div class="sct">平台方进入硬件周期低点，利润质量要打折</div><div class="scb">微软硬件全年 −29%，索尼 PS5 出货指引 −14%；索尼利润 +37% 又主要来自<b>关税退款与汇率</b>，不是经营效率同幅改善。</div></div></div>
+      <div class="sig-card"><div class="si">2</div><div class="sc"><div class="sct">日系利润的主引擎不是新作，而是目录资产</div><div class="scb">卡普空 Q1 目录 2,126 万套创纪录、新作仅 255 万；光荣特库摩无新作仍增长。<b>老游戏长尾变现</b>正在成为更稳定的利润底盘。</div></div></div>
+      <div class="sig-card"><div class="si">3</div><div class="sc"><div class="sct">发行侧继续向“大资本 + 强IP”集中</div><div class="scb">EA 8/4 交割退市，微软持续重置 Xbox；行业正在把资源收回到<b>确定性IP、订阅/服务、跨平台发行</b>三类资产上。</div></div></div>
+    </div>
+  </div>
+
+  <!-- 下期预告 -->
+  <div style="background:linear-gradient(135deg,#16283f,#2c4a6e);padding:13px 20px;text-align:center;">
+    <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:rgba(255,255,255,0.5);font-weight:700;">NEXT MONTH</span>
+    <div style="font-size:13px;color:rgba(255,255,255,0.88);margin-top:4px;font-weight:700;">8 月看点：EA 退市交割 · 微软 8/1 涨价 · gamescom 2026(8/26–30) · 财报后续验证</div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="logo">GAMEPULSE · PC &amp; CONSOLE</div>
+    <div>数据来源：各公司官方 IR / 财报 · 微软 FY26 Q4 新闻稿与 10-K · 索尼 FY26 Q1 演示材料 · 腾讯文档 · 路透 · GamesIndustry · 游民星空 · IT之家 · 3DM</div>
+    <div>2026.07.31 · MONTHLY · COVERAGE 07.01–07.31</div>
+    <div class="disc">财报数据以各公司官方披露为准；金额均已分列标注币种（美元/日元/韩元），日系厂商增速含汇率顺风；Game Pass / PS Plus 订阅数等未披露项不作推断。本报告由 AI 整理，仅供参考，不构成任何投资建议。</div>
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+(function(){
+  const toolbar = document.getElementById('export-toolbar');
+  const mainBtn = document.getElementById('exp-main');
+  const panel = document.getElementById('exp-panel');
+  const status = document.getElementById('exp-status');
+  let panelVisible = false;
+  mainBtn.addEventListener('click', () => { panelVisible = !panelVisible; panel.style.display = panelVisible ? 'block' : 'none'; });
+  document.addEventListener('click', (e) => { if (!toolbar.contains(e.target)) { panelVisible = false; panel.style.display = 'none'; } });
+  async function exportAt(scale) {
+    status.textContent = `正在生成 @${scale}x ...`;
+    toolbar.style.display = 'none';
+    const page = document.querySelector('.page');
+    try {
+      const canvas = await html2canvas(page, { scale, useCORS: true, backgroundColor: '#f4f6f9', width: 430, windowWidth: 430 });
+      toolbar.style.display = '';
+      const link = document.createElement('a');
+      link.download = `Monthly_Briefing_202607_${scale}x.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+      status.textContent = `✅ @${scale}x 已下载 (${canvas.width}×${canvas.height})`;
+    } catch(e) { toolbar.style.display = ''; status.textContent = '❌ ' + e.message; }
+  }
+  panel.querySelectorAll('.exp-btn').forEach(btn => btn.addEventListener('click', (e) => { e.stopPropagation(); exportAt(parseInt(btn.dataset.scale, 10)); }));
+})();
+</script>
+
+</body>
+</html>
