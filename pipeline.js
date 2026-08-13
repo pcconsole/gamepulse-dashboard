@@ -1,8 +1,8 @@
 // ============================================
-// 待上线 Pipeline 数据模块 V3.17
+// 待上线 Pipeline 数据模块 V3.18
 // 数据源：腾讯文档 MCP（唯一基准，文档ID: LRcKfOTzgHrV）
 //         + 网络搜索验证补充（标注来源，不覆盖MCP数据）
-// 最后更新: 2026-07-16 (V3.17 周四自动化: MCP Level 1[106+82行]+web_search 5轮，Palworld 1.0(7/10)+EA CFB 27(7/9)→released，异度神剑2 Switch2版(7/30)→unreleased，MCP字段同步[火纹source→MCP/哥特王朝6/5→6/6/AC黑旗名称])
+// 最后更新: 2026-08-13 (V3.18 周四自动化: web_search 8轮交叉验证。6款已发售移至released[光环CE 7/28+轮回之兽 8/4+漫威斗魂 8/6+Splatoon Raiders 7/23+异度神剑2 Switch2版 7/30+雾影猎人 7/30]。近2周(7/30-8/13)为新公布淡季[gamescom 2026在8/26-30,ONL在8/25],无重磅新公布)
 // ============================================
 
 // ====== 未上线产品数据（全部展示）======
@@ -13,9 +13,6 @@ const pipelineUnreleased = [
 
     // --- MCP 海外产品（有具体日期）---
 
-    { region: "海外", name: "光环：战役进化", publisher: "微软", studio: "Halo Studios", releaseDate: "2026/7/28", platforms: "PC+PS5+Xbox", heat: "中高", heatNote: "光环IP续作，系列超800万，忠实重制+扩展，Xbox Showcase确认7/28+登陆PS5+Game Pass首日", gameplay: "HD画面，4人联机合作，新武器敌人", licenseStatus: "", licenseNote: "", source: "MCP" },
-    { region: "海外", name: "轮回之兽（Beast of Reincarnation）", publisher: "Game Freak", studio: "/", releaseDate: "2026/8/4", platforms: "PC+PS5+Xbox", heat: "中低", heatNote: "宝可梦开发商Game Freak转型之作", gameplay: "后末日日本，一人一狗探索，技术要求高战斗", licenseStatus: "", licenseNote: "", source: "MCP" },
-    { region: "海外", name: "漫威斗魂（Marvel Tokon Fighting Souls）", publisher: "索尼", studio: "/", releaseDate: "2026/8/6", platforms: "PS5+PC", heat: "低", heatNote: "漫威IP，4v4团队格斗，PlayStation Blog确认8/6发售", gameplay: "4v4团队格斗游戏", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "人间地狱：越南（Hell Let Loose: Vietnam）", publisher: "Team17", studio: "Black Matter", releaseDate: "2026/8/14", platforms: "PC+PS5+Xbox", heat: "中低", heatNote: "越南战争，核心二战射击玩家关注", gameplay: "硬核二战射击，大规模战场、真实弹道", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "共鸣：瘟疫传说传承", publisher: "Focus", studio: "/", releaseDate: "2026/8/27", platforms: "PC+PS5+Xbox", heat: "低", heatNote: "系列销量400万+", gameplay: "叙事动作冒险", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "海外", name: "队长小翼2 世界群星", publisher: "万代南梦宫", studio: "/", releaseDate: "2026/8/28", platforms: "PC+PS5+Xbox+Switch2", heat: "低", heatNote: "前作首周销量50万份", gameplay: "动漫足球游戏改编", licenseStatus: "", licenseNote: "", source: "MCP" },
@@ -100,7 +97,6 @@ const pipelineUnreleased = [
 
     // --- MCP 国内产品（季度/年份）---
     { region: "国内", name: "头号禁区", publisher: "字节跳动", studio: "沐瞳", releaseDate: "2026年Q2", platforms: "移动", heat: "中低", heatNote: "更注重策略性，偏向MOBA", gameplay: "第三人称搜打撤+MOBA", licenseStatus: "未获版号", licenseNote: "", source: "MCP" },
-    { region: "国内", name: "雾影猎人（Mistfall Hunter）", publisher: "字节跳动", studio: "北京绿洲", releaseDate: "2026/7/30", platforms: "PC+PS5+Xbox", heat: "中低", heatNote: "创新MMO+搜打撤玩法，字节官方定档7/30全球发售，6/15 Steam新品节开测", gameplay: "PvPvE+冷兵器类魂搜打撤", licenseStatus: "已获版号", licenseNote: "客户端", source: "MCP" },
     { region: "国内", name: "无限大（Ananta）", publisher: "网易", studio: "雷火旗下Naked Rain", releaseDate: "2026年7月", platforms: "移动+PC+PS5", heat: "高", heatNote: "和我司王者世界为直接竞品，目前实机视频品质表现优异", gameplay: "开放世界二游+类GTA+多玩法缝合", licenseStatus: "已获版号", licenseNote: "移动+客户端+游戏机（PS5）", source: "MCP" },
     { region: "国内", name: "遗忘之海（Sea of Remnants）", publisher: "网易", studio: "/", releaseDate: "2026年Q3", platforms: "移动+PC+PS5", heat: "中", heatNote: "网易新品", gameplay: "开放世界海洋冒险", licenseStatus: "", licenseNote: "", source: "MCP" },
     { region: "国内", name: "伊莫", publisher: "Funplus", studio: "爪印工作室", releaseDate: "2026年", platforms: "待定", heat: "低", heatNote: "", gameplay: "待定", licenseStatus: "", licenseNote: "", source: "MCP" },
@@ -141,8 +137,6 @@ const pipelineUnreleased = [
     { region: "海外", name: "Intergalactic: The Heretic Prophet", publisher: "索尼", studio: "Naughty Dog", releaseDate: "待定", platforms: "PS5", heat: "中高", heatNote: "顽皮狗全新科幻IP", gameplay: "科幻第三人称动作冒险", licenseStatus: "", licenseNote: "", source: "网络搜索" },
     { region: "海外", name: "巫师4", publisher: "CD Projekt Red", studio: "CD Projekt Red", releaseDate: "2027年", platforms: "PC+PS5+Xbox", heat: "高", heatNote: "CDPR确认最早2027年发售", gameplay: "开放世界动作RPG", licenseStatus: "", licenseNote: "", source: "网络搜索" },
 
-    { region: "海外", name: "Splatoon Raiders", publisher: "任天堂", studio: "/", releaseDate: "2026/7/23", platforms: "Switch2", heat: "中", heatNote: "Splatoon系列首款衍生作，单人为焦点的地牢探索，据Nintendo官方+TheGamer+NintendoLife 8+源确认", gameplay: "单人地牢探索+宝藏收集", licenseStatus: "", licenseNote: "", source: "网络搜索" },
-    { region: "海外", name: "异度神剑2 Switch2版（Xenoblade Chronicles 2: Switch 2 Edition）", publisher: "任天堂", studio: "Monolith Soft", releaseDate: "2026/7/30", platforms: "Switch2", heat: "中低", heatNote: "Switch 2增强版，4K/60fps+1080p掌机模式，黄金国DLC免费升级，据Nintendo官方+Eurogamer 6+源确认7/30", gameplay: "JRPG增强版，支持4K/60fps TV模式+DLC黄金国", licenseStatus: "", licenseNote: "", source: "网络搜索" },
     { region: "海外", name: "合金装备：大师合集 Vol.2", publisher: "科乐美", studio: "/", releaseDate: "2026/8/27", platforms: "PC+PS5+Xbox+Switch2+Switch", heat: "中低", heatNote: "含MGS4+和平行者+Ghost Babel，据Konami官方+PlayStation Blog 8+源确认8/27", gameplay: "潜行动作合集", licenseStatus: "", licenseNote: "", source: "网络搜索" },
     { region: "海外", name: "Vivarium", publisher: "Serenity Forge", studio: "Studio Meadowflower", releaseDate: "2027年", platforms: "PC+Xbox", heat: "低", heatNote: "手绘风生活模拟冒险，Xbox Showcase公布2027年，据Gematsu+NoisyPixel 6+源确认", gameplay: "手绘风生活模拟冒险", licenseStatus: "", licenseNote: "", source: "网络搜索" },
     { region: "海外", name: "生化危机：维罗妮卡（RE Veronica）", publisher: "卡普空", studio: "/", releaseDate: "2027年", platforms: "PC+PS5+Xbox+Switch2", heat: "中高", heatNote: "《生化危机 Code: Veronica》重制版，SGF开场公布，据IGN+Polygon+Eurogamer 8+源确认", gameplay: "恐怖生存动作冒险", licenseStatus: "", licenseNote: "", source: "网络搜索" },
@@ -159,7 +153,14 @@ const pipelineUnreleased = [
 
 // ====== 已上线产品数据（仅展示2026年上线的）======
 const pipelineReleased = [
-    // ===== 2026-07-16 更新: 新增已发售 =====
+    // ===== 2026-08-13 更新: 新增已发售 =====
+    { region: "海外", name: "光环：战役进化", publisher: "微软", studio: "Halo Studios", releaseDate: "2026/7/28", platforms: "PC+PS5+Xbox", heat: "中高", heatNote: "光环IP续作，系列超800万，忠实重制+扩展，据Halo官方+PSU+9game 8+源确认7/28发售(7/23高级版抢先体验)+Game Pass首日", gameplay: "HD画面，4人联机合作，新武器敌人", source: "MCP" },
+    { region: "海外", name: "轮回之兽（Beast of Reincarnation）", publisher: "Game Freak", studio: "/", releaseDate: "2026/8/4", platforms: "PC+PS5+Xbox", heat: "中低", heatNote: "宝可梦开发商Game Freak首款非宝可梦AAA转型之作，据Notebookcheck+NoisyPixel+Gadgets360 8+源确认8/4发售", gameplay: "后末日日本，一人一狗探索，技术要求高战斗", source: "MCP" },
+    { region: "海外", name: "漫威斗魂（Marvel Tokon Fighting Souls）", publisher: "索尼", studio: "Arc System Works", releaseDate: "2026/8/6", platforms: "PS5+PC", heat: "低", heatNote: "漫威IP 4v4团队格斗，Arc System Works开发，据PlayStation Blog官方+Notebookcheck+allthings.how 8+源确认8/6全球发售", gameplay: "4v4团队格斗游戏，支持跨平台联机", source: "MCP" },
+    { region: "海外", name: "Splatoon Raiders", publisher: "任天堂", studio: "任天堂", releaseDate: "2026/7/23", platforms: "Switch2", heat: "中", heatNote: "Splatoon系列首款衍生作，Switch2独占，单人为焦点的地牢探索，据Nintendo官方+NintendoLife+9game 8+源确认7/23发售", gameplay: "单人地牢探索+宝藏收集", source: "网络搜索" },
+    { region: "海外", name: "异度神剑2 Switch2版（Xenoblade Chronicles 2: Switch 2 Edition）", publisher: "任天堂", studio: "Monolith Soft", releaseDate: "2026/7/30", platforms: "Switch2", heat: "中低", heatNote: "Switch 2增强版，4K/60fps+1080p掌机模式，黄金国DLC免费升级，据Nintendo官方+百家号 6+源确认7/30实体版发售", gameplay: "JRPG增强版，支持4K/60fps TV模式+DLC黄金国", source: "网络搜索" },
+    { region: "国内", name: "雾影猎人（Mistfall Hunter）", publisher: "字节跳动", studio: "Bellring Games", releaseDate: "2026/7/30", platforms: "PC+PS5+Xbox", heat: "中低", heatNote: "字节Bellring Games黑暗奇幻PvPvE撤离动作RPG，发售4天全平台破50万玩家，Steam好评率59%褒贬不一，据游侠+ZOL+IT之家多源确认7/30发售", gameplay: "PvPvE+冷兵器类魂搜打撤", source: "MCP" },
+
     { region: "海外", name: "幻兽帕鲁 1.0（Palworld 1.0）", publisher: "Pocketpair", studio: "Pocketpair", releaseDate: "2026/7/10", platforms: "PC+PS5+Xbox", heat: "中", heatNote: "SGF确认7/10退出EA正式发售，PS5首发+Xbox Game Pass，据Gematsu+GameSpot 8+源确认", gameplay: "开放世界生存制作+怪物收集，72只新帕鲁+世界树区域+PvP竞技场", source: "网络搜索" },
     { region: "海外", name: "EA Sports College Football 27", publisher: "EA", studio: "EA Orlando", releaseDate: "2026/7/9", platforms: "PC+PS5+Xbox", heat: "中低", heatNote: "EA年货体育系列首次登陆PC，据EA官方+Gematsu确认7/9发售", gameplay: "美式橄榄球模拟运动", source: "网络搜索" },
     { region: "海外", name: "艾恩葛朗特 回荡新声", publisher: "万代南梦宫", studio: "/", releaseDate: "2026/7/10", platforms: "PC+PS5+Xbox", heat: "低", heatNote: "刀剑神域IP，据allthings.how+ScreenRant多源确认7/10发售", gameplay: "创建英雄，装备选择，伙伴协同战斗升级", source: "MCP" },
