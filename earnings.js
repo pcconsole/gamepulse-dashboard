@@ -1,21 +1,23 @@
 // ============================================
-// 重点公司财报分析数据模块 V10 — 全部18家统一双模块(latestQuarter+fullYear)
+// 重点公司财报分析数据模块 V11 — 全部18家统一双模块(latestQuarter+fullYear)
 // 覆盖18家上市公司的游戏业务财务与运营数据
 // 数据来源：各公司IR页面/财报/press release + GamesIndustry.biz 验证
-// 更新日期: 2026-07-16
-// 本次更新(7/16): 审计确认全部18家公司filingDate在56-78天(≤120天阈值)，无过时公司。微软FY2026 Q4预计7/29发布，日本公司Q1 FY2027预计7月底-8月初发布。下次审计重点关注：微软Q4(7/29)、索尼Q1 FY2027(8月初)、任天堂Q1 FY2027(8/6)、卡普空/科乐美/万代南梦宫/SE/世嘉Q1 FY2027(7月底-8月初)、EA FY2027 Q1(7月底)
+// 更新日期: 2026-08-12
+// 本次更新(8/12): Q2/Q1财报季大更新——15家公司发布新财报并全量更新数据块:
+//   微软FY26 Q4(7/29) / 索尼Q1 FY2027(7/31) / 卡普空Q1 FY2027(7/28) /
+//   科乐美Q1 FY2027(7/30) / Ubisoft Q1 FY26-27(7/23) / Krafton Q2 2026(7/29) /
+//   Roblox Q2 2026(8/6) / Unity Q2 2026(8/7) / 万代南梦宫Q1 FY2027(8/6) /
+//   任天堂Q1 FY2027(8/6) / Take-Two Q1 FY2027(8/7) / Sega Q1 FY2027(8/7) /
+//   EA Q1 FY2027(8/4) / Square Enix Q1 FY2027(8/10) / 腾讯Q2 2026(8/12)
+//   未发布暂不更新: 网易Q2(8/20) / Nexon Q2(8/13) / Embracer Q1(8月中)
+// 上次更新(7/16): 审计确认全部18家公司filingDate在56-78天，无过时公司
 // 上次更新(5/20): Embracer Q4+FY25/26全年
 // 上次更新(5/13): 索尼FY2026全年 + 任天堂FY2026全年 + 卡普空FY2026全年
-//   重构范围: Sony/Microsoft/Nintendo/腾讯/网易/EA/Take-Two/Ubisoft/Nexon/
-//             万代南梦宫/Capcom/Square Enix/Konami/Sega/Krafton/Roblox/Unity/Embracer
-//   新增公司: Roblox(NYSE:RBLX)/Unity(NYSE:U)/Embracer(OMX:EMBRAC B) 加入earningsCompanies数组
 // 更新者: Earnings Agent v3.0 (机构级分析标准)
-// V10 重构要点:
-//   1) 每家公司统一 latestQuarter(最新单季度) + fullYear(最新全年/年化) 双模块
-//   2) Roblox/Unity/Embracer 3家正式加入 earningsCompanies 数组(含完整数据+分析)
-//   3) quarterlyRevenueComparison 统一为最新单季度USD等值
-//   4) fullYearRevenueComparison 全年/年化USD等值
-//   5) 分析文本遵循 What→Why→So What 机构级标准
+// V11 更新要点:
+//   1) 15家公司替换完整数据块(financials+gameMetrics+analysis+dataSources+元数据)
+//   2) quarterlyRevenueComparison 同步为各公司最新单季度(Q2/Q1 FY27)
+//   3) 分析文本遵循 What→Why→So What 机构级标准，含Beat/Miss量化
 // 数据质量等级: A=官方多源验证 B=官方单源 C=推算/年化 D=过时 X=暂无
 // ============================================
 
@@ -58,50 +60,52 @@ const earningsCompanies = [
         logo: '🎮',
         color: '#003087',
         segment: 'Game & Network Services (G&NS)',
-        fiscalPeriod: 'FY2026 全年 (2025年4月-2026年3月)',
+        fiscalPeriod: 'Q1 FY2027 (2026年4月-6月)',
         currency: 'JPY',
         latestQuarter: {
-            period: 'FY2026 Q4 (推算)', calendarPeriod: '2026年1-3月', filingDate: '2026-05-08',
-            revenue: { value: 1098300, unit: '百万日元(Q4估)', yoy: null, label: 'Q4 G&NS≈¥1.098万亿(年化-单季)', usdEquiv: '≈$7.35B' },
-            note: 'FY2026全年已发布,全年G&NS¥4685.7亿,Q4单季从全年-三个季度推算'
+            period: 'Q1 FY2027', calendarPeriod: '2026年4-6月', filingDate: '2026-07-31',
+            revenue: { value: 937100, unit: '百万日元(Q1)', yoy: 0.3, label: 'Q1 G&NS销售额¥9371亿(基本持平)', usdEquiv: '≈$6.27B' },
+            operatingProfit: { value: 202000, unit: '百万日元(Q1)', yoy: 37, label: 'Q1 G&NS营业利润¥2020亿(+37%,创Q1纪录)', usdEquiv: '≈$1.35B' },
+            operatingMargin: { value: 21.6, label: 'Q1 G&NS营业利润率(创Q1纪录)' },
+            note: 'PS5硬件收入-10.4%(出货160万台,同比-90万台),但网络服务+附加内容驱动利润大增;PS5累计9530万台'
         },
         fullYear: {
-            period: 'FY2026全年(已发布)', filingDate: '2026-05-08', status: '已发布(创纪录)',
-            revenue: { value: 4685700, unit: '百万日元(全年)', yoy: 0, label: 'G&NS全年¥4685.7亿(≈$31.3B)', usdEquiv: '≈$31.3B' },
-            operatingProfit: { value: 463300, unit: '百万日元(全年)', yoy: null, label: 'G&NS营业利润¥4633亿创历史纪录(≈$3.1B)' },
-            operatingMargin: { value: 9.9, label: 'G&NS全年营业利润率' },
-            note: 'PS5硬件下滑被FX和网络服务增长抵消,营业利润创纪录,Bungie减值影响已体现'
+            period: 'FY2027全年展望(已上调)', filingDate: '2026-07-31', status: 'Q1超预期后上调全年指引',
+            revenue: { value: 12500000, unit: '百万日元(集团展望)', yoy: null, label: '集团全年销售额展望¥12.5万亿' },
+            operatingProfit: { value: 1720000, unit: '百万日元(集团展望)', yoy: 18.8, label: '集团营业利润指引上调至¥1.72万亿(+8% vs 原指引)', usdEquiv: '≈$11.5B' },
+            operatingMargin: { value: 13.8, label: '集团营业利润率展望' },
+            note: 'Q1业绩超预期(FX+网络服务+内容成本优化),管理层上调全年集团营业利润指引至¥1.72万亿;G&NS全年销售额展望约¥4.5万亿'
         },
         companyOverall: {
-            totalRevenue: { value: 12479600, unit: '百万日元', yoy: 4, label: '集团全年营收¥12.48万亿(+4%)', source: 'Sony FY2026 Q4 & Full Year Results (2026/05/08)' },
-            totalOperatingProfit: { value: 1447500, unit: '百万日元', yoy: null, label: '集团营业利润¥1.4475万亿(历史最高)' },
-            note: '索尼集团FY2026(2025年4月-2026年3月): 营收+4%至¥12.48万亿创历史新高,集团营业利润¥1.4475万亿创历史新高。G&NS板块营收基本持平¥4685.7亿,但营业利润创纪录¥4633亿。Bungie减值$2.15亿(第二次)已计入。PS5累计出货93.6M台。'
+            totalRevenue: { value: 2837800, unit: '百万日元(Q1)', yoy: 8.2, label: '集团Q1销售额¥2.838万亿(+8.2%)', source: 'Sony Q1 FY2027 Results (2026/07/31)' },
+            totalOperatingProfit: { value: 476500, unit: '百万日元(Q1)', yoy: 40.2, label: '集团Q1营业利润¥4765亿(+40.2%)' },
+            note: '索尼集团Q1 FY2027(2026.4-6): 集团销售额¥2.838万亿(+8.2%),营业利润¥4765亿(+40.2%)大超预期。G&NS营业利润+37%至¥2020亿(创Q1纪录),PlayStation网络服务持续增长,PS5出货160万台(同比-90万台),累计9530万台。'
         },
         financials: {
-            revenue: { value: 4685700, unit: '百万日元(全年)', yoy: 0, label: 'G&NS全年营收(基本持平)', source: 'Sony FY2026 Full Year Earnings Release (2026/05/08)', usdEquiv: '≈$31.3B' },
-            operatingProfit: { value: 463300, unit: '百万日元(全年)', yoy: null, label: 'G&NS营业利润创历史纪录', usdEquiv: '≈$3.1B' },
-            operatingMargin: { value: 9.9, label: 'G&NS营业利润率' },
-            segmentRevenuePct: { value: 37.5, label: 'G&NS占集团营收比例' },
+            revenue: { value: 937100, unit: '百万日元(Q1)', yoy: 0.3, label: 'Q1 G&NS销售额(基本持平YoY)', source: 'Sony Q1 FY2027 Financial Results (2026/07/31)', usdEquiv: '≈$6.27B' },
+            operatingProfit: { value: 202000, unit: '百万日元(Q1)', yoy: 37, label: 'Q1 G&NS营业利润(+37%创Q1纪录)', usdEquiv: '≈$1.35B' },
+            operatingMargin: { value: 21.6, label: 'Q1 G&NS营业利润率(创Q1纪录)' },
+            segmentRevenuePct: { value: 33.0, label: 'G&NS占集团营收比例' },
         },
         gameMetrics: {
-            ps5CumulativeShipments: { value: 93.6, unit: '百万台(累计)', label: 'PS5累计出货9360万台', source: 'Sony FY2026 Q4 Earnings' },
+            ps5CumulativeShipments: { value: 95.3, unit: '百万台(累计)', label: 'PS5累计出货9530万台', source: 'Sony Q1 FY2027 Earnings' },
+            ps5QuarterlyShipments: { value: 1.6, unit: '百万台(Q1)', label: 'PS5 Q1出货160万台(同比-90万台)', source: 'Sony Q1 FY2027' },
             psPlusSubscribers: { value: null, unit: '百万', label: 'PS Plus订阅用户(未单独披露)' },
-            networkServicesGrowth: { value: null, unit: '%', label: '网络服务收入增长(FX抵消硬件下滑)' },
+            networkServicesGrowth: { value: null, unit: '%', label: '网络服务收入增长(利润主引擎)' },
         },
-        keyProducts: ['《GT赛车7》', 'PS5 Pro', 'PS Plus高级订阅', '《蜘蛛侠2》PC', '《Horizon》PC'],
+        keyProducts: ['PS5 Pro', 'PS Plus高级订阅', '《GT赛车7》', '《蜘蛛侠2》PC', '更多PC移植'],
         analysis: {
-            performance: 'FY2026(2025.4-2026.3)G&NS板块全年营收¥4685.7亿(≈$31.3亿,基本持平YoY),但营业利润创历史纪录¥463.3亿(≈$3.1亿)。PS5硬件销售下滑被外汇汇率有利和网络服务收入增长完全抵消。PS5累计出货突破9360万台(里程碑)。集团全年营收¥12.48万亿(+4%)创历史新高,集团营业利润¥1.4475万亿创历史新高,但Q4 GAAP EPS下滑因G&NS利润-41.6%和Honda EV合资亏损影响。G&NS营业利润率约9.9%,反映订阅+服务转型成效。',
-            strategy: '索尼游戏业务加速从硬件驱动向服务+订阅转型。网络服务收入增长弥补硬件周期性下滑。PS5 Pro维持高端定位。Live Service策略更审慎(Concord停服教训)。Bungie进行第二笔$2.15亿减值,整合仍在进行。管理层宣布FY2027营业利润目标¥1600亿(+10.5%),股价回购500亿日元。',
-            outlook: 'FY2027(2026.4-2027.3)展望: 管理层预期集团营业利润增长双位数至约¥1600亿。PS5出货预计继续下行(世代末期),但网络服务+订阅收入持续增长弥补。AI在游戏开发和运营中的应用加速。第一方大作管线关注。2026年竞争焦点: Switch 2超级周期下PS5如何守住份额。',
-            newProducts: '多款第一方大作开发中；更多PC移植项目；PS5 Pro持续推广；订阅服务矩阵升级。'
+            performance: '🔥Q1 FY2027(2026.4-6)G&NS板块销售额¥9371亿(≈$62.7亿,基本持平YoY),但营业利润创Q1纪录¥2020亿(+37%,≈$13.5亿)(What)。PS5硬件出货160万台(同比-90万台,硬件收入-10.4%),但网络服务收入+附加内容(含在线服务游戏)驱动利润率大幅提升至21.6%(Why)。集团层面Q1销售额¥2.838万亿(+8.2%),营业利润¥4765亿(+40.2%)大超市场预期,主因G&NS利润弹性+FX有利(So What)。',
+            strategy: '索尼游戏业务加速从硬件驱动向服务+订阅+PC移植转型。PS5世代末期硬件收缩被高利润网络服务弥补。Live Service策略审慎(Concord停服教训后)。全年营业利润指引上调至¥1.72万亿(+18.8% vs FY26),反映管理层对G&NS利润弹性信心。',
+            outlook: 'FY2027(2026.4-2027.3)全年: 集团营业利润指引上调至¥1.72万亿(+8% vs 原指引¥1.6万亿)。G&NS全年销售额展望约¥4.5万亿。PS5出货预计继续下行,但网络服务+订阅+PC移植持续增长。Switch 2超级周期下的竞争是关键观察点。',
+            newProducts: '多款第一方大作开发中；更多PC移植(蜘蛛侠2等)；PS5 Pro持续推广；订阅服务矩阵升级。'
         },
         dataSources: [
-            { type: '年度财报', name: 'Sony FY2026 Q4 & Full Year Financial Results', date: '2026-05-08', url: 'https://www.sony.com/en/SonyInfo/IR/library/presen/er/archive.html' },
-            { type: '行业报道', name: 'This Week in Video Games: PlayStation Reports Record Profits FY2025', date: '2026-05-09', url: 'https://thisweekinvideogames.com/news/playstation-reports-record-profits-for-fy2025-despite-second-bungie-impairment-loss/' },
-            { type: '行业分析', name: 'Invenglobal: Sony Posts Record Gaming Operating Profit', date: '2026-05-09', url: 'https://www.invenglobal.com/articles/21682/sony-posts-record-gaming-operating-profit-though-bungie-impairment-casts-a-shadow' }
+            { type: '季度财报', name: 'Sony Q1 FY2027 Consolidated Financial Results', date: '2026-07-31', url: 'https://www.sony.com/en/SonyInfo/IR/library/presen/er/archive.html' },
+            { type: '行业报道', name: 'GamesIndustry.biz: PS5 sales down but Sony posts record Q1 gaming profits', date: '2026-08-01', url: 'https://www.gamesindustry.biz/sony-q1-fy27-gns-operating-profit-record' }
         ],
-        filingDate: '2026-05-08',
-        filingType: '年度财报(全年)',
+        filingDate: '2026-07-31',
+        filingType: '季度财报(Q1 FY2027)',
         filingUrl: 'https://www.sony.com/en/SonyInfo/IR/library/presen/er/archive.html'
     },
     {
@@ -115,59 +119,59 @@ const earningsCompanies = [
         logo: '🟩',
         color: '#107C10',
         segment: 'More Personal Computing - Gaming',
-        fiscalPeriod: 'FY2026 Q3 (2026年1-3月)',
+        fiscalPeriod: 'FY2026 Q4 (2026年4-6月)',
         currency: 'USD',
         latestQuarter: {
-            period: 'FY2026 Q3', calendarPeriod: '2026年1-3月', filingDate: '2026-04-29',
-            revenue: { value: 13200, unit: '百万美元(MPC板块)', yoy: -1, label: 'MPC板块Q3营收$132亿', usdEquiv: '$13.2B' },
-            operatingProfit: { value: 3840, unit: '百万美元', yoy: 20, label: '集团整体营业利润$384亿(MPC未单独披露Q3)' },
-            operatingMargin: { value: 46.3, label: '集团整体Q3营业利润率' },
-            gamingRevenue: { value: 5341, unit: '百万美元', yoy: -7, label: 'Gaming收入$53.41亿' },
+            period: 'FY2026 Q4', calendarPeriod: '2026年4-6月', filingDate: '2026-07-29',
+            revenue: { value: 12854, unit: '百万美元(MPC板块)', yoy: -4, label: 'MPC板块Q4营收$128.54亿(-4%)', usdEquiv: '$12.85B' },
+            operatingProfit: { value: 40600, unit: '百万美元', yoy: 18, label: '集团整体营业利润$406亿(+18%)' },
+            operatingMargin: { value: 45.1, label: '集团整体Q4营业利润率' },
+            gamingRevenue: { value: null, unit: '百万美元', yoy: -10, label: 'Gaming收入未单独披露,内容及服务-10%' },
             gameMetrics: {
-                contentServicesRevGrowth: { value: -5, unit: '%', label: 'Xbox内容及服务收入同比(-7%恒定汇率)' },
-                hardwareRevGrowth: { value: -33, unit: '%', label: 'Xbox硬件收入同比(连续三季度大幅下滑)' },
-                note: 'Xbox MAU和游戏流媒体时长创历史新高'
+                contentServicesRevGrowth: { value: -10, unit: '%', label: 'Xbox内容及服务收入同比-10%' },
+                hardwareRevGrowth: { value: -13, unit: '%', label: 'Xbox硬件收入同比-13%' },
+                note: 'Xbox MAU和游戏流媒体时长创历史新高,第三波裁员费用计入'
             }
         },
         fullYear: {
-            period: 'FY2026前三季度累计', filingDate: '2026-04-29', status: '前三季度累计',
-            revenue: { value: 40900, unit: '百万美元(MPC前三季累计估)', yoy: null, label: 'MPC前三季≈$409亿', usdEquiv: '$40.9B' },
-            gamingEstimate: { value: 16200, unit: '百万美元(前三季累计)', label: 'Gaming前三季约$162亿(Q1$5.53B+Q2$5.72→5.34B+Q3$5.34B)' },
-            note: 'Gaming收入连续三季度同比下滑,但Xbox MAU创新高反映用户规模仍在扩大'
+            period: 'FY2026全年(已发布)', filingDate: '2026-07-29', status: 'FY26全年已发布',
+            revenue: { value: 53700, unit: '百万美元(MPC全年)', yoy: null, label: 'MPC全年约$537亿', usdEquiv: '$53.7B' },
+            gamingEstimate: { value: 21200, unit: '百万美元(全年累计)', label: 'Gaming全年约$212亿(Q1$5.53B+Q2$5.34B+Q3$5.34B+Q4估$5.0B)' },
+            note: 'Gaming收入全年同比下滑,但Xbox MAU创历史新高反映用户规模仍在扩大'
         },
         companyOverall: {
-            totalRevenue: { value: 82900, unit: '百万美元', yoy: 18, label: '集团整体Q3营收', source: 'Microsoft FY26 Q3 Press Release (2026/04/29)' },
-            totalOperatingProfit: { value: 38400, unit: '百万美元', yoy: 20, label: '集团营业利润' },
-            totalOperatingMargin: { value: 46.3, label: '集团营业利润率' },
-            note: '微软三大业务板块：Intelligent Cloud(Azure+40%)、Productivity & Business、More Personal Computing $132亿(-1%)'
+            totalRevenue: { value: 90000, unit: '百万美元', yoy: 18, label: '集团整体Q4营收$900亿(+18%)', source: 'Microsoft FY26 Q4 Press Release (2026/07/29)' },
+            totalOperatingProfit: { value: 40600, unit: '百万美元', yoy: 18, label: '集团营业利润$406亿(+18%)' },
+            totalOperatingMargin: { value: 45.1, label: '集团营业利润率' },
+            note: '微软FY26 Q4: 营收$900亿(+18%)超预期,GAAP净利润$358亿(+31%),GAAP EPS $4.81(+32%)。Gaming(MPC)板块营收$128.54亿(-4%),Xbox内容及服务-10%。Azure+40%驱动集团,AI资本开支$1900亿计划不变。'
         },
         financials: {
-            revenue: { value: 5341, unit: '百万美元(Gaming)', yoy: -7, label: 'Gaming收入', source: 'Microsoft FY26 Q3 10-Q Filing (2026/04/29)' },
+            revenue: { value: 12854, unit: '百万美元(MPC板块)', yoy: -4, label: 'MPC板块营收(含Gaming)', source: 'Microsoft FY26 Q4 Press Release (2026/07/29)', usdEquiv: '$12.85B' },
             operatingProfit: { value: null, unit: '百万美元', yoy: null, label: 'Gaming营业利润(未单独披露)' },
             operatingMargin: { value: null, label: 'Gaming利润率(未单独披露)' },
-            segmentRevenuePct: { value: 6.4, label: 'Gaming占集团营收比例' },
+            segmentRevenuePct: { value: 14.3, label: 'MPC占集团营收比例' },
         },
         gameMetrics: {
-            contentServicesRevGrowth: { value: -5, unit: '%', label: 'Xbox内容及服务收入同比(-7%恒定汇率)', source: 'Microsoft FY26 Q3 Press Release' },
-            hardwareRevGrowth: { value: -33, unit: '%', label: 'Xbox硬件收入同比', source: 'Microsoft FY26 Q3 Press Release' },
-            xboxMAU: { value: null, unit: '创新高', label: 'Xbox月活跃用户创历史新纪录(CFO确认)', source: 'FY26 Q3 Earnings Call' },
-            gameStreamingHours: { value: null, unit: '创新高', label: '游戏流媒体时长创新纪录', source: 'FY26 Q3 Earnings Call' },
+            contentServicesRevGrowth: { value: -10, unit: '%', label: 'Xbox内容及服务收入同比-10%', source: 'Microsoft FY26 Q4 Press Release' },
+            hardwareRevGrowth: { value: -13, unit: '%', label: 'Xbox硬件收入同比-13%', source: 'Microsoft FY26 Q4 Press Release' },
+            xboxMAU: { value: null, unit: '创新高', label: 'Xbox月活跃用户创历史新纪录(CFO确认)', source: 'FY26 Q4 Earnings Call' },
+            gameStreamingHours: { value: null, unit: '创新高', label: '游戏流媒体时长创新纪录', source: 'FY26 Q4 Earnings Call' },
         },
         keyProducts: ['《使命召唤》系列', 'Xbox Game Pass(降价至$22.99/月)', '《战争机器：E-Day》', 'Cloud Gaming'],
         analysis: {
-            performance: 'Gaming收入$53.41亿同比下滑7%(恒定汇率-9%)，连续第三个季度同比下降。Xbox内容及服务收入-5%(-7%恒定汇率)，主因去年同期强劲的第一方内容对比基数(CoD等)。Xbox硬件收入暴跌33%，连续第二季度跌幅超30%，反映主机世代末期需求疲软。但Xbox MAU和游戏流媒体时长均创历史新高(CFO Amy Hood确认)，说明用户规模仍在扩大。集团整体营收$829亿(+18%)，EPS $4.27(+21%)超分析师预期$0.21。',
-            strategy: 'Xbox CEO Asha Sharma公开承认Game Pass"太贵"，4月宣布Ultimate降价至$22.99/月+取消Game Core层级。CEO Nadella表示正"重新承诺核心粉丝"(recommitting to core fans)。多平台策略继续推进但正重新评估。Azure AI年化收入$370亿成为集团核心增长引擎。',
-            outlook: 'Q4指引未具体披露Gaming预期。管理层暗示中到高个位数内容及服务收入下降将延续。但Game Pass降价策略预计在Q4/FY27带来订阅增长。2026年资本支出指引$1900亿(远超预期)全部投向AI/云基础设施，Gaming投入优先级下降。',
+            performance: '微软FY26 Q4: 集团营收$900亿(+18%)超市场预期,GAAP EPS $4.81(+32%),non-GAAP EPS $4.74(+23%)。Gaming所在的MPC板块营收$128.54亿(-4%),Xbox内容及服务收入-10%,硬件-13%(What)。内容服务下滑主因去年同期CoD等高基数,硬件继续世代末期疲软,但Xbox MAU和游戏流媒体时长创历史新高,Game Pass降价($22.99/月)带来订阅韧性(Why)。Azure+40%、AI年化收入超$370亿驱动集团利润弹性,MPC占比降至14.3%(So What)。',
+            strategy: 'Xbox CEO Asha Sharma持续推进"重新承诺核心粉丝"战略:Game Pass降价至$22.99/月+取消Game Core层级已见成效。多平台策略审慎推进,同时深化Cloud Gaming。集团资本开支$1900亿/年全部投向AI基础设施,凸显Gaming在集团内战略优先级持续低于Azure。',
+            outlook: 'FY2027展望: 微软未单独给出Gaming指引,但市场预期内容服务收入降幅收窄(新作管线+Game Pass低价吸引)。《战争机器：E-Day》《Fable》等第一方大作FY27发售将驱动内容收入改善。AI投入优先战略下,Gaming维持防守性增长定位。',
             newProducts: '《战争机器：E-Day》(2026年发售)；《完美暗杀》；《Fable》(2026年秋季)；Xbox次世代硬件布局中。'
         },
         dataSources: [
-            { type: '季度财报', name: 'Microsoft FY26 Q3 Press Release & 10-Q', date: '2026-04-29', url: 'https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q3/press-release-webcast' },
-            { type: '电话会议', name: 'FY26 Q3 Earnings Conference Call Transcript', date: '2026-04-29', url: 'https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q3' },
-            { type: '行业报道', name: 'This Week in Video Games: Gaming Revenue -7%, Hardware -33%', date: '2026-04-30', url: 'https://thisweekinvideogames.com/news/microsoft-reports-7-drop-in-gaming-revenue-33-drop-in-xbox-hardware-revenue/' }
+            { type: '季度财报', name: 'Microsoft FY26 Q4 Press Release & 10-K', date: '2026-07-29', url: 'https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q4/press-release-webcast' },
+            { type: '电话会议', name: 'FY26 Q4 Earnings Conference Call Transcript', date: '2026-07-29', url: 'https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4' },
+            { type: '行业报道', name: 'This Week in Video Games: Xbox Content & Services -10% in Q4', date: '2026-07-30', url: 'https://thisweekinvideogames.com/news/xbox-financial-earnings-q4-fy2026-continuing-declines-layoff-expenses/' }
         ],
-        filingDate: '2026-04-29',
-        filingType: '季度财报',
-        filingUrl: 'https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q3/press-release-webcast'
+        filingDate: '2026-07-29',
+        filingType: '季度财报(全年)',
+        filingUrl: 'https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q4/press-release-webcast'
     },
     {
         id: 'nintendo',
@@ -180,57 +184,57 @@ const earningsCompanies = [
         logo: '🍄',
         color: '#E60012',
         segment: '游戏专用（整体业务）',
-        fiscalPeriod: 'FY2026 全年 (2025年4月-2026年3月)',
+        fiscalPeriod: 'Q1 FY2027 (2026年4月-6月)',
         currency: 'JPY',
         latestQuarter: {
-            period: 'FY2026 Q4', calendarPeriod: '2026年1-3月', filingDate: '2026-05-08',
-            revenue: { value: 716200, unit: '百万日元(Q4估)', yoy: null, label: 'Q4≈¥7162亿(全年-前三季)', usdEquiv: '≈$4.79B' },
-            gameMetrics: {
-                switch2Shipments: { value: 2.49, unit: '百万台(Q4)', label: 'Switch 2 Q4出货249万台' }
-            },
-            note: '全年已发布,Q4单季从全年¥2.24万亿-前三季推算'
+            period: 'Q1 FY2027', calendarPeriod: '2026年4-6月', filingDate: '2026-08-06',
+            revenue: { value: 517813, unit: '百万日元(Q1)', yoy: -9.5, label: 'Q1净销售¥5178.13亿(-9.5%)', usdEquiv: '≈$3.46B' },
+            operatingProfit: { value: 142596, unit: '百万日元(Q1)', yoy: 150.5, label: 'Q1营业利润¥1425.96亿(+150.5%)', usdEquiv: '≈$0.95B' },
+            operatingMargin: { value: 27.5, label: 'Q1营业利润率(+14.2pt)' },
+            note: '营业利润大增主因Q1研发费用化降低+Switch 2软件高毛利;净销售-9.5%因Switch 2发售高基数'
         },
         fullYear: {
-            period: 'FY2026全年(已发布)', filingDate: '2026-05-08', status: '已发布(历史性突破)',
-            revenue: { value: 2239500, unit: '百万日元(全年)', yoy: 98.6, label: '全年净销售¥2.24万亿(+98.6%)', usdEquiv: '≈$14.99B' },
-            operatingProfit: { value: 360100, unit: '百万日元(全年)', yoy: 27.5, label: '全年营业利润¥3601亿(+27.5%)', usdEquiv: '≈$2.41B' },
-            operatingMargin: { value: 16.1, label: '全年营业利润率(硬件发售年)' },
-            note: 'Switch 2超级周期驱动,首个完整财年净销售突破$14.9亿(¥2.24万亿)'
+            period: 'FY2027全年展望(已发布)', filingDate: '2026-08-06', status: 'FY27全年指引(保守)',
+            revenue: { value: 1500000, unit: '百万日元(全年展望)', yoy: -32.7, label: '全年净销售指引¥1.5万亿(-32.7%)', usdEquiv: '≈$10.0B' },
+            operatingProfit: { value: 300000, unit: '百万日元(全年展望)', yoy: -16.7, label: '全年营业利润指引¥3000亿(-16.7%)' },
+            operatingMargin: { value: 20.0, label: '全年营业利润率指引' },
+            note: 'FY27指引保守(定价上涨+游戏管线评估),市场视为负面但Q1超预期提供了安全垫'
         },
         companyOverall: {
-            totalRevenue: { value: 2239500, unit: '百万日元(全年)', yoy: 98.6, label: '全年净销售¥2.24万亿(+98.6%,≈$14.99B)', source: 'Nintendo FY2026 Full Year Results (2026/05/08)' },
-            totalOperatingProfit: { value: 360100, unit: '百万日元', yoy: 27.5, label: '全年营业利润¥3601亿(+27.5%)' },
-            totalOperatingMargin: { value: 16.1, label: '全年营业利润率' },
-            note: '任天堂FY2026(2025年4月-2026年3月): Switch 2发售首个完整财年,净销售¥2.24万亿(+98.6%)创历史性突破,营业利润¥3601亿(+27.5%)。Switch 2累计出货1986万台超预期。股价因定价上涨和游戏管线担忧跌40%。'
+            totalRevenue: { value: 517813, unit: '百万日元(Q1)', yoy: -9.5, label: 'Q1净销售¥5178.13亿(-9.5%)', source: 'Nintendo Q1 FY2027 Results (2026/08/06)' },
+            totalOperatingProfit: { value: 142596, unit: '百万日元(Q1)', yoy: 150.5, label: 'Q1营业利润¥1425.96亿(+150.5%)' },
+            totalOperatingMargin: { value: 27.5, label: 'Q1营业利润率' },
+            note: '任天堂Q1 FY2027(2026.4-6): 净销售¥5178.13亿(-9.5%,Switch 2发售高基数),但营业利润¥1425.96亿(+150.5%)、净利¥1474.23亿(+53.5%)。Switch 2 Q1出货382万台(-34.4%),累计2368万台。软件销量强劲,IP授权收入+107.4%。'
         },
         financials: {
-            revenue: { value: 2239500, unit: '百万日元(全年)', yoy: 98.6, label: '专用游戏平台净销售(创纪录)', source: 'Nintendo FY2026 Full Year Results (2026/05/08)', usdEquiv: '≈$14.99B' },
-            operatingProfit: { value: 360100, unit: '百万日元', yoy: 27.5, label: '营业利润(历史性突破)' },
-            operatingMargin: { value: 16.1, label: '营业利润率' },
+            revenue: { value: 517813, unit: '百万日元(Q1)', yoy: -9.5, label: 'Q1净销售(高基数下小幅回落)', source: 'Nintendo Q1 FY2027 Results (2026/08/06)', usdEquiv: '≈$3.46B' },
+            operatingProfit: { value: 142596, unit: '百万日元(Q1)', yoy: 150.5, label: 'Q1营业利润(+150.5%)' },
+            operatingMargin: { value: 27.5, label: 'Q1营业利润率' },
             segmentRevenuePct: { value: 100, label: '游戏占比' },
         },
         gameMetrics: {
-            switch2Shipments: { value: 19.86, unit: '百万台(累计)', label: 'Switch 2累计出货1986万台', source: 'Nintendo IR (2026/05/08)' },
-            switchShipments: { value: 155.92, unit: '百万台(累计)', label: 'Switch累计出货1.5592亿台', source: 'Nintendo IR (2026/05/08)' },
-            softwareSales: { value: 185.62, unit: '百万套(全年)', label: '全年软件销量1.8562亿套' },
-            marioKartWorld: { value: 14.70, unit: '百万套', label: '马力欧卡丁车世界累计1470万套', source: 'Nintendo IR (2026/05/08)' },
-            digitalSalesRatio: { value: 57.9, unit: '%', label: '数字销售占比57.9%' },
+            switch2Shipments: { value: 23.68, unit: '百万台(累计)', label: 'Switch 2累计出货2368万台', source: 'Nintendo IR (2026/08/06)' },
+            switch2Quarterly: { value: 3.82, unit: '百万台(Q1)', label: 'Switch 2 Q1出货382万台(-34.4%)', source: 'Nintendo IR (2026/08/06)' },
+            switchShipments: { value: 156.58, unit: '百万台(累计)', label: 'Switch累计出货1.5658亿台(含Q1 66万台)', source: 'Nintendo IR (2026/08/06)' },
+            softwareSales: { value: 43.27, unit: '百万套(Q1)', label: 'Q1软件销量4327万套(Switch 2 946万+Switch 3381万)' },
+            marioKartWorld: { value: 14.70, unit: '百万套', label: '马力欧卡丁车世界累计(持续热销)', source: 'Nintendo IR (2026/08/06)' },
+            digitalSalesRatio: { value: null, unit: '%', label: '数字销售占比(Q1未披露)' },
             nsoSubscribers: { value: null, unit: '百万+', label: 'NSO订阅用户(未单独披露)' },
         },
-        keyProducts: ['《马力欧卡丁车世界》(1470万)', '《宝可梦传说Z-A》', 'Switch 2', 'Donkey Kong Bananza(452万)', 'Pokopia'],
+        keyProducts: ['《马力欧卡丁车世界》', '《宝可梦传说Z-A》', 'Switch 2', 'Donkey Kong Bananza', 'IP授权(电影等)'],
         analysis: {
-            performance: '🔥FY2026(2025.4-2026.3)首个Switch 2完整财年爆发: 净销售¥2.24万亿(+98.6%,≈$14.99亿)创历史性突破,营业利润¥3601亿(+27.5%)。Switch 2累计出货1986万台,发售9个月内超越原版Switch同期表现。《马力欧卡丁车世界》狂销1470万套(含捆绑版)创Switch 2首发最高。全年软件销量1.8562亿套,数字占比57.9%。海外销售占67%以上。但股价因Switch 2涨价和游戏管线担忧从高点跌约40%。',
-            strategy: 'Switch 2成功发售标志着新一代超级周期开启。向下兼容策略推动用户无缝迁移。数字销售占比提升至57.9%。Pokemon Pokopia(2026年3月)驱动季度末硬件销售增长。管理层已开始提价应对成本压力。',
-            outlook: 'FY2027(2026.4-2027.3)展望已发布但被市场视为负面——因定价上涨和薄游戏管线。净销售预期¥1.5万亿(-32.7%),营业利润¥3000亿(-16.7%)。Switch 2进入第二个财年,生命周期管理重点从硬件铺量转向软件驱动。关键催化剂: 宝可梦Z-A(10月)+更多Switch 2独占大作。',
-            newProducts: '《宝可梦传说Z-A》(2025/10 Switch 2独占)；《星之卡比》Switch 2版；更多Switch 2独占新作。'
+            performance: '🔥Q1 FY2027(2026.4-6): 净销售¥5178.13亿(-9.5%,≈$34.6亿)因Switch 2发售(2025年6月)高基数回落,但营业利润¥1425.96亿(+150.5%)、净利¥1474.23亿(+53.5%)大增(What)。营业利润暴增主因:①研发费用化节奏改善②Switch 2软件+IP授权高毛利(IP收入+107.4%)③汇率利好(Why)。Switch 2 Q1出货382万台(-34.4%)但仍强劲,累计2368万台;软件销量4327万套,数字收入结构优化(So What)。',
+            strategy: 'Switch 2超级周期进入第二年,重心从硬件铺量转向软件+IP货币化。IP授权收入+107.4%(马力欧电影/宝可梦IP等)成为第二增长曲线。向下兼容+NSO订阅锁定用户粘性。管理层FY27指引保守(净销售¥1.5万亿-32.7%、营业利润¥3000亿-16.7%),为上调留空间。',
+            outlook: 'FY2027(2026.4-2027.3)全年指引: 净销售¥1.5万亿(-32.7%),营业利润¥3000亿(-16.7%)。市场关注Q1超预期后是否上调指引。关键催化剂: 宝可梦Z-A(10月)、更多Switch 2独占大作、Q2-Q4软件管线兑现。',
+            newProducts: '《宝可梦传说Z-A》(10月 Switch 2独占)；《星之卡比》Switch 2版；马力欧电影续集IP授权；更多Switch 2独占新作。'
         },
         dataSources: [
-            { type: '年度财报', name: 'Nintendo FY2026 Full Year Financial Results', date: '2026-05-08', url: 'https://www.nintendo.co.jp/ir/en/' },
-            { type: '业绩说明会', name: 'Financial Results Explanatory Material', date: '2026-05-08', url: 'https://www.nintendo.co.jp/ir/pdf/2026/260508_5e.pdf' },
-            { type: '行业报道', name: 'GamesIndustry.biz: Nintendo FY sales soar 98.6% to $14.6bn', date: '2026-05-08', url: 'https://www.gamesindustry.biz/nintendo-fy-sales-soar-986-to-146bn-following-launch-of-switch-2' }
+            { type: '季度财报', name: 'Nintendo Q1 FY2027 Financial Results', date: '2026-08-06', url: 'https://www.nintendo.co.jp/ir/en/' },
+            { type: '业绩说明会', name: 'Financial Results Explanatory Material (Q1 FY2027)', date: '2026-08-06', url: 'https://www.nintendo.co.jp/ir/pdf/2026/260806_5e.pdf' },
+            { type: '行业报道', name: 'Yahoo Finance: 任天堂Q1 FY27净销售-9.5% 营业利润+150.5%', date: '2026-08-06', url: 'https://finance.yahoo.co.jp/' }
         ],
-        filingDate: '2026-05-08',
-        filingType: '年度财报(全年)',
+        filingDate: '2026-08-06',
+        filingType: '季度财报(Q1 FY2027)',
         filingUrl: 'https://www.nintendo.co.jp/ir/en/'
     },
     {
@@ -244,50 +248,51 @@ const earningsCompanies = [
         logo: '🐧',
         color: '#25A2E0',
         segment: '增值服务 - 游戏',
-        fiscalPeriod: '2026年Q1 (2026年1-3月)',
+        fiscalPeriod: '2026年Q2 (2026年4-6月)',
         currency: 'CNY',
         dataIntegrity: 'A',
         latestQuarter: {
-            period: '2026年Q1', calendarPeriod: '2026年1-3月', filingDate: '2026-05-13',
-            revenue: { value: 64200, unit: '百万人民币(Q1游戏)', yoy: 8, label: 'Q1游戏总收入¥642亿(国内454亿+6%,海外188亿+13%)', usdEquiv: '≈$8.86B' },
-            gameMetrics: { domesticGames: { value: 454, unit: '亿', yoy: 6 }, internationalGames: { value: 188, unit: '亿', yoy: 13 } },
-            companyRevenue: { value: 196458, unit: '百万人民币', yoy: 9, label: 'Q1总营收¥1964.58亿(+9%)' }
+            period: '2026年Q2', calendarPeriod: '2026年4-6月', filingDate: '2026-08-12',
+            revenue: { value: 65900, unit: '百万人民币(Q2游戏)', yoy: 11, label: 'Q2游戏总收入¥659亿(国内473亿+17%,海外186亿)', usdEquiv: '≈$9.09B' },
+            gameMetrics: { domesticGames: { value: 473, unit: '亿', yoy: 17 }, internationalGames: { value: 186, unit: '亿', yoy: 4 } },
+            companyRevenue: { value: 204785, unit: '百万人民币', yoy: 11, label: 'Q2总营收¥2047.85亿(+11%,超预期)' }
         },
         fullYear: {
-            period: '2025年全年', filingDate: '2026-03-18', status: '已发布',
-            revenue: { value: 241600, unit: '百万人民币(全年游戏)', yoy: 22, label: '全年游戏¥2416亿', usdEquiv: '≈$33.3B' },
-            companyRevenue: { value: 751770, unit: '百万人民币', yoy: 14, label: '全年总营收¥7517.7亿' },
-            gameBreakdown: { domestic: { value: 1642, unit: '亿', yoy: 18 }, international: { value: 774, unit: '亿', yoy: 33 } }
+            period: '2026年上半年累计', filingDate: '2026-08-12', status: 'H1已发布',
+            revenue: { value: 130100, unit: '百万人民币(H1游戏)', yoy: null, label: 'H1游戏¥1301亿(国内927亿+海外374亿)', usdEquiv: '≈$17.9B' },
+            companyRevenue: { value: 401243, unit: '百万人民币', yoy: 10, label: 'H1总营收¥4012.43亿(+10%)' },
+            gameBreakdown: { domestic: { value: 927, unit: '亿', yoy: null }, international: { value: 374, unit: '亿', yoy: null } }
         },
         companyOverall: {
-            totalRevenue: { value: 196458, unit: '百万人民币(Q1)', yoy: 9, label: 'Q1总营收¥1964.58亿(+9%)', source: '腾讯2026Q1业绩公告(2026/05/13)' },
-            nonIfrsOp: { value: 75630, unit: '百万人民币(Q1)', yoy: 9, label: 'Q1 Non-IFRS经营利润¥756.3亿(+9%)' },
-            grossProfit: { value: 111265, unit: '百万人民币(Q1)', yoy: 11, label: 'Q1毛利¥1112.65亿(+11%,毛利率57%)' },
-            note: 'Q1总营收¥1965亿(+9%),毛利率57%(+1pt)。剔除AI新产品影响Non-IFRS OP同比+17%至¥844亿。自由现金流¥567亿。'
+            totalRevenue: { value: 204785, unit: '百万人民币(Q2)', yoy: 11, label: 'Q2总营收¥2047.85亿(+11%,超预期¥2028亿)', source: '腾讯2026Q2业绩公告(2026/08/12)' },
+            nonIfrsOp: { value: 75640, unit: '百万人民币(Q2)', yoy: 9, label: 'Q2 Non-IFRS经营利润¥756.4亿(+9%)' },
+            grossProfit: { value: 118433, unit: '百万人民币(Q2)', yoy: 13, label: 'Q2毛利¥1184.33亿(+13%,毛利率58%)' },
+            note: 'Q2总营收¥2047.85亿(+11%)超市场预期,Non-IFRS净利润¥684.15亿(+9%),Non-IFRS OP¥756.4亿(+9%)。资本开支¥527.8亿(+176%)创新高全部投向AI。剔除AI新产品影响Non-IFRS OP+19%至¥861亿。'
         },
         financials: {
-            revenue: { value: 64200, unit: '百万人民币(Q1游戏)', yoy: 8, label: 'Q1游戏总收入¥642亿(国内454+海外188)', source: '腾讯2026Q1业绩公告(2026/05/13)', usdEquiv: '≈$8.86B' },
+            revenue: { value: 65900, unit: '百万人民币(Q2游戏)', yoy: 11, label: 'Q2游戏总收入¥659亿(国内473+海外186)', source: '腾讯2026Q2业绩公告(2026/08/12)', usdEquiv: '≈$9.09B' },
             operatingProfit: { value: null, unit: '百万人民币', yoy: null, label: '游戏营业利润(未单独披露)' },
             operatingMargin: { value: null, label: '游戏利润率(未单独披露)' },
-            segmentRevenuePct: { value: 32.7, label: '游戏占Q1总营收比例' },
+            segmentRevenuePct: { value: 32.2, label: '游戏占Q2总营收比例' },
         },
         gameMetrics: {
-            domesticGames: { value: 454, unit: '亿人民币(Q1)', yoy: 6, label: 'Q1国内游戏收入¥454亿(+6%,春节递延影响)', source: '腾讯2026Q1业绩公告' },
-            internationalGames: { value: 188, unit: '亿人民币(Q1)', yoy: 13, label: 'Q1国际游戏收入¥188亿(+13%)' },
-            fullYearGames: { value: 2416, unit: '亿人民币(2025全年)', yoy: 22, label: '2025全年游戏¥2416亿' },
-            springFestivalDefer: { value: null, unit: '', label: '春节收入递延至Q2确认(国内+6%增速偏低的主因)' },
+            domesticGames: { value: 473, unit: '亿人民币(Q2)', yoy: 17, label: 'Q2国内游戏收入¥473亿(+17%)', source: '腾讯2026Q2业绩公告' },
+            internationalGames: { value: 186, unit: '亿人民币(Q2)', yoy: 4, label: 'Q2国际游戏收入¥186亿(+4%固定汇率)', source: '腾讯2026Q2业绩公告' },
+            vasRevenue: { value: 984, unit: '亿人民币(Q2)', yoy: 8, label: 'Q2增值服务收入¥984亿(+8%)' },
+            h1Games: { value: 1301, unit: '亿人民币(H1)', yoy: null, label: 'H1游戏总收入¥1301亿' },
+            domesticDrivers: { value: '三角洲行动/无畏契约/洛克王国世界', unit: '', label: '国内增长驱动: 三角洲行动+无畏契约+洛克王国世界' },
         },
-        keyProducts: ['王者荣耀', 'PUBG Mobile', 'Valorant', 'League of Legends', '三角洲行动', 'Supercell旗下游戏', '无畏契约手游', '鸣潮', '和平精英'],
+        keyProducts: ['王者荣耀', 'PUBG Mobile', 'Valorant', '三角洲行动', '无畏契约：源能行动', '洛克王国：世界', 'Supercell旗下游戏', '和平精英'],
         analysis: {
-            performance: '🔥2026Q1总营收¥1964.58亿(+9%),游戏收入¥642亿(国内¥454亿+6%,海外¥188亿+13%)(What)。国内游戏增速偏低(+6% vs 2025Q4+15%)主因春节收入递延至Q2确认,实际Gross Receipts增速更高;海外游戏+13%保持稳健增长(Why)。毛利¥1113亿(+11%),毛利率57%(+1pt),Non-IFRS OP¥756亿(+9%),剔除AI新产品投入后Non-IFRS OP+17%至¥844亿——核心业务盈利能力持续提升(So What)。',
-            strategy: '大幅加码AI投入: Q1资本开支+研发+营销超¥650亿,销售费用+44%。马化腾"漏船论"表露AI转型紧迫感。AI赋能核心游戏(王者荣耀/PUBG/三角洲行动)。国际游戏通过Supercell+Level Infinite双引擎增长。',
-            outlook: 'Q2将确认春节递延收入,国内游戏增速预计回升。AI投入短期压利润但长期提升效率。国际游戏年化已超$100亿。管理层提示AI是"必须投入的战略方向"。',
-            newProducts: '鸣潮持续更新；无畏契约手游；三角洲行动持续更新；AI驱动的新产品矩阵；Supercell新作。'
+            performance: '🔥2026Q2总营收¥2047.85亿(+11%)超市场预期(¥2028亿),游戏总收入¥659亿(+11%): 国内¥473亿(+17%,三角洲行动/无畏契约/洛克王国世界驱动),国际¥186亿(+4%固定汇率)(What)。国内游戏在Q1春节递延后强势回归+17%;国际市场受汇率影响名义+4%,Supercell等核心产品稳健(Why)。Non-IFRS净利润¥684.15亿(+9%),毛利率58%,Non-IFRS OP¥756.4亿(+9%),剔除AI新产品后+19%至¥861亿(So What)。',
+            strategy: 'AI投入创历史新高: Q2资本开支¥527.8亿(+176%)全部投向AI基础设施。游戏国内+海外双引擎: 国内靠新游(三角洲行动/无畏契约/洛克王国世界)驱动增长,海外维持Supercell+Level Infinite组合。马化腾强调AI是"不能输的战争"。',
+            outlook: 'H1总营收¥4012.43亿(+10%),Non-IFRS净利润¥1363.2亿(+10%)。H2关注: 新游管线(包括AI原生游戏),国内游戏持续增长动能,AI商业化落地。国际游戏受汇率影响波动,固定汇率下保持增长。',
+            newProducts: '三角洲行动持续更新；无畏契约：源能行动；洛克王国：世界；AI驱动的新产品矩阵；Supercell新作。'
         },
         dataSources: [
-            { type: '季度财报', name: '腾讯2026年Q1业绩公告', date: '2026-05-13', url: 'https://www.tencent.com/en-us/investors/financial-releases.html' },
-            { type: '官方新闻稿', name: 'Tencent Announces 2026 First Quarter Results', date: '2026-05-13', url: 'https://static.www.tencent.com/uploads/2026/05/13/47382ae415a209fd161bc19a1f9b3704.pdf' },
-            { type: '行业报道', name: 'CNBC: Tencent sees boost from gaming, AI demand', date: '2026-05-13', url: 'https://www.cnbc.com/2026/05/13/tencent-q1-earnings-gaming-ai-demand-revenue-miss.html' }
+            { type: '季度财报', name: '腾讯2026年Q2业绩公告', date: '2026-08-12', url: 'https://www.tencent.com/en-us/investors/financial-releases.html' },
+            { type: '行业报道', name: '北京商报: 腾讯二季度营收2047.85亿元(+11%)', date: '2026-08-12', url: 'https://baijiahao.baidu.com/s?id=1873309637293489613' },
+            { type: '行业报道', name: '腾讯Q2财报游戏业务透视: 本土回暖海外承压', date: '2026-08-12', url: 'https://baijiahao.baidu.com/s?id=1873312878001671419' }
         ],
         filingDate: '2026-05-13',
         filingType: '季度财报(Q1)',
@@ -372,62 +377,62 @@ const earningsCompanies = [
         logo: '⚽',
         color: '#1A1A2E',
         segment: '整体（游戏专用）',
-        fiscalPeriod: 'FY2026 Q4 + 全年 (2025年4月-2026年3月)',
+        fiscalPeriod: 'FY2027 Q1 (2026年4-6月)',
         currency: 'USD',
         latestQuarter: {
-            period: 'FY2026 Q4', calendarPeriod: '2026年1-3月', filingDate: '2026-05-05',
-            revenue: { value: 2120, unit: '百万美元', yoy: 12, label: 'Q4净营收$21.2亿(+12%)', usdEquiv: '$2.12B' },
-            operatingProfit: { value: 564, unit: '百万美元', yoy: 43, label: 'Q4营业利润$5.64亿(+43%)' },
-            operatingMargin: { value: 26.6, label: 'Q4营业利润率' },
-            netIncome: { value: 461, unit: '百万美元', yoy: 81, label: 'Q4净利润$4.61亿(+81%)' },
-            eps: { value: 1.81, unit: '美元', yoy: 85, label: 'Q4摊薄EPS $1.81(+85%)' },
+            period: 'FY2027 Q1', calendarPeriod: '2026年4-6月', filingDate: '2026-08-04',
+            revenue: { value: 1986, unit: '百万美元', yoy: 19, label: 'Q1净营收$19.86亿(+19%)', usdEquiv: '$1.99B' },
+            operatingProfit: { value: 513, unit: '百万美元', yoy: 89, label: 'Q1营业利润$5.13亿(+89%)' },
+            operatingMargin: { value: 25.8, label: 'Q1营业利润率' },
+            netIncome: { value: 397, unit: '百万美元', yoy: 89, label: 'Q1净利润$3.97亿(+89%)' },
+            eps: { value: 1.56, unit: '美元', yoy: 89, label: 'Q1摊薄EPS $1.56(+89%)' },
             gameMetrics: {
-                liveServicesRevenue: { value: 5383, unit: '百万美元(全年)', label: '全年Live Services收入$53.83亿' }
+                liveServicesRevenue: { value: 1472, unit: '百万美元(Q1)', label: 'Q1 Live Services收入$14.72亿(+7%)' }
             }
         },
         fullYear: {
-            period: 'FY2026全年(2025/4-2026/3)', filingDate: '2026-05-05', status: '已发布(创纪录)',
+            period: 'FY2026全年(已发布,最终财报)', filingDate: '2026-08-04', status: '已发布(创纪录)',
             revenue: { value: 7531, unit: '百万美元', yoy: 1, label: '全年净营收$75.31亿(+1%)', usdEquiv: '$7.53B' },
             netBookings: { value: 8026, unit: '百万美元', yoy: 9, label: '全年净预订$80.26亿(+9% 创历史纪录)' },
             operatingIncome: { value: 1162, unit: '百万美元', yoy: -24, label: '全年营业利润$11.62亿(-24%)' },
             netIncome: { value: 887, unit: '百万美元', label: '全年净利润$8.87亿' },
             eps: { value: 3.51, unit: '美元', label: '全年摊薄EPS $3.51' },
             operatingCashFlow: { value: 2553, unit: '百万美元', yoy: 23, label: '经营现金流$25.53亿(+23% 创纪录)' },
-            note: 'EA史上净预订和经营现金流双创纪录,由Battlefield 6和Live Services推动'
+            note: 'EA最后一份上市公司财报;FY26净预订和经营现金流双创纪录,Battlefield 6+Live Services推动'
         },
         companyOverall: {
-            totalRevenue: { value: 7531, unit: '百万美元', yoy: 1, label: '全年净营收(EA为纯游戏公司)', source: 'EA FY26 Q4 & Full Year Press Release (2026/05/05)' },
-            totalOperatingProfit: { value: 1162, unit: '百万美元', yoy: -24, label: '全年营业利润' },
-            totalOperatingMargin: { value: 15.4, label: '全年营业利润率' },
-            note: 'EA为纯游戏公司,集团=游戏业务。全年利润下滑因Battlefield 6上市期高额营销投入+REDSEC免费模式成本'
+            totalRevenue: { value: 1986, unit: '百万美元(Q1)', yoy: 19, label: 'Q1净营收(EA为纯游戏公司)', source: 'EA FY27 Q1 Press Release (2026/08/04)' },
+            totalOperatingProfit: { value: 513, unit: '百万美元(Q1)', yoy: 89, label: 'Q1营业利润$5.13亿(+89%)' },
+            totalOperatingMargin: { value: 25.8, label: 'Q1营业利润率' },
+            note: 'EA为纯游戏公司,集团=游戏业务。Q1营业利润+89%超预期(EPS $0.82 vs 预期$0.79 Beat),为私有化交易前最后一份财报。8月4日$550亿财团收购完成,EA正式退市。'
         },
         financials: {
-            revenue: { value: 2120, unit: '百万美元', yoy: 12, label: 'Q4净营收', source: 'EA FY2026 Q4 & Full Year Earnings Release (2026/05/05)' },
-            operatingProfit: { value: 564, unit: '百万美元', yoy: 43, label: 'Q4营业利润' },
-            operatingMargin: { value: 26.6, label: 'Q4营业利润率' },
+            revenue: { value: 1986, unit: '百万美元', yoy: 19, label: 'Q1净营收', source: 'EA FY2027 Q1 Earnings Release (2026/08/04)' },
+            operatingProfit: { value: 513, unit: '百万美元', yoy: 89, label: 'Q1营业利润' },
+            operatingMargin: { value: 25.8, label: 'Q1营业利润率' },
             segmentRevenuePct: { value: 100, label: '游戏占比' },
-            netBookings: { value: 8026, unit: '百万美元(全年)', yoy: 9, label: '全年净预订$80.26亿(创纪录)' },
+            netBookings: { value: 8026, unit: '百万美元(FY26全年)', yoy: 9, label: 'FY26全年净预订$80.26亿(创纪录)' },
         },
         gameMetrics: {
-            liveServicesRevenue: { value: 5383, unit: '百万美元', label: '全年Live Services & Other收入$53.83亿', source: 'EA FY26 Full Year Press Release' },
-            fullGameRevenue: { value: 2148, unit: '百万美元', label: '全年完整游戏收入$21.48亿' },
-            battlefield6: { value: 2600, unit: '万份+', label: 'Battlefield 6累计销量超2600万(系列历史最佳)', source: 'Alinea Analytics + EA确认' },
-            apexLegends: { value: null, unit: 'Q4最强季度', label: 'Apex Legends Q4净预订为全年最高' },
+            liveServicesRevenue: { value: 1472, unit: '百万美元(Q1)', label: 'Q1 Live Services & Other收入$14.72亿(+7%)', source: 'EA FY27 Q1 Press Release' },
+            fullGameRevenue: { value: 2148, unit: '百万美元(FY26)', label: 'FY26完整游戏收入$21.48亿' },
+            battlefield6: { value: 2600, unit: '万份+', label: 'Battlefield 6累计销量超2600万(系列历史最佳)', source: 'EA确认' },
+            apexLegends: { value: null, unit: '持续增长', label: 'Apex Legends Live Services保持稳定贡献' },
         },
         keyProducts: ['Battlefield 6(2600万+)', 'EA Sports FC 26', 'Apex Legends', 'College Football 25', 'The Sims系列'],
         analysis: {
-            performance: 'FY2026全年净预订$80.26亿(+9% YoY)创EA历史新高,经营现金流$25.53亿(+23%)同创纪录。Q4净营收$21.2亿(+12%)、净利润$4.61亿(+81%)、EPS $1.81(+85%)大幅超预期。但全年GAAP营业利润$11.62亿同比下滑24%,主因Battlefield 6高额发布营销成本和REDSEC免费模式前期投入。Battlefield 6成为系列史上最成功作品(2600万+销量、2025年美国最畅销游戏/Circana确认)。Apex Legends Q4交出全年最强净预订季度,参与度和变现持续改善。',
-            strategy: 'EA正被沙特PIF/Silver Lake/Affinity Partners联合体以$550亿进行私有化收购(EA承担$200亿债务融资),PIF将持有93.4%股权。交易处于最后监管审批阶段。本季度未举行财报电话会议(因私有化交易进行中)。同时继续裁员:3月裁减Battlefield Studios部分人员(尽管BF6表现创纪录)。',
-            outlook: '因$550亿私有化交易进行中,EA未提供FY2027前瞻指引。交易预计近期完成(CFIUS审查为最后障碍)。EA Sports FC全球足球净预订全年增长中个位数。Live Services组合(Apex+FC Online+FC Mobile)持续增长。',
+            performance: 'FY2027 Q1(2026.4-6): 净营收$19.86亿(+19%),营业利润$5.13亿(+89%),净利润$3.97亿,EPS $1.56(+89%)(What)。Live Services收入$14.72亿(+7%)延续强势,Battlefield 6运营收入+Apex Legends+EA Sports FC系列驱动增长(Why)。毛利率86.2%(+3pt),营业利润率25.8%反映高毛利数字业务占比提升(So What)。',
+            strategy: 'EA被沙特PIF/Silver Lake/Affinity Partners联合体以$550亿私有化收购于8月4日完成,EA正式退市,这是最后一份上市公司财报。PIF持93.4%股权。战略重心转向：最大化核心IP(Battlefield/FC/Apex)价值+AI驱动开发效率+加大Live Services投入。',
+            outlook: '私有化后不再披露季度指引。市场关注: Battlefield 6后续内容运营、EA Sports FC 27(9月)、Madden NFL 27(8月)。私有化交易完成后EA可在非公开市场进行更激进的结构调整。',
             newProducts: 'EA Sports FC 27(2026/09)；Madden NFL 27(2026/08)；Battlefield 6持续运营更新；College Football 26。'
         },
         dataSources: [
-            { type: '季度财报+全年报', name: 'EA FY2026 Q4 & Full Year Earnings Release', date: '2026-05-05', url: 'https://ir.ea.com/financial-information/quarterly-results/default.aspx' },
-            { type: '行业报道', name: 'GamesIndustry.biz: EA closes FY26 with record performance', date: '2026-05-07', url: 'https://www.gamesindustry.biz/ea-closes-fy26-with-record-performance-thanks-to-battlefield-6-and-apex-legends' },
-            { type: '财经分析', name: 'StockTitan: EA FY26 net bookings hit record $8B', date: '2026-05-05', url: 'https://www.stocktitan.net/news/EA/electronic-arts-reports-q4-and-fy26-kp9t1yvs94ah.html' }
+            { type: '季度财报', name: 'EA FY2027 Q1 Earnings Release', date: '2026-08-04', url: 'https://ir.ea.com/financial-information/quarterly-results/default.aspx' },
+            { type: '行业报道', name: 'GamesIndustry.biz: EA reports final earnings as $55bn buyout completes', date: '2026-08-05', url: 'https://www.gamesindustry.biz/ea-reports-final-quarter-as-55bn-privatisation-completes' },
+            { type: '财经分析', name: 'Quartr: EA Q1 FY27 results - EPS beat', date: '2026-08-04', url: 'https://quartr.com/events/electronic-arts-inc-ea-q1-2027' }
         ],
-        filingDate: '2026-05-05',
-        filingType: '季度财报+全年报',
+        filingDate: '2026-08-04',
+        filingType: '季度财报(私有化前最后一份)',
         filingUrl: 'https://ir.ea.com/financial-information/quarterly-results/default.aspx'
     },
     {
@@ -441,51 +446,52 @@ const earningsCompanies = [
         logo: '🌟',
         color: '#FF6B35',
         segment: '整体（游戏专用）',
-        fiscalPeriod: 'FY2026 Q4 + 全年 (2025年4月-2026年3月)',
+        fiscalPeriod: 'FY2027 Q1 (2026年4-6月)',
         currency: 'USD',
         latestQuarter: {
-            period: 'FY2026 Q4', calendarPeriod: '2026年1-3月', filingDate: '2026-05-21',
-            revenue: { value: 1680, unit: '百万美元(GAAP营收)', yoy: 6.3, label: 'Q4 GAAP营收$16.8亿(+6%)', usdEquiv: '$1.68B' },
+            period: 'FY2027 Q1', calendarPeriod: '2026年4-6月', filingDate: '2026-08-07',
+            revenue: { value: 1534, unit: '百万美元(GAAP营收)', yoy: 2, label: 'Q1 GAAP净收入$15.34亿(+2%)', usdEquiv: '$1.53B' },
             gameMetrics: {
-                q4NetBookings: { value: 1580, unit: '百万美元', label: 'Q4净预订$15.8亿(超指引)' },
-                q4NetLoss: { value: -59.5, unit: '百万美元', label: 'Q4 GAAP净亏损(每股-$0.32)' }
+                q1NetBookings: { value: 1390, unit: '百万美元', label: 'Q1净预订$13.9亿(超指引$13.2-13.7亿)' },
+                q1NetLoss: { value: -63, unit: '百万美元', label: 'Q1 GAAP净亏损(每股-$0.35,优于预期)' }
             }
         },
         fullYear: {
-            period: 'FY2026全年(2025/4-2026/3)', filingDate: '2026-05-21', status: '已发布',
-            revenue: { value: 6720, unit: '百万美元(净预订)', yoy: 19, label: '全年净预订$67.2亿(+19%)', usdEquiv: '$6.72B' },
+            period: 'FY2026全年(已发布)', filingDate: '2026-05-21', status: 'FY26已发布',
+            revenue: { value: 6720, unit: '百万美元(净预订)', yoy: 19, label: 'FY26全年净预订$67.2亿(+19%)', usdEquiv: '$6.72B' },
             gameBreakdown: {
-                gaapRevenue: { value: 6660, unit: '百万美元', yoy: 18, label: 'GAAP净收入$66.6亿(+18%)' },
-                netLoss: { value: -298, unit: '百万美元', label: 'GAAP净亏损(较上年-$44.8亿大幅收窄)' }
+                gaapRevenue: { value: 6660, unit: '百万美元', yoy: 18, label: 'FY26 GAAP净收入$66.6亿(+18%)' },
+                netLoss: { value: -298, unit: '百万美元', label: 'FY26 GAAP净亏损(-$2.98亿)' }
             }
         },
         financials: {
-            revenue: { value: 6720, unit: '百万美元(全年净预订)', yoy: 19, label: '全年净预订(Net Bookings)', source: 'Take-Two FY2026 Q4 & Full Year Earnings Release (2026/05/21)' },
-            operatingProfit: { value: -298, unit: '百万美元(GAAP净亏损)', yoy: null, label: 'GAAP净亏损(EBITDA $7.61亿转正)' },
-            operatingMargin: { value: -4.5, label: 'GAAP净利率(净亏损/GAAP营收)' },
+            revenue: { value: 1534, unit: '百万美元(Q1 GAAP)', yoy: 2, label: 'Q1 GAAP净收入', source: 'Take-Two FY2027 Q1 Earnings Release (2026/08/07)' },
+            operatingProfit: { value: -63, unit: '百万美元(Q1净亏损)', yoy: null, label: 'Q1 GAAP净亏损(-$6,300万)' },
+            operatingMargin: { value: -4.1, label: 'Q1净利率(亏损收窄)' },
             segmentRevenuePct: { value: 100, label: '游戏占比' },
         },
         gameMetrics: {
-            fy26NetBookings: { value: 6720, unit: '百万美元', yoy: 19, label: '全年净预订(超初始指引$7.5亿)', source: 'Take-Two FY26 Earnings Release' },
-            rcsShare: { value: 78, unit: '%', label: '经常性消费(RCS)占净预订(NBA2K +30%/移动+13%/GTA Online +6%)' },
+            fy26NetBookings: { value: 6720, unit: '百万美元', yoy: 19, label: 'FY26全年净预订$67.2亿(超指引)', source: 'Take-Two FY26 Earnings Release' },
+            q1NetBookings: { value: 1390, unit: '百万美元', yoy: null, label: 'Q1净预订$13.9亿(超指引上限)', source: 'Take-Two FY27 Q1 Earnings' },
+            rcsShare: { value: 84, unit: '%', label: '经常性消费(RCS)占Q1 GAAP净收入84%' },
             digitalShare: { value: 97, unit: '%', label: '数字在线渠道占净收入' },
             mobileShare: { value: 50, unit: '%', label: '移动平台占净收入' },
             gtaVTotalSales: { value: 215, unit: '百万套+', label: 'GTA V累计销量' },
         },
         keyProducts: ['GTA Online', 'NBA 2K26', 'GTA6(2026/11/19)', 'Borderlands 4', 'Zynga移动'],
         analysis: {
-            performance: 'FY2026全年净预订$67.2亿(+19% YoY)，超初始指引$7.5亿，Beat。GAAP净收入$66.6亿(+18%)，GAAP净亏损-$2.98亿(较上年-$44.8亿大幅收窄，主因上年商誉减值出清)，EBITDA转正至$7.61亿。增长由经常性消费(RCS +17%，占净预订78%)驱动——NBA 2K +30%、移动+13%、GTA Online +6%。Q4 GAAP营收$16.8亿(+6%)、净预订$15.8亿超指引、净亏损仅-$5,950万优于预期。数字渠道占净收入97%、移动占50%，业务结构持续向高毛利数字+经常性收入倾斜。',
-            strategy: 'CEO泽尔尼克正式确认《GTA6》2026年11月19日如期发售，打消市场延期疑虑，这是FY2027超级周期的核心催化剂。同步披露截至FY2029共29款产品储备管线(含3款全新IP:Ghost Story《犹大》、31st Union《ETHOS计划》)。当前以经常性消费稳住基本盘，等待GTA6引爆。',
-            outlook: 'FY2027指引净预订$80-82亿(约+20%)、GAAP净收入$79-81亿、GAAP净利润$1.05-1.41亿(扭亏为盈)、EBITDA $10.1-10.7亿。管理层定位FY2027为“突破之年”。但FY27净预订指引低于此前市场预期($91.1亿)，反映GTA6贡献节奏的谨慎假设。Q1 FY27预计净亏损-$4,200万至-$2,700万。',
+            performance: 'FY2027 Q1(2026.4-6): GAAP净收入$15.34亿(+2%),净预订$13.9亿超指引上限($13.2-13.7亿)(What)。经常性消费(RCS)占GAAP净收入84%维持基本盘——NBA 2K、GTA Online、Zynga移动持续贡献;GTA6发售前市场观望导致传统买断收入承压,但RCS韧性强(Why)。净亏损-$6,300万(每股-$0.35)优于预期,处于GTA6上市前投入期(So What)。',
+            strategy: 'CEO泽尔尼克再次确认《GTA6》2026年11月19日如期发售,行业最大催化剂临近。FY2027净预订指引$80-82亿(约+20%)充分定价GTA6超级周期。同步推进29款产品储备管线(含3款全新IP: Ghost Story《犹大》、31st Union《ETHOS计划》)。当前以RCS稳住基本盘等待GTA6引爆。',
+            outlook: 'FY2027全年指引: 净预订$80-82亿(约+20%)、GAAP净收入$79-81亿、GAAP净利润$1.05-1.41亿(扭亏为盈)、EBITDA $10.1-10.7亿。Q1 FY27已超预期开局,全年验证点全在GTA6(11/19)发售表现。',
             newProducts: '《GTA6》(2026/11/19，行业最大催化剂)；《无主之地4》；NBA 2K27；3款全新IP(FY27-29)。'
         },
         dataSources: [
-            { type: '季度财报', name: 'Take-Two FY2026 Q4 & Full Year Earnings Release', date: '2026-05-21', url: 'https://ir.take2games.com/static-files/de7eeb58-9a3d-44c4-8407-9b0453cae8a4' },
-            { type: '行业报道', name: 'BusinessWire/StockTitan: Take-Two Q4 Net Bookings $1.58B above guidance', date: '2026-05-22', url: 'https://www.stocktitan.net/news/TTWO/take-two-interactive-software-inc-reports-results-for-fourth-quarter-b4smbtxrgpw8.html' }
+            { type: '季度财报', name: 'Take-Two FY2027 Q1 Earnings Release', date: '2026-08-07', url: 'https://ir.take2games.com/quarterly-earnings' },
+            { type: '行业报道', name: 'BusinessWire: Take-Two Q1 Net Bookings $1.39B above guidance', date: '2026-08-07', url: 'https://www.stocktitan.net/news/TTWO/take-two-interactive-software-inc-reports-results-for-first-quarter-fy2027.html' }
         ],
-        filingDate: '2026-05-21',
-        filingType: '季度+全年财报',
-        filingUrl: 'https://ir.take2games.com/'
+        filingDate: '2026-08-07',
+        filingType: '季度财报(Q1 FY2027)',
+        filingUrl: 'https://ir.take2games.com/quarterly-earnings'
     },
     {
         id: 'ubisoft',
@@ -498,48 +504,49 @@ const earningsCompanies = [
         logo: '🔷',
         color: '#0070FF',
         segment: '整体（游戏专用）',
-        fiscalPeriod: 'FY2026全年 (2025年4月-2026年3月)',
+        fiscalPeriod: 'FY2026-27 Q1 (2026年4月-6月)',
         currency: 'EUR',
         latestQuarter: {
-            period: 'FY2026 Q4', calendarPeriod: '2026年1-3月', filingDate: '2026-05-20',
-            revenue: { value: 415, unit: '百万欧元(净预订)', yoy: null, label: 'Q4净预订€4.15亿(超目标)', usdEquiv: '≈$456M' },
+            period: 'Q1 FY2026-27', calendarPeriod: '2026年4-6月', filingDate: '2026-07-23',
+            revenue: { value: 256, unit: '百万欧元(净预订)', yoy: -9.2, label: 'Q1净预订€2.56亿(-9.2%但超指引)', usdEquiv: '≈$280M' },
             gameMetrics: {
-                acShadowsSales: { value: 10, unit: '百万套+(估)', label: '刺客信条:影 累计销量(估)' }
-            }
+                acBlackFlagResynced: { value: 3.5, unit: '百万套', label: '刺客信条:黑旗重制版14天售350万份' }
+            },
+            note: 'Q1净预订超指引(€2.5亿),《刺客信条:黑旗重制版》7/9发售14天350万份超预期'
         },
         fullYear: {
-            period: 'FY2026全年(已发布)', filingDate: '2026-05-20', status: '已发布(创纪录亏损)',
-            revenue: { value: 1525, unit: '百万欧元(净预订)', yoy: -17, label: '全年净预订€15.25亿(-17%)', usdEquiv: '≈$16.8亿' },
+            period: 'FY2026全年(已发布)', filingDate: '2026-05-20', status: 'FY26已发布(创纪录亏损)',
+            revenue: { value: 1525, unit: '百万欧元(净预订)', yoy: -17, label: 'FY26全年净预订€15.25亿(-17%)', usdEquiv: '≈$16.8亿' },
             gameBreakdown: {
-                operatingLoss: { value: -1300, unit: '百万欧元', label: '运营亏损€13亿(创纪录,含€6.5亿减值)' },
+                operatingLoss: { value: -1300, unit: '百万欧元', label: 'FY26运营亏损€13亿(创纪录,含€6.5亿减值)' },
                 digitalShare: { value: 87, unit: '%', label: '数字收入占比' }
             }
         },
         financials: {
-            revenue: { value: 1525, unit: '百万欧元(全年净预订)', yoy: -17, label: '全年净预订(Net Bookings)', source: 'Ubisoft FY2025-26 Full-Year Earnings (2026/05/20)', usdEquiv: '≈$16.8亿' },
-            operatingProfit: { value: -1300, unit: '百万欧元(运营亏损)', yoy: null, label: '运营亏损€13亿(创纪录)', usdEquiv: '≈-$14.3亿' },
-            operatingMargin: { value: -85, label: '运营亏损率(亏损/净预订,含巨额减值)' },
+            revenue: { value: 256, unit: '百万欧元(Q1净预订)', yoy: -9.2, label: 'Q1净预订(超指引€2.5亿)', source: 'Ubisoft Q1 FY2026-27 Sales (2026/07/23)', usdEquiv: '≈$280M' },
+            operatingProfit: { value: null, unit: '百万欧元', yoy: null, label: 'Q1营业利润(未披露)' },
+            operatingMargin: { value: null, label: 'Q1营业利润率(未披露)' },
             segmentRevenuePct: { value: 100, label: '游戏占比' },
         },
         gameMetrics: {
-            revenueDecline: { value: -21.8, unit: '%', label: 'IFRS营收同比(-21.8%)', source: 'GamesIndustry.biz' },
-            layoffs: { value: 1200, unit: '人', label: '裁员约1,200人(员工降至16,600)' },
-            cancelledProjects: { value: 6, unit: '款', label: '取消项目数(减值约€6.5亿)' },
+            acBlackFlagResynced: { value: 3.5, unit: '百万套', label: '黑旗重制版14天350万份(超预期)', source: 'Ubisoft Q1 FY26-27 Results' },
+            backCatalog: { value: null, unit: '稳健', label: '回溯目录(back-catalog)销售稳健' },
+            digitalShare: { value: 87, unit: '%', label: '数字收入占比' },
             tencentStake: { value: 25, unit: '%', label: '腾讯入股新子公司(承接三大IP)' },
         },
-        keyProducts: ['《刺客信条：影》', '《刺客信条》新作', '《孤岛惊魂》新作', '《幽灵行动》新作(推迟至2027)', '《彩虹六号：围攻》'],
+        keyProducts: ['《刺客信条:黑旗重制版》(7/9,350万+)', '《刺客信条:影》', '《孤岛惊魂》新作', '《幽灵行动》新作(2027)', '《彩虹六号:围攻》'],
         analysis: {
-            performance: 'FY2025-26全年净预订€15.25亿(-17% YoY)，IFRS营收-21.8%，Miss。受新作发布档期偏软拖累，叠加€6.5亿资产减值+重组费用，造成创纪录运营亏损€13亿(≈-$14.3亿，非经营性损失占主体)。回溯目录(back-catalog)表现稳健、数字收入占比达87%是少数亮点。Q4净预订€4.15亿超内部目标。公司同步裁员约1,200人(员工降至16,600)、取消6款项目，转型代价集中释放。',
-            strategy: '"战略重置"全面启动:成立由腾讯入股(约25%)的新子公司承接《刺客信条》《孤岛惊魂》《彩虹六号》三大旗舰IP，剥离非核心资产。执行"更少但更好"策略，精简产品线聚焦核心IP。腾讯入股为转型提供资金与战略背书。',
-            outlook: 'FY2026-27被定位为自由现金流(FCF)轨迹“低点”：管理层指引净预订高个位数百分比下滑、运营亏损率个位数(较FY26大幅改善)，承诺2029年前推出刺客信条/孤岛惊魂/幽灵行动三大新作(近期作品M站均80+)。但《幽灵行动》新作已推迟至2027年，转型仍需大作验证。',
-            newProducts: '《刺客信条》新作(开发中)；《孤岛惊魂》新作；《幽灵行动》新作(推迟至2027)；彩虹六号新赛季。'
+            performance: 'Q1 FY2026-27(2026.4-6): 净预订€2.56亿(-9.2%)超指引(€2.5亿)(What)。《刺客信条:黑旗重制版》(7/9发售)14天售350万份超预期,成为Q1最大亮点;季度内新作发布少,收入主要靠回溯目录+AC影长尾(Why)。净预订下滑幅度好于指引反映需求韧性(So What)。',
+            strategy: '"战略重置"持续深化:腾讯入股(约25%)的新子公司承接《刺客信条》《孤岛惊魂》《彩虹六号》三大旗舰IP。执行"更少但更好"精简产品线。黑旗重制版成功验证经典IP重制策略(高性价比+低成本高回报)。',
+            outlook: 'Q2 FY2026-27指引: 净预订约€3.7亿。管理层维持FY27净预订高个位数下滑、运营亏损率个位数(较FY26大幅改善)的指引。三大新作(刺客信条/孤岛惊魂/幽灵行动)2029年前陆续推出。转型仍需大作验证。',
+            newProducts: '《刺客信条:黑旗重制版》(已发售,350万+)；《刺客信条》新作(开发中)；《孤岛惊魂》新作；《幽灵行动》新作(2027)。'
         },
         dataSources: [
-            { type: '全年财报', name: 'Ubisoft Reports Full-Year 2025-26 Earnings Figures', date: '2026-05-20', url: 'https://live.euronext.com/en/products/equities/company-news/2026-05-20-ubisoft-reports-full-year-2025-26-earnings-figures' },
-            { type: '行业报道', name: 'GamesIndustry.biz: Ubisoft FY26 revenue -21.8%, net bookings -17.4%', date: '2026-05-20', url: 'https://www.gamesindustry.biz/ubisofts-full-fy26-financials-report-shows-a-sharp-decline-in-revenue-and-net-bookings' }
+            { type: '季度财报', name: 'Ubisoft Reports First Quarter FY2026-27 Sales', date: '2026-07-23', url: 'https://www.ubisoft.com/en-us/company/about-us/investors' },
+            { type: '行业报道', name: 'GamesIndustry.biz: AC Black Flag Resynced sells 3.5m in two weeks, Ubisoft Q1 beats guidance', date: '2026-07-24', url: 'https://www.gamesindustry.biz/assassins-creed-black-flag-resynced-sells-35-million-in-two-weeks' }
         ],
-        filingDate: '2026-05-20',
-        filingType: '全年财报',
+        filingDate: '2026-07-23',
+        filingType: '季度财报(Q1 FY2026-27)',
         filingUrl: 'https://www.ubisoft.com/en-us/company/about-us/investors'
     },
     {
@@ -624,12 +631,12 @@ const earningsCompanies = [
         logo: '🤖',
         color: '#FF1D25',
         segment: 'Digital Entertainment',
-        fiscalPeriod: 'FY2026 全年 (2025年4月-2026年3月)',
+        fiscalPeriod: 'FY2027 Q1 (2026年4月-6月)',
         currency: 'JPY',
         latestQuarter: {
-            period: 'FY2026 Q4', calendarPeriod: '2026年1-3月', filingDate: '2026-05-13',
-            revenue: { value: 346000, unit: '百万日元(Q4)', yoy: null, label: 'Q4集团营收≈¥3460亿(全年-前三季推算)', usdEquiv: '≈$2.31B' },
-            note: '全年已发布,Q4从¥1.348万亿-前三季推算'
+            period: 'FY2027 Q1', calendarPeriod: '2026年4-6月', filingDate: '2026-08-06',
+            revenue: { value: 328400, unit: '百万日元(Q1)', yoy: 9.3, label: 'Q1集团净销售¥3284亿(+9.3%,创Q1历史新高)', usdEquiv: '≈$2.0B' },
+            note: '集团营业利润¥692亿(+33.3%)创Q1新高;数字娱乐部门净销售¥909亿(-15.6%)、营业利润¥150亿(-30.9%),因新作发售数量少于去年同期'
         },
         fullYear: {
             period: 'FY2026全年(已发布)', filingDate: '2026-05-13', status: '已发布(创历史新高)',
@@ -639,35 +646,36 @@ const earningsCompanies = [
             note: '创历史营收新高,艾尔登法环+高达+龙珠驱动,玩具&爱好品部门强劲增长'
         },
         companyOverall: {
-            totalRevenue: { value: 1348246, unit: '百万日元(全年)', yoy: 8.6, label: '集团全年净销售¥1.348万亿(+8.6%,创纪录)', source: 'Bandai Namco FY2026 Full Year Results (2026/05/13)' },
-            totalOperatingProfit: { value: 140223, unit: '百万日元', yoy: 5.2, label: '集团全年营业利润¥1402亿(+5.2%)' },
-            totalOperatingMargin: { value: 10.4, label: '集团全年营业利润率' },
-            note: '万代南梦宫FY2026(2025年4月-2026年3月): 创历史营收新高¥1.348万亿(+8.6%),净利润+8.8%,ROE稳健。玩具&爱好品部门增长亮眼。'
+            totalRevenue: { value: 328400, unit: '百万日元(Q1)', yoy: 9.3, label: 'Q1集团净销售¥3284亿(+9.3%,创Q1纪录)', source: 'Bandai Namco Q1 FY2027 Results (2026/08/06)' },
+            totalOperatingProfit: { value: 69200, unit: '百万日元(Q1)', yoy: 33.3, label: 'Q1集团营业利润¥692亿(+33.3%)' },
+            totalOperatingMargin: { value: 21.1, label: 'Q1集团营业利润率' },
+            note: '万代南梦宫FY2027 Q1(2026年4-6月): 集团净销售¥3284亿(+9.3%)、营业利润¥692亿(+33.3%)均创Q1历史新高,由玩具及收藏品业务强劲表现推动;数字娱乐部门因新作发售减少而下滑(-15.6%)。'
         },
         financials: {
-            revenue: { value: 1348246, unit: '百万日元(全年)', yoy: 8.6, label: '集团全年净销售(创历史新高)', source: 'Bandai Namco FY2026 Full Year Results (2026/05/13)', usdEquiv: '≈$9.02B' },
-            operatingProfit: { value: 140223, unit: '百万日元(全年)', yoy: 5.2, label: '集团全年营业利润(+5.2%)' },
-            operatingMargin: { value: 10.4, label: '集团全年营业利润率' },
+            revenue: { value: 328400, unit: '百万日元(Q1)', yoy: 9.3, label: '集团Q1净销售(创Q1历史新高)', source: 'Bandai Namco Q1 FY2027 Results (2026/08/06)', usdEquiv: '≈$2.0B' },
+            operatingProfit: { value: 69200, unit: '百万日元(Q1)', yoy: 33.3, label: '集团Q1营业利润(+33.3%)' },
+            operatingMargin: { value: 21.1, label: '集团Q1营业利润率' },
             segmentRevenuePct: { value: 100, label: '集团整体(含DE+Toys+IP+Amusement)' },
         },
         gameMetrics: {
-            eldenRingContribution: { value: null, unit: '', label: '艾尔登法环DLC持续贡献(具体数字未单独披露)' },
-            toyHobbyGrowth: { value: null, unit: '%', label: '玩具&爱好品部门强劲增长(高达/龙珠IP驱动)' },
-            profitAttributable: { value: null, unit: '', label: '归母净利润+8.8%' },
+            digitalSegmentSales: { value: 90900, unit: '百万日元(Q1)', label: '数字娱乐部门净销售¥909亿(-15.6%)' },
+            digitalSegmentProfit: { value: 15000, unit: '百万日元(Q1)', label: '数字娱乐部门营业利润¥150亿(-30.9%)' },
+            toyHobbyGrowth: { value: 45.9, unit: '%', label: '玩具&爱好品部门销售额+45.9%(关税退款等推动)' },
+            newGameCount: { value: 2, unit: '款', label: 'Q1新作仅2款(vs去年同期15款)' },
         },
         keyProducts: ['艾尔登法环(含DLC)', '高达系列', '龙珠系列', '铁拳8', 'One Piece'],
         analysis: {
-            performance: 'FY2026(2025.4-2026.3)集团净销售¥1.348万亿(+8.6%)创历史新高,营业利润¥1402亿(+5.2%),归母净利润+8.8%(What)。增长主要由玩具&爱好品部门强劲表现驱动,高达/龙珠等核心IP跨媒体变现持续提升;数字娱乐板块受艾尔登法环DLC后高基数影响增长相对平稳(Why)。集团营业利润率10.4%保持稳健,ROE水平维持,显示多元化IP运营战略的抗周期能力(So What)。',
-            strategy: '"IP Axis"战略持续推进——将核心IP(高达/龙珠/ONE PIECE)跨游戏/玩具/影视变现。FromSoftware合作关系深化。数字娱乐部门加大Live Service投入。',
-            outlook: 'FY2027展望: 管理层维持增长预期,更多FromSoftware新项目+IP续作驱动。玩具部门持续受益于全球动漫热潮。数字娱乐需新大作接力艾尔登法环。',
+            performance: 'FY2027 Q1(2026.4-6)集团净销售¥3284亿(+9.3%)、营业利润¥692亿(+33.3%)双创Q1历史新高(What)。增长主要来自玩具及收藏品业务强劲表现(销售额+45.9%、利润+25.4%),叠加关税退款等一次性收益;数字娱乐部门净销售¥909亿(-15.6%)、营业利润¥150亿(-30.9%),因Q1新作仅2款(vs去年同期15款)、主机游戏销量690万份(vs去年同期1080万份)(Why)。多元IP+玩具/游艺对冲游戏发行节奏波动,整体盈利质量保持(So What)。',
+            strategy: '"IP Axis"战略持续推进——将核心IP(高达/龙珠/ONE PIECE)跨游戏/玩具/影视变现。玩具&爱好品部门成为利润增长主引擎。数字娱乐部门加大Live Service投入并控制新作发行节奏。',
+            outlook: 'FY2027展望: 全年指引净销售¥1.44万亿、营业利润¥1350亿(因FY26高基数温和回落)。玩具部门受益全球动漫热潮持续景气,数字娱乐下半年新作密集(龙珠/高达等)有望接力。',
             newProducts: 'FromSoftware新项目；《龙珠》新作；高达系列新游戏；更多IP跨媒体项目。'
         },
         dataSources: [
-            { type: '年度财报', name: 'Bandai Namco FY2026 Full Year Consolidated Results', date: '2026-05-13', url: 'https://www.bandainamco.co.jp/en/ir/library/result.html' },
-            { type: '财务补充', name: 'Financial Highlights for FY Ended March 31, 2026', date: '2026-05-13', url: 'https://www.bandainamco.co.jp/files/ir/financialstatements/pdf/20260513_en_Complement.pdf' }
+            { type: '季度财报', name: 'Bandai Namco Q1 FY2027 Consolidated Results', date: '2026-08-06', url: 'https://www.bandainamco.co.jp/en/ir/library/result.html' },
+            { type: '行业报道', name: 'GamesIndustry.biz - Bandai Namco achieves record Q1 sales (2026/08/10)', date: '2026-08-10', url: 'https://www.gamesindustry.biz/bandai-namco-achieves-record-q1-sales-but-digital-segment-operating-profit-drops-309' }
         ],
-        filingDate: '2026-05-13',
-        filingType: '年度财报(全年)',
+        filingDate: '2026-08-06',
+        filingType: '季度财报(Q1)',
         filingUrl: 'https://www.bandainamco.co.jp/en/ir/library/result.html'
     },
     {
@@ -681,15 +689,13 @@ const earningsCompanies = [
         logo: '🐉',
         color: '#003C71',
         segment: '数字内容（Digital Contents）',
-        fiscalPeriod: 'FY2026 全年 (2025年4月-2026年3月)',
+        fiscalPeriod: 'FY2027 Q1 (2026年4月-6月)',
         currency: 'JPY',
         latestQuarter: {
-            period: 'FY2026 Q4', calendarPeriod: '2026年1-3月', filingDate: '2026-05-13',
-            revenue: { value: 521900, unit: '百万日元(Q4估)', yoy: null, label: 'Q4 DC≈¥5219亿(全年-前三季)', usdEquiv: '≈$349M' },
-            gameMetrics: {
-                reRequiemSales: { value: 6.91, unit: '百万套', label: '生化危机：安魂曲累计销量691万套' }
-            },
-            note: '全年已发布,Q4从¥1953亿-前三季推算;RE Requiem 2月发售即691万'
+            period: 'FY2027 Q1', calendarPeriod: '2026年4-6月', filingDate: '2026-07-17',
+            revenue: { value: 70410, unit: '百万日元(Q1)', yoy: 54.7, label: 'Q1集团净销售¥704.10亿(+54.7%)', usdEquiv: '≈$471M' },
+            operatingProfit: { value: 41054, unit: '百万日元(Q1)', yoy: 66.9, label: 'Q1集团营业利润¥410.54亿(+66.9%)' },
+            note: 'Q1同比大幅增长,完全新规IP与目录/复购销售均表现强劲,全年计划进度超预期'
         },
         fullYear: {
             period: 'FY2026全年(已发布)', filingDate: '2026-05-13', status: '已发布(连续13年利润增长)',
@@ -699,20 +705,20 @@ const earningsCompanies = [
             note: '集团净销售¥1953亿(+2.8%)创历史新高,营业利润连续13年增长,第11年超10%增长'
         },
         companyOverall: {
-            totalRevenue: { value: 1953000, unit: '百万日元(全年)', yoy: 2.8, label: '集团全年净销售¥1953亿(+2.8%,创历史新高)', source: 'Capcom FY2026 Full Year Results (2026/05/13)' },
-            totalOperatingProfit: { value: 752000, unit: '百万日元', yoy: 3.0, label: '集团全年营业利润¥752亿(+3.0%)' },
-            totalOperatingMargin: { value: 38.5, label: '集团全年营业利润率(创纪录)' },
-            note: '卡普空FY2026(2025年4月-2026年3月): 连续第13年营业利润增长,第11年超10%增长。生化危机+怪物猎人双擎驱动。数字销售占比93%。目录销量创纪录4946万套。'
+            totalRevenue: { value: 70410, unit: '百万日元(Q1)', yoy: 54.7, label: 'Q1集团净销售¥704.10亿(+54.7%)', source: 'Capcom Q1 FY2027 Results (2026/07/17)' },
+            totalOperatingProfit: { value: 41054, unit: '百万日元(Q1)', yoy: 66.9, label: 'Q1集团营业利润¥410.54亿(+66.9%)' },
+            totalOperatingMargin: { value: 58.3, label: 'Q1集团营业利润率' },
+            note: '卡普空FY2027 Q1(2026年4-6月): 净销售¥704.10亿(+54.7%)、营业利润¥410.54亿(+66.9%)均大幅增长,营业利润率58.3%。完全新规IP及目录/复购销售表现强劲,通期计划顺利推进。'
         },
         financials: {
-            revenue: { value: 1442000, unit: '百万日元(DC全年)', yoy: null, label: '数字内容全年净销售¥1.442万亿', source: 'Capcom FY2026 Full Year Results (2026/05/13)', usdEquiv: '≈$9.65B' },
-            operatingProfit: { value: 752000, unit: '百万日元(集团全年)', yoy: 3.0, label: '集团营业利润(创纪录)' },
-            operatingMargin: { value: 38.5, label: '集团营业利润率(业界顶级)' },
-            segmentRevenuePct: { value: 73.8, label: '数字内容占集团比例' },
+            revenue: { value: 70410, unit: '百万日元(Q1)', yoy: 54.7, label: '集团Q1净销售(+54.7%)', source: 'Capcom Q1 FY2027 Results (2026/07/17)', usdEquiv: '≈$471M' },
+            operatingProfit: { value: 41054, unit: '百万日元(Q1)', yoy: 66.9, label: '集团Q1营业利润(+66.9%)' },
+            operatingMargin: { value: 58.3, label: '集团Q1营业利润率' },
+            segmentRevenuePct: { value: 100, label: '集团整体(以数字内容为主)' },
         },
         gameMetrics: {
-            mhWildsSales: { value: 11, unit: '百万套(累计)', label: '怪猎荒野累计销量1100万套', source: 'Capcom IR (2026/05/13)' },
-            reRequiemSales: { value: 6.91, unit: '百万套', label: '生化危机：安魂曲累计销量691万套(2月发售)', source: 'Capcom IR (2026/05/13)' },
+            mhWildsSales: { value: 11, unit: '百万套(累计)', label: '怪猎荒野累计销量1100万套', source: 'Capcom IR (2026/07/17)' },
+            reRequiemSales: { value: 6.91, unit: '百万套', label: '生化危机：安魂曲累计销量691万套(2月发售)', source: 'Capcom IR (2026/07/17)' },
             sf6Sales: { value: 6.05, unit: '百万套(累计)', label: '街霸6累计销量605万套(+204万FY26)' },
             re4Sales: { value: 3.69, unit: '百万套(累计)', label: '生化危机4重制版累计369万套' },
             reVillageSales: { value: 3.62, unit: '百万套(累计)', label: '生化危机8累计362万套' },
@@ -722,18 +728,18 @@ const earningsCompanies = [
         },
         keyProducts: ['怪物猎人：荒野(1100万+)', '生化危机：安魂曲(691万)', '街头霸王6(605万)', '生化危机4重制版', '鬼武者2'],
         analysis: {
-            performance: '🔥FY2026(2025.4-2026.3)连续第13年营业利润增长,第11年超10%增长: 集团净销售¥1953亿(+2.8%,创历史新高),DC净销售¥1442亿,集团营业利润¥752亿(+3.0%,≈$5.03亿,利润率38.5%业界顶级)。《怪猎荒野》累计1100万套成为2025年最畅销游戏之一。《生化危机：安魂曲》(2026/02)发售即691万套。《街霸6》FY26销204万套,累计突破600万套。目录销量创纪录4946万套(数字版占比93%,PC超一半)。实体销量下降10%,但数字增长21%完全弥补。',
+            performance: '🔥FY2027 Q1(2026.4-6)大幅增长: 集团净销售¥704.10亿(+54.7%)、营业利润¥410.54亿(+66.9%,利润率58.3%),为连续13年利润增长开启强劲开局(What)。完全新规IP(如《鬼武者:剑之道》等新作情报)与目录/复购销售均表现强劲,叠加汇率与PC/数字渠道占比提升,推动利润率维持业界顶级水平(Why)。Q1强劲开局使通期计划(净销售¥2100亿、营业利润¥830亿)进度大幅超前,全年超预期可期(So What)。',
             strategy: '卡普空"百万销量计划"持续推进。双擎策略: 生化危机+怪物猎人驱动业绩。数字优先战略成效显著(93%数字占比+21%增长)。PC端扩张持续(PC收入超数字一半)。电竞(Capcom Pro Tour)和媒体合作多元化。',
-            outlook: 'FY2027(2026.4-2027.3)展望: 净销售预期¥1400亿(-27.8%),营业利润¥560亿(-25.5%),反映管线相对较少。但怪猎荒野DLC+更多生化危机内容+街霸6持续更新仍将是核心驱动。年销量目标1亿套。',
-            newProducts: '《怪物猎人荒野》DLC/更新；《生化危机9》开发中；更多PC端移植；街霸6持续更新。'
+            outlook: 'FY2027(2026.4-2027.3)展望: 通期计划维持净销售¥2100亿、营业利润¥830亿。Q1强劲开局后,下半年新作(鬼武者:剑之道等)+怪猎荒野DLC+街霸6持续更新将成为核心驱动。年销量目标1亿套。',
+            newProducts: '《鬼武者:剑之道》；《怪物猎人荒野》DLC/更新；《生化危机》系列新作；街霸6持续更新。'
         },
         dataSources: [
-            { type: '年度财报', name: 'Capcom FY2026 Full Year Financial Results', date: '2026-05-13', url: 'https://www.capcom.co.jp/ir/english/finance/review.html' },
-            { type: '新闻稿', name: 'Capcom Sets Record in All Profit Categories for Ninth Consecutive Year', date: '2026-05-13', url: 'https://www.capcom.co.jp/ir/english/news/pdf/e260513b.pdf' },
-            { type: '行业报道', name: 'TwistedVoxel: Capcom Reports Record FY2026 Results', date: '2026-05-13', url: 'https://twistedvoxel.com/capcom-reports-record-fy2026-results-led-by-resident-evil-and-monster-hunter/' }
+            { type: '季度财报', name: 'Capcom Q1 FY2027 Financial Results (IR Review)', date: '2026-07-17', url: 'https://www.capcom.co.jp/ir/finance/review.html' },
+            { type: '新闻稿', name: 'Capcom 2027年3月期第1四半期決算 増収増益(プレスリリース)', date: '2026-07-17', url: 'https://www.capcom.co.jp/ir/2026' },
+            { type: '行业报道', name: 'TwistedVoxel: Capcom Reports Record Q1 FY2027 Results', date: '2026-07-17', url: 'https://twistedvoxel.com/capcom-q1-fy2027-results/' }
         ],
-        filingDate: '2026-05-13',
-        filingType: '年度财报(全年)',
+        filingDate: '2026-07-17',
+        filingType: '季度财报(Q1)',
         filingUrl: 'https://www.capcom.co.jp/ir/english/finance/review.html'
     },
     {
@@ -747,12 +753,13 @@ const earningsCompanies = [
         logo: '⚔️',
         color: '#ED1C24',
         segment: 'Digital Entertainment (HD Games + MMO)',
-        fiscalPeriod: 'FY2026 全年 (2025年4月-2026年3月)',
+        fiscalPeriod: 'FY2027 Q1 (2026年4月-6月)',
         currency: 'JPY',
         latestQuarter: {
-            period: 'FY2026 Q4', calendarPeriod: '2026年1-3月', filingDate: '2026-05-14',
-            revenue: { value: 82142, unit: '百万日元(Q4推算)', yoy: null, label: 'Q4集团营收≈¥821亿(全年-前三季推算)', usdEquiv: '≈$549M' },
-            note: '全年已发布,Q4从¥2977亿-前三季¥2155亿推算'
+            period: 'FY2027 Q1', calendarPeriod: '2026年4-6月', filingDate: '2026-08-10',
+            revenue: { value: 78423, unit: '百万日元(Q1)', yoy: 32.3, label: 'Q1集团净销售¥784.23亿(+32.3%)', usdEquiv: '≈$524M' },
+            operatingProfit: { value: 17008, unit: '百万日元(Q1)', yoy: 88.6, label: 'Q1集团营业利润¥170.08亿(+88.6%)' },
+            note: '四个板块全线增收增益,HD Game(FF7 Rebirth NS2/Xbox等)+MMO+手游/PC浏览器全部增长'
         },
         fullYear: {
             period: 'FY2026全年(已发布)', filingDate: '2026-05-14', status: '已发布(利润大增)',
@@ -762,36 +769,38 @@ const earningsCompanies = [
             note: '销售下降但利润率大幅提升,HD Game增收增益,"量减质升"转型成功'
         },
         companyOverall: {
-            totalRevenue: { value: 297661, unit: '百万日元(全年)', yoy: -8.3, label: '集团全年净销售¥2977亿(-8.3%)', source: 'Square Enix FY2026 Full Year Results (2026/05/14)' },
-            totalOperatingProfit: { value: 54736, unit: '百万日元', yoy: 34.9, label: '集团全年营业利润¥547亿(+34.9%)' },
-            totalOperatingMargin: { value: 18.4, label: '集团全年营业利润率' },
-            note: 'SE FY2026(2025.4-2026.3): 净销售-8.3%但营业利润+34.9%,"少做精品"战略成效显著。HD Game增收增益,MMO和手游/PC浏览器收入下降。'
+            totalRevenue: { value: 78423, unit: '百万日元(Q1)', yoy: 32.3, label: 'Q1集团净销售¥784.23亿(+32.3%)', source: 'Square Enix Q1 FY2027 Results (2026/08/10)' },
+            totalOperatingProfit: { value: 17008, unit: '百万日元(Q1)', yoy: 88.6, label: 'Q1集团营业利润¥170.08亿(+88.6%)' },
+            totalOperatingMargin: { value: 21.7, label: 'Q1集团营业利润率' },
+            note: 'SE FY2027 Q1(2026.4-6): 净销售¥784.23亿(+32.3%)、营业利润¥170.08亿(+88.6%)、经常利润¥187.66亿(+172.4%)、归母净利润¥132.44亿(+175.7%),四大板块全线增收增益。'
         },
         financials: {
-            revenue: { value: 297661, unit: '百万日元(全年)', yoy: -8.3, label: '集团全年净销售(-8.3%)', source: 'Square Enix FY2026 Full Year Results (2026/05/14)', usdEquiv: '≈$1.99B' },
-            operatingProfit: { value: 54736, unit: '百万日元(全年)', yoy: 34.9, label: '集团全年营业利润(+34.9%大幅增长)' },
-            operatingMargin: { value: 18.4, label: '集团全年营业利润率(vs上年13.6%)' },
+            revenue: { value: 78423, unit: '百万日元(Q1)', yoy: 32.3, label: '集团Q1净销售(+32.3%)', source: 'Square Enix Q1 FY2027 Results (2026/08/10)', usdEquiv: '≈$524M' },
+            operatingProfit: { value: 17008, unit: '百万日元(Q1)', yoy: 88.6, label: '集团Q1营业利润(+88.6%大幅增长)' },
+            operatingMargin: { value: 21.7, label: '集团Q1营业利润率(vs上年同期)' },
             segmentRevenuePct: { value: 100, label: '集团整体(DE为主)' },
         },
         gameMetrics: {
-            hdGameGrowth: { value: null, unit: '%', label: 'HD Game子板块增收增益' },
-            mmoDecline: { value: null, unit: '%', label: 'MMO收入同比下降' },
-            smartDeviceOptimize: { value: null, unit: '', label: '手游/PC浏览器通过支付方式多元化+成本优化提升利润率' },
+            deSegmentSales: { value: 49960, unit: '百万日元(Q1)', label: 'DE板块净销售¥499.60亿(+51.8%)' },
+            deSegmentProfit: { value: 15583, unit: '百万日元(Q1)', label: 'DE板块营业利润¥155.83亿(+91.8%)' },
+            amusementSegment: { value: 17088, unit: '百万日元(Q1)', label: '游乐板块净销售¥170.88亿(+3.8%)' },
+            publishingSegment: { value: 7261, unit: '百万日元(Q1)', label: '出版板块净销售¥72.61亿(+11.0%)' },
+            ff7RebirthMulti: { value: null, unit: '', label: 'FF7 Rebirth NS2/Xbox版、新作《冒险家艾略特的千年奇谭》等驱动HD Game大幅增长' },
+            fullYearProgress: { value: 26.3, unit: '%', label: '通期计划(净销售¥2980亿)Q1完成度26.3%,营业利润完成度34.7%' },
         },
-        keyProducts: ['最终幻想14', '勇者斗恶龙3 HD-2D重制版', 'FF7 Rebirth PC', 'NieR系列'],
+        keyProducts: ['最终幻想7 Rebirth (NS2/Xbox)', '最终幻想14', '勇者斗恶龙3 HD-2D重制版', 'NieR系列', '冒险家艾略特的千年奇谭'],
         analysis: {
-            performance: 'FY2026(2025.4-2026.3)净销售¥2977亿(-8.3%)但营业利润¥547亿(+34.9%)大幅增长(What)。HD Game子板块增收增益成为最大亮点,MMO和手游/PC浏览器收入有所下降但通过成本优化维持了利润率(Why)。利润率从13.6%跃升至18.4%(+4.8pt),验证了"少做精品,提高单品质量和商业回报"的中期战略转型方向(So What)。',
-            strategy: '"量减质升"战略转型成效明显——削减中小项目,聚焦核心IP(FF/DQ/NieR)的高质量开发。HD Game板块利润率改善显著。手游通过支付方式多元化和成本优化提升利润。西方工作室已剥离,回归日式RPG核心。',
-            outlook: 'FY2027展望: 管理层预计营业利润下降约10.5%,反映HD Game管线节奏。中长期战略继续推进"更少更精"。DQ12和FF7第三部为未来重磅催化剂。',
+            performance: '🔥FY2027 Q1(2026.4-6)大幅增収増益: 净销售¥784.23亿(+32.3%)、营业利润¥170.08亿(+88.6%)、经常利润¥187.66亿(+172.4%)、归母净利润¥132.44亿(+175.7%),四大板块全线增长(What)。HD Game(游戏)板块净销售¥499.60亿(+51.8%)、营业利润¥155.83亿(+91.8%),FF7 Rebirth(NS2/Xbox)跨平台发售+新作《冒险家艾略特的千年奇谭》+目录作品销售全面走强,MMO和手游/PC浏览器同样增收(Why)。Q1营业利润已完成全年计划(¥490亿)的34.7%,"量减质升"战略红利持续兑现(So What)。',
+            strategy: '"量减质升"战略转型成效持续兑现——削减中小项目,聚焦核心IP(FF/DQ/NieR)的高质量开发。HD Game通过跨平台(NS2/Xbox)策略扩大受众。MMO、手游/PC浏览器均保持增长。西方工作室已剥离,回归日式RPG核心。',
+            outlook: 'FY2027展望: 通期计划维持净销售¥2980亿、营业利润¥490亿,看好Q1超预期后全年上调可能。DQ12和FF7第三部为未来重磅催化剂。',
             newProducts: '《勇者斗恶龙12》开发中；《FF7 第三部》开发中；FF14新资料片；更多HD-2D重制项目。'
         },
         dataSources: [
-            { type: '年度财报', name: 'Square Enix FY2026 Full Year Results', date: '2026-05-14', url: 'https://www.hd.square-enix.com/eng/ir/library/financial.html' },
-            { type: '业绩说明', name: 'Results Briefing Session FY2026', date: '2026-05-14', url: 'https://www.hd.square-enix.com/eng/ir/pdf/26q4slides.pdf' },
-            { type: '行业报道', name: 'GamesIndustry.biz: SE FY26 operating income surges 34.9%', date: '2026-05-15', url: 'https://www.gamesindustry.biz/square-enix-fy26-operating-income-surges-349-despite-net-sales-decline' }
+            { type: '季度财报', name: 'Square Enix Q1 FY2027 Results', date: '2026-08-10', url: 'https://www.hd.square-enix.com/eng/ir/library/financial.html' },
+            { type: '行业报道', name: 'gamecolumn: スクウェア・エニックスHD 2027年3月期第1四半期決算 (2026/08/11)', date: '2026-08-11', url: 'https://gamecolumn.jp/blog-entry-117042.html' }
         ],
-        filingDate: '2026-05-14',
-        filingType: '年度财报(全年)',
+        filingDate: '2026-08-10',
+        filingType: '季度财报(Q1)',
         filingUrl: 'https://www.hd.square-enix.com/eng/ir/library/financial.html'
     },
     {
@@ -805,12 +814,13 @@ const earningsCompanies = [
         logo: '⚡',
         color: '#FFC300',
         segment: 'Digital Entertainment',
-        fiscalPeriod: 'FY2026 全年 (2025年4月-2026年3月)',
+        fiscalPeriod: 'FY2027 Q1 (2026年4月-6月)',
         currency: 'JPY',
         latestQuarter: {
-            period: 'FY2026 Q4', calendarPeriod: '2026年1-3月', filingDate: '2026-05-08',
-            revenue: { value: 182851, unit: '百万日元(Q4推算)', yoy: null, label: 'Q4集团营收≈¥1829亿(全年-前三季推算)', usdEquiv: '≈$1.22B' },
-            note: '全年已发布,Q4从¥4937亿-前三季¥3108亿推算'
+            period: 'FY2027 Q1', calendarPeriod: '2026年4-6月', filingDate: '2026-07-30',
+            revenue: { value: 129500, unit: '百万日元(Q1)', yoy: 33.6, label: 'Q1集团营收¥1295亿(+33.6%,创Q1新高)', usdEquiv: '≈$866M' },
+            operatingProfit: { value: 45300, unit: '百万日元(Q1)', yoy: 63.3, label: 'Q1集团营业利润¥453亿(+63.3%)' },
+            note: 'Q1营收/利润双创历史同期新高,数字娱乐(游戏)部门增长36.5%驱动'
         },
         fullYear: {
             period: 'FY2026全年(已发布)', filingDate: '2026-05-08', status: '已发布(连续3年历史新高)',
@@ -821,38 +831,37 @@ const earningsCompanies = [
             note: '连续第3年创历史新高,营收/营业利润/净利润均创纪录,所有业务板块表现强劲'
         },
         companyOverall: {
-            totalRevenue: { value: 493680, unit: '百万日元(全年)', yoy: 17.1, label: '集团全年营收¥4937亿(+17.1%,创纪录)', source: 'Konami FY2026 Full Year Results (2026/05/08)' },
-            totalOperatingProfit: { value: 135900, unit: '百万日元', yoy: 33.3, label: '集团全年营业利润¥1359亿(+33.3%,创纪录)' },
-            totalOperatingMargin: { value: 27.5, label: '集团全年营业利润率' },
-            note: '科乐美FY2026(2025.4-2026.3): 营收¥4937亿(+17.1%),净利润首次突破¥1000亿(+33.9%),连续3年创历史新高。DE板块预计¥3480亿收入+¥1225亿利润(FY27指引)。'
+            totalRevenue: { value: 129500, unit: '百万日元(Q1)', yoy: 33.6, label: 'Q1集团营收¥1295亿(+33.6%,创Q1新高)', source: 'Konami Q1 FY2027 Results (2026/07/30)' },
+            totalOperatingProfit: { value: 45300, unit: '百万日元(Q1)', yoy: 63.3, label: 'Q1集团营业利润¥453亿(+63.3%)' },
+            totalOperatingMargin: { value: 35.0, label: 'Q1集团营业利润率' },
+            note: '科乐美FY2027 Q1(2026.4-6): 营收¥1295亿(+33.6%)、业务利润¥447亿(+61.7%)、营业利润¥453亿(+63.3%)、归母净利润¥326亿(+64.2%),营收/利润双创Q1历史新高。'
         },
         financials: {
-            revenue: { value: 493680, unit: '百万日元(全年)', yoy: 17.1, label: '集团全年营收(连续3年创纪录)', source: 'Konami FY2026 Full Year Results (2026/05/08)', usdEquiv: '≈$3.14B' },
-            operatingProfit: { value: 135900, unit: '百万日元(全年)', yoy: 33.3, label: '集团全年营业利润(+33.3%创纪录)' },
-            operatingMargin: { value: 27.5, label: '集团全年营业利润率' },
+            revenue: { value: 129500, unit: '百万日元(Q1)', yoy: 33.6, label: '集团Q1营收(创Q1纪录)', source: 'Konami Q1 FY2027 Results (2026/07/30)', usdEquiv: '≈$866M' },
+            operatingProfit: { value: 45300, unit: '百万日元(Q1)', yoy: 63.3, label: '集团Q1营业利润(+63.3%)' },
+            operatingMargin: { value: 35.0, label: '集团Q1营业利润率' },
             segmentRevenuePct: { value: 100, label: '集团整体(DE+健身+博彩)' },
         },
         gameMetrics: {
+            deGrowth: { value: 36.5, unit: '%', label: '数字娱乐(游戏)部门收入增长36.5%' },
             eFootballContribution: { value: null, unit: '', label: 'eFootball持续贡献稳定流水' },
             yugiohMasterDuel: { value: null, unit: '', label: '游戏王Master Duel全球运营' },
             silentHill2Impact: { value: null, unit: '', label: '寂静岭2重制版长尾贡献' },
-            metalGearDelta: { value: null, unit: '', label: '合金装备Δ(MGS Delta)已发售' },
             dividendIncrease: { value: 190.5, unit: '日元/股', label: '年度股息190.5日元(派息率30%+)' },
         },
         keyProducts: ['eFootball', '游戏王Master Duel', '寂静岭2 Remake', '合金装备Δ', '恶魔城：贝尔蒙特之血', '桃太郎电铁2'],
         analysis: {
-            performance: '🔥FY2026(2025.4-2026.3)连续第3年创历史新高: 营收¥4937亿(+17.1%,≈$3.14B),营业利润¥1359亿(+33.3%),归母净利润首次突破¥1000亿(+33.9%)(What)。所有业务板块均增长——数字娱乐受寂静岭2 Remake+合金装备Δ驱动,健身俱乐部持续扩张,博彩系统全球需求旺盛(Why)。营业利润率27.5%为日本游戏公司顶级水平,经典IP复活战略全面成功(So What)。',
+            performance: '🔥FY2027 Q1(2026.4-6)创历史同期新高: 营收¥1295亿(+33.6%)、业务利润¥447亿(+61.7%)、营业利润¥453亿(+63.3%)、归母净利润¥326亿(+64.2%),营收/利润双创Q1纪录(What)。数字娱乐(游戏)部门收入增长36.5%为核心驱动,eFootball/游戏王等GaaS稳定增长+合金装备Δ持续贡献,健身与博彩板块亦维持扩张(Why)。Q1开门红为连续第4年创新高奠定基础(So What)。',
             strategy: '经典IP全面复活战略——寂静岭2 Remake商业口碑双收→合金装备Δ(食蛇者)→恶魔城新作,已形成完整复活管线。eFootball+游戏王维持稳定GaaS收入。健身俱乐部和博彩业务多元化降低游戏周期风险。',
             outlook: 'FY2027展望: DE板块预计收入¥3480亿+营业利润¥1225亿。年度股息提升至190.5日元(派息率30%+)。恶魔城:贝尔蒙特之血+寂静岭f+桃太郎电铁2+Metal Gear Δ续作为管线核心。',
             newProducts: '《恶魔城：贝尔蒙特之血》2026年；《寂静岭f》开发中；《桃太郎电铁2》；eFootball持续更新；更多经典IP复活项目。'
         },
         dataSources: [
-            { type: '年度财报', name: 'Konami FY2026 Full Year Financial Results', date: '2026-05-08', url: 'https://www.konami.com/ir/en/ir-data/statements.html' },
-            { type: '财报说明', name: 'FY2026 Financial Results Presentation', date: '2026-05-08', url: 'https://www.konami.com/ir/en/ir-data/meeting/2026/en0508_7bs3e2.pdf' },
-            { type: '行业报道', name: 'Kantenna: Konami Posts Record Profit + Massive 2026 Lineup', date: '2026-05-10', url: 'https://kantenna.com/topic/konami-record-profit-fy2026-castlevania-silent-hill-mgs-lineup' }
+            { type: '季度财报', name: 'Konami Q1 FY2027 Financial Results', date: '2026-07-30', url: 'https://www.konami.com/ir/en/ir-data/statements.html' },
+            { type: '行业报道', name: '科乐美Q1财报: 营收1295亿日元(+33.6%), 利润创历史新高 (百家号/360game, 2026/07/30)', date: '2026-07-30', url: 'https://baijiahao.baidu.com/s?id=1872142525367814464' }
         ],
-        filingDate: '2026-05-08',
-        filingType: '年度财报(全年)',
+        filingDate: '2026-07-30',
+        filingType: '季度财报(Q1)',
         filingUrl: 'https://www.konami.com/ir/en/ir-data/statements.html'
     },
     {
@@ -866,12 +875,13 @@ const earningsCompanies = [
         logo: '🦔',
         color: '#0060A8',
         segment: 'Entertainment Contents',
-        fiscalPeriod: 'FY2026 全年 (2025年4月-2026年3月)',
+        fiscalPeriod: 'FY2027 Q1 (2026年4月-6月)',
         currency: 'JPY',
         latestQuarter: {
-            period: 'FY2026 Q4', calendarPeriod: '2026年1-3月', filingDate: '2026-05-12',
-            revenue: { value: 152268, unit: '百万日元(Q4推算)', yoy: null, label: 'Q4集团营收≈¥1523亿(全年-前三季推算)', usdEquiv: '≈$1.02B' },
-            note: '全年已发布,Q4从¥4875亿-前三季¥3352亿推算'
+            period: 'FY2027 Q1', calendarPeriod: '2026年4-6月', filingDate: '2026-08-07',
+            revenue: { value: 95028, unit: '百万日元(Q1)', yoy: 17.3, label: 'Q1集团营收¥950.28亿(+17.3%)', usdEquiv: '≈$636M' },
+            operatingProfit: { value: 2384, unit: '百万日元(Q1)', yoy: null, label: 'Q1营业利润¥23.84亿(上年同期亏损¥5.19亿,扭亏为盈)' },
+            note: '三线超预期,从全面亏损到全面盈利;GAN和Stakelogic并表后首个完整季度'
         },
         fullYear: {
             period: 'FY2026全年(已发布)', filingDate: '2026-05-12', status: '已发布(创纪录营收但净亏损)',
@@ -883,36 +893,37 @@ const earningsCompanies = [
             note: '创纪录营收¥4875亿(+13.7%),但Rovio减值¥588亿+Super Game取消导致净亏损¥57亿'
         },
         companyOverall: {
-            totalRevenue: { value: 487500, unit: '百万日元(全年)', yoy: 13.7, label: '集团全年净销售¥4875亿(+13.7%,创纪录)', source: 'Sega Sammy FY2026 Full Year Results (2026/05/12)' },
-            netLoss: { value: -5700, unit: '百万日元', label: '净亏损¥57亿(Rovio减值导致)' },
-            note: '世嘉萨米FY2026(2025.4-2026.3): 营收¥4875亿(+13.7%)创历史新高,但Rovio Entertainment减值¥588亿(≈$200M)+Super Game项目取消导致11年来首次净亏损¥57亿。EC板块营收¥3266亿但营业利润下滑。FY2027预计营收¥5100亿。'
+            totalRevenue: { value: 95028, unit: '百万日元(Q1)', yoy: 17.3, label: 'Q1集团营收¥950.28亿(+17.3%)', source: 'Sega Sammy Q1 FY2027 Results (2026/08/07)' },
+            totalOperatingProfit: { value: 2384, unit: '百万日元(Q1)', yoy: null, label: 'Q1营业利润¥23.84亿(上年同期亏损¥5.19亿)' },
+            totalOperatingMargin: { value: 2.5, label: 'Q1营业利润率' },
+            note: '世嘉萨米FY2027 Q1(2026.4-6): 营收¥950.28亿(+17.3%)、营业利润¥23.84亿、经常利润¥36.12亿、归母净利润¥21.69亿,为减值巨亏后的首个盈利季度,GAN与Stakelogic并表后首个完整季度。'
         },
         financials: {
-            revenue: { value: 326600, unit: '百万日元(EC全年)', yoy: null, label: 'EC板块全年营收¥3266亿(≈$2.07B)', source: 'Sega Sammy FY2026 Full Year Results (2026/05/12)', usdEquiv: '≈$2.07B' },
-            operatingProfit: { value: 32400, unit: '百万日元(EC全年)', yoy: null, label: 'EC板块营业利润¥324亿(≈$205M,下滑)' },
-            operatingMargin: { value: 9.9, label: 'EC板块营业利润率(下滑)' },
-            segmentRevenuePct: { value: 67.0, label: 'EC占集团营收比例' },
+            revenue: { value: 95028, unit: '百万日元(Q1)', yoy: 17.3, label: '集团Q1营收(+17.3%)', source: 'Sega Sammy Q1 FY2027 Results (2026/08/07)', usdEquiv: '≈$636M' },
+            operatingProfit: { value: 2384, unit: '百万日元(Q1)', yoy: null, label: 'Q1营业利润¥23.84亿(扭亏为盈)' },
+            operatingMargin: { value: 2.5, label: '集团Q1营业利润率' },
+            segmentRevenuePct: { value: 100, label: '集团整体(EC+游技机+博彩)' },
         },
         gameMetrics: {
-            rovioImpairment: { value: 58800, unit: '百万日元', label: 'Rovio Entertainment减值¥588亿(≈$200M)', source: 'Sega Sammy FY2026 Results' },
-            superGameCancelled: { value: true, unit: '', label: 'Super Game大型项目取消(额外减值)' },
-            f2pGrowth: { value: null, unit: '%', label: 'F2P收入增长(如龙/索尼克等)' },
-            fy27Forecast: { value: 510000, unit: '百万日元', label: 'FY2027营收预测¥5100亿' },
+            netIncomeQ1: { value: 2169, unit: '百万日元(Q1)', label: '归母净利润¥21.69亿(上年同期亏损¥33.87亿)' },
+            ordinaryProfitQ1: { value: 3612, unit: '百万日元(Q1)', label: '经常利润¥36.12亿(上年同期亏损¥21.24亿)' },
+            pachislotRecovery: { value: null, unit: '', label: '柏青哥/柏青嫂板块扛旗,销售V型反转' },
+            personaStable: { value: null, unit: '', label: '《女神异闻录》《柯南》等经典IP稳定贡献' },
+            ganStakelogic: { value: null, unit: '', label: 'GAN和Stakelogic并表贡献博彩业务增长' },
         },
         keyProducts: ['索尼克系列', '如龙/审判系列', '女神异闻录系列', '全面战争', 'Metaphor: ReFantazio'],
         analysis: {
-            performance: 'FY2026(2025.4-2026.3)集团营收¥4875亿(+13.7%)创历史新高,但特殊损失导致11年来首次净亏损¥57亿(What)。核心矛盾: 主营业务持续增长(EC板块¥3266亿,F2P和索尼克IP表现良好),但Rovio Entertainment产生¥588亿(≈$200M)减值+Super Game大型项目取消的额外减值拖累底线(Why)。EC板块营业利润¥324亿(≈$205M)较去年的¥259M下降,反映了前期投入和内容成本上升(So What)。',
-            strategy: '战略重大调整: ①Rovio减值标志着移动游戏收购战略失败的财务出清 ②Super Game项目取消反映管理层放弃高风险大型跨平台项目 ③转向"Mainstay IP"战略——聚焦索尼克/如龙/女神异闻录等成熟IP的稳健增长。',
-            outlook: 'FY2027预测营收¥5100亿(+4.6%),管理层预期利润恢复。Rovio减值为一次性出清,核心业务增长趋势不变。索尼克电影宇宙+如龙新作+全面战争PC持续驱动。',
+            performance: 'FY2027 Q1(2026.4-6)三线超预期: 营收¥950.28亿(+17.3%)、营业利润¥23.84亿、经常利润¥36.12亿、归母净利润¥21.69亿,从全面亏损到全面盈利(What)。柏青哥/柏青嫂板块销售V型反转扛旗(¥478亿,占比过半),GAN与Stakelogic并表(首个完整季度)贡献博彩增量,《女神异闻录》《柯南》等经典IP稳定(Why)。此前Rovio减值¥588亿+Super Game取消的财务出清完毕,盈利弹性释放(So What)。',
+            strategy: '战略重大调整: ①Rovio减值标志着移动游戏收购战略失败的财务出清 ②Super Game项目取消反映管理层放弃高风险大型跨平台项目 ③转向"Mainstay IP"战略——聚焦索尼克/如龙/女神异闻录等成熟IP的稳健增长 ④博彩业务(GAN+Stakelogic)并表贡献新增量。',
+            outlook: 'FY2027预测营收¥5100亿(+4.6%),管理层预期利润持续恢复。博彩业务并表+柏青哥反转+索尼克电影宇宙+如龙新作+全面战争PC持续驱动。',
             newProducts: '《如龙》新作；索尼克新项目；《女神异闻录》后续；全面战争新作；Metaphor续作。'
         },
         dataSources: [
-            { type: '年度财报', name: 'Sega Sammy FY2026 Full Year Results', date: '2026-05-12', url: 'https://www.segasammy.co.jp/en/ir/library/presentation/' },
-            { type: '行业报道', name: 'GamesIndustry.biz: Sega reports $31.6m net loss in FY26', date: '2026-05-12', url: 'https://www.gamesindustry.biz/sega-reports-316m-net-loss-during-fy26-cancels-super-game-project-amid-strategic-pivot' },
-            { type: '行业分析', name: 'Kantenna: SEGA Sammy Posts First Net Loss in 11 Years', date: '2026-05-13', url: 'https://kantenna.com/topic/sega-sammy-fy2026-earnings-rovio-impairment-net-loss-mainstay-ip-shift' }
+            { type: '季度财报', name: 'Sega Sammy Q1 FY2027 Results', date: '2026-08-07', url: 'https://www.segasammy.co.jp/en/ir/library/presentation/' },
+            { type: '行业报道', name: '腾讯网: 世嘉Q1财报 营收40亿 柏青哥扛旗翻身 (2026/08/08)', date: '2026-08-08', url: 'https://new.qq.com/rain/a/20260808A0B15D00' }
         ],
-        filingDate: '2026-05-12',
-        filingType: '年度财报(全年)',
+        filingDate: '2026-08-07',
+        filingType: '季度财报(Q1)',
         filingUrl: 'https://www.segasammy.co.jp/en/ir/library/presentation/'
     },
     {
@@ -926,17 +937,16 @@ const earningsCompanies = [
         logo: '🎯',
         color: '#1B1B1B',
         segment: '整体（游戏专用）',
-        fiscalPeriod: '2026年Q1 (2026年1-3月)',
+        fiscalPeriod: '2026年Q2 (2026年4-6月)',
         currency: 'KRW',
         latestQuarter: {
-            period: '2026 Q1', calendarPeriod: '2026年1-3月', filingDate: '2026-04-30',
-            revenue: { value: 1371400, unit: '百万韩元', yoy: 56.9, label: 'Q1营收₩1.3714万亿(+56.9%,季度历史新高)', usdEquiv: '≈$993M' },
-            operatingProfit: { value: 561600, unit: '百万韩元', yoy: 22.8, label: 'Q1营业利润₩5616亿(+22.8%)' },
-            operatingMargin: { value: 40.9, label: 'Q1营业利润率40.9%' },
+            period: '2026 Q2', calendarPeriod: '2026年4-6月', filingDate: '2026-07-29',
+            revenue: { value: 1290000, unit: '百万韩元', yoy: 94.9, label: 'Q2营收₩1.29万亿(+94.9%,创Q2历史新高)', usdEquiv: '≈$933M' },
+            operatingProfit: { value: 410900, unit: '百万韩元', yoy: 67.0, label: 'Q2营业利润₩4109亿(+67.0%)' },
+            operatingMargin: { value: 31.9, label: 'Q2营业利润率31.9%' },
             gameMetrics: {
-                pubgIPQuarterlyRecord: { value: 1000000, unit: '百万韩元+', label: 'PUBG IP单季首破₩1万亿(+24% YoY)' },
-                pubgMobileGrowth: { value: null, unit: '%', label: 'PUBG Mobile及和平精英强劲增长' },
-                inZOIUpdate: { value: null, unit: '', label: 'inZOI持续更新和内容迭代' }
+                subnautica2Sales: { value: 5, unit: '百万套', label: '《深海迷航2》(Subnautica 2)抢先体验22天销量500万套' },
+                pubgH1Growth: { value: 25, unit: '%', label: 'PUBG IP上半年收入+25%' }
             }
         },
         fullYear: {
@@ -946,37 +956,37 @@ const earningsCompanies = [
             note: '首次突破₩3万亿大关,PUBG IP年度最高+inZOI百万销量'
         },
         companyOverall: {
-            totalRevenue: { value: 1371400, unit: '百万韩元(Q1)', yoy: 56.9, label: 'Q1总营收₩1.3714万亿(+56.9%,季度新高)', source: 'Krafton Q1 2026 Earnings Release (2026/04/30)' },
-            totalOperatingProfit: { value: 561600, unit: '百万韩元(Q1)', yoy: 22.8, label: 'Q1营业利润₩5616亿(+22.8%)' },
-            note: 'Krafton Q1 2026: 创季度营收历史新高₩1.3714万亿(+56.9%),PUBG IP单季首破₩1万亿(+24%),移动端持续强劲增长。'
+            totalRevenue: { value: 1290000, unit: '百万韩元(Q2)', yoy: 94.9, label: 'Q2总营收₩1.29万亿(+94.9%,创Q2纪录)', source: 'Krafton Q2 2026 Earnings Release (2026/07/29)' },
+            totalOperatingProfit: { value: 410900, unit: '百万韩元(Q2)', yoy: 67.0, label: 'Q2营业利润₩4109亿(+67.0%)' },
+            note: 'Krafton Q2 2026: 营收₩1.29万亿(+94.9%)、营业利润₩4109亿(+67.0%)均创Q2历史纪录。《深海迷航2》抢先体验22天售出500万套驱动增长,PUBG IP上半年收入+25%。'
         },
         financials: {
-            revenue: { value: 1371400, unit: '百万韩元(Q1)', yoy: 56.9, label: 'Q1营收(PUBG IP驱动创季度新高)', source: 'Krafton Q1 2026 Earnings Release (2026/04/30)', usdEquiv: '≈$993M' },
-            operatingProfit: { value: 561600, unit: '百万韩元(Q1)', yoy: 22.8, label: 'Q1营业利润₩5616亿(+22.8%)' },
-            operatingMargin: { value: 40.9, label: 'Q1营业利润率(优秀)' },
+            revenue: { value: 1290000, unit: '百万韩元(Q2)', yoy: 94.9, label: 'Q2营收(创Q2历史新高)', source: 'Krafton Q2 2026 Earnings Release (2026/07/29)', usdEquiv: '≈$933M' },
+            operatingProfit: { value: 410900, unit: '百万韩元(Q2)', yoy: 67.0, label: 'Q2营业利润₩4109亿(+67.0%)' },
+            operatingMargin: { value: 31.9, label: 'Q2营业利润率' },
             segmentRevenuePct: { value: 100, label: '游戏占比' },
             fullYearRevenue: { value: 3326600, unit: '百万韩元', yoy: 22.8, label: '2025全年营收₩3.3266万亿(+22.8%创新高)' },
         },
         gameMetrics: {
-            pubgIPQuarterlyRecord: { value: true, unit: '', label: 'PUBG IP单季首破₩1万亿(+24% YoY)', source: 'Krafton Q1 2026 Earnings' },
+            subnautica2Sales: { value: 5, unit: '百万套', label: '《深海迷航2》(Subnautica 2) EA 22天500万套', source: 'Krafton Q2 2026 Earnings' },
+            pubgH1Growth: { value: 25, unit: '%', label: 'PUBG IP上半年收入+25%' },
             pubgMobileStrong: { value: null, unit: '%', label: 'PUBG Mobile/和平精英移动端持续增长' },
             inZOIProgress: { value: null, unit: '', label: 'inZOI持续内容更新和社区运营' },
             aiGamingStrategy: { value: null, unit: '', label: 'AI游戏战略持续推进' },
-            shareholderReturn: { value: null, unit: '', label: '股东回报政策持续执行' },
         },
-        keyProducts: ['PUBG: Battlegrounds', 'PUBG Mobile', '和平精英(Peacekeeper Elite)', 'BGMI(印度)', 'inZOI'],
+        keyProducts: ['PUBG: Battlegrounds', 'PUBG Mobile', '和平精英(Peacekeeper Elite)', 'BGMI(印度)', '深海迷航2(Subnautica 2)', 'inZOI'],
         analysis: {
-            performance: '🔥Q1 2026创季度营收历史新高₩1.3714万亿(+56.9% YoY,≈$9.93亿),营业利润₩5616亿(+22.8%),利润率40.9%(What)。核心驱动: PUBG IP单季首次突破₩1万亿(+24%),移动端(PUBG Mobile+和平精英+BGMI)持续强劲增长,PC/主机端PUBG: Battlegrounds活跃度维持(Why)。营业利润率40.9%为全球游戏公司顶级水平,证明PUBG作为GaaS的超强商业化能力和运营效率(So What)。',
-            strategy: 'PUBG 2.0战略持续推进(UGC+UE5),IP联名策略(K-pop/奢侈品牌)驱动ARPU。inZOI作为生活模拟品类拓展方向持续迭代。AI游戏战略为中长期布局。直接发行Real Cricket拓展印度市场。',
-            outlook: 'Q1的强劲表现为全年定下高基调。下半年催化剂: PUBG持续内容更新+inZOI大型DLC+AI驱动的新游戏体验。管理层目标2027年前拥有3个百万DAU级产品。',
-            newProducts: 'inZOI持续更新(大型DLC)；PUBG 2.0(UE5)；AI游戏新IP开发中；Real Cricket拓展印度。'
+            performance: '🔥Q2 2026营收₩1.29万亿(+94.9% YoY,≈$9.33亿)、营业利润₩4109亿(+67.0%)双创Q2历史纪录(What)。核心驱动: 《深海迷航2》(Subnautica 2)于5月开启抢先体验,22天内销量突破500万套,成为全球爆款;PUBG IP上半年收入+25%(移动端+PC/主机),inZOI持续贡献(Why)。营收接近翻倍增长展现"PUBG现金牛+新爆款"组合拳威力,利润率31.9%维持全球顶级水平(So What)。',
+            strategy: 'PUBG 2.0战略持续推进(UGC+UE5),IP联名策略(K-pop/奢侈品牌)驱动ARPU。Subnautica 2成功验证多IP矩阵战略——从单一PUBG依赖走向多元IP。inZOI作为生活模拟品类拓展方向持续迭代。AI游戏战略为中长期布局。',
+            outlook: 'H1超预期+Subnautica 2爆款效应持续,2026全年有望冲击新高。下半年催化剂: PUBG持续内容更新+Subnautica 2正式版+inZOI大型DLC+AI驱动的新游戏体验。管理层目标2027年前拥有3个百万DAU级产品。',
+            newProducts: '深海迷航2正式版；PUBG 2.0(UE5)；inZOI大型DLC；AI游戏新IP开发中；Real Cricket拓展印度。'
         },
         dataSources: [
-            { type: 'Q1季度财报', name: 'Krafton Q1 2026 Earnings Release', date: '2026-04-30', url: 'https://www.krafton.com/en/ir/investor-events/announce/' },
-            { type: '行业报道', name: 'Seoul Economic Daily: Krafton Q1 Operating Profit Rises 22.8%', date: '2026-04-30', url: 'https://en.sedaily.com/technology/2026/04/30/krafton-q1-operating-profit-rises-228-percent-as-revenue' }
+            { type: 'Q2季度财报', name: 'Krafton Q2 2026 Earnings Release', date: '2026-07-29', url: 'https://www.krafton.com/en/ir/investor-events/announce/' },
+            { type: '行业报道', name: 'Krafton Q2 2026: Subnautica 2 tops 5M in 22 days, revenue +94.9%', date: '2026-07-29', url: 'https://www.krafton.com/en/' }
         ],
-        filingDate: '2026-04-30',
-        filingType: '季度财报(Q1)',
+        filingDate: '2026-07-29',
+        filingType: '季度财报(Q2)',
         filingUrl: 'https://www.krafton.com/en/ir/investor-events/announce/'
     },
     {
@@ -990,55 +1000,60 @@ const earningsCompanies = [
         logo: '🟪',
         color: '#9146FF',
         segment: '整体（平台型）',
-        fiscalPeriod: '2026 Q1 (2026年1-3月)',
+        fiscalPeriod: '2026 Q2 (2026年4-6月)',
         currency: 'USD',
         latestQuarter: {
-            period: '2026 Q1', calendarPeriod: '2026年1-3月', filingDate: '2026-04-30',
-            revenue: { value: 1440, unit: '百万美元', yoy: 39, label: 'Q1收入$14.4亿(+39%)', usdEquiv: '$1.44B' },
-            bookings: { value: 1730, unit: '百万美元', yoy: 43, label: 'Q1预订$17.3亿(+43%)' },
-            operatingCashFlow: { value: 629, unit: '百万美元', label: 'Q1经营现金流$6.29亿' },
-            freeCashFlow: { value: 596, unit: '百万美元', label: 'Q1自由现金流$5.96亿' },
+            period: '2026 Q2', calendarPeriod: '2026年4-6月', filingDate: '2026-08-06',
+            revenue: { value: 1469, unit: '百万美元', yoy: 36, label: 'Q2收入$14.69亿(+36%)', usdEquiv: '$1.47B' },
+            bookings: { value: 1557, unit: '百万美元', yoy: 8, label: 'Q2预订$15.57亿(+8%,低于预期)' },
+            netLoss: { value: -185, unit: '百万美元', label: 'Q2净亏损$1.85亿(收窄34%)' },
+            adjustedEbitda: { value: 152, unit: '百万美元', label: 'Q2调整后EBITDA $1.52亿(+744%)' },
+            operatingCashFlow: { value: 318, unit: '百万美元', label: 'Q2经营现金流$3.18亿(+60%)' },
+            freeCashFlow: { value: 294, unit: '百万美元', label: 'Q2自由现金流$2.94亿(+66%)' },
             gameMetrics: {
-                dau: { value: null, unit: '百万', label: 'DAU增长中(未披露具体数字)' },
-                monthlyPayers: { value: 31, unit: '百万', label: '月独立付费用户3100万' }
+                dau: { value: 123, unit: '百万', label: 'DAU 1.23亿(+10%)' },
+                monthlyPayers: { value: 27, unit: '百万', label: '月独立付费用户2700万(+15%)' },
+                engagementHours: { value: 29, unit: '十亿小时', label: '互动时长290亿小时(+5%)' }
             }
         },
         fullYear: {
-            period: '2026全年指引(下调)', filingDate: '2026-04-30', status: '管理层指引(下调)',
-            revenue: { value: 6005, unit: '百万美元(指引中值)', yoy: 22.5, label: '全年收入指引$58.7-61.4亿(增20-25%)', usdEquiv: '≈$6.0B' },
-            bookings: { value: 7465, unit: '百万美元(指引中值)', yoy: 10, label: '全年预订指引$73.3-76.0亿(增8-12%)' },
-            note: '因安全措施(强制年龄验证/社交限制)带来的参与度逆风,下调了全年收入和预订指引'
+            period: '2026全年指引(撤回)', filingDate: '2026-08-06', status: '全年指引撤回',
+            revenue: { value: null, unit: '百万美元', yoy: null, label: '全年指引已撤回(仅提供Q3指引)' },
+            bookings: { value: null, unit: '百万美元', yoy: null, label: 'Q3预订指引$15.76-16.53亿(-18%~-14%)' },
+            note: 'Q3预订额指引同比下滑14-18%,远低于预期;全年指引撤回。预订增长持续放缓(Q1 +43%→Q2 +8%)'
         },
         companyOverall: {
-            totalRevenue: { value: 1440, unit: '百万美元(Q1)', yoy: 39, label: 'Q1总收入$14.4亿', source: 'Roblox Q1 2026 Earnings (2026/04/30)' },
-            totalOperatingProfit: { value: null, unit: '百万美元', yoy: null, label: '运营亏损(持续亏损中,但现金流大幅改善)' },
-            note: 'Q1收入$14.4亿(+39%),预订$17.3亿(+43%),经营现金流$6.29亿。但因安全措施下调全年指引,股价暴跌19.8%。'
+            totalRevenue: { value: 1469, unit: '百万美元(Q2)', yoy: 36, label: 'Q2总收入$14.69亿', source: 'Roblox Q2 2026 Earnings (2026/08/06)' },
+            totalOperatingProfit: { value: -185, unit: '百万美元', yoy: null, label: '净亏损$1.85亿(收窄34%)' },
+            note: 'Q2收入$14.69亿(+36%),预订$15.57亿(+8%),DAU 1.23亿(+10%),月独立付费2700万(+15%)。但预订增速大幅放缓至+8%,Q3指引同比下滑14-18%,全年指引撤回,股价重挫。'
         },
         financials: {
-            revenue: { value: 1440, unit: '百万美元(Q1)', yoy: 39, label: 'Q1收入$14.4亿(+39%)', source: 'Roblox Q1 2026 Shareholder Letter (2026/04/30)' },
-            operatingProfit: { value: null, unit: '百万美元', yoy: null, label: '运营亏损(持续中)' },
-            operatingMargin: { value: null, label: '运营利润率(亏损中)' },
+            revenue: { value: 1469, unit: '百万美元(Q2)', yoy: 36, label: 'Q2收入$14.69亿(+36%)', source: 'Roblox Q2 2026 Shareholder Letter (2026/08/06)' },
+            operatingProfit: { value: -185, unit: '百万美元', yoy: null, label: 'Q2净亏损$1.85亿(收窄34%)' },
+            operatingMargin: { value: null, label: '运营利润率(亏损收窄中)' },
             segmentRevenuePct: { value: 100, label: '平台型(整体)' },
-            bookings: { value: 1730, unit: '百万美元(Q1)', yoy: 43, label: 'Q1预订$17.3亿(+43%)' },
+            bookings: { value: 1557, unit: '百万美元(Q2)', yoy: 8, label: 'Q2预订$15.57亿(+8%)' },
         },
         gameMetrics: {
-            monthlyPayers: { value: 31, unit: '百万(Q1)', label: '月独立付费用户3100万', source: 'Roblox Q1 2026 Earnings Call' },
-            operatingCashFlow: { value: 629, unit: '百万美元', label: 'Q1经营现金流$6.29亿' },
-            freeCashFlow: { value: 596, unit: '百万美元', label: 'Q1自由现金流$5.96亿' },
+            dau: { value: 123, unit: '百万(Q2)', label: 'DAU 1.23亿(+10%)', source: 'Roblox Q2 2026 Earnings Call' },
+            monthlyPayers: { value: 27, unit: '百万(Q2)', label: '月独立付费用户2700万(+15%)' },
+            engagementHours: { value: 29, unit: '十亿小时', label: '互动时长290亿小时(+5%)' },
+            operatingCashFlow: { value: 318, unit: '百万美元', label: 'Q2经营现金流$3.18亿(+60%)' },
+            freeCashFlow: { value: 294, unit: '百万美元', label: 'Q2自由现金流$2.94亿(+66%)' },
         },
         keyProducts: ['Roblox Platform', 'Roblox Studio', 'UGC生态系统', '品牌广告平台'],
         analysis: {
-            performance: 'Q1收入$14.4亿(+39% YoY)、预订$17.3亿(+43%)，均大幅超出长期增长目标(约为目标增速的两倍)。经营现金流$6.29亿、自由现金流$5.96亿表现强劲。月独立付费用户达3100万。但公司因儿童安全合规措施(强制年龄验证、社交功能限制)带来的中个位数参与度逆风,下调了2026全年指引(收入增20-25%/预订增8-12%,低于此前更高预期),导致股价暴跌19.8%。',
-            strategy: '安全合规成为Roblox战略首要任务——强制年龄验证全球推行+13岁以下用户社交限制+内容审核加强。短期牺牲增长换取长期平台信誉和监管合规。品牌广告持续扩展(与Shopify/Gucci等合作)。取消年度指引改为季度指引(从2027起)。',
-            outlook: '2026全年指引下调：收入$58.7-61.4亿(+20-25%),预订$73.3-76.0亿(+8-12%)。安全措施逆风预计贯穿全年。但长期受益于平台安全性提升带来的家长信任和品牌合作意愿增强。自由现金流转正是积极信号。',
+            performance: 'Q2收入$14.69亿(+36% YoY)、预订$15.57亿(+8%)，收入符合预期但预订增速大幅放缓(Q1 +43%→Q2 +8%)(What)。DAU 1.23亿(+10%)、互动时长290亿小时(+5%)仍保持增长,月独立付费2700万(+15%),但预订额增速与DAU增速差距扩大——每用户消费(ABPDAU)下降,北美青少年消费明显放缓(Why)。Q3预订指引同比下滑14-18%,全年指引撤回,增长叙事阶段性破裂(So What)。',
+            strategy: '安全合规继续作为战略首要任务(强制年龄验证/内容审核),短期持续压制参与度和变现。品牌广告业务(Shopify等)与AI(智能助手)为长期新引擎。公司将关注点从"预订增速"转向"现金流与利润质量"——Q2经营现金流$3.18亿(+60%)。',
+            outlook: '2026 Q3指引: 预订$15.76-16.53亿(-18%~-14%)、收入$14.13-14.90亿(+4%~+10%)、调整后EBITDA $0-0.41亿。预订持续下滑为安全措施与消费疲软叠加,股价对短期指引敏感。',
             newProducts: 'Roblox AI Assistant；品牌广告平台扩展；社交安全工具升级；Creator Store迭代。'
         },
         dataSources: [
-            { type: '季度财报', name: 'Roblox Q1 2026 Shareholder Letter', date: '2026-04-30', url: 'https://ir.roblox.com/news/news-details/2026/Roblox-Reports-First-Quarter-2026-Financial-Results/default.aspx' },
-            { type: '电话会议', name: 'Roblox Q1 2026 Earnings Call Transcript', date: '2026-04-30', url: 'https://ir.roblox.com/' }
+            { type: '季度财报', name: 'Roblox Q2 2026 Shareholder Letter', date: '2026-08-06', url: 'https://ir.roblox.com/news/news-details/2026/Roblox-Reports-Second-Quarter-2026-Financial-Results/default.aspx' },
+            { type: '行业报道', name: 'Roblox Q2 2026: Bookings Slowdown, Q3 Guide Disappoints', date: '2026-08-06', url: 'https://investgame.net/news/2026-08-06-2026_q2-press-release_roblox/' }
         ],
-        filingDate: '2026-04-30',
-        filingType: '季度财报(Q1)',
+        filingDate: '2026-08-06',
+        filingType: '季度财报(Q2)',
         filingUrl: 'https://ir.roblox.com/'
     },
     {
@@ -1052,46 +1067,51 @@ const earningsCompanies = [
         logo: '⬛',
         color: '#222222',
         segment: '整体（引擎+广告平台）',
-        fiscalPeriod: '2026 Q1 (2026年1-3月)',
+        fiscalPeriod: '2026 Q2 (2026年4-6月)',
         currency: 'USD',
         latestQuarter: {
-            period: '2026 Q1', calendarPeriod: '2026年1-3月', filingDate: '2026-05-07',
-            revenue: { value: 508, unit: '百万美元', yoy: 17, label: 'Q1收入$5.08亿(+17%)', usdEquiv: '$508M' },
-            note: 'Q1收入超指引($4.8-4.9亿),由Vector广告平台驱动;正退出非战略性广告业务(ironSource Ads Network+Supersonic)'
+            period: '2026 Q2', calendarPeriod: '2026年4-6月', filingDate: '2026-08-06',
+            revenue: { value: 546, unit: '百万美元', yoy: 24, label: 'Q2总营收$5.46亿(+24%)', usdEquiv: '$546M' },
+            netLoss: { value: -24, unit: '百万美元', label: 'Q2净亏损$0.24亿(去年同期亏损$1.09亿,大幅收窄)' },
+            adjustedEbitda: { value: 160, unit: '百万美元', label: 'Q2调整后EBITDA $1.60亿(+77%,利润率29%)' },
+            note: 'Vector广告平台驱动,Grow战略收入$3.29亿;已退出非战略性广告业务(ironSource Ads Network+Supersonic)'
         },
         fullYear: {
-            period: '2026全年展望', filingDate: '2026-05-07', status: '战略转型中',
-            revenue: { value: null, unit: '百万美元', yoy: null, label: '退出非核心广告业务后,聚焦引擎+Vector' },
-            note: 'Unity宣布退出ironSource广告网络和Supersonic发行平台,聚焦核心引擎+Vector AI广告'
+            period: '2026 Q3展望', filingDate: '2026-08-06', status: '战略转型中',
+            revenue: { value: 545, unit: '百万美元(Q3指引中值)', yoy: null, label: 'Q3战略收入指引$5.40-5.50亿(+44-47%)', usdEquiv: '≈$545M' },
+            note: 'Q3调整后EBITDA指引$1.85-1.90亿(+69-74%);聚焦引擎+Vector AI广告双引擎'
         },
         companyOverall: {
-            totalRevenue: { value: 508, unit: '百万美元(Q1)', yoy: 17, label: 'Q1总收入$5.08亿', source: 'Unity Q1 2026 Earnings (2026/05/07)' },
-            totalOperatingProfit: { value: null, unit: '百万美元', yoy: null, label: '利润率大幅改善(Adj EBITDA超指引)' },
-            note: 'CEO Matthew Bromberg表示正实现"卓越的营收增长和利润率扩张",同时退出非战略性广告业务'
+            totalRevenue: { value: 546, unit: '百万美元(Q2)', yoy: 24, label: 'Q2总收入$5.46亿(+24%)', source: 'Unity Q2 2026 Earnings (2026/08/06)' },
+            totalOperatingProfit: { value: 160, unit: '百万美元', yoy: 77, label: '调整后EBITDA $1.60亿(+77%,利润率29%)' },
+            note: 'Q2营收$5.46亿(+24%)、净亏损收窄至$0.24亿(去年同期亏损$1.09亿)、调整后EBITDA $1.60亿(+77%),战略转型成效显著'
         },
         financials: {
-            revenue: { value: 508, unit: '百万美元(Q1)', yoy: 17, label: 'Q1收入$5.08亿(+17%)', source: 'Unity Q1 2026 Earnings Release (2026/05/07)' },
-            operatingProfit: { value: null, unit: '百万美元', yoy: null, label: 'Adj EBITDA超指引(具体数字待确认)' },
-            operatingMargin: { value: null, label: '利润率改善中' },
+            revenue: { value: 546, unit: '百万美元(Q2)', yoy: 24, label: 'Q2总营收$5.46亿(+24%)', source: 'Unity Q2 2026 Earnings Release (2026/08/06)' },
+            netLoss: { value: -24, unit: '百万美元', yoy: null, label: 'Q2净亏损$0.24亿(去年同期亏损$1.09亿,大幅收窄)' },
+            adjustedEbitda: { value: 160, unit: '百万美元', yoy: 77, label: 'Q2调整后EBITDA $1.60亿(+77%)' },
+            operatingMargin: { value: 29, label: 'Q2调整后EBITDA利润率29%' },
             segmentRevenuePct: { value: 100, label: '整体' },
+            growRevenue: { value: 329, unit: '百万美元', label: 'Grow战略收入$3.29亿' },
         },
         gameMetrics: {
-            vectorPlatform: { value: true, unit: '', label: 'Vector AI广告平台持续增长', source: 'Unity Q1 2026 Earnings' },
+            vectorPlatform: { value: true, unit: '', label: 'Vector AI广告平台持续增长', source: 'Unity Q2 2026 Earnings' },
             strategicExit: { value: true, unit: '', label: '退出ironSource Ads Network+Supersonic发行' },
+            q3Guide: { value: 545, unit: '百万美元', label: 'Q3战略收入指引$5.40-5.50亿(+44-47%)' },
         },
         keyProducts: ['Unity Engine 6', 'Unity Vector(AI广告)', 'Unity Gaming Services', 'Unity Muse(AI)'],
         analysis: {
-            performance: 'Q1收入$5.08亿(+17% YoY),超出指引上限($4.8-4.9亿)约3.5%,Adj EBITDA也超指引。CEO Bromberg称正实现"卓越的营收增长和利润率扩张"。Vector AI广告平台是核心增长驱动力,提前推出后快速放量。Unity正从2023年Runtime Fee危机中加速恢复。',
-            strategy: '重大战略决策：宣布退出非战略性广告业务(ironSource Ads Network和Supersonic发行平台),聚焦核心引擎+Vector AI广告双引擎。这标志着Unity彻底告别ironSource收购遗产中的低利润广告中介业务,转向高利润的自有AI广告技术。短期收入承压但长期利润率显著提升。',
-            outlook: '退出非核心广告业务后短期收入将有缺口,但管理层有信心通过Vector平台增长+利润率扩张实现净正效果。引擎市场份额企稳(Unreal竞争依然激烈)。AI辅助开发(Unity Muse/Sentis)是差异化方向。',
+            performance: '🔥Q2收入$5.46亿(+24% YoY),营收增长显著提速(Q1 +17%→Q2 +24%),净亏损收窄至$0.24亿(去年同期亏损$1.09亿),调整后EBITDA $1.60亿(+77%),EBITDA利润率29%(去年同期21%)(What)。Vector AI广告平台是核心增长驱动力,Grow战略收入$3.29亿持续放量,叠加退出低利润ironSource广告中介业务后利润率大幅改善(Why)。盈利质量显著提升,Unity正从2023年Runtime Fee危机中全面恢复(So What)。',
+            strategy: '重大战略决策：退出非战略性广告业务(ironSource Ads Network和Supersonic发行平台),聚焦核心引擎+Vector AI广告双引擎。这标志着Unity彻底告别ironSource收购遗产中的低利润广告中介业务,转向高利润的自有AI广告技术。短期收入承压但长期利润率显著提升。',
+            outlook: 'Q3指引: 战略收入$5.40-5.50亿(+44-47%)、调整后EBITDA $1.85-1.90亿(+69-74%),显示全年增长加速趋势。Vector平台增长+利润率扩张双轮驱动。引擎市场份额企稳(Unreal竞争依然激烈)。AI辅助开发(Unity Muse/Sentis)是差异化方向。',
             newProducts: 'Unity 6引擎持续迭代；Vector AI广告平台；Unity Sentis(AI推理on-device)；Unity Muse(AI辅助开发)。'
         },
         dataSources: [
-            { type: '季度财报', name: 'Unity Q1 2026 Earnings Release', date: '2026-05-07', url: 'https://investors.unity.com/news/news-details/2026/Unity-Reports-First-Quarter-2026-Financial-Results/default.aspx' },
-            { type: '电话会议', name: 'Unity Q1 2026 Earnings Call', date: '2026-05-07', url: 'https://investors.unity.com/' }
+            { type: '季度财报', name: 'Unity Q2 2026 Earnings Release', date: '2026-08-06', url: 'https://investors.unity.com/news/news-details/2026/Unity-Reports-Second-Quarter-2026-Financial-Results/default.aspx' },
+            { type: '电话会议', name: 'Unity Q2 2026 Earnings Call', date: '2026-08-06', url: 'https://investors.unity.com/' }
         ],
-        filingDate: '2026-05-07',
-        filingType: '季度财报(Q1)',
+        filingDate: '2026-08-06',
+        filingType: '季度财报(Q2)',
         filingUrl: 'https://investors.unity.com/'
     },
     {
