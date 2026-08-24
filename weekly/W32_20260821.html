@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>端主行业周报 · W32</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4f6f9; --ink: #1e3a5f; --ink-2: #2c4a6e; --ink-dim: #4a5c6e; --ink-ghost: #7b8a99;
+    --red: #c85a4a; --red-bg: #f5e0db; --red-dim: #a0483b;
+    --gold: #8b6914; --gold-bg: #ede4cf;
+    --green: #3d6b57; --green-bg: #dde7e0;
+    --surface: #ffffff; --surface-2: #eef1f5;
+    --rule: #d5dce3; --rule-dim: #e5e9ee;
+    --sony: #003087; --xbox: #107c10; --nin: #e60012;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #c8ced6; font-family: 'Microsoft YaHei', '微软雅黑', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  .page { width: 430px; background: var(--bg); color: var(--ink); margin: 0 auto; overflow: hidden; }
+
+  .hero { background: linear-gradient(135deg, #16283f 0%, #24405f 55%, #2c4a6e 100%); color: white; padding: 24px 20px 26px; position: relative; }
+  .hero::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background: linear-gradient(90deg, var(--red) 0%, var(--gold) 100%); }
+  .hero .brand { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.3em; color: #e0a56a; font-weight: 700; margin-bottom: 10px; }
+  .hero h1 { font-size: 28px; font-weight: 800; line-height: 1.18; letter-spacing: -0.01em; }
+  .hero .sub { font-size: 13px; color: rgba(255,255,255,0.78); margin-top: 9px; line-height: 1.55; }
+  .hero .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+  .hero .tags .pill { font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 10px; }
+  .hero .meta { display: flex; gap: 18px; margin-top: 14px; padding-top: 13px; border-top: 1px solid rgba(255,255,255,0.15); font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.7); letter-spacing: 0.08em; }
+  .hero .meta strong { color: white; font-weight: 700; }
+
+  .section { padding: 26px 20px 20px; }
+  .section + .section { border-top: 10px solid #e2e7ed; }
+  .sec-head { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid var(--ink); position: relative; }
+  .sec-head::after { content:''; position:absolute; left:0; bottom:-2px; width:50px; height:2px; background:var(--red); }
+  .sec-head .num { font-family: 'IBM Plex Mono', monospace; font-size: 32px; font-weight: 800; color: var(--red); line-height: 0.9; }
+  .sec-head .title { font-size: 19px; font-weight: 800; color: var(--ink); flex: 1; line-height: 1.3; }
+  .sec-head .title em { display: block; font-size: 13px; font-weight: 600; color: var(--red); font-style: normal; margin-top: 3px; }
+
+  .lead { background: linear-gradient(135deg, #1e3a5f 0%, #263f5e 100%); color: rgba(255,255,255,0.92); padding: 14px 16px; border-radius: 6px; margin-bottom: 16px; border-left: 4px solid var(--gold); }
+  .lead .ll { font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.08em; color: #e8b84a; font-weight: 700; margin-bottom: 8px; }
+  .lead .lt { font-size: 15px; font-weight: 800; color: #fff; line-height: 1.45; }
+  .lead .lead-key { margin-top:13px; padding-top:12px; border-top:1px solid rgba(255,255,255,0.18); }
+  .lead .lead-key .kl2 { font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.12em; color:#e8b84a; font-weight:700; margin-bottom:7px; }
+  .lead .lead-key .kt2 { font-size:13.5px; font-weight:700; line-height:1.65; color:rgba(255,255,255,0.92); }
+  .lead .lead-key .kt2 b { color:#fff; font-weight:800; border-bottom:2px solid rgba(232,184,74,.55); }
+
+  .sub-step { display: flex; align-items: center; gap: 9px; margin: 22px 0 11px; padding: 8px 12px; background: linear-gradient(90deg, rgba(30,58,95,0.10), rgba(30,58,95,0)); border-left: 4px solid var(--red); border-radius: 0 6px 6px 0; }
+  .sub-step .sn { font-family: 'IBM Plex Mono', monospace; font-size: 15px; font-weight: 800; color: #fff; background: var(--red); min-width: 23px; height: 23px; border-radius: 5px; display: inline-flex; align-items: center; justify-content: center; flex: none; }
+  .sub-step .stt { font-size: 15px; font-weight: 800; color: var(--ink); line-height: 1.3; }
+  .sub-step .stt em { font-style: normal; font-weight: 600; color: var(--ink-dim); font-size: 13px; }
+
+  /* 大数字卡 */
+  .bignum { display:grid; grid-template-columns:1fr 1fr 1fr; gap:7px; margin:10px 0; }
+  .bignum .b { background:var(--surface); border:1px solid var(--rule-dim); border-top:3px solid var(--red); border-radius:6px; padding:10px 5px; text-align:center; }
+  .bignum .b .bv { font-family:'IBM Plex Mono',monospace; font-size:19px; font-weight:800; color:var(--red-dim); line-height:1.05; }
+  .bignum .b .bl { font-size:10px; color:var(--ink-dim); margin-top:4px; line-height:1.35; }
+
+  .insight { background: linear-gradient(135deg, #1e3a5f 0%, #263f5e 100%); border-radius: 6px; padding: 14px 16px; margin: 14px 0 4px; color: rgba(255,255,255,0.92); }
+  .insight .il { font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.06em; color: #f0a07a; margin-bottom: 8px; border-bottom: 1px dashed rgba(255,255,255,0.15); padding-bottom: 6px; font-weight: 700; }
+  .analysis-list { display: flex; flex-direction: column; }
+  .analysis-row { display: flex; gap: 10px; padding: 7px 0; border-bottom: 1px dashed rgba(255,255,255,0.12); }
+  .analysis-row:last-child { border-bottom: 0; padding-bottom: 0; }
+  .analysis-tag { min-width: 42px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 800; color: #f0a07a; }
+  .analysis-text { flex: 1; font-size: 13px; line-height: 1.65; color: rgba(255,255,255,0.92); }
+  .analysis-text b { color:#fff; font-weight:800; }
+
+  .ev-line { background: var(--surface); border: 1px solid var(--rule-dim); border-radius: 5px; padding: 8px 12px; margin-bottom: 6px; font-size: 13px; line-height: 1.6; }
+  .ev-line .ev-head { display: flex; align-items: center; gap: 6px; margin-bottom: 2px; }
+  .ev-line .d { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--ink-ghost); font-weight: 600; }
+  .ev-line .gn { font-size: 14px; font-weight: 800; color: var(--ink); letter-spacing: .01em; }
+  .ev-line .ev-body { color:var(--ink-dim); } .ev-line .ev-body strong { color: var(--ink); font-weight: 700; }
+  .tg { font-size: 11px; font-weight: 700; padding: 1px 6px; border-radius: 2px; }
+  .tg-r { background: var(--red-bg); color: var(--red); } .tg-b { background: #dce8f5; color: #2a5a8f; }
+  .tg-y { background: var(--gold-bg); color: var(--gold); } .tg-g { background: var(--green-bg); color: var(--green); }
+
+  .clash-note { font-size:11px; color:var(--ink-dim); line-height:1.55; margin:2px 0 0; padding:10px 12px; background:var(--surface); border:1px solid var(--rule); border-left:3px solid var(--gold); border-radius:5px; }
+  .clash-note b { color:var(--ink); font-weight:700; }
+
+  .mini-h { font-size: 13px; font-weight: 700; color: var(--ink-dim); margin: 16px 0 9px; display:flex; align-items:center; gap:7px; }
+  .mini-h::before { content:''; width:4px; height:14px; background:var(--red); border-radius:2px; }
+
+  .footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 20px; text-align: center; font-size: 10px; line-height: 1.8; }
+  .footer .logo { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.3em; color: white; margin-bottom: 8px; }
+  .footer .disc { margin-top:8px; font-size:9px; color:rgba(255,255,255,.4); line-height:1.6; }
+</style>
+</head>
+<body>
+
+<div id="export-toolbar" style="position:fixed;top:10px;right:10px;z-index:9999;font-family:'Microsoft YaHei',sans-serif;user-select:none;">
+  <button id="exp-main" style="background:#c85a4a;color:#fff;border:0;padding:6px 12px;border-radius:4px;font-size:11px;font-weight:700;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,0.2);letter-spacing:.05em;">📥 导出长图</button>
+  <div id="exp-panel" style="display:none;margin-top:6px;background:rgba(30,58,95,0.96);padding:8px;border-radius:4px;box-shadow:0 4px 12px rgba(0,0,0,0.25);">
+    <div style="display:flex;flex-direction:column;gap:4px;">
+      <button data-scale="2" class="exp-btn" style="background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.15);padding:6px 10px;border-radius:3px;font-size:10px;cursor:pointer;font-weight:600;">@2x · 860px</button>
+      <button data-scale="3" class="exp-btn" style="background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.15);padding:6px 10px;border-radius:3px;font-size:10px;cursor:pointer;font-weight:600;">@3x · 1290px（推荐）</button>
+      <button data-scale="4" class="exp-btn" style="background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.15);padding:6px 10px;border-radius:3px;font-size:10px;cursor:pointer;font-weight:600;">@4x · 1720px</button>
+    </div>
+    <div id="exp-status" style="font-size:9px;color:#ffb896;margin-top:6px;letter-spacing:.03em;line-height:1.3;min-height:11px;"></div>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="brand">GAMEPULSE · WEEKLY</div>
+    <h1>端主行业周报 W32</h1>
+    <div class="sub">国产 3A 集体上桌：索尼靠独占+第一方抢红利 · 次世代定价预警升温</div>
+    <div class="tags">
+      <span class="pill" style="background:rgba(200,90,74,0.5);color:#ffd4c4;">国产3A宣发大周</span>
+      <span class="pill" style="background:rgba(0,61,165,0.5);color:#bcd4f5;">PS5独占1年</span>
+      <span class="pill" style="background:rgba(139,105,20,0.55);color:#f0dca0;">涨价潮×需求疲软</span>
+      <span class="pill" style="background:rgba(61,107,87,0.6);color:#c4ecc4;">去实体化余波</span>
+    </div>
+    <div class="meta">
+      <span>DATE · <strong>2026.08.21</strong></span>
+      <span>COVERAGE · <strong>8.17 – 8.23</strong></span>
+    </div>
+  </div>
+
+  <!-- ================= PART 01 头条 ================= -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="num">01</div>
+      <div class="title">国产 3A 宣发大周 × 平台独占战<em>三款国产3A实机齐发，索尼靠独占+第一方抢占红利</em></div>
+    </div>
+
+    <div class="lead">
+      <div class="ll">本周要点</div>
+      <div class="lt">科隆展前的宣发密集期：三款国产 3A 同周放出实机，索尼用"独占专场+第一方"抢占中国 3A 红利</div>
+      <div class="lead-key">
+        <div class="kl2">核心结论 · KEY CONCLUSION</div>
+        <div class="kt2">国产 3A 集体上桌成为本周主旋律。<b>索尼用"独占专场+第一方拉硬件"明显领先微软</b>抢占这波红利——《影之刃零》PS5 主机独占一年；但海外"无光盘不购买"的抵制，又让 <b>W31 的去实体化争议在国产 3A 身上再次发酵</b>。</div>
+      </div>
+    </div>
+
+    <!-- 子1 三款国产3A -->
+    <div class="sub-step"><span class="sn">1</span><div class="stt">三款国产 3A 实机齐发<em>&nbsp;·&nbsp;科隆展前宣发密集期</em></div></div>
+    <div class="ev-line" style="border-left:3px solid var(--red);">
+      <div class="ev-head"><span class="tg tg-r">SoP专场</span><span class="d">8/18</span><span class="gn">影之刃零</span></div>
+      <div class="ev-body">索尼为《影之刃零》办<strong>专属 State of Play</strong>（首个获此待遇的中国游戏），甄子丹任创意监制并完成面捕/动捕/英文配音；18 分钟新实机、舞狮 Boss 惊艳，30+ 主武器/25 副武器、4 难度，<strong>10/29 发售</strong>。</div>
+    </div>
+    <div class="ev-line" style="border-left:3px solid var(--red);">
+      <div class="ev-head"><span class="tg tg-r">820节点</span><span class="d">8/20</span><span class="gn">黑神话:钟馗</span></div>
+      <div class="ev-body">游戏科学放出 <strong>15 分钟实机</strong>（B站播放破 <strong>850 万</strong>、登热搜）：改走剑术+道法、召唤小鬼、大蚌真君多阶段 Boss；冯骥同步发"十条工作原则"。研发早期版本，未公布发售日。</div>
+    </div>
+    <div class="ev-line" style="border-left:3px solid var(--red);">
+      <div class="ev-head"><span class="tg tg-r">实机</span><span class="d">8/19</span><span class="gn">湮灭之潮</span></div>
+      <div class="ev-body">腾讯投资的《湮灭之潮》放出 <strong>53 分钟实机</strong>，登陆 PC/PS5/XSX；女主新形象与配音引发部分争议。</div>
+    </div>
+
+    <!-- 子2 索尼抢滩 -->
+    <div class="sub-step"><span class="sn">2</span><div class="stt">索尼的抢滩<em>&nbsp;·&nbsp;独占 + 第一方拉硬件</em></div></div>
+    <div class="ev-line" style="border-left:3px solid var(--sony);">
+      <div class="ev-head"><span class="tg tg-b">主机独占</span><span class="d">8/18 · 影之刃零</span></div>
+      <div class="ev-body">官方声明《影之刃零》发售后 <strong>至少 12 个月主机独占 PS5</strong>（PC 不受影响，Steam/Epic/WeGame 同步）。对比《黑神话:悟空》仅因 Xbox 优化难，这次是<strong>签约独占</strong>——索尼在中国 3A 赛道领先微软。</div>
+    </div>
+    <div class="ev-line" style="border-left:3px solid var(--sony);">
+      <div class="ev-head"><span class="tg tg-b">第一方</span><span class="d">Marvel Tokon</span></div>
+      <div class="ev-body">索尼第一方格斗新 IP《Marvel Tōkon》首周约 <strong>48.5 万份、74% 来自 PS5</strong>（Alinea），漫威 IP 吸引《蜘蛛侠》玩家转化——印证"第一方独占拉动硬件"策略。</div>
+    </div>
+
+    <!-- 子3 数字化余波 -->
+    <div class="sub-step"><span class="sn">3</span><div class="stt">数字化余波<em>&nbsp;·&nbsp;承接 W31 去实体化</em></div></div>
+    <div class="ev-line" style="border-left:3px solid var(--gold);">
+      <div class="ev-head"><span class="tg tg-y">光盘争议</span><span class="d">8/18 · 海外社区</span></div>
+      <div class="ev-body">《影之刃零》SoP 仅展示数字版 PS5、无实体光盘计划，海外 YouTube/Reddit 刷屏 <strong>"No Disc No Buy"（无光盘不购买）</strong>——被认为受索尼"2028 弃盘"影响，W31 的去实体化争议在国产 3A 身上再次发酵。</div>
+    </div>
+
+    <div class="insight">
+      <div class="il">核心判断 · 索尼领先，但争议同步放大</div>
+      <div class="analysis-list">
+        <div class="analysis-row"><div class="analysis-tag">领先</div><div class="analysis-text">索尼用<b>专属 SoP + 主机独占 + 第一方</b>抢中国 3A 红利，微软在这一赛道明显落后。</div></div>
+        <div class="analysis-row"><div class="analysis-tag">红利</div><div class="analysis-text">三款国产 3A 同周上桌，<b>国产 3A 已成全球宣发节点的常客</b>，渠道资源位价值上升。</div></div>
+        <div class="analysis-row"><div class="analysis-tag">余波</div><div class="analysis-text">独占带来的曝光也放大了<b>去实体化争议</b>——数字版唯一选项触发海外玩家抵制。</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= PART 02 涨价×需求疲软×定价预警 ================= -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="num">02</div>
+      <div class="title">涨价潮 × 需求疲软 × 次世代定价预警<em>涨价已传导到需求侧，次世代高价恐雪上加霜</em></div>
+    </div>
+
+    <div class="bignum">
+      <div class="b"><div class="bv">-29%</div><div class="bl">美国7月硬件支出<br>2020以来最低</div></div>
+      <div class="b"><div class="bv">1995</div><div class="bl">实体游戏月销<br>创该年以来最低</div></div>
+      <div class="b"><div class="bv">-40%</div><div class="bl">次世代$1000<br>5年销量风险</div></div>
+    </div>
+    <div class="ev-line" style="border-left:3px solid var(--red);">
+      <div class="ev-head"><span class="tg tg-r">现状</span><span class="d">8/21 · Circana</span></div>
+      <div class="ev-body">美国 7 月硬件支出约 <strong>$2.82 亿（同比 -29%）</strong>，创 2020 疫情以来最低；<strong>实体游戏月销为 1995 年以来最低</strong>——holiday 前需求侧已现实疲软。</div>
+    </div>
+    <div class="ev-line" style="border-left:3px solid var(--gold);">
+      <div class="ev-head"><span class="tg tg-y">涨价</span><span class="d">8/21 · 任天堂</span></div>
+      <div class="ev-body">Switch 2 确认 <strong>9/1 起英国 +£24、爱尔兰 +€30</strong>，继日/美/加/欧后又一轮调价——全球涨价潮持续蔓延，或进一步压制 holiday 装机。</div>
+    </div>
+    <div class="ev-line" style="border-left:3px solid var(--ink-2);">
+      <div class="ev-head"><span class="tg tg-b">预警</span><span class="d">8/19 · Ampere / Valve</span></div>
+      <div class="ev-body">Ampere 警告 PS6/Xbox Helix 若 <strong>$1000 首发</strong>，5 年销量或跌近 <strong>40%</strong>；同期 Valve "Steam Frame" 开箱视频泄露，次世代客厅硬件或将面世。</div>
+    </div>
+
+    <div class="insight">
+      <div class="il">核心判断 · "价格—销量"死结正在收紧</div>
+      <div class="analysis-list">
+        <div class="analysis-row"><div class="analysis-tag">已发生</div><div class="analysis-text">涨价潮已<b>传导到需求侧</b>——美国 7 月硬件创 2020 以来新低、实体游戏销量创 30 年最低，不再是预测。</div></div>
+        <div class="analysis-row"><div class="analysis-tag">仍加价</div><div class="analysis-text">需求疲软之际厂商仍在涨价（Switch 2 又调价），<b>RAM/元器件成本</b>持续向价格传导。</div></div>
+        <div class="analysis-row"><div class="analysis-tag">将恶化</div><div class="analysis-text">次世代若以 $1000 高价入场（Ampere 测算 -40%），将<b>雪上加霜</b>——世代换档"价格—销量"死结收紧。</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= PART 03 速览 ================= -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="num">03</div>
+      <div class="title">其他新闻速览<em>平台竞争 · 产品市场 · 数字化后续</em></div>
+    </div>
+
+    <div class="mini-h">① 平台竞争</div>
+    <div class="ev-line" style="border-left:3px solid var(--ink-2);">
+      <div class="ev-head"><span class="tg tg-b">新战线</span><span class="d">8/17 · 2K</span></div>
+      <div class="ev-body">2K 成立体育工作室 <strong>Small Axe</strong>，由 EA Sports FIFA 15 年老将 Aaron McHardy 领衔，正面进攻 <strong>EA Sports FC</strong> 足球霸主地位——体育游戏"双强争霸"或在 2027 后重塑。</div>
+    </div>
+    <div class="ev-line" style="border-left:3px solid var(--xbox);">
+      <div class="ev-head"><span class="tg tg-g">订阅</span><span class="d">8/19 · Xbox</span></div>
+      <div class="ev-body">XGP 八月第二波新增 <strong>9 款</strong>，含《瘟疫传说传承》（PS5 移植作首日入库）等，科隆展前充实订阅库。</div>
+    </div>
+    <div class="ev-line" style="border-left:3px solid var(--green);">
+      <div class="ev-head"><span class="tg tg-g">实体需求</span><span class="d">生化危机:安魂曲</span></div>
+      <div class="ev-body">卡普空《生化危机:安魂曲》全球破 <strong>800 万</strong>，法国市场实体版占比高达 <strong>55%</strong>——恐怖生存品类实体盘仍有强需求，与"索尼弃盘"形成对照。</div>
+    </div>
+
+    <div class="mini-h">② 产品 / 市场</div>
+    <div class="ev-line" style="border-left:3px solid var(--ink-2);">
+      <div class="ev-head"><span class="tg tg-b">D23</span><span class="d">8/19 · 王国之心4</span></div>
+      <div class="ev-body">迪士尼 D23 放出《王国之心4》加长实机，首个联动世界为《寻梦环游记》亡灵之地，野村哲也承诺<strong>不跳票、2027 年底发售</strong>。</div>
+    </div>
+    <div class="ev-line" style="border-left:3px solid var(--sony);">
+      <div class="ev-head"><span class="tg tg-b">预购</span><span class="d">GTA6</span></div>
+      <div class="ev-body">Sensor Tower：GTA6 预购收入已达 <strong>4.29 亿美元</strong>、约 438 万份，<strong>PS5 占 77%</strong>、终极版占近 90%。</div>
+    </div>
+    <div class="ev-line" style="border-left:3px solid var(--gold);">
+      <div class="ev-head"><span class="tg tg-y">新兴市场</span><span class="d">印度</span></div>
+      <div class="ev-body">Niko Partners：印度游戏市场 2025 收入破 <strong>10.4 亿美元</strong>，2026 年底预计达 12 亿——下一个十亿级市场，出海权重上升。</div>
+    </div>
+
+    <div class="mini-h">③ 数字化后续</div>
+    <div class="ev-line" style="border-left:3px solid var(--gold);">
+      <div class="ev-head"><span class="tg tg-y">实体仅兑换码</span><span class="d">暗黑破坏神4</span></div>
+      <div class="ev-body">爆料：《暗黑4》Switch 2 版 9/15 发售、$69.99，含两资料片，<strong>实体版仅提供下载码</strong>（无光盘）——数字优先延续。</div>
+    </div>
+    <div class="ev-line" style="border-left:3px solid var(--gold);">
+      <div class="ev-head"><span class="tg tg-y">锁价</span><span class="d">巴西 · 索尼</span></div>
+      <div class="ev-body">巴西零售商 Gamer Hut 因索尼"锁价"（保留上架须禁用平台促销券、只能全价卖）<strong>取消《漫威金刚狼》预购</strong>——承接 W31"索尼税"定价管控争议。</div>
+    </div>
+  </div>
+
+  <!-- 下期预告 -->
+  <div style="background:linear-gradient(135deg,#16283f,#2c4a6e);padding:12px 20px;text-align:center;">
+    <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:rgba(255,255,255,0.5);font-weight:700;">NEXT WEEK</span>
+    <div style="font-size:13px;color:rgba(255,255,255,0.88);margin-top:4px;font-weight:700;">W33 预告：gamescom 2026 开幕之夜 · GTA6 前瞻预告(8/27 Netflix) · 科隆新游潮</div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="logo">GAMEPULSE · PC &amp; CONSOLE</div>
+    <div>数据来源：腾讯文档 · PS Blog · VGC · Eurogamer · IGN · Alinea · Sensor Tower · Ampere · Circana · Niko Partners · B站 · IT之家 · 3DM · 游民星空</div>
+    <div>2026.08.21 · W32 WEEKLY · COVERAGE 8.17–8.23</div>
+    <div class="disc">部分销量/预购为第三方(Alinea/Sensor Tower/Circana)估算，泄露/爆料信息已标注，以官方披露为准。本报告由 AI 整理，仅供参考，不构成投资建议。</div>
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+(function(){
+  const toolbar = document.getElementById('export-toolbar');
+  const mainBtn = document.getElementById('exp-main');
+  const panel = document.getElementById('exp-panel');
+  const status = document.getElementById('exp-status');
+  let panelVisible = false;
+  mainBtn.addEventListener('click', () => { panelVisible = !panelVisible; panel.style.display = panelVisible ? 'block' : 'none'; });
+  document.addEventListener('click', (e) => { if (!toolbar.contains(e.target)) { panelVisible = false; panel.style.display = 'none'; } });
+  async function exportAt(scale) {
+    status.textContent = `正在生成 @${scale}x ...`;
+    toolbar.style.display = 'none';
+    const page = document.querySelector('.page');
+    try {
+      const canvas = await html2canvas(page, { scale, useCORS: true, backgroundColor: '#f4f6f9', width: 430, windowWidth: 430 });
+      toolbar.style.display = '';
+      const link = document.createElement('a');
+      link.download = `Weekly_Briefing_W32_20260821_${scale}x.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+      status.textContent = `✅ @${scale}x 已下载 (${canvas.width}×${canvas.height})`;
+    } catch(e) { toolbar.style.display = ''; status.textContent = '❌ ' + e.message; }
+  }
+  panel.querySelectorAll('.exp-btn').forEach(btn => btn.addEventListener('click', (e) => { e.stopPropagation(); exportAt(parseInt(btn.dataset.scale, 10)); }));
+})();
+</script>
+
+</body>
+</html>
