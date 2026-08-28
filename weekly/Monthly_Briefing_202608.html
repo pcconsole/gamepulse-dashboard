@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>端主行业月报 · 2026年8月</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f6f9;--ink:#1e3a5f;--ink2:#2c4a6e;--dim:#4a5c6e;--ghost:#7b8a99;
+  --red:#c85a4a;--redbg:#f5e0db;--gold:#8b6914;--goldbg:#ede4cf;
+  --green:#3d6b57;--greenbg:#dde7e0;--blue:#0055a5;--bluebg:#e0ecf7;
+  --surface:#fff;--surface2:#eef1f5;--rule:#d5dce3;--rule2:#e5e9ee;
+  --sony:#003087;--xbox:#107c10;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#c8ced6;font-family:'Microsoft YaHei','微软雅黑',-apple-system,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.page{width:430px;background:var(--bg);color:var(--ink);margin:0 auto;overflow:hidden}
+.hero{background:linear-gradient(135deg,#16283f 0%,#24405f 56%,#2c4a6e 100%);color:#fff;padding:26px 20px 28px;position:relative}
+.hero:after{content:'';position:absolute;left:0;right:0;bottom:0;height:5px;background:linear-gradient(90deg,var(--red),var(--gold))}
+.brand{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.3em;color:#e0a56a;font-weight:700;margin-bottom:12px}
+.hero h1{font-size:30px;line-height:1.15;font-weight:800}
+.hero .sub{font-size:15px;line-height:1.52;color:rgba(255,255,255,.84);margin-top:10px;font-weight:600}
+.hero .meta{display:flex;gap:18px;margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.15);font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(255,255,255,.72);letter-spacing:.06em}
+.hero .meta strong{color:#fff}
+.exec{background:#16283f;color:#fff;padding:19px 20px 20px}
+.exec-h{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.17em;color:#e0a56a;font-weight:700;margin-bottom:11px}
+.exec-row{display:flex;gap:11px;padding:9px 0;border-top:1px solid rgba(255,255,255,.1)}
+.exec-row:first-of-type{border-top:0}
+.exec-n{font-family:'IBM Plex Mono',monospace;font-size:20px;font-weight:800;color:#e8b84a;line-height:1;min-width:25px}
+.exec-t{font-size:13px;line-height:1.58;color:rgba(255,255,255,.9)}
+.exec-t b{color:#fff;font-weight:800}
+.section{padding:25px 20px 22px}
+.section+.section{border-top:10px solid #e2e7ed}
+.sec-head{display:flex;align-items:flex-start;gap:11px;margin-bottom:15px;padding-bottom:10px;border-bottom:2px solid var(--ink);position:relative}
+.sec-head:after{content:'';position:absolute;left:0;bottom:-2px;width:48px;height:2px;background:var(--red)}
+.sec-head .num{font-family:'IBM Plex Mono',monospace;font-size:31px;font-weight:800;color:var(--red);line-height:.92}
+.sec-head .title{font-size:18px;font-weight:800;line-height:1.32;flex:1}
+.sec-head .title em{display:block;font-style:normal;font-size:15px;color:var(--red);font-weight:600;margin-top:3px}
+.key{background:linear-gradient(135deg,#1e3a5f,#263f5e);color:rgba(255,255,255,.93);border-left:4px solid var(--gold);border-radius:6px;padding:13px 15px;margin:10px 0 15px}
+.key-l{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;color:#e8b84a;font-weight:700;margin-bottom:6px}
+.key-t{font-size:13px;line-height:1.65;font-weight:600}
+.key-t b{color:#fff;font-weight:800;border-bottom:2px solid rgba(232,184,74,.5)}
+.key-split{display:flex;flex-direction:column;gap:7px;margin-top:9px}
+.key-side{display:grid;grid-template-columns:52px 1fr;gap:9px;align-items:start;background:rgba(255,255,255,.06);border-radius:5px;padding:8px 10px}
+.key-side .side-t{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:800;line-height:1.5;padding-top:1px}
+.key-side.ps .side-t{color:#7db4e6}.key-side.xb .side-t{color:#7fd0a3}
+.key-side .side-b{font-size:12.5px;line-height:1.6;font-weight:600;color:rgba(255,255,255,.9)}
+.key-side .side-b b{color:#fff;font-weight:800;border-bottom:2px solid rgba(232,184,74,.5)}
+.key-foot{font-size:12.5px;line-height:1.6;font-weight:600;margin-top:9px}.key-foot b{color:#fff;font-weight:800;border-bottom:2px solid rgba(232,184,74,.5)}
+.mini-h{font-size:13px;font-weight:700;color:var(--dim);margin:16px 0 9px;display:flex;align-items:center;gap:7px}
+.mini-h:before{content:'';width:4px;height:14px;background:var(--red);border-radius:2px}
+.evolve{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:9px 0 15px;padding-top:32px;position:relative}
+.evolve:before{content:'';position:absolute;left:15%;right:15%;top:13px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--ink2) 0 66%,var(--red) 66% 100%);box-shadow:0 0 0 1px rgba(30,58,95,.06)}
+.ev-step{background:var(--surface);border:1px solid var(--rule2);border-radius:7px;padding:14px 9px 10px;min-height:112px;position:relative;box-shadow:0 3px 10px rgba(30,58,95,.07)}
+.ev-step:before{content:attr(data-step);position:absolute;left:50%;top:-30px;transform:translateX(-50%);width:25px;height:25px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--ink2);color:#fff;border:3px solid var(--bg);font-family:'IBM Plex Mono',monospace;font-size:8.5px;font-weight:800;z-index:2;box-shadow:0 2px 6px rgba(30,58,95,.24)}
+.ev-step:not(:last-child):after{content:'›';position:absolute;right:-11px;top:-30px;width:18px;height:25px;display:flex;align-items:center;justify-content:center;color:var(--ghost);font-family:'IBM Plex Mono',monospace;font-size:17px;font-weight:800;line-height:1;z-index:3}
+.ev-step.now{border-color:rgba(200,90,74,.38);background:linear-gradient(180deg,#fff 0%,#fff8f6 100%)}
+.ev-step.now:before{background:var(--red);box-shadow:0 2px 8px rgba(200,90,74,.28)}
+.ev-time{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--ink);font-weight:800;letter-spacing:.08em;margin-bottom:6px;padding:2px 6px;background:#e8edf3;border-radius:3px}
+.ev-step.now .ev-time{color:var(--red);background:var(--redbg)}
+.ev-title{font-size:12.5px;color:var(--ink);font-weight:800;line-height:1.35;min-height:34px}
+.ev-text{font-size:10.8px;color:var(--dim);line-height:1.48;margin-top:5px}
+.watch{background:#fff;border:1px solid var(--rule);border-left:4px solid var(--red);border-radius:6px;padding:11px 13px;margin:11px 0}
+.watch-h{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--red);font-weight:800;letter-spacing:.06em;margin-bottom:5px}
+.watch-t{font-size:13px;line-height:1.62;color:var(--dim)}
+.watch-t b{color:var(--ink)}
+.vs-wrap{background:var(--surface);border:1px solid var(--rule);border-radius:8px;overflow:hidden;margin:10px 0}
+.vs-head,.vs-row{display:grid;grid-template-columns:1fr 1fr}
+.vs-head{color:#fff;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:800}
+.vs-head div{padding:8px 10px}.vs-head .ps{background:var(--sony)}.vs-head .xb{background:var(--xbox)}
+.vs-cat{background:var(--surface2);font-size:11px;color:var(--ghost);font-weight:800;padding:5px 9px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule2)}
+.vs-cell{padding:8px 9px;font-size:12px;line-height:1.53;color:var(--dim);word-break:break-word}
+.vs-cell+ .vs-cell{border-left:1px solid var(--rule2)}
+.vs-cell b{color:var(--ink);font-weight:800}
+/* 平台战略对比：强化平台识别、分类层级与单元格信息层次 */
+.strategy-vs{border:0;box-shadow:0 5px 18px rgba(30,58,95,.12);border-radius:10px}
+.strategy-vs .vs-head{font-size:10px;letter-spacing:.04em}
+.strategy-vs .vs-head>div{padding:11px 12px 10px;position:relative;overflow:hidden}
+.strategy-vs .vs-head>div:after{content:'';position:absolute;right:-18px;bottom:-28px;width:76px;height:76px;border:1px solid rgba(255,255,255,.2);border-radius:50%}
+.strategy-vs .plat-kicker{display:block;font-size:8.5px;line-height:1;color:rgba(255,255,255,.68);letter-spacing:.15em;margin-bottom:5px}
+.strategy-vs .plat-name{display:block;font-size:14px;line-height:1.15;color:#fff;letter-spacing:.02em}
+.strategy-vs .vs-cat{display:flex;align-items:center;gap:7px;padding:7px 10px;background:#e9edf2;border-top:1px solid #d3dae3;border-bottom:1px solid #dbe1e8}
+.strategy-vs .cat-no{display:inline-flex;align-items:center;justify-content:center;width:22px;height:18px;border-radius:3px;background:var(--ink);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.04em}
+.strategy-vs .cat-name{font-size:12px;color:var(--ink);font-weight:800}
+.strategy-vs .cat-note{margin-left:auto;font-size:9.5px;color:var(--ghost);font-weight:600}
+.strategy-vs .vs-row{background:linear-gradient(90deg,rgba(0,85,165,.035) 0 50%,rgba(16,124,65,.035) 50% 100%)}
+.strategy-vs .vs-cell{padding:10px 11px 11px;min-height:80px;border-top:3px solid rgba(0,85,165,.35)}
+.strategy-vs .vs-cell+ .vs-cell{border-left:1px solid #ccd5df;border-top-color:rgba(16,124,65,.38)}
+.strategy-vs .cell-lead{font-size:12.5px;line-height:1.38;font-weight:800;color:var(--ink);margin-bottom:5px}
+.strategy-vs .cell-lead.ps-t{color:#064b90}.strategy-vs .cell-lead.xb-t{color:#0e6b39}
+.strategy-vs .cell-sub{font-size:11.2px;line-height:1.52;color:var(--dim)}
+.strategy-vs .cell-mark{display:inline-block;padding:1px 4px;border-radius:3px;font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:800;vertical-align:1px;margin-right:3px}
+.strategy-vs .cell-mark.ps-m{color:#0055a5;background:#e0ecf7}.strategy-vs .cell-mark.xb-m{color:#107c41;background:#deeee5}
+.boundary{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin:10px 0}
+.bound-card{background:var(--surface);border:1px solid var(--rule2);border-radius:6px;padding:8px 7px;text-align:center}
+.bound-v{font-family:'IBM Plex Mono',monospace;font-size:17px;font-weight:800;color:var(--red)}
+.bound-l{font-size:10px;line-height:1.38;color:var(--dim);margin-top:4px}
+.gamescom-stat{display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:center;background:#e8edf3;border:1px solid #d5dde6;border-radius:8px;padding:10px 12px;margin:10px 0 12px}
+.gamescom-n{font-family:'IBM Plex Mono',monospace;font-size:28px;line-height:1;font-weight:800;color:var(--red);text-align:center}
+.gamescom-n small{display:block;font-size:8.5px;letter-spacing:.08em;color:var(--ghost);margin-top:5px}
+.gamescom-t{font-size:11.7px;line-height:1.55;color:var(--dim)}.gamescom-t b{color:var(--ink)}
+.gta-feature{background:var(--surface);border-radius:9px;padding:13px 14px 12px;margin:10px 0 14px;box-shadow:0 4px 14px rgba(30,58,95,.1);position:relative;overflow:hidden}
+.gta-feature:before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--red)}
+.gta-feature:after{content:'VI';position:absolute;right:6px;top:-10px;font-family:'IBM Plex Mono',monospace;font-size:80px;font-weight:800;color:rgba(200,90,74,.08);line-height:1}
+.gta-kicker{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--ghost);font-weight:800;letter-spacing:.12em;margin-bottom:5px}
+.gta-title{font-size:17px;font-weight:800;line-height:1.28;color:var(--ink);position:relative;z-index:1}.gta-title em{font-style:normal;color:var(--red)}
+.gta-metrics{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin:11px 0 10px;position:relative;z-index:1}
+.gta-metric{border:1px solid var(--rule2);border-radius:5px;padding:8px 5px;background:#f7f9fb;text-align:center}
+.gta-v{font-family:'IBM Plex Mono',monospace;font-size:17px;font-weight:800;color:var(--red)}.gta-l{font-size:8.8px;line-height:1.35;color:var(--dim);margin-top:3px}
+.gta-flow{font-size:11.5px;line-height:1.6;color:var(--dim);position:relative;z-index:1}.gta-flow b{color:var(--ink)}
+.focus-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0;grid-auto-rows:1fr}
+.focus{background:var(--surface);border:0;border-radius:9px;padding:12px 12px 11px;position:relative;overflow:hidden;box-shadow:0 4px 14px rgba(30,58,95,.1);display:flex;flex-direction:column;min-height:166px}
+.focus:before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--red)}
+.focus:after{content:attr(data-index);position:absolute;right:8px;top:5px;font-family:'IBM Plex Mono',monospace;font-size:27px;line-height:1;font-weight:800;color:rgba(200,90,74,.1)}
+.focus.global:before{background:var(--gold)}.focus.global:after{color:rgba(139,105,20,.11)}
+.focus .f-top{display:flex;align-items:center;gap:5px;margin-bottom:7px;padding-right:27px}
+.focus .f-region,.focus .f-genre{display:inline-block;border-radius:3px;padding:2px 5px;font-family:'IBM Plex Mono',monospace;font-size:8.5px;font-weight:800;letter-spacing:.04em}
+.focus .f-region{background:var(--redbg);color:var(--red)}.focus.global .f-region{background:var(--goldbg);color:var(--gold)}
+.focus .f-genre{background:#e8edf3;color:var(--ghost)}
+.focus .f-name{font-size:15px;font-weight:800;color:var(--ink);line-height:1.25;padding-right:24px;min-height:38px;display:flex;align-items:flex-start}
+.focus .f-meta{font-family:'IBM Plex Mono',monospace;font-size:9.7px;color:var(--red);font-weight:800;margin:5px 0 7px;padding:5px 6px;line-height:1.35;background:#fff5f2;border-radius:4px}
+.focus.global .f-meta{color:var(--gold);background:#f7f2e6}
+.focus .f-body{font-size:11.2px;color:var(--dim);line-height:1.5;margin-top:auto;padding-top:1px}
+.focus .f-body b{color:var(--ink)}
+.pipeline-list{background:var(--surface);border-radius:9px;box-shadow:0 4px 15px rgba(30,58,95,.09);overflow:hidden;margin:9px 0 12px}
+.pipe-item{padding:9px 11px 9px 10px;border-bottom:1px solid var(--rule2);position:relative}
+.pipe-item:last-child{border-bottom:0}.pipe-item:nth-child(even){background:#f1f4f7}
+.pipe-top{display:grid;grid-template-columns:24px minmax(0,1fr) auto;align-items:center;gap:7px;margin-bottom:4px}
+.pipe-no{font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:800;color:#fff;background:var(--ink2);border-radius:3px;padding:3px 0;text-align:center}
+.pipe-name{font-size:12.5px;line-height:1.3;color:var(--ink);font-weight:800;white-space:nowrap;letter-spacing:-.02em}
+.pipe-date{font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--red);font-weight:800;white-space:nowrap}
+.pipe-bottom{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;padding-left:31px;align-items:start}
+.pipe-signal{font-size:10.8px;line-height:1.46;color:var(--dim)}
+.pipe-platform{font-family:'IBM Plex Mono',monospace;font-size:8.8px;line-height:1.35;color:var(--ghost);font-weight:700;text-align:right;white-space:nowrap;padding-top:1px}
+.signal{background:var(--surface);border:1px solid var(--rule2);border-radius:6px;margin-top:11px;padding:10px 12px}
+.signal-row{display:flex;gap:9px;padding:6px 0;border-bottom:1px dashed var(--rule)}
+.signal-row:last-child{border-bottom:0}
+.signal-tag{min-width:42px;font-family:'IBM Plex Mono',monospace;color:var(--red);font-size:11px;font-weight:800}
+.signal-t{font-size:12.5px;line-height:1.55;color:var(--dim)}
+.signal-t b{color:var(--ink)}
+.calendar{display:flex;flex-direction:column;gap:7px}
+.cal{display:grid;grid-template-columns:67px 1fr;background:var(--surface);border:1px solid var(--rule2);border-radius:6px;overflow:hidden}
+.cal-d{background:var(--ink2);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:800;padding:8px;text-align:center}
+.cal-t{font-size:12.5px;color:var(--dim);line-height:1.5;padding:7px 10px}.cal-t b{color:var(--ink)}
+.footer{background:var(--ink);color:rgba(255,255,255,.62);padding:19px 20px;text-align:center;font-size:10px;line-height:1.75}
+.footer .logo{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.3em;color:#fff;margin-bottom:7px}
+.footer .disc{font-size:9px;color:rgba(255,255,255,.4);margin-top:7px;line-height:1.55}
+@media print{#export-toolbar{display:none!important}}
+</style>
+</head>
+<body>
+<div id="export-toolbar" style="position:fixed;top:10px;right:10px;z-index:9999;font-family:'Microsoft YaHei',sans-serif;user-select:none;">
+  <button id="exp-main" style="background:#c85a4a;color:#fff;border:0;padding:6px 12px;border-radius:4px;font-size:11px;font-weight:700;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.2);">📥 导出长图</button>
+  <div id="exp-panel" style="display:none;margin-top:6px;background:rgba(30,58,95,.96);padding:8px;border-radius:4px;">
+    <button data-scale="2" class="exp-btn" style="display:block;width:100%;margin-bottom:4px;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.25);padding:5px 8px;border-radius:3px;font-size:10px;">@2x · 860px</button>
+    <button data-scale="3" class="exp-btn" style="display:block;width:100%;margin-bottom:4px;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.25);padding:5px 8px;border-radius:3px;font-size:10px;">@3x · 1290px</button>
+    <button data-scale="4" class="exp-btn" style="display:block;width:100%;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.25);padding:5px 8px;border-radius:3px;font-size:10px;">@4x · 1720px</button>
+    <div id="exp-status" style="font-size:9px;color:#ffb896;margin-top:6px;"></div>
+  </div>
+</div>
+<div class="page">
+  <div class="hero">
+    <div class="brand">GAMEPULSE · MONTHLY</div>
+    <h1>端主行业月报 2026·08</h1>
+    <div class="sub">独占重新成为硬件筹码，数字所有权路线分岔；Gamescom集中释放未来产品Pipeline</div>
+    <div class="meta"><span>ISSUE · <strong>2026.08.31</strong></span><span>COVERAGE · <strong>08.01 – 08.31</strong></span></div>
+  </div>
+
+  <div class="exec">
+    <div class="exec-h">EXECUTIVE SUMMARY · 30秒速览</div>
+    <div class="exec-row"><div class="exec-n">1</div><div class="exec-t"><b>独占宣传回归</b>：Sony收缩第一方单机PC移植；Xbox仍多平台发行，但停止替PS5导流，并以《神鬼寓言》18分钟实机强化第一方内容辨识度。</div></div>
+    <div class="exec-row"><div class="exec-n">2</div><div class="exec-t"><b>数字所有权路线分岔</b>：Sony强化数字授权与定价控制；Xbox以光盘转数字迁移旧资产，但未确认Helix保留光驱。</div></div>
+    <div class="exec-row"><div class="exec-n">3</div><div class="exec-t"><b>Gamescom定义本月Pipeline</b>：本章17款重点产品中13款由展会集中释放；GTA6则以Netflix首播和首次媒体实机展示主导展后注意力。</div></div>
+  </div>
+
+  <div class="section">
+    <div class="sec-head"><div class="num">01</div><div class="title">Sony与Xbox重新打“独占牌”<em>宣传口径回到独占优先，底层发行仍未封闭</em></div></div>
+    <div class="key"><div class="key-l">核心结论 · PLATFORM STRATEGY</div><div class="key-t">Sony与Xbox都在宣传口径上回到<b>“独占优先”</b>，但实际动作并不相同：</div>
+      <div class="key-split">
+        <div class="key-side ps"><div class="side-t">SONY</div><div class="side-b">减少第一方单机内容外溢，重新用独占专场和主机独占强化PS平台价值。</div></div>
+        <div class="key-side xb"><div class="side-t">XBOX</div><div class="side-b">仍在多平台销售，但停止替PS5导流，并释放<b>《神鬼寓言》</b>等第一方内容重建品牌辨识度。</div></div>
+      </div>
+    </div>
+
+    <div class="mini-h">8月演进</div>
+    <div class="evolve">
+      <div class="ev-step" data-step="01"><div class="ev-time">月初 · 8/01</div><div class="ev-title">内容不足，路径分化</div><div class="ev-text">Sony强化平台内变现；Xbox用跨端、兼容与订阅对冲内容空窗。</div></div>
+      <div class="ev-step" data-step="02"><div class="ev-time">月中 · 8/18</div><div class="ev-title">优质内容成为筹码</div><div class="ev-text">《影之刃零》获专属State of Play，并锁定PS5主机独占12个月。</div></div>
+      <div class="ev-step now" data-step="03"><div class="ev-time">月末 · 8/26–27</div><div class="ev-title">独占宣传回归</div><div class="ev-text">Sony推出“Only on PS5”；Xbox减少PS5曝光，并释放《神鬼寓言》18分钟实机。</div></div>
+    </div>
+
+    <div class="watch"><div class="watch-h">IGN OBSERVATION · 8/26</div><div class="watch-t">IGN指出Xbox与PlayStation近期均<b>“退缩回独占宣传”</b>。这不是全面回到封闭独占，而是硬件销售压力下重新控制营销话语权：Sony缩减第一方单机PC移植；Xbox保持多平台发行，但宣传先服务Xbox生态。</div></div>
+
+    <div class="vs-wrap strategy-vs">
+      <div class="vs-head">
+        <div class="ps"><span class="plat-kicker">CONTENT STRATEGY</span><span class="plat-name">SONY / PLAYSTATION</span></div>
+        <div class="xb"><span class="plat-kicker">CONTENT STRATEGY</span><span class="plat-name">MICROSOFT / XBOX</span></div>
+      </div>
+      <div class="vs-cat"><span class="cat-no">01</span><span class="cat-name">独占宣传</span><span class="cat-note">营销口径</span></div>
+      <div class="vs-row">
+        <div class="vs-cell"><div class="cell-lead ps-t">“Only on PS5”回归</div><div class="cell-sub"><span class="cell-mark ps-m">独占</span>《影之刃零》主机独占12个月；第一方单机PC移植收缩。</div></div>
+        <div class="vs-cell"><div class="cell-lead xb-t">宣传回到Xbox优先</div><div class="cell-sub"><span class="cell-mark xb-m">导流</span>自家多平台预告不再标注PS5，减少替竞品曝光。</div></div>
+      </div>
+      <div class="vs-cat"><span class="cat-no">02</span><span class="cat-name">实际发行</span><span class="cat-note">落地动作</span></div>
+      <div class="vs-row">
+        <div class="vs-cell"><div class="cell-lead ps-t">并非全面封闭</div><div class="cell-sub"><span class="cell-mark ps-m">PC</span>服务型游戏继续支持PC；第二方项目按合作协议选择独占。</div></div>
+        <div class="vs-cell"><div class="cell-lead xb-t">继续多平台变现</div><div class="cell-sub"><span class="cell-mark xb-m">跨端</span>Game Pass、跨端与向后兼容持续推进，仍会向其他平台发行。</div></div>
+      </div>
+      <div class="vs-cat"><span class="cat-no">03</span><span class="cat-name">内容来源</span><span class="cat-note">供给结构</span></div>
+      <div class="vs-row">
+        <div class="vs-cell"><div class="cell-lead ps-t">第一方 + 高价值合作</div><div class="cell-sub"><span class="cell-mark ps-m">供给</span>用第一方单机与第二方合作争夺中国3A等稀缺内容。</div></div>
+        <div class="vs-cell"><div class="cell-lead xb-t">并购资产稳底盘，第一方补位</div><div class="cell-sub"><span class="cell-mark xb-m">供给</span>动视暴雪、Bethesda扛底盘；《神鬼寓言》开始补强原生第一方单机。</div></div>
+      </div>
+      <div class="vs-cat"><span class="cat-no">04</span><span class="cat-name">核心矛盾</span><span class="cat-note">战略取舍</span></div>
+      <div class="vs-row">
+        <div class="vs-cell"><div class="cell-lead ps-t">硬件吸引力优先</div><div class="cell-sub"><span class="cell-mark ps-m">取舍</span>牺牲部分PC增量，强化PS5及下一代硬件价值。</div></div>
+        <div class="vs-cell"><div class="cell-lead xb-t">收入与品牌控制并行</div><div class="cell-sub"><span class="cell-mark xb-m">取舍</span>继续赚取竞品平台收入，同时减少替竞品做品牌曝光。</div></div>
+      </div>
+    </div>
+
+    <div class="signal">
+      <div class="signal-row"><div class="signal-tag">证据</div><div class="signal-t">Xbox同步放出《神鬼寓言》18分钟实机并锁定2027/2/23，说明“Xbox优先”已从Logo调整进入<b>第一方内容释放</b>。</div></div>
+      <div class="signal-row"><div class="signal-tag">边界</div><div class="signal-t">不能写成“两家全面放弃多平台”：《最终幻想7：启示录》四平台同步，说明<b>第三方大作仍在扩大首发覆盖</b>。</div></div>
+      <div class="signal-row"><div class="signal-tag">判断</div><div class="signal-t">8月真正变化的是<b>营销叙事和头部内容分配</b>，而不是行业底层重新封闭。</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-head"><div class="num">02</div><div class="title">数字所有权分岔<em>Sony强化控制，Xbox为实体用户搭迁移桥梁</em></div></div>
+    <div class="key"><div class="key-l">核心结论 · DIGITAL OWNERSHIP</div><div class="key-t">两家都在推数字化，但对<b>既有实体用户</b>走了相反路径：</div>
+      <div class="key-split">
+        <div class="key-side ps"><div class="side-t">SONY<br>做减法</div><div class="side-b">2028停产新盘、条款重申数字仅为授权，<b>用户资产收紧</b>。</div></div>
+        <div class="key-side xb"><div class="side-t">XBOX<br>做加法</div><div class="side-b">用光盘转数字把旧实体盘迁入账户/PC/云端，以“迁移+兼容”<b>降低转型阻力</b>。</div></div>
+      </div>
+      <div class="key-foot">分歧不在方向，而在<b>是否为老用户保留资产出口</b>。</div>
+    </div>
+
+    <div class="mini-h">8月演进</div>
+    <div class="evolve">
+      <div class="ev-step" data-step="01"><div class="ev-time">月初 · 8/01</div><div class="ev-title">Sony弃盘持续发酵</div><div class="ev-text">2028停止新游实体光盘；Xbox光盘转数字仍处泄露阶段。</div></div>
+      <div class="ev-step" data-step="02"><div class="ev-time">月中 · 8/10–18</div><div class="ev-title">“购买≠拥有”落地</div><div class="ev-text">云版停服、荷兰诉讼、《影之刃零》“No Disc No Buy”集中出现。</div></div>
+      <div class="ev-step now" data-step="03"><div class="ev-time">月末 · 8/31</div><div class="ev-title">路线正式分岔</div><div class="ev-text">Sony强调数字版仅为许可；Xbox启动光盘转数字测试。</div></div>
+    </div>
+
+    <div class="vs-wrap strategy-vs">
+      <div class="vs-head">
+        <div class="ps"><span class="plat-kicker">DIGITAL OWNERSHIP</span><span class="plat-name">SONY / CONTROL</span></div>
+        <div class="xb"><span class="plat-kicker">DIGITAL OWNERSHIP</span><span class="plat-name">XBOX / MIGRATION</span></div>
+      </div>
+      <div class="vs-cat"><span class="cat-no">01</span><span class="cat-name">核心动作</span><span class="cat-note">渠道路线</span></div>
+      <div class="vs-row">
+        <div class="vs-cell"><div class="cell-lead ps-t">停止新游实体盘</div><div class="cell-sub"><span class="cell-mark ps-m">许可</span>约50页条款重申：数字游戏购买的是授权许可。</div></div>
+        <div class="vs-cell"><div class="cell-lead xb-t">启动光盘转数字</div><div class="cell-sub"><span class="cell-mark xb-m">迁移</span>8/31向Insider开放测试，首批支持数千款游戏。</div></div>
+      </div>
+      <div class="vs-cat"><span class="cat-no">02</span><span class="cat-name">用户权益</span><span class="cat-note">资产处置</span></div>
+      <div class="vs-row">
+        <div class="vs-cell"><div class="cell-lead ps-t">访问权依附账户</div><div class="cell-sub"><span class="cell-mark ps-m">限制</span>封禁、注销或停服可能失去访问，且不可自由转售。</div></div>
+        <div class="vs-cell"><div class="cell-lead xb-t">实体资产可迁移</div><div class="cell-sub"><span class="cell-mark xb-m">权益</span>接入Play Anywhere与Cloud；实体盘仍可使用或转售，授权随盘转移。</div></div>
+      </div>
+      <div class="vs-cat"><span class="cat-no">03</span><span class="cat-name">市场反应</span><span class="cat-note">玩家与监管</span></div>
+      <div class="vs-row">
+        <div class="vs-cell"><div class="cell-lead ps-t">争议集中爆发</div><div class="cell-sub"><span class="cell-mark ps-m">反噬</span>荷兰4.57亿美元诉讼、巴西锁价争议及《影之刃零》无盘抵制。</div></div>
+        <div class="vs-cell"><div class="cell-lead xb-t">以选择权形成对冲</div><div class="cell-sub"><span class="cell-mark xb-m">边界</span>路线更照顾实体用户，但Helix是否配置光驱仍未确认。</div></div>
+      </div>
+    </div>
+
+    <div class="boundary">
+      <div class="bound-card"><div class="bound-v">&gt;90%</div><div class="bound-l">Take-Two业务<br>已是数字发行</div></div>
+      <div class="bound-card"><div class="bound-v">55%</div><div class="bound-l">《生化危机:安魂曲》<br>法国实体占比</div></div>
+      <div class="bound-card"><div class="bound-v">$30/$60</div><div class="bound-l">云版停服后<br>购买价值归零</div></div>
+    </div>
+
+    <div class="signal">
+      <div class="signal-row"><div class="signal-tag">硬件</div><div class="signal-t">Sharma称下一代Xbox需兼顾<b>效率、可负担性与性能</b>；光盘转数字也为降低硬件成本、延续向后兼容提供路径。</div></div>
+      <div class="signal-row"><div class="signal-tag">边界</div><div class="signal-t">“给玩家选择”不等于Helix确认保留光驱；Xbox承诺的是<b>既有资产迁移</b>，不是继续生产实体介质。</div></div>
+      <div class="signal-row"><div class="signal-tag">趋势</div><div class="signal-t">数字化总量不可逆，但实体盘正从大众发行方式转为<b>收藏、转售和所有权保障</b>。</div></div>
+      <div class="signal-row"><div class="signal-tag">竞争</div><div class="signal-t">平台竞争开始从“有没有实体盘”转向<b>如何迁移和保护既有资产</b>。</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-head"><div class="num">03</div><div class="title">科隆游戏展定义8月Pipeline<em>亚洲新品获得核心位置 · 成熟IP稳定供给</em></div></div>
+    <div class="key"><div class="key-l">产品信号 · GAMESCOM PIPELINE</div><div class="key-t">本章17款重点产品中，<b>13款核心信息由Gamescom集中释放（占76%）</b>。展会成为8月未来供给的主入口：亚洲新品进入开场及核心曝光位，成熟IP通过续作、重制和品类转换稳定市场预期。</div></div>
+
+    <div class="mini-h">A · 展外超级变量：GTA6</div>
+    <div class="gta-feature">
+      <div class="gta-kicker">GTA6 · MARKET &amp; ATTENTION DRIVER</div>
+      <div class="gta-title"><em>GTA6</em>：从超级产品升级为市场增长变量</div>
+      <div class="gta-metrics"><div class="gta-metric"><div class="gta-v">17.5%</div><div class="gta-l">Newzoo预计<br>完整游戏支出增幅</div></div><div class="gta-metric"><div class="gta-v">≈30MIN</div><div class="gta-l">Netflix<br>官方加长演示</div></div><div class="gta-metric"><div class="gta-v">69项</div><div class="gta-l">IGN整理<br>新玩法细节</div></div></div>
+      <div class="gta-flow"><b>泄露失控 → Rockstar回应 → Netflix首播 → 首次媒体实机演示</b>。Newzoo判断：若无GTA6，2026年主机收入基本无增长；官方则以高密度内容释放重新夺回产品叙事权。</div>
+    </div>
+
+    <div class="mini-h">B · 战略聚焦（6款）</div>
+    <div class="focus-grid">
+      <div class="focus" data-index="01"><div class="f-top"><span class="f-region">CN</span><span class="f-genre">ACTION RPG</span></div><div class="f-name">《影之刃零》</div><div class="f-meta">10/29 · PS5独占12个月 + PC</div><div class="f-body">专属SoP、甄子丹创意监制；已进入<b>发售与平台合作验证期</b>。</div></div>
+      <div class="focus" data-index="02"><div class="f-top"><span class="f-region">CN</span><span class="f-genre">ACTION RPG</span></div><div class="f-name">《黑神话：钟馗》</div><div class="f-meta">研发早期 · 平台待定</div><div class="f-body">15分钟实机，截至8/21 B站播放破850万；头部国产IP具备<b>全球事件能力</b>。</div></div>
+      <div class="focus" data-index="03"><div class="f-top"><span class="f-region">CN</span><span class="f-genre">ACTION</span></div><div class="f-name">《湮灭之潮》</div><div class="f-meta">PC · PS5 · XBOX · 待定</div><div class="f-body">53分钟实机及Gamescom新预告；腾讯投资的<b>全球向多平台动作项目</b>。</div></div>
+      <div class="focus" data-index="04"><div class="f-top"><span class="f-region">CN</span><span class="f-genre">CO-OP RPG</span></div><div class="f-name">《源初之结》</div><div class="f-meta">Gamescom开场首发 · 待定</div><div class="f-body">米哈游写实共斗RPG，代表其从二次元长线产品切入<b>写实主机3A</b>。</div></div>
+      <div class="focus global" data-index="05"><div class="f-top"><span class="f-region">XBOX</span><span class="f-genre">OPEN WORLD RPG</span></div><div class="f-name">《神鬼寓言》</div><div class="f-meta">2027/2/23 · XBOX · PC</div><div class="f-body">Gamescom放出18分钟实机，展示400名可互动NPC与战斗系统；成为Xbox<b>重建第一方单机辨识度</b>的关键产品。</div></div>
+      <div class="focus global" data-index="06"><div class="f-top"><span class="f-region">GLOBAL</span><span class="f-genre">RPG</span></div><div class="f-name">《巫师4》</div><div class="f-meta">目标2028 · 团队500+</div><div class="f-body">CDPR称其为最大、最大胆项目；代表下一轮<b>西方开放世界RPG</b>供给。</div></div>
+    </div>
+
+    <div class="mini-h">C · Gamescom高关注Pipeline（10款）</div>
+    <div class="pipeline-list">
+      <div class="pipe-item"><div class="pipe-top"><span class="pipe-no">01</span><span class="pipe-name">《七日世界》主机版</span><span class="pipe-date">8/26已上线</span></div><div class="pipe-bottom"><span class="pipe-signal">免费游玩、跨平台联机与进度同步，把PC/移动存量导向主机端</span><span class="pipe-platform">PS5 · XBOX</span></div></div>
+      <div class="pipe-item"><div class="pipe-top"><span class="pipe-no">02</span><span class="pipe-name">《无限大》</span><span class="pipe-date">2027/1/15</span></div><div class="pipe-bottom"><span class="pipe-signal">网易全球都市开放世界，多平台产品矩阵继续扩大</span><span class="pipe-platform">PC · PS5 · MOBILE</span></div></div>
+      <div class="pipe-item"><div class="pipe-top"><span class="pipe-no">03</span><span class="pipe-name">《昭和米国物语》</span><span class="pipe-date">预计2026</span></div><div class="pipe-bottom"><span class="pipe-signal">新实机强化文化差异化，继续切入全球单机市场</span><span class="pipe-platform">PC · PS5</span></div></div>
+      <div class="pipe-item"><div class="pipe-top"><span class="pipe-no">04</span><span class="pipe-name">《最终幻想7：启示录》</span><span class="pipe-date">2027春</span></div><div class="pipe-bottom"><span class="pipe-signal">重制三部曲终章，第三方大作放弃分段独占</span><span class="pipe-platform">四平台同步</span></div></div>
+      <div class="pipe-item"><div class="pipe-top"><span class="pipe-no">05</span><span class="pipe-name">《巫师3》重制版 +《旧时曲》</span><span class="pipe-date">9/29 · 2027</span></div><div class="pipe-bottom"><span class="pipe-signal">免费升级与大型DLC延长成熟IP生命周期</span><span class="pipe-platform">升级 · DLC</span></div></div>
+      <div class="pipe-item"><div class="pipe-top"><span class="pipe-no">06</span><span class="pipe-name">《彩虹六号：战术行动》</span><span class="pipe-date">2027</span></div><div class="pipe-bottom"><span class="pipe-signal">多人战术IP转向纯单人回合制策略</span><span class="pipe-platform">PC · PS5 · XBOX</span></div></div>
+      <div class="pipe-item"><div class="pipe-top"><span class="pipe-no">07</span><span class="pipe-name">《权力的游戏：维斯特洛之战》</span><span class="pipe-date">2027年初</span></div><div class="pipe-bottom"><span class="pipe-signal">强影视IP回归非对称即时战略</span><span class="pipe-platform">STEAM</span></div></div>
+      <div class="pipe-item"><div class="pipe-top"><span class="pipe-no">08</span><span class="pipe-name">《流放之路2》1.0</span><span class="pipe-date">12/11</span></div><div class="pipe-bottom"><span class="pipe-signal">结束两年抢先体验，正式发售并转为免费，新增Duelist职业</span><span class="pipe-platform">PC · PS5 · XBOX</span></div></div>
+      <div class="pipe-item"><div class="pipe-top"><span class="pipe-no">09</span><span class="pipe-name">《洛克人：Dual Override》</span><span class="pipe-date">2027</span></div><div class="pipe-bottom"><span class="pipe-signal">系列第12部，引入Override系统</span><span class="pipe-platform">全平台</span></div></div>
+      <div class="pipe-item"><div class="pipe-top"><span class="pipe-no">10</span><span class="pipe-name">《雷曼：传奇再叙》</span><span class="pipe-date">10/1</span></div><div class="pipe-bottom"><span class="pipe-signal">Ubisoft重启经典平台跳跃IP</span><span class="pipe-platform">全平台</span></div></div>
+    </div>
+
+    <div class="signal">
+      <div class="signal-row"><div class="signal-tag">展会</div><div class="signal-t">Gamescom贡献本章<b>75%的重点产品信息</b>，不再只是新品速览，而是8月Pipeline供给的核心来源。</div></div>
+      <div class="signal-row"><div class="signal-tag">亚洲</div><div class="signal-t">米哈游开场、《湮灭之潮》《无限大》《昭和米国物语》曝光，《七日世界》主机落地，亚洲厂商从<b>争夺展位进入跨端发行</b>。</div></div>
+      <div class="signal-row"><div class="signal-tag">IP</div><div class="signal-t">《神鬼寓言》、巫师、FF7、彩虹六号、洛克人、雷曼集中出现，<b>成熟IP仍是注意力和排期稳定器</b>。</div></div>
+      <div class="signal-row"><div class="signal-tag">展外</div><div class="signal-t">GTA6不属于Gamescom产品池，但凭Netflix首播、首次媒体实机演示和市场增长预期，继续<b>主导展后注意力</b>。</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-head"><div class="num">04</div><div class="title">9月关注日历<em>只保留影响内容供给与平台宣发的节点</em></div></div>
+    <div class="calendar">
+      <div class="cal"><div class="cal-d">SEP</div><div class="cal-t"><b>重点新品窗口</b>：《漫威金刚狼》《女神异闻录6》《寂静岭：Townfall》等。</div></div>
+      <div class="cal"><div class="cal-d">09/29</div><div class="cal-t"><b>《巫师3》重制升级</b>：免费更新与成熟IP回流效果。</div></div>
+      <div class="cal"><div class="cal-d">09/17–21</div><div class="cal-t"><b>TGS 2026</b>：重点跟踪Sega Sammy《异于天堂》《女神异闻录4：复兴版》《疯狂出租车：世界巡游》及未公开项目。</div></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="logo">GAMEPULSE · PC &amp; CONSOLE</div>
+    <div>数据来源：腾讯文档 · PlayStation / Xbox Wire / Rockstar / CDPR官方 · IGN · VGC · GamesIndustry · Eurogamer · Netflix · Newzoo · Ars Technica</div>
+    <div>2026.08 MONTHLY · COVERAGE 08.01–08.31</div>
+    <div class="disc">第三方销量/预购数据均已标注估算属性；未官宣信息标注为目标窗口或待确认。动态数据以8月定稿时点为准。本报告由AI整理，仅供内部行业判断。</div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+(function(){
+ const tb=document.getElementById('export-toolbar'),mb=document.getElementById('exp-main'),pn=document.getElementById('exp-panel'),st=document.getElementById('exp-status'),bs=document.querySelectorAll('.exp-btn'),pg=document.querySelector('.page');
+ mb.addEventListener('click',()=>pn.style.display=(pn.style.display==='none'?'block':'none'));
+ document.addEventListener('click',e=>{if(!tb.contains(e.target))pn.style.display='none';});
+ async function ex(s){if(typeof html2canvas==='undefined'){st.textContent='html2canvas未加载';return;}bs.forEach(b=>b.disabled=true);mb.disabled=true;st.textContent='渲染中…@'+s+'x';tb.style.visibility='hidden';try{if(document.fonts&&document.fonts.ready)await document.fonts.ready;await new Promise(r=>setTimeout(r,250));const c=await html2canvas(pg,{scale:s,backgroundColor:'#f4f6f9',useCORS:true,logging:false,width:pg.offsetWidth,height:pg.offsetHeight,windowWidth:pg.offsetWidth,windowHeight:pg.offsetHeight});c.toBlob(b=>{const u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download='Monthly_Briefing_202608_'+s+'x.png';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1000);st.textContent='✓ @'+s+'x已导出';tb.style.visibility='visible';bs.forEach(x=>x.disabled=false);mb.disabled=false;},'image/png');}catch(e){st.textContent='失败:'+e.message;tb.style.visibility='visible';bs.forEach(x=>x.disabled=false);mb.disabled=false;}}
+ bs.forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();ex(parseInt(b.dataset.scale,10));}));
+})();
+</script>
+</body>
+</html>
