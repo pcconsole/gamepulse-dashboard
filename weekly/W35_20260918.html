@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>端主行业周报 · W35</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4f6f9; --ink: #1e3a5f; --ink-2: #2c4a6e; --ink-dim: #4a5c6e; --ink-ghost: #7b8a99;
+    --red: #c85a4a; --red-bg: #f5e0db; --red-dim: #a0483b;
+    --gold: #8b6914; --gold-bg: #ede4cf;
+    --green: #3d6b57; --green-bg: #dde7e0;
+    --surface: #ffffff; --surface-2: #eef1f5;
+    --rule: #d5dce3; --rule-dim: #e5e9ee;
+    --sony: #003087; --xbox: #107c10; --nin: #e60012;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #c8ced6; font-family: 'Microsoft YaHei', '微软雅黑', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  .page { width: 430px; background: var(--bg); color: var(--ink); margin: 0 auto; overflow: hidden; }
+
+  .hero { background: linear-gradient(135deg, #16283f 0%, #24405f 55%, #2c4a6e 100%); color: white; padding: 24px 20px 26px; position: relative; }
+  .hero::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background: linear-gradient(90deg, var(--red) 0%, var(--gold) 100%); }
+  .hero .brand { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.3em; color: #e0a56a; font-weight: 700; margin-bottom: 10px; }
+  .hero h1 { font-size: 28px; font-weight: 800; line-height: 1.18; letter-spacing: -0.01em; }
+  .hero .sub { font-size: 13px; color: rgba(255,255,255,0.78); margin-top: 9px; line-height: 1.55; }
+  .hero .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+  .hero .tags .pill { font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 10px; }
+  .hero .meta { display: flex; gap: 18px; margin-top: 14px; padding-top: 13px; border-top: 1px solid rgba(255,255,255,0.15); font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.7); letter-spacing: 0.08em; }
+  .hero .meta strong { color: white; font-weight: 700; }
+
+  .section { padding: 26px 20px 20px; }
+  .section + .section { border-top: 10px solid #e2e7ed; }
+  .sec-head { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid var(--ink); position: relative; }
+  .sec-head::after { content:''; position:absolute; left:0; bottom:-2px; width:50px; height:2px; background:var(--red); }
+  .sec-head .num { font-family: 'IBM Plex Mono', monospace; font-size: 32px; font-weight: 800; color: var(--red); line-height: 0.9; }
+  .sec-head .title { font-size: 19px; font-weight: 800; color: var(--ink); flex: 1; line-height: 1.3; }
+  .sec-head .title em { display: block; font-size: 13px; font-weight: 600; color: var(--red); font-style: normal; margin-top: 3px; }
+
+  .lead { background: linear-gradient(135deg, #1e3a5f 0%, #263f5e 100%); color: rgba(255,255,255,0.92); padding: 14px 16px; border-radius: 6px; margin-bottom: 16px; border-left: 4px solid var(--gold); }
+  .lead .ll { font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.08em; color: #e8b84a; font-weight: 700; margin-bottom: 8px; }
+  .lead .lt { font-size: 15px; font-weight: 800; color: #fff; line-height: 1.45; }
+  .lead .lead-key { margin-top:13px; padding-top:12px; border-top:1px solid rgba(255,255,255,0.18); }
+  .lead .lead-key .kl2 { font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.12em; color:#e8b84a; font-weight:700; margin-bottom:7px; }
+  .lead .kt2-lead { font-size:13.5px; font-weight:700; line-height:1.55; color:#fff; margin-bottom:8px; }
+  .lead .kt2-lead b { color:#fff; border-bottom:2px solid rgba(232,184,74,.55); }
+  .lead .klist { list-style:none; margin:0; padding:0; }
+  .lead .klist li { position:relative; padding-left:16px; font-size:12.5px; line-height:1.55; color:rgba(255,255,255,0.9); margin-bottom:6px; }
+  .lead .klist li:last-child { margin-bottom:0; }
+  .lead .klist li::before { content:''; position:absolute; left:0; top:7px; width:6px; height:6px; border-radius:50%; background:#e8b84a; }
+  .lead .klist li b { color:#fff; font-weight:800; }
+  .lead .klist .kt-tag { font-family:'IBM Plex Mono',monospace; font-size:10px; font-weight:700; color:#e8b84a; margin-right:5px; }
+
+  .sub-step { display: flex; align-items: center; gap: 9px; margin: 22px 0 11px; padding: 8px 12px; background: linear-gradient(90deg, rgba(30,58,95,0.10), rgba(30,58,95,0)); border-left: 4px solid var(--red); border-radius: 0 6px 6px 0; }
+  .sub-step .sn { font-family: 'IBM Plex Mono', monospace; font-size: 15px; font-weight: 800; color: #fff; background: var(--red); min-width: 23px; height: 23px; border-radius: 5px; display: inline-flex; align-items: center; justify-content: center; flex: none; }
+  .sub-step .stt { font-size: 15px; font-weight: 800; color: var(--ink); line-height: 1.3; }
+  .sub-step .stt em { font-style: normal; font-weight: 600; color: var(--ink-dim); font-size: 13px; }
+
+  .bignum { display:grid; grid-template-columns:1fr 1fr 1fr; gap:7px; margin:10px 0; }
+  .bignum .b { background:var(--surface); border:1px solid var(--rule-dim); border-top:3px solid var(--red); border-radius:6px; padding:10px 5px; text-align:center; }
+  .bignum .b .bv { font-family:'IBM Plex Mono',monospace; font-size:19px; font-weight:800; color:var(--red-dim); line-height:1.05; }
+  .bignum .b .bl { font-size:10px; color:var(--ink-dim); margin-top:4px; line-height:1.35; }
+
+  .insight { background: linear-gradient(135deg, #1e3a5f 0%, #263f5e 100%); border-radius: 6px; padding: 14px 16px; margin: 14px 0 4px; color: rgba(255,255,255,0.92); }
+  .insight .il { font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.06em; color: #f0a07a; margin-bottom: 8px; border-bottom: 1px dashed rgba(255,255,255,0.15); padding-bottom: 6px; font-weight: 700; }
+  .analysis-list { display: flex; flex-direction: column; }
+  .analysis-row { display: flex; gap: 10px; padding: 7px 0; border-bottom: 1px dashed rgba(255,255,255,0.12); }
+  .analysis-row:last-child { border-bottom: 0; padding-bottom: 0; }
+  .analysis-tag { min-width: 42px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 800; color: #f0a07a; }
+  .analysis-text { flex: 1; font-size: 13px; line-height: 1.65; color: rgba(255,255,255,0.92); }
+  .analysis-text b { color:#fff; font-weight:800; }
+
+  .ev-line { background: var(--surface); border: 1px solid var(--rule-dim); border-radius: 5px; padding: 8px 12px; margin-bottom: 6px; font-size: 13px; line-height: 1.6; }
+  .ev-line .ev-head { display: flex; align-items: center; gap: 6px; margin-bottom: 2px; flex-wrap: wrap; }
+  .ev-line .d { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--ink-ghost); font-weight: 600; }
+  .ev-line .gn { font-size: 14px; font-weight: 800; color: var(--ink); letter-spacing: .01em; }
+  .ev-line .ev-body { color:var(--ink-dim); } .ev-line .ev-body strong { color: var(--ink); font-weight: 700; }
+  .tg { font-size: 11px; font-weight: 700; padding: 1px 6px; border-radius: 2px; }
+  .tg-r { background: var(--red-bg); color: var(--red); } .tg-b { background: #dce8f5; color: #2a5a8f; }
+  .tg-y { background: var(--gold-bg); color: var(--gold); } .tg-g { background: var(--green-bg); color: var(--green); }
+  .tg-n { background: #fbe0e2; color: var(--nin); }
+
+  .clash-note { font-size:11px; color:var(--ink-dim); line-height:1.55; margin:2px 0 0; padding:10px 12px; background:var(--surface); border:1px solid var(--rule); border-left:3px solid var(--gold); border-radius:5px; }
+  .clash-note b { color:var(--ink); font-weight:700; }
+
+  .mini-h { font-size: 13px; font-weight: 700; color: var(--ink-dim); margin: 16px 0 9px; display:flex; align-items:center; gap:7px; }
+  .mini-h::before { content:''; width:4px; height:14px; background:var(--red); border-radius:2px; }
+
+  .dtbl { width:100%; border-collapse:collapse; table-layout:fixed; font-size:12px; margin:4px 0 6px; border:1px solid var(--rule); border-radius:6px; overflow:hidden; }
+  .dtbl thead { background:linear-gradient(135deg,#1e3a5f,#2c4a6e); }
+  .dtbl th { padding:7px 8px; text-align:left; font-size:10.5px; font-weight:700; color:#fff; letter-spacing:.04em; }
+  .dtbl td { padding:6px 8px; border-bottom:1px solid var(--rule-dim); vertical-align:middle; line-height:1.4; color:var(--ink-dim); }
+  .dtbl tbody tr:last-child td { border-bottom:0; }
+  .dtbl tbody tr:nth-child(even) { background:var(--surface-2); }
+  .dtbl .gm { color:var(--ink); font-weight:700; font-size:12px; }
+  .dtbl .pf { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-ghost); }
+  .dtbl .dt { font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--red-dim); font-weight:600; }
+  .dtbl tr.hl td { background:var(--gold-bg) !important; }
+  .dtbl tr.hl .gm { color:var(--red-dim); }
+  .dtbl .fin { font-size:9px; font-weight:700; color:#fff; background:var(--nin); padding:1px 5px; border-radius:3px; margin-left:5px; vertical-align:middle; letter-spacing:.03em; }
+  .dtbl .finw { background:var(--red); }
+  .tbl-note { font-size:10.5px; color:var(--ink-ghost); margin:2px 0 4px; line-height:1.5; }
+
+  .blist { margin:4px 0 0; padding-left:15px; }
+  .blist li { font-size:12.5px; line-height:1.5; color:var(--ink-dim); margin-bottom:3px; }
+  .blist li:last-child { margin-bottom:0; }
+  .blist li b { color:var(--ink); font-weight:700; }
+
+  .kc { background:linear-gradient(135deg,#1e3a5f 0%,#263f5e 100%); border-radius:6px; padding:12px 15px; margin-bottom:14px; border-left:4px solid var(--gold); }
+  .kc .kc-l { font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.12em; color:#e8b84a; font-weight:700; margin-bottom:6px; }
+  .kc .kc-t { font-size:13.5px; font-weight:700; line-height:1.6; color:rgba(255,255,255,0.92); }
+  .kc .kc-t b { color:#fff; font-weight:800; border-bottom:2px solid rgba(232,184,74,.55); }
+  .kc-lead { font-size:13px; font-weight:700; line-height:1.55; color:rgba(255,255,255,0.92); margin-bottom:9px; }
+  .kc-lead b { color:#fff; border-bottom:2px solid rgba(232,184,74,.55); }
+  .kc-side { background:rgba(255,255,255,0.07); border-radius:5px; padding:9px 11px; margin-bottom:6px; display:flex; gap:10px; }
+  .kc-side .side-t { font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:800; line-height:1.35; flex:none; width:58px; }
+  .kc-side.k-1 .side-t { color:#f0a07a; } .kc-side.k-2 .side-t { color:#7db2f0; } .kc-side.k-3 .side-t { color:#7fd08a; }
+  .kc-side .side-b { font-size:12px; line-height:1.55; color:rgba(255,255,255,0.9); }
+  .kc-side .side-b b { color:#fff; font-weight:800; }
+  .kc-foot { font-size:12.5px; font-weight:700; line-height:1.55; color:#e8b84a; margin-top:9px; padding-top:9px; border-top:1px solid rgba(255,255,255,0.15); }
+
+  .flaw3 { margin:4px 0 6px; }
+  .flaw3 .sub-step { margin:14px 0 7px; }
+  .flaw3 .sub-step:first-child { margin-top:6px; }
+  .flaw3 .sub-step .stt { flex:1; }
+  .flaw3 .sub-step .stt em { float:right; margin-left:8px; }
+  .flaw { background:var(--surface); border:1px solid var(--rule-dim); border-left:4px solid var(--red); border-radius:6px; padding:9px 13px 4px; margin-bottom:6px; }
+  .flaw .fd { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-ghost); margin-left:auto; font-weight:600; }
+  .frow { display:flex; gap:9px; padding-bottom:9px; margin-bottom:9px; border-bottom:1px dashed var(--rule); }
+  .frow:last-child { border-bottom:0; }
+  .frow.f-inc { background:var(--red-bg); margin:0 -13px; padding:8px 13px 9px; border-bottom:0; border-radius:0 0 4px 4px; }
+  .frow .flab { flex:none; width:40px; font-family:'IBM Plex Mono',monospace; font-size:9.5px; font-weight:800; letter-spacing:.02em; line-height:1.35; padding-top:1px; }
+  .frow .fval { flex:1; font-size:12px; line-height:1.6; color:var(--ink-dim); }
+  .frow .fval strong { color:var(--ink); font-weight:700; }
+  .frow.f-fact .flab { color:var(--ink-ghost); }
+  .frow.f-core .flab { color:var(--red-dim); }
+  .frow.f-inc .flab { color:var(--red-dim); }
+  .frow.f-inc .fval { color:var(--red-dim); }
+  .frow.f-inc .fval strong { color:var(--red-dim); }
+
+  /* 远期排期时间轴 */
+  .tline { margin:6px 0 4px; padding-left:6px; }
+  .tline .tl-row { display:flex; gap:11px; position:relative; padding-bottom:11px; }
+  .tline .tl-row:last-child { padding-bottom:0; }
+  .tline .tl-row::before { content:''; position:absolute; left:5px; top:15px; bottom:-2px; width:2px; background:var(--rule); }
+  .tline .tl-row:last-child::before { display:none; }
+  .tline .tl-dot { flex:none; width:12px; height:12px; border-radius:50%; background:var(--red); border:2px solid #fff; box-shadow:0 0 0 1px var(--rule); margin-top:3px; z-index:1; }
+  .tline .tl-yr { flex:none; width:52px; font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:800; color:var(--red-dim); padding-top:2px; }
+  .tline .tl-body { flex:1; font-size:12px; line-height:1.5; color:var(--ink-dim); padding-top:2px; }
+  .tline .tl-body b { color:var(--ink); font-weight:700; }
+
+  .footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 20px; text-align: center; font-size: 10px; line-height: 1.8; }
+  .footer .logo { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.3em; color: white; margin-bottom: 8px; }
+  .footer .disc { margin-top:8px; font-size:9px; color:rgba(255,255,255,.4); line-height:1.6; }
+</style>
+</head>
+<body>
+
+<div id="export-toolbar" style="position:fixed;top:10px;right:10px;z-index:9999;font-family:'Microsoft YaHei',sans-serif;user-select:none;">
+  <button id="exp-main" style="background:#c85a4a;color:#fff;border:0;padding:6px 12px;border-radius:4px;font-size:11px;font-weight:700;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,0.2);letter-spacing:.05em;">📥 导出长图</button>
+  <div id="exp-panel" style="display:none;margin-top:6px;background:rgba(30,58,95,0.96);padding:8px;border-radius:4px;box-shadow:0 4px 12px rgba(0,0,0,0.25);">
+    <div style="display:flex;flex-direction:column;gap:4px;">
+      <button data-scale="2" class="exp-btn" style="background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.15);padding:6px 10px;border-radius:3px;font-size:10px;cursor:pointer;font-weight:600;">@2x · 860px</button>
+      <button data-scale="3" class="exp-btn" style="background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.15);padding:6px 10px;border-radius:3px;font-size:10px;cursor:pointer;font-weight:600;">@3x · 1290px（推荐）</button>
+      <button data-scale="4" class="exp-btn" style="background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.15);padding:6px 10px;border-radius:3px;font-size:10px;cursor:pointer;font-weight:600;">@4x · 1720px</button>
+    </div>
+    <div id="exp-status" style="font-size:9px;color:#ffb896;margin-top:6px;letter-spacing:.03em;line-height:1.3;min-height:11px;"></div>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="brand">GAMEPULSE · WEEKLY</div>
+    <h1>端主行业周报 W35</h1>
+    <div class="sub">同处主机末期：索尼收租、Xbox 铺内容 · TGS 存量 IP 大年 · 订阅涨价开始反噬 · 其他速览</div>
+    <div class="tags">
+      <span class="pill" style="background:rgba(16,124,16,0.5);color:#c4ecc4;">Xbox铺内容+订阅</span>
+      <span class="pill" style="background:rgba(30,58,95,0.6);color:#bcd4f5;">TGS·存量IP大年</span>
+      <span class="pill" style="background:rgba(200,90,74,0.5);color:#ffd4c4;">订阅涨价反噬</span>
+      <span class="pill" style="background:rgba(139,105,20,0.5);color:#f0dca0;">退订转向价格</span>
+    </div>
+    <div class="meta">
+      <span>DATE · <strong>2026.09.18</strong></span>
+      <span>COVERAGE · <strong>9.14 – 9.20</strong></span>
+    </div>
+  </div>
+
+  <!-- ================= PART 01 头条·微软系内容攻势 ================= -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="num">01</div>
+      <div class="title">同处主机末期，索尼收租、Xbox 铺内容<em>Xbox 把增长押在"内容触达面 + 订阅"，而非主机销量</em></div>
+    </div>
+
+    <div class="kc">
+      <div class="kc-l">核心结论 · KEY CONCLUSION</div>
+      <div class="kc-lead">承接 W33"索尼硬件进入末期、转向收租"——同处世代末期，<b>Xbox 走的是另一条路：把增长押在"内容触达面 + 订阅"上，而非卖主机</b>。本周三条动作串成一条完整链路。</div>
+      <div class="kc-side k-1"><div class="side-t">拿内容</div><div class="side-b">接盘索尼弃子小岛《PHYSINT》+ 暴雪远期第一方——内容来源不设限。</div></div>
+      <div class="kc-side k-2"><div class="side-t">铺渠道</div><div class="side-b">大作 GP 首发 + Play Anywhere 跨端，<b>买不买 Xbox 主机都能玩</b>。</div></div>
+      <div class="kc-side k-3"><div class="side-t">划边界</div><div class="side-b">战网只<b>逐步</b>引入第三方、不做开放商店——只铺自家内容，不做中立卖场。</div></div>
+      <div class="kc-foot">So-What：Xbox 越往"内容跨端 + 订阅"走，平台独占壁垒越低，对第三方/合作方的多平台发行是结构性利好；但守住战网不开放，说明它无意做中立平台、仍要把用户圈进自家订阅。</div>
+    </div>
+
+    <div class="flaw3">
+      <div class="sub-step"><span class="sn">01</span><span class="stt">拿内容｜来源不设限：接弃子、投第一方 <em>9/13→17</em></span></div>
+      <div class="flaw">
+        <div class="frow f-fact"><div class="flab">事实</div><div class="fval">小岛《PHYSINT》官宣<strong>比尔·斯卡斯加德</strong>主角配音（发行已由索尼转 Xbox）；同期暴雪嘉年华公布<strong>暗黑5(2029)/星际(2030)</strong>等远期第一方路线。</div></div>
+        <div class="frow f-inc"><div class="flab">判断</div><div class="fval">一头<strong>接别家弃子</strong>（连索尼砍掉的都收）、一头<strong>续投自家第一方</strong>——Xbox 在内容来源上几乎不设限，为跨端变现备足弹药。（小岛项目暂无发售日/平台名单，不宜断言独占）</div></div>
+      </div>
+
+      <div class="sub-step"><span class="sn">02</span><span class="stt">铺渠道｜大作 GP 首发、买不买主机都能玩 <em>9/17</em></span></div>
+      <div class="flaw">
+        <div class="frow f-fact"><div class="flab">事实</div><div class="fval">TGS 上《我的世界:地下城2》<strong>首发入 GP</strong>、CoD MW4 请 Mads Mikkelsen 演反派、P4R/卧龙2 以 <strong>Play Anywhere</strong>（主机/PC 一次购买跨端玩）落地。</div></div>
+        <div class="frow f-inc"><div class="flab">判断</div><div class="fval">看点不是"进日本"（Xbox 深耕日本已久），而是<strong>交付方式</strong>：GP 首发+跨端，让<strong>用户不必买 Xbox 主机也能消费其内容</strong>——把"内容变现"和"卖硬件"拆开。</div></div>
+      </div>
+
+      <div class="sub-step"><span class="sn">03</span><span class="stt">划边界｜内容广铺，但战网不做开放商店 <em>9/15</em></span></div>
+      <div class="flaw">
+        <div class="frow f-fact"><div class="flab">事实</div><div class="fval">战网负责人明确：<strong>将逐步引入第三方游戏，但"不会成为 Steam/Epic 那样的开放平台"</strong>。</div></div>
+        <div class="frow f-inc"><div class="flab">判断</div><div class="fval">这条划清了边界：Xbox 要的是<strong>把自家内容铺得更广</strong>，而非做中立大卖场跟 Steam 抢第三方分成——扩的是"内容触达面"，守的是"不做开放商店"。三条合起来，增长押注清晰落在 <strong>GP 订阅 + 跨端用户</strong>，而非主机销量。</div></div>
+      </div>
+    </div>
+
+    <div class="clash-note">事实口径：小岛为<b>配音</b>（本周新增）、发行<b>接手</b>为上周事件；暴雪远期项目均处早期开发；战网原文为"逐步引入第三方 + 不对标 Steam/Epic"。</div>
+  </div>
+
+  <!-- ================= PART 02 TGS 2026 盘点 ================= -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="num">02</div>
+      <div class="title">TGS 2026：存量 IP 大年，缺新 IP 爆款<em>续作/重制/多平台同步扎堆，全新原创 IP 几近缺席</em></div>
+    </div>
+
+    <div class="kc">
+      <div class="kc-l">核心结论 · KEY CONCLUSION</div>
+      <div class="kc-lead">30 周年、史上首次 5 天、近 30 万访客——阵容规模空前，但<b>本届是靠"存量 IP"撑场的大年，真正的全新原创 IP 世代级爆款几乎缺席</b>：满分与最高分分别来自续作与重制。</div>
+      <div class="kc-side k-3"><div class="side-t">主基调</div><div class="side-b">续作、重制、多平台同步扎堆；厂商用<b>存量 IP 对冲新 IP 风险</b>（DQ 借 40 周年宣布破 1 亿）。</div></div>
+      <div class="kc-foot">对我方启示：展会看点集中在"IP 长线运营 + 多平台同步"，新 IP 立项风险仍高——押注成熟 IP 与跨端发行是当前更稳的选择。</div>
+    </div>
+
+    <div class="mini-h">口碑标杆：满分与最高分各一，均非新 IP</div>
+    <div class="bignum">
+      <div class="b"><div class="bv">10 分</div><div class="bl">《火焰纹章:万缕千丝》IGN 满分、M站 89<br>（续作 · NS2 独占）</div></div>
+      <div class="b"><div class="bv">93 分</div><div class="bl">《空之轨迹 the 2nd》M站登顶 2026<br>（重制 · 全平台）</div></div>
+      <div class="b"><div class="bv">9/24</div><div class="bl">Remedy《Control Resonant》续作<br>史上最大世界、评测 9/18 解禁</div></div>
+    </div>
+
+    <div class="mini-h">重点新品与档期（多平台同步为主）</div>
+    <table class="dtbl">
+      <colgroup><col style="width:38%"><col style="width:30%"><col style="width:32%"></colgroup>
+      <thead><tr><th>作品</th><th>平台 / 归属</th><th>档期</th></tr></thead>
+      <tbody>
+        <tr class="hl"><td class="gm">使命召唤:现代战争4</td><td class="pf">全平台 · Activision</td><td class="dt">10/23</td></tr>
+        <tr><td class="gm">最终幻想:共鸣</td><td class="pf">PS5/XSX/NS2/PC · SE</td><td class="dt">10/22</td></tr>
+        <tr><td class="gm">寂静岭:Townfall</td><td class="pf">PS5 · Konami</td><td class="dt">9/24</td></tr>
+        <tr><td class="gm">Control Resonant</td><td class="pf">全平台 · Remedy</td><td class="dt">9/24</td></tr>
+        <tr><td class="gm">街头霸王6 新DLC</td><td class="pf">全平台 · Capcom</td><td class="dt">10/13</td></tr>
+        <tr><td class="gm">女神异闻录4 Revival</td><td class="pf">XSX/PC/GP · Sega</td><td class="dt">2027/2/28</td></tr>
+        <tr><td class="gm">卧龙2:凤火连天</td><td class="pf">全平台 · Koei Tecmo</td><td class="dt">2027/3/4</td></tr>
+        <tr><td class="gm">怪物猎人:荒野「凌越」</td><td class="pf">全平台 DLC · Capcom</td><td class="dt">2027</td></tr>
+        <tr><td class="gm">电锯甜心2 Back2Back</td><td class="pf">PS5 独占 · Dragami</td><td class="dt">2027</td></tr>
+      </tbody>
+    </table>
+    <div class="tbl-note">档期均官方口径；除电锯甜心2 为 PS5 独占外，多数为 PS5 / Xbox / Switch 2 / PC 同步或近同步发行。</div>
+
+    <div class="mini-h">各大厂 TGS 2026 存在感对照</div>
+    <table class="dtbl">
+      <colgroup><col style="width:26%"><col style="width:40%"><col style="width:34%"></colgroup>
+      <thead><tr><th>厂商</th><th>阵容 / 动作</th><th>规模</th></tr></thead>
+      <tbody>
+        <tr class="hl"><td class="gm">Square Enix</td><td class="pf">FF共鸣 / DQ系列破1亿 / KH4 / FF7启示录试玩</td><td class="dt">本届最大阵容</td></tr>
+        <tr><td class="gm">SEGA / Atlus</td><td class="pf">P4R / 疯狂出租车 / 如龙外传 / Metaphor</td><td class="dt">16 款·27 场舞台</td></tr>
+        <tr><td class="gm">Capcom</td><td class="pf">MH荒野凌越 / 鬼武者 / Pragmata / 街霸6</td><td class="dt">Spotlight+展台招牌</td></tr>
+        <tr><td class="gm">Koei Tecmo</td><td class="pf">卧龙2 / 进击的巨人3 / 三国志40周年</td><td class="dt">KT Live 专场</td></tr>
+        <tr><td class="gm">Bandai Namco</td><td class="pf">皇牌空战8 / 海贼王 / 龙珠 Xenoverse3</td><td class="dt">动漫改编矩阵</td></tr>
+        <tr><td class="gm" style="color:var(--xbox)">Xbox</td><td class="pf">MW4 / 我的世界:地下城2 首试玩 / GP首发</td><td class="dt">50 分钟专场</td></tr>
+        <tr><td class="gm" style="color:var(--sony)">索尼</td><td class="pf">展前 9/3 已办 State of Play；会期内 4 款展台试玩 + PS Plus 促销</td><td class="dt">发布会前置</td></tr>
+        <tr><td class="gm">中国厂商</td><td class="pf">影之刃零 / 古神:风里希（登 Xbox 发布会）</td><td class="dt">借第三方渠道亮相</td></tr>
+      </tbody>
+    </table>
+    <div class="tbl-note">规模为各厂公开阵容/发布会口径整理。索尼把发布会前置到 9/3 State of Play（展前），TGS 会期内以展台试玩（怪物猎人凌越/FF7启示/金刚狼/皇牌空战8）+ 订阅促销参与，未再单独办会。</div>
+
+    <div class="insight">
+      <div class="il">值得关注 · TGS 信号</div>
+      <div class="analysis-list">
+        <div class="analysis-row"><div class="analysis-tag">同步</div><div class="analysis-text"><b>PC/主机同日发行成常态</b>：CoD MW4、FF共鸣均全平台同期——日厂已把多平台首发作为默认策略，单一平台首发窗口红利持续消退。</div></div>
+        <div class="analysis-row"><div class="analysis-tag">格局</div><div class="analysis-text"><b>日厂主场，平台厂各择打法</b>：SE/SEGA/Capcom/KT 各办专场刷屏；Xbox 办 50 分钟专场，索尼则把发布会<b>前置到 9/3 State of Play</b>、会期内以展台试玩参与——本届会期内的话语权明显偏向第三方日厂。</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= PART 03 订阅经济学 ================= -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="num">03</div>
+      <div class="title">订阅涨价开始反噬：退订理由从"没游戏"转向"太贵"<em>承接 W33 计量化——涨价的代价首次被官方数据量化</em></div>
+    </div>
+
+    <div class="kc">
+      <div class="kc-l">核心结论 · KEY CONCLUSION</div>
+      <div class="kc-lead">承接 W33"订阅转向计量收费"——Circana 首次用数据点出代价：<b>退订者的首要理由已从"没游戏玩"转向"太贵"</b>。</div>
+      <div class="kc-side k-1"><div class="side-t">要点</div><div class="side-b">不是退订人数变多，而是<b>归因结构变了</b>：价格取代阵容，成退订第一原因。</div></div>
+      <div class="kc-foot">信号：涨价的边际收益正在见顶，再涨可能加速流失——这是"计量化收租"的现实约束。</div>
+    </div>
+
+    <div class="mini-h">Circana：把成本列为退订首因的比例在上升</div>
+    <table class="dtbl">
+      <colgroup><col style="width:56%"><col style="width:22%"><col style="width:22%"></colgroup>
+      <thead><tr><th>美国退订者口径</th><th>当前</th><th>Q1</th></tr></thead>
+      <tbody>
+        <tr class="hl"><td class="gm">"成本"列为退订首要原因</td><td class="dt">40%+</td><td class="pf">更低</td></tr>
+        <tr><td class="gm">Switch Online·喜欢但难证价值</td><td class="dt">50%</td><td class="pf">40%</td></tr>
+        <tr><td class="gm">GP / PS Plus·同口径</td><td class="dt">40%</td><td class="pf">37%</td></tr>
+      </tbody>
+    </table>
+    <div class="tbl-note">来源：Circana·Mat Piscatella，9/12，口径为"退订原因归属"非退订总量。背景：PS Plus 年内涨价、GP Ultimate 一度近翻倍后撤回并解绑 CoD、三大主机同步涨价。</div>
+
+    <div class="ev-line">
+      <div class="ev-head"><span class="d">9/15→17</span> <span class="tg tg-y">爆料·未实锤</span></div>
+      <div class="ev-body">呼应此压力：ResetEra 爆料 GP 拟 2027 <strong>降价 3 美元但取消第一方首日入库/云串流</strong>、新增广告档（$12.99/月起）。微软回应<strong>"暂无可公布计划"</strong>，未否认未确认。</div>
+    </div>
+  </div>
+
+  <!-- ================= PART 04 其他速览 ================= -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="num">04</div>
+      <div class="title">其他新闻速览<em>硬件 · IP 影视化 · 国产与中国资本 · 监管</em></div>
+    </div>
+
+    <div class="ev-line">
+      <div class="ev-head"><span class="d">9/14</span> <span class="tg tg-b">硬件·Steam Frame</span></div>
+      <div class="ev-body">Valve 开放第二款自研 VR 头显 <strong>Steam Frame</strong> 预约：基础版 <strong>$1059</strong>、1TB 版 $1299。Eurogamer 评测：PC 串流体验佳，独立设备仍"尚未准备好迎接主流"。</div>
+    </div>
+    <div class="ev-line">
+      <div class="ev-head"><span class="d">9/13→14</span> <span class="tg tg-n">IP影视化</span></div>
+      <div class="ev-body">Netflix 一周连下两单：<strong>暴雪《暗黑破坏神》动画剧</strong>（魔兽/守望在谈）+ <strong>Sega《索尼克》新动画与《疯狂出租车》真人电影</strong>——游戏 IP 跨媒介采购加速。</div>
+    </div>
+    <div class="ev-line">
+      <div class="ev-head"><span class="d">9/16</span> <span class="tg tg-r">国产爆款</span></div>
+      <div class="ev-body">《战狗（WARDOGS）》Steam 抢先体验 <strong>5 天销量破 200 万、在线峰值超 40 万</strong>，登顶周榜——2026 Steam 新作首发最强之一。</div>
+    </div>
+    <div class="ev-line">
+      <div class="ev-head"><span class="d">9/13</span> <span class="tg tg-y">中国资本</span></div>
+      <div class="ev-body">恺英网络拟 <strong>20.3 亿元</strong>间接参股《传奇》IP 母公司 Wemade——以资本切入 IP 上游，把授权/诉讼风险转为股权收益。</div>
+    </div>
+    <div class="ev-line">
+      <div class="ev-head"><span class="d">9/17</span> <span class="tg tg-b">监管·EU KIDS</span></div>
+      <div class="ev-body">欧盟草案提交欧洲议会，拟对在线游戏<strong>年龄验证 + 登录奖励 / 内购货币透明度</strong>施加限制；若落地将深刻影响服务型与跨端产品的留存与变现设计。</div>
+    </div>
+  </div>
+
+  <!-- 下期预告 -->
+  <div style="background:linear-gradient(135deg,#16283f,#2c4a6e);padding:12px 20px;text-align:center;">
+    <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:rgba(255,255,255,0.5);font-weight:700;">NEXT WEEK</span>
+    <div style="font-size:13px;color:rgba(255,255,255,0.88);margin-top:4px;font-weight:700;">W36 预告：TGS 2026 闭幕(9/21) · Remedy《Control Resonant》发售(9/24) · PC Gaming Show Tokyo(9/21)</div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="logo">GAMEPULSE · PC & CONSOLE</div>
+    <div>数据来源：腾讯文档 · Xbox Wire · GamesIndustry · Eurogamer · VGC · IGN · 3DM · IT之家 · Circana · PlayStation Blog · Kojima Productions · RockPaperShotgun</div>
+    <div>2026.09.18 · W35 WEEKLY · COVERAGE 9.14–9.20</div>
+    <div class="disc">Game Pass 2027 改版为 ResetEra 爆料（未实锤，微软未否认未确认）；索尼 PS Plus 促销为限时区域优惠非全球降价；小岛《PHYSINT》主演为本周新增、暂无发售日与完整平台名单；暴雪远期项目均处早期开发、内容可能变动。TGS/暴雪嘉年华非本部门合作平台，本报告以平台方打法观察为主。本报告由 AI 整理，仅供参考，不构成投资建议。</div>
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+(function(){
+  const tb=document.getElementById('export-toolbar'),mb=document.getElementById('exp-main'),pn=document.getElementById('exp-panel'),st=document.getElementById('exp-status'),bs=document.querySelectorAll('.exp-btn'),pg=document.querySelector('.page');
+  mb.addEventListener('click',()=>pn.style.display=(pn.style.display==='none'?'block':'none'));
+  document.addEventListener('click',e=>{if(!tb.contains(e.target))pn.style.display='none';});
+  function ss(t,err){st.textContent=t;st.style.color=err?'#ff8080':'#ffb896';}
+  function lk(l){bs.forEach(b=>b.disabled=l);mb.disabled=l;}
+  async function ex(s){
+    if(typeof html2canvas==='undefined'){ss('html2canvas未加载',true);return;}
+    lk(true);ss('渲染中…@'+s+'x');tb.style.visibility='hidden';
+    try{if(document.fonts&&document.fonts.ready)await document.fonts.ready;
+      await new Promise(r=>setTimeout(r,200));
+      const c=await html2canvas(pg,{scale:s,backgroundColor:'#f4f6f9',useCORS:true,logging:false,width:pg.offsetWidth,height:pg.offsetHeight,windowWidth:pg.offsetWidth,windowHeight:pg.offsetHeight});
+      ss('生成PNG…');c.toBlob(b=>{
+        if(!b){ss('失败',true);tb.style.visibility='visible';lk(false);return;}
+        const u=URL.createObjectURL(b),a=document.createElement('a'),baseName=(document.title||'Briefing').replace(/[\s·\/\\:\*\?"<>\|]/g,'_');
+        a.href=u;a.download=baseName+'_'+s+'x.png';document.body.appendChild(a);a.click();document.body.removeChild(a);
+        setTimeout(()=>URL.revokeObjectURL(u),1e3);ss('✓@'+s+'x已导出');tb.style.visibility='visible';lk(false);
+      },'image/png');
+    }catch(e){ss('失败:'+e.message,true);tb.style.visibility='visible';lk(false);}
+  }
+  bs.forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();ex(parseInt(b.dataset.scale,10));}));
+})();
+</script>
+</body>
+</html>
