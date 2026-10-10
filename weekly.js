@@ -2,6 +2,17 @@
 // 每周生成新周报时，在数组顶部追加一条
 window.WEEKLY_REPORTS = [
   {
+    week: 'W39',
+    date: '2026-10-10',
+    periodStart: '2026-10-05',
+    periodEnd: '2026-10-11',
+    title: '端主行业周报 W39：Xbox从卖会员转向卖内容·供给侧出清·新游与年末档期',
+    summary: 'Xbox 增长口径从 Game Pass 会员数换成第一方内容：10/6 全员会称增长按第一方业务衡量（据媒体取得的会议记录）；云游戏 11 月起按月限时（Ultimate 15 小时），非会员也可购买时长；《极限竞速：地平线6》定档 PS5（2027/1/26），Play Anywhere 扩至卡普空；10/8 新设 XP 部门经营 IP 影视、商品与线下体验。供给侧出清按母公司列明：Ninja Theory（Xbox）进入拟关闭咨询、Undead Labs 员工持股独立、Supermassive 前员工称 70 余人离开、Gravity Well 失去融资裁员、Krafton 终止《PUBG: 黑域撤离》、Riot 2XKO 停止开发。新游：《皇牌空战8》官方全球破百万，《永恒之塔2》登顶 Steam 周收入榜。速览含 Circana 美国 8 月硬件、Skydance 完成收购 WBD、PS5 动漫专区等。资料截至 10/10。',
+    file: 'weekly/W39_20261010.html',
+    tags: ['Xbox卖内容', '云游戏计量', 'XP部门', '供给侧出清', '年末档期'],
+    highlight: true
+  },
+  {
     week: 'M09',
     date: '2026-09-30',
     periodStart: '2026-09-01',
