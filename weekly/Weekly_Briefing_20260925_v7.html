@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>端主行业周报 · W36 · v7</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f6f9;--ink:#1e3a5f;--ink-2:#2c4a6e;--ink-dim:#4a5c6e;--ink-ghost:#6c7b8a;--red:#c85a4a;--red-bg:#f5e0db;--red-dim:#a0483b;--gold:#8b6914;--gold-bg:#ede4cf;--green:#3d6b57;--green-bg:#dde7e0;--blue:#0055a5;--blue-bg:#e0ecf7;--surface:#fff;--surface-2:#eef1f5;--rule:#d5dce3;--rule-dim:#e5e9ee;--mono:'IBM Plex Mono','Microsoft YaHei',monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#c8ced6;font-family:'Microsoft YaHei','微软雅黑',sans-serif;-webkit-font-smoothing:antialiased}
+body{color:var(--ink)}
+.page{width:430px;max-width:100%;background:var(--bg);margin:0 auto;overflow:hidden}
+b,strong{font-weight:700;color:var(--ink)}
+.mono,time{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.hero{background:linear-gradient(135deg,#16283f,#24405f 55%,#2c4a6e);color:#fff;padding:24px 20px 21px;border-bottom:5px solid var(--red)}
+.hero .brand{font:700 11px var(--mono);letter-spacing:.24em;color:#e0a56a;margin-bottom:10px}
+.hero h1{font-size:28px;line-height:1.25;letter-spacing:-.01em}
+.hero .sub{font-size:13px;line-height:1.65;color:#dce5ef;margin-top:10px}
+.hero .meta{display:flex;justify-content:space-between;gap:10px;margin-top:14px;padding-top:11px;border-top:1px solid #49617b;font:11px var(--mono);color:#d0dbe7}
+.hero .meta strong{color:#fff}
+.hero .draft{font-size:11px;color:#c4d2e1;margin-top:8px}
+.toc{padding:9px 20px 10px;background:#e9edf3;display:grid;grid-template-columns:1fr 1fr;gap:6px 16px}
+.toc a{font-size:11px;color:var(--ink-dim);text-decoration:none;display:flex;gap:7px;line-height:1.55}
+.toc .idx{font:600 11px var(--mono);color:var(--red-dim);padding-top:2px}
+.section{padding:18px 20px 16px;scroll-margin-top:12px}
+.section+.section{border-top:6px solid #e2e7ed}
+.sec-head{display:flex;align-items:flex-start;gap:12px;padding-bottom:8px;border-bottom:2px solid var(--ink);position:relative;margin-bottom:10px}
+.sec-head:after{content:'';position:absolute;bottom:-2px;left:0;width:48px;height:2px;background:var(--red)}
+.sec-head .num{font:700 30px/.95 var(--mono);color:var(--red)}
+.sec-head .heading{flex:1;min-width:0}
+.sec-head h2{font-size:18px;line-height:1.45;font-weight:800}
+.sec-head .subtitle{font-size:13px;line-height:1.55;color:var(--red-dim);margin-top:4px}
+.kc{background:linear-gradient(135deg,#1e3a5f,#263f5e);border-left:4px solid var(--gold);border-radius:6px;padding:10px 12px;margin-bottom:10px}
+.kc-l{font:600 11px/1.4 var(--mono);letter-spacing:.06em;color:#e8b84a;margin-bottom:5px}
+.kc-t{font-size:14px;font-weight:700;line-height:1.6;color:#fff}
+.kc-t b{color:#fff;border-bottom:2px solid #a38950}
+.kc-week{font-size:11px;font-weight:700;letter-spacing:.08em;color:#e8b84a;border-top:1px solid #ffffff29;padding-top:6px;margin:7px 0 5px}
+.kc-points{list-style:none;display:grid;gap:4px}
+.kc-side{display:grid;grid-template-columns:48px minmax(0,1fr);gap:9px;padding:5px 8px;background:#ffffff12;border-radius:4px}
+.kc-side .side-t{font:700 11px/1.55 var(--mono);color:#f0b28e;padding-top:2px}
+.kc-side:nth-child(2) .side-t{color:#a7cefa}
+.kc-side:nth-child(3) .side-t{color:#a5dfac}
+.kc-side .side-b{font-size:13px;line-height:1.55;color:#edf2f7}
+.kc-side b{color:#fff}
+.context-line,.event-intro{font-size:13px;line-height:1.65;color:var(--ink-dim);margin:0 0 10px}
+.context-line .context-tag{font-size:11px;color:var(--gold);font-weight:700;margin-right:5px}
+.sub-step{display:flex;align-items:flex-start;gap:9px;margin:14px 0 8px;padding:7px 10px;background:linear-gradient(90deg,#1e3a5f1a,#1e3a5f00);border-left:4px solid var(--red);border-radius:0 6px 6px 0}
+.sub-step .sn{font:700 15px/23px var(--mono);text-align:center;color:#fff;background:var(--red);width:23px;height:23px;border-radius:5px;flex:none;margin-top:1px}
+.sub-step .stt{font-size:15px;font-weight:800;line-height:1.45;flex:1;min-width:0;overflow-wrap:anywhere}
+.sub-step .step-meta{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-top:4px;font-size:11px;line-height:1.5;font-weight:400;color:var(--ink-ghost)}
+.sub-step time{font-size:11px}
+.mini-h{display:flex;align-items:center;gap:7px;margin:14px 0 8px;font-size:13px;line-height:1.5;font-weight:700}
+.mini-h:before{content:'';height:13px;width:3px;background:var(--red);flex:none}
+.panel{background:var(--surface);border:1px solid var(--rule);border-radius:5px;overflow:hidden}
+.panel-cap{font-size:11px;line-height:1.55;color:var(--ink-ghost);padding:8px 11px;background:var(--surface-2);border-bottom:1px solid var(--rule-dim)}
+.src{font-size:11px;color:var(--ink-ghost);line-height:1.6;margin-top:7px}
+.note{font-size:11px;line-height:1.65;color:var(--ink-dim);padding:9px 11px;background:#edf0f4;border-left:3px solid #a3afbc;margin-top:9px}
+.note.warning{background:#f3eee3;border-left-color:var(--gold)}
+.tg{display:inline-block;font-size:11px;line-height:1.5;padding:1px 5px;border-radius:2px;font-weight:700;vertical-align:baseline}
+.tg-g{background:var(--green-bg);color:var(--green)}
+.tg-b{background:var(--blue-bg);color:var(--blue)}
+.tg-y{background:var(--gold-bg);color:var(--gold)}
+.tg-r{background:var(--red-bg);color:var(--red-dim)}
+/* Compact reassignment table: source and destination, not a causal chain. */
+.org-map .panel-cap{padding:6px 9px}
+.org-map .org-table th,.org-map .org-table td{padding:6px 9px;line-height:1.45}
+.org-map .org-table td{vertical-align:middle}
+.org-table .cell-note{margin-top:2px;line-height:1.45}
+.org-foot{font-size:11px;line-height:1.5;color:var(--ink-dim);padding:6px 9px;border-top:1px solid var(--rule-dim);background:#f7f9fb}
+.kpi-band{display:flex;align-items:center;gap:15px;background:var(--red-bg);padding:12px 14px;border-top:3px solid var(--red);margin-bottom:10px}
+.kpi-number{font:600 32px/1.1 var(--mono);color:var(--red-dim);white-space:nowrap}
+.kpi-number small{font:12px 'Microsoft YaHei',sans-serif;margin-left:3px}
+.kpi-text{font-size:13px;line-height:1.5;font-weight:700}
+.kpi-text span{display:block;font-size:11px;font-weight:400;color:var(--ink-dim);margin-top:3px}
+.dtbl{width:100%;table-layout:fixed;border-collapse:collapse;font-size:12px;background:#fff}
+.dtbl th{background:#e7edf4;color:var(--ink);font-size:11px;font-weight:700;padding:8px 10px;text-align:left;border-bottom:1px solid var(--rule)}
+.dtbl td{vertical-align:top;padding:9px 10px;line-height:1.55;border-bottom:1px solid var(--rule-dim);color:var(--ink-dim);overflow-wrap:anywhere}
+.dtbl tr:last-child td{border-bottom:0}
+.dtbl tr:nth-child(even) td{background:#f7f9fb}
+.dtbl .entity{font-weight:700;color:var(--ink)}
+.cell-note{display:block;font-size:11px;font-weight:400;line-height:1.55;margin-top:3px;color:var(--ink-ghost)}
+.plan-context{font-size:13px;line-height:1.65;color:var(--ink-dim);margin-top:9px;padding:8px 10px;background:#edf0f4;border-left:3px solid #a3afbc}
+.plan-context p+p{margin-top:4px}
+.personnel-intro{margin:0 0 7px}
+.takeaway{border-top:2px solid var(--ink);padding-top:8px;margin-top:11px}
+.takeaway-h{font:700 11px/1.5 var(--mono);color:var(--red-dim);letter-spacing:.04em;margin-bottom:5px}
+.bullets{padding-left:17px;font-size:13px;color:var(--ink-dim);line-height:1.65}
+.bullets li+li{margin-top:5px}
+.bullets li::marker{color:var(--red)}
+/* Compact charts retain a common 0–15% scale and separate statistical scopes. */
+.share-chart{padding:9px 11px}
+.bar-rows{margin:0 0 5px;display:grid;gap:8px}
+.bar-row{display:grid;grid-template-columns:39px minmax(0,1fr) 49px;align-items:center;gap:8px}
+.bar-year{font:11px var(--mono);color:var(--ink-dim)}
+.bar-track{height:18px;background:#edf1f6;position:relative}
+.bar-fill{height:100%;background:#9baec3}
+.bar-fill.current{background:var(--ink)}
+.bar-value{font:600 14px var(--mono);text-align:right}
+.axis{display:flex;justify-content:space-between;margin:0 57px 0 47px;font:11px var(--mono);color:var(--ink-ghost)}
+.chart-summary{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 12px;margin-top:7px;border-top:1px solid var(--rule-dim);padding-top:6px;font-size:11px;line-height:1.5;color:var(--ink-dim)}
+.chart-summary strong{font:600 16px/1.4 var(--mono);color:var(--ink);margin:0 3px}
+.market-panel{padding:9px 11px}
+.market-kpis{display:grid;grid-template-columns:1.15fr 1fr;gap:10px;align-items:baseline}
+.market-kpis>div{display:flex;flex-wrap:wrap;align-items:baseline;gap:3px 7px}
+.market-kpis>div+div{border-left:1px solid var(--rule);padding-left:12px}
+.market-kpis .value{font:600 24px/1.2 var(--mono);color:var(--ink)}
+.market-kpis .value.up{color:var(--red-dim)}
+.market-kpis .value small{font-size:12px;margin-left:3px}
+.market-kpis .label{font-size:11px;line-height:1.5;color:var(--ink-dim)}
+.market-caption{font-size:12px;color:var(--ink-dim);line-height:1.5;margin-top:7px}
+.jp-actions{border-top:2px solid var(--ink);padding-top:8px;margin-top:12px;font-size:13px;line-height:1.65;color:var(--ink-dim)}
+.jp-actions p+p{margin-top:4px}
+/* Mechanism cards: sequence denotes the proposed user journey only. */
+.mechanism{padding:9px 11px;background:#fff;border:1px solid var(--rule);border-radius:5px;margin-bottom:8px}
+.mechanism-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:7px}
+.mechanism-head h3{font-size:14px;line-height:1.5}
+.mechanism-head time{font-size:11px;color:var(--ink-ghost)}
+.mechanism .stage{font-size:11px;color:var(--ink-dim);line-height:1.5}
+.flow{display:grid;grid-template-columns:minmax(0,1fr) 16px minmax(0,1fr) 16px minmax(0,1fr);gap:4px;align-items:stretch;margin:0 0 7px}
+.flow-step{padding:9px 3px;text-align:center;border-radius:3px;background:#edf2ef;font-size:12px;font-weight:700;line-height:1.55;color:var(--green);display:flex;align-items:center;justify-content:center;min-height:54px}
+.mechanism.sony .flow-step{background:#edf2f9;color:var(--blue)}
+.flow-arrow{align-self:center;color:var(--ink-ghost);text-align:center;font-size:15px}
+.mechanism-detail{font-size:11px;line-height:1.65;color:var(--ink-dim)}
+.compare .row-label{font-size:11px;font-weight:700;color:var(--ink)}
+.compare th,.compare td{padding-left:8px;padding-right:8px}
+/* Restore the established news cards, retaining topic groups and short bullets. */
+.digest-cards{margin-top:10px}
+.ev-line{background:var(--surface);border:1px solid var(--rule-dim);border-radius:5px;padding:8px 11px;margin-bottom:7px}
+.ev-head{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:4px}
+.ev-head .d{font:500 11px/1.5 var(--mono);color:var(--ink-ghost)}
+.ev-body{font-size:13px;line-height:1.6;color:var(--ink-dim)}
+.ev-body h4{font-size:14px;line-height:1.5;color:var(--ink);font-weight:800;margin-bottom:4px;overflow-wrap:anywhere}
+.digest-list{padding-left:16px;font-size:13px;line-height:1.6;color:var(--ink-dim)}
+.digest-list li+li{margin-top:3px}
+.digest-list li::marker{color:#9ba9b7}
+.digest-text{font-size:13px;line-height:1.6;color:var(--ink-dim)}
+.digest-subnote{font-size:11px;line-height:1.6;color:var(--ink-ghost);margin-top:4px}
+.watchlist{padding:12px 20px;background:#e8edf3;border-top:1px solid var(--rule)}
+.watchlist h2{font-size:13px;margin-bottom:6px}
+.watch-row{display:grid;grid-template-columns:49px 1fr;gap:10px;padding:6px 0;font-size:12px;line-height:1.55;border-top:1px solid #d4dce6}
+.watch-row time{font-size:11px;color:var(--red-dim);padding-top:2px}
+.footer{background:var(--ink);color:#d0dbe7;padding:12px 20px;font-size:11px;line-height:1.65}
+.footer .logo{font:600 11px var(--mono);letter-spacing:.13em;color:#fff;margin-bottom:7px}
+.source-compact b{color:#fff;font-weight:600}
+.footer .disc{font-size:11px;color:#c0cddd;margin-top:7px;padding-top:7px;border-top:1px solid #49617b}
+#export-toolbar{position:fixed;top:10px;right:10px;z-index:9999;font-family:'Microsoft YaHei',sans-serif;user-select:none}
+#exp-main{background:var(--red);color:#fff;border:0;padding:7px 12px;border-radius:4px;font-size:11px;font-weight:700;cursor:pointer;box-shadow:0 2px 6px #0003}
+#exp-panel{display:none;margin-top:6px;background:#1e3a5ff5;padding:8px;border-radius:4px;box-shadow:0 4px 12px #0004}
+.exp-btn{display:block;width:100%;background:#ffffff14;color:#fff;border:1px solid #ffffff33;padding:6px 10px;border-radius:3px;font:600 11px var(--mono);cursor:pointer;margin-bottom:4px;text-align:left}
+#exp-status{font-size:11px;color:#ffb896;line-height:1.4;margin-top:5px;min-height:12px}
+@media(max-width:400px){.section{padding-left:16px;padding-right:16px}.hero{padding-left:16px;padding-right:16px}.hero h1{font-size:26px}.hero .meta{font-size:11px}.route-main{gap:5px}.flow{gap:3px}.kc-side{grid-template-columns:44px minmax(0,1fr);gap:7px}}
+@media print{#export-toolbar{display:none!important}html,body{background:#fff}}
+/* 修订只补充来源、口径提示与窄屏适配，保留原有组件。 */
+.cite{font:600 11px/1.5 var(--mono);color:var(--blue);text-decoration:none;white-space:nowrap;margin-left:3px}
+.kc .cite{color:#bbd9ff}
+.cite:focus-visible,.source-list a:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.bar-row{grid-template-columns:39px minmax(0,1fr) 70px}
+.axis{margin-right:78px}
+.mechanism-detail{font-size:13px}
+.dtbl th{font-size:12px}
+.watch-row{font-size:13px}
+.source-details summary{cursor:pointer;font-weight:700;color:#fff;line-height:1.7}
+.source-list{padding-left:0;list-style:none;margin-top:8px;display:grid;gap:7px}
+.source-list li{scroll-margin-top:12px;padding-top:5px;border-top:1px solid #49617b;overflow-wrap:anywhere}
+.source-list a{color:#e0edff;text-decoration:underline;text-underline-offset:2px}
+.source-list span{display:block;color:#c0cddd}
+.source-note{margin-top:8px;color:#c0cddd}
+</style>
+</head>
+<body>
+<div id="export-toolbar">
+  <button id="exp-main" type="button" aria-controls="exp-panel" aria-expanded="false">导出长图</button>
+  <div id="exp-panel">
+    <button data-scale="2" class="exp-btn" type="button">@2x · 860px</button>
+    <button data-scale="3" class="exp-btn" type="button">@3x · 1290px（推荐）</button>
+    <button data-scale="4" class="exp-btn" type="button">@4x · 1720px</button>
+    <p style="width:210px;font-size:11px;line-height:1.6;color:#dce5ef;margin:7px 0 3px">导出固定为 430px 版式，推荐 @3x；实际长图尺寸以导出结果为准。</p>
+    <div id="exp-status" role="status" aria-live="polite"></div>
+  </div>
+</div>
+<main class="page">
+  <header class="hero">
+    <div class="brand">GAMEPULSE · WEEKLY</div>
+    <h1>端主行业周报 W36</h1>
+    <div class="meta"><span>DATE · <strong>2026.09.25</strong></span><span>WEEK · <strong>9.21–9.27</strong></span></div>
+    <div class="draft">新闻截至 2026.09.24 · v7 于 2026-10-10 修订<br>后续日历按原截稿时点保留计划语态</div>
+  </header>
+  <nav class="toc" aria-label="章节导航">
+    <a href="#xbox"><span class="idx">01</span>Xbox 重组与裁员</a>
+    <a href="#japan"><span class="idx">02</span>日本 PC 份额提升</a>
+    <a href="#monetization"><span class="idx">03</span>广告专利与商店优惠</a>
+    <a href="#digest"><span class="idx">04</span>五条行业新闻速览</a>
+  </nav>
+
+  <section class="section" id="xbox" aria-labelledby="title-xbox">
+    <div class="sec-head"><div class="num">01</div><div class="heading"><h2 id="title-xbox">Xbox：第一方组织与 IP 重组</h2><p class="subtitle">核心 IP 向大发行单元集中，工作室同步收缩</p></div></div>
+    <div class="kc">
+      <div class="kc-l">核心结论 · KEY CONCLUSION</div>
+      <p class="kc-t">Xbox 重组的重点不只是减员，而是<b>重新分配核心游戏系列的开发责任</b>。</p>
+      <div class="kc-week">本周要点</div>
+      <ul class="kc-points">
+        <li class="kc-side"><span class="side-t">组织调整</span><span class="side-b">《光环》下一款作品交由 Activision 专门团队；多家工作室调整归属。<a class="cite" href="#source-01">[01]</a></span></li>
+        <li class="kc-side"><span class="side-t">人员收缩</span><span class="side-b">官方披露裁减 <b>268 岗</b>；拟关闭、员工磋商与媒体个案分列。<a class="cite" href="#source-01">[01]</a></span></li>
+      </ul>
+    </div>
+
+    <h3 class="sub-step"><span class="sn">01</span><span class="stt">Xbox 调整工作室归属，《光环》新作转交 Activision<span class="step-meta"><time>9/22</time><span>组织与项目分工</span></span></span></h3>
+    <p class="event-intro">Activision 与 Bethesda 都是 Microsoft 旗下业务。本次所述调整是<b>集团内部重新分工</b>，不是把游戏卖给外部公司。</p>
+    <figure class="panel org-map" aria-label="Xbox四项IP及工作室归属变动">
+      <figcaption class="panel-cap">集团内部调整 · 非完整组织架构</figcaption>
+      <table class="dtbl org-table" aria-label="游戏团队与调整后承接方"><colgroup><col style="width:40%"><col style="width:60%"></colgroup><thead><tr><th scope="col">游戏 / 团队</th><th scope="col">调整后承接方</th></tr></thead><tbody>
+        <tr><td class="entity">《光环》下一款作品</td><td><b>Activision 新团队</b><span class="cell-note">独立于《使命召唤》团队</span></td></tr>
+        <tr><td class="entity">Rare、World’s Edge</td><td><b>Activision</b></td></tr>
+        <tr><td class="entity">Obsidian</td><td><b>Bethesda</b><span class="cell-note">保留原有项目规划</span></td></tr>
+        <tr><td class="entity">Playground ＋ Turn 10</td><td><b>合并工作室</b><span class="cell-note">涉及《极限竞速》《神鬼寓言》</span></td></tr>
+      </tbody></table>
+      <p class="org-foot">Halo Studios 留小队支持社区及现有游戏；表为归属调整节选。<a class="cite" href="#source-01">[01]</a></p>
+    </figure>
+
+    <h3 class="sub-step"><span class="sn">02</span><span class="stt">Xbox 裁减 268 岗，拟关闭事项另行磋商<span class="step-meta"><time>9/22–23</time><span>官方公告与媒体个案分列</span></span></span></h3>
+    <p class="event-intro">Matt Booty 9月22日称，268岗涉及 Halo、其他第一方团队及 XGS 中央职能。<a class="cite" href="#source-01">[01]</a></p>
+    <div class="panel"><table class="dtbl" aria-label="工作室受影响情况与来源"><colgroup><col style="width:34%"><col style="width:66%"></colgroup><thead><tr><th scope="col">工作室</th><th scope="col">状态与限定</th></tr></thead><tbody>
+      <tr><td class="entity">World’s Edge</td><td>据 Eurogamer 转引前创意总监 Adam Isgreen，裁员略少于半数，含其本人。<a class="cite" href="#source-02">[02]</a><span class="cell-note">非官方统计，不与268岗相加</span></td></tr>
+      <tr><td class="entity">Ninja Theory</td><td>两项独立协议未成，启动拟关闭的员工磋商；仍探索其他方案。<a class="cite" href="#source-01">[01]</a></td></tr>
+      <tr><td class="entity">Arkane</td><td>员工磋商计划持续至年底，结果未定。<a class="cite" href="#source-01">[01]</a></td></tr>
+    </tbody></table></div>
+    <div class="plan-context" aria-label="整体重组进度，非裁员完成率">
+      <p><b>整体重组约四分之三：</b>Booty称，自7月以来的行动（含工作室剥离）覆盖此前宣布重组的约四分之三，<b>不是裁员完成率</b>。<a class="cite" href="#source-01">[01]</a></p>
+    </div>
+    <article class="ev-line" style="margin-top:9px">
+      <div class="ev-head"><time class="d">9/22</time><span class="tg tg-y">另据媒体 · 不计入268岗</span></div>
+      <p class="digest-text">Kotaku报道《战争机器：E-Day》剧情总监 Juan Vaca 自报被裁；消息源称少量岗位变动与当天重组无关，发售计划不变。<a class="cite" href="#source-03">[03]</a></p>
+    </article>
+
+    <div class="takeaway"><div class="takeaway-h">分析判断 · 合作与交付</div><ul class="bullets">
+      <li><b>合作：</b>管理方变化后，重确认项目决策权与资源承诺。</li>
+      <li><b>交付：</b>单独评估关键岗位变动，不直接等同延期或品质下滑。</li>
+    </ul></div>
+  </section>
+
+  <section class="section" id="japan" aria-labelledby="title-japan">
+    <div class="sec-head"><div class="num">02</div><div class="heading"><h2 id="title-japan">日本：PC 份额提升的长期信号</h2><p class="subtitle">上期背景 · 份额变化不等于收入增幅</p></div></div>
+    <div class="kc">
+      <div class="kc-l">核心结论 · KEY CONCLUSION</div>
+      <p class="kc-t">Toto的份额判断提示：<b>在立项时评估 PC 发行价值</b>，但不据此推算市场收入。</p>
+      <div class="kc-week">本周要点</div>
+      <ul class="kc-points">
+        <li class="kc-side"><span class="side-t">背景引用</span><span class="side-b">Serkan Toto称，日本 PC 份额由2019年5%升至2025年<b>约12.5%</b>。<a class="cite" href="#source-04">[04]</a></span></li>
+        <li class="kc-side"><span class="side-t">口径边界</span><span class="side-b">访谈未披露具体统计指标；<b>约2.5倍是份额之比</b>，非收入增幅。</span></li>
+      </ul>
+    </div>
+
+    <h3 class="sub-step"><span class="sn">01</span><span class="stt">Serkan Toto：日本 PC 份额升至约12.5%<span class="step-meta"><time>9/17 媒体转述</time><span class="tg tg-y">上期背景</span></span></span></h3>
+    <figure class="panel share-chart" aria-label="据Serkan Toto，日本PC份额2019年5%，2025年约12.5%，约为原来的2.5倍；具体指标未披露，非收入增幅">
+      <div class="bar-rows">
+        <div class="bar-row"><span class="bar-year">2019</span><div class="bar-track"><div class="bar-fill" style="width:33.333333%"></div></div><span class="bar-value">5%</span></div>
+        <div class="bar-row"><span class="bar-year">2025</span><div class="bar-track"><div class="bar-fill current" style="width:83.333333%"></div></div><span class="bar-value">约12.5%</span></div>
+      </div>
+      <div class="axis" aria-hidden="true"><span>0</span><span>5</span><span>10</span><span>15%</span></div>
+      <figcaption class="chart-summary"><span>份额约为原来的 <strong>2.5倍</strong></span><span>同一0–15%刻度</span></figcaption>
+    </figure>
+    <p class="src">来源：The Game Business访谈；TwistedVoxel 9/17转述。指标未披露，不标作收入份额。<a class="cite" href="#source-04">[04]</a><a class="cite" href="#source-05">[05]</a></p>
+
+    <div class="jp-actions" aria-label="日本市场发行建议">
+      <p><b>版本规划：</b>按受众与成本，前置评估 PC 同步发行。</p>
+      <p><b>本地体验：</b>日语、键鼠与配置适配单列预算。</p>
+      <p><b>渠道运营：</b>推广与维护并重，兼顾长期销售。</p>
+    </div>
+  </section>
+
+  <section class="section" id="monetization" aria-labelledby="title-monetization">
+    <div class="sec-head"><div class="num">03</div><div class="heading"><h2 id="title-monetization">平台：广告专利与钱包优惠</h2><p class="subtitle">申请公开、用户个案与平台落地分开</p></div></div>
+    <div class="kc">
+      <div class="kc-l">核心结论 · KEY CONCLUSION</div>
+      <p class="kc-t">两条新闻展示变现思路，<b>尚不能等同于平台级机制落地</b>，收入与复购效果待验证。</p>
+      <div class="kc-week">本周要点</div>
+      <ul class="kc-points">
+        <li class="kc-side"><span class="side-t">申请公开</span><span class="side-b">Microsoft相关申请<b>9/3公开、9/21获报道</b>；不是授权或上线公告。<a class="cite" href="#source-06">[06]</a><a class="cite" href="#source-07">[07]</a></span></li>
+        <li class="kc-side"><span class="side-t">局部优惠</span><span class="side-b">部分美区PS Store用户看到钱包余额优惠；资格与完整规则未证。<a class="cite" href="#source-08">[08]</a></span></li>
+      </ul>
+    </div>
+
+    <h3 class="sub-step"><span class="sn">01</span><span class="stt">Microsoft申请描述游戏间隙广告额度机制<span class="step-meta"><time>9/21 报道</time><span class="tg tg-y">9/3 申请公开</span></span></span></h3>
+    <div class="mechanism xbox">
+      <div class="flow" role="img" aria-label="专利申请所述机制：识别游戏间隙，展示推广内容，给予额度延后中断；非已上线规则"><div class="flow-step">识别<br>游戏间隙</div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">展示<br>推广内容</div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">给予额度<br>延后中断</div></div>
+      <p class="mechanism-detail">据著录与媒体解读，US20260260258A1描述上述方案；不能据此推定固定广告间隔，不代表获授权或已上线。<a class="cite" href="#source-06">[06]</a><a class="cite" href="#source-07">[07]</a></p>
+    </div>
+    <h3 class="sub-step"><span class="sn">02</span><span class="stt">部分PS Store用户看到附赠钱包余额优惠<span class="step-meta"><time>9/22 报道</time><span class="tg tg-b">用户个案 · 规则未证</span></span></span></h3>
+    <div class="mechanism sony">
+      <div class="flow" role="img" aria-label="媒体报道的局部优惠：部分账号购买指定商品，附赠钱包余额；非所有用户通用规则"><div class="flow-step">部分账号<br>看到优惠</div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">购买<br>指定商品</div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">附赠<br>钱包余额</div></div>
+      <p class="mechanism-detail">Eurogamer转述美区《黎明行者之血》个案；完整资格与金额规则未证。截图的9/29是<b>活动截止</b>，不是余额到期。<a class="cite" href="#source-08">[08]</a></p>
+    </div>
+
+    <div class="takeaway" id="monetization-analysis"><div class="takeaway-h">分析判断 · 广告看体验代价，返利看消费增量</div><ul class="bullets">
+      <li><b>广告：</b>广告收入须扣除体验受损、用户流失的代价。</li>
+      <li><b>返利：</b>复购新增收益须覆盖返利成本，不能只看订单。</li>
+    </ul></div>
+  </section>
+
+  <section class="section" id="digest" aria-labelledby="title-digest">
+    <div class="sec-head"><div class="num">04</div><div class="heading"><h2 id="title-digest">其他新闻速览 · 五条</h2><p class="subtitle">发行合作、跨端权益与新作信息</p></div></div>
+    <div class="kc">
+      <div class="kc-l">核心结论 · QUICK SCAN</div>
+      <p class="kc-t">合作与产品更新分别看，<b>不把技术传闻写成上市承诺</b>。</p>
+      <div class="kc-week">本周要点</div>
+      <ul class="kc-points">
+        <li class="kc-side"><span class="side-t">权益范围</span><span class="side-b">《巫师3》重申XPA计划；《沙丘》共享进度不等于全平台联机。<a class="cite" href="#source-12">[12]</a><a class="cite" href="#source-16">[16]</a></span></li>
+        <li class="kc-side"><span class="side-t">新作模式</span><span class="side-b">《源初之结》已表态免费游玩，角色非抽卡；付费细节仍规划中。<a class="cite" href="#source-17">[17]</a><a class="cite" href="#source-18">[18]</a></span></li>
+      </ul>
+    </div>
+
+    <div class="digest-cards">
+      <article class="ev-line">
+        <div class="ev-head"><time class="d">9/20</time><span class="tg tg-g">发行合作</span><span class="tg tg-y">上周末后续</span></div>
+        <div class="ev-body"><h4>01 · 小岛工作室回应PHYSINT发行合作变化</h4><ul class="digest-list">
+          <li>工作室称健康盈利、与Xbox继续推进；公告谈发行合作，非股权撤资披露。<a class="cite" href="#source-09">[09]</a></li>
+          <li>9/17背景：Bill Skarsgård主演PHYSINT；据Esquire转引，OD恢复表演捕捉与ADR录制。<a class="cite" href="#source-10">[10]</a><a class="cite" href="#source-11">[11]</a></li>
+        </ul></div>
+      </article>
+      <article class="ev-line">
+        <div class="ev-head"><time class="d">9/21</time><span class="tg tg-g">跨端权益</span><span class="tg tg-y">重申计划</span></div>
+        <div class="ev-body"><h4>02 · 《巫师3》计划9/29支持Play Anywhere</h4><p class="digest-text">CDPR重申：符合条件的Xbox数字权益可覆盖Microsoft Store PC版，并按XPA共享进度与成就；不含Steam等其他商店版本。<a class="cite" href="#source-12">[12]</a><a class="cite" href="#source-14">[14]</a></p><p class="digest-subnote">8/25已有官宣，本周非首次公布；截至9/24仍为计划。<a class="cite" href="#source-13">[13]</a></p></div>
+      </article>
+      <article class="ev-line">
+        <div class="ev-head"><time class="d">9/23</time><span class="tg tg-b">下一代主机</span><span class="tg tg-y">传闻 · 未确认</span></div>
+        <div class="ev-body"><h4>03 · Wccftech转引PS6／Helix流片爆料</h4><p class="digest-text">Wccftech转引Kepler_L2：PS6与Xbox Helix据称已流片，理论算力约40／56 TFLOPS；规格与2027年底窗口均未获官方确认。<a class="cite" href="#source-15">[15]</a></p><p class="digest-subnote">流片≠量产或确定发售；理论算力≠实际游戏帧率。</p></div>
+      </article>
+      <article class="ev-line">
+        <div class="ev-head"><time class="d">9/22</time><span class="tg tg-g">Xbox发售</span><span class="tg tg-g">Game Pass</span></div>
+        <div class="ev-body"><h4>04 · 《沙丘：觉醒》登陆Xbox及微软商店</h4><p class="digest-text">Xbox Series X|S与Microsoft Store版通过Game Pass提供，支持Play Anywhere及共享进度；完整跨平台联机计划在主机发售后推出。<a class="cite" href="#source-16">[16]</a></p><p class="digest-subnote">不泛化为所有商店存档互通或所有订阅档位可用。</p></div>
+      </article>
+      <article class="ev-line">
+        <div class="ev-head"><time class="d">9/23</time><span class="tg tg-r">miHoYo新作</span><span class="tg tg-g">官方FAQ</span></div>
+        <div class="ev-body"><h4>05 · 《源初之结》确认首发支持PC</h4><ul class="digest-list"><li>Nodusfall角色通过持续游玩解锁、不靠抽卡；不强制组队，PC首发不等于独占。<a class="cite" href="#source-17">[17]</a></li><li>开发团队8/26已向PC Gamer表示<b>免费游玩</b>，更多付费细节仍在规划。<a class="cite" href="#source-18">[18]</a></li></ul></div>
+      </article>
+    </div>
+  </section>
+
+  <aside class="watchlist" aria-labelledby="watch-title"><h2 id="watch-title">后续观察 · 按9/24截稿时点</h2>
+    <div class="watch-row"><time datetime="2026-09-29">9/29</time><span>《巫师3》计划支持XPA；媒体所示PS Store优惠预计截止，非余额到期。<a class="cite" href="#source-12">[12]</a><a class="cite" href="#source-08">[08]</a></span></div>
+    <div class="watch-row"><time datetime="2026-10-06">10/6</time><span>Xbox拟召开全员大会，回顾进展与游戏阵容；不预设会公布新决定。<a class="cite" href="#source-01">[01]</a></span></div>
+  </aside>
+  <footer class="footer">
+    <div class="logo">GAMEPULSE · W36 · v7</div>
+    <details class="source-details" id="sources">
+      <summary>来源与修订说明 · 18项（点击展开）</summary>
+      <ol class="source-list">
+        <li id="source-01"><a href="https://news.xbox.com/en-us/2026/09/22/continuing-our-reset/" target="_blank" rel="noopener noreferrer">[01] Xbox Wire · Continuing Our Reset</a><span>Matt Booty · 2026-09-22 · 官方公告。归属、268岗、整体重组约四分之三、拟关闭磋商及全员大会。</span></li>
+        <li id="source-02"><a href="https://www.eurogamer.net/age-of-empire-worlds-edge-studio-xbox-cuts" target="_blank" rel="noopener noreferrer">[02] Eurogamer · World’s Edge人员调整</a><span>2026-09-23 · 媒体转引前创意总监Adam Isgreen；“just under half”，非官方人数统计。</span></li>
+        <li id="source-03"><a href="https://kotaku.com/gears-of-war-e-day-story-director-laid-off-just-four-days-after-celebrating-the-game-going-gold-2000736518" target="_blank" rel="noopener noreferrer">[03] Kotaku · E-Day剧情总监个案</a><span>Zack Zwiezen · 2026-09-22，15:14 ET更新 · Juan Vaca自述；消息源称与当天重组无关，不计入268岗。</span></li>
+        <li id="source-04"><a href="https://thegamebusiness.com/p/five-things-weve-learned-about-japans" target="_blank" rel="noopener noreferrer">[04] The Game Business · Serkan Toto访谈</a><span>Christopher Dring · 2026年访谈，页面未返回发布日期；采访文字可读。5%与约12.5%的统计指标未披露。</span></li>
+        <li id="source-05"><a href="https://twistedvoxel.com/pc-gaming-market-in-japan-grows-by-2-5-times-in-6-years/" target="_blank" rel="noopener noreferrer">[05] TwistedVoxel · 日本PC份额转述</a><span>Muhammad Ali Bari · 2026-09-17 · 正文可读，将“去年”对应2025；与[04]同一采访链，非独立统计。</span></li>
+        <li id="source-06"><a href="https://patentlyze.com/patent/microsoft-context-aware-game-ad-timing-explained/" target="_blank" rel="noopener noreferrer">[06] Patentlyze · 广告额度申请著录与解读</a><span>2026-09-04更新 · 著录列公开日9/3、Microsoft Technology Licensing。聚合来源可读，非官方专利全文。</span></li>
+        <li id="source-07"><a href="https://www.play3.de/2026/09/21/microsoft-patent-in-game-werbung-auf-xbox-und-pc-waehrend-spielpausen-mit-ad-credit-system/" target="_blank" rel="noopener noreferrer">[07] Play3 · Microsoft广告额度机制报道</a><span>Maik Seidl · 2026-09-21 · 正文可读。申请公开不等于授权、上线；本稿不列时长实施例。</span></li>
+        <li id="source-08"><a href="https://www.eurogamer.net/playstation-store-wallet-credits-rewards" target="_blank" rel="noopener noreferrer">[08] Eurogamer · PS Store钱包余额优惠</a><span>2026-09-22 · 正文可读，用户截图与到账自述属个案；Reddit原帖受限，官方完整规则未取得。</span></li>
+        <li id="source-09"><a href="https://x.com/KojiPro2015_EN/status/2101631479704883571" target="_blank" rel="noopener noreferrer">[09] Kojima Productions · PHYSINT声明</a><span>2026-09-20 · 官方原帖可读。“change in publishing partners”；健康盈利为公司自述，非独立审计。</span></li>
+        <li id="source-10"><a href="https://www.kojimaproductions.jp/en/physint_announcement_0917" target="_blank" rel="noopener noreferrer">[10] Kojima Productions · Bill Skarsgård主演</a><span>2026-09-17 · 官方正文可读，本期作为背景。</span></li>
+        <li id="source-11"><a href="https://www.esquire.com/entertainment/movies/a73773284/hideo-kojima-physint-xbox" target="_blank" rel="noopener noreferrer">[11] Esquire · OD录制进展</a><span>Eric Francisco · 2026-09-17 · 正文转引视频讲话：表演捕捉与ADR录制年内恢复；未核听视频。</span></li>
+        <li id="source-12"><a href="https://x.com/CDPRJP/status/2101869030143377416" target="_blank" rel="noopener noreferrer">[12] CDPR日本 · 《巫师3》XPA提醒</a><span>2026-09-21 · 官方原帖可读，计划9/29更新，明确Microsoft Store PC权益。</span></li>
+        <li id="source-13"><a href="https://news.xbox.com/en-us/2026/08/25/witcher-3-remastered-and-songs-of-the-past/" target="_blank" rel="noopener noreferrer">[13] Xbox Wire · 《巫师3》早期公告</a><span>Marta Piwońska／CDPR · 2026-08-25 · 正文可读，此前已宣布XPA；9/21不是首次披露。</span></li>
+        <li id="source-14"><a href="https://developer.microsoft.com/en-us/games/resources/xbox-play-anywhere/" target="_blank" rel="noopener noreferrer">[14] Microsoft · Xbox Play Anywhere机制</a><span>未标发布日期 · 官方说明可读。Xbox数字商店购买权益与跨进度，不扩至Steam等其他商店。</span></li>
+        <li id="source-15"><a href="https://wccftech.com/xbox-helix-ps6-40-percent-tflops-leak-pricing" target="_blank" rel="noopener noreferrer">[15] Wccftech · Kepler_L2芯片爆料</a><span>Alessio Palumbo · 2026-09-23 · 正文可读，原论坛帖受限；规格与窗口均属传闻，不采用媒体自设可信率。</span></li>
+        <li id="source-16"><a href="https://news.xbox.com/en-us/2026/09/22/dune-awakening-xbox-launch" target="_blank" rel="noopener noreferrer">[16] Xbox Wire · 《沙丘：觉醒》Xbox发售</a><span>Oscar Guardiola Serra／Funcom · 2026-09-22 · 官方渠道正文可读；共享进度与发售后完整cross-play分开。</span></li>
+        <li id="source-17"><a href="https://x.com/Nodusfall/status/2102671826631709129" target="_blank" rel="noopener noreferrer">[17] Nodusfall · 官方FAQ</a><span>2026-09-23 · 原帖可读，首发支持PC、角色游玩解锁、不强制组队；付费细节仍规划中。</span></li>
+        <li id="source-18"><a href="https://www.pcgamer.com/games/action/hoyoverses-nodusfall-is-free-to-play-but-isnt-a-typical-gacha-game-characters-are-not-obtained-through-random-draws/" target="_blank" rel="noopener noreferrer">[18] PC Gamer · Nodusfall免费游玩表态</a><span>Fraser Brown · 2026-08-26 · 正文含开发者引语：free-to-play；外观付费为考虑方向。</span></li>
+      </ol>
+      <p class="source-note">证据边界：官方自述、媒体转引与传闻已分别标明；同一公告的转载不构成独立验证，受限原件与统计口径缺口在对应来源中注明。</p>
+      <p class="source-note">v7修订：撤下日本争议销量卡及相关榜单、Switch旧销量卡、缺证调岗数字；更正重组进度、发行合作、专利与跨端权益口径。争议数字不再进入正文。</p>
+      <p class="source-note">截至9/24的信息边界不因10/10修订而延长；原稿与v6保留追溯。正文可单文件阅读，在线字体及导出组件仍需联网。</p>
+    </details>
+    <p class="disc">官方／媒体／传闻逐项标注；争议数据已撤下。新闻截至9/24，未来事项保留计划语态。</p>
+  </footer>
+</main>
+<script>
+document.querySelectorAll('a.cite').forEach(link=>link.addEventListener('click',event=>{
+  const target=document.getElementById(link.getAttribute('href').slice(1));
+  if(!target)return;
+  event.preventDefault();
+  document.getElementById('sources').open=true;
+  requestAnimationFrame(()=>target.scrollIntoView({block:'start'}));
+}));
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+(function(){
+  const tb=document.getElementById('export-toolbar'),mb=document.getElementById('exp-main'),pn=document.getElementById('exp-panel'),st=document.getElementById('exp-status'),bs=document.querySelectorAll('.exp-btn'),pg=document.querySelector('.page');
+  function panel(open){pn.style.display=open?'block':'none';mb.setAttribute('aria-expanded',String(open));}
+  mb.addEventListener('click',()=>panel(pn.style.display!=='block'));
+  document.addEventListener('click',e=>{if(!tb.contains(e.target))panel(false);});
+  function ss(t,err){st.textContent=t;st.style.color=err?'#ffb0b0':'#ffb896';}
+  function lk(l){bs.forEach(b=>b.disabled=l);mb.disabled=l;}
+  async function ex(s){
+    if(typeof html2canvas==='undefined'){ss('导出组件未加载，请联网后重试',true);return;}
+    lk(true);ss('渲染中…@'+s+'x');tb.style.visibility='hidden';
+    const previousWidth=pg.style.width,previousMaxWidth=pg.style.maxWidth;
+    try{
+      pg.style.width='430px';pg.style.maxWidth='none';
+      if(document.fonts&&document.fonts.ready)await document.fonts.ready;
+      await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+      const c=await html2canvas(pg,{scale:s,backgroundColor:'#f4f6f9',useCORS:true,logging:false,width:430,windowWidth:430,windowHeight:pg.offsetHeight});
+      ss('生成PNG…');
+      const blob=await new Promise(resolve=>c.toBlob(resolve,'image/png'));
+      if(!blob)throw new Error('图像生成失败');
+      const u=URL.createObjectURL(blob),a=document.createElement('a'),baseName=(document.title||'Briefing').replace(/[\s·\/\\:\*\?"<>\|]/g,'_');
+      a.href=u;a.download=baseName+'_'+s+'x.png';document.body.appendChild(a);a.click();a.remove();
+      setTimeout(()=>URL.revokeObjectURL(u),1000);ss('@'+s+'x 已导出');
+    }catch(e){ss('失败：'+e.message,true);}
+    finally{pg.style.width=previousWidth;pg.style.maxWidth=previousMaxWidth;tb.style.visibility='visible';lk(false);}
+  }
+  bs.forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();ex(parseInt(b.dataset.scale,10));}));
+})();
+</script>
+</body>
+</html>

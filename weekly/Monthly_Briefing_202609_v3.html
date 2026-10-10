@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>端主行业月报 · 2026年9月 · v3</title>
+<meta name="report-version" content="v3">
+<meta name="report-revised" content="2026-10-10">
+<meta name="report-cutoff" content="2026-09-30">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f6f9;--ink:#1e3a5f;--ink2:#2c4a6e;--dim:#4a5c6e;--ghost:#7b8a99;
+  --red:#c85a4a;--redbg:#f5e0db;--gold:#8b6914;--goldbg:#ede4cf;
+  --green:#3d6b57;--greenbg:#dde7e0;--blue:#0055a5;--bluebg:#e0ecf7;
+  --surface:#fff;--surface2:#eef1f5;--rule:#d5dce3;--rule2:#e5e9ee;
+  --sony:#003087;--xbox:#107c10;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#c8ced6;font-family:'Microsoft YaHei','微软雅黑',-apple-system,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.page{width:430px;background:var(--bg);color:var(--ink);margin:0 auto;overflow:hidden}
+.hero{background:linear-gradient(135deg,#16283f 0%,#24405f 56%,#2c4a6e 100%);color:#fff;padding:26px 20px 28px;position:relative}
+.hero:after{content:'';position:absolute;left:0;right:0;bottom:0;height:5px;background:linear-gradient(90deg,var(--red),var(--gold))}
+.brand{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.3em;color:#e0a56a;font-weight:700;margin-bottom:12px}
+.hero h1{font-size:30px;line-height:1.15;font-weight:800}
+.hero .sub{font-size:15px;line-height:1.52;color:rgba(255,255,255,.84);margin-top:10px;font-weight:600}
+.hero .meta{display:flex;gap:18px;margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.15);font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(255,255,255,.72);letter-spacing:.06em}
+.hero .meta strong{color:#fff}
+.exec{background:#16283f;color:#fff;padding:19px 20px 20px}
+.exec-h{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.17em;color:#e0a56a;font-weight:700;margin-bottom:11px}
+.exec-row{display:flex;gap:11px;padding:9px 0;border-top:1px solid rgba(255,255,255,.1)}
+.exec-row:first-of-type{border-top:0}
+.exec-n{font-family:'IBM Plex Mono',monospace;font-size:20px;font-weight:800;color:#e8b84a;line-height:1;min-width:25px}
+.exec-t{font-size:13px;line-height:1.58;color:rgba(255,255,255,.9)}
+.exec-t b{color:#fff;font-weight:800}
+.section{padding:25px 20px 22px}
+.section+.section{border-top:10px solid #e2e7ed}
+.sec-head{display:flex;align-items:flex-start;gap:11px;margin-bottom:15px;padding-bottom:10px;border-bottom:2px solid var(--ink);position:relative}
+.sec-head:after{content:'';position:absolute;left:0;bottom:-2px;width:48px;height:2px;background:var(--red)}
+.sec-head .num{font-family:'IBM Plex Mono',monospace;font-size:31px;font-weight:800;color:var(--red);line-height:.92}
+.sec-head .title{font-size:18px;font-weight:800;line-height:1.32;flex:1}
+.sec-head .title em{display:block;font-style:normal;font-size:15px;color:var(--red);font-weight:600;margin-top:3px}
+.key{background:linear-gradient(135deg,#1e3a5f,#263f5e);color:rgba(255,255,255,.93);border-left:4px solid var(--gold);border-radius:6px;padding:13px 15px;margin:10px 0 15px}
+.key-l{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;color:#e8b84a;font-weight:700;margin-bottom:6px}
+.key-t{font-size:13px;line-height:1.65;font-weight:600}
+.key-t b{color:#fff;font-weight:800;border-bottom:2px solid rgba(232,184,74,.5)}
+.key-split{display:flex;flex-direction:column;gap:7px;margin-top:9px}
+.key-side{display:grid;grid-template-columns:52px 1fr;gap:9px;align-items:start;background:rgba(255,255,255,.06);border-radius:5px;padding:8px 10px}
+.key-side .side-t{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:800;line-height:1.5;padding-top:1px}
+.key-side.ps .side-t{color:#7db4e6}.key-side.xb .side-t{color:#7fd0a3}
+.key-side .side-b{font-size:12.5px;line-height:1.6;font-weight:600;color:rgba(255,255,255,.9)}
+.key-side .side-b b{color:#fff;font-weight:800;border-bottom:2px solid rgba(232,184,74,.5)}
+.key-foot{font-size:12.5px;line-height:1.6;font-weight:600;margin-top:9px}.key-foot b{color:#fff;font-weight:800;border-bottom:2px solid rgba(232,184,74,.5)}
+.mini-h{font-size:13px;font-weight:700;color:var(--dim);margin:16px 0 9px;display:flex;align-items:center;gap:7px}
+.mini-h:before{content:'';width:4px;height:14px;background:var(--red);border-radius:2px}
+.evolve{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:9px 0 15px;padding-top:32px;position:relative}
+.evolve:before{content:'';position:absolute;left:15%;right:15%;top:13px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--ink2) 0 66%,var(--red) 66% 100%);box-shadow:0 0 0 1px rgba(30,58,95,.06)}
+.ev-step{background:var(--surface);border:1px solid var(--rule2);border-radius:7px;padding:14px 9px 10px;min-height:104px;position:relative;box-shadow:0 3px 10px rgba(30,58,95,.07)}
+.ev-step:before{content:attr(data-step);position:absolute;left:50%;top:-30px;transform:translateX(-50%);width:25px;height:25px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--ink2);color:#fff;border:3px solid var(--bg);font-family:'IBM Plex Mono',monospace;font-size:8.5px;font-weight:800;z-index:2;box-shadow:0 2px 6px rgba(30,58,95,.24)}
+.ev-step:not(:last-child):after{content:'›';position:absolute;right:-11px;top:-30px;width:18px;height:25px;display:flex;align-items:center;justify-content:center;color:var(--ghost);font-family:'IBM Plex Mono',monospace;font-size:17px;font-weight:800;line-height:1;z-index:3}
+.ev-step.now{border-color:rgba(200,90,74,.38);background:linear-gradient(180deg,#fff 0%,#fff8f6 100%)}
+.ev-step.now:before{background:var(--red);box-shadow:0 2px 8px rgba(200,90,74,.28)}
+.ev-time{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--ink);font-weight:800;letter-spacing:.08em;margin-bottom:6px;padding:2px 6px;background:#e8edf3;border-radius:3px}
+.ev-step.now .ev-time{color:var(--red);background:var(--redbg)}
+.ev-title{font-size:12.5px;color:var(--ink);font-weight:800;line-height:1.35;min-height:34px}
+.ev-text{font-size:10.8px;color:var(--dim);line-height:1.48;margin-top:5px}
+.watch{background:#fff;border:1px solid var(--rule);border-left:4px solid var(--red);border-radius:6px;padding:11px 13px;margin:11px 0}
+.watch-h{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--red);font-weight:800;letter-spacing:.06em;margin-bottom:5px}
+.watch-t{font-size:13px;line-height:1.62;color:var(--dim)}
+.watch-t b{color:var(--ink)}
+.vs-wrap{background:var(--surface);border:1px solid var(--rule);border-radius:8px;overflow:hidden;margin:10px 0}
+.vs-head,.vs-row{display:grid;grid-template-columns:1fr 1fr}
+.vs-head{color:#fff;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:800}
+.vs-head div{padding:8px 10px}.vs-head .ps{background:var(--sony)}.vs-head .xb{background:var(--xbox)}
+.vs-cat{background:var(--surface2);font-size:11px;color:var(--ghost);font-weight:800;padding:5px 9px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule2)}
+.vs-cell{padding:8px 9px;font-size:12px;line-height:1.53;color:var(--dim);word-break:break-word}
+.vs-cell+ .vs-cell{border-left:1px solid var(--rule2)}
+.vs-cell b{color:var(--ink);font-weight:800}
+.strategy-vs{border:0;box-shadow:0 5px 18px rgba(30,58,95,.12);border-radius:10px}
+.strategy-vs .vs-head{font-size:10px;letter-spacing:.04em}
+.strategy-vs .vs-head>div{padding:11px 12px 10px;position:relative;overflow:hidden}
+.strategy-vs .vs-head>div:after{content:'';position:absolute;right:-18px;bottom:-28px;width:76px;height:76px;border:1px solid rgba(255,255,255,.2);border-radius:50%}
+.strategy-vs .plat-kicker{display:block;font-size:8.5px;line-height:1;color:rgba(255,255,255,.68);letter-spacing:.15em;margin-bottom:5px}
+.strategy-vs .plat-name{display:block;font-size:14px;line-height:1.15;color:#fff;letter-spacing:.02em}
+.strategy-vs .vs-cat{display:flex;align-items:center;gap:7px;padding:7px 10px;background:#e9edf2;border-top:1px solid #d3dae3;border-bottom:1px solid #dbe1e8}
+.strategy-vs .cat-no{display:inline-flex;align-items:center;justify-content:center;width:22px;height:18px;border-radius:3px;background:var(--ink);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.04em}
+.strategy-vs .cat-name{font-size:12px;color:var(--ink);font-weight:800}
+.strategy-vs .cat-note{margin-left:auto;font-size:9.5px;color:var(--ghost);font-weight:600}
+.strategy-vs .vs-row{background:linear-gradient(90deg,rgba(0,85,165,.035) 0 50%,rgba(16,124,65,.035) 50% 100%)}
+.strategy-vs .vs-cell{padding:10px 11px 11px;min-height:76px;border-top:3px solid rgba(0,85,165,.35)}
+.strategy-vs .vs-cell+ .vs-cell{border-left:1px solid #ccd5df;border-top-color:rgba(16,124,65,.38)}
+.strategy-vs .cell-lead{font-size:12.5px;line-height:1.38;font-weight:800;color:var(--ink);margin-bottom:5px}
+.strategy-vs .cell-lead.ps-t{color:#064b90}.strategy-vs .cell-lead.xb-t{color:#0e6b39}
+.strategy-vs .cell-sub{font-size:11.2px;line-height:1.52;color:var(--dim)}
+.strategy-vs .cell-mark{display:inline-block;padding:1px 4px;border-radius:3px;font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:800;vertical-align:1px;margin-right:3px}
+.strategy-vs .cell-mark.ps-m{color:#0055a5;background:#e0ecf7}.strategy-vs .cell-mark.xb-m{color:#107c41;background:#deeee5}
+.boundary{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin:10px 0}
+.bound-card{background:var(--surface);border:1px solid var(--rule2);border-radius:6px;padding:9px 7px;text-align:center}
+.bound-v{font-family:'IBM Plex Mono',monospace;font-size:17px;font-weight:800;color:var(--red)}
+.bound-l{font-size:10px;line-height:1.38;color:var(--dim);margin-top:4px}
+.gta-feature{background:var(--surface);border-radius:9px;padding:13px 14px 12px;margin:10px 0 14px;box-shadow:0 4px 14px rgba(30,58,95,.1);position:relative;overflow:hidden}
+.gta-feature:before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--red)}
+.gta-feature:after{content:'VI';position:absolute;right:6px;top:-10px;font-family:'IBM Plex Mono',monospace;font-size:80px;font-weight:800;color:rgba(200,90,74,.08);line-height:1}
+.gta-kicker{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--ghost);font-weight:800;letter-spacing:.12em;margin-bottom:5px}
+.gta-title{font-size:17px;font-weight:800;line-height:1.28;color:var(--ink);position:relative;z-index:1}.gta-title em{font-style:normal;color:var(--red)}
+.gta-metrics{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin:11px 0 10px;position:relative;z-index:1}
+.gta-metric{border:1px solid var(--rule2);border-radius:5px;padding:8px 5px;background:#f7f9fb;text-align:center}
+.gta-v{font-family:'IBM Plex Mono',monospace;font-size:16px;font-weight:800;color:var(--red)}.gta-l{font-size:8.8px;line-height:1.35;color:var(--dim);margin-top:3px}
+.gta-flow{font-size:11.5px;line-height:1.6;color:var(--dim);position:relative;z-index:1}.gta-flow b{color:var(--ink)}
+.focus-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0;grid-auto-rows:1fr}
+.focus{background:var(--surface);border:0;border-radius:9px;padding:12px 12px 11px;position:relative;overflow:hidden;box-shadow:0 4px 14px rgba(30,58,95,.1);display:flex;flex-direction:column;min-height:158px}
+.focus:before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--green)}
+.focus:after{content:attr(data-index);position:absolute;right:8px;top:5px;font-family:'IBM Plex Mono',monospace;font-size:27px;line-height:1;font-weight:800;color:rgba(61,107,87,.12)}
+.focus .f-top{display:flex;align-items:center;gap:5px;margin-bottom:7px;padding-right:27px}
+.focus .f-region,.focus .f-genre{display:inline-block;border-radius:3px;padding:2px 5px;font-family:'IBM Plex Mono',monospace;font-size:8.5px;font-weight:800;letter-spacing:.04em}
+.focus .f-region{background:var(--greenbg);color:var(--green)}
+.focus .f-genre{background:#e8edf3;color:var(--ghost)}
+.focus .f-name{font-size:15px;font-weight:800;color:var(--ink);line-height:1.25;padding-right:24px;min-height:38px;display:flex;align-items:flex-start}
+.focus .f-meta{font-family:'IBM Plex Mono',monospace;font-size:9.7px;color:var(--green);font-weight:800;margin:5px 0 7px;padding:5px 6px;line-height:1.35;background:#eef5f0;border-radius:4px}
+.focus .f-body{font-size:11.2px;color:var(--dim);line-height:1.5;margin-top:auto;padding-top:1px}
+.focus .f-body b{color:var(--ink)}
+.pipeline-list{background:var(--surface);border-radius:9px;box-shadow:0 4px 15px rgba(30,58,95,.09);overflow:hidden;margin:9px 0 12px}
+.pipe-item{padding:9px 11px 9px 10px;border-bottom:1px solid var(--rule2);position:relative}
+.pipe-item:last-child{border-bottom:0}.pipe-item:nth-child(even){background:#f1f4f7}
+.pipe-top{display:grid;grid-template-columns:24px minmax(0,1fr) auto;align-items:center;gap:7px;margin-bottom:4px}
+.pipe-no{font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:800;color:#fff;background:var(--ink2);border-radius:3px;padding:3px 0;text-align:center}
+.pipe-name{font-size:12.5px;line-height:1.3;color:var(--ink);font-weight:800;white-space:nowrap;letter-spacing:-.02em;overflow:hidden;text-overflow:ellipsis}
+.pipe-date{font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--red);font-weight:800;white-space:nowrap}
+.pipe-bottom{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;padding-left:31px;align-items:start}
+.pipe-signal{font-size:10.8px;line-height:1.46;color:var(--dim)}
+.pipe-platform{font-family:'IBM Plex Mono',monospace;font-size:8.8px;line-height:1.35;color:var(--ghost);font-weight:700;text-align:right;white-space:nowrap;padding-top:1px}
+.signal{background:var(--surface);border:1px solid var(--rule2);border-radius:6px;margin-top:11px;padding:10px 12px}
+.signal-row{display:flex;gap:9px;padding:6px 0;border-bottom:1px dashed var(--rule)}
+.signal-row:last-child{border-bottom:0}
+.signal-tag{min-width:42px;font-family:'IBM Plex Mono',monospace;color:var(--red);font-size:11px;font-weight:800}
+.signal-t{font-size:12.5px;line-height:1.55;color:var(--dim)}
+.signal-t b{color:var(--ink)}
+.calendar{display:flex;flex-direction:column;gap:7px}
+.cal{display:grid;grid-template-columns:78px 1fr;background:var(--surface);border:1px solid var(--rule2);border-radius:6px;overflow:hidden}
+.cal-d{background:var(--ink2);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-weight:800;padding:8px 4px;text-align:center;display:flex;align-items:center;justify-content:center}
+.cal-t{font-size:12.5px;color:var(--dim);line-height:1.5;padding:7px 10px}.cal-t b{color:var(--ink)}
+.footer{background:var(--ink);color:rgba(255,255,255,.62);padding:19px 20px;text-align:center;font-size:10px;line-height:1.75}
+.footer .logo{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.3em;color:#fff;margin-bottom:7px}
+.footer .disc{font-size:9px;color:rgba(255,255,255,.4);margin-top:7px;line-height:1.55}
+@media print{#export-toolbar{display:none!important}}
+.page{max-width:100%}
+.hero .meta{flex-wrap:wrap;gap:8px 18px;letter-spacing:0}
+.revision{font-size:11px;line-height:1.6;color:rgba(255,255,255,.76);margin-top:9px}
+.chapter-nav{display:flex;flex-wrap:wrap;gap:6px 14px;padding:10px 20px;background:#e8edf3;font-size:11px}
+.chapter-nav a{color:var(--ink);text-decoration:none}
+.key-side .side-b,.key-foot,.ev-text,.strategy-vs .cell-sub,.focus .f-body,.pipe-signal,.signal-t,.cal-t,.gta-flow{font-size:13px;line-height:1.6}
+.ev-title,.strategy-vs .cell-lead,.pipe-name{font-size:14px}
+.ev-time,.ev-step:before,.strategy-vs .plat-kicker,.strategy-vs .cat-no,.strategy-vs .cat-note,.strategy-vs .cell-mark,.bound-l,.gta-kicker,.gta-l,.focus .f-region,.focus .f-genre,.focus .f-meta,.pipe-no,.pipe-date,.pipe-platform,.cal-d,.footer,.footer .disc{font-size:11px}
+.ev-time{padding:2px 3px;letter-spacing:0}
+.ev-step{padding:11px 8px 10px;min-width:0}
+.ev-title{min-height:0}
+.evolve{gap:8px}
+.strategy-vs .plat-name{font-size:13px;overflow-wrap:anywhere}
+.strategy-vs .vs-head>div{padding:11px 10px}
+.strategy-vs .vs-cell{min-width:0;padding:10px}
+.bound-l{line-height:1.55}
+.bound-v{font-size:23px;line-height:1.2}
+.boundary.two{grid-template-columns:1fr 1fr}
+.focus-grid{gap:8px;grid-auto-rows:auto}
+.focus{min-width:0;padding:12px 11px}
+.focus .f-top{flex-wrap:wrap;padding-right:0}
+.focus .f-name{padding-right:0;min-height:0}
+.focus .f-body{margin-top:0}
+.focus .f-meta{padding:5px 4px}
+.pipe-name{white-space:normal;overflow:visible;text-overflow:clip}
+.pipe-top{grid-template-columns:22px minmax(0,1fr) auto;align-items:start}
+.pipe-bottom{grid-template-columns:minmax(0,1fr) 86px;gap:7px;padding-left:29px}
+.pipe-platform{white-space:normal;overflow-wrap:anywhere}
+.signal-tag{flex:0 0 42px}
+.gta-metrics{grid-template-columns:1fr}
+.gta-v{font-size:28px}
+.gta-l{line-height:1.6}
+.gta-flow p+p{margin-top:7px}
+.footer .disc{color:rgba(255,255,255,.76)}
+.source-ref{font-family:'IBM Plex Mono','Microsoft YaHei',sans-serif;font-size:11px;font-weight:600;line-height:1;color:var(--blue);text-decoration:none;white-space:nowrap;margin-left:2px;vertical-align:super}
+.hero .source-ref,.exec .source-ref,.key .source-ref,.footer .source-ref{color:#f2c96d}
+.sources{margin-top:15px;border:1px solid var(--rule);border-radius:6px;background:#fff;overflow:hidden}
+.sources summary{font-size:11px;line-height:1.6;font-weight:700;color:var(--dim);padding:9px 11px;cursor:pointer;background:#eaf0f5}
+.source-list{list-style:none;padding:1px 11px 10px;font-size:13px;line-height:1.65;color:var(--dim)}
+.source-list li{padding:8px 0;border-bottom:1px solid var(--rule2);scroll-margin-top:12px;overflow-wrap:anywhere}
+.source-list li:last-child{border-bottom:0}
+.source-list a{color:var(--blue);text-decoration:underline;text-underline-offset:2px}
+.source-list .source-no{font-family:'IBM Plex Mono',monospace;font-weight:700;color:var(--red)}
+.source-list li:target{background:#fff6df}
+#export-toolbar button{cursor:pointer;font-size:11px!important}
+#exp-status{font-size:11px!important;line-height:1.5;max-width:180px}
+@media(max-width:390px){.section{padding-left:16px;padding-right:16px}.hero,.exec{padding-left:16px;padding-right:16px}.pipe-bottom{grid-template-columns:minmax(0,1fr) 75px}.focus .f-name{font-size:14px}}
+.page.exporting .section,.page.exporting .hero,.page.exporting .exec{padding-left:20px;padding-right:20px}
+.page.exporting .pipe-bottom{grid-template-columns:minmax(0,1fr) 86px}
+.page.exporting .focus .f-name{font-size:15px}
+</style>
+</head>
+<body>
+<div id="export-toolbar" style="position:fixed;top:10px;right:10px;z-index:9999;font-family:'Microsoft YaHei',sans-serif;user-select:none;">
+  <button id="exp-main" type="button" aria-expanded="false" aria-controls="exp-panel" style="background:#c85a4a;color:#fff;border:0;padding:6px 12px;border-radius:4px;font-size:11px;font-weight:700;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.2);">导出长图</button>
+  <div id="exp-panel" style="display:none;margin-top:6px;background:rgba(30,58,95,.96);padding:8px;border-radius:4px;">
+    <button data-scale="2" class="exp-btn" style="display:block;width:100%;margin-bottom:4px;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.25);padding:5px 8px;border-radius:3px;font-size:10px;">@2x · 860px</button>
+    <button data-scale="3" class="exp-btn" style="display:block;width:100%;margin-bottom:4px;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.25);padding:5px 8px;border-radius:3px;font-size:10px;">@3x · 1290px</button>
+    <button data-scale="4" class="exp-btn" style="display:block;width:100%;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.25);padding:5px 8px;border-radius:3px;font-size:10px;">@4x · 1720px</button>
+    <div id="exp-status" style="font-size:9px;color:#ffb896;margin-top:6px;"></div>
+  </div>
+</div>
+<div class="page">
+  <div class="hero">
+    <div class="brand">GAMEPULSE · MONTHLY</div>
+    <h1>端主行业月报 2026·09</h1>
+    <div class="sub">平台经营调整与Steam推荐实验并行；月末产品集中上线，10月日历衔接Q4重点新作</div>
+    <div class="meta"><span>ISSUE · <strong>2026.09.30</strong></span><span>COVERAGE · <strong>09.01 – 09.30</strong></span></div>
+    <div class="revision">v3 · 2026-10-10修订｜事实截止2026-09-30<br>9月报道与事件为主；此前背景另标日期，旧版本保留。</div>
+  </div>
+
+  <div class="exec">
+    <div class="exec-h">EXECUTIVE SUMMARY · 本月速览</div>
+    <div class="exec-row"><div class="exec-n">1</div><div class="exec-t"><b>平台经营调整</b>：Sony强调经常性收入；Xbox调整组织、云服务计费与光盘数字许可。各项措施的实施时间与适用范围不同。<a class="source-ref" href="#src-1">[1]</a><a class="source-ref" href="#src-5">[5]</a><a class="source-ref" href="#src-10">[10]</a><a class="source-ref" href="#src-13">[13]</a></div></div>
+    <div class="exec-row"><div class="exec-n">2</div><div class="exec-t"><b>Steam推进推荐实验</b>：Valve计划2027年初全面停止“折扣与活动”人工排期，已披露部分个性化推荐测试效果；发行商个例不代表全站。<a class="source-ref" href="#src-19">[19]</a><a class="source-ref" href="#src-20">[20]</a></div></div>
+    <div class="exec-row"><div class="exec-n">3</div><div class="exec-t"><b>玩家回流与新作销量</b>：媒体9月29日观测《巫师3》Steam在线峰值近12万；WARDOGS项目方自报，抢先体验两周多售出300万份。两者分别是在线与销量指标。<a class="source-ref" href="#src-22">[22]</a><a class="source-ref" href="#src-27">[27]</a></div></div>
+  </div>
+  <nav class="chapter-nav" aria-label="章节导航"><a href="#platform">01 平台</a><a href="#steam">02 Steam</a><a href="#products">03 产品</a><a href="#calendar">04 前瞻</a></nav>
+
+  <section class="section" id="platform">
+    <div class="sec-head"><div class="num">01</div><div class="title">平台经营调整<em>Sony经营用户；Xbox调整服务与组织</em></div></div>
+    <div class="key"><div class="key-l">核心结论 · PLATFORM OPERATIONS</div><div class="key-t">本月平台新闻分属<b>用户经营、服务计费、数字授权与内容合作</b>，不宜归为同一种转型。</div>
+      <div class="key-split">
+        <div class="key-side ps"><div class="side-t">SONY</div><div class="side-b">延续经常性收入思路；9月出现购游奖励的玩家反馈，并公开PHYSINT合作变化。<a class="source-ref" href="#src-1">[1]</a><a class="source-ref" href="#src-4">[4]</a><a class="source-ref" href="#src-12">[12]</a></div></div>
+        <div class="key-side xb"><div class="side-t">XBOX</div><div class="side-b">宣布云游戏新计费计划、推进组织调整，同时扩大符合条件光盘的数字许可使用。<a class="source-ref" href="#src-5">[5]</a><a class="source-ref" href="#src-10">[10]</a><a class="source-ref" href="#src-13">[13]</a></div></div>
+      </div>
+    </div>
+
+    <div class="mini-h">9月节点 · 公告与实施分开看</div>
+    <div class="evolve">
+      <div class="ev-step" data-step="01"><div class="ev-time">9/03</div><div class="ev-title">云服务新方案</div><div class="ev-text">Xbox宣布云游戏月度额度，拟11月生效。<a class="source-ref" href="#src-5">[5]</a></div></div>
+      <div class="ev-step" data-step="02"><div class="ev-time">9/09–10</div><div class="ev-title">发行合作变化</div><div class="ev-text">Sony退出PHYSINT合作，Xbox接手；开发继续。<a class="source-ref" href="#src-12">[12]</a></div></div>
+      <div class="ev-step now" data-step="03"><div class="ev-time">9/29</div><div class="ev-title">许可功能扩围</div><div class="ev-text">Xbox面向全体玩家开放，多数而非全部光盘适用。<a class="source-ref" href="#src-10">[10]</a></div></div>
+    </div>
+
+    <div class="mini-h">平台对照 · 四项经营动作</div>
+    <div class="vs-wrap strategy-vs">
+      <div class="vs-head">
+        <div class="ps"><span class="plat-kicker">平台经营调整</span><span class="plat-name">SONY / PLAYSTATION</span></div>
+        <div class="xb"><span class="plat-kicker">服务与组织调整</span><span class="plat-name">MICROSOFT / XBOX</span></div>
+      </div>
+      <div class="vs-cat"><span class="cat-no">01</span><span class="cat-name">经营重点</span><span class="cat-note">用户与组织</span></div>
+      <div class="vs-row">
+        <div class="vs-cell"><div class="cell-lead ps-t">重视经常性收入</div><div class="cell-sub">据IGN转述8月访谈，十时裕树称PS5进入后半段。<a class="source-ref" href="#src-1">[1]</a>Sony披露6月月活跃<b>账户</b>为1.25亿，并非PS Plus订阅人数。<a class="source-ref" href="#src-2">[2]</a></div></div>
+        <div class="vs-cell"><div class="cell-lead xb-t">重组继续推进</div><div class="cell-sub">9月22日宣布涉及268个岗位的调整。官方称<b>整体重组</b>约完成四分之三，并非裁员人数完成比例。<a class="source-ref" href="#src-13">[13]</a></div></div>
+      </div>
+      <div class="vs-cat"><span class="cat-no">02</span><span class="cat-name">服务与促销</span><span class="cat-note">计划与个例</span></div>
+      <div class="vs-row">
+        <div class="vs-cell"><div class="cell-lead ps-t">广告服务与购游奖励</div><div class="cell-sub">8月31日，美国PS5上线免费广告电视Live TV。<a class="source-ref" href="#src-3">[3]</a>9月媒体报道部分玩家获购游钱包奖励，资格及是否统一计划尚不明确。<a class="source-ref" href="#src-4">[4]</a></div></div>
+        <div class="vs-cell"><div class="cell-lead xb-t">云游戏拟设月度额度</div><div class="cell-sub">拟11月起：Ultimate 15小时、Premium 10小时、Essential 5小时，超额可另购。<a class="source-ref" href="#src-5">[5]</a>部分市场既有自动续费用户有例外；另有玩家自报回流优惠，不能据此确认动态定价机制。<a class="source-ref" href="#src-6">[6]</a><a class="source-ref" href="#src-7">[7]</a></div></div>
+      </div>
+      <div class="vs-cat"><span class="cat-no">03</span><span class="cat-name">光盘与数字许可</span><span class="cat-note">适用范围</span></div>
+      <div class="vs-row">
+        <div class="vs-cell"><div class="cell-lead ps-t">新盘政策仍是未来计划</div><div class="cell-sub">7月已宣布：2028年1月起停止为此后新游戏生产光盘，此前光盘游戏不受该项调整影响。<a class="source-ref" href="#src-8">[8]</a>8月答辩称数字游戏为许可，属诉讼立场、非法院判决。<a class="source-ref" href="#src-9">[9]</a></div></div>
+        <div class="vs-cell"><div class="cell-lead xb-t">符合条件光盘获许可</div><div class="cell-sub">9月29日向全体玩家开放，覆盖多数Xbox One／Series X光盘。<a class="source-ref" href="#src-10">[10]</a>获得的是数字许可；Play Anywhere及云游戏权益仍以作品支持为前提。<a class="source-ref" href="#src-11">[11]</a></div></div>
+      </div>
+      <div class="vs-cat"><span class="cat-no">04</span><span class="cat-name">内容合作与团队</span><span class="cat-note">不同性质</span></div>
+      <div class="vs-row">
+        <div class="vs-cell"><div class="cell-lead ps-t">PHYSINT更换发行伙伴</div><div class="cell-sub">9月9—10日公开Sony退出合作、Xbox接手发行。独立开发商小岛工作室确认<b>开发继续</b>，并非Sony内部自研工作室关闭。<a class="source-ref" href="#src-12">[12]</a></div></div>
+        <div class="vs-cell"><div class="cell-lead xb-t">Halo与工作室调整</div><div class="cell-sub">《光环》新作转交Activision；Halo Studios保留小队维护社区。<a class="source-ref" href="#src-13">[13]</a>据Eurogamer转述创意总监，World's Edge约半数员工受影响。<a class="source-ref" href="#src-14">[14]</a></div></div>
+      </div>
+    </div>
+
+    <div class="signal">
+      <div class="signal-row"><div class="signal-tag">模式</div><div class="signal-t">据VGC转述，Nadella称Xbox需要探索<b>合适且可持续的商业模式</b>，以触达更多玩家。<a class="source-ref" href="#src-15">[15]</a></div></div>
+      <div class="signal-row"><div class="signal-tag">预算</div><div class="signal-t">Circana调查中，美国取消Game Pass Essential及PS Plus Essential的受访者，<b>各有40%</b>表示喜欢服务但预算难以承担；这不反映取消人数是否增加。<a class="source-ref" href="#src-16">[16]</a></div></div>
+    </div>
+    <details class="sources"><summary>来源与观察日期 · [1]–[16]｜官方披露、媒体转述及玩家个例</summary><ol class="source-list">
+      <li id="src-1"><span class="source-no">[1]</span> <a href="https://www.ign.com/articles/sony-ceo-explains-why-it-isnt-aggressively-marketing-the-playstation-5-anymore" target="_blank" rel="noopener noreferrer">IGN：十时裕树访谈转述</a>｜2026-09-01更新；采访为8月。经常性收入表述采用媒体转述，月活另据[2]。</li>
+      <li id="src-2"><span class="source-no">[2]</span> <a href="https://www.sec.gov/Archives/edgar/data/313838/000110465926088922/tm2621477d2_6k.htm" target="_blank" rel="noopener noreferrer">Sony季度业绩材料</a>｜2026-07-31；1.25亿为6月在线使用PlayStation游戏或服务的独立活跃账户，公司估算。</li>
+      <li id="src-3"><span class="source-no">[3]</span> <a href="https://blog.playstation.com/2026/08/31/live-tv-on-ps5-launches-today-bringing-free-ad-supported-tv-to-ps5-players-in-the-u-s/" target="_blank" rel="noopener noreferrer">PlayStation：Live TV美国上线</a>｜2026-08-31官方公告；此前背景。</li>
+      <li id="src-4"><span class="source-no">[4]</span> <a href="https://www.eurogamer.net/playstation-store-wallet-credits-rewards" target="_blank" rel="noopener noreferrer">Eurogamer：PS Store钱包奖励</a>｜2026-09-22；依据玩家帖子，非普惠规则或增收证明。</li>
+      <li id="src-5"><span class="source-no">[5]</span> <a href="https://news.xbox.com/en-us/2026/09/03/xbox-cloud-gaming-changes?trk=public_post_comment-text" target="_blank" rel="noopener noreferrer">Xbox：云游戏计费调整</a>｜2026-09-03官方公告；拟11月生效，15／10／5小时为每月包含额度，补时价格当时未公布。</li>
+      <li id="src-6"><span class="source-no">[6]</span> <a href="https://www.videogameschronicle.com/news/xbox-tells-existing-game-pass-members-its-new-cloud-gaming-cap-doesnt-apply-to-them-but-only-in-certain-countries/" target="_blank" rel="noopener noreferrer">VGC：部分既有订阅例外</a>｜2026-09-07；转述玩家收到的邮件，非完整地区清单。</li>
+      <li id="src-7"><span class="source-no">[7]</span> <a href="https://www.thegamer.com/xbox-game-pass-dynamic-pricing/" target="_blank" rel="noopener noreferrer">TheGamer：不同账号的Game Pass优惠</a>｜2026-09-07；玩家自报回流优惠，触发机制不明。</li>
+      <li id="src-8"><span class="source-no">[8]</span> <a href="https://blog.playstation.com/2026/07/01/physical-disc-production-ending-in-january-2028-for-new-games-releasing-on-playstation-consoles/" target="_blank" rel="noopener noreferrer">PlayStation：新游戏光盘生产计划</a>｜2026-07-01官方公告；实施节点为2028年1月。</li>
+      <li id="src-9"><span class="source-no">[9]</span> <a href="https://www.ign.com/articles/playstation-claims-digital-games-are-not-really-owned-by-players-in-response-to-class-action-lawsuit" target="_blank" rel="noopener noreferrer">IGN：数字游戏许可答辩</a>｜2026-09-01更新；转述8月21日答辩，非判决。</li>
+      <li id="src-10"><span class="source-no">[10]</span> <a href="https://x.com/XBOX/status/2105040959192916253" target="_blank" rel="noopener noreferrer">Xbox：光盘数字许可向全体玩家开放</a>｜2026-09-29官方原帖；“多数”Xbox One／Series X光盘。</li>
+      <li id="src-11"><span class="source-no">[11]</span> <a href="https://news.xbox.com/en-us/2026/08/26/your-discs-now-also-digital/" target="_blank" rel="noopener noreferrer">Xbox：数字许可功能说明</a>｜2026-08-26官方公告；跨端及云游戏能力以游戏支持为前提。</li>
+      <li id="src-12"><span class="source-no">[12]</span> PHYSINT合作变化：<a href="https://news.xbox.com/en-us/2026/09/09/xbox-and-kojima-productions-expand-partnership-to-publish-physint/" target="_blank" rel="noopener noreferrer">Xbox 9月9日公告</a>、<a href="https://x.com/PlayStation/status/2097875212427735146" target="_blank" rel="noopener noreferrer">Sony声明</a>与<a href="https://x.com/HIDEO_KOJIMA_EN/status/2097877506401681753" target="_blank" rel="noopener noreferrer">小岛声明</a>（两帖显示9月10日）。双方确认合作变化，开发继续。</li>
+      <li id="src-13"><span class="source-no">[13]</span> <a href="https://news.xbox.com/en-us/2026/09/22/continuing-our-reset/" target="_blank" rel="noopener noreferrer">Xbox：继续推进重组</a>｜2026-09-22官方公告；268个岗位、整体重组约四分之三、Halo安排及10月6日内部大会。</li>
+      <li id="src-14"><span class="source-no">[14]</span> <a href="https://www.eurogamer.net/age-of-empire-worlds-edge-studio-xbox-cuts" target="_blank" rel="noopener noreferrer">Eurogamer：World's Edge调整</a>｜2026-09-23；转述创意总监关于约半数员工受影响的说法，不与[13]相加。</li>
+      <li id="src-15"><span class="source-no">[15]</span> <a href="https://www.videogameschronicle.com/news/microsoft-ceo-says-streamlining-of-xbox-business-is-great-to-see/" target="_blank" rel="noopener noreferrer">VGC：Nadella谈Xbox商业模式</a>｜2026-09-26；Sources访谈转述。</li>
+      <li id="src-16"><span class="source-no">[16]</span> <a href="https://www.eurogamer.net/xbox-game-pass-playstation-plus-nintendo-cancellations-rising-costs" target="_blank" rel="noopener noreferrer">Eurogamer转述Circana调查</a>｜2026-09-11；分母为美国取消相应订阅的受访者，非全部订阅用户。</li>
+    </ol></details>
+  </section>
+
+  <section class="section" id="steam">
+    <div class="sec-head"><div class="num">02</div><div class="title">Steam推进推荐实验<em>折扣与活动：从固定排期走向个性化</em></div></div>
+    <div class="key"><div class="key-l">核心结论 · DISCOVERY REFORM</div><div class="key-t">Valve已在“折扣与活动”板块开展个性化推荐实验，计划<b>2027年初全面停止人工日历安排</b>。测试已见访问、愿望单与加购增加，但并非全站改革已完成。<a class="source-ref" href="#src-19">[19]</a></div></div>
+
+    <div class="boundary">
+      <div class="bound-card"><div class="bound-v">720</div><div class="bound-l">款新游 · 8/24–30<br>ICO追踪单周纪录<a class="source-ref" href="#src-17">[17]</a></div></div>
+      <div class="bound-card"><div class="bound-v">150亿</div><div class="bound-l">美元 · 前八个月流水<br>同比约+15%，Alinea估<a class="source-ref" href="#src-18">[18]</a></div></div>
+      <div class="bound-card"><div class="bound-v">10×</div><div class="bound-l">测试中该板块<br>单日展示游戏数<a class="source-ref" href="#src-19">[19]</a></div></div>
+    </div>
+
+    <div class="signal">
+      <div class="signal-row"><div class="signal-tag">排期</div><div class="signal-t">9月29日公告称已<b>暂停新增人工精选排期</b>，既有安排仍兑现；全面切换的具体日期尚未确定。<a class="source-ref" href="#src-19">[19]</a></div></div>
+      <div class="signal-row"><div class="signal-tag">个例</div><div class="signal-t">据App2Top转述Hooded Horse CEO，一款未具名游戏来自该板块的页面访问：此前五个月合计14次，最近一个月7341次。属发行商自报，不是等长期间比较。<a class="source-ref" href="#src-20">[20]</a></div></div>
+      <div class="signal-row"><div class="signal-tag">口径</div><div class="signal-t">10×是展示的<b>游戏数量</b>，非单款曝光或销量倍数；150亿美元为机构估算的gross revenue，非Valve净收入。<a class="source-ref" href="#src-18">[18]</a><a class="source-ref" href="#src-19">[19]</a></div></div>
+    </div>
+    <details class="sources"><summary>来源与观察日期 · [17]–[20]｜平台实验与机构估算</summary><ol class="source-list">
+      <li id="src-17"><span class="source-no">[17]</span> <a href="https://www.gamesindustry.biz/over-700-games-launched-on-steam-in-one-week-for-the-first-time-though-74-had-fewer-than-10-reviews" target="_blank" rel="noopener noreferrer">GamesIndustry.biz：Steam单周新游</a>、<a href="https://www.invenglobal.com/articles/25520/new-steam-releases-hit-record-high-of-720-in-one-week-averaging-103-per-day" target="_blank" rel="noopener noreferrer">Inven：具体观测周</a>｜均为2026-09-02；同一ICO Partners统计链，观测期8月24—30日。</li>
+      <li id="src-18"><span class="source-no">[18]</span> <a href="https://alineaanalytics.substack.com/p/steam-has-already-generated-15b-in" target="_blank" rel="noopener noreferrer">Alinea Analytics原研究</a>｜2026-09-04；前八个月gross revenue约150亿美元、同比约15%，为机构估算。</li>
+      <li id="src-19"><span class="source-no">[19]</span> <a href="https://steamcommunity.com/groups/steamworks/announcements/detail/676258795703240952" target="_blank" rel="noopener noreferrer">Steamworks：折扣与活动调整</a>｜2026-09-29官方公告；10×为Valve自述测试结果，2027年初为预计全面切换时间。</li>
+      <li id="src-20"><span class="source-no">[20]</span> <a href="https://app2top.com/news/it-seems-that-steam-has-improved-the-visibility-of-smaller-games-at-least-in-the-discounts-and-events-section-297200.html" target="_blank" rel="noopener noreferrer">App2Top转述Tim Bender</a>｜2026-09-21；14／7341均为页面访问，原帖使用相对观测窗口，单发行商个例不外推全站。</li>
+    </ol></details>
+  </section>
+
+  <section class="section" id="products">
+    <div class="sec-head"><div class="num">03</div><div class="title">重点产品<em>月末上线 · 玩家回流 · 新作里程碑</em></div></div>
+    <div class="key"><div class="key-l">核心结论 · PRODUCT PIPELINE</div><div class="key-t">9月下旬既有<b>现有作品更新与主机扩展</b>，也有系列新作上线。免费更新、单人模式与合作玩法提供不同的上新看点，在线回流与新作销量也各有进展。<a class="source-ref" href="#src-21">[21]</a><a class="source-ref" href="#src-23">[23]</a><a class="source-ref" href="#src-24">[24]</a><a class="source-ref" href="#src-27">[27]</a></div></div>
+
+    <div class="mini-h">A · 月末重点上线</div>
+    <div class="focus-grid">
+      <div class="focus" data-index="01"><div class="f-top"><span class="f-region">多平台</span><span class="f-genre">RPG重制</span></div><div class="f-name">巫师3：狂猎 重制版</div><div class="f-meta">9/29上线 · 现有玩家免费更新<a class="source-ref" href="#src-21">[21]</a></div><div class="f-body">登陆PC、PS5、Xbox Series与Switch 2。其中Xbox版本另支持Play Anywhere。<a class="source-ref" href="#src-21">[21]</a></div></div>
+      <div class="focus" data-index="02"><div class="f-top"><span class="f-region">主机版</span><span class="f-genre">生存</span></div><div class="f-name">沙丘：觉醒</div><div class="f-meta">9/22上线 · 加入Game Pass<a class="source-ref" href="#src-23">[23]</a></div><div class="f-body">同步新增完整单人、自定义及Book One剧情更新；另购内容为Filmic Archive DLC。跨平台联机列为后续计划。<a class="source-ref" href="#src-23">[23]</a></div></div>
+      <div class="focus" data-index="03"><div class="f-top"><span class="f-region">PC·PS5·XS</span><span class="f-genre">动作</span></div><div class="f-name">控制：共振</div><div class="f-meta">9/24上线<a class="source-ref" href="#src-24">[24]</a></div><div class="f-body">登陆PC、PS5与Xbox Series。开发者称其拥有Remedy迄今最大的游戏世界，重点在世界规模与探索设计。<a class="source-ref" href="#src-25">[25]</a></div></div>
+      <div class="focus" data-index="04"><div class="f-top"><span class="f-region">多平台</span><span class="f-genre">ARPG</span></div><div class="f-name">我的世界：地下城2</div><div class="f-meta">9/29上线 · 最多4人合作<a class="source-ref" href="#src-26">[26]</a></div><div class="f-body">支持线上与本地合作，新增Sift维度。平台包括PC、PS5、Xbox Series、Switch及Switch 2。<a class="source-ref" href="#src-26">[26]</a></div></div>
+    </div>
+
+    <div class="mini-h">B · 玩家回流与销量里程碑</div>
+    <div class="boundary two">
+      <div class="bound-card"><div class="bound-v">近12万</div><div class="bound-l">《巫师3》Steam在线峰值<br>9/29媒体观测，不含主机<a class="source-ref" href="#src-22">[22]</a></div></div>
+      <div class="bound-card"><div class="bound-v">300万</div><div class="bound-l">WARDOGS售出份数<br>抢先体验两周多，项目方自报<a class="source-ref" href="#src-27">[27]</a></div></div>
+    </div>
+
+    <div class="mini-h">C · 定档与新作进展</div>
+    <div class="pipeline-list">
+      <div class="pipe-item"><div class="pipe-top"><span class="pipe-no">01</span><span class="pipe-name">最终幻想7：启示</span><span class="pipe-date">2027/4/8<a class="source-ref" href="#src-28">[28]</a></span></div><div class="pipe-bottom"><span class="pipe-signal">9月官方确认发售日及多平台安排。</span><span class="pipe-platform">PS5 · Switch 2<br>Xbox Series · PC</span></div></div>
+      <div class="pipe-item"><div class="pipe-top"><span class="pipe-no">02</span><span class="pipe-name">怪物猎人：荒野<br>Switch 2版</span><span class="pipe-date">2026/12/4<a class="source-ref" href="#src-29">[29]</a></span></div><div class="pipe-bottom"><span class="pipe-signal">9月9日官方公布Switch 2版发售安排。</span><span class="pipe-platform">Switch 2</span></div></div>
+      <div class="pipe-item"><div class="pipe-top"><span class="pipe-no">03</span><span class="pipe-name">卧龙2：凤火连天</span><span class="pipe-date">2027/3/4<a class="source-ref" href="#src-30">[30]</a></span></div><div class="pipe-bottom"><span class="pipe-signal">9月15日公布发售日并推出试玩，试玩开放至9月30日。</span><span class="pipe-platform">PS5 · Xbox Series<br>PC</span></div></div>
+      <div class="pipe-item"><div class="pipe-top"><span class="pipe-no">04</span><span class="pipe-name">战神：Laufey</span><span class="pipe-date">2027/2/16<a class="source-ref" href="#src-31">[31]</a></span></div><div class="pipe-bottom"><span class="pipe-signal">9月29日开放预购，公布版本内容。</span><span class="pipe-platform">PS5</span></div></div>
+      <div class="pipe-item"><div class="pipe-top"><span class="pipe-no">05</span><span class="pipe-name">空之轨迹 the 2nd</span><span class="pipe-date">9/17发售<a class="source-ref" href="#src-32">[32]</a></span></div><div class="pipe-bottom"><span class="pipe-signal">系列重制续篇，覆盖PC与多款主机。</span><span class="pipe-platform">PC · PS5<br>Switch · Switch 2</span></div></div>
+      <div class="pipe-item"><div class="pipe-top"><span class="pipe-no">06</span><span class="pipe-name">漫威金刚狼</span><span class="pipe-date">9/15发售<a class="source-ref" href="#src-33">[33]</a></span></div><div class="pipe-bottom"><span class="pipe-signal">Alinea估算首三天售出约190万份，含约100万份数字预购、不含未售出的零售库存。<a class="source-ref" href="#src-33">[33]</a></span><span class="pipe-platform">PS5</span></div></div>
+    </div>
+    <details class="sources"><summary>来源与观察日期 · [21]–[33]｜产品公告、媒体观测与销量估算</summary><ol class="source-list">
+      <li id="src-21"><span class="source-no">[21]</span> <a href="https://thewitcher.com/de/zh-cn/news/52057/wu-shi-3-kuang-xi-zhong-zhi-ban-xian-yi-tui-chu" target="_blank" rel="noopener noreferrer">CDPR：《巫师3》重制版上线</a>｜2026-09-29官方公告；现有玩家免费更新，Play Anywhere仅指Xbox版本。</li>
+      <li id="src-22"><span class="source-no">[22]</span> <a href="https://www.eurogamer.net/witcher-3-steam-most-played-record-remastered" target="_blank" rel="noopener noreferrer">Eurogamer：《巫师3》Steam在线纪录</a>｜2026-09-29媒体观测；原文“nearly 120000”，采用“近12万”，非全平台玩家数。</li>
+      <li id="src-23"><span class="source-no">[23]</span> <a href="https://pr.funcom.com/Dune-Awakening-Out-Now-on-Console-New-Single-Player-Mode-and-Film-DLC-" target="_blank" rel="noopener noreferrer">Funcom：《沙丘：觉醒》主机版及更新</a>｜2026-09-22官方公告；完整单人、自定义、Book One与另售Filmic Archive DLC分列，跨平台联机为后续计划。</li>
+      <li id="src-24"><span class="source-no">[24]</span> <a href="https://view.news.eu.nasdaq.com/view?id=bc0c4b970bf80388b6266040d083aaaae&amp;lang=en&amp;src=listed" target="_blank" rel="noopener noreferrer">Remedy：《控制：共振》上线公告</a>｜2026-09-24；PC、PS5、Xbox Series。</li>
+      <li id="src-25"><span class="source-no">[25]</span> <a href="https://www.gamesindustry.biz/remedys-arhi-makkonen-on-designing-the-biggest-world-we-have-ever-done-for-control-resonant" target="_blank" rel="noopener noreferrer">GamesIndustry.biz采访Arhi Makkonen</a>｜2026-09-17；“工作室最大游戏世界”为开发者自述。</li>
+      <li id="src-26"><span class="source-no">[26]</span> <a href="https://www.minecraft.net/en-us/article/minecraft-dungeons-ii-is-live" target="_blank" rel="noopener noreferrer">Minecraft：《地下城2》上线</a>｜2026-09-29官方公告；最多4人线上／本地合作、新增Sift及平台名单。</li>
+      <li id="src-27"><span class="source-no">[27]</span> <a href="https://store.steampowered.com/news/app/1867240/view/712287592723252992" target="_blank" rel="noopener noreferrer">WARDOGS项目方Steam公告</a>｜2026-09-26；“3 million copies sold in just over 2 weeks”，为抢先体验阶段销量自报。</li>
+      <li id="src-28"><span class="source-no">[28]</span> <a href="https://www.square-enix-games.com/en_EU/news/final-fantasy-vii-revelation-launches-april-8-2027" target="_blank" rel="noopener noreferrer">Square Enix：《最终幻想7：启示》定档</a>｜2026-09-09官方公告；计划2027年4月8日发售。</li>
+      <li id="src-29"><span class="source-no">[29]</span> <a href="https://www.monsterhunter.com/" target="_blank" rel="noopener noreferrer">Monster Hunter官方公告索引</a>｜2026-09-09条目；Switch 2版计划12月4日发售，首页内容会随时间更新。</li>
+      <li id="src-30"><span class="source-no">[30]</span> <a href="https://blog.playstation.com/2026/09/15/wo-long-2-wings-of-ember-launches-march-4-2027-demo-live-today/" target="_blank" rel="noopener noreferrer">PlayStation：《卧龙2》定档与试玩</a>｜2026-09-15官方公告；2027年3月4日发售，试玩至9月30日；PS5、Xbox Series、PC。</li>
+      <li id="src-31"><span class="source-no">[31]</span> <a href="https://blog.playstation.com/2026/09/28/god-of-war-laufey-pre-orders-available-starting-september-29-editions-detailed/" target="_blank" rel="noopener noreferrer">PlayStation：《战神：Laufey》预购</a>｜2026-09-28官方公告；9月29日预购，计划2027年2月16日登陆PS5。</li>
+      <li id="src-32"><span class="source-no">[32]</span> <a href="https://operationrainfall.com/2026/08/20/trails-in-the-sky-2nd-chapter-demo-and-opening-movie-now-available/" target="_blank" rel="noopener noreferrer">Operation Rainfall：《空之轨迹》续篇安排</a>｜2026-08-20媒体报道；9月17日发售安排及PC、PS5、Switch、Switch 2平台名单。</li>
+      <li id="src-33"><span class="source-no">[33]</span> <a href="https://substack.com/home/post/p-216312628" target="_blank" rel="noopener noreferrer">Alinea：《漫威金刚狼》首发分析</a>｜2026-09-18；9月15日发售，首三天售出估算约190万份，含100万数字预购、不含未售零售库存。</li>
+    </ol></details>
+  </section>
+
+  <section class="section" id="calendar">
+    <div class="sec-head"><div class="num">04</div><div class="title">10月关注与Q4前瞻<em>游戏日历 · GTA6发售前内容披露</em></div></div>
+    <div class="key"><div class="key-l">核心结论 · UPCOMING RELEASES</div><div class="key-t">截至9月底，10月关注集中在<b>新品发售、提前体验与Steam秋促</b>；GTA6则以已公布的发售窗口和9月专题报道构成Q4观察线索。<a class="source-ref" href="#src-34">[34]</a><a class="source-ref" href="#src-35">[35]</a><a class="source-ref" href="#src-36">[36]</a><a class="source-ref" href="#src-37">[37]</a></div></div>
+
+    <div class="mini-h">A · GTA6：发售窗口与宣发进展</div>
+    <div class="gta-feature">
+      <div class="gta-kicker">GTA6 · Q4 RELEASE WINDOW</div>
+      <div class="gta-title"><em>GTA6</em>：9月专题继续披露玩法细节</div>
+      <div class="gta-metrics"><div class="gta-metric"><div class="gta-v">11.19</div><div class="gta-l">2026年计划发售 · PS5 / Xbox Series<a class="source-ref" href="#src-34">[34]</a></div></div></div>
+      <div class="gta-flow"><p>官方此前已确认单人游戏发售安排。Game Informer于9月29日专题介绍动态天气，包括热带风暴与飓风。<a class="source-ref" href="#src-34">[34]</a><a class="source-ref" href="#src-35">[35]</a></p></div>
+    </div>
+
+    <div class="mini-h">B · 10月关注日历（截至9/30的计划）</div>
+    <div class="calendar">
+      <div class="cal"><div class="cal-d">10/01</div><div class="cal-t"><b>《战争机器：E-Day》</b>Premium版计划开启提前体验。<a class="source-ref" href="#src-36">[36]</a></div></div>
+      <div class="cal"><div class="cal-d">10/01–08<br>太平洋时间</div><div class="cal-t"><b>Steam秋季特卖</b>，依官方公布的太平洋时间日程。<a class="source-ref" href="#src-37">[37]</a></div></div>
+      <div class="cal"><div class="cal-d">10/02</div><div class="cal-t"><b>《皇牌空战8》</b>计划发售。<a class="source-ref" href="#src-38">[38]</a></div></div>
+      <div class="cal"><div class="cal-d">10/06</div><div class="cal-t"><b>《战争机器：E-Day》</b>计划正式发售并加入Game Pass。<a class="source-ref" href="#src-36">[36]</a></div></div>
+      <div class="cal"><div class="cal-d">10/06</div><div class="cal-t"><b>Xbox内部大会</b>，为9月22日重组公告预告的后续沟通节点。<a class="source-ref" href="#src-13">[13]</a></div></div>
+    </div>
+    <details class="sources"><summary>来源与观察日期 · [34]–[38]｜截至9月底已公布的前瞻日程</summary><ol class="source-list">
+      <li id="src-34"><span class="source-no">[34]</span> <a href="https://www.take2games.com/ir/news/rockstar-games-announces-pre-orders-grand-theft-auto-vi" target="_blank" rel="noopener noreferrer">Take-Two／Rockstar：GTA6预购与发售安排</a>｜2026-06-24官方公告；11月19日、PS5／Xbox Series、单人游戏。</li>
+      <li id="src-35"><span class="source-no">[35]</span> <a href="https://www.gameinformer.com/exclusive/2026/09/29/exclusive-grand-theft-auto-vi-features-tropical-storms-and-hurricanes" target="_blank" rel="noopener noreferrer">Game Informer：GTA6动态天气专题</a>｜2026-09-29媒体报道；不据此推算预购量或硬件销售。</li>
+      <li id="src-36"><span class="source-no">[36]</span> <a href="https://news.xbox.com/pt-br/2026/09/17/gears-of-war-e-day-chegou-a-fase-gold-veja-aqui-as-especificacoes-completas-para-pc" target="_blank" rel="noopener noreferrer">Xbox：《战争机器：E-Day》完成开发及发售安排</a>｜2026-09-17官方公告；10月1日Premium提前体验、10月6日正式发售并加入Game Pass。</li>
+      <li id="src-37"><span class="source-no">[37]</span> <a href="https://steamcommunity.com/groups/steamworks/announcements/detail/493837645658461608" target="_blank" rel="noopener noreferrer">Steamworks：2026年度促销日历</a>｜2026-01-15官方公告；秋促为10月1—8日，采用太平洋时间。</li>
+      <li id="src-38"><span class="source-no">[38]</span> <a href="https://acecombat.jp/en?p=5366" target="_blank" rel="noopener noreferrer">《皇牌空战8》官方发售公告</a>｜2026-06-03；计划10月2日发售。Xbox内部大会出处见第一节<a href="#src-13" class="source-ref">[13]</a>。</li>
+    </ol></details>
+  </section>
+
+  <div class="footer">
+    <div class="logo">GAMEPULSE · PC &amp; CONSOLE</div>
+    <div>2026.09 MONTHLY · COVERAGE 09.01–09.30</div>
+    <div>v3 · 2026-10-10修订｜事实截止2026-09-30</div>
+    <div class="disc">官方自述、媒体转引与估算已区分；来源与观察日期见各节。修订不纳入截止日之后的新事实，旧版本保留。本报告由AI辅助整理，供行业研究参考。</div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+(function(){
+  const tb=document.getElementById('export-toolbar'),mb=document.getElementById('exp-main'),pn=document.getElementById('exp-panel'),st=document.getElementById('exp-status'),bs=document.querySelectorAll('.exp-btn'),pg=document.querySelector('.page');
+  let exporting=false;
+  function panel(open){pn.style.display=open?'block':'none';mb.setAttribute('aria-expanded',String(open));}
+  mb.addEventListener('click',()=>panel(pn.style.display!=='block'));
+  document.addEventListener('click',e=>{if(!tb.contains(e.target))panel(false);});
+  function revealSource(hash){
+    if(!/^#src-\d+$/.test(hash))return;
+    const target=document.getElementById(hash.slice(1));
+    if(!target)return;
+    const detail=target.closest('details');
+    if(detail)detail.open=true;
+    requestAnimationFrame(()=>target.scrollIntoView({block:'start'}));
+  }
+  document.addEventListener('click',e=>{
+    const link=e.target.closest('a[href^="#src-"]');
+    if(link)revealSource(link.getAttribute('href'));
+  });
+  window.addEventListener('hashchange',()=>revealSource(location.hash));
+  revealSource(location.hash);
+  function lock(value){exporting=value;bs.forEach(b=>b.disabled=value);mb.disabled=value;}
+  async function ex(scale){
+    if(exporting)return;
+    if(typeof html2canvas==='undefined'){st.textContent='导出组件未加载，请联网后重试';return;}
+    const previousWidth=pg.style.width,previousMaxWidth=pg.style.maxWidth,previousVisibility=tb.style.visibility;
+    lock(true);st.textContent='渲染中…@'+scale+'x';tb.style.visibility='hidden';
+    try{
+      pg.style.width='430px';pg.style.maxWidth='none';pg.classList.add('exporting');
+      if(document.fonts&&document.fonts.ready)await document.fonts.ready;
+      await Promise.all(Array.from(pg.querySelectorAll('img')).map(img=>img.decode?img.decode().catch(()=>{}):Promise.resolve()));
+      await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+      const canvas=await html2canvas(pg,{scale,backgroundColor:'#f4f6f9',useCORS:true,logging:false,width:430,windowWidth:430,windowHeight:pg.offsetHeight});
+      const blob=await new Promise((resolve,reject)=>canvas.toBlob(value=>value?resolve(value):reject(new Error('图像生成失败')),'image/png'));
+      const url=URL.createObjectURL(blob),link=document.createElement('a');
+      try{
+        link.href=url;link.download='Monthly_Briefing_202609_v3_'+scale+'x.png';document.body.appendChild(link);link.click();
+      }finally{link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+      st.textContent='@'+scale+'x 已导出';
+    }catch(error){st.textContent='失败：'+error.message;}
+    finally{
+      pg.style.width=previousWidth;pg.style.maxWidth=previousMaxWidth;pg.classList.remove('exporting');
+      tb.style.visibility=previousVisibility;lock(false);
+    }
+  }
+  bs.forEach(button=>button.addEventListener('click',event=>{event.stopPropagation();ex(Number(button.dataset.scale));}));
+})();
+</script>
+</body>
+</html>
