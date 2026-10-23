@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>端主行业周报 · W40 · v6</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4f6f9; --ink: #1e3a5f; --ink-2: #2c4a6e; --ink-dim: #4a5c6e; --ink-ghost: #6f7f8e;
+    --red: #c85a4a; --red-bg: #f5e0db; --red-dim: #a0483b;
+    --gold: #8b6914; --gold-bg: #ede4cf;
+    --green: #3d6b57; --green-bg: #dde7e0;
+    --surface: #ffffff; --surface-2: #eef1f5;
+    --rule: #d5dce3; --rule-dim: #e5e9ee;
+    --sony: #003087; --xbox: #107c10; --nin: #e60012;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #c8ced6; font-family: 'Microsoft YaHei', '微软雅黑', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  .page { width: 430px; max-width: 100%; background: var(--bg); color: var(--ink); margin: 0 auto; overflow: hidden; }
+
+  .hero { background: linear-gradient(135deg, #16283f 0%, #24405f 55%, #2c4a6e 100%); color: white; padding: 24px 20px 26px; position: relative; }
+  .hero::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background: linear-gradient(90deg, var(--red) 0%, var(--gold) 100%); }
+  .hero .brand { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.3em; color: #e0a56a; font-weight: 700; margin-bottom: 10px; }
+  .hero h1 { font-size: 28px; font-weight: 800; line-height: 1.18; letter-spacing: -0.01em; }
+  .hero .sub { font-size: 13px; color: rgba(255,255,255,0.78); margin-top: 9px; line-height: 1.55; }
+  .hero .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+  .hero .tags .pill { font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 10px; }
+  .hero .meta { display: flex; gap: 18px; margin-top: 14px; padding-top: 13px; border-top: 1px solid rgba(255,255,255,0.15); font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.7); letter-spacing: 0.08em; }
+  .hero .meta strong { color: white; font-weight: 700; }
+
+  .section { padding: 24px 20px 18px; }
+  .section + .section { border-top: 10px solid #e2e7ed; }
+  .sec-head { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid var(--ink); position: relative; }
+  .sec-head::after { content:''; position:absolute; left:0; bottom:-2px; width:50px; height:2px; background:var(--red); }
+  .sec-head .num { font-family: 'IBM Plex Mono', monospace; font-size: 32px; font-weight: 800; color: var(--red); line-height: 0.9; }
+  .sec-head .title { font-size: 19px; font-weight: 800; color: var(--ink); flex: 1; line-height: 1.3; }
+  .sec-head .title em { display: block; font-size: 13px; font-weight: 600; color: var(--red); font-style: normal; margin-top: 3px; }
+
+  .sub-step { display: flex; align-items: center; gap: 9px; margin: 18px 0 9px; padding: 8px 12px; background: linear-gradient(90deg, rgba(30,58,95,0.10), rgba(30,58,95,0)); border-left: 4px solid var(--red); border-radius: 0 6px 6px 0; }
+  .sub-step .sn { font-family: 'IBM Plex Mono', monospace; font-size: 15px; font-weight: 800; color: #fff; background: var(--red); min-width: 23px; height: 23px; border-radius: 5px; display: inline-flex; align-items: center; justify-content: center; flex: none; }
+  .sub-step .stt { font-size: 15px; font-weight: 800; color: var(--ink); line-height: 1.3; }
+  .sub-step .stt em { font-style: normal; font-weight: 600; color: var(--ink-dim); font-size: 12px; }
+
+  .bignum { display:grid; grid-template-columns:1fr 1fr 1fr; gap:7px; margin:4px 0 8px; }
+  .bignum .b { background:var(--surface); border:1px solid var(--rule-dim); border-top:3px solid var(--red); border-radius:6px; padding:9px 5px; text-align:center; }
+  .bignum .b .bv { font-family:'IBM Plex Mono',Consolas,'Microsoft YaHei',monospace; font-size:20px; font-weight:800; color:var(--red-dim); line-height:1.05; }
+  .bignum .b .bl { font-size:11px; color:var(--ink-dim); margin-top:4px; line-height:1.4; }
+
+  .insight { background: linear-gradient(135deg, #1e3a5f 0%, #263f5e 100%); border-radius: 6px; padding: 13px 16px; margin: 14px 0 4px; color: rgba(255,255,255,0.92); }
+  .insight .il { font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.06em; color: #f0a07a; margin-bottom: 6px; border-bottom: 1px dashed rgba(255,255,255,0.15); padding-bottom: 6px; font-weight: 700; }
+  .analysis-row { display: flex; gap: 10px; padding: 7px 0; border-bottom: 1px dashed rgba(255,255,255,0.12); }
+  .analysis-row:last-child { border-bottom: 0; padding-bottom: 0; }
+  .analysis-tag { min-width: 42px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 800; color: #f0a07a; }
+  .analysis-text { flex: 1; font-size: 13px; line-height: 1.6; color: rgba(255,255,255,0.92); }
+  .analysis-text b { color:#fff; font-weight:800; }
+
+  .ev-line { background: var(--surface); border: 1px solid var(--rule-dim); border-radius: 5px; padding: 8px 12px; margin-bottom: 6px; font-size: 13px; line-height: 1.6; }
+  .ev-line .ev-head { display: flex; align-items: center; gap: 6px; margin-bottom: 2px; flex-wrap: wrap; }
+  .ev-line .d { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--ink-ghost); font-weight: 600; }
+  .ev-line .ev-body { color:var(--ink-dim); } .ev-line .ev-body strong { color: var(--ink); font-weight: 700; }
+  .tg { font-size: 11px; font-weight: 700; padding: 1px 6px; border-radius: 2px; }
+  .tg-r { background: var(--red-bg); color: var(--red); } .tg-b { background: #dce8f5; color: #2a5a8f; }
+  .tg-y { background: var(--gold-bg); color: var(--gold); } .tg-g { background: var(--green-bg); color: var(--green); }
+  .tg-n { background: #fbe0e2; color: var(--nin); }
+
+  .clash-note { font-size:11px; color:var(--ink-dim); line-height:1.6; margin:6px 0 0; padding:9px 12px; background:var(--surface); border:1px solid var(--rule); border-left:3px solid var(--gold); border-radius:5px; }
+  .clash-note b { color:var(--ink); font-weight:700; }
+
+  .mini-h { font-size: 13px; font-weight: 700; color: var(--ink-dim); margin: 16px 0 9px; display:flex; align-items:center; gap:7px; }
+  .mini-h::before { content:''; width:4px; height:14px; background:var(--red); border-radius:2px; }
+
+  .dtbl { width:100%; border-collapse:collapse; table-layout:fixed; font-size:12px; margin:4px 0 6px; border:1px solid var(--rule); border-radius:6px; overflow:hidden; }
+  .dtbl thead { background:linear-gradient(135deg,#1e3a5f,#2c4a6e); }
+  .dtbl th { padding:7px 8px; text-align:left; font-size:11px; font-weight:700; color:#fff; letter-spacing:.04em; }
+  .dtbl td { padding:6px 8px; border-bottom:1px solid var(--rule-dim); vertical-align:middle; line-height:1.45; color:var(--ink-dim); background:var(--surface); }
+  .dtbl tbody tr:last-child td { border-bottom:0; }
+  .dtbl tbody tr:nth-child(even) td { background:var(--surface-2); }
+  .dtbl .gm { color:var(--ink); font-weight:700; font-size:12px; }
+  .dtbl .pf { font-size:11px; color:var(--ink-ghost); }
+  .dtbl .dt { font-family:'IBM Plex Mono',Consolas,'Microsoft YaHei',monospace; font-size:11px; color:var(--red-dim); font-weight:600; }
+  .dtbl tr.hl td { background:var(--gold-bg) !important; }
+  .dtbl tr.hl .gm { color:var(--red-dim); }
+  .dtbl tr.grp td { background:#e3e9f0 !important; font-size:11px; font-weight:800; color:var(--ink-2); padding:4px 8px; letter-spacing:.04em; }
+  .otbl td { background:var(--surface) !important; vertical-align:middle; padding:7px 8px; }
+  .otbl th.c, .otbl td.dt { text-align:center; }
+  .otbl td.dt { font-family:'IBM Plex Mono',Consolas,'Microsoft YaHei',monospace; }
+  .otbl .nm { font-size:12.5px; font-weight:800; color:var(--ink); line-height:1.3; }
+  .otbl .pa { display:inline-block; margin-top:3px; font-size:11px; line-height:1.35; color:var(--ink-dim); background:var(--surface-2); border-radius:3px; padding:1px 5px; }
+  .otbl tr.g td { text-align:center; font-size:11px; font-weight:800; letter-spacing:.18em; padding:5px 8px; border-bottom:0; }
+  .otbl tr.g1 td { background:#e4ecf6 !important; color:#2a5a8f; }
+  .otbl tr.g2 td { background:var(--red-bg) !important; color:var(--red-dim); }
+  .otbl tr.g3 td { background:var(--gold-bg) !important; color:var(--gold); }
+  .otbl tr.g4 td { background:var(--green-bg) !important; color:var(--green); }
+  .tbl-note { font-size:11px; color:var(--ink-ghost); margin:2px 0 4px; line-height:1.5; }
+
+  .kc { background:linear-gradient(135deg,#1e3a5f 0%,#263f5e 100%); border-radius:6px; padding:12px 15px; margin-bottom:14px; border-left:4px solid var(--gold); }
+  .kc .kc-l { font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.12em; color:#e8b84a; font-weight:700; margin-bottom:6px; }
+  .kc-lead { font-size:13px; font-weight:700; line-height:1.55; color:rgba(255,255,255,0.92); margin-bottom:9px; }
+  .kc-lead:last-child { margin-bottom:0; }
+  .kc-lead b { color:#fff; border-bottom:2px solid rgba(232,184,74,.55); }
+  .kc-side { background:rgba(255,255,255,0.07); border-radius:5px; padding:8px 11px; margin-bottom:6px; display:flex; gap:10px; }
+  .kc-side .side-t { font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:800; line-height:1.45; flex:none; width:58px; }
+  .kc-side.k-1 .side-t { color:#f0a07a; } .kc-side.k-2 .side-t { color:#7db2f0; } .kc-side.k-3 .side-t { color:#7fd08a; } .kc-side.k-4 .side-t { color:#e8b84a; }
+  .kc-side .side-b { font-size:12px; line-height:1.55; color:rgba(255,255,255,0.9); }
+  .kc-side .side-b b { color:#fff; font-weight:800; }
+  .kc-foot { font-size:12.5px; font-weight:700; line-height:1.55; color:#e8b84a; margin-top:9px; padding-top:9px; border-top:1px solid rgba(255,255,255,0.15); }
+
+  .flaw3 { margin:4px 0 6px; }
+  .flaw3 .sub-step { margin:14px 0 7px; }
+  .flaw3 .sub-step:first-child { margin-top:6px; }
+  .flaw3 .sub-step .stt { flex:1; }
+  .flaw3 .sub-step .stt em { float:right; margin-left:8px; }
+  .flaw { background:var(--surface); border:1px solid var(--rule-dim); border-left:4px solid var(--red); border-radius:6px; padding:9px 13px 4px; margin-bottom:6px; }
+  .frow { display:flex; gap:9px; padding-bottom:9px; margin-bottom:9px; border-bottom:1px dashed var(--rule); }
+  .frow:last-child { border-bottom:0; }
+  .frow.f-inc { background:var(--red-bg); margin:0 -13px; padding:8px 13px 9px; border-bottom:0; border-radius:0 0 4px 4px; }
+  .frow .flab { flex:none; width:40px; font-family:'IBM Plex Mono','Microsoft YaHei',monospace; font-size:11px; font-weight:800; letter-spacing:.02em; line-height:1.5; padding-top:1px; }
+  .frow .fval { flex:1; font-size:12px; line-height:1.6; color:var(--ink-dim); }
+  .frow .fval strong { color:var(--ink); font-weight:700; }
+  .frow.f-fact .flab { color:var(--ink-ghost); }
+  .frow.f-core .flab { color:var(--gold); }
+  .frow.f-inc .flab, .frow.f-inc .fval, .frow.f-inc .fval strong { color:var(--red-dim); }
+
+  .footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 20px; text-align: center; font-size: 11px; line-height: 1.8; }
+  .footer .logo { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.3em; color: white; margin-bottom: 8px; }
+  .footer .disc { margin-top:8px; font-size:11px; color:rgba(255,255,255,.45); line-height:1.6; }
+  .kc-side.k-4 .side-t { color:#e8b84a; }
+  .dtbl td.st { font-size:11px; font-weight:700; color:var(--ink-2); }
+
+  /* v4: editorial diagrams, readable at the actual mobile width */
+  .hero { padding:20px 20px 20px; }
+  .hero h1 { font-size:18px; line-height:1.35; }
+  .footer { padding:16px 20px; }
+  .sec-head .title { font-size:18px; }
+  #s01 .sec-head .title { letter-spacing:-0.3px; }
+  .sec-head .title em { font-size:15px; line-height:1.4; }
+  .sub-step .stt { font-size:14px; flex:1; }
+  .sub-step .stt em { font-size:11px; float:none; display:inline; }
+  .section { padding:18px 20px 14px; }
+  .sec-head { margin-bottom:12px; }
+  .sub-step { margin:12px 0 6px; padding:7px 10px; }
+  .kc { padding:11px 13px; margin-bottom:12px; }
+  .kc-lead { font-size:13px; line-height:1.55; margin-bottom:7px; }
+  .kc-points { padding-left:16px; font-size:13px; line-height:1.55; color:#edf2f7; }
+  .kc-points li + li { margin-top:3px; }
+  .kc-points b { color:white; }
+  .kc-foot { font-size:13px; line-height:1.55; padding-top:7px; margin-top:7px; }
+  .kc-l .point-label { color:#edf2f7; letter-spacing:0; float:right; }
+  .frow .fval { font-size:13px; line-height:1.55; }
+  .frow { margin-bottom:5px; padding-bottom:5px; }
+  .flaw { padding:8px 11px; }
+  .bignum .b .bv { font-size:24px; line-height:1.2; }
+  .sec-head .num { line-height:1; }
+  .dtbl .pf { font-size:12px; }
+  .mono { font-family:'IBM Plex Mono',Consolas,'Microsoft YaHei',monospace; }
+  .viz { margin:0 0 6px; }
+  .clash-note, .tbl-note, .route-note { font-size:13px; line-height:1.55; }
+  .dtbl th { font-size:12px; }
+  .clash-note { padding:7px 10px; }
+  .viz p, .viz li { font-size:13px; line-height:1.55; }
+  .viz strong { color:var(--ink); }
+  .cap { font-size:11px; line-height:1.5; color:var(--ink-dim); }
+  .timeline { list-style:none; position:relative; }
+  .timeline::before { content:''; position:absolute; left:71px; top:12px; bottom:15px; width:2px; background:var(--rule); }
+  .timeline li { position:relative; display:grid; grid-template-columns:61px minmax(0,1fr); column-gap:22px; padding:0 0 9px; }
+  .timeline li:last-child { padding-bottom:0; }
+  .timeline li::before { content:''; position:absolute; left:67px; top:8px; width:10px; height:10px; border:2px solid var(--red); border-radius:50%; background:var(--bg); }
+  .timeline time { font-size:11px; line-height:1.5; color:var(--red-dim); font-weight:700; padding-top:3px; }
+  .timeline time span { display:block; color:var(--ink-ghost); font-size:11px; font-weight:400; }
+  .timeline .tl-body { border:1px solid var(--rule-dim); background:#fff; border-radius:5px; padding:7px 10px; }
+  .timeline .current .tl-body { background:#faf4e6; border-color:#ddd0ac; }
+  .timeline .current::before { background:var(--red); }
+  .launch-cards { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  .launch-card { padding:9px 10px; border:1px solid var(--rule); border-top:3px solid var(--red); border-radius:5px; background:#fff; }
+  .launch-card .cap { display:block; margin-bottom:4px; color:var(--red-dim); font-weight:700; }
+  .route-map { border:1px solid var(--rule); border-radius:6px; overflow:hidden; background:#fff; }
+  .route-row { padding:7px 11px; border-bottom:1px solid var(--rule-dim); }
+  .route-row:last-child { border-bottom:0; }
+  .route-head { display:flex; gap:8px; align-items:center; justify-content:space-between; margin-bottom:6px; }
+  .route-head strong { font-size:14px; }
+  .route-flow { display:flex; align-items:center; gap:7px; }
+  .route-box { flex:1; min-width:0; padding:6px; border:1px solid var(--rule); border-radius:4px; font-size:13px; line-height:1.4; text-align:center; background:var(--surface-2); }
+  .route-box.accent { color:var(--ink); background:#e3ecf5; border-color:#c3d3e4; }
+  .route-split { display:grid; grid-template-columns:1fr 1fr; gap:7px; flex:1; }
+  .route-arrow { width:21px; height:12px; flex:none; color:var(--ink-dim); }
+  .route-note { margin-top:5px; font-size:13px; line-height:1.55; color:var(--ink-dim); }
+  .policy-card { border:1px dashed #c6af72; background:#faf6e9; border-radius:5px; padding:8px 11px; font-size:13px; line-height:1.55; }
+  .policy-card .cap { display:block; color:var(--gold); margin-bottom:3px; font-weight:700; }
+  .ai-map { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:7px; }
+  .ai-node { background:#fff; border:1px solid var(--rule); border-top:3px solid var(--ink); border-radius:5px; padding:8px 8px 9px; min-width:0; }
+  .ai-node h3 { font-size:14px; margin:4px 0; color:var(--ink); }
+  .ai-node .cap { color:var(--red-dim); font-weight:700; }
+  .ai-node .node-title { margin-bottom:5px; }
+  .ai-node p { font-size:13px; line-height:1.5; overflow-wrap:anywhere; }
+  .stance-map { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  .stance-group { border:1px solid var(--rule); border-radius:5px; background:white; overflow:hidden; }
+  .stance-group h3 { padding:6px 9px; font-size:13px; background:#e3ecf5; color:var(--ink); border-bottom:1px solid var(--rule); }
+  .stance-group.limit h3 { background:var(--gold-bg); color:#715514; }
+  .stance-list { padding:7px 9px; list-style:none; }
+  .stance-list li { font-size:13px; line-height:1.5; }
+  .stance-list li + li { margin-top:6px; padding-top:6px; border-top:1px dashed var(--rule); }
+  .stance-list .cap { display:block; font-size:13px; line-height:1.5; color:var(--ink-dim); }
+  .xbox-status { border:1px solid var(--rule); border-radius:6px; overflow:hidden; background:#fff; }
+  .xbox-status .status-band { padding:7px 11px; background:#e3ecf5; font-size:13px; font-weight:700; color:var(--ink); display:flex; justify-content:space-between; gap:8px; }
+  .xbox-status .status-band.proposal { background:#faf4e6; border-top:1px dashed #c6af72; color:var(--gold); }
+  .xbox-items { list-style:none; padding:3px 11px 7px; }
+  .xbox-items li { padding:7px 0; display:grid; grid-template-columns:85px minmax(0,1fr); gap:8px; border-bottom:1px solid var(--rule-dim); }
+  .xbox-items li:last-child { border-bottom:0; padding-bottom:2px; }
+  .xbox-items .item-label { font-size:13px; font-weight:700; color:var(--ink); line-height:1.5; }
+  .xbox-items time { display:block; color:var(--ink-ghost); font-size:11px; font-weight:400; }
+  .hypothesis { padding:9px 11px; }
+  .hypothesis p { margin-bottom:6px; }
+  .guardrails { display:flex; gap:6px; flex-wrap:wrap; }
+  .guardrails span { font-size:11px; line-height:1.5; padding:3px 6px; border:1px solid #dfd1aa; border-radius:3px; color:#715514; background:#faf6e9; }
+  .history-strip { list-style:none; border:1px solid var(--rule); background:#fff; border-radius:5px; overflow:hidden; }
+  .history-strip li { display:grid; grid-template-columns:68px minmax(0,1fr); gap:8px; padding:7px 10px; border-bottom:1px solid var(--rule-dim); }
+  .history-strip li:last-child { border-bottom:0; background:#faf4e6; }
+  .history-strip time { color:var(--red-dim); font-size:11px; font-weight:700; padding-top:2px; }
+  .history-strip p { color:var(--ink-dim); }
+  .history-strip strong { color:var(--ink); }
+  .nav-links { display:grid; grid-template-columns:1fr; gap:3px; padding-bottom:7px; margin-bottom:7px; border-bottom:1px solid #627185; }
+  .nav-links a { color:#edf2f7; text-decoration:none; font-size:11px; padding:3px 6px; }
+  @media(max-width:390px) { .route-row { padding:8px 9px; } .ai-node { padding:7px; } }
+</style>
+</head>
+<body>
+
+<div id="export-toolbar" style="position:fixed;top:10px;right:10px;z-index:9999;font-family:'Microsoft YaHei',sans-serif;user-select:none;">
+  <button id="exp-main" style="background:#c85a4a;color:#fff;border:0;padding:6px 12px;border-radius:4px;font-size:11px;font-weight:700;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,0.2);letter-spacing:.05em;">导出长图</button>
+  <div id="exp-panel" style="display:none;margin-top:6px;background:rgba(30,58,95,0.96);padding:8px;border-radius:4px;box-shadow:0 4px 12px rgba(0,0,0,0.25);">
+    <nav class="nav-links" aria-label="章节导航"><a href="#s01">01 · GTA6</a><a href="#s02">02 · 实体发行</a><a href="#s03">03 · AI 应用</a><a href="#s04">04 · Xbox</a><a href="#s05">05 · 速览</a></nav>
+    <div style="display:flex;flex-direction:column;gap:4px;">
+      <button data-scale="2" class="exp-btn" style="background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.15);padding:6px 10px;border-radius:3px;font-size:11px;cursor:pointer;font-weight:600;">@2x · 860px</button>
+      <button data-scale="3" class="exp-btn" style="background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.15);padding:6px 10px;border-radius:3px;font-size:11px;cursor:pointer;font-weight:600;">@3x · 1290px（推荐）</button>
+      <button data-scale="4" class="exp-btn" style="background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.15);padding:6px 10px;border-radius:3px;font-size:11px;cursor:pointer;font-weight:600;">@4x · 1720px</button>
+    </div>
+    <div id="exp-status" style="font-size:11px;color:#ffb896;margin-top:6px;line-height:1.3;min-height:14px;"></div>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="brand">GAMEPULSE · WEEKLY</div>
+    <h1>端主行业周报 W40</h1>
+    <div class="sub">GTA6 发售前五周 · 任天堂保留实体发行 · 游戏公司 AI 路径分化 · Xbox 独占问卷 · 其他速览</div>
+    <div class="tags">
+      <span class="pill" style="background:rgba(200,90,74,0.5);color:#ffd4c4;">GTA6前夜</span>
+      <span class="pill" style="background:rgba(139,105,20,0.5);color:#f0dca0;">实体发行分化</span>
+      <span class="pill" style="background:rgba(30,58,95,0.6);color:#bcd4f5;">AI应用边界</span>
+      <span class="pill" style="background:rgba(16,124,16,0.5);color:#c4ecc4;">Xbox独占问卷</span>
+    </div>
+    <div class="meta">
+      <span>DATE · <strong>2026.10.16</strong></span>
+      <span>COVERAGE · <strong>10.12 – 10.18</strong></span>
+    </div>
+  </div>
+
+  <!-- ================= PART 01 GTA6 ================= -->
+  <div class="section" id="s01">
+    <div class="sec-head">
+      <div class="num">01</div>
+      <div class="title">GTA6 发售前五周：换机成本与泄露是变量<em>11/12 预载 · 11/19 发售（PS5 / Xbox Series）</em></div>
+    </div>
+    <div class="kc">
+      <div class="kc-l">核心结论 <span class="point-label">本周要点</span></div>
+      <div class="kc-lead">GTA6 冲刺发售，<b>主机价格与供货仍限制换机需求</b>。</div>
+      <ul class="kc-points">
+        <li>10/15 发售预告上线，由普通版 PS5 录制。</li>
+        <li>匿名者 10/14 暂停泄露，未放出完整剧情。</li>
+      </ul>
+      <div class="kc-foot">So-What：换机增量预期宜保守。（推断）</div>
+    </div>
+    <div class="sub-step"><span class="sn">01</span><span class="stt">彭博披露 Rockstar 团队规模 <em>10/14</em></span></div>
+    <div class="flaw">
+      <div class="frow f-fact"><div class="flab">事实</div><div class="fval">据彭博：团队从 2018 年 2,441 人增至 2026 年 <strong>4,711 人</strong>，分布 12 个办公室；开发与 QA 4,020 人，为 NPC 产能专设洛杉矶工作室。</div></div>
+    </div>
+    <div class="sub-step"><span class="sn">02</span><span class="stt">泄露事件：从片段、要挟到暂停 <em>6/24–10/14</em></span></div>
+    <figure class="viz" aria-label="GTA6实体版与泄露事件的时间顺序，不表示因果关系">
+      <ol class="timeline">
+        <li><time class="mono">6/24<span>前情</span></time><div class="tl-body"><p>官方宣布盒装版<strong>只有下载码</strong>，不含光盘。</p></div></li>
+        <li><time class="mono">8/18 起<span>前情</span></time><div class="tl-body"><p>匿名者借反对盒内下载码放出开发片段、推销代币；Take-Two 申请传票追查身份，Rockstar 维持发售日。</p></div></li>
+        <li><time class="mono">10/10<span>上周</span></time><div class="tl-body"><p>要挟代币市值达<strong>3,000 万美元</strong>就泄露完整剧情，要求推出实体光盘并道歉。</p></div></li>
+        <li class="current"><time class="mono">10/14<span>本周</span></time><div class="tl-body"><p>市值跌至约<strong>120 万美元</strong>，宣布暂停，未放出完整版。</p></div></li>
+      </ol>
+    </figure>
+    <div class="sub-step"><span class="sn">03</span><span class="stt">GTA6 首发仅主机，硬件高价压制换机 <em>10/10</em></span></div>
+    <div class="bignum viz" aria-label="美国年初至8月主机销量与价格">
+      <div class="b"><div class="bv">-33%</div><div class="bl">Xbox 主机销量<br>年初至 8 月 · 历史最低</div></div>
+      <div class="b"><div class="bv">-25%</div><div class="bl">PS 主机销量<br>2013 年以来最低</div></div>
+      <div class="b"><div class="bv">$597</div><div class="bl">PS 主机均价 +20%<br>Xbox $529 +26%</div></div>
+    </div>
+    <div class="tbl-note">Circana 分析师称 GTA6“或许”能缓解下滑，效果取决于价格与供货；观望者的 200 美元预期与实际 600–900 美元存在落差。</div>
+    <div class="sub-step"><span class="sn">04</span><span class="stt">Rockstar 发预告，PS Plus 提醒前作退库 <em>10/13–15</em></span></div>
+    <div class="launch-cards viz">
+      <div class="launch-card"><span class="cap mono">10/15 · 发售预告</span><p>全片由<strong>普通版 PS5</strong>录制，非 Pro；Justice 原创单曲同步上线。</p></div>
+      <div class="launch-card"><span class="cap mono">10/13 · PS Plus 通知</span><p>《GTA5》11/17 退库，距新作两天；附预购入口。</p><div class="cap">限 Extra / Premium 游戏库</div></div>
+    </div>
+    <div class="clash-note"><b>口径：</b>PC 版“2027 年一季度”、10 月底发评测版、1.5 亿美元营销预算均未获 Rockstar 确认，分别来自匿名人士、爆料人与地方官员估算。</div>
+  </div>
+
+  <!-- ================= PART 02 实体与数字 ================= -->
+  <div class="section" id="s02">
+    <div class="sec-head">
+      <div class="num">02</div>
+      <div class="title">任天堂保留实体发行，三平台路径分化<em>10/11 任天堂受访 · 10/15 美国议员拟提法案</em></div>
+    </div>
+    <div class="kc">
+      <div class="kc-l">核心结论 <span class="point-label">本周要点</span></div>
+      <div class="kc-lead"><b>实体与数字可并行</b>；是否有盒装，与付费后能否转让、停服后能否游玩是两层不同问题。</div>
+      <ul class="kc-points">
+        <li>任天堂拉美副总裁：暂无放弃实体游戏的计划。</li>
+        <li>Torres 拟提数字购买权益法案；目前只是政策倡议。</li>
+      </ul>
+      <div class="kc-foot">So-What：观察重点从发行载体延伸至数字许可与使用权。</div>
+    </div>
+    <div class="sub-step"><span class="sn">01</span><span class="stt">任天堂表态，对照索尼与微软既有方案</span></div>
+    <figure class="route-map viz" aria-label="三家平台并列发行路径，箭头表示各自安排，不表示平台之间的因果关系">
+      <div class="route-row">
+        <div class="route-head"><strong>任天堂</strong><span class="cap mono">10/11 受访 · 双轨发行</span></div>
+        <div class="route-flow">
+          <div class="route-box" style="flex:0 0 29%;">Switch 2<br>发行选择</div>
+          <svg class="route-arrow" viewBox="0 0 24 12" aria-hidden="true"><path d="M1 6H21M17 2L21 6L17 10" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          <div class="route-split"><div class="route-box accent">实体版<br>继续保留</div><div class="route-box accent">数字版<br>并行保留</div></div>
+        </div>
+        <div class="route-note">Switch 2 第一方游戏数字版较盒装低 10 美元。</div>
+      </div>
+      <div class="route-row">
+        <div class="route-head"><strong>索尼</strong><span class="cap mono">此前计划 · 本周重申</span></div>
+        <div class="route-flow"><div class="route-box">2028/1 起<br>新上市游戏</div><svg class="route-arrow" viewBox="0 0 24 12" aria-hidden="true"><path d="M1 6H21M17 2L21 6L17 10" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><div class="route-box accent">停止生产光盘<br>仅数字发行</div></div>
+        <div class="route-note">既有游戏不受此次计划影响。</div>
+      </div>
+      <div class="route-row">
+        <div class="route-head"><strong>微软</strong><span class="cap mono">9/30 开放 · 既有动作</span></div>
+        <div class="route-flow"><div class="route-box">符合条件的<br>Xbox 游戏光盘</div><svg class="route-arrow" viewBox="0 0 24 12" aria-hidden="true"><path d="M1 6H21M17 2L21 6L17 10" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><div class="route-box accent">取得对应<br>数字使用许可</div></div>
+        <div class="route-note">限支持的 Xbox One / Series 光盘；所有玩家可用。</div>
+      </div>
+    </figure>
+    <div class="policy-card"><span class="cap">10/15 · Torres 拟提法案，尚未提交</span><strong>核心问题不是“有没有盒子”，而是付费后能否保有、转让并持续使用游戏。</strong>Torres 拟提 <strong>Power To The Players Act</strong>，主张数字游戏购买权益及停服前提供离线模式；目前并非生效规则。其公告举《NBA 2K25》为例：计划 10/30 下架、12/31 停服。</div>
+    <div class="mini-h">美国新实体游戏软件支出 · 2026 年初至 8 月同比 2025 年同期</div>
+    <div class="bignum viz" aria-label="Circana：美国2026年初至8月新实体游戏软件支出较2025年同期变化；各项为金额支出，不是销量">
+      <div class="b"><div class="bv">+5%</div><div class="bl">新实体软件总支出<br>7.38 亿美元 · 同比</div></div>
+      <div class="b"><div class="bv">+631%</div><div class="bl">Game-Key Card<br>实体版支出 · 同比</div></div>
+      <div class="b"><div class="bv">-3%</div><div class="bl">其余新实体介质<br>支出 · 同比</div></div>
+    </div>
+    <div class="tbl-note">Circana 分析师 10/8 发布；均为美国累计<strong>金额支出</strong>同比，非销量。钥匙卡需下载完整游戏，也不等同于纯数字版或盒内下载码。</div>
+  </div>
+
+  <!-- ================= PART 03 AI ================= -->
+  <div class="section" id="s03">
+    <div class="sec-head">
+      <div class="num">03</div>
+      <div class="title">游戏公司 AI 路径分化：应用扩张与创作设限<em>Epic 推编码 · Xbox Labs 探索 · 既有生成内容边界</em></div>
+    </div>
+    <div class="kc">
+      <div class="kc-l">核心结论 <span class="point-label">本周要点</span></div>
+      <div class="kc-lead"><b>游戏公司对 AI 的态度不同</b>：Epic 推编码，微软探索新技术；Capcom、Sega 限制生成创作内容。</div>
+      <ul class="kc-points">
+        <li>Epic 推动 AI 辅助开发；NVIDIA 计划更新渲染模型。</li>
+        <li>微软 10/13 宣布成立 XBOX Labs，探索新兴技术与游戏的结合。</li>
+      </ul>
+    </div>
+    <div class="sub-step"><span class="sn">01</span><span class="stt">Epic 与 NVIDIA：应用环节不同 <em>10/12–16</em></span></div>
+    <figure class="ai-map viz" aria-label="AI在开发、渲染、分发中的并列应用，不表示技术或因果流水线">
+      <div class="ai-node"><div class="cap">开发 · 写代码</div><h3>Epic</h3><p>Sweeney 确认“最大化 AI 加速”；据彭博，一位项目总监通知<strong>不再手写代码</strong>。</p></div>
+      <div class="ai-node"><div class="cap">渲染 · 光照材质</div><h3>NVIDIA</h3><p>DLSS 5 新模型计划 10/16 用于《NBA 2K27》；官方称帧率最高达<strong>原来 1.4 倍</strong>。</p></div>
+      <div class="ai-node"><div class="cap">分发 · 启动器</div><h3>Epic</h3><p>新版启动器由 AI 辅助编写；官方称冷启动<strong>比 Steam 快 1.8 倍</strong>，为委托测速。</p></div>
+    </figure>
+    <div class="clash-note"><b>边界：</b>据彭博，迪士尼射击项目因低估人手与工期延期，不能归因于 AI。DLSS 帧率仅为官方特定游戏、硬件结果。</div>
+    <div class="sub-step"><span class="sn">02</span><span class="stt">微软设 Labs 探索新兴技术，各公司创作边界有别 <em>10/13</em></span></div>
+    <figure class="stance-map viz" aria-label="游戏公司对AI的组织应用及生成内容采取不同做法；两类维度非互斥，本周与前期新闻分列">
+      <div class="stance-group"><h3>扩大应用 / 探索技术</h3><ul class="stance-list">
+        <li><strong>XBOX Labs · 10/13</strong><span class="cap">微软组建小团队探索游戏重建、跨硬件运行；官方提及 agents 编程潜力，未宣布 AI 改造产品。</span></li>
+        <li><strong>Krafton</strong><span class="cap">10/13 · 100 人以上 AI Native 校招</span></li>
+        <li><strong>Ubisoft</strong><span class="cap">据报道 · AI 团队独立，设首席 AI 赋能官</span></li>
+      </ul></div>
+      <div class="stance-group limit"><h3>生成创作设限 · 前情</h3><ul class="stance-list">
+        <li><strong>Capcom</strong><span class="cap">10/7 · 不将 AI 生成素材放进游戏</span></li>
+        <li><strong>Sega</strong><span class="cap">10/6 · 不把创作交给 AI，只用于发行与职能部门</span></li>
+      </ul></div>
+    </figure>
+    <div class="tbl-note">两列不是“支持／反对 AI”阵营；微软公告涉及广泛新技术，不能将 XBOX Labs 定性为已落地的 AI 专项产品。</div>
+  </div>
+
+  <!-- ================= PART 04 Xbox ================= -->
+  <div class="section" id="s04">
+    <div class="sec-head">
+      <div class="num">04</div>
+      <div class="title">Xbox 独占问卷：试探边界，并非策略转向<em>少量历史前情 · 本周部分 Insider 问卷</em></div>
+    </div>
+    <div class="kc">
+      <div class="kc-l">核心结论 <span class="point-label">本周要点</span></div>
+      <div class="kc-lead">Xbox 既有<b>选择性主机独占与跨平台发行</b>；本周问卷试探扩大独占范围，并非公布新政策。</div>
+      <ul class="kc-points">
+        <li>部分 Insider 收到“除 COD 外，未来 Xbox 自研系列新作改为主机独占”的假设问卷。</li>
+        <li>《我的世界》停售、停更及“PC 不变”同属题设。</li>
+      </ul>
+    </div>
+    <div class="sub-step"><span class="sn">01</span><span class="stt">从选择性跨平台到本周独占情景问卷</span></div>
+    <figure class="viz" aria-label="Xbox独占政策前情及本周问卷按时间排序，问卷假设不表示已经转向">
+      <ol class="history-strip">
+        <li><time class="mono">2024/02</time><p><strong>有限跨平台：</strong>Xbox 宣布将四款游戏带到其他主机，同时称独占方针未根本改变。</p></li>
+        <li><time class="mono">2026/06</time><p><strong>逐作区分：</strong>官方确认《战争机器：事变日》与《发条革命》为非限时 Xbox 主机独占；已公布的跨平台发行仍按原计划。</p></li>
+        <li><time class="mono">本周</time><p><strong>仅问卷题设：</strong>据 Windows Central 核实的部分 Insider 问卷截图，询问更大范围独占对玩家选择的影响。</p></li>
+      </ol>
+    </figure>
+    <div class="sub-step"><span class="sn">02</span><span class="stt">问卷究竟问了什么：COD 例外，PC 仍不变</span></div>
+    <figure class="xbox-status viz" aria-label="部分Xbox Insider问卷假设：未来新作除COD外改为Xbox主机独占，并非真实发行政策">
+      <div class="status-band proposal">假设情景<span class="cap">非微软公布的发行决定</span></div>
+      <div class="hypothesis">
+        <div class="route-flow"><div class="route-box">未来 Xbox 自研<br>各系列新作</div><svg class="route-arrow" viewBox="0 0 24 12" aria-hidden="true"><path d="M1 6H21M17 2L21 6L17 10" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><div class="route-box accent">假设：除 COD 外<br>Xbox 主机独占</div></div>
+        <p style="margin-top:7px;">《我的世界》另设 PS / 任天堂主机<strong>停售、停更</strong>情景；已购游戏和内容不移除。</p>
+        <div class="guardrails"><span>COD 是题设例外</span><span>PC 不变亦为题设</span><span>不是已落地政策</span></div>
+      </div>
+    </figure>
+    <div class="tbl-note">相较 W39，多了<b>用户反应测试</b>，并非宣布全面收回跨平台发行。Windows Central 只核实部分问卷截图，不能据此推断最终决策。</div>
+  </div>
+
+  <!-- ================= PART 05 速览 ================= -->
+  <div class="section" id="s05">
+    <div class="sec-head">
+      <div class="num">05</div>
+      <div class="title">其他新闻速览<em>市场 · 资本 · 重组 · 新品</em></div>
+    </div>
+
+    <div class="ev-line">
+      <div class="ev-head"><span class="d">10/11</span> <span class="tg tg-b">市场·Steam</span></div>
+      <div class="ev-body">Steam 同时在线峰值 <strong>4,350.6 万</strong>，创历史新高；上年 10 月峰值约 4,167 万。</div>
+    </div>
+    <div class="ev-line">
+      <div class="ev-head"><span class="d">10/12</span> <span class="tg tg-y">资本·Q3</span></div>
+      <div class="ev-body">Aream & Co：Q3 游戏并购 54 笔、<strong>578 亿美元</strong>，EA 550 亿美元私有化占绝大部分。</div>
+    </div>
+    <div class="ev-line">
+      <div class="ev-head"><span class="d">10/14–15</span> <span class="tg tg-r">重组·育碧</span></div>
+      <div class="ev-body">一周三地：拟关闭芬兰 <strong>RedLynx</strong>（最多 52 岗）；新加坡裁 70 岗；10/15 德国三家工作室启动约 <strong>100 人</strong>自愿离职计划（约 600 人中），补偿仍在与职工委员会谈判。</div>
+    </div>
+
+    <table class="dtbl" style="margin-top:8px">
+      <colgroup><col style="width:38%"><col style="width:44%"><col style="width:18%"></colgroup>
+      <thead><tr><th>新品与里程碑</th><th>要点</th><th>日期</th></tr></thead>
+      <tbody>
+        <tr><td class="gm">Control Resonant</td><td class="pf">3 周破 100 万份，Remedy 史上最快</td><td class="dt">10/15</td></tr>
+        <tr><td class="gm">恶魔城：贝尔蒙特的诅咒</td><td class="pf">12 年来首部正统新作，Metacritic 86</td><td class="dt">10/15</td></tr>
+        <tr><td class="gm">动物园之星2</td><td class="pf">PC / PS5 / Xbox Series</td><td class="dt">10/13</td></tr>
+        <tr><td class="gm">Valor Mortis</td><td class="pf">《幽灵行者》团队新作，首发入 Game Pass</td><td class="dt">10/14</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 下期预告 -->
+  <div style="background:linear-gradient(135deg,#16283f,#2c4a6e);padding:12px 20px;text-align:center;">
+    <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:rgba(255,255,255,0.5);font-weight:700;">NEXT WEEK</span>
+    <div style="font-size:13px;color:rgba(255,255,255,0.88);margin-top:4px;font-weight:700;">W41 预告：ID@Xbox 展示(10/20) · 《地铁》Redux 本世代更新 PC 版(10/22) · COD MW4(10/23)</div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="logo">GAMEPULSE · PC & CONSOLE</div>
+    <div>数据来源：腾讯文档 · Rockstar · Kotaku · Remedy · Bloomberg · Circana / Mat Piscatella（10/8 原帖） · Take-Two · VGC · Coelho no Japão 访谈 · Torres 众议员办公室（10/15） · Windows Central · Xbox Wire（2024/02、2026/06、10/13） · Epic · NVIDIA · PlayStation 官方博客 · SteamDB · GamesIndustry</div>
+    <div>2026.10.16 · W40 WEEKLY · COVERAGE 10.12–10.18</div>
+    <div class="disc">资料截至 10/16。本报告由 AI 整理，仅供参考。</div>
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+(function(){
+  const tb=document.getElementById('export-toolbar'),mb=document.getElementById('exp-main'),pn=document.getElementById('exp-panel'),st=document.getElementById('exp-status'),bs=document.querySelectorAll('.exp-btn'),pg=document.querySelector('.page');
+  mb.addEventListener('click',()=>pn.style.display=(pn.style.display==='none'?'block':'none'));
+  document.addEventListener('click',e=>{if(!tb.contains(e.target))pn.style.display='none';});
+  function ss(t,err){st.textContent=t;st.style.color=err?'#ff8080':'#ffb896';}
+  function lk(l){bs.forEach(b=>b.disabled=l);mb.disabled=l;}
+  const frame=()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+  async function ex(s){
+    if(typeof html2canvas==='undefined'){ss('html2canvas未加载',true);return;}
+    lk(true);ss('渲染中…@'+s+'x');tb.style.visibility='hidden';
+    const old={w:pg.style.width,mw:pg.style.maxWidth};
+    try{
+      pg.style.width='430px';pg.style.maxWidth='none';
+      if(document.fonts&&document.fonts.ready)await document.fonts.ready;
+      await frame();
+      const c=await html2canvas(pg,{scale:s,backgroundColor:'#f4f6f9',useCORS:true,logging:false,width:430,height:pg.scrollHeight,windowWidth:430});
+      ss('生成PNG…');
+      await new Promise((res,rej)=>c.toBlob(b=>{
+        if(!b){rej(new Error('PNG生成失败'));return;}
+        const u=URL.createObjectURL(b),a=document.createElement('a'),baseName=(document.title||'Briefing').replace(/[\s·\/\\:\*\?"<>\|]/g,'_');
+        a.href=u;a.download=baseName+'_'+s+'x.png';document.body.appendChild(a);a.click();document.body.removeChild(a);
+        setTimeout(()=>URL.revokeObjectURL(u),1e3);res();
+      },'image/png'));
+      ss('✓@'+s+'x已导出');
+    }catch(e){ss('失败:'+e.message,true);}
+    finally{pg.style.width=old.w;pg.style.maxWidth=old.mw;tb.style.visibility='visible';lk(false);}
+  }
+  bs.forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();ex(parseInt(b.dataset.scale,10));}));
+})();
+</script>
+</body>
+</html>

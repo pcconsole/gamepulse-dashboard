@@ -2,6 +2,28 @@
 // 每周生成新周报时，在数组顶部追加一条
 window.WEEKLY_REPORTS = [
   {
+    week: 'W41',
+    date: '2026-10-23',
+    periodStart: '2026-10-19',
+    periodEnd: '2026-10-25',
+    title: '端主行业周报 W41：Xbox云游戏按小时卖·硬件分化·EA关闭BioWare·年末档期',
+    summary: 'Xbox 云游戏从 Game Pass 会员附带、改为会员限时，到 10/21 官方测试非会员按小时购买（10 小时 3.99 美元起）；据 Fortune，Game Pass 拟拆为可选模块，3,200 人裁员计划已执行 1,868 人，剩余分 10/11/1 月三轮。Circana 美国 9 月：PS5 硬件金额 +43%、Xbox 台数 -27% 创 9 月新低；据报道 Helix 2028 年假日季上市、内部预估 1,200–1,800 美元，PS6 成本为爆料口径；内存涨价延续。EA 被沙特 PIF 牵头财团私有化后关闭 BioWare、终止新《质量效应》早期开发，资源押注体育与射击（约 400 人裁员为彭博口径）。另列 GTA6、现代战争4、影之刃零等档期信号与羊蹄山、金刚狼等第三方估算数据。资料截至 10/23。',
+    file: 'weekly/W41_20261023.html',
+    tags: ['Xbox云游戏', 'Game Pass', '硬件分化', 'EA重组', '年末档期'],
+    highlight: true
+  },
+  {
+    week: 'W40',
+    date: '2026-10-16',
+    periodStart: '2026-10-12',
+    periodEnd: '2026-10-18',
+    title: '端主行业周报 W40：GTA6发售前五周·任天堂保留实体发行·AI路径分化·Xbox独占问卷',
+    summary: 'GTA6 定档 11/19 登 PS5/Xbox Series，Rockstar 团队增至 4,711 人（据彭博），泄露事件 10/14 暂停；Circana 美国年初至 8 月 Xbox 主机销量 -33%、PS -25%，换机增量宜保守。任天堂表示暂无放弃实体发行计划，对照索尼 2028 年起新作停产光盘与微软光盘换数字许可；美国议员 Torres 拟提数字购买权益法案（尚未提交）。AI：Epic 推 AI 辅助开发、微软成立 XBOX Labs 探索新技术，Capcom、Sega 限制生成内容入游戏。Xbox 向部分 Insider 发问卷试探“除 COD 外新作改主机独占”，仅为题设。资料截至 10/16。',
+    file: 'weekly/W40_20261016.html',
+    tags: ['GTA6', '实体发行', 'AI应用', 'Xbox独占问卷'],
+    highlight: true
+  },
+  {
     week: 'W39',
     date: '2026-10-10',
     periodStart: '2026-10-05',
