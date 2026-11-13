@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>端主行业周报 · W44 · v3</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#1e3a5f; --ink-2:#2c4a6e; --ink-dim:#4a5c6e; --ink-ghost:#6f7f8e; --red:#c85a4a; --red-dim:#a0483b; --red-bg:#f5e0db; --gold:#8b6914; --gold-bg:#ede4cf; --green:#3d6b57; --green-bg:#dde7e0; --bg:#f4f6f9; --rule:#d5dce3; --rule-dim:#e5e9ee; --s2:#eef1f5; --sony:#003087; --xbox:#107c10; --nin:#c8102e; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html, body { background:#c8ced6; font-family:'Microsoft YaHei','微软雅黑',-apple-system,sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  .page { width:430px; max-width:100%; margin:0 auto; background:var(--bg); color:var(--ink); overflow:hidden; }
+  .num { font-family:'IBM Plex Mono',Consolas,'Microsoft YaHei',monospace; font-weight:800; white-space:nowrap; }
+  .up { color:var(--red-dim); } .dn { color:var(--green); }
+
+  .hero { background:linear-gradient(135deg,#16283f 0%,#24405f 55%,#2c4a6e 100%); color:#fff; padding:15px 18px 15px; position:relative; }
+  .hero::after { content:''; position:absolute; left:0; right:0; bottom:0; height:4px; background:linear-gradient(90deg,var(--red),var(--gold)); }
+  .hero .br { font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.28em; color:#e0a56a; font-weight:700; }
+  .hero h1 { font-size:20px; font-weight:800; margin-top:4px; }
+  .hero .mt { font-family:'IBM Plex Mono',monospace; font-size:11px; color:rgba(255,255,255,.68); margin-top:3px; letter-spacing:.04em; }
+  .h3n { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:6px; margin-top:11px; }
+  .h3n > div { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14); border-radius:6px; padding:7px 4px 6px; text-align:center; }
+  .h3n .v { font-size:22px; color:#f3cf7a; line-height:1.1; }
+  .h3n .l { font-size:11px; color:rgba(255,255,255,.82); margin-top:3px; line-height:1.4; }
+  .hero .one { margin-top:8px; font-size:13px; line-height:1.55; color:rgba(255,255,255,.92); }
+  .hero .one b { color:#fff; border-bottom:2px solid rgba(232,184,74,.6); }
+
+  .sec { padding:11px 16px 10px; }
+  .sec + .sec { border-top:6px solid #e2e7ed; }
+  .sh { display:flex; align-items:baseline; gap:9px; padding-bottom:5px; margin-bottom:8px; border-bottom:2px solid var(--ink); position:relative; }
+  .sh::after { content:''; position:absolute; left:0; bottom:-2px; width:44px; height:2px; background:var(--red); }
+  .sh .n { font-family:'IBM Plex Mono',monospace; font-size:22px; font-weight:800; color:var(--red); line-height:1; }
+  .sh .t { font-size:17px; font-weight:800; flex:1; line-height:1.3; }
+  .sh .t em { display:block; font-style:normal; font-size:12px; font-weight:600; color:var(--red-dim); margin-top:2px; }
+
+  .kc { background:linear-gradient(135deg,#1e3a5f,#263f5e); border-left:4px solid var(--gold); border-radius:5px; padding:9px 11px; color:rgba(255,255,255,.94); margin-bottom:4px; }
+  .kc-lead { font-size:13px; font-weight:700; line-height:1.55; }
+  .kc-lead b { color:#f3cf7a; }
+  .kc-side { display:flex; gap:8px; margin-top:5px; background:rgba(255,255,255,.07); border-radius:4px; padding:5px 8px; font-size:12px; line-height:1.5; }
+  .kc-side .k { flex:none; width:30px; font-weight:800; color:#e8b84a; }
+  .verdict { background:linear-gradient(135deg,#1e3a5f,#263f5e); border-left:4px solid var(--gold); border-radius:5px; padding:7px 11px; color:rgba(255,255,255,.94); font-size:13px; font-weight:700; line-height:1.55; margin-bottom:8px; }
+  .verdict b { color:#f3cf7a; }
+
+  .sub-step { display:flex; align-items:center; gap:8px; margin:11px 0 6px; padding:6px 10px; background:linear-gradient(90deg,rgba(30,58,95,.10),rgba(30,58,95,0)); border-left:4px solid var(--red); border-radius:0 6px 6px 0; }
+  .sub-step .sn { font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:800; color:#fff; background:var(--red); min-width:21px; height:21px; border-radius:5px; display:inline-flex; align-items:center; justify-content:center; flex:none; }
+  .sub-step .stt { font-size:14px; font-weight:800; color:var(--ink); line-height:1.35; flex:1; }
+  .sub-step .stt em { font-style:normal; font-weight:600; color:var(--ink-ghost); font-size:11px; margin-left:4px; white-space:nowrap; }
+  .sub-step.sony { border-left-color:var(--sony); } .sub-step.sony .sn { background:var(--sony); }
+  .sub-step.xbox { border-left-color:var(--xbox); } .sub-step.xbox .sn { background:var(--xbox); }
+  .sub-step.nin { border-left-color:var(--nin); } .sub-step.nin .sn { background:var(--nin); }
+
+  .k4 { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:5px; }
+  .k4 > div { background:#fff; border:1px solid var(--rule-dim); border-radius:6px; padding:6px 3px 5px; text-align:center; }
+  .k4 .v { font-size:18px; line-height:1.15; }
+  .k4 .l { font-size:11px; color:var(--ink-dim); line-height:1.35; margin-top:2px; }
+  .txt { font-size:13px; line-height:1.6; color:var(--ink-dim); margin-top:6px; }
+  .txt b { color:var(--ink); }
+  .note { font-size:11px; line-height:1.55; color:var(--ink-ghost); margin-top:5px; }
+
+  .mg { margin-top:7px; background:#fff; border:1px solid var(--rule-dim); border-radius:6px; padding:6px 9px 5px; }
+  .pl { font-size:13px; line-height:1.6; color:var(--ink-dim); }
+  .pl b { color:var(--ink); }
+  .pl b.up { color:var(--red-dim); }
+  .mg-h { font-size:12px; font-weight:800; color:var(--ink-dim); margin-bottom:4px; }
+  .mg-r { display:grid; grid-template-columns:52px minmax(0,1fr) 44px; gap:6px; align-items:center; margin-bottom:3px; font-size:12px; }
+  .mg-r .k { color:var(--ink-dim); font-weight:700; }
+  .mg-r .tr { height:10px; background:var(--s2); border-radius:3px; overflow:hidden; }
+  .mg-r .tr div { height:100%; border-radius:3px; }
+  .mg-r .v { text-align:right; font-size:12px; }
+
+  .pf-bar { display:flex; height:38px; border-radius:4px; overflow:hidden; color:#fff; }
+  .pf-bar > div { display:flex; flex-direction:column; align-items:center; justify-content:center; white-space:nowrap; line-height:1.2; }
+  .pf-bar b { font-family:'IBM Plex Mono','Microsoft YaHei',monospace; font-size:13px; font-weight:800; }
+  .pf-bar i { font-style:normal; font-size:11px; opacity:.9; }
+  .htl { position:relative; display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); margin-top:9px; }
+  .htl::before { content:''; position:absolute; left:10%; right:10%; top:22px; height:2px; background:var(--rule); }
+  .htl > div { position:relative; text-align:center; padding:0 2px; }
+  .htl .d { font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:700; color:var(--ink-ghost); height:15px; }
+  .htl .dot { width:12px; height:12px; border-radius:50%; margin:1px auto 4px; background:#9aa8b6; border:2px solid var(--bg); position:relative; }
+  .htl .hot .dot { background:var(--red); }
+  .htl .fut .dot { background:var(--bg); border:2px dashed var(--ink-ghost); }
+  .htl .v { font-size:13px; color:var(--ink); }
+  .htl .hot .v { color:var(--red-dim); }
+  .htl .l { font-size:11px; line-height:1.35; color:var(--ink-dim); }
+
+  .mh { font-size:12px; font-weight:800; color:var(--ink-dim); margin:9px 0 5px; display:flex; align-items:center; gap:6px; }
+  .mh:first-of-type { margin-top:2px; }
+  .mh::before { content:''; width:4px; height:13px; background:var(--red); border-radius:2px; }
+  .ev-line { background:#fff; border:1px solid var(--rule-dim); border-radius:5px; padding:6px 10px; margin-bottom:5px; font-size:13px; line-height:1.55; }
+  .ev-head { display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
+  .ev-head .d { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-ghost); font-weight:700; }
+  .ev-head strong { font-size:13px; font-weight:800; color:var(--ink); }
+  .ev-body { color:var(--ink-dim); margin-top:1px; }
+  .ev-body ul { list-style:none; }
+  .ev-body li { position:relative; padding-left:10px; }
+  .ev-body li::before { content:''; position:absolute; left:0; top:9px; width:4px; height:4px; border-radius:50%; background:var(--ink-ghost); }
+  .ev-body b { color:var(--ink); font-family:'IBM Plex Mono','Microsoft YaHei',monospace; }
+  .tg { font-size:11px; font-weight:700; padding:1px 6px; border-radius:2px; }
+  .tg-r { background:var(--red-bg); color:var(--red); } .tg-b { background:#dce8f5; color:#2a5a8f; } .tg-y { background:var(--gold-bg); color:var(--gold); }
+  .dtbl { width:100%; table-layout:fixed; border-collapse:collapse; background:#fff; border:1px solid var(--rule-dim); border-radius:5px; overflow:hidden; font-size:12px; }
+  .dtbl td { padding:5px 7px; border-top:1px solid var(--rule-dim); line-height:1.4; vertical-align:middle; }
+  .dtbl tr:first-child td { border-top:0; }
+  .dtbl td:first-child { font-weight:800; color:var(--ink); }
+  .dtbl td:nth-child(2) { color:var(--ink-dim); }
+  .dtbl td:last-child { text-align:right; font-family:'IBM Plex Mono','Microsoft YaHei',monospace; font-weight:800; color:var(--red-dim); }
+
+  .bridge { margin-top:7px; background:#fff; border:1px solid var(--rule-dim); border-radius:6px; padding:7px 9px 6px; }
+  .bh { font-size:12px; font-weight:800; color:var(--ink-dim); margin-bottom:5px; display:flex; justify-content:space-between; }
+  .bh span { font-weight:400; color:var(--ink-ghost); font-size:11px; }
+  .br-r { display:grid; grid-template-columns:70px minmax(0,1fr) 44px; gap:6px; align-items:center; margin-bottom:4px; font-size:12px; }
+  .br-r .k { color:var(--ink-dim); font-weight:700; line-height:1.3; }
+  .br-r .k small { display:block; font-size:11px; font-weight:400; color:var(--ink-ghost); }
+  .br-r .tr { position:relative; height:16px; background:var(--s2); border-radius:3px; }
+  .br-r .tr .a { position:absolute; left:0; top:0; bottom:0; background:#b7c2ce; border-radius:3px 0 0 3px; }
+  .br-r .tr .b { position:absolute; top:0; bottom:0; background:var(--sony); border-radius:0 3px 3px 0; }
+  .br-r .tr .a2 { background:#7f93ad; }
+  .br-r .tr span { position:absolute; top:0; line-height:16px; font-size:11px; font-family:'IBM Plex Mono',monospace; font-weight:700; padding:0 4px; color:#fff; white-space:nowrap; }
+  .br-r .v { text-align:right; font-size:14px; }
+  .src3 { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:5px; margin-top:6px; }
+  .src3 > div { border-radius:5px; padding:5px 6px; text-align:center; }
+  .src3 .u { background:#fbeee9; } .src3 .d2 { background:var(--green-bg); }
+  .src3 .v { font-size:15px; line-height:1.2; }
+  .src3 .l { font-size:11px; color:var(--ink-dim); line-height:1.35; }
+  .guide { display:flex; align-items:center; gap:8px; margin-top:6px; background:var(--gold-bg); border-radius:5px; padding:5px 9px; font-size:12px; color:#5e4710; }
+  .guide b { font-family:'IBM Plex Mono',monospace; font-size:13px; color:#4a380c; white-space:nowrap; }
+  .guide .k { font-weight:800; flex:none; }
+  .drv { display:grid; grid-template-columns:1fr 1fr; gap:5px; margin-top:7px; }
+  .drv > div { border-radius:5px; padding:5px 9px; font-size:12px; line-height:1.5; }
+  .drv .up2 { background:var(--green-bg); color:#2c5040; } .drv .dn2 { background:var(--red-bg); color:#7a382d; }
+  .drv b { font-weight:800; }
+  .lev { display:flex; align-items:center; gap:4px; margin-top:6px; flex-wrap:nowrap; }
+  .lev span { flex:1; text-align:center; font-size:12px; font-weight:700; color:var(--ink-2); background:var(--s2); border-radius:4px; padding:4px 2px; white-space:nowrap; }
+  .lev i { font-style:normal; color:var(--ink-ghost); font-size:12px; flex:none; }
+  .lev span.g { background:var(--xbox); color:#fff; }
+  .nl { display:grid; grid-template-columns:minmax(0,1fr) 80px; gap:8px; align-items:center; background:#fff; border:1px solid var(--rule-dim); border-radius:5px; padding:6px 9px; margin-bottom:4px; }
+  .nl .h { font-size:13px; font-weight:800; color:var(--ink); line-height:1.4; }
+  .nl .h .tg { margin-right:5px; vertical-align:1px; }
+  .nl .s { font-size:12px; color:var(--ink-dim); line-height:1.45; margin-top:1px; }
+  .nl .n { text-align:right; }
+  .nl .n .v { font-size:16px; color:var(--red-dim); line-height:1.15; }
+  .nl .n .l { font-size:11px; color:var(--ink-ghost); line-height:1.3; }
+  .tg-g { background:var(--green-bg); color:var(--green); }
+  .per { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:5px; margin-bottom:8px; }
+  .per > div { background:#fff; border:1px solid var(--rule-dim); border-top:3px solid var(--ink); border-radius:5px; padding:4px 5px; text-align:center; line-height:1.35; }
+  .per b { display:block; font-size:12px; color:var(--ink); }
+  .per span { font-family:'IBM Plex Mono','Microsoft YaHei',monospace; font-size:11px; color:var(--ink-dim); }
+  .per .ps { border-top-color:var(--sony); } .per .xb { border-top-color:var(--xbox); } .per .nt { border-top-color:var(--nin); }
+  .scope { font-size:11px; line-height:1.5; color:var(--ink-ghost); margin:-2px 0 5px; padding-left:2px; }
+  .scope b { color:var(--ink-dim); }
+  .ft { background:var(--ink); color:rgba(255,255,255,.6); padding:10px 16px 11px; font-size:11px; line-height:1.6; text-align:center; }
+  .ft b { color:#fff; letter-spacing:.2em; font-family:'IBM Plex Mono',monospace; }
+  @media(max-width:400px){ .h3n .v{font-size:19px;} .k4 .v{font-size:16px;} }
+</style>
+</head>
+<body>
+<div id="export-toolbar" style="position:fixed;top:10px;right:10px;z-index:9999;font-family:'Microsoft YaHei',sans-serif;user-select:none;">
+  <button id="exp-main" style="background:#c85a4a;color:#fff;border:0;padding:6px 12px;border-radius:4px;font-size:11px;font-weight:700;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,0.2);letter-spacing:.05em;">导出长图</button>
+  <div id="exp-panel" style="display:none;margin-top:6px;background:rgba(30,58,95,0.96);padding:8px;border-radius:4px;box-shadow:0 4px 12px rgba(0,0,0,0.25);">
+    <div style="display:flex;flex-direction:column;gap:4px;">
+      <button data-scale="2" class="exp-btn" style="background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.15);padding:6px 10px;border-radius:3px;font-size:11px;cursor:pointer;font-weight:600;">@2x · 860px</button>
+      <button data-scale="3" class="exp-btn" style="background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.15);padding:6px 10px;border-radius:3px;font-size:11px;cursor:pointer;font-weight:600;">@3x · 1290px（推荐）</button>
+      <button data-scale="4" class="exp-btn" style="background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.15);padding:6px 10px;border-radius:3px;font-size:11px;cursor:pointer;font-weight:600;">@4x · 1720px</button>
+    </div>
+    <div id="exp-status" style="font-size:11px;color:#ffb896;margin-top:6px;line-height:1.3;min-height:14px;"></div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="hero">
+    <div class="br">GAMEPULSE · WEEKLY · W44</div>
+    <h1>端主行业周报 · W44</h1>
+    <div class="mt">2026.11.06 · 周期 11/2–11/8 · 资料截至 11/6</div>
+    <div class="one"><b>三大平台同季硬件下滑</b>，索尼靠软件与网络服务撑起利润；GTA6 两周后发售，数字预购七成四在 PS5。</div>
+  </div>
+
+  <div class="sec" id="s01">
+    <div class="sh"><span class="n">01</span><span class="t">三大平台同季财报：硬件齐降，利润分化<em>统一为 2026 年 7–9 月季度，各家财年命名不同</em></span></div>
+    <div class="per">
+      <div class="ps"><b>索尼 SIE</b><span>FY26 Q2 · 日元</span></div>
+      <div class="xb"><b>微软 XBOX</b><span>FY27 Q1 · 美元</span></div>
+      <div class="nt"><b>任天堂</b><span>FY27.3 Q2 · 日元</span></div>
+    </div>
+    <div class="kc">
+      <div class="kc-lead">硬件周期走弱，<b>利润高低取决于软件与服务能否接住</b>。</div>
+      <div class="kc-side"><span class="k">硬件</span><span>内存涨价、主机提价后，三家硬件同季下滑。</span></div>
+      <div class="kc-side"><span class="k">利润</span><span>索尼剔除一次性仍 +29%，Xbox 降幅收窄，任天堂回落。</span></div>
+    </div>
+
+    <div class="sub-step sony"><span class="sn">1</span><span class="stt">索尼：主机少卖 140 万台，利润仍大增<em>11/5 发布</em></span></div>
+    <div class="scope"><b>口径：</b>只看 G&amp;NS 分部（SIE 的 PlayStation 业务），不含集团影视、音乐等</div>
+    <div class="k4"><div><div class="v num up">+8.6%</div><div class="l">收入 ¥12,085亿</div></div><div><div class="v num up">+83%</div><div class="l">利润 ¥2,201亿</div></div><div><div class="v num dn">−35%</div><div class="l">PS5 260万台</div></div><div><div class="v num up">1.27亿</div><div class="l">月活 +800万</div></div></div>
+    <div class="bridge">
+      <div class="pl">利润 <b class="num up">+83%</b> 有一半靠低基数：去年同期计入一次性损失 ¥498 亿，剔除后为 <b class="num up">+29%</b>。</div>
+      <div class="src3">
+        <div class="u"><div class="v num up">+23%</div><div class="l">数字版完整游戏</div></div>
+        <div class="u"><div class="v num up">约+20%</div><div class="l">PS Plus 等网络服务</div></div>
+        <div class="d2"><div class="v num dn">约−5%</div><div class="l">硬件收入（涨价托底）</div></div>
+      </div>
+      <div class="guide"><span class="k">全年指引</span><b>6,600 → 7,000 亿</b><span>第三方游戏＋服务＋降本</span></div>
+    </div>
+    <div class="note">¥498 亿＝去年同期 Bungie 减值 315 亿＋开发成本调整 183 亿。PS5 累计出货 9,790 万台；数字版占完整游戏销量 78%。</div>
+
+    <div class="sub-step xbox"><span class="sn">2</span><span class="stt">Xbox：收入降幅 −10%→−2%，硬件仍降<em>10/28 发布</em></span></div>
+    <div class="scope"><b>口径：</b>只看 XBOX 收入（内容与服务＋硬件）；微软不单独披露 Xbox 利润</div>
+    <div class="k4"><div><div class="v num dn">$53.8亿</div><div class="l">XBOX 收入 −2%</div></div><div><div class="v num dn">−2%</div><div class="l">内容与服务</div></div><div><div class="v num dn">−14%</div><div class="l">硬件</div></div><div><div class="v num up">转增</div><div class="l">下季指引</div></div></div>
+    <div class="drv">
+      <div class="dn2"><b>↓ 拖累</b> 第三方内容、Game Pass</div>
+      <div class="up2"><b>↑ 拉动</b> 第一方内容</div>
+    </div>
+    <div class="mg">
+      <div class="pl">夏尔马目标：<b>2030 财年利润率超过索尼、任天堂</b>。目前 Xbox 约 <b class="num">3%</b>，索尼 <b class="num">9.9%</b>，任天堂约 <b class="num">16%</b>。</div>
+      <div class="note" style="margin-top:4px">Xbox 为内部“问责利润率”，另两家为上财年营业利润率，据 CNBC</div>
+    </div>
+
+    <div class="sub-step nin"><span class="sn">3</span><span class="stt">任天堂：Switch 2 减速，不再涨价<em>11/5 发布</em></span></div>
+    <div class="scope"><b>口径：</b>任天堂全公司；季度数＝上半年减一季度。</div>
+    <div class="k4"><div><div class="v num dn">−15%</div><div class="l">收入 ¥4,482亿</div></div><div><div class="v num dn">−16%</div><div class="l">利润 ¥739亿</div></div><div><div class="v num dn">−41%</div><div class="l">NS2 267万台</div></div><div><div class="v num up">2,635万</div><div class="l">NS2 累计台数</div></div></div>
+    <div class="note">全年 1,650 万台目标不变；社长古川称内存够用，暂无进一步涨价计划。</div>
+  </div>
+
+  <div class="sec" id="s02">
+    <div class="sh"><span class="n">02</span><span class="t">GTA6：发售倒计时 13 天<em>Sensor Tower 估算 · 仅数字版</em></span></div>
+    <div class="verdict">数字预购 <b>771 万份</b>、约 7.51 亿美元，<b>七成四在 PS5</b>。</div>
+    <div class="pf-bar">
+      <div style="width:74%;background:var(--sony)"><b>PS5 74%</b><i>约 574 万份 · $5.59 亿</i></div>
+      <div style="width:26%;background:var(--xbox)"><b>Xbox 26%</b><i>约 197 万份</i></div>
+    </div>
+    <div class="htl">
+      <div><div class="d">10/13</div><div class="dot"></div><div class="v num">608万</div><div class="l">$5.94 亿</div></div>
+      <div><div class="d">10/20</div><div class="dot"></div><div class="v num">645万</div><div class="l">$6.30 亿</div></div>
+      <div class="hot"><div class="d">11/3</div><div class="dot"></div><div class="v num">771万</div><div class="l">$7.51 亿</div></div>
+      <div class="fut"><div class="d">11/10</div><div class="dot"></div><div class="v">预载</div><div class="l">最大 212GB</div></div>
+      <div class="fut"><div class="d">11/19</div><div class="dot"></div><div class="v">发售</div><div class="l">PS5／Xbox</div></div>
+    </div>
+    <div class="note">不含实体版；暂无 PC 版。折合每份约 97 美元。</div>
+  </div>
+
+  <div class="sec" id="s03">
+    <div class="sh"><span class="n">03</span><span class="t">其他新闻速览</span></div>
+
+    <div class="mh">PC 渠道</div>
+    <div class="nl"><div><div class="h"><span class="tg tg-b">Steam</span>新游已超去年全年，平台改规则</div><div class="s">审核最长 12 个工作日；促销横幅改个性化推荐</div></div><div class="n"><div class="v num">24,299</div><div class="l">今年新游</div></div></div>
+
+    <div class="mh">资本与供应链</div>
+    <div class="nl"><div><div class="h"><span class="tg tg-y">传闻</span>Unity 或被私有化</div><div class="s">买方 Silver Lake＋沙特 PIF，据路透</div></div><div class="n"><div class="v num">~$250亿</div><div class="l">讨论估值</div></div></div>
+    <div class="nl"><div><div class="h"><span class="tg tg-y">出售中</span>微软出售 Arkane Lyon</div><div class="s">《耻辱》开发商；育碧等三家已报价</div></div><div class="n"><div class="v num">12/13</div><div class="l">出售截止</div></div></div>
+    <div class="nl"><div><div class="h"><span class="tg tg-r">供应链</span>任天堂卡带芯片主供应商退出</div><div class="s">旺宏把产能转去做闪存，卡带成本或上升</div></div><div class="n"><div class="v num">26→5%</div><div class="l">ROM 占其营收</div></div></div>
+
+    <div class="mh">新品与国产</div>
+    <div class="nl"><div><div class="h"><span class="tg tg-g">发售</span>《时之笛 重制版》登陆 Switch 2</div><div class="s">11/5 发售，今年媒体评分最高</div></div><div class="n"><div class="v num">96</div><div class="l">M站均分</div></div></div>
+    <div class="nl"><div><div class="h"><span class="tg tg-r">国产</span>《影之刃零》登顶 Steam 周销量榜</div><div class="s">全球榜、国区榜均第一（10/27–11/3）</div></div><div class="n"><div class="v num">第1</div><div class="l">双榜</div></div></div>
+    <div class="nl"><div><div class="h"><span class="tg tg-y">延期</span>《战神：劳菲》推迟三个月</div><div class="s">原定 2027/2/16</div></div><div class="n"><div class="v num">5/20</div><div class="l">2027 年</div></div></div>
+    <div class="nl"><div><div class="h"><span class="tg tg-r">扶持</span>索尼“中国之星计划”第四期</div><div class="s">扶持国产主机游戏，每个入选项目资助</div></div><div class="n"><div class="v num">$100万</div><div class="l">每个项目</div></div></div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+(function(){
+  const tb=document.getElementById('export-toolbar'),mb=document.getElementById('exp-main'),pn=document.getElementById('exp-panel'),st=document.getElementById('exp-status'),bs=document.querySelectorAll('.exp-btn'),pg=document.querySelector('.page');
+  mb.addEventListener('click',()=>pn.style.display=(pn.style.display==='none'?'block':'none'));
+  document.addEventListener('click',e=>{if(!tb.contains(e.target))pn.style.display='none';});
+  function ss(t,err){st.textContent=t;st.style.color=err?'#ff8080':'#ffb896';}
+  function lk(l){bs.forEach(b=>b.disabled=l);mb.disabled=l;}
+  const frame=()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+  async function ex(s){
+    if(typeof html2canvas==='undefined'){ss('html2canvas未加载',true);return;}
+    lk(true);ss('渲染中…@'+s+'x');tb.style.visibility='hidden';
+    const old={w:pg.style.width,mw:pg.style.maxWidth};
+    try{
+      pg.style.width='430px';pg.style.maxWidth='none';
+      if(document.fonts&&document.fonts.ready)await document.fonts.ready;
+      await frame();
+      const c=await html2canvas(pg,{scale:s,backgroundColor:'#f4f6f9',useCORS:true,logging:false,width:430,height:pg.scrollHeight,windowWidth:430});
+      ss('生成PNG…');
+      await new Promise((res,rej)=>c.toBlob(b=>{
+        if(!b){rej(new Error('PNG生成失败'));return;}
+        const u=URL.createObjectURL(b),a=document.createElement('a'),baseName=(document.title||'Briefing').replace(/[\s·\/\\:\*\?"<>\|]/g,'_');
+        a.href=u;a.download=baseName+'_'+s+'x.png';document.body.appendChild(a);a.click();document.body.removeChild(a);
+        setTimeout(()=>URL.revokeObjectURL(u),1e3);res();
+      },'image/png'));
+      ss('✓@'+s+'x已导出');
+    }catch(e){ss('失败:'+e.message,true);}
+    finally{pg.style.width=old.w;pg.style.maxWidth=old.mw;tb.style.visibility='visible';lk(false);}
+  }
+  bs.forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();ex(parseInt(b.dataset.scale,10));}));
+})();
+</script>
+</body>
+</html>
